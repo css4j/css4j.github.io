@@ -1,0 +1,97 @@
+body
+{
+	background-color: #FBFBFA;
+	color: #2d261a;
+}
+
+#hdr01
+{
+	display: none;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #2239C9;
+	cursor: pointer;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #3C3496;
+}
+
+a:active
+{
+	text-decoration: underline;
+	color: #C10300;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color: #8E3A2D;
+}
+
+.menulist div
+{
+	color: #FDFFD3;
+}
+
+.menulist a
+{
+	color: #FFFEF0;
+}
+
+.menulist a:hover
+{
+	color: #FDFFD3;
+}
+
+.footnote
+{
+	border-top: none;
+	padding: 0.3em 0 0.5em 0;
+	background: url(imag/footerbg.png) repeat-x;
+}
+
+.footnote a:link, .footnote a:visited
+{
+	text-decoration: underline;
+}
+
+#spectbl td, #spectbl th
+{
+	padding: 0.4em 0.3em 0.5em 0.4em;
+}
+
+#spectbl th
+{
+	white-space: nowrap;
+}
+
+.obsrv
+{
+	font-size: smaller;
+}
+
+table .yesno
+{
+	text-align: center;
+}
+
+tr.hdrow
+{
+	background-color: #e2c6a3;
+}
+
+tr.evenrow
+{
+	background-color: #c9c399;
+}
+
+tr.oddrow
+{
+	background-color: #c8c9a3;
+}

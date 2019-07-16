@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS4J Project</title>
+<link href="common.css" rel="stylesheet" type="text/css" />
+<link href="normal.css" rel="stylesheet" type="text/css" title="Normal" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://css4j.github.io/favicon.png" type="image/png" />
+</head>
+<body id="homepage">
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="index.html"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><div id="mnuindice-sel"><span>Home</span></div></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li><a id="mnujavadoc" href="api/1.0/"><span>Javadocs</span></a></li>
+<li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>CSS4J</span></div>
+<!-- content -->
+<div class="cos">
+<div class="tema"><img src="imag/css4j.png" alt="css4j logo" /></div>
+<div class="tema">
+<h3>CSS4J</h3>
+<p>CSS4J is an implementation of the W3C
+<a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/" target="_blank">DOM CSS API</a> for the Java&trade; platform.</p>
+</div>
+<div class="tema">
+<h3>Documentation</h3>
+<ul>
+<li><a href="usage.html">CSS4J basic usage.</a></li>
+<li><a href="api/" target="_blank">CSS4J core module javadocs.</a></li>
+</ul>
+</div>
+<div class="tema">
+<h3>Licensing</h3>
+<p>This software is released under a <a href="LICENSE.txt">BSD-style license</a>, although some individual files may have a different one (see LICENSES.txt in the distribution).</p>
+</div>
+<div class="tema">
+<h3>Downloads</h3>
+<ul>
+<li><a href="https://sourceforge.net/projects/carte/files/css4j/milestone/css4j-1.0.0-rc1.zip/download">Milestone Release 1.0.0-rc1</a>.</li>
+<li><a href="RELEASE_NOTES.txt">Release Notes for 1.0.0-rc1</a>.</li>
+</ul>
+</div>
+<div class="tema">
+<h3>Building from Git</h3>
+<p>If you want to build css4j from the code that is currently at the Git repositories, you need a JDK version 12 and a copy of the
+<a href="https://github.com/css4j/css4j-dist" target="_blank">CSS4J-distribution</a> repository first, then run the
+<code>tree.sh</code> script. For example:</p>
+<ul>
+<li><code>git clone https://github.com/css4j/css4j-dist.git css4j-snapshot</code></li>
+<li><code>cd css4j-snapshot</code></li>
+<li><code>./tree.sh</code></li>
+</ul>
+<p>After running the script you'll have a tree with all the modules, ready to build with Maven (just run <code>mvn</code>).
+Note that one of the dependencies (<a href="https://sourceforge.net/projects/jclf/">JCLF</a>)
+<a href="https://mvnrepository.com/artifact/io.sf.jclf/jclf">is at MVNRepository</a> but not in Maven Central.
+Depending on your setup, you may need to install it manually first.</p>
+</div>
+<div class="tema">
+<h3>Community - Support</h3>
+<p>There is a general forum that can be used for css4j support, and the development forum is intended for discussions about patches and APIs.</p>
+<ul>
+<li><a href="https://groups.google.com/forum/#!forum/css4j">Css4j general forum (Google Groups)</a>.</li>
+<li><a href="https://groups.google.com/forum/#!forum/css4j-devel">Css4j development forum (Google Groups)</a>. If you have patches to contribute, send them to this group.</li>
+</ul>
+</div>
+<div class="footnote">
+</div>
+</div>
+<!-- end content -->
+</div>
+</div>
+</body>
+</html>

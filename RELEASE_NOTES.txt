@@ -1,0 +1,204 @@
+
+                            CSS4J RELEASE NOTES
+                            ===================
+
+Release 1.0.0, Candidate 1 - July 14, 2019
+------------------------------------------
+
+----------------------
+** IMPORTANT NOTICE **
+----------------------
+ Since 0.22, all the packages have been moved from the info.informatica to the
+io.sf.carte umbrella for better long-term safety.
+
+
+Release Highlights
+------------------
+ This release is essentially the same as 0.43.4, but with several class renames.
+If you dislike having "rcX" in artifact names and do not mind about the naming,
+you can use 0.43.4 and have the same fixes (and bugs...) as this one.
+
+ It has to be remarked that, as well as for 0.43.4, the build process requires
+Java 12, and produces a multi-release jar where all the files are compiled for
+JDK1.7, except module-info (which targets Java 11).
+
+ This is a release candidate for 1.0.0, but that does not mean that there is a
+strict schedule for the release process (no fixed date for 1.0.0), nor that it
+would be incredibly difficult to change the API at this point. Only means that
+the features planned for 1.0 are now implemented, and feedback is encouraged.
+
+
+Description
+-----------
+ This software contains Java(tm) classes covering CSS document style formatting.
+Unless otherwise noted, this software is provided under a BSD-style licence
+(see the LICENSE.txt file, and also LICENSES.txt for included files that have a
+different licensing).
+
+ The functionality in this library can be divided in the following areas:
+
+- An implementation of the standard W3C CSS Object Model API, that allows 
+  to get computed styles for elements in a DOM Document. A DOM implementation 
+  is available, as well as a DOM4J backend (module css4j-dom4j) and also a DOM
+  wrapper that can be used with an external DOM implementation.
+- An extension API to the base W3C style declaration.
+- A device profile API to encapsulate target device-specific information. An
+  example implementation based on Java2D is in the 'render' module of the main
+  Carte project.
+- A couple of AWT helper methods (AWT module).
+- Some helper XML-DTD classes.
+
+ This library's CSS parsing is based on the SAC api and requires a SAC parser
+(see http://www.w3.org/Style/CSS/SAC/). This library has now its own SAC parser,
+although it needs some testing. To use a specific parser, just set the
+org.w3c.css.sac.parser system property to the full class name, for example
+"org.apache.batik.css.parser.Parser" for Batik's parser. If you do not set that
+property, the library will instantiate its built-in parser. See "Software
+dependencies" near the end of this document for more details.
+
+
+Packaging
+---------
+ This project is divided in several modules:
+
+- Core module: file css4j-<version>.jar
+- User agent module: file css4j-agent-<version>.jar
+- Dom4j backend module: file css4j-dom4j-<version>.jar
+- AWT module, with an AWT helper class: file css4j-awt-<version>.jar
+
+ Depending on your use case, you may just need the core module, the core module
+plus the dom4j one, or all four modules.
+
+
+Java(tm) Runtime Environment requirements
+-----------------------------------------
+ All the classes in the binary package have been compiled with a Java SE 
+compiler set to 1.7 compiler compliance level, except the module-info files.
+
+ Building the library requires a Java 12 compiler, although the resulting jar
+files can be run with a 1.7 JRE.
+
+
+W3C Compliance
+--------------
+ Some parts of the code may throw DOMExceptions that are not covered by the 
+CSS Object Model specification. Those cases are documented in the code.
+
+ The behaviour of the documents and sheets varies according to the 'compliance
+mode' of the associated document (DTD-less documents are in 'quirks' mode).
+
+ If your use case is broken due to non-conformant behaviour, please report.
+
+
+CSS3 Support
+------------
+ CSS3 is partially supported by the base CSS interfaces, and is not supported 
+by the experimental visual formatting model. The following table summarizes 
+the basic support for setting/retrieving the main CSS level 3/4 features (other
+specifications are also supported):
+  ___________________________________________
+ |    CSS3 Spec Name           |   Support   |
+ |-----------------------------|-------------|
+ | Background / Border         | Yes         |
+ | Color                       | Yes         |
+ | Media Queries               | Partial (1) |
+ | Selectors                   | Yes     (2) |
+ | Transitions                 | Yes         |
+ | Values                      | Yes     (3) |
+ | Grid / Template / Alignment | Partial (4) |
+ |_____________________________|_____________|
+Notes:
+ 1) Event handling with addListener/removeListener is not supported, given that
+the library's user is supposed to be in control of the CSSCanvas instances where
+the information about such events should be available.
+ 2) Modern selectors are not well supported by the current SAC api. Be careful
+when using SAC parsers other than this library's own parser (read "Software
+dependencies" for information about choosing a SAC parser).
+ 3) The SAC api provides very limited support for new types, so this library
+introduced an enhancement called NSAC that only the native parser supports (see
+below). Also, calc() values are not supported by any current parser except this
+library's own parser.
+ 4) Legacy gap properties (grid-row-gap, grid-column-gap, and grid-gap) are not
+supported, although the longhands can be used if declared explicitly).
+
+ The SAC api does not provide support for several modern CSS3/4 constructs, so
+this library uses its own minimal extension to SAC (see the doc.style.css.nsac
+package).
+
+
+Using CSS4J
+-----------
+ The usage guide at the website and the Javadoc overviews of the different
+packages can be a starting point for users. Unit tests may also be useful
+in showing different uses of the library. Generally, the library will be used in
+the context of a document object model tree, but stand-alone use of style
+declarations and style sheets is also possible.
+
+
+Software dependencies
+=====================
+
+ To build this library you need:
+
+- The JCLF package. Version 4.0.4 or higher is required. Go to
+  https://sourceforge.net/projects/jclf for downloads.
+
+- The W3C SAC classes. Download sac.jar from http://www.w3.org/Style/CSS/SAC/
+
+- Apache Commons Codec. https://commons.apache.org/proper/commons-codec/
+
+- The SLF4J package, which is a logging package. See http://www.slf4j.org/ 
+  for more information.
+
+To build the dom4j module the following is required:
+
+- The dom4j JAR package (tested with 2.0.x and 2.1.0. 2.1.1 is known to have
+  issues with entities).
+  URL: https://github.com/dom4j
+
+- The XPP3 Pull Parser (which is supported by this library but beware that it
+  does not support entities). See:
+  http://www.extreme.indiana.edu/dist/java-repository/xpp3/distributions/
+
+ In addition, to run the library you need:
+
+- A SAC implementation. There are basically three choices: this library's own
+  implementation, Apache Batik's, and SteadyState/CSSParser. To use a specific
+  SAC parser you need to set the value of the 'org.w3c.css.sac.parser' system
+  property to the parser's qualified class name. To use this library's own
+  parser you do not need to set that property (the full class name would be
+  'io.sf.carte.doc.style.css.parser.CSSParser'). To use the SteadyState parser
+  set it to 'com.steadystate.css.parser.SACParserCSS3', and for Batik's parser
+  use 'org.apache.batik.css.parser.Parser'.
+  
+  If you decide to run the library with Batik's parser you need the
+  "batik-css.jar", "batik-i18n.jar" and "batik-util.jar" files that are
+  available from the latest Batik SVG toolkit release from
+  https://xmlgraphics.apache.org/batik/. The old Flute SAC parser works
+  for certain cases but is outdated and not currently maintained.
+
+ Optional packages:
+
+- To run the unit tests you need recent versions of JUnit 4, Batik and
+  optionally the SteadyState/CSSParser and Flute parsers:
+    http://sourceforge.net/projects/cssparser
+    http://www.w3.org/2002/06/flutejava-1.3.zip
+  Tests also require the validator.nu html5 parser:
+    https://about.validator.nu/htmlparser/
+
+  The basic reason for those testing dependencies is to make sure that basic
+  functionality still works with other parsers like Batik and SS CSSParser,
+  although the library does not need them to work.
+
+- Dom4j module: unit tests require Jaxen (https://github.com/jaxen-xpath/jaxen).
+  This software was tested with 1.2.0.
+
+ A Maven build (which requires Java 12) is provided. The dom4j module requires
+dom4j 2.x to build, although you should be able to run the resulting jar file
+with dom4j 1.6 if you are stuck with it.
+
+
+Project Sites
+=============
+Project home: https://carte.sourceforge.io/css4j/
+Download site: https://sourceforge.net/projects/carte/files/css4j/

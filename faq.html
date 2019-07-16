@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS4J FAQ</title>
+<link href="common.css" rel="stylesheet" type="text/css" />
+<link href="normal.css" rel="stylesheet" type="text/css" title="Normal" />
+<script src="js/faq-a.js" type="text/javascript" charset="utf-8"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="faq">
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="index.html"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><a id="mnuindice" href="index.html"><span>Home</span></a></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li><a id="mnujavadoc" href="api/1.0/"><span>Javadocs</span></a></li>
+<li><div id="mnufaq-sel"><span>FAQ</span></div></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>FAQ</span></div>
+<div class="cos">
+<h2>CSS4J FAQ</h2>
+<p class="faqlisthelp" id="faqlisthelp">Click on the question to see the answer.</p>
+<div class="faqlist" id="faqlist">
+<div id="dom4jdepend">
+<h4>Does css4j depend on dom4j?</h4>
+<p>No, dom4j is just an available DOM backend.</p>
+</div>
+<div id="dom4j12">
+<h4>Does css4j work with dom4j 1.x or 2.x?</h4>
+<p>Although the provided Maven build requires dom4j 2.x, the resulting jar file can be used in runtime with 1.x too. Css4j makes no use of the
+methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1.6. Recent versions aren't tested with 1.6 however.</p>
+</div>
+<div id="cssvalue">
+<h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
+<p>Yes, although not all the functionality (like for example some conversions) may be available (which should not be a problem as <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html"
+target="_blank">these interfaces were deprecated</a>).</p>
+</div>
+<div id="deprecvalueapi">
+<h4>If the <code>CSSValue</code> API is deprecated by W3C, why is this library implementing it?</h4>
+<p>The main concern with <code>getPropertyCSSValue</code> (which returns a <code>CSSValue</code>) seems to be about backwards compatibility in the
+scripting of web pages, and it is not very relevant for this library's typical use cases. There are other problems with this API but there is no
+standard replacement anyway.</p>
+</div>
+<div id="getstylesheets">
+<h4>How do I access the style sheets embedded in the document?</h4>
+<p>W3C's DOM Level 2 Style standard provides the <code><a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-DocumentStyle">DocumentStyle</a></code>
+interface for that. Just use <code><a href="api/1.0/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheets--" target="_blank">document.getStyleSheets()</a></code> to get the list of style sheets.</p>
+</div>
+<div id="getstylesheet">
+<h4>Can I get the merged style sheet that applies to the document?</h4>
+<p>The <code><a href="api/1.0/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheet--" target="_blank">document.getStyleSheet()</a></code> method does that. Although you can add style rules to it, you may consider using overriden styles or the user-defined
+style sheet (neither are included in the sheet returned by that method) instead.</p>
+</div>
+<div id="dom4jbase">
+<h4>Using the dom4j backend, I find that it does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
+<p>You can manually set the base url, doing something like:</p>
+<pre>
+if(document.getBaseURL() == null) {
+	document.setBaseURL(baseUrl);
+}
+</pre>
+</div>
+<div id="dom4janddomwrapper">
+<h4>Does the DOM4J back-end make use of the DOM wrapper, internally?</h4>
+<p>No, they are independent back-ends.</p>
+</div>
+<div id="doc4print">
+<h4>How do I set up my document for computing paged-media styles?</h4>
+<p>Use <code>document.setTargetMedium("print")</code> and then compute the styles. <code>setTargetMedium</code> rebuilds the style
+cascade for the new medium.</p>
+</div>
+<div id="minifywarn">
+<h4>Are the minification methods recommended for production use?</h4>
+<p>This library's support for minification (<code>getMinifiedCssText()</code> and related methods) is not intended as a
+general-purpose minification solution, but could be useful as part of a wider CSS toolchain, perhaps with a specialized
+minifier at its end.</p>
+<p>If you decide to use the minification methods be sure to use this library's internal parser, and not the other SAC parsers.
+And if you use any kind of Internet Explorer hack, use a sheet factory with the proper NSAC parser flags set. Some IE hacks are
+supported, but others may give unexpected results so you should be very careful about that.</p>
+</div>
+</div>
+</div>
+<div class="footnote">
+</div>
+</div>
+</div>
+</body>
+</html>
