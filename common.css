@@ -76,21 +76,9 @@ body .menu {
 	font-size: 12pt;
 }
 
-.menulist li.menulvl2 {
-	width: inherit;
-	height: 20px;
-	font-size: 10pt;
-}
-
 .menulist a, .menulist div
 {
 	height: 24px;
-	padding: 1px 0 0 0.2ex;
-}
-
-li.menulvl2 a, li.menulvl2 div
-{
-	height: 20px;
 	padding: 1px 0 0 0.2ex;
 }
 
@@ -98,18 +86,6 @@ li.menulvl2 a, li.menulvl2 div
 {
 	display: block;
 	background: url(imag/mnubg_a.png) no-repeat;
-}
-
-li.menulvl2 a
-{
-	display: block;
-	background: url(imag/mnubg2_a.png) no-repeat;
-}
-
-li.menulvl2 a:hover
-{
-	text-align: right;
-	background: url(imag/mnubg2_b.png) no-repeat;
 }
 
 .menulist a:hover
@@ -314,54 +290,27 @@ body .menu {
 	font-size: 1.1em;
 }
 
-.menulist li.menulvl2 {
-	height: 1.1em;
-	font-size: 0.9em;
-}
-
 .menulist a, .menulist div
 {
 	height: 1.4em;
-	padding: 1px 0 0 0.2ex;
-}
-
-li.menulvl2 a, li.menulvl2 div
-{
-	height: 1.1em;
-	padding: 1px 0 0 0.2ex;
+	padding: 0 0 0 0.2ex;
 }
 
 .menulist a
 {
-	background: linear-gradient(to right, rgba(108,124,81,1) 0%,rgba(149,165,124,1) 91%,rgba(227,239,203,0.89) 96%,rgba(242,249,229,0.6) 100%);
-}
-
-li.menulvl2 a
-{
-	background: linear-gradient(to right, rgba(133,153,100,1) 0%,rgba(185,204,155,1) 91%,rgba(227,239,203,0.89) 96%,rgba(242,249,229,0.6) 100%);
-}
-
-li.menulvl2 a:hover
-{
-	background: linear-gradient(to right, #b0b79a 0%,#8f966a 100%);
+	background: linear-gradient(to right, #95a08c 0%,rgb(255 255 255 / 0) 100%);
 }
 
 .menulist a:hover
 {
 	padding-right: 1ex;
-	background: linear-gradient(to right, #b0b79a 0%,#8f966a 100%);
+	background: linear-gradient(to right, #32491f 0%,rgb(244 246 241 / 0) 100%);
 }
 
 .menulist div
 {
 	padding-right: 1ex;
-	background: linear-gradient(to right, rgba(176,183,154,1) 0%,rgba(144,151,108,1) 96%,rgba(143,150,106,0) 100%);
-}
-
-li.menulvl2 div
-{
-	padding-right: 1.4ex;
-	background: linear-gradient(to right, rgba(176,183,154,1) 0%,rgba(144,151,108,1) 96%,rgba(143,150,106,0) 100%);
+	background: linear-gradient(to right, #32491f 0%,rgb(244 246 241 / 0) 100%);
 }
 
 .main
