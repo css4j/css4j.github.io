@@ -54,7 +54,7 @@ ol.nestedidx ol > li:before {
 <div class="cos">
 <h2>CSS4J User Guide</h2>
 <p class="author">Carlos Amengual</p>
-<p class="relinfo">Last Update: July 16, 2019</p>
+<p class="relinfo">Last Update: July 24, 2019</p>
 <p>This project is an implementation of W3C's <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/" target="_blank">CSS Object Model API</a>
 in the Java&trade; language, and also adds CSS support to the <a href="https://github.com/dom4j" target="_blank">DOM4J</a> package. It
 targets several different use cases, with functionalities from style sheet error detection to style computation.</p>
@@ -245,9 +245,10 @@ CSSDocument document = factory.createCSSDocument(otherDOMdocument);
 values of some nodes.</p>
 </div>
 <div class="tema">
-<h3>Important Note</h3>
-<p>Beware that the computed styles found by each method (native DOM, CSS4J back-end or DOM wrapper) may not be completely identical, due to differences in the
-underlying document DOM implementations, especially if pseudo-classes like <code>:target</code> or <code>:blank</code> are used.</p>
+<h3>Consistency of different DOM implementations</h3>
+<p>Beware that the computed styles found by each method (native DOM, DOM4J back-end or DOM wrapper) may not be completely identical, due to differences in the
+underlying document DOM implementations. Behaviour may vary due to, for example, a pseudo-class like <code>:target</code> being used (DOM4J has no <code>documentURI</code> support so it never matches).</p>
+<p>Such cases would be rare, though (no real-world tests have shown that). If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
 </div>
 <div class="tema" id="mediahandling">
 <h3>Media Handling</h3>
@@ -286,7 +287,7 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 </div>
 <div class="tema" id="errorchecking">
 <h3>Style Sheet Error Checking</h3>
-<p>You can check for SAC (fatal/non-fatal) errors and warnings in the document's sheets using the non-standard <code>getErrorHandler</code> method:</p>
+<p>You can check for errors and warnings in the document's sheets using the non-standard <code>getErrorHandler</code> method. Example:</p>
 <pre class="code">
 if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
 	... error processing / reporting
@@ -375,12 +376,20 @@ You can set your <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf
 (which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory-io.sf.carte.doc.style.css.StyleFormattingFactory-">CSSStyleSheetFactory.setStyleFormattingFactory</a>
 method, or subclass your base factory and override the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory--">createDefaultStyleFormattingFactory</a> method.</p>
 <p>Look at the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
+<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/1.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.html.setFactoryFlag(byte)</a>
+method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
+<ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
+<li><b><a href="api/1.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
+Use double quotes unless single quotes are more efficient (when the string contains more double quotes than single).</li>
+<li><b><a href="api/1.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
+Use single quotes unless double quotes are more efficient (when the string contains more single quotes than double).</li>
+</ul>
 </div>
 <div class="tema" id="sheetcomments">
 <h3>Accessing Style Sheet Comments</h3>
 <p>There is no standard CSSOM API for accessing comments in style sheets, but the <code>AbstractCSSRule.getPrecedingComments()</code> method is provided for that:</p>
 <pre class="code">
-DOMStringList comments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
+List&lt;String&gt; comments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
 </pre>
 <p>Other API models were considered for object-model comments, like having a special type of comment rule, but stylesheet-level comments
 are often related to a rule and if that rule is moved or deleted, those stand-alone comments would have the potential to create
