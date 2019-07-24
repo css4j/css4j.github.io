@@ -376,7 +376,7 @@ You can set your <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf
 (which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory-io.sf.carte.doc.style.css.StyleFormattingFactory-">CSSStyleSheetFactory.setStyleFormattingFactory</a>
 method, or subclass your base factory and override the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory--">createDefaultStyleFormattingFactory</a> method.</p>
 <p>Look at the <a class="codeitem" href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
-<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/1.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.html.setFactoryFlag(byte)</a>
+<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/1.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
 <ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
 <li><b><a href="api/1.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
