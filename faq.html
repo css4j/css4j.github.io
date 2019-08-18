@@ -78,6 +78,11 @@ if(document.getBaseURL() == null) {
 <p>Use <code>document.setTargetMedium("print")</code> and then compute the styles. <code>setTargetMedium</code> rebuilds the style
 cascade for the new medium.</p>
 </div>
+<div id="sdbnotfound">
+<h4>I have set up a style database, but the library complains about missing it.</h4>
+<p>Be sure to call <code>document.setTargetMedium("medium")</code>, where the medium
+must be the same for which the style database was set.</p>
+</div>
 <div id="minifywarn">
 <h4>Are the minification methods recommended for production use?</h4>
 <p>This library's support for minification (<code>getMinifiedCssText()</code> and related methods) is not intended as a
