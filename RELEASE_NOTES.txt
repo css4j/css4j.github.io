@@ -2,8 +2,8 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 1.0.0, Candidate 3 - August 1, 2019
--------------------------------------------
+Release 1.0.0, Candidate 4 - August 21, 2019
+--------------------------------------------
 
 ----------------------
 ** IMPORTANT NOTICE **
@@ -15,9 +15,12 @@ io.sf.carte umbrella for better long-term safety.
 Release Highlights
 ------------------
  This is a release candidate for 1.0.0, but that does not mean that there is a
-strict schedule for the release process (no fixed date for 1.0.0), nor that it
-would be incredibly difficult to change the API at this point. Only means that
-the features planned for 1.0 are now implemented, and feedback is encouraged.
+strict schedule for the release process (no fixed date for 1.0.0), nor that the
+API could not be changed. This is the final stabilization/cleanup process before
+1.0.0.
+
+ The intention is to release 1.0.0 early (even if it has a few rough edges) and
+start work on 2.0, replacing the old (and deprecated) CSSValue API.
 
 
 Description
