@@ -2,25 +2,16 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 1.0.0, Candidate 4 - August 21, 2019
+Release 1.0.0, Candidate 5 - August 28, 2019
 --------------------------------------------
-
-----------------------
-** IMPORTANT NOTICE **
-----------------------
- Since 0.22, all the packages have been moved from the info.informatica to the
-io.sf.carte umbrella for better long-term safety.
-
 
 Release Highlights
 ------------------
- This is a release candidate for 1.0.0, but that does not mean that there is a
-strict schedule for the release process (no fixed date for 1.0.0), nor that the
-API could not be changed. This is the final stabilization/cleanup process before
-1.0.0.
+ This is a release candidate for 1.0.0, and the final release should be coming
+soon (September).
 
- The intention is to release 1.0.0 early (even if it has a few rough edges) and
-start work on 2.0, replacing the old (and deprecated) CSSValue API.
+ The intention is to release 1.0.0 early (even when some areas could have better
+testing) and start work on 2.0, replacing the old (and deprecated) CSSValue API.
 
 
 Description
@@ -59,7 +50,7 @@ Packaging
 - Core module: file css4j-<version>.jar
 - User agent module: file css4j-agent-<version>.jar
 - Dom4j backend module: file css4j-dom4j-<version>.jar
-- AWT module, with an AWT helper class: file css4j-awt-<version>.jar
+- AWT module, with AWT helper classes: file css4j-awt-<version>.jar
 
  Depending on your use case, you may just need the core module, the core module
 plus the dom4j one, or all four modules.
