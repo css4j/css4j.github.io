@@ -41,14 +41,14 @@ methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1
 </div>
 <div id="cssvalue">
 <h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
-<p>Yes, although not all the functionality (like for example some conversions) may be available (which should not be a problem as <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html"
+<p>Version 1.x does, although not all the functionality (like for example some conversions) may be available (which should not be a problem as <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html"
 target="_blank">these interfaces were deprecated</a>).</p>
 </div>
 <div id="deprecvalueapi">
-<h4>If the <code>CSSValue</code> API is deprecated by W3C, why is this library implementing it?</h4>
+<h4>If the <code>CSSValue</code> API was deprecated by W3C, why is this library implementing it?</h4>
 <p>The main concern with <code>getPropertyCSSValue</code> (which returns a <code>CSSValue</code>) seems to be about backwards compatibility in the
-scripting of web pages, and it is not very relevant for this library's typical use cases. There are other problems with this API but there is no
-standard replacement anyway.</p>
+scripting of web pages, and it is not very relevant for this library's typical use cases.</p>
+<p>The API is obsolete for different reasons, so a new non-standard Value API is planned for 2.0.</p>
 </div>
 <div id="getstylesheets">
 <h4>How do I access the style sheets embedded in the document?</h4>
