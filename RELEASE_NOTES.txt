@@ -2,16 +2,17 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 1.0.0, Candidate 5 - August 28, 2019
---------------------------------------------
+Release 1.0.0, Candidate 6 - September 21, 2019
+-----------------------------------------------
 
 Release Highlights
 ------------------
- This is a release candidate for 1.0.0, and the final release should be coming
-soon (September).
+ This is intended to be the last release candidate for 1.0.0, the final release
+being imminent.
 
  The intention is to release 1.0.0 early (even when some areas could have better
-testing) and start work on 2.0, replacing the old (and deprecated) CSSValue API.
+testing) and start work on 2.0, replacing the old (and deprecated) CSSValue API
+and also part of SAC.
 
 
 Description
@@ -94,9 +95,10 @@ specifications are also supported):
  | Grid / Template / Alignment | Partial (4) |
  |_____________________________|_____________|
 Notes:
- 1) Event handling with addListener/removeListener is not supported, given that
-the library's user is supposed to be in control of the CSSCanvas instances where
-the information about such events should be available.
+ 1) 'OR' is not supported in queries. Neither is event handling with addListener
+/removeListener, given that the library's user is supposed to be in control of
+the CSSCanvas instances where the information about such events should be
+available.
  2) Modern selectors are not well supported by the current SAC api. Be careful
 when using SAC parsers other than this library's own parser (read "Software
 dependencies" for information about choosing a SAC parser).
