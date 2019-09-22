@@ -71,15 +71,14 @@ There are three implementations of that interface:
 <li>If you use DOM4J, get it through <code>XHTMLDocumentFactory.getStyleSheetFactory()</code>.</li>
 </ul>
 <p>The document back-end is only important if you plan to use the sheets inside a document.
-The resulting style sheets are empty, but you can load a style sheet with the <code>AbstractCSSStyleSheet.parseCSSStyleSheet(<i>source</i>)</code>
+The resulting style sheets are empty, but you can load a style sheet with the <code>AbstractCSSStyleSheet.parseStyleSheet(<i>source</i>)</code>
 method (see <a href="#sheetparsing">Parsing a Style Sheet</a>).</p>
 <p>One of the most important functionalities in the library is the ability to compute styles for a given element.</p>
 In practice, to obtain the 'computed' or 'used' values required for actual rendering a box model implementation is needed, and also
 device information. The library provides a simple box model that could be used, but the details of the rendering device can be more difficult.</p>
 <p>Depending on the use case, the target device may not be the same one where the library is running (and some exact details hence not available).
-That is the reason why the <code>getComputedStyle</code> method does not attempt to fully compute the values, and leaves several ones
-(like <code>calc()</code>) unreplaced (only some relative value conversions are performed). To help in the computation, the library defines the
-<code>DeviceFactory</code> interface to supply device and media-specific data (also provides the objects required by media queries to work).</p>
+To help in the computation, the library defines the <code>DeviceFactory</code> interface to supply device and media-specific data (also provides
+the objects required by media queries to work).</p>
 </div>
 <div class="tema" id="sacparser">
 <h3>Prerequisite: Choose a SAC Parser</h3>
@@ -93,7 +92,7 @@ offering a SAC parser:</p>
 <p>Batik's parser used to be this library's default parser, but its functionality is now lagging behind and cannot be recommended to handle level 3 or 4 CSS.
 The Steadystate parser does better and mostly implements CSS3, but does not process <code>calc()</code> values nor supports SAC comments. Both handle some
 selectors in their own, undocumented way (example: pseudo-element support) that is not always easy to support.</p>
-<p>Finally, this project's own parser supports level 4 values and selectors. An extension to SAC called <a href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/nsac/package-summary.html" target="_blank">NSAC</a> was
+<p>Finally, this project's own parser supports level 4 values and selectors; an extension to SAC called <a href="https://css4j.github.io/api/1.0/io/sf/carte/doc/style/css/nsac/package-summary.html" target="_blank">NSAC</a> was
 developed for that. This is the recommended parser.</p>
 <p>Once you have chosen your parser, set the <code>org.w3c.css.sac.parser</code> system property to its qualified class name, e.g.
 <code>com.steadystate.css.parser.SACParserCSS3</code>. If you decide to use this project's internal parser you do not need to set that property, as it is
@@ -184,7 +183,7 @@ description for additional information.</p>
 <h3>Short Example with DOM4J</h3>
 <p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
 module. Although the -dom4j module formally depends on the -agent module, you do not really need it unless you plan to use the DOM4J agent.</p>
-<p>This is the easiest way to use this package with DOM4J:</p>
+<p>This is the easiest way to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
 <pre class="code">
 Reader re = ... [reader for XHTML document]
 InputSource source = new InputSource(re);
@@ -196,7 +195,7 @@ XHTMLDocument document = (XHTMLDocument) reader.read(source);
 <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-ViewCSS" target="_blank"><code>ViewCSS</code></a>
 interface:</p>
 <pre class="code">
-CSSComputedProperties style = ((CSSStylableElement)element).getComputedStyle(null);
+CSSComputedProperties style = ((CSSStylableElement) element).getComputedStyle(null);
 String display = style.getPropertyValue("display");
 </pre>
 <p>Be careful to have the <code>XHTMLDocumentFactory</code> loaded with the desired defaults, like the user agent style sheet;
@@ -213,7 +212,7 @@ Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 </pre>
-<p>Or use an arbitrary SAX parser to parse an XML document into a css4j-dom4j tree, with
+<p>Or use a SAX parser to parse an XML document into a css4j-dom4j tree, with
 <a href="https://css4j.github.io/api/1.0/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>
 instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/SAXReader.html"><code>SAXReader</code></a>:</p>
 <pre class="code">
@@ -308,11 +307,11 @@ document.getOverrideStyle(element, null).setCssText("padding: 6pt;");
 </div>
 <div class="tema" id="sheetparsing">
 <h3>Parsing a Style Sheet</h3>
-<p>Although document's style sheet fetching and parsing is automatic with this library, it is possible to manually parse rules from a source stream with the <code>ExtendedCSSStyleSheet.parseCSSStyleSheet(InputSource, boolean)</code> method:</p>
+<p>Although document's style sheet fetching and parsing is automatic with this library, it is possible to manually parse rules from a source stream with the <code>ExtendedCSSStyleSheet.parseStyleSheet(InputSource, boolean)</code> method:</p>
 <pre class="code">
 Reader re = ...
 org.w3c.css.sac.InputSource source = new org.w3c.css.sac.InputSource(re);
-sheet.parseCSSStyleSheet(source, true);
+sheet.parseStyleSheet(source, true);
 </pre>
 <p>The new css rules found in the source stream are added to the already present ones, i.e. the sheet is not reset by this method (although the error handler is).
 When the second argument is <code>true</code>, the comments in the source stream are ignored when parsing.</p>
