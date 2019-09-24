@@ -4,6 +4,7 @@
 
 Release 1.0.0, Candidate 6 - September 21, 2019
 -----------------------------------------------
+(Errata - Sep. 24: removed a limitation that does not apply.)
 
 Release Highlights
 ------------------
@@ -95,10 +96,9 @@ specifications are also supported):
  | Grid / Template / Alignment | Partial (4) |
  |_____________________________|_____________|
 Notes:
- 1) 'OR' is not supported in queries. Neither is event handling with addListener
-/removeListener, given that the library's user is supposed to be in control of
-the CSSCanvas instances where the information about such events should be
-available.
+ 1) Event handling with addListener/removeListener is not supported, given that
+the library's user is supposed to be in control of the CSSCanvas instances where
+the information about such events should be available.
  2) Modern selectors are not well supported by the current SAC api. Be careful
 when using SAC parsers other than this library's own parser (read "Software
 dependencies" for information about choosing a SAC parser).
