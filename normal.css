@@ -83,15 +83,15 @@ table .yesno
 
 tr.hdrow
 {
-	background-color: #e2c6a3;
+	background-color: #f2f1d9;
 }
 
 tr.evenrow
 {
-	background-color: #c9c399;
+	background-color: #f6f5e5;
 }
 
 tr.oddrow
 {
-	background-color: #c8c9a3;
+	background-color: #f4f1e1;
 }
