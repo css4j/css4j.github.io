@@ -2,8 +2,15 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 1.0.0 - September 27, 2019
-----------------------------------
+Release 1.0.1 - October 6, 2019
+-------------------------------
+
+Release Highlights
+------------------
+ This release was triggered by a high-severity media query regression introduced
+by 1.0.0-rc6 a couple weeks ago. A bunch of other (lower impact) fixes from the
+master (2.0) branch are included too.
+
 
 Description
 -----------
