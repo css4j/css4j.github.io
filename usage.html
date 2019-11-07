@@ -199,8 +199,8 @@ CSSComputedProperties style = ((CSSStylableElement) element).getComputedStyle(nu
 String display = style.getPropertyValue("display");
 </pre>
 <p>Be careful to have the <code>XHTMLDocumentFactory</code> loaded with the desired defaults, like the user agent style sheet;
-for example an XHTML 1.1 user agent sheet is loaded by default and some users do not expect that. The use with DOM4J is described in a bit more detail
-in the description for the doc.dom4j subpackage in the Javadocs.</p>
+for example an HTML5 user agent sheet is loaded by default and some users do not expect that. To remove all the rules
+in the sheet, use <a href="api/1.0/io/sf/carte/doc/style/css/ExtendedCSSRuleList.html#clear()">sheet.getCssRules().clear()</a>.</p>
 <p>It is also possible to parse an HTML5 document into a css4j-dom4j tree with the aforementioned validator.nu HTML5 parser:</p>
 <pre class="code">
 XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
