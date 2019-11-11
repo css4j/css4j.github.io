@@ -43,7 +43,8 @@ ol.nestedidx ol > li:before {
 <ul class="menulist">
 <li><a id="mnuindice" href="/"><span>Home</span></a></li>
 <li><div id="mnuusage-sel"><span>Usage</span></div></li>
-<li><a id="mnujavadoc" href="api/1.0/"><span>Javadocs</span></a></li>
+<li><a id="mnuapi2" href="api/2.0/"><span>API 2.0 (draft)</span></a></li>
+<li><a id="mnuapi1" href="api/1.0/"><span>API 1.0</span></a></li>
 <li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
 <li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
 </ul>
@@ -54,10 +55,10 @@ ol.nestedidx ol > li:before {
 <div class="cos">
 <h2>CSS4J User Guide</h2>
 <p class="author">Carlos Amengual</p>
-<p class="relinfo">Last Update: October 5, 2019</p>
 <p>This project is an implementation of W3C's <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/" target="_blank">CSS Object Model API</a>
 in the Java&trade; language, and also adds CSS support to the <a href="https://github.com/dom4j" target="_blank">DOM4J</a> package. It
 targets several different use cases, with functionalities from style sheet error detection to style computation.</p>
+<p>This document describes version 1.0, but for new developments you should use 2.0.</p>
 <div class="tema" id="overview">
 <h3>Overview</h3>
 <p>This implementation can be used in several ways: with stand-alone style sheets, with its own <a href="http://www.w3.org/DOM/" target="_blank">DOM</a>
@@ -395,8 +396,8 @@ are often related to a rule and if that rule is moved or deleted, those stand-al
 a lot of confusion.</p>
 <p>The comments preceding any rule will be included in the text returned by the sheet's <code>AbstractCSSStyleSheet.toString()</code> and <code>toStyleString()</code> methods,
 while other comments (located at places that cannot be easily related to a rule) are lost.</p>
-<p>BUG: comments that are intended to apply to the previous rule may be assigned to the next one.
-This is intended to be addressed in version 2.0, when SAC-based parsing is going to be partly replaced.</p>
+<p>In version 1.0, comments that are intended to apply to the previous rule may be assigned to the next one.
+This is addressed in version 2.0, where NSAC 2.0 allows a more accurate approach.</p>
 <p>Comments in the default HTML style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
 </div>
 <div class="tema" id="awt">
