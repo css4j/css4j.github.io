@@ -31,15 +31,6 @@
 <h2>CSS4J FAQ</h2>
 <p class="faqlisthelp" id="faqlisthelp">Click on the question to see the answer.</p>
 <div class="faqlist" id="faqlist">
-<div id="dom4jdepend">
-<h4>Does css4j depend on dom4j?</h4>
-<p>No, dom4j is just an available DOM backend.</p>
-</div>
-<div id="dom4j12">
-<h4>Does css4j work with dom4j 1.x or 2.x?</h4>
-<p>Although the provided Maven build requires dom4j 2.x, the resulting jar file can be used in runtime with 1.x too. Css4j makes no use of the
-methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1.6. Recent versions aren't tested with 1.6 however.</p>
-</div>
 <div id="cssvalue">
 <h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
 <p>That API was <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">deprecated by W3C</a>
@@ -62,6 +53,23 @@ Although you can add style rules to it, you may consider using overriden styles 
 <div id="clearrules">
 <h4>How can I remove all the rules in a style sheet?</h4>
 <p>Use <code>sheet.getCssRules().<a href="api/1.0/io/sf/carte/doc/style/css/ExtendedCSSRuleList.html#clear()">clear()</a></code>.</p>
+</div>
+<div id="cssomparser">
+<h4>What is the difference between <code>CSSParser</code> and <code>CSSOMParser</code>? [2.0]</h4>
+<p>When parsing media queries, the <code><a href="api/2.0/io/sf/carte/doc/style/css/om/CSSOMParser.html">CSSOMParser</a></code>
+class has an object-model internal <a href="api/2.0/io/sf/carte/doc/style/css/parser/MediaQueryFactory.html">factory</a>
+that directly produces CSSOM-enabled media queries, while <code><a href="api/2.0/io/sf/carte/doc/style/css/parser/CSSParser.html">CSSParser</a></code>
+has a -less useful- factory based on NSAC lexical units.</p>
+<p>If you want to parse media queries you probably want to use <code>CSSOMParser</code>, otherwise <code>CSSParser</code> should be adequate.</p>
+</div>
+<div id="dom4jdepend">
+<h4>Does css4j depend on dom4j?</h4>
+<p>No, dom4j is just an available DOM backend.</p>
+</div>
+<div id="dom4j12">
+<h4>Does css4j work with dom4j 1.x or 2.x?</h4>
+<p>Although the provided Maven build requires dom4j 2.x, the resulting jar file can be used in runtime with 1.x too. Css4j makes no use of the
+methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1.6. Recent versions aren't tested with 1.6 however.</p>
 </div>
 <div id="dom4jbase">
 <h4>Using the dom4j backend, I find that it does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
