@@ -71,9 +71,9 @@ There are three implementations of that interface:
 <li>If you use DOM4J, get it through <code>XHTMLDocumentFactory.getStyleSheetFactory()</code>.</li>
 </ul>
 <p>The document back-end is only important if you plan to use the sheets inside a document.
-The resulting style sheets are empty, but you can load a style sheet with the <code>AbstractCSSStyleSheet.parseStyleSheet(<i>source</i>)</code>
+The resulting style sheets are empty, but you can load a style sheet with the <code>AbstractCSSStyleSheet.parseStyleSheet(<i>reader</i>)</code>
 method (see <a href="#sheetparsing">Parsing a Style Sheet</a>).</p>
-<p>One of the most important functionalities in the library is the ability to compute styles for a given element.</p>
+<p>One of the most important functionalities in the library is the ability to compute styles for a given element:</p>
 In practice, to obtain the 'computed' or 'used' values required for actual rendering a box model implementation is needed, and also
 device information. The library provides a simple box model that could be used, but the details of the rendering device can be more difficult.</p>
 <p>Depending on the use case, the target device may not be the same one where the library is running (and some exact details hence not available).
@@ -83,7 +83,7 @@ the objects required by media queries to work).</p>
 <div class="tema" id="nativedom">
 <h3>Using css4j's native DOM implementation</h3>
 <p>You can create a DOM document from scratch and use the related DOM methods to programatically build a document: just use the provided DOM implementation
-(<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). If you want to parse an existing document, the procedure depends on the type of document: to parse
+(<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). But if you want to parse an existing document, the procedure depends on the type of document: to parse
 an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code>, while to parse an HTML one (or an
 XHTML document that does not use namespace prefixes) you can use the <a href="https://about.validator.nu/htmlparser/" target="_blank">validator.nu
 HTML5 parser</a>.</p>
@@ -142,8 +142,8 @@ String image_uri = ((CSSTypedValue) style.getPropertyCSSValue("background-image"
 // image_css will be set to "url('http://www.example.com/css/foo.png')",
 // and image_uri to "http://www.example.com/css/foo.png"
 </pre>
-<p>The <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends from W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>,
-adding methods like <code>getComputedFontSize()</code> or <code>getComputedLineHeight()</code>.</p>
+<p>The <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
+for computed styles, adding methods like <code>getComputedFontSize()</code> or <code>getComputedLineHeight()</code>.</p>
 <p>If you are computing styles for a specific medium, tell the document about it (see "<a href="#mediahandling">Media Handling</a>"):</p>
 <pre class="code">
 document.setTargetMedium("print");
@@ -155,7 +155,7 @@ Level 3 Core Specification</a>. For example, on elements and attributes the <cod
 description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
-<h3>Short Example with DOM4J</h3>
+<h3>Short example with DOM4J</h3>
 <p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
 module. Although the -dom4j module formally depends on the -agent module, you do not really need it unless you plan to use the DOM4J agent.</p>
 <p>This is the easiest way to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
@@ -207,12 +207,12 @@ XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
 </pre>
 </div>
 <div class="tema" id="domwrapper">
-<h3>Usage with the DOM Wrapper</h3>
+<h3>Usage with the DOM wrapper</h3>
 <p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the <code>DOMCSSStyleSheetFactory.createCSSDocument(document)</code>
 method to wrap a pre-existing DOM Document. Example:</p>
 <pre class="code">
-DOMCSSStyleSheetFactory factory = new DOMCSSStyleSheetFactory();
-CSSDocument document = factory.createCSSDocument(otherDOMdocument);
+DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
+CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
 </pre>
 <p>Unlike the native DOM or the DOM4J back-end, the DOM resulting from the DOM wrapper is read-only, although you can change the
 values of some nodes.</p>
@@ -223,8 +223,57 @@ values of some nodes.</p>
 underlying document DOM implementations. Behaviour may vary due to, for example, a pseudo-class like <code>:target</code> being used (DOM4J has no <code>documentURI</code> support so it never matches).</p>
 <p>Such cases would be rare, though (no real-world tests have shown that). If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
 </div>
+<div id="cascade" class="tema">
+<h3>Configuring the cascade</h3>
+<p>Depending on your use case, you may need to set the <a href="https://www.w3.org/TR/css-cascade-3/#origin">user agent (UA) style sheet</a>.
+The library supports two different UA sheets, one for <code>STRICT</code> ('standards') mode and another for <code>QUIRKS</code>.
+To set either of those sheets, first obtain an instance of the factory that you are using:
+</p>
+<pre class="code">
+// Instantiate the new factory or get it from an object that you are already using.
+AbstractCSSStyleSheetFactory cssFactory = ...
+</pre>
+<p>If you are using the DOM4J classes, you may want to do:</p>
+<pre class="code">
+AbstractCSSStyleSheetFactory cssFactory = XHTMLDocumentFactory.getInstance().getStyleSheetFactory();
+</pre>
+<p>If you are processing HTML, css4j's default HTML5 UA sheet (based on W3C/WHATWG recommendations) should be
+appropriate for you:
+</p>
+<pre class="code">
+cssFactory.setDefaultHTMLUserAgentSheet();
+</pre>
+<p>But if you want to set your own UA sheet, first obtain a reference to the sheet:</p>
+<pre class="code">
+BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
+</pre>
+<p>This is assuming the <code>STRICT</code> mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>,
+otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
+</p>
+<p>If the UA sheet already contains rules (it is empty by default), clean it:</p>
+<pre class="code">
+sheet.getCssRules().clear();
+</pre>
+<p>And now load the new sheet:</p>
+<pre class="code">
+Reader reader = ... [reads the UA sheet]
+sheet.parseStyleSheet(reader, CSSStyleSheet.COMMENTS_IGNORE);
+reader.close();
+</pre>
+<p>As the UA sheet's comments are rarely of interest at the OM level, they were ignored during the parse
+process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
+<p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
+<h4>Setting the user style sheet</h4>
+<p>There is also the possibility to set a user style sheet (with 'user' origin):</p>
+<pre>
+Reader reader = ... [reads the user sheet]
+cssFactory.setUserStyleSheet(reader);
+reader.close();
+</pre>
+<p>Both <code>important</code> and normal declarations are supported in the <a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
+</div>
 <div class="tema" id="mediahandling">
-<h3>Media Handling</h3>
+<h3>Media handling</h3>
 <p>By default, computed styles only take into account generic styles that are common to all media. If you want to target a more specific medium,
 you have to use the <code>CSSDocument.setTargetMedium("<i>medium</i>")</code> method. For example, if your document has the following style sheets linked:</p>
 <pre class="code">
@@ -241,7 +290,7 @@ document.setTargetMedium("print");
 but this approach allows to isolate DOM logic inside DOM objects and keep the <code>DeviceFactory</code> for media-specific information only.</p>
 </div>
 <div class="tema" id="sheetsets">
-<h3>Style Sheet Sets</h3>
+<h3>Style sheet sets</h3>
 <p>The library supports alternative style sheets. Use CSSDocument's methods enableStyleSheetsForSet, getStyleSheetSets, getSelectedStyleSheetSet and
 setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
 <pre class="code">
@@ -259,7 +308,7 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 <p>These methods have been removed from the DOM standard unfortunately, but you can still read the specification at the <a href="https://www.w3.org/TR/2013/WD-cssom-20131205/#extensions-to-the-document-interface" target="_blank">CSSOM 5 December 2013 Working Draft</a>.</p>
 </div>
 <div class="tema" id="errorchecking">
-<h3>Style Sheet Error Checking</h3>
+<h3>Style sheet error checking</h3>
 <p>You can check for errors and warnings in the document's sheets using the non-standard <code>getErrorHandler</code> method. Example:</p>
 <pre class="code">
 if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
@@ -271,26 +320,32 @@ NSAC flags when creating the factory, see <a href="#legacycompat">Compatibility 
 or charset rules found in the wrong place.</p>
 </div>
 <div class="tema" id="overridestyles">
-<h3>Override Styles</h3>
-<p>Override styles, that come after the author style sheet in the cascade algorithm, are supported. For example:</p>
+<h3>Override styles</h3>
+<p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
+but are supported by this library. For example:</p>
 <pre class="code">
 element.getOverrideStyle(null).setCssText("padding: 6pt;");
 </pre>
 <p>Override styles are defined at the <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-DocumentCSS" target="_blank">DocumentCSS interface</a> description.</p>
 </div>
 <div class="tema" id="sheetparsing">
-<h3>Parsing a Style Sheet</h3>
-<p>Although document's style sheet fetching and parsing is automatic with this library, it is possible to manually parse rules
+<h3>Parsing a style sheet</h3>
+<p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
 from a source stream with the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
 <pre class="code">
 Reader re = ...
 sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 </pre>
-<p>The new css rules found in the source stream are added to the already present ones, i.e. the sheet is not reset by this method (although the error handler is).
-When the second argument is <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing.</p>
+<p>When the second argument is <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
+(see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
+<p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
+(although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
+<pre class="code">
+sheet.getCssRules().clear();
+</pre>
 </div>
 <div class="tema" id="legacycompat">
-<h3>Compatibility with legacy Browsers</h3>
+<h3>Compatibility with legacy browsers</h3>
 <p>Today's style sheets often contain non-conformant styles that target specific versions of old web browsers, like Internet Explorer.
 Several web sites contain information about that, including:</p>
 <ul>
@@ -339,7 +394,7 @@ NSAC package description, as well as the documentation for the individual flags 
 <a href="api/2.0/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
 </div>
 <div class="tema" id="styleformatting">
-<h3>CSS Style Formatting</h3>
+<h3>CSS style formatting</h3>
 <p>The serialization of the <code>cssText</code> attribute in <a href="https://www.w3.org/TR/cssom-1/#dom-cssrule-csstext" target="_blank">rules</a> and
 <a href="https://www.w3.org/TR/cssom-1/#dom-cssstyledeclaration-csstext" target="_blank">style declarations</a> can be customized with an implementation
 of the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
@@ -357,7 +412,13 @@ Use single quotes unless double quotes are more efficient (when the string conta
 </ul>
 </div>
 <div class="tema" id="sheetcomments">
-<h3>Accessing Style Sheet Comments</h3>
+<h3>Accessing style sheet comments</h3>
+<p>CSS style sheets often have comments, like:</p>
+<pre class="code">
+/* This is a preceding comment */
+p {color: blue; } /* This is a trailing comment */
+</pre>
+<p><em>(XML-style comments can also be present in a style sheet, but both NSAC and the CSSOM skip them.)</em></p>
 <p>There is no standard CSSOM API for accessing comments in style sheets, but the <a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getPrecedingComments()"><code>AbstractCSSRule.getPrecedingComments()</code></a>
 and <a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getTrailingComments()"><code>AbstractCSSRule.getTrailingComments()</code></a> methods are provided for that:</p>
 <pre class="code">
@@ -367,14 +428,22 @@ List&lt;String&gt; tcomments = document.getStyleSheets().item(0).getCssRules().i
 <p>Other API models were considered for object-model comments, like having a special type of comment rule, but stylesheet-level comments
 are often related to a rule and if that rule is moved or deleted, those stand-alone comments would have the potential to create
 a lot of confusion.</p>
-<p>The comments preceding/trailing any rule will be included in the text returned by the sheet's <code>AbstractCSSStyleSheet.toString()</code> and <code>toStyleString()</code> methods,
+<p>By default, comments are parsed with the <code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_AUTO">COMMENTS_AUTO</a></code>
+mode, which should be appropriate for human-readable sheets like the one shown above. But a lot of sheets are serialized
+in a way that there are no newline characters (or only a few). For these cases, 
+<code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_PRECEDING">COMMENTS_PRECEDING</a></code> could be used in
+<code><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">parseStyleSheet(Reader,short)</a></code>,
+and all the comments will be considered as belonging to the next rule. With <code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a></code>,
+all comments found while parsing the sheet will be ignored.</p>
+<p>The comments preceding/trailing any rule will be included in the text returned by the sheet's <code>AbstractCSSStyleSheet.toString()</code> and
+<code><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
 while other comments (located at places that cannot be easily related to a rule) are lost.</p>
 <p>In css4j version 1.0, comments that were intended to apply to the previous rule may be assigned to the next one,
 but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
-<p>Comments in the default HTML style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
+<p>Comments in the default HTML UA style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
 </div>
 <div class="tema" id="awt">
-<h3>Create an AWT Font/Color from a Computed Style (css4j-awt module)</h3>
+<h3>Create an AWT font/color from a computed style (css4j-awt module)</h3>
 <p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color with the <code>createFont</code> and <code>getAWTColor</code>
 static methods in the <code>AWTHelper</code> class:</p>
 <pre class="code">
@@ -387,7 +456,7 @@ java.awt.Color color = AWTHelper.getAWTColor(cssColor);
 <p>These classes and methods belong to the css4j-awt module (the other css4j modules have no dependencies on AWT).</p>
 </div>
 <div class="tema" id="css3">
-<h3>CSS level 3 and 4 Support</h3>
+<h3>CSS level 3 and 4 support</h3>
 <p>CSS level 3/4 is only partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS3/4 features:</p>
 <table id="spectbl">
 <tr class="hdrow"><th>CSS3 Spec Name</th><th class="yesno">Support</th><th>Observations</th></tr>
@@ -427,7 +496,7 @@ one or the other. The basic idea is that style databases should be relatively ea
 probably only going to exist if there is an actual rendering engine implemented.</p>
 </div>
 <div class="tema" id="jrereq">
-<h3>Java&trade; Runtime Environment Requirements</h3>
+<h3>Java&trade; Runtime Environment requirements</h3>
 <p>The classes in the binary packages have been compiled with a Java SE compiler with 1.8 compiler compliance level,
 except for the <code>module-info</code> file which targets Java 11. If you are stuck with Java 7, you may want to use css4j 1.0.</p>
 </div>
