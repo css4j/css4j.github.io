@@ -179,7 +179,7 @@ which was loaded by default in 1.0 but not in 2.0.</p>
 <pre class="code">
 XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
-// factory.setLenientSystemValues(false);
+// factory.getStyleSheetFactory().setLenientSystemValues(false);
 HtmlDocumentBuilder builder = new HtmlDocumentBuilder(factory);
 // We do not set the EntityResolver, the HtmlDocumentBuilder does not need it
 Reader re = ... [reader for HTML document]
@@ -192,7 +192,7 @@ instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/S
 <pre class="code">
 XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
-// factory.setLenientSystemValues(false);
+// factory.getStyleSheetFactory().setLenientSystemValues(false);
 XMLDocumentBuilder builder = new XMLDocumentBuilder(factory);
 builder.setEntityResolver(new DefaultEntityResolver());
 Reader re = ... [reader for XML document]
