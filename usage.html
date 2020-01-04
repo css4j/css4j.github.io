@@ -265,7 +265,7 @@ process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
 <h4>Setting the user style sheet</h4>
 <p>There is also the possibility to set a user style sheet (with 'user' origin):</p>
-<pre>
+<pre class="code">
 Reader reader = ... [reads the user sheet]
 cssFactory.setUserStyleSheet(reader);
 reader.close();
@@ -471,13 +471,14 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands can be used if declared explicitly).</td></tr>
 </table>
 <h4 class="subtema" id="pseudoclasses">Pseudo-classes</h4>
-<p>The following pseudo-classes are supported by the library (although they may not be supported by the SAC parser that you are using):
+<p>The following pseudo-classes are supported by the library:
 <code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
 <code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>link</code>, <code>visited</code>,
 <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>, <code>disabled</code>, <code>enabled</code>, <code>read-write</code>,
 <code>read-only</code>, <code>is</code>, <code>has</code>, <code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code>
 and <code>indeterminate</code>.</p>
-<p>State pseudo-classes like <code>hover</code> are supported through the <code>CSSCanvas.isActivePseudoClass(CSSElement, String)</code> method.</p>
+<p>State pseudo-classes like <code>hover</code> are supported through the <code>
+<a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/agent/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a></code> method.</p>
 </div>
 <div class="tema" id="renderinterfaces">
 <h3>Rendering-oriented interfaces</h3>
