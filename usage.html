@@ -119,7 +119,7 @@ re.close();
 // Set document URI
 document.setDocumentURI("http://www.example.com/mydocument.html");
 </pre>
-<p>Then you have a CSS-enabled document. To compute styles, use <code>getComputedStyle</code>:</p>
+<p>Then you have a CSS-enabled document. To compute styles, use <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
 <pre class="code">
 DOMElement element = document.getElementById("someId");
 CSSComputedProperties style = element.getComputedStyle(null);
@@ -208,7 +208,8 @@ XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
 </div>
 <div class="tema" id="domwrapper">
 <h3>Usage with the DOM wrapper</h3>
-<p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the <code>DOMCSSStyleSheetFactory.createCSSDocument(document)</code>
+<p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
+<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
 method to wrap a pre-existing DOM Document. Example:</p>
 <pre class="code">
 DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
@@ -247,8 +248,8 @@ cssFactory.setDefaultHTMLUserAgentSheet();
 <pre class="code">
 BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
 </pre>
-<p>This is assuming the <code>STRICT</code> mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>,
-otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
+<p>This is assuming the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
+mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>, otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
 </p>
 <p>If the UA sheet already contains rules (it is empty by default), clean it:</p>
 <pre class="code">
@@ -264,13 +265,13 @@ reader.close();
 process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
 <h4>Setting the user style sheet</h4>
-<p>There is also the possibility to set a user style sheet (with 'user' origin):</p>
+<p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
 <pre class="code">
 Reader reader = ... [reads the user sheet]
 cssFactory.setUserStyleSheet(reader);
 reader.close();
 </pre>
-<p>Both <code>important</code> and normal declarations are supported in the <a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
+<p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
 <h3>Media handling</h3>
@@ -291,8 +292,9 @@ but this approach allows to isolate DOM logic inside DOM objects and keep the <c
 </div>
 <div class="tema" id="sheetsets">
 <h3>Style sheet sets</h3>
-<p>The library supports alternative style sheets. Use CSSDocument's methods enableStyleSheetsForSet, getStyleSheetSets, getSelectedStyleSheetSet and
-setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
+<p>The library supports alternative style sheets: see CSSDocument's methods
+<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
+getStyleSheetSets, getSelectedStyleSheetSet and setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
 <pre class="code">
 &lt;link href="http://www.example.com/commonsheet.css" rel="stylesheet" type="text/css" /&gt;
 &lt;link href="http://www.example.com/alter1.css" rel="alternate stylesheet" type="text/css" title="Alter 1" /&gt;
@@ -309,7 +311,8 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 </div>
 <div class="tema" id="errorchecking">
 <h3>Style sheet error checking</h3>
-<p>You can check for errors and warnings in the document's sheets using the non-standard <code>getErrorHandler</code> method. Example:</p>
+<p>You can check for errors and warnings in the document's sheets using the non-standard
+<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
 <pre class="code">
 if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
 	... error processing / reporting
@@ -322,7 +325,8 @@ or charset rules found in the wrong place.</p>
 <div class="tema" id="overridestyles">
 <h3>Override styles</h3>
 <p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
-but are supported by this library. For example:</p>
+but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
+For example:</p>
 <pre class="code">
 element.getOverrideStyle(null).setCssText("padding: 6pt;");
 </pre>
@@ -477,8 +481,8 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>, <code>disabled</code>, <code>enabled</code>, <code>read-write</code>,
 <code>read-only</code>, <code>is</code>, <code>has</code>, <code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code>
 and <code>indeterminate</code>.</p>
-<p>State pseudo-classes like <code>hover</code> are supported through the <code>
-<a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/agent/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a></code> method.</p>
+<p>State pseudo-classes like <code>hover</code> are supported through the
+<a class="codeitem" href="api/2.0/io/sf/carte/doc/agent/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
 <div class="tema" id="renderinterfaces">
 <h3>Rendering-oriented interfaces</h3>
