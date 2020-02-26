@@ -461,11 +461,11 @@ java.awt.Color color = AWTHelper.getAWTColor(cssColor);
 </div>
 <div class="tema" id="css3">
 <h3>CSS level 3 and 4 support</h3>
-<p>CSS level 3/4 is only partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS3/4 features:</p>
+<p>CSS level 3/4 is only partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS features:</p>
 <table id="spectbl">
 <tr class="hdrow"><th>CSS3 Spec Name</th><th class="yesno">Support</th><th>Observations</th></tr>
 <tr class="oddrow"><td>Background / Border</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td>Color</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="evenrow"><td>Color</td><td class="yesno">Partial</td><td class="obsrv">Some level 4 color functions are not implemented yet; they can be parsed and serialized, but do not convert to RGB in computed styles.</td></tr>
 <tr class="oddrow"><td>Media Queries</td><td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
 Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <tr class="evenrow"><td>Selectors</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
