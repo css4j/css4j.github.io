@@ -2,12 +2,21 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.0.0 - December 4, 2019
---------------------------------
+Release 2.0.1 - March 5, 2020
+-----------------------------
 
- This new major release features NSAC 2.0 and a new Object Model Value API; it
-is not backwards-compatible with 1.0, but the new 2.0 APIs are more appropriate
-to deal with modern CSS. Any new development should use the 2.0 API.
+ This release comes with several small fixes, and support for two new functions
+in calc(): abs() and sign(). Several of the issues fixed were found thanks to
+the FindBugs[1] static analysis tool.
+
+[1] https://spotbugs.github.io/
+
+
+Upgrading from 1.0
+------------------
+ The 2.0 branch features NSAC 2.0 and a new Object Model Value API; it is not
+backwards-compatible with 1.0, but the new 2.0 APIs are more appropriate to deal
+with modern CSS.
 
  NSAC 2.0 no longer inherits from stuff in the org.w3c.css.sac package (provided
 by the -not needed anymore- sac.jar file) but is an independent API, with its
@@ -31,16 +40,6 @@ common source interface. But some methods have names similar to the old API to
 ease the transition (for example I keep getCssValueType() to retrieve the value
 category, instead of a more proper getCategory()).
 
- Another important change is that the source-level compatibility is now for Java
-SE version 8 instead of 7. Comments about the new APIs are welcome.
-
- Many 2.0 patches do not apply to 1.0 which makes it difficult to maintain. As a
-consequence, the end of life for 1.0 shall happen in March 5, 2020 unless
-somebody volunteers for maintaining it (which would probably be a waste of time).
-
-
-Upgrading from 1.0
-------------------
  The extended CSS interfaces in 1.0 ('css' and 'nsac' packages) have now adopted
 the names of the interfaces that they were extending, due to the fact that they
 are no longer an extension but a full fork. This means that if you are using
@@ -69,7 +68,8 @@ RGBColorValue.getRGBColorValue() to access the RGBAColor object).
 loads a default User Agent sheet. This backwards-incompatible change may seem
 gratuitous, but the old behaviour has shown to be problematic for users.
 
- Finally, be sure that you are able to use Java SE 8 or higher.
+ Finally, the source-level compatibility is now for Java SE version 8 instead of
+7: be sure that you are able to use Java 8 or higher.
 
 
 Description
