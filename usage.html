@@ -404,7 +404,7 @@ NSAC package description, as well as the documentation for the individual flags 
 of the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
 You can set your <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleFormattingFactory.html">StyleFormattingFactory</a>
 (which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
-method, or subclass your base factory and override the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
+method, or subclass your style sheet factory and override the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
 <p>Look at the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
 <p>There is also the possibility to customize the default serialization of string values, with the <a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
