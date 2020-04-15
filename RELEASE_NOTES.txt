@@ -2,14 +2,31 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.0.1 - March 5, 2020
------------------------------
+Release 2.0.2 - April 15, 2020
+------------------------------
 
- This release comes with several small fixes, and support for two new functions
-in calc(): abs() and sign(). Several of the issues fixed were found thanks to
-the FindBugs[1] static analysis tool.
+ Font-size values are handled a bit different than the other values. In previous
+versions, when a font-size was expressed as a percentage, if the value of the
+parent font size could not be accurately determined the value was left as a
+percentage in the serialized style. That does not apply to computations that
+depend on the font size, like 'em' values in 'margin' or 'padding' properties:
+in that case default values are forced for that font size, and an absolute
+length is always obtained.
 
-[1] https://spotbugs.github.io/
+ This serialization allows easy inspection of the specified vaues, but is not
+adequate when the serialized style is used as the input for other software
+packages. Changes to the library were made in the past to address this, but
+percentages of font-size values were kept.
+
+ Not only the serialization is inadequate: the repeated attempts to obtain an
+absolute size also introduce a degradation in performance that can be highly
+noticeable with heavy documents (thousands of nodes, several tens of thousand
+rules). So the serialization of computed font sizes now avoids percentages: if
+you had unit tests depending on the old behaviour, you may have to change them.
+
+ Other than that, this release comes with interesting fixes, including one for a
+regression introduced in 2.0.1 (triggered by var() values inside gradients). All
+users are encouraged to upgrade.
 
 
 Upgrading from 1.0
@@ -173,7 +190,7 @@ Software dependencies
 
 To build the dom4j module the following is required:
 
-- The dom4j JAR package (tested with 2.1.1).
+- The dom4j JAR package (tested with 2.1.3).
   URL: https://github.com/dom4j
 
 - The XPP3 Pull Parser (which is supported by this library but beware that it
