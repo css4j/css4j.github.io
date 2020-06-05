@@ -2,31 +2,32 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.0.2 - April 15, 2020
-------------------------------
+Release 2.0.3 - June 5, 2020
+----------------------------
 
- Font-size values are handled a bit different than the other values. In previous
-versions, when a font-size was expressed as a percentage, if the value of the
-parent font size could not be accurately determined the value was left as a
-percentage in the serialized style. That does not apply to computations that
-depend on the font size, like 'em' values in 'margin' or 'padding' properties:
-in that case default values are forced for that font size, and an absolute
-length is always obtained.
+Highlights
+----------
+ Since 1.0, the library allows the use of the 'advanced' attr() function that is
+described in recent CSS specifications (although not yet implemented in major
+web browsers). For most use cases, this is just another feature like others, but
+depending on how you are using the library, this may represent a security risk,
+due to the possibility of leaking attribute values by malicious CSS. And in the
+future, the addition of new functions -like the proposed 'concat()'- to CSS may
+represent a real security issue for all users.
 
- This serialization allows easy inspection of the specified vaues, but is not
-adequate when the serialized style is used as the input for other software
-packages. Changes to the library were made in the past to address this, but
-percentages of font-size values were kept.
+ While the CSS Working Group is discussing about the problem, this css4j release
+brings a few restrictions on how the attr() function can be used. attr() will be
+invalid if it is not used in the 'content' property, in the following cases:
 
- Not only the serialization is inadequate: the repeated attempts to obtain an
-absolute size also introduce a degradation in performance that can be highly
-noticeable with heavy documents (thousands of nodes, several tens of thousand
-rules). So the serialization of computed font sizes now avoids percentages: if
-you had unit tests depending on the old behaviour, you may have to change them.
+ . It is applied on the 'value' attribute of the 'input' element.
+ . It is applied on the 'link' or 'meta' elements.
+ . The attribute name contains 'nonce', 'pass', 'user', 'session', 'uid' and
+   other similar potentially sensitive names.
 
- Other than that, this release comes with interesting fixes, including one for a
-regression introduced in 2.0.1 (triggered by var() values inside gradients). All
-users are encouraged to upgrade.
+ A full fix should be applied once the CSSWG settles on the issue.
+
+ Several other fixes/improvements are provided, and all users are encouraged to
+upgrade.
 
 
 Upgrading from 1.0
@@ -190,7 +191,7 @@ Software dependencies
 
 To build the dom4j module the following is required:
 
-- The dom4j JAR package (tested with 2.1.3).
+- The dom4j JAR package (tested with 2.1.1).
   URL: https://github.com/dom4j
 
 - The XPP3 Pull Parser (which is supported by this library but beware that it
