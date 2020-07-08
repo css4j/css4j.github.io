@@ -2,32 +2,13 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.0.3 - June 5, 2020
+Release 2.0.4 - July 8, 2020
 ----------------------------
 
 Highlights
 ----------
- Since 1.0, the library allows the use of the 'advanced' attr() function that is
-described in recent CSS specifications (although not yet implemented in major
-web browsers). For most use cases, this is just another feature like others, but
-depending on how you are using the library, this may represent a security risk,
-due to the possibility of leaking attribute values by malicious CSS. And in the
-future, the addition of new functions -like the proposed 'concat()'- to CSS may
-represent a real security issue for all users.
-
- While the CSS Working Group is discussing about the problem, this css4j release
-brings a few restrictions on how the attr() function can be used. attr() will be
-invalid if it is not used in the 'content' property, in the following cases:
-
- . It is applied on the 'value' attribute of the 'input' element.
- . It is applied on the 'link' or 'meta' elements.
- . The attribute name contains 'nonce', 'pass', 'user', 'session', 'uid' and
-   other similar potentially sensitive names.
-
- A full fix should be applied once the CSSWG settles on the issue.
-
- Several other fixes/improvements are provided, and all users are encouraged to
-upgrade.
+ Bugfixes, and the nu.validator htmlparser artifact is used instead of the (very
+similar) nu.validator.htmlparser's.
 
 
 Upgrading from 1.0
