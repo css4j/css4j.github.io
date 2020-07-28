@@ -2,13 +2,12 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.0.4 - July 8, 2020
-----------------------------
+Release 2.0.5 - July 28, 2020
+-----------------------------
 
 Highlights
 ----------
- Bugfixes, and the nu.validator htmlparser artifact is used instead of the (very
-similar) nu.validator.htmlparser's.
+ Fix for a DoS vulnerability in var() substitution.
 
 
 Upgrading from 1.0
