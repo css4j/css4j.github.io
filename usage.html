@@ -85,7 +85,8 @@ the objects required by media queries to work).</p>
 (<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). But if you want to parse an existing document, the procedure depends on the type of document: to parse
 an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code>, while to parse an HTML one (or an
 XHTML document that does not use namespace prefixes) you can use the <a href="https://about.validator.nu/htmlparser/" target="_blank">validator.nu
-HTML5 parser</a>.</p>
+HTML5 parser</a> (be sure to use the latest version from the <a href="https://mvnrepository.com/artifact/nu.validator/htmlparser"><code>nu.validator</code>
+Maven group id</a>).</p>
 <p>An example with that parser follows:</p>
 <pre class="code">
 import java.io.Reader;
