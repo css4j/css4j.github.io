@@ -18,7 +18,7 @@
 <ul class="menulist">
 <li><a id="mnuindice" href="/"><span>Home</span></a></li>
 <li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
-<li><a id="mnuapi2" href="api/2.0/"><span>API 2.0</span></a></li>
+<li><a id="mnuapi2" href="api/2.1/"><span>API 2.1</span></a></li>
 <li><div id="mnufaq-sel"><span>FAQ</span></div></li>
 <li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
 </ul>
@@ -33,7 +33,7 @@
 <div id="cssvalue">
 <h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
 <p>That API was <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">deprecated by W3C</a>
-but version 1.0 does implement them. Version 2.0 uses those names but the actual interfaces are different and
+but version 1.0 does implement them. Version 2 uses those names but the actual interfaces are different and
 not backwards-compatible.</p>
 </div>
 <div id="getstylesheets">
@@ -41,23 +41,23 @@ not backwards-compatible.</p>
 <p>The <a href="https://www.w3.org/TR/cssom-1/#document-css-style-sheets">document style sheets</a> are a collection of style sheets
 associated with the document. W3C's DOM Level 2 Style standard provides the <code><a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-DocumentStyle">DocumentStyle</a></code>
 interface for that, see also <a href="https://www.w3.org/TR/cssom-1/#extensions-to-the-document-interface">Extensions to the Document Interface</a> in the more modern CSSOM.
-That is, just use <code><a href="api/1.0/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheets()">document.getStyleSheets()</a></code> to get the list of style sheets.</p>
+That is, just use <code><a href="api/2.1/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheets()">document.getStyleSheets()</a></code> to get the list of style sheets.</p>
 </div>
 <div id="getstylesheet">
 <h4>Can I get the merged style sheet that applies to the document?</h4>
-<p>The <code><a href="api/1.0/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheet()">document.getStyleSheet()</a></code> method does that.
+<p>The <code><a href="api/2.1/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheet()">document.getStyleSheet()</a></code> method does that.
 Although you can add style rules to it, you may consider using overriden styles or the user-defined style sheet
 (neither are included in the sheet returned by that method) instead.</p>
 </div>
 <div id="clearrules">
 <h4>How can I remove all the rules in a style sheet?</h4>
-<p>Use <code>sheet.getCssRules().<a href="api/1.0/io/sf/carte/doc/style/css/ExtendedCSSRuleList.html#clear()">clear()</a></code>.</p>
+<p>Use <code>sheet.getCssRules().<a href="api/2.1/io/sf/carte/doc/style/css/CSSRuleList.html#clear()">clear()</a></code>.</p>
 </div>
 <div id="cssomparser">
-<h4>What is the difference between <code>CSSParser</code> and <code>CSSOMParser</code>? [2.0]</h4>
-<p>When parsing media queries, the <code><a href="api/2.0/io/sf/carte/doc/style/css/om/CSSOMParser.html">CSSOMParser</a></code>
-class has an object-model internal <a href="api/2.0/io/sf/carte/doc/style/css/parser/MediaQueryFactory.html">factory</a>
-that directly produces CSSOM-enabled media queries, while <code><a href="api/2.0/io/sf/carte/doc/style/css/parser/CSSParser.html">CSSParser</a></code>
+<h4>What is the difference between <code>CSSParser</code> and <code>CSSOMParser</code>? [2.x]</h4>
+<p>When parsing media queries, the <code><a href="api/2.1/io/sf/carte/doc/style/css/om/CSSOMParser.html">CSSOMParser</a></code>
+class has an object-model internal <a href="api/2.1/io/sf/carte/doc/style/css/parser/MediaQueryFactory.html">factory</a>
+that directly produces CSSOM-enabled media queries, while <code><a href="api/2.1/io/sf/carte/doc/style/css/parser/CSSParser.html">CSSParser</a></code>
 has a -less useful- factory based on NSAC lexical units.</p>
 <p>If you want to parse media queries you probably want to use <code>CSSOMParser</code>, otherwise <code>CSSParser</code> should be adequate.</p>
 </div>

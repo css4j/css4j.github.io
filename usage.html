@@ -43,7 +43,7 @@ ol.nestedidx ol > li:before {
 <ul class="menulist">
 <li><a id="mnuindice" href="/"><span>Home</span></a></li>
 <li><div id="mnuusage-sel"><span>Usage</span></div></li>
-<li><a id="mnuapi2" href="api/2.0/"><span>API 2.0</span></a></li>
+<li><a id="mnuapi2" href="api/2.1/"><span>API 2.1</span></a></li>
 <li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
 <li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
 </ul>
@@ -62,11 +62,11 @@ targets several different use cases, with functionalities from style sheet error
 <p>This implementation can be used in several ways: with stand-alone style sheets, with its own <a href="http://www.w3.org/DOM/" target="_blank">DOM</a>
 implementation, combined with DOM4J, or by wrapping a pre-existing DOM tree.</p>
 <p>You can play with independent style sheets created with the <code>createStyleSheet("<i>title</i>", "<i>media</i>")</code> method of the
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html"><code>CSSStyleSheetFactory</code></a> interface.
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html"><code>CSSStyleSheetFactory</code></a> interface.
 There are three implementations of that interface:
 <ul>
-<li><a class="codeitem" href="api/2.0/io/sf/carte/doc/dom/CSSDOMImplementation.html"><code>CSSDOMImplementation</code></a>, the native DOM implementation.</li>
-<li><a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html"><code>DOMCSSStyleSheetFactory</code></a> for the DOM Wrapper.</li>
+<li><a class="codeitem" href="api/2.1/io/sf/carte/doc/dom/CSSDOMImplementation.html"><code>CSSDOMImplementation</code></a>, the native DOM implementation.</li>
+<li><a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html"><code>DOMCSSStyleSheetFactory</code></a> for the DOM Wrapper.</li>
 <li>If you use DOM4J, get it through <code>XHTMLDocumentFactory.getStyleSheetFactory()</code>.</li>
 </ul>
 <p>The document back-end is only important if you plan to use the sheets inside a document.
@@ -119,7 +119,7 @@ re.close();
 // Set document URI
 document.setDocumentURI("http://www.example.com/mydocument.html");
 </pre>
-<p>Then you have a CSS-enabled document. To compute styles, use <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
+<p>Then you have a CSS-enabled document. To compute styles, use <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
 <pre class="code">
 DOMElement element = document.getElementById("someId");
 CSSComputedProperties style = element.getComputedStyle(null);
@@ -142,7 +142,7 @@ String image_uri = ((CSSTypedValue) style.getPropertyCSSValue("background-image"
 // image_css will be set to "url('http://www.example.com/css/foo.png')",
 // and image_uri to "http://www.example.com/css/foo.png"
 </pre>
-<p>The <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
+<p>The <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
 for computed styles, adding methods like <code>getComputedFontSize()</code> or <code>getComputedLineHeight()</code>.</p>
 <p>If you are computing styles for a specific medium, tell the document about it (see "<a href="#mediahandling">Media Handling</a>"):</p>
 <pre class="code">
@@ -152,7 +152,7 @@ document.setTargetMedium("print");
 <p>This library's native DOM implementation has some minor behavior differences with what is written in the <a href="https://www.w3.org/TR/DOM-Level-3-Core/" target="_blank">DOM
 Level 3 Core Specification</a>. For example, on elements and attributes the <code>Node.getLocalName()</code> method returns the tag name instead of
 <code>null</code> when the node was created with a DOM Level 1 method such as Document.createElement(). Read the
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/dom/package-summary.html">io.sf.carte.doc.dom</a> package
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/dom/package-summary.html">io.sf.carte.doc.dom</a> package
 description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
@@ -188,7 +188,7 @@ InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 </pre>
 <p>Or use a SAX parser to parse an XML document into a css4j-dom4j tree, with
-<a href="api/2.0/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>
+<a href="api/2.1/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>
 instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/SAXReader.html"><code>SAXReader</code></a>:</p>
 <pre class="code">
 XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
@@ -210,7 +210,7 @@ XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
 <div class="tema" id="domwrapper">
 <h3>Usage with the DOM wrapper</h3>
 <p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
 method to wrap a pre-existing DOM Document. Example:</p>
 <pre class="code">
 DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
@@ -249,7 +249,7 @@ cssFactory.setDefaultHTMLUserAgentSheet();
 <pre class="code">
 BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
 </pre>
-<p>This is assuming the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
+<p>This is assuming the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
 mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>, otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
 </p>
 <p>If the UA sheet already contains rules (it is empty by default), clean it:</p>
@@ -266,13 +266,13 @@ reader.close();
 process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
 <h4>Setting the user style sheet</h4>
-<p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
+<p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
 <pre class="code">
 Reader reader = ... [reads the user sheet]
 cssFactory.setUserStyleSheet(reader);
 reader.close();
 </pre>
-<p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
+<p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
 <h3>Media handling</h3>
@@ -294,7 +294,7 @@ but this approach allows to isolate DOM logic inside DOM objects and keep the <c
 <div class="tema" id="sheetsets">
 <h3>Style sheet sets</h3>
 <p>The library supports alternative style sheets: see CSSDocument's methods
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
 getStyleSheetSets, getSelectedStyleSheetSet and setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
 <pre class="code">
 &lt;link href="http://www.example.com/commonsheet.css" rel="stylesheet" type="text/css" /&gt;
@@ -313,7 +313,7 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 <div class="tema" id="errorchecking">
 <h3>Style sheet error checking</h3>
 <p>You can check for errors and warnings in the document's sheets using the non-standard
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
 <pre class="code">
 if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
 	... error processing / reporting
@@ -326,7 +326,7 @@ or charset rules found in the wrong place.</p>
 <div class="tema" id="overridestyles">
 <h3>Override styles</h3>
 <p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
-but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
+but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
 For example:</p>
 <pre class="code">
 element.getOverrideStyle(null).setCssText("padding: 6pt;");
@@ -336,12 +336,12 @@ element.getOverrideStyle(null).setCssText("padding: 6pt;");
 <div class="tema" id="sheetparsing">
 <h3>Parsing a style sheet</h3>
 <p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
-from a source stream with the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
+from a source stream with the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
 <pre class="code">
 Reader re = ...
 sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 </pre>
-<p>When the second argument is <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
+<p>When the second argument is <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
 (see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
 <p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
 (although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
@@ -361,7 +361,7 @@ Several web sites contain information about that, including:</p>
 library supports them.</p>
 <p>By default, a factory is configured to use a flagless NSAC parser which would produce an error on any of those non-standard constructs,
 but a set of compatibility flags can be specified in the constructors for the factory implementations. The different flags
-are documented in the <a href="api/2.0/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC javadocs</a>.</p>
+are documented in the <a href="api/2.1/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC javadocs</a>.</p>
 <p>The flags available at the time of this guide's update are the following:</p>
 <ul>
 <li><code>STARHACK</code>. When set, the parser will handle asterisk-prefixed property names as accepted, normal names.</li>
@@ -396,23 +396,23 @@ width: 900px;
 </pre>
 <p>If you want to use these flags at the NSAC level (instead of the Object Model), you may want to read the 'Parser Flags' section in the
 NSAC package description, as well as the documentation for the individual flags in
-<a href="api/2.0/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
+<a href="api/2.1/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
 </div>
 <div class="tema" id="styleformatting">
 <h3>CSS style formatting</h3>
 <p>The serialization of the <code>cssText</code> attribute in <a href="https://www.w3.org/TR/cssom-1/#dom-cssrule-csstext" target="_blank">rules</a> and
 <a href="https://www.w3.org/TR/cssom-1/#dom-cssstyledeclaration-csstext" target="_blank">style declarations</a> can be customized with an implementation
-of the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
-You can set your <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleFormattingFactory.html">StyleFormattingFactory</a>
-(which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
-method, or subclass your style sheet factory and override the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
-<p>Look at the <a class="codeitem" href="api/2.0/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
-<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
+of the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
+You can set your <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/StyleFormattingFactory.html">StyleFormattingFactory</a>
+(which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
+method, or subclass your style sheet factory and override the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
+<p>Look at the <a class="codeitem" href="api/2.1/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
+<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
 <ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
-<li><b><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
+<li><b><a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
 Use double quotes unless single quotes are more efficient (when the string contains more double quotes than single).</li>
-<li><b><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
+<li><b><a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
 Use single quotes unless double quotes are more efficient (when the string contains more single quotes than double).</li>
 </ul>
 </div>
@@ -424,8 +424,8 @@ Use single quotes unless double quotes are more efficient (when the string conta
 p {color: blue; } /* This is a trailing comment */
 </pre>
 <p><em>(XML-style comments can also be present in a style sheet, but both NSAC and the CSSOM skip them.)</em></p>
-<p>There is no standard CSSOM API for accessing comments in style sheets, but the <a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getPrecedingComments()"><code>AbstractCSSRule.getPrecedingComments()</code></a>
-and <a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getTrailingComments()"><code>AbstractCSSRule.getTrailingComments()</code></a> methods are provided for that:</p>
+<p>There is no standard CSSOM API for accessing comments in style sheets, but the <a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getPrecedingComments()"><code>AbstractCSSRule.getPrecedingComments()</code></a>
+and <a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getTrailingComments()"><code>AbstractCSSRule.getTrailingComments()</code></a> methods are provided for that:</p>
 <pre class="code">
 List&lt;String&gt; pcomments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
 List&lt;String&gt; tcomments = document.getStyleSheets().item(0).getCssRules().item(3).getTrailingComments();
@@ -433,15 +433,15 @@ List&lt;String&gt; tcomments = document.getStyleSheets().item(0).getCssRules().i
 <p>Other API models were considered for object-model comments, like having a special type of comment rule, but stylesheet-level comments
 are often related to a rule and if that rule is moved or deleted, those stand-alone comments would have the potential to create
 a lot of confusion.</p>
-<p>By default, comments are parsed with the <code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_AUTO">COMMENTS_AUTO</a></code>
+<p>By default, comments are parsed with the <code><a href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_AUTO">COMMENTS_AUTO</a></code>
 mode, which should be appropriate for human-readable sheets like the one shown above. But a lot of sheets are serialized
 in a way that there are no newline characters (or only a few). For these cases, 
-<code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_PRECEDING">COMMENTS_PRECEDING</a></code> could be used in
-<code><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">parseStyleSheet(Reader,short)</a></code>,
-and all the comments will be considered as belonging to the next rule. With <code><a href="api/2.0/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a></code>,
+<code><a href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_PRECEDING">COMMENTS_PRECEDING</a></code> could be used in
+<code><a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">parseStyleSheet(Reader,short)</a></code>,
+and all the comments will be considered as belonging to the next rule. With <code><a href="api/2.1/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a></code>,
 all comments found while parsing the sheet will be ignored.</p>
 <p>The comments preceding/trailing any rule will be included in the text returned by the sheet's <code>AbstractCSSStyleSheet.toString()</code> and
-<code><a href="api/2.0/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
+<code><a href="api/2.1/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
 while other comments (located at places that cannot be easily related to a rule) are lost.</p>
 <p>In css4j version 1.0, comments that were intended to apply to the previous rule may be assigned to the next one,
 but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
@@ -483,19 +483,19 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>, <code>not</code>, <code>placeholder-shown</code>, <code>default</code>,
 <code>checked</code> and <code>indeterminate</code>.</p>
 <p>State pseudo-classes like <code>hover</code> are supported through the
-<a class="codeitem" href="api/2.0/io/sf/carte/doc/agent/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
+<a class="codeitem" href="api/2.1/io/sf/carte/doc/agent/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
 <div class="tema" id="renderinterfaces">
 <h3>Rendering-oriented interfaces</h3>
 <p>To help with the determination of 'used' values and the actual rendering, this library provides a few helper interfaces. The most important are:</p>
-<ul><li><a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. It is not a "factory of devices",
+<ul><li><a class="itemtitle codeitem" href="api/2.1/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. It is not a "factory of devices",
 but instead the object that delivers the relevant abstractions for a requested medium: <code>StyleDatabase</code> and <code>CSSCanvas</code>.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/style/css/StyleDatabase.html">StyleDatabase</a>.
+<ul><li><a class="itemtitle codeitem" href="api/2.1/io/sf/carte/doc/style/css/StyleDatabase.html">StyleDatabase</a>.
 Provides medium-specific information like available fonts and colors.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/agent/CSSCanvas.html">CSSCanvas</a>.
+<ul><li><a class="itemtitle codeitem" href="api/2.1/io/sf/carte/doc/agent/CSSCanvas.html">CSSCanvas</a>.
 Has knowledge of medium-specific information that depends (or may depend) on a specific viewport, like supported media features. It is linked
 to a viewport, if there is any. This interface is used to determine the state of active pseudo-classes.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/2.0/io/sf/carte/doc/agent/Viewport.html">Viewport</a>. It represents a viewport defined
+<ul><li><a class="itemtitle codeitem" href="api/2.1/io/sf/carte/doc/agent/Viewport.html">Viewport</a>. It represents a viewport defined
 as per the CSS specifications.</li></ul>
 <p>The differences between style databases and canvases can be subtle, and for some media features it could be argued that they belong to
 one or the other. The basic idea is that style databases should be relatively easy to implement for a given medium, while canvases are
