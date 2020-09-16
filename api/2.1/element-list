@@ -8,3 +8,4 @@ io.sf.carte.doc.style.css.parser
 io.sf.carte.doc.style.css.property
 io.sf.carte.doc.xml.dtd
 io.sf.carte.util
+io.sf.carte.util.agent

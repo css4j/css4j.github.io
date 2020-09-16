@@ -2,19 +2,11 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.1.0 - August 15, 2020
--------------------------------
+Release 2.1.1 - September 16, 2020
+----------------------------------
 
- This release features the following (compared to 2.0):
- 
- - NSAC 2.1.
- - Support for empty custom properties ("--foo:;").
- - env() is now processed in computed values.
- - The parsing is a bit more Windows-friendly. Previous versions produced
-   different whitespaces when parsing custom CSS rules for Windows and Unix.
-   That was enough to break some unit tests on Windows.
-
- In short, 2.1.0 is a bit more spec-compliant and a good refinement over 2.0.
+ This release contains several fixes over 2.1.0, and deprecates the class
+doc.agent.AgentUtil in preparation for 3.0. Use util.agent.AgentUtil instead.
 
 
 Upgrading from 2.0
