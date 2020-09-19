@@ -2,29 +2,51 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 2.1.1 - September 16, 2020
+Release 3.0.0 - September 19, 2020
 ----------------------------------
 
- This release contains several fixes over 2.1.0, and deprecates the class
-doc.agent.AgentUtil in preparation for 3.0. Use util.agent.AgentUtil instead.
+ Three modules were split out from the css4j module in 2.x: tokenproducer,
+carte-util and xml-dtd. This should give more flexibility to developers that
+only want one of them (or want to use css4j without xml-dtd).
 
 
-Upgrading from 2.0
+Upgrading from 2.1
 ------------------
- The changes in 2.1 vs. 2.0 are mostly about NSAC: a few new lexical types were
-added (including one for calc() which in 2.0 was considered a generic function).
-New primitive types for the cubic-bezier() and steps() easing functions were
-also added.
+ Now you can use finer-grained modules, but if you used css4j together with DTD
+classes, in Maven you now need to specify the xml-dtd module separately, like:
 
- Also thanks to an addition to NSAC, setting a custom property to an empty value
-is now supported, like "--My-property:;".
+    <dependency>
+		<groupId>io.sf.carte</groupId>
+		<artifactId>xml-dtd</artifactId>
+		<version>${css4j.version}</version>
+		<type>jar</type>
+		<scope>compile</scope>
+		<optional>false</optional>
+    </dependency>
+    <dependency>
+		<groupId>io.sf.carte</groupId>
+		<artifactId>css4j</artifactId>
+		<version>${css4j.version}</version>
+		<type>jar</type>
+		<scope>compile</scope>
+		<optional>false</optional>
+    </dependency>
 
- Finally, it adds support for env() computed values by means of an addition to
-the StyleDatabase interface.
+ Then, there are the following API changes that you may need to address:
 
- Which means that you can handle 2.1 as a drop-in replacement for 2.0 unless you
-were either: a) using NSAC directly, b) checking for cubic-bezier() or steps(),
-or c) are implementing the StyleDatabase interface.
+- CSSOM: moved CSSCanvas, Viewport from 'agent' to 'style.css' package. The old
+  interfaces can still be used (they inherit from the new), but are deprecated.
+- Moved BooleanCondition, BooleanConditionFactory, MediaFeaturePredicate,
+  MediaQueryFactory and MediaQueryHandler from 'parser' to 'style.css' package.
+  The reason: 'parser' is supposed to be mostly an implementation package, and
+  this move would allow other implementations to exist.
+- DOM API: introduced interface 'StringList' and two implementations of it.
+- CSSOM: StringList is now used in comment processing instead of List<String>,
+  and enablePrecedingComments() was added to AbstractCSSRule.
+- CSSOM: removed the clone(AbstractCSSStyleSheet) method from CSSRule interface.
+  Use AbstractCSSRule.clone(AbstractCSSStyleSheet) instead.
+- CSSOM: method SACErrorHandler.mapError() now takes a CSSRule instead of an
+  AbstractCSSRule (to make it more generic and allow other implementations).
 
 
 Description
@@ -56,9 +78,11 @@ Packaging
 - User agent module: file css4j-agent-<version>.jar
 - Dom4j backend module: file css4j-dom4j-<version>.jar
 - AWT module, with AWT helper classes: file css4j-awt-<version>.jar
+- XML-DTD module (for DTD utilities): file xml-dtd-<version>.jar
+- Carte-util module: file carte-util-<version>.jar
+- Tokenproducer-uparser module: file tokenproducer-<version>.jar
 
- Depending on your use case, you may just need the core module, the core module
-plus the dom4j one, or all four modules.
+ Depending on your use case, you may need different modules.
 
 
 Java(tm) Runtime Environment requirements
