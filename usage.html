@@ -79,6 +79,21 @@ device information. The library provides a simple box model that could be used, 
 To help in the computation, the library defines the <code>DeviceFactory</code> interface to supply device and media-specific data (also provides
 the objects required by media queries to work).</p>
 </div>
+<div class="tema" id="modules">
+<h2>Modules</h2>
+<p>The library is organized in several modules:</p>
+<ul>
+<li><code>css4j</code> core module, which depends on the next two:</li>
+<li><a href="api/carte-util/3/"><code>carte-util</code></a>, a very small collection of interfaces and utility classes.</li>
+<li><code>tokenproducer</code>, the low-level parser at the core of css4j.</li>
+<li><code>css4j-agent</code>, a collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
+<li><code>css4j-awt</code>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related utility classes.</li>
+<li><code>css4j-dom4j</code>: to use css4j together with dom4j.</li>
+<li><a href="api/xml-dtd/3/"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
+target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>.</li>
+</ul>
+<p>If you use <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's POM files to check for the specific dependencies.</p>
+</div>
 <div class="tema" id="nativedom">
 <h2>Using css4j's native DOM implementation</h2>
 <p>You can create a DOM document from scratch and use the related DOM methods to programatically build a document: just use the provided DOM implementation
