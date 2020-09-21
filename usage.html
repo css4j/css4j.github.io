@@ -31,7 +31,7 @@ ol.nestedidx ol > li:before {
     margin-left: -18pt;
 }
 </style>
-<script src="js/usage-a.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/usage-b.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body id="utilities">
 <div class="layout">
@@ -52,13 +52,13 @@ ol.nestedidx ol > li:before {
 <div class="main">
 <div id="presentacion_top" class="textheader"><span>Usage</span></div>
 <div class="cos">
-<h2>CSS4J User Guide</h2>
+<h1>CSS4J User Guide</h1>
 <p class="author">Carlos Amengual</p>
 <p>This project is an implementation of W3C's <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/" target="_blank">CSS Object Model API</a>
 in the Java&trade; language, and also adds CSS support to the <a href="https://github.com/dom4j" target="_blank">DOM4J</a> package. It
 targets several different use cases, with functionalities from style sheet error detection to style computation.</p>
 <div class="tema" id="overview">
-<h3>Overview</h3>
+<h2>Overview</h2>
 <p>This implementation can be used in several ways: with stand-alone style sheets, with its own <a href="http://www.w3.org/DOM/" target="_blank">DOM</a>
 implementation, combined with DOM4J, or by wrapping a pre-existing DOM tree.</p>
 <p>You can play with independent style sheets created with the <code>createStyleSheet("<i>title</i>", "<i>media</i>")</code> method of the
@@ -80,7 +80,7 @@ To help in the computation, the library defines the <code>DeviceFactory</code> i
 the objects required by media queries to work).</p>
 </div>
 <div class="tema" id="nativedom">
-<h3>Using css4j's native DOM implementation</h3>
+<h2>Using css4j's native DOM implementation</h2>
 <p>You can create a DOM document from scratch and use the related DOM methods to programatically build a document: just use the provided DOM implementation
 (<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). But if you want to parse an existing document, the procedure depends on the type of document: to parse
 an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code>, while to parse an HTML one (or an
@@ -148,7 +148,7 @@ for computed styles, adding methods like <code>getComputedFontSize()</code> or <
 <pre class="code">
 document.setTargetMedium("print");
 </pre>
-<h4 class="subtema" id="conformance">Conformance with the DOM specification</h4>
+<h3 class="subtema" id="conformance">Conformance with the DOM specification</h3>
 <p>This library's native DOM implementation has some minor behavior differences with what is written in the <a href="https://www.w3.org/TR/DOM-Level-3-Core/" target="_blank">DOM
 Level 3 Core Specification</a>. For example, on elements and attributes the <code>Node.getLocalName()</code> method returns the tag name instead of
 <code>null</code> when the node was created with a DOM Level 1 method such as Document.createElement(). Read the
@@ -156,7 +156,7 @@ Level 3 Core Specification</a>. For example, on elements and attributes the <cod
 description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
-<h3>Short example with DOM4J</h3>
+<h2>Short example with DOM4J</h2>
 <p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
 module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
 <p>This is the easiest way to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
@@ -208,7 +208,7 @@ XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
 </pre>
 </div>
 <div class="tema" id="domwrapper">
-<h3>Usage with the DOM wrapper</h3>
+<h2>Usage with the DOM wrapper</h2>
 <p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
 method to wrap a pre-existing DOM Document. Example:</p>
@@ -220,13 +220,13 @@ CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
 values of some nodes.</p>
 </div>
 <div class="tema">
-<h3>Consistency of different DOM implementations</h3>
+<h2>Consistency of different DOM implementations</h2>
 <p>Beware that the computed styles found by each method (native DOM, DOM4J back-end or DOM wrapper) may not be completely identical, due to differences in the
 underlying document DOM implementations. Behaviour may vary due to, for example, a pseudo-class like <code>:target</code> being used (DOM4J has no <code>documentURI</code> support so it never matches).</p>
 <p>Such cases would be rare, though (no real-world tests have shown that). If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
 </div>
 <div id="cascade" class="tema">
-<h3>Configuring the cascade</h3>
+<h2>Configuring the cascade</h2>
 <p>Depending on your use case, you may need to set the <a href="https://www.w3.org/TR/css-cascade-3/#origin">user agent (UA) style sheet</a>.
 The library supports two different UA sheets, one for <code>STRICT</code> ('standards') mode and another for <code>QUIRKS</code>.
 To set either of those sheets, first obtain an instance of the factory that you are using:
@@ -265,7 +265,7 @@ reader.close();
 <p>As the UA sheet's comments are rarely of interest at the OM level, they were ignored during the parse
 process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
-<h4>Setting the user style sheet</h4>
+<h3>Setting the user style sheet</h3>
 <p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
 <pre class="code">
 Reader reader = ... [reads the user sheet]
@@ -275,7 +275,7 @@ reader.close();
 <p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
-<h3>Media handling</h3>
+<h2>Media handling</h2>
 <p>By default, computed styles only take into account generic styles that are common to all media. If you want to target a more specific medium,
 you have to use the <code>CSSDocument.setTargetMedium("<i>medium</i>")</code> method. For example, if your document has the following style sheets linked:</p>
 <pre class="code">
@@ -292,7 +292,7 @@ document.setTargetMedium("print");
 but this approach allows to isolate DOM logic inside DOM objects and keep the <code>DeviceFactory</code> for media-specific information only.</p>
 </div>
 <div class="tema" id="sheetsets">
-<h3>Style sheet sets</h3>
+<h2>Style sheet sets</h2>
 <p>The library supports alternative style sheets: see CSSDocument's methods
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
 getStyleSheetSets, getSelectedStyleSheetSet and setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
@@ -311,7 +311,7 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 <p>These methods have been removed from the DOM standard unfortunately, but you can still read the specification at the <a href="https://www.w3.org/TR/2013/WD-cssom-20131205/#extensions-to-the-document-interface" target="_blank">CSSOM 5 December 2013 Working Draft</a>.</p>
 </div>
 <div class="tema" id="errorchecking">
-<h3>Style sheet error checking</h3>
+<h2>Style sheet error checking</h2>
 <p>You can check for errors and warnings in the document's sheets using the non-standard
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
 <pre class="code">
@@ -324,7 +324,7 @@ NSAC flags when creating the factory, see <a href="#legacycompat">Compatibility 
 or charset rules found in the wrong place.</p>
 </div>
 <div class="tema" id="overridestyles">
-<h3>Override styles</h3>
+<h2>Override styles</h2>
 <p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
 but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
 For example:</p>
@@ -334,7 +334,7 @@ element.getOverrideStyle(null).setCssText("padding: 6pt;");
 <p>Override styles are defined at the <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-DocumentCSS" target="_blank">DocumentCSS interface</a> description.</p>
 </div>
 <div class="tema" id="sheetparsing">
-<h3>Parsing a style sheet</h3>
+<h2>Parsing a style sheet</h2>
 <p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
 from a source stream with the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
 <pre class="code">
@@ -350,7 +350,7 @@ sheet.getCssRules().clear();
 </pre>
 </div>
 <div class="tema" id="legacycompat">
-<h3>Compatibility with legacy browsers</h3>
+<h2>Compatibility with legacy browsers</h2>
 <p>Today's style sheets often contain non-conformant styles that target specific versions of old web browsers, like Internet Explorer.
 Several web sites contain information about that, including:</p>
 <ul>
@@ -399,7 +399,7 @@ NSAC package description, as well as the documentation for the individual flags 
 <a href="api/3/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
 </div>
 <div class="tema" id="styleformatting">
-<h3>CSS style formatting</h3>
+<h2>CSS style formatting</h2>
 <p>The serialization of the <code>cssText</code> attribute in <a href="https://www.w3.org/TR/cssom-1/#dom-cssrule-csstext" target="_blank">rules</a> and
 <a href="https://www.w3.org/TR/cssom-1/#dom-cssstyledeclaration-csstext" target="_blank">style declarations</a> can be customized with an implementation
 of the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
@@ -417,7 +417,7 @@ Use single quotes unless double quotes are more efficient (when the string conta
 </ul>
 </div>
 <div class="tema" id="sheetcomments">
-<h3>Accessing style sheet comments</h3>
+<h2>Accessing style sheet comments</h2>
 <p>CSS style sheets often have comments, like:</p>
 <pre class="code">
 /* This is a preceding comment */
@@ -448,7 +448,7 @@ but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate appro
 <p>Comments in the default HTML UA style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
 </div>
 <div class="tema" id="awt">
-<h3>Create an AWT font/color from a computed style (css4j-awt module)</h3>
+<h2>Create an AWT font/color from a computed style (css4j-awt module)</h2>
 <p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color with the <code>createFont</code> and <code>getAWTColor</code>
 static methods in the <code>AWTHelper</code> class:</p>
 <pre class="code">
@@ -461,21 +461,22 @@ java.awt.Color color = AWTHelper.getAWTColor(cssColor);
 <p>These classes and methods belong to the css4j-awt module (the other css4j modules have no dependencies on AWT).</p>
 </div>
 <div class="tema" id="css3">
-<h3>CSS level 3 and 4 support</h3>
-<p>CSS level 3/4 is only partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS features:</p>
+<h2>CSS3 support</h2>
+<p>CSS3 (defined as "all CSS after CSS2.1") is partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS features:</p>
 <table id="spectbl">
 <tr class="hdrow"><th>CSS3 Spec Name</th><th class="yesno">Support</th><th>Observations</th></tr>
-<tr class="oddrow"><td>Background / Border</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td>Color</td><td class="yesno">Partial</td><td class="obsrv">Some level 4 color functions are not implemented yet; they can be parsed and serialized, but do not convert to RGB in computed styles.</td></tr>
-<tr class="oddrow"><td>Media Queries</td><td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-backgrounds-3/">Background / Border</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-color-4/">Color</a></td><td class="yesno">Partial</td><td class="obsrv">Some level 4 color functions are not implemented yet; they can be parsed and serialized, but do not convert to RGB in computed styles.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/mediaqueries-4/">Media Queries</a></td><td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
 Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
-<tr class="evenrow"><td>Selectors</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="oddrow"><td>Transitions</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td>Values</td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="oddrow"><td>Grid / Template / Alignment</td><td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/selectors-4/">Selectors</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td><td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
 <code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands can be used if declared explicitly).</td></tr>
 </table>
-<h4 class="subtema" id="pseudoclasses">Pseudo-classes</h4>
+<h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
 <p>The following pseudo-classes are supported by the library:
 <code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
 <code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>link</code>, <code>visited</code>,
@@ -486,7 +487,7 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
 <div class="tema" id="renderinterfaces">
-<h3>Rendering-oriented interfaces</h3>
+<h2>Rendering-oriented interfaces</h2>
 <p>To help with the determination of 'used' values and the actual rendering, this library provides a few helper interfaces. The most important are:</p>
 <ul><li><a class="itemtitle codeitem" href="api/3/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. It is not a "factory of devices",
 but instead the object that delivers the relevant abstractions for a requested medium: <code>StyleDatabase</code> and <code>CSSCanvas</code>.</li></ul>
@@ -502,7 +503,7 @@ one or the other. The basic idea is that style databases should be relatively ea
 probably only going to exist if there is an actual rendering engine implemented.</p>
 </div>
 <div class="tema" id="jrereq">
-<h3>Java&trade; Runtime Environment requirements</h3>
+<h2>Java&trade; Runtime Environment requirements</h2>
 <p>The classes in the binary packages have been compiled with a Java SE compiler with 1.8 compiler compliance level,
 except for the <code>module-info</code> file which targets Java 11. If you are stuck with Java 7, you may want to use css4j 1.0.</p>
 </div>

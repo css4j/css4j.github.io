@@ -72,6 +72,6 @@ function CA_buildIndex(headertext, itemclass, hdrtag, subitemclass, subhdrtag, i
 	}
 }
 var CA_stdBuildIndex = function() {
-	CA_buildIndex('Index', 'tema', 'H3', 'subtema', 'H4', 'index', 'nestedidx', 'indexentry');
+	CA_buildIndex('Index', 'tema', 'H2', 'subtema', 'H3', 'index', 'nestedidx', 'indexentry');
 };
 document.addEventListener("DOMContentLoaded", CA_stdBuildIndex);

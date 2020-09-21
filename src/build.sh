@@ -9,7 +9,7 @@ CSSSRCDIR=${HOME}/www/css4j.github.io/src
 SITEDIR=${HOME}/www/css4j.github.io
 TMPDIR=/tmp
 FAQJSVER=a
-IDXBUILDERJSVER=a
+IDXBUILDERJSVER=b
 BASECSSVER=a
 # JS
 if [ ! -d $TMPDIR/js ]
