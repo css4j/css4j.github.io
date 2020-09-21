@@ -1,5 +1,5 @@
 /*
- * Copyright 2009,2010 C. Amengual.
+ * Copyright © 2009,2010 C. Amengual.
  */
 var CA = {};
 //

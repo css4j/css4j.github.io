@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2017 C. Amengual
+ * Copyright © 2009-2017 C. Amengual
  */
 function CA_showFaq(){
 	this.style.cursor='auto';

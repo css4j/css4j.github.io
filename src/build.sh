@@ -1,9 +1,12 @@
 #!/bin/sh
-YUICOMP=/usr/local/share/java/yuicompressor-2.4.8.jar
-SRCDIR=/var/www/css4j.github.io/src
-LIBDIR=/var/www/jslib
-CSSSRCDIR=/var/www/css4j.github.io/src
-SITEDIR=/var/www/css4j.github.io
+#
+# Copyright © 2017-2020 C. Amengual
+#
+YUICOMP=${HOME}/java/lib/yuicompressor-2.4.8.jar
+SRCDIR=${HOME}/www/css4j.github.io/src
+LIBDIR=${HOME}/www/jslib
+CSSSRCDIR=${HOME}/www/css4j.github.io/src
+SITEDIR=${HOME}/www/css4j.github.io
 TMPDIR=/tmp
 FAQJSVER=a
 IDXBUILDERJSVER=a
