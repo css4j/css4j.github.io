@@ -1,39 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="common.css" rel="stylesheet" type="text/css" />
-<link href="normal.css" rel="stylesheet" type="text/css" title="Normal" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="Carlos Amengual">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="usage-a.css" rel="stylesheet" type="text/css" />
 <title>CSS4J Quick Start User Guide</title>
-<style type="text/css">
-.author {font-weight: bold;}
-.relinfo {font-style: italic;}
-pre {padding: 1em;}
-.codeitem {font-family: monospace; font-size: larger;}
-.itemtitle {font-size: 1.4em;}
-.index {
-	margin: 2.6em 0 5em 0;
-	font-size: 1.2em;
-}
-ol.nestedidx ol {
-    counter-reset: item;
-}
-ol > li {
-    counter-increment: item;
-}
-ol.nestedidx ol > li {
-    display: block;
-}
-ol.nestedidx ol > li:before {
-    content: counters(item, ".") ". ";
-    margin-left: -18pt;
-}
-</style>
-<script src="js/usage-b.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/usage-c.js" type="text/javascript" charset="utf-8"></script>
 </head>
-<body id="utilities">
+<body>
 <div class="layout">
 <div id="hdr01"></div>
 <a id="mylinkhome" href="/"><span>CSS4J</span></a>
@@ -103,8 +78,7 @@ XHTML document that does not use namespace prefixes) you can use the <a href="ht
 HTML5 parser</a> (be sure to use the latest version from the <a href="https://mvnrepository.com/artifact/nu.validator/htmlparser"><code>nu.validator</code>
 Maven group id</a>).</p>
 <p>An example with that parser follows:</p>
-<pre class="code">
-import java.io.Reader;
+<pre class="code"><code class="language-java">import java.io.Reader;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import io.sf.carte.doc.dom.CSSDOMImplementation;
@@ -133,10 +107,9 @@ HTMLDocument document = (HTMLDocument) builder.parse(source);
 re.close();
 // Set document URI
 document.setDocumentURI("http://www.example.com/mydocument.html");
-</pre>
+</code></pre>
 <p>Then you have a CSS-enabled document. To compute styles, use <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
-<pre class="code">
-DOMElement element = document.getElementById("someId");
+<pre class="code"><code class="language-java">DOMElement element = document.getElementById("someId");
 CSSComputedProperties style = element.getComputedStyle(null);
 
 // Next line could be 'String display = style.getDisplay();'
@@ -156,17 +129,16 @@ String image_uri = ((CSSTypedValue) style.getPropertyCSSValue("background-image"
 // Then, because we already set the document URI to "http://www.example.com/mydocument.html",
 // image_css will be set to "url('http://www.example.com/css/foo.png')",
 // and image_uri to "http://www.example.com/css/foo.png"
-</pre>
+</code></pre>
 <p>The <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
 for computed styles, adding methods like <code>getComputedFontSize()</code> or <code>getComputedLineHeight()</code>.</p>
 <p>If you are computing styles for a specific medium, tell the document about it (see "<a href="#mediahandling">Media Handling</a>"):</p>
-<pre class="code">
-document.setTargetMedium("print");
-</pre>
+<pre class="code"><code class="language-java">document.setTargetMedium("print");
+</code></pre>
 <h3 class="subtema" id="conformance">Conformance with the DOM specification</h3>
 <p>This library's native DOM implementation has some minor behavior differences with what is written in the <a href="https://www.w3.org/TR/DOM-Level-3-Core/" target="_blank">DOM
 Level 3 Core Specification</a>. For example, on elements and attributes the <code>Node.getLocalName()</code> method returns the tag name instead of
-<code>null</code> when the node was created with a DOM Level 1 method such as Document.createElement(). Read the
+<code>null</code> when the node was created with a DOM Level 1 method such as <code>Document.createElement()</code>. Read the
 <a class="codeitem" href="api/3/io/sf/carte/doc/dom/package-summary.html">io.sf.carte.doc.dom</a> package
 description for additional information.</p>
 </div>
@@ -175,25 +147,22 @@ description for additional information.</p>
 <p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
 module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
 <p>This is the easiest way to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
-<pre class="code">
-Reader re = ... [reader for XHTML document]
+<pre class="code"><code class="language-java">Reader re = ... [reader for XHTML document]
 InputSource source = new InputSource(re);
 SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
 reader.setEntityResolver(new DefaultEntityResolver());
 XHTMLDocument document = (XHTMLDocument) reader.read(source);
-</pre>
+</code></pre>
 <p>And once you got the element you want the computed style for (see, for example, the <a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
 <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-ViewCSS" target="_blank"><code>ViewCSS</code></a>
 interface:</p>
-<pre class="code">
-CSSComputedProperties style = ((CSSStylableElement) element).getComputedStyle(null);
+<pre class="code"><code class="language-java">CSSComputedProperties style = ((CSSStylableElement) element).getComputedStyle(null);
 String display = style.getPropertyValue("display");
-</pre>
+</code></pre>
 <p>Be careful to have the <code>XHTMLDocumentFactory</code> loaded with the desired defaults, like the user agent style sheet
 which was loaded by default in 1.0 but not in 2.0.</p>
 <p>It is also possible to parse an HTML5 document into a css4j-dom4j tree with the aforementioned validator.nu HTML5 parser:</p>
-<pre class="code">
-XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
+<pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
 HtmlDocumentBuilder builder = new HtmlDocumentBuilder(factory);
@@ -201,12 +170,11 @@ HtmlDocumentBuilder builder = new HtmlDocumentBuilder(factory);
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
-</pre>
+</code></pre>
 <p>Or use a SAX parser to parse an XML document into a css4j-dom4j tree, with
 <a href="api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>
 instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/SAXReader.html"><code>SAXReader</code></a>:</p>
-<pre class="code">
-XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
+<pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
 XMLDocumentBuilder builder = new XMLDocumentBuilder(factory);
@@ -215,22 +183,20 @@ Reader re = ... [reader for XML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 re.close();
-</pre>
+</code></pre>
 <p>The code above uses the default JAXP SAX parser. You could use a different <code>SAXParserFactory</code>:</p>
-<pre class="code">
-SAXParserFactory parserFactory = ...
+<pre class="code"><code class="language-java">SAXParserFactory parserFactory = ...
 XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
-</pre>
+</code></pre>
 </div>
 <div class="tema" id="domwrapper">
 <h2>Usage with the DOM wrapper</h2>
 <p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
 method to wrap a pre-existing DOM Document. Example:</p>
-<pre class="code">
-DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
+<pre class="code"><code class="language-java">DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
 CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
-</pre>
+</code></pre>
 <p>Unlike the native DOM or the DOM4J back-end, the DOM resulting from the DOM wrapper is read-only, although you can change the
 values of some nodes.</p>
 </div>
@@ -246,61 +212,52 @@ underlying document DOM implementations. Behaviour may vary due to, for example,
 The library supports two different UA sheets, one for <code>STRICT</code> ('standards') mode and another for <code>QUIRKS</code>.
 To set either of those sheets, first obtain an instance of the factory that you are using:
 </p>
-<pre class="code">
-// Instantiate the new factory or get it from an object that you are already using.
+<pre class="code"><code class="language-java">// Instantiate the new factory or get it from an object that you are already using.
 AbstractCSSStyleSheetFactory cssFactory = ...
-</pre>
+</code></pre>
 <p>If you are using the DOM4J classes, you may want to do:</p>
-<pre class="code">
-AbstractCSSStyleSheetFactory cssFactory = XHTMLDocumentFactory.getInstance().getStyleSheetFactory();
-</pre>
+<pre class="code"><code class="language-java">AbstractCSSStyleSheetFactory cssFactory = XHTMLDocumentFactory.getInstance().getStyleSheetFactory();
+</code></pre>
 <p>If you are processing HTML, css4j's default HTML5 UA sheet (based on W3C/WHATWG recommendations) should be
 appropriate for you:
 </p>
-<pre class="code">
-cssFactory.setDefaultHTMLUserAgentSheet();
-</pre>
+<pre class="code"><code class="language-java">cssFactory.setDefaultHTMLUserAgentSheet();
+</code></pre>
 <p>But if you want to set your own UA sheet, first obtain a reference to the sheet:</p>
-<pre class="code">
-BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
-</pre>
+<pre class="code"><code class="language-java">BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
+</code></pre>
 <p>This is assuming the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
 mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>, otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
 </p>
 <p>If the UA sheet already contains rules (it is empty by default), clean it:</p>
-<pre class="code">
-sheet.getCssRules().clear();
-</pre>
+<pre class="code"><code class="language-java">sheet.getCssRules().clear();
+</code></pre>
 <p>And now load the new sheet:</p>
-<pre class="code">
-Reader reader = ... [reads the UA sheet]
+<pre class="code"><code class="language-java">Reader reader = ... [reads the UA sheet]
 sheet.parseStyleSheet(reader, CSSStyleSheet.COMMENTS_IGNORE);
 reader.close();
-</pre>
+</code></pre>
 <p>As the UA sheet's comments are rarely of interest at the OM level, they were ignored during the parse
 process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
 <h3>Setting the user style sheet</h3>
 <p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
-<pre class="code">
-Reader reader = ... [reads the user sheet]
+<pre class="code"><code class="language-java">Reader reader = ... [reads the user sheet]
 cssFactory.setUserStyleSheet(reader);
 reader.close();
-</pre>
+</code></pre>
 <p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
 <h2>Media handling</h2>
 <p>By default, computed styles only take into account generic styles that are common to all media. If you want to target a more specific medium,
 you have to use the <code>CSSDocument.setTargetMedium("<i>medium</i>")</code> method. For example, if your document has the following style sheets linked:</p>
-<pre class="code">
-&lt;link href="http://www.example.com/css/sheet.css" rel="stylesheet" type="text/css" /&gt;
+<pre class="code"><code class="language-xml">&lt;link href="http://www.example.com/css/sheet.css" rel="stylesheet" type="text/css" /&gt;
 &lt;link href="http://www.example.com/css/sheet_for_print.css" rel="stylesheet" media="print" type="text/css" /&gt;
-</pre>
+</code></pre>
 <p>Computed styles will initially take into account only the "sheet.css" style sheet. However, if you execute the following method:</p>
-<pre class="code">
-document.setTargetMedium("print");
-</pre>
+<pre class="code"><code class="language-java">document.setTargetMedium("print");
+</code></pre>
 <p>Then all subsequently computed styles will account for the merged style sheet from "sheet.css" and "sheet_for_print.css".</p>
 <p>This way to tie a document with a medium is not totally standard, as the W3C APIs would probably expect a <code>DeviceFactory</code>-related object implementing the
 <a href="https://www.w3.org/2003/01/dom2-javadoc/org/w3c/dom/css/ViewCSS.html" target="_blank"><code>ViewCSS</code></a> interface and referencing the document,
@@ -311,28 +268,25 @@ but this approach allows to isolate DOM logic inside DOM objects and keep the <c
 <p>The library supports alternative style sheets: see CSSDocument's methods
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
 getStyleSheetSets, getSelectedStyleSheetSet and setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
-<pre class="code">
-&lt;link href="http://www.example.com/commonsheet.css" rel="stylesheet" type="text/css" /&gt;
+<pre class="code"><code class="language-xml">&lt;link href="http://www.example.com/commonsheet.css" rel="stylesheet" type="text/css" /&gt;
 &lt;link href="http://www.example.com/alter1.css" rel="alternate stylesheet" type="text/css" title="Alter 1" /&gt;
 &lt;link href="http://www.example.com/alter2.css" rel="alternate stylesheet" type="text/css" title="Alter 2" /&gt;
 &lt;link href="http://www.example.com/default.css" rel="stylesheet" type="text/css" title="Default" /&gt;
-</pre>
+</code></pre>
 <p>Initially, sheets 'alter1.css' and 'alter2.css' will not be used to compute styles. But then you can write code like the following:</p>
-<pre class="code">
-String defset = document.getSelectedStyleSheetSet();  // Sets 'defset' to "Default"
+<pre class="code"><code class="language-java">String defset = document.getSelectedStyleSheetSet();  // Sets 'defset' to "Default"
 document.setSelectedStyleSheetSet("Alter 1");  // Selects the set with title "Alter 1"
 document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Alter 2"
-</pre>
+</code></pre>
 <p>These methods have been removed from the DOM standard unfortunately, but you can still read the specification at the <a href="https://www.w3.org/TR/2013/WD-cssom-20131205/#extensions-to-the-document-interface" target="_blank">CSSOM 5 December 2013 Working Draft</a>.</p>
 </div>
 <div class="tema" id="errorchecking">
 <h2>Style sheet error checking</h2>
 <p>You can check for errors and warnings in the document's sheets using the non-standard
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
-<pre class="code">
-if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
+<pre class="code"><code class="language-java">if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
 	... error processing / reporting
-</pre>
+</code></pre>
 <p>The merged style sheet obtained from the <code>getStyleSheet</code> method has the merged error/warning state from the document's active sheets.</p>
 <p>A typical source of errors are the non-compliant IE hacks, like prefixing property names with an asterisk (you may want to use the proper
 NSAC flags when creating the factory, see <a href="#legacycompat">Compatibility with legacy browsers</a>),
@@ -343,26 +297,23 @@ or charset rules found in the wrong place.</p>
 <p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
 but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
 For example:</p>
-<pre class="code">
-element.getOverrideStyle(null).setCssText("padding: 6pt;");
-</pre>
+<pre class="code"><code class="language-java">element.getOverrideStyle(null).setCssText("padding: 6pt;");
+</code></pre>
 <p>Override styles are defined at the <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-DocumentCSS" target="_blank">DocumentCSS interface</a> description.</p>
 </div>
 <div class="tema" id="sheetparsing">
 <h2>Parsing a style sheet</h2>
 <p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
 from a source stream with the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
-<pre class="code">
-Reader re = ...
+<pre class="code"><code class="language-java">Reader re = ...
 sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
-</pre>
+</code></pre>
 <p>When the second argument is <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
 (see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
 <p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
 (although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
-<pre class="code">
-sheet.getCssRules().clear();
-</pre>
+<pre class="code"><code class="language-java">sheet.getCssRules().clear();
+</code></pre>
 </div>
 <div class="tema" id="legacycompat">
 <h2>Compatibility with legacy browsers</h2>
@@ -388,27 +339,23 @@ are documented in the <a href="api/3/io/sf/carte/doc/style/css/nsac/package-summ
 </ul>
 <p>The object model manages these compatibility values in parallel to standard ones. For example, after parsing this declaration
 with <code>IEVALUES</code> set:</p>
-<pre class="code">
-width: 900px; width: 890px\9;
-</pre>
+<pre class="code"><code class="language-css">width: 900px; width: 890px\9;
+</code></pre>
 <p>its serialization would be identical (if the flag was set correctly):</p>
-<pre class="code">
-width: 900px; width: 890px\9;
-</pre>
+<pre class="code"><code class="language-css">width: 900px; width: 890px\9;
+</code></pre>
 <p>but the declaration's length shall be only <code>1</code>. And computed styles only use the standard values unless there are
 no alternatives (no standard value was set). The workings are similar for <code>IEPRIO</code> and <code>IEPRIOCHAR</code>:</p>
-<pre class="code">
-width: 890px !ie;
+<pre class="code"><code class="language-css">width: 890px !ie;
 width: 890px !important!;
-</pre>
+</code></pre>
 <p>with the last one being handled as of <code>important</code> priority. Values created by <code>IEPRIOCHAR</code> are never used
 in computed styles.</p>
 <p>Instead, declarations including asterisk-prefixed property names (created by <code>STARHACK</code>) always increase the declaration's
 length. For example, the length of the following declaration would be <code>2</code>:</p>
-<pre class="code">
-width: 900px;
+<pre class="code"><code class="language-css">width: 900px;
 *width: 890px;
-</pre>
+</code></pre>
 <p>If you want to use these flags at the NSAC level (instead of the Object Model), you may want to read the 'Parser Flags' section in the
 NSAC package description, as well as the documentation for the individual flags in
 <a href="api/3/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
@@ -434,17 +381,15 @@ Use single quotes unless double quotes are more efficient (when the string conta
 <div class="tema" id="sheetcomments">
 <h2>Accessing style sheet comments</h2>
 <p>CSS style sheets often have comments, like:</p>
-<pre class="code">
-/* This is a preceding comment */
+<pre class="code"><code class="language-css">/* This is a preceding comment */
 p {color: blue; } /* This is a trailing comment */
-</pre>
+</code></pre>
 <p><em>(XML-style comments can also be present in a style sheet, but both NSAC and the CSSOM skip them.)</em></p>
 <p>There is no standard CSSOM API for accessing comments in style sheets, but the <a href="api/3/io/sf/carte/doc/style/css/CSSRule.html#getPrecedingComments()"><code>CSSRule.getPrecedingComments()</code></a>
 and <a href="api/3/io/sf/carte/doc/style/css/CSSRule.html#getTrailingComments()"><code>CSSRule.getTrailingComments()</code></a> methods are provided for that:</p>
-<pre class="code">
-StringList pcomments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
+<pre class="code"><code class="language-java">StringList pcomments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
 StringList tcomments = document.getStyleSheets().item(0).getCssRules().item(3).getTrailingComments();
-</pre>
+</code></pre>
 <p>Other API models were considered for object-model comments, like having a special type of comment rule, but stylesheet-level comments
 are often related to a rule and if that rule is moved or deleted, those stand-alone comments would have the potential to create
 a lot of confusion.</p>
@@ -466,12 +411,11 @@ but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate appro
 <h2>Create an AWT font/color from a computed style (css4j-awt module)</h2>
 <p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color with the <code>createFont</code> and <code>getAWTColor</code>
 static methods in the <code>AWTHelper</code> class:</p>
-<pre class="code">
-CSSComputedProperties style = ...
+<pre class="code"><code class="language-java">CSSComputedProperties style = ...
 java.awt.Font font = AWTHelper.createFont(style);
 CSSTypedValue cssColor = (CSSTypedValue) style.getPropertyCSSValue("color");
 java.awt.Color color = AWTHelper.getAWTColor(cssColor);
-</pre>
+</code></pre>
 <p>Note that the <code>AWTHelper.getAWTColor</code> method can create colors from a value coming from just a style declaration (the <code>getPropertyCSSValue</code> used above does not require the style to be computed).</p>
 <p>These classes and methods belong to the css4j-awt module (the other css4j modules have no dependencies on AWT).</p>
 </div>

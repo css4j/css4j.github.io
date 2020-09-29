@@ -1,4 +1,4 @@
-﻿body
+body
 {
 	font-family: Verdana, Arial, Helvetica;
 	margin: 0 0 0.2em 0;
@@ -170,11 +170,6 @@ code
 pre
 {
 	font-size: 1.4em;
-}
-
-pre.code
-{
-	padding: 1em; background-color: #f8f5e1;
 }
 
 div.tema

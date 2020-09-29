@@ -1,6 +1,6 @@
 body
 {
-	background-color: #FBFBFA;
+	background-color: #F4F4F3;
 	color: #2d261a;
 }
 
@@ -83,7 +83,7 @@ table .yesno
 
 tr.hdrow
 {
-	background-color: #f2f1d9;
+	background-color: #e9e9c5;
 }
 
 tr.evenrow
@@ -93,5 +93,5 @@ tr.evenrow
 
 tr.oddrow
 {
-	background-color: #f4f1e1;
+	background-color: #eeebd8;
 }

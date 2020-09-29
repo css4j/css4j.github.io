@@ -1,0 +1,25 @@
+.author {font-weight: bold;}
+.relinfo {font-style: italic;}
+pre.code
+{
+	padding: 1em; background-color: #32312e;
+}
+.codeitem {font-family: monospace; font-size: larger;}
+.itemtitle {font-size: 1.4em;}
+.index {
+	margin: 2.6em 0 5em 0;
+	font-size: 1.2em;
+}
+ol.nestedidx ol {
+    counter-reset: item;
+}
+ol > li {
+    counter-increment: item;
+}
+ol.nestedidx ol > li {
+    display: block;
+}
+ol.nestedidx ol > li:before {
+    content: counters(item, ".") ". ";
+    margin-left: -18pt;
+}
