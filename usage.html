@@ -99,6 +99,7 @@ CSSDOMImplementation impl = new CSSDOMImplementation();
 impl.setDefaultHTMLUserAgentSheet();
 // Prepare builder
 HtmlDocumentBuilder builder = new HtmlDocumentBuilder(impl);
+builder.setIgnoringComments(false);
 // Read the document to parse, and prepare source object
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
@@ -166,6 +167,7 @@ which was loaded by default in 1.0 but not in 2.0.</p>
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
 HtmlDocumentBuilder builder = new HtmlDocumentBuilder(factory);
+builder.setIgnoringComments(false);
 // We do not set the EntityResolver, the HtmlDocumentBuilder does not need it
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
