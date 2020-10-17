@@ -205,8 +205,9 @@ values of some nodes.</p>
 <div class="tema">
 <h2>Consistency of different DOM implementations</h2>
 <p>Beware that the computed styles found by each method (native DOM, DOM4J back-end or DOM wrapper) may not be completely identical, due to differences in the
-underlying document DOM implementations. Behaviour may vary due to, for example, a pseudo-class like <code>:target</code> being used (DOM4J has no <code>documentURI</code> support so it never matches).</p>
-<p>Such cases would be rare, though (no real-world tests have shown that). If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
+underlying document DOM implementations. For example, XML-oriented DOM implementations do not implement the case sensitivity subtleties of HTML (although this
+library attempts to emulate the basics); or if you use a pseudo-class like <code>:target</code>, DOM4J has no <code>documentURI</code> support so it never matches.</p>
+<p>If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
 </div>
 <div id="cascade" class="tema">
 <h2>Configuring the cascade</h2>
