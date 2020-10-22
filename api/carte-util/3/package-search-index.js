@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"io.sf.carte.util"},{"l":"io.sf.carte.util.agent"}]
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.sf.carte.util"},{"l":"io.sf.carte.util.agent"}];updateSearchResults();
