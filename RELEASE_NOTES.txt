@@ -2,51 +2,36 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.0.0 - September 19, 2020
-----------------------------------
+Release 3.1.0 - October 22, 2020
+--------------------------------
 
- Three modules were split out from the css4j module in 2.x: tokenproducer,
-carte-util and xml-dtd. This should give more flexibility to developers that
-only want one of them (or want to use css4j without xml-dtd).
-
-
-Upgrading from 2.1
+Release Highlights
 ------------------
- Now you can use finer-grained modules, but if you used css4j together with DTD
-classes, in Maven you now need to specify the xml-dtd module separately, like:
+ - Previous versions are vulnerable to DoS attacks, and the new protections use
+   the new CSSDocument.isAuthorizedOrigin(URL) method.
+ - The method ErrorHandler.hasErrors() now returns true if there are I/O errors.
+   Those errors were previously considered transient, and therefore weren't
+   appearing there.
+ - DOM: DOMDocument.getDomConfig() was undeprecated, and the DOMConfiguration
+   can be used to control the normalization of the document.
+ - DOM: on attribute nodes, getTextContent() now returns the attribute value
+   instead of the empty string.
+ - DOM: DOM nodes now implement java.io.Serializable.
+ - DefaultEntityResolver.resolveEntity(DocumentTypeDeclaration) is deprecated.
 
-    <dependency>
-		<groupId>io.sf.carte</groupId>
-		<artifactId>xml-dtd</artifactId>
-		<version>${css4j.version}</version>
-		<type>jar</type>
-		<scope>compile</scope>
-		<optional>false</optional>
-    </dependency>
-    <dependency>
-		<groupId>io.sf.carte</groupId>
-		<artifactId>css4j</artifactId>
-		<version>${css4j.version}</version>
-		<type>jar</type>
-		<scope>compile</scope>
-		<optional>false</optional>
-    </dependency>
+ ("DOM:" means that the change applies to "Native DOM implementation").
 
- Then, there are the following API changes that you may need to address:
+ These new behaviors mean that this release is not fully backwards-compatible
+with 3.0, so the minor version was bumped to 3.1. Additionally, the following
+are important fixes/improvements:
 
-- CSSOM: moved CSSCanvas, Viewport from 'agent' to 'style.css' package. The old
-  interfaces can still be used (they inherit from the new), but are deprecated.
-- Moved BooleanCondition, BooleanConditionFactory, MediaFeaturePredicate,
-  MediaQueryFactory and MediaQueryHandler from 'parser' to 'style.css' package.
-  The reason: 'parser' is supposed to be mostly an implementation package, and
-  this move would allow other implementations to exist.
-- DOM API: introduced interface 'StringList' and two implementations of it.
-- CSSOM: StringList is now used in comment processing instead of List<String>,
-  and enablePrecedingComments() was added to AbstractCSSRule.
-- CSSOM: removed the clone(AbstractCSSStyleSheet) method from CSSRule interface.
-  Use AbstractCSSRule.clone(AbstractCSSStyleSheet) instead.
-- CSSOM: method SACErrorHandler.mapError() now takes a CSSRule instead of an
-  AbstractCSSRule (to make it more generic and allow other implementations).
+ - Case sensitivity fixes: Native DOM correctly matched the selector [Foo] to
+   the attribute foo="bar" in HTML documents, but neither the XML-oriented DOM
+   implementations in the DOM wrapper nor the DOM4J back-end did. Now they both
+   do, and a few other smaller case sensitivity fixes were applied as well.
+ - DOM: normalization of element-content whitespace is now based on the
+   value of the 'whitespace' CSS property, and so does DOMWriter serialization.
+ - DOM: indented serialization of inline-block elements in DOMWriter.
 
 
 Description
@@ -87,10 +72,10 @@ Packaging
 
 Java(tm) Runtime Environment requirements
 -----------------------------------------
- All the classes in the binary package have been compiled with a Java SE 
-compiler set to 1.8 compiler compliance level, except the module-info files.
+ All the classes in the binary package have been compiled with a Java compiler
+set to 1.8 compiler compliance level, except the module-info files.
 
- Building the library requires JDK 12 or higher, although the resulting jar
+ Building the library requires JDK 15 or higher, although the resulting jar
 files can be run with a 1.8 JRE.
 
 
@@ -168,7 +153,7 @@ module also require the validator.nu html5 parser:
 - Dom4j module: unit tests require Jaxen (https://github.com/jaxen-xpath/jaxen).
   This software was tested with 1.2.0.
 
- A Maven build (which requires Java 12 or higher) is provided. The dom4j module
+ A Maven build (which requires Java 15 or higher) is provided. The dom4j module
 requires dom4j 2.x to build, although you should be able to run the resulting
 jar file with dom4j 1.6 if you are stuck with it.
 
