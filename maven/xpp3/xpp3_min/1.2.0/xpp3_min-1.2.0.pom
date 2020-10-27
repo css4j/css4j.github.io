@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>xmlpull</groupId>
+    <artifactId>xmlpull-xpp3-parent</artifactId>
+    <version>1.2.0</version>
+  </parent>
+
+  <groupId>xpp3</groupId>
+  <artifactId>xpp3_min</artifactId>
+  <packaging>bundle</packaging><!-- bundle = jar + OSGi metadata -->
+
+  <name>MXP1: Xml Pull Parser 3rd Edition (XPP3) Minimal implementation</name>
+  <description>
+    MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.
+  </description>
+  <url>http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/</url>
+  <inceptionYear>2002</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>Indiana University Extreme! Lab Software License, vesion 1.1.1</name>
+      <url>http://www.extreme.indiana.edu/viewcvs/~checkout~/XPP3/java/LICENSE.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Extreme! Lab, Indiana University</name>
+    <url>http://www.extreme.indiana.edu/</url>
+  </organization>
+
+  <dependencies>
+    <dependency>
+      <groupId>xmlpull</groupId>
+      <artifactId>xmlpull</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>org.xmlpull.mxp1</Bundle-SymbolicName>
+            <Export-Package>
+              org.xmlpull.mxp1
+            </Export-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
