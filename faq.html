@@ -93,6 +93,11 @@ cascade for the new medium.</p>
 <p>Be sure to call <code>document.setTargetMedium("medium")</code>, where the medium
 must be the same for which the style database was set.</p>
 </div>
+<div id="styledb">
+<h4>The style database is an abstraction that supplies initial values for properties that are User Agent-dependent. Why not just set them at the UA style sheet?</h4>
+<p>The <a href="usage.html#cascade">user agent sheet</a> depends on the document type and is not always loaded, while the <a href="api/3/io/sf/carte/doc/style/css/StyleDatabase.html">style database</a>
+is document-independent (but medium-specific).</p>
+</div>
 <div id="minifywarn">
 <h4>Are the minification methods recommended for production use?</h4>
 <p>This library's support for minification (<code>getMinifiedCssText()</code> and related methods) is not intended as a
