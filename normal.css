@@ -12,14 +12,14 @@ body
 a:link
 {
 	text-decoration: none;
-	color: #2239C9;
+	color: #045dca;
 	cursor: pointer;
 }
 
 a:visited
 {
 	text-decoration: none;
-	color: #3C3496;
+	color: #1f42ab;
 }
 
 a:active

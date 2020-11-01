@@ -12,7 +12,7 @@ SITEDIR=${HOME}/www/css4j.github.io
 WORKDIR=$TMP/css4j.github
 FAQJSVER=a
 USAGEJSVER=c
-USAGECSSVER=a
+USAGECSSVER=b
 BASECSSVER=a
 # Work directory
 if [ ! -d $WORKDIR ]
@@ -28,18 +28,18 @@ fi
 #then echo "YUI not found. Exiting."
 #     exit
 #fi
-cat $SRCDIR/copyright-src.js $SRCDIR/framebreak-src.js $SRCDIR/faq-src.js > $WORKDIR/faq-a.js
-cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > $WORKDIR/usage-a.js
-java -jar $YUICOMP --charset utf-8 ${WORKDIR}/faq-a.js > ${SITEDIR}/js/faq-$FAQJSVER.js
+cat $SRCDIR/copyright-src.js $SRCDIR/framebreak-src.js $SRCDIR/faq-src.js > ${WORKDIR}/faq-a.js
+cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > ${WORKDIR}/usage-a.js
+java -jar $YUICOMP --charset utf-8 ${WORKDIR}/faq-a.js > ${SITEDIR}/js/faq-${FAQJSVER}.js
 java -jar $YUICOMP --charset utf-8 ${WORKDIR}/usage-a.js > ${WORKDIR}/usage-compressed.js
-cat $SRCDIR/copyright-prism-src.js ${WORKDIR}/usage-compressed.js ${PRISM}.js > ${SITEDIR}/js/usage-$USAGEJSVER.js
+cat $SRCDIR/copyright-prism-src.js ${WORKDIR}/usage-compressed.js ${PRISM}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
 # CSS
-#cat $SITEDIR/common.css $SITEDIR/normal.css > $TMP/basic-a.css
-#cat $SITEDIR/common.css $SITEDIR/normal.css $CSSSRCDIR/faq.css > $TMP/faq-a.css
+cat ${SITEDIR}/common.css ${SITEDIR}/normal.css > ${WORKDIR}/basic-a.css
+cat ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/faq.css > ${WORKDIR}/faq-a.css
 cat ${PRISM}.css ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/usage.css > ${WORKDIR}/usage-a.css
-#java -jar $YUICOMP $WORKDIR/basic-a.css -o $SITEDIR/basic-$BASECSSVER.css --charset utf-8
-#java -jar $YUICOMP $WORKDIR/faq-a.css -o $SITEDIR/faq-$BASECSSVER.css --charset utf-8
-java -jar $YUICOMP ${WORKDIR}/usage-a.css --charset utf-8 > $SITEDIR/usage-${USAGECSSVER}.css
+java -jar $YUICOMP ${WORKDIR}/basic-a.css --charset utf-8 > ${SITEDIR}/basic-${BASECSSVER}.css
+java -jar $YUICOMP ${WORKDIR}/faq-a.css --charset utf-8 > ${SITEDIR}/faq-${BASECSSVER}.css
+java -jar $YUICOMP ${WORKDIR}/usage-a.css --charset utf-8 > ${SITEDIR}/usage-${USAGECSSVER}.css
 # Remove work directory
 if [ -r $WORKDIR ]
 then rm -r $WORKDIR
