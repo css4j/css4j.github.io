@@ -70,13 +70,14 @@ has a -less useful- factory based on NSAC lexical units.</p>
 methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1.6. Recent versions aren't tested with 1.6 however.</p>
 </div>
 <div id="dom4jbase">
-<h4>Using the dom4j backend, I find that it does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
+<h4>Using the dom4j backend prior to version 3.1, I find that dom4j does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
 <p>You can manually set the base url, doing something like:</p>
 <pre>
 if (document.getBaseURL() == null) {
 	document.setBaseURL(baseUrl);
 }
 </pre>
+<p>From version 3.1 onwards, the css4j-dom4j module does implement and support <code>Document.getDocumentURI()</code>.</p>
 </div>
 <div id="dom4janddomwrapper">
 <h4>Does the DOM4J back-end make use of the DOM wrapper, internally?</h4>
