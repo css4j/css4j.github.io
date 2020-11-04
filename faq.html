@@ -29,6 +29,12 @@
 <h2>CSS4J FAQ</h2>
 <p class="faqlisthelp" id="faqlisthelp">Click on the question to see the answer.</p>
 <div class="faqlist" id="faqlist">
+<div id="nsac">
+<h4>What is NSAC?</h4>
+<p>NSAC is a low-level event API for CSS parsing, an evolution of W3C's <a href="http://www.w3.org/Style/CSS/SAC/">SAC</a>. <a href="api/3/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC 2.x</a> is not backwards-compatible
+with SAC, but similar enough that migrating from it should be relatively easy (if you require compatibility with SAC, you may still use <a href="api/1.0/io/sf/carte/doc/style/css/nsac/package-summary.html">version 1 of NSAC</a>, shipped with css4j 1.x).</p>
+<p>However, most developers use the higher-level CSS Object Model and do not need to care about NSAC except when handling <a href="api/3/io/sf/carte/doc/style/css/CSSVarValue.html#getFallback()"><code>var()</code> fallback values</a>.</p>
+</div>
 <div id="cssvalue">
 <h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
 <p>That API was <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">deprecated by W3C</a>
