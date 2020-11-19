@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS4J SAC benchmarks</title>
+<link href="basic-b.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="/"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><a id="mnuindice" href="/"><span>Home</span></a></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li><a id="mnuapi2" href="api/3/"><span>API 3.x</span></a></li>
+<li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
+<li><a id="mnubenchmarks" href="benchmarks.html"><span>Benchmarks</span></a></li>
+<li class="menulvl2"><a id="mnudommark" href="dom-mark.html"><span>DOM mark</span></a></li>
+<li class="menulvl2"><div id="mnusacmark-sel"><span>SAC mark</span></div></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>SAC mark</span></div>
+<div class="cos">
+<h1>SAC benchmarks</h1>
+<div class="tema" id="overview">
+<h2>Overview</h2>
+<p>The SAC benchmarks measure how fast different <a href="http://www.w3.org/Style/CSS/SAC/">SAC</a> implementations parse CSS style sheets. The following software versions were used:</p>
+<ul>
+<li>Java: <a href="https://adoptopenjdk.net/">AdoptOpenJDK</a> 15.</li>
+<li>JMH: 1.26.</li>
+<li>css4j: 1.2 (pre-release).</li>
+<li><a href="https://xmlgraphics.apache.org/batik/">Batik</a>: 1.13.</li>
+<li><a href="https://sourceforge.net/projects/cssparser/">SteadyState CSSParser</a>: 0.9.29.</li>
+</ul>
+<p>The computer has an Intel® Core™ i5-1035G7 CPU and 8GB of RAM.</p>
+<p>Please note that css4j 1.<i>x</i> versions are superseded, and later versions use NSAC 2.1 instead of SAC.</p>
+</div>
+<div class="tema" id="sac-mark">
+<h2>SAC benchmark</h2>
+<p>Measures the speed at which the SAC parser can process a sample style sheet (contains a subset of the HTML5 user agent's sheet, and then a mix of common style rules).
+</p>
+<p>Given that in css4j 1.<i>x</i> you can choose your preferred SAC parser, this benchmark may be of help.</p>
+<p>The results come from <a href="https://github.com/css4j/benchmark/blob/css4j-1.x/src/io/sf/carte/doc/style/css/mark/SACBenchmark.java">SACBenchmark</a>.</p>
+<div class="tema"><h3>Medium-large file (226 kB)</h3>
+<img src="benchmark/sac-226kb.png" alt="SAC benchmark" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j</td><td class="number">213,960</td><td class="number">±7,250</td><td>ops/s</td></tr>
+<tr><td>Batik CSS</td><td class="number">371,577</td><td class="number">±2,017</td><td>ops/s</td></tr>
+<tr><td>SS CSSParser</td><td class="number">6,705</td><td class="number">±0,057</td><td>ops/s</td></tr>
+</table></div>
+<div class="tema"><h3>Small file (13 kB)</h3>
+<img src="benchmark/sac-small.png" alt="SAC benchmark" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j</td><td class="number">3767,204</td><td class="number">±152,243</td><td>ops/s</td></tr>
+<tr><td>Batik CSS</td><td class="number">6521,440</td><td class="number">±51,305</td><td>ops/s</td></tr>
+<tr><td>SS CSSParser</td><td class="number">146,390</td><td class="number">±1,046</td><td>ops/s</td></tr>
+</table></div>
+</div>
+<div class="tema" id="analysis">
+<h2>Analysis</h2>
+<p>Batik has the fastest SAC parser: 1.7 times the throughput of css4j's, 45-55 times faster than SS CSSParser (depending on the file size) although it only supports CSS2 (and not in full).
+Also, in other tests has shown bad error recovery, causing it to yield (bogus) faster benchmarks if (unsupported) CSS3 is found. On the other hand, the css4j's
+SAC parser supports more CSS than the other contenders and is still reasonably fast.</p>
+<p>The css4j's SAC parser is recommended by this project to use with css4j's 1.x Object Model (it is the default parser). However, if your use
+case only requires simple level 2 selectors and values, and performance is the main consideration (like when CSS is used to specify the user interface
+of a Java application), Batik's parser could be adequate.</p>
+<p>The SteadyState CSSParser is the slowest and, although has recently improved its support for level 3 values, unfortunately its implementation of <code>calc()</code> has some quirks
+and is incompatible with css4j 1.x.</p>
+</div>
+</div>
+<div class="footnote">
+</div>
+</div>
+</div>
+</body>
+</html>

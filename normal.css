@@ -61,16 +61,6 @@ a:hover
 	text-decoration: underline;
 }
 
-#spectbl td, #spectbl th
-{
-	padding: 0.4em 0.3em 0.5em 0.4em;
-}
-
-#spectbl th
-{
-	white-space: nowrap;
-}
-
 .obsrv
 {
 	font-size: smaller;
@@ -81,17 +71,17 @@ table .yesno
 	text-align: center;
 }
 
-tr.hdrow
-{
-	background-color: #e9e9c5;
-}
-
-tr.evenrow
+.normaltbl tr:nth-child(even),tr.evenrow
 {
 	background-color: #f6f5e5;
 }
 
-tr.oddrow
+.normaltbl tr:nth-child(odd),tr.oddrow
 {
 	background-color: #eeebd8;
+}
+
+table.normaltbl tr:first-child,tr.hdrow
+{
+	background-color: #e9e9c5;
 }

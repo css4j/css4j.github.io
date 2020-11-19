@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS4J DOM benchmarks</title>
+<link href="basic-b.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="dom-mark">
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="/"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><a id="mnuindice" href="/"><span>Home</span></a></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li><a id="mnuapi2" href="api/3/"><span>API 3.x</span></a></li>
+<li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
+<li><a id="mnubenchmarks" href="benchmarks.html"><span>Benchmarks</span></a></li>
+<li class="menulvl2"><div id="mnudommark-sel"><span>DOM mark</span></div></li>
+<li class="menulvl2"><a id="mnusacmark" href="sac-mark.html"><span>SAC mark</span></a></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>DOM mark</span></div>
+<div class="cos">
+<h1>DOM benchmarks</h1>
+<div class="tema" id="overview">
+<h2>Overview</h2>
+<p>The DOM benchmarks measure how fast different DOM implementations are when building documents. The following software versions were used:</p>
+<ul>
+<li>Java: <a href="https://adoptopenjdk.net/">AdoptOpenJDK</a>* 15.</li>
+<li>JMH: 1.26.</li>
+<li>css4j: 3.2 (pre-release).</li>
+<li>validator.nu htmlparser: <a href="https://search.maven.org/artifact/nu.validator/htmlparser">1.4.16</a>.</li>
+</ul>
+<p>The computer has an Intel® Core™ i5-1035G7 CPU and 8GB of RAM.</p>
+<p class="note">(*) Note: one of the tested DOM implementations is the one that comes bundled with the JDK (identified as "JDK" in the graphics), and it has been observed
+that the version shipped with the Oracle JDK may be faster.</p>
+</div>
+<div class="tema" id="html-mark">
+<h2>Build HTML documents</h2>
+<p>Measures the speed at which the <a href="https://about.validator.nu/htmlparser/">validator.nu HTML parser</a> can build a small document (38 KB HTML) into a few DOM implementations.</p>
+<img src="benchmark/html-build.png" alt="HTML build benchmark" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">335,609</td><td class="number">±9,416</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">328,637</td><td class="number">±1,920</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">333,742</td><td class="number">±3,079</td><td>ops/s</td></tr>
+</table>
+<p>If one looks at the error figures, the three implementations are somewhat even in this test.</p>
+</div>
+<div class="tema" id="xml-small-mark">
+<h2>Build small XML documents</h2>
+<p>The SAX parser that comes bundled with the JDK is used to parse and build a document from a small XHTML file (38 KB).</p>
+<img src="benchmark/xml-build-small.png" alt="XML build benchmark (small file)" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">496,924</td><td class="number">±3,864</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">447,644</td><td class="number">±7,290</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">520,322</td><td class="number">±1,193</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">507,176</td><td class="number">±6,105</td><td>ops/s</td></tr>
+</table>
+</div>
+<div class="tema" id="xml-small-mark">
+<h2>Build XML documents</h2>
+<p>The SAX parser that comes bundled with the JDK is used to parse and build a document (1MB file).</p>
+<img src="benchmark/xml-build.png" alt="XML build benchmark" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">92,285</td><td class="number">±3,441</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">76,500</td><td class="number">±0,630</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">106,743</td><td class="number">±0,852</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">113,399</td><td class="number">±1,531</td><td>ops/s</td></tr>
+</table>
+</div>
+<div class="tema" id="analysis">
+<h2>Analysis</h2>
+<p>DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. If you use
+instances of DOM4J simultaneously in the same JVM, contention happens even if no common resources are explicitly accessed. This is due to DOM4J using a <code>static</code> synchronized cache of <code>QName</code> objects,
+as shown by the benchmark profiler (e.g. <code>java -jar build/benchmarks.jar XMLBuildBenchmark -prof stack:lines=5;top=3;detailLine=true;period=1</code>):</p>
+<pre class="code">Secondary result "io.sf.carte.doc.style.css.mark.XMLBuildBenchmark.markBuildDOM4J: stack":
+Stack profiler:
+
+....[Thread state distributions]....................................................................
+ 72,3%         BLOCKED
+ 27,6%         RUNNABLE
+
+....[Thread state: BLOCKED].........................................................................
+ 72,3% 100,0% java.util.Collections$SynchronizedMap.get
+              org.dom4j.tree.QNameCache.get
+              org.dom4j.DocumentFactory.createQName
+              org.dom4j.tree.NamespaceStack.createQName
+              org.dom4j.tree.NamespaceStack.pushQName
+</pre>
+<p>So its usage is not recommended for multi-core systems.</p>
+<p>DOM implementations that are CSS-enabled (like Css4j-DOM4j and Css4j's native DOM) are necessarily a bit slower than plain DOM, and Css4j's native DOM is the slowest of the
+measured implementations (especially when processing large XML files). More benchmarks are needed to verify that the balance of optimizations/implementation decisions in the native DOM is adequate, and try to improve its performance.</p>
+</div>
+</div>
+<div class="footnote">
+</div>
+</div>
+</div>
+</body>
+</html>

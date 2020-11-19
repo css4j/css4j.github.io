@@ -82,10 +82,28 @@ body .menu {
 	padding: 1px 0 0 0.2ex;
 }
 
+li.menulvl2 a, li.menulvl2 div
+{
+	height: 20px;
+	padding: 0 0 0 0.7ex;
+}
+
 .menulist a
 {
 	display: block;
 	background: url(imag/mnubg_a.png) no-repeat;
+}
+
+li.menulvl2 a
+{
+	display: block;
+	background: url(imag/mnubg2_a.png) no-repeat;
+}
+
+li.menulvl2 a:hover
+{
+	text-align: right;
+	background: url(imag/mnubg2_b.png) no-repeat;
 }
 
 .menulist a:hover
@@ -172,6 +190,11 @@ pre
 	font-size: 1.4em;
 }
 
+pre.code
+{
+	background-color: #e7e4de;
+}
+
 div.tema
 {
 	margin: 2em 0 3.3em 0;
@@ -207,7 +230,28 @@ img.diagram
 	list-style-type: square;
 }
 
-.legalremind
+.normaltbl td, .normaltbl th
+{
+	padding: 0.4em 1em 0.5em 1.1em;
+}
+
+.normaltbl th
+{
+	white-space: nowrap;
+	text-align: center;
+}
+
+.normaltbl td.number
+{
+	text-align: right;
+}
+
+.normaltbl th:first-child
+{
+	text-align: left;
+}
+
+.note,.legalremind
 {
 	font-size: smaller;
 	font-style: italic;

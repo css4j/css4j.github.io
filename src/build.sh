@@ -5,15 +5,16 @@
 YUICOMP=${HOME}/java/lib/yuicompressor-2.4.8.jar
 SRCDIR=${HOME}/www/css4j.github.io/src
 CONTRIBDIR=${SRCDIR}/contrib
-PRISM=${CONTRIBDIR}/prism-markup-css-clike-java
+PRISM=${CONTRIBDIR}/prism-markup-css-clike-java-shell
+PRISM_USAGE=${CONTRIBDIR}/prism-markup-css-clike-java
 LIBDIR=${HOME}/www/jslib
 CSSSRCDIR=${HOME}/www/css4j.github.io/src
 SITEDIR=${HOME}/www/css4j.github.io
 WORKDIR=$TMP/css4j.github
 FAQJSVER=a
 USAGEJSVER=c
-USAGECSSVER=b
-BASECSSVER=a
+USAGECSSVER=c
+BASECSSVER=b
 # Work directory
 if [ ! -d $WORKDIR ]
 then mkdir $WORKDIR
@@ -32,12 +33,14 @@ cat $SRCDIR/copyright-src.js $SRCDIR/framebreak-src.js $SRCDIR/faq-src.js > ${WO
 cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > ${WORKDIR}/usage-a.js
 java -jar $YUICOMP --charset utf-8 ${WORKDIR}/faq-a.js > ${SITEDIR}/js/faq-${FAQJSVER}.js
 java -jar $YUICOMP --charset utf-8 ${WORKDIR}/usage-a.js > ${WORKDIR}/usage-compressed.js
-cat $SRCDIR/copyright-prism-src.js ${WORKDIR}/usage-compressed.js ${PRISM}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
+cat $SRCDIR/copyright-prism-src.js ${WORKDIR}/usage-compressed.js ${PRISM_USAGE}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
 # CSS
 cat ${SITEDIR}/common.css ${SITEDIR}/normal.css > ${WORKDIR}/basic-a.css
-cat ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/faq.css > ${WORKDIR}/faq-a.css
-cat ${PRISM}.css ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/usage.css > ${WORKDIR}/usage-a.css
+cat ${WORKDIR}/basic-a.css ${CSSSRCDIR}/faq.css > ${WORKDIR}/faq-a.css
+#cat ${PRISM}.css ${WORKDIR}/basic-a.css > ${WORKDIR}/code-a.css
+cat ${PRISM_USAGE}.css ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/usage.css > ${WORKDIR}/usage-a.css
 java -jar $YUICOMP ${WORKDIR}/basic-a.css --charset utf-8 > ${SITEDIR}/basic-${BASECSSVER}.css
+#java -jar $YUICOMP ${WORKDIR}/code-a.css --charset utf-8 > ${SITEDIR}/code-${BASECSSVER}.css
 java -jar $YUICOMP ${WORKDIR}/faq-a.css --charset utf-8 > ${SITEDIR}/faq-${BASECSSVER}.css
 java -jar $YUICOMP ${WORKDIR}/usage-a.css --charset utf-8 > ${SITEDIR}/usage-${USAGECSSVER}.css
 # Remove work directory
