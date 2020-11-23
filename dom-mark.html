@@ -31,13 +31,23 @@
 <h1>DOM benchmarks</h1>
 <div class="tema" id="overview">
 <h2>Overview</h2>
-<p>The DOM benchmarks measure how fast different DOM implementations are when building documents. The following software versions were used:</p>
+<p>The DOM benchmarks measure how fast different DOM implementations are when building and traversing documents:</p>
+<ul>
+<li><a href="https://github.com/css4j/css4j-dom4j">Css4j-DOM4J</a> module (which subclasses DOM4J).</li>
+<li><a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/package-summary.html">Css4j's native DOM</a>.</li>
+<li>Stand-alone <a href="https://dom4j.github.io/">DOM4J</a>.</li>
+<li>JDK's bundled <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMImplementation.html">DOM implementation</a>.</li>
+</ul>
+<div class="subtema">
+<p>The following software versions were used:</p>
 <ul>
 <li>Java: <a href="https://adoptopenjdk.net/">AdoptOpenJDK</a>* 15.</li>
 <li>JMH: 1.26.</li>
 <li>css4j: 3.2 (pre-release).</li>
 <li>validator.nu htmlparser: <a href="https://search.maven.org/artifact/nu.validator/htmlparser">1.4.16</a>.</li>
+<li>dom4j: 2.1.3.</li>
 </ul>
+</div>
 <p>The computer has an Intel® Core™ i5-1035G7 CPU and 8GB of RAM.</p>
 <p class="note">(*) Note: one of the tested DOM implementations is the one that comes bundled with the JDK (identified as "JDK" in the graphics), and it has been observed
 that the version shipped with the Oracle JDK may be faster.</p>
@@ -53,7 +63,8 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <tr><td>Css4j DOM</td><td class="number">328,637</td><td class="number">±1,920</td><td>ops/s</td></tr>
 <tr><td>JDK</td><td class="number">333,742</td><td class="number">±3,079</td><td>ops/s</td></tr>
 </table>
-<p>If one looks at the error figures, the three implementations are somewhat even in this test.</p>
+<p>If one looks at the error figures, the three implementations are somewhat even in this test. Plain DOM4J is not included in the benchmark,
+as it cannot be used with <code>HtmlDocumentBuilder</code>.</p>
 </div>
 <div class="tema" id="xml-small-mark">
 <h2>Build small XML documents</h2>
@@ -62,10 +73,11 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl">
 <tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
-<tr><td>Css4j-DOM4J</td><td class="number">478,464</td><td class="number">±2,842</td><td>ops/s</td></tr>
-<tr><td>Css4j DOM</td><td class="number">453,009</td><td class="number">±5,765</td><td>ops/s</td></tr>
-<tr><td>DOM4J</td><td class="number">511,700</td><td class="number">±3,038</td><td>ops/s</td></tr>
-<tr><td>JDK</td><td class="number">512,558</td><td class="number">±4,976</td><td>ops/s</td></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">505,418</td><td class="number">±20,569</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">486,341</td><td class="number">±5,949</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">547,620</td><td class="number">±12,901</td><td>ops/s</td></tr>
+<tr><td>JDK (XMLDocumentBuilder)</td><td class="number">530,703</td><td class="number">±7,089</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">542,871</td><td class="number">±12,360</td><td>ops/s</td></tr>
 </table>
 </div>
 <div class="tema" id="xml-mark">
@@ -76,14 +88,122 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <table class="normaltbl">
 <tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
 <tr><td>Css4j-DOM4J</td><td class="number">90,796</td><td class="number">±1,193</td><td>ops/s</td></tr>
-<tr><td>Css4j DOM</td><td class="number">83,717</td><td class="number">±0,746</td><td>ops/s</td></tr>
-<tr><td>DOM4J</td><td class="number">116,575</td><td class="number">±0,682</td><td>ops/s</td></tr>
-<tr><td>JDK</td><td class="number">126,955</td><td class="number">±0,857</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">85,990</td><td class="number">±0,764</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">113,444</td><td class="number">±0,504</td><td>ops/s</td></tr>
+<tr><td>JDK (XMLDocumentBuilder)</td><td class="number">91,828</td><td class="number">±1,119</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">120,095</td><td class="number">±0,846</td><td>ops/s</td></tr>
+</table>
+</div>
+<div class="tema" id="traverse-next">
+<h2>DOM traversal: <code>getFirstChild()/getNextSibling()</code></h2>
+<p>Count the nodes of an XML document, using a combination of <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getFirstChild()">getFirstChild()</a>/<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getNextSibling()">getNextSibling()</a></code> to traverse it.</p>
+<img src="benchmark/traversal-next.png" alt="DOM traversal benchmark 1" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">238,888</td><td class="number">±14,212</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">3098,809</td><td class="number">±48,866</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">6193,611</td><td class="number">±44,107</td><td>ops/s</td></tr>
+</table>
+<p><em>Note:</em> for unknown reasons, the usual procedure to build the JDK document with a <code>DocumentBuilderFactory</code> could not be used to initialize the document
+traversed in the benchmark, as that document is somehow left in an inconsistent state with no child nodes; this happened with the initialization code being executed in a
+<code>Scope.Benchmark</code> class and also when in a <code>static</code> initialization block. When that same code is executed in a JUnit test, the problem is not seen.</p>
+<p>Because of this reason the JDK DOM document was built with css4j's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>,
+although that process is not part of the timed benchmark.</p>
+</div>
+<div class="tema" id="traverse-prev">
+<h2>DOM traversal: <code>getLastChild()/getPreviousSibling()</code></h2>
+<p>Count the nodes of an XML document, using a combination of <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getLastChild()">getLastChild()</a>/<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getPreviousSibling()">getPreviousSibling()</a></code> to traverse it.</p>
+<img src="benchmark/traversal-prev.png" alt="DOM traversal benchmark 2" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">208,244</td><td class="number">±48,552</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">2951,919</td><td class="number">±241,858</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">6717,898</td><td class="number">±92,711</td><td>ops/s</td></tr>
+</table>
+<p>The Css4j-DOM4J results are representative for DOM4J as well.</p>
+</div>
+<div class="tema" id="nodeiterator">
+<h2>DOM traversal: <code>NodeIterator</code></h2>
+<p>Count the elements of an XML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/NodeIterator.html"><code>NodeIterator</code></a>.</p>
+<img src="benchmark/nodeiterator.png" alt="DOM node iterator" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j DOM</td><td class="number">2241,289</td><td class="number">±47,954</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">4564,023</td><td class="number">±123,393</td><td>ops/s</td></tr>
+</table>
+<p>DOM4J is not included as it lacks a <code>NodeIterator</code>.</p>
+<p><em>Note:</em> sometimes the <code>NodeIterator</code> created by the JDK is in an inconsistent state, and fails with an exception like:</p>
+<pre class="code"># Warmup Iteration   1: <failure>
+
+java.lang.ArrayIndexOutOfBoundsException: Index 34 out of bounds for length 33
+        at java.base/java.util.ArrayList.add(ArrayList.java:455)
+        at java.base/java.util.ArrayList.add(ArrayList.java:467)
+        at java.xml/com.sun.org.apache.xerces.internal.dom.DocumentImpl.createNodeIterator(DocumentImpl.java:255)
+        at io.sf.carte.doc.style.css.mark.DOMTraverseMark.markNodeIteratorJdk(DOMTraverseMark.java:122)
+</pre>
+<p>But I have observed this only while benchmarking, and not in other cases.</p>
+</div>
+<div class="tema" id="treewalker">
+<h2>DOM traversal: <code>TreeWalker</code></h2>
+<p>Count the elements of an XML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/TreeWalker.html"><code>TreeWalker</code></a>.</p>
+<img src="benchmark/treewalker.png" alt="DOM tree walker" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j DOM</td><td class="number">2229,978</td><td class="number">±44,438</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">4662,251</td><td class="number">±95,975</td><td>ops/s</td></tr>
+</table>
+<p>DOM4J provides no <code>TreeWalker</code>.</p>
+</div>
+<div class="tema" id="element-iterator">
+<h2>DOM traversal: <code>elementIterator()</code></h2>
+<p>Traverse an XML document using native DOM's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ParentNode.html#elementIterator()"><code>elementIterator()</code></a>
+and DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Element.html#elementIterator--"><code>elementIterator()</code></a>.</p>
+<img src="benchmark/element-iterator.png" alt="DOM element iterator" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j DOM</td><td class="number">1973,655</td><td class="number">±13,820</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">522,078</td><td class="number">±8,523</td><td>ops/s</td></tr>
+</table>
+<p>The JDK's DOM provides no element iterator.</p>
+</div>
+<div class="tema" id="elements-by-tagname">
+<h2>DOM traversal: <code>getElementsByTagName()</code></h2>
+<p>Traverse the list given by <code>getElementsByTagName()</code>. In the case of css4j's native DOM, there are two results: one iterating the
+<a href="https://dom.spec.whatwg.org/#interface-nodelist"><code>NodeList</code></a> by the <code>item()</code> method, and another via the iterator
+(the returned <code>NodeList</code> implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a>).</p>
+<img src="benchmark/elements-by-tagname.png" alt="DOM elements by tag name" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">463,847</td><td class="number">±3,358</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">2,153</td><td class="number">±0,087</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM (iterator)</td><td class="number">1532,235</td><td class="number">±59,400</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">2002,057</td><td class="number">±82,689</td><td>ops/s</td></tr>
+</table>
+<p><em>Note:</em> the iterator is documented as the recommended way to traverse the <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ElementList.html"><code>ElementList</code></a> in css4j since version 3.2. Css4j versions prior to 3.2 perform much better in this benchmark,
+but the implementation was switched to one that is more lightweight (and the iterator performance is good enough).</p>
+</div>
+<div class="tema" id="dom-change">
+<h2>DOM modification: <code>appendChild()/removeChild()</code></h2>
+<p>Modify the nodes of an XML document by appending elements with <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#appendChild(org.w3c.dom.Node)"><code>appendChild()</code></a> and later removing them with
+<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#removeChild(org.w3c.dom.Node)"><code>removeChild()</code></a>.</p>
+<img src="benchmark/dom-change.png" alt="dom change" />
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl">
+<tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">115,780</td><td class="number">±1,609</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">440,383</td><td class="number">±6,933</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">791,273</td><td class="number">±8,898</td><td>ops/s</td></tr>
 </table>
 </div>
 <div class="tema" id="analysis">
 <h2>Analysis</h2>
-<p>DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. If you use
+<p>Building a document with DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. If you use
 instances of DOM4J simultaneously in the same JVM, contention happens even if no common resources are explicitly accessed. This is due to DOM4J using a <code>static</code> synchronized cache of <code>QName</code> objects,
 as shown by the benchmark profiler (e.g. <code>java -jar build/benchmarks.jar XMLBuildBenchmark -prof stack:lines=5;top=3;detailLine=true;period=1</code>):</p>
 <pre class="code">Secondary result "io.sf.carte.doc.style.css.mark.XMLBuildBenchmark.markBuildDOM4J: stack":
@@ -101,8 +221,9 @@ Stack profiler:
               org.dom4j.tree.NamespaceStack.pushQName
 </pre>
 <p>So its usage is not recommended for multi-core systems.</p>
-<p>DOM implementations that are CSS-enabled (like Css4j-DOM4j and Css4j's native DOM) are necessarily a bit slower than plain DOM, and Css4j's native DOM is the slowest of the
-measured implementations, which is not entirely surprising as it also has more features.</p>
+<p>Css4j's native DOM has more features than the other contenders but is slower than the JDK's DOM, otherwise shows reasonable speeds. The DOM implementation that comes bundled with the JDK is the fastest,
+and looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
+Finally, DOM4J is lagging behind in performance for anything other than document build-up.</p>
 </div>
 </div>
 <div class="footnote">
