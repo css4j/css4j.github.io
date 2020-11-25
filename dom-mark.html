@@ -52,7 +52,7 @@
 <p class="note">(*) Note: one of the tested DOM implementations is the one that comes bundled with the JDK (identified as "JDK" in the graphics), and it has been observed
 that the version shipped with the Oracle JDK may be faster.</p>
 </div>
-<div class="tema" id="html-mark">
+<div class="tema" id="html-build">
 <h2>Build HTML documents</h2>
 <p>Measures the speed at which the <a href="https://about.validator.nu/htmlparser/">validator.nu HTML parser</a> can build a small document (38 KB HTML) into a few DOM implementations.</p>
 <img src="benchmark/html-build.png" alt="HTML build benchmark" />
@@ -66,7 +66,7 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <p>If one looks at the error figures, the three implementations are somewhat even in this test. Plain DOM4J is not included in the benchmark,
 as it cannot be used with <code>HtmlDocumentBuilder</code>.</p>
 </div>
-<div class="tema" id="xml-small-mark">
+<div class="tema" id="xml-build-small">
 <h2>Build small XML documents</h2>
 <p>The SAX parser that comes bundled with the JDK is used to parse and build a document from a small XHTML file (38 KB).</p>
 <img src="benchmark/xml-build-small.png" alt="XML build benchmark (small file)" />
@@ -80,7 +80,7 @@ as it cannot be used with <code>HtmlDocumentBuilder</code>.</p>
 <tr><td>JDK</td><td class="number">542,871</td><td class="number">±12,360</td><td>ops/s</td></tr>
 </table>
 </div>
-<div class="tema" id="xml-mark">
+<div class="tema" id="xml-build">
 <h2>Build XML documents</h2>
 <p>The SAX parser that comes bundled with the JDK is used to parse and build a document (1MB file).</p>
 <img src="benchmark/xml-build.png" alt="XML build benchmark" />
