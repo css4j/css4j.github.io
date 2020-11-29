@@ -1,6 +1,6 @@
 body
 {
-	font-family: Verdana, Arial, Helvetica;
+	font-family: Verdana, "Open Sans", sans-serif;
 	margin: 0 0 0.2em 0;
 }
 
@@ -136,7 +136,7 @@ li.menulvl2 div
 {
 	float: left;
 	width: 90%;
-	font-family: Liberation Sans, Helvetica, Arial, sans-serif;
+	font-family : "Open Sans", sans-serif;
 }
 
 .textheader
@@ -157,8 +157,6 @@ li.menulvl2 div
 
 .cos
 {
-	font-family : Verdana, Liberation Sans, Arial, Helvetica, sans-serif;
-	font-size : small;
 	text-align: justify;
 	border-top: 2px dotted #B29E7C;
 	margin: 1.9em 1ex 1em 100px;
