@@ -319,6 +319,17 @@ sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 <pre class="code"><code class="language-java">sheet.getCssRules().clear();
 </code></pre>
 </div>
+<div class="tema" id="securitymodel">
+<h2>Security model</h2>
+<p>Linked style sheets accessed through DOM are automatically fetched, but if your <code>LINK</code> element or <code>@import</code>
+rule point to a <code>file:</code> or <code>jar:</code> URL, the style sheet won't be retrieved unless you set the <code>documentURI</code>
+of your document to one of those URIs.</p>
+<p>A similar reasoning applies to the contents of the <code>href</code> attribute in the <code>BASE</code> element. If you load a
+document that contains a <code>&lt;base href="file:///some/path"&gt;</code>, that won't take effect until you call <code>setDocumentURI()</code>
+to set a URI with a <code>file:</code> or <code>jar:</code> scheme. This prevents denial of service attacks that could cause thread starvation
+(for example by linking to <code>file:///dev/zero</code>) or deplete the pool of entropy in your server (<code>file:///dev/random</code>),
+as well as <code>jar:</code> decompression bombs.</p>
+</div>
 <div class="tema" id="legacycompat">
 <h2>Compatibility with legacy browsers</h2>
 <p>Today's style sheets often contain non-conformant styles that target specific versions of old web browsers, like Internet Explorer.
