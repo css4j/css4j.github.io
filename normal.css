@@ -81,7 +81,7 @@ table .yesno
 	background-color: #eeebd8;
 }
 
-table.normaltbl tr:first-child,tr.hdrow
+table.normaltbl>thead>tr:first-child,tr.hdrow
 {
 	background-color: #e9e9c5;
 }
