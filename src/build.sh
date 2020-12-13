@@ -30,10 +30,10 @@ fi
 #     exit
 #fi
 cat $SRCDIR/copyright-src.js $SRCDIR/framebreak-src.js $SRCDIR/faq-src.js > ${WORKDIR}/faq-a.js
-cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > ${WORKDIR}/usage-a.js
+cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > ${WORKDIR}/indexbuilder-a.js
 java -jar $YUICOMP --charset utf-8 ${WORKDIR}/faq-a.js > ${SITEDIR}/js/faq-${FAQJSVER}.js
-java -jar $YUICOMP --charset utf-8 ${WORKDIR}/usage-a.js > ${WORKDIR}/usage-compressed.js
-cat $SRCDIR/copyright-prism-src.js ${WORKDIR}/usage-compressed.js ${PRISM_USAGE}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
+java -jar $YUICOMP --charset utf-8 ${WORKDIR}/indexbuilder-a.js > ${SITEDIR}/js/indexbuilder-compr.js
+cat $SRCDIR/copyright-prism-src.js ${SITEDIR}/js/indexbuilder-compr.js ${PRISM_USAGE}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
 # CSS
 cat ${SITEDIR}/common.css ${SITEDIR}/normal.css > ${WORKDIR}/basic-a.css
 cat ${WORKDIR}/basic-a.css ${CSSSRCDIR}/faq.css > ${WORKDIR}/faq-a.css
