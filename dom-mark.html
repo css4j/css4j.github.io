@@ -135,7 +135,8 @@ text {
 <tr><td>JDK</td><td class="number">330.047</td><td class="number">±2.259</td><td>ops/s</td></tr>
 </tbody></table>
 <p>If one looks at the error figures, the three implementations are somewhat even in this test. Plain DOM4J is not included in the benchmark,
-as it cannot be used with <code>HtmlDocumentBuilder</code>.</p>
+as it cannot be used with <code>HtmlDocumentBuilder</code>. As a reference, a similar test with Jsoup (which cannot use the <code>validator.nu</code>
+parser but has its own) reveals that it is about 17 times faster than the average of the above scores.</p>
 </div>
 <div class="tema" id="xml-build-small">
 <h2>Build small XML documents</h2>
@@ -583,7 +584,7 @@ java.lang.ArrayIndexOutOfBoundsException: Index 34 out of bounds for length 33
         at java.base/java.util.ArrayList.add(ArrayList.java:455)
         at java.base/java.util.ArrayList.add(ArrayList.java:467)
         at java.xml/com.sun.org.apache.xerces.internal.dom.DocumentImpl.createNodeIterator(DocumentImpl.java:255)
-        at io.sf.carte.doc.style.css.mark.DOMTraverseMark.markNodeIteratorJdk(DOMTraverseMark.java:122)
+        at io.sf.carte.mark.dom.DOMIteratorMark.markNodeIteratorJdk(DOMIteratorMark.java:46)
 </failure></pre>
 <p>But I have observed this only while benchmarking, and not in other cases.</p>
 </div>
@@ -943,7 +944,7 @@ text {
 <p>Building a document with DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. If you use
 instances of DOM4J simultaneously in the same JVM, contention happens even if no common resources are explicitly accessed. This is due to DOM4J using a <code>static</code> synchronized cache of <code>QName</code> objects,
 as shown by the benchmark profiler (e.g. <code>java -jar build/benchmarks.jar XMLBuildBenchmark -prof stack:lines=5;top=3;detailLine=true;period=1</code>):</p>
-<pre class="code">Secondary result "io.sf.carte.doc.style.css.mark.XMLBuildBenchmark.markBuildDOM4J: stack":
+<pre class="code">Secondary result "io.sf.carte.mark.dom.XMLBuildBenchmark.markBuildDOM4J: stack":
 Stack profiler:
 
 ....[Thread state distributions]....................................................................
