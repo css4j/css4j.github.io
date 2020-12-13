@@ -14,7 +14,7 @@ WORKDIR=$TMP/css4j.github
 FAQJSVER=a
 USAGEJSVER=c
 USAGECSSVER=c
-BASECSSVER=b
+BASECSSVER=c
 # Work directory
 if [ ! -d $WORKDIR ]
 then mkdir $WORKDIR
