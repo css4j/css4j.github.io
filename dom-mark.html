@@ -56,7 +56,7 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <div class="tema" id="html-build">
 <h2>Build HTML documents</h2>
 <p>Measures the speed at which the <a href="https://about.validator.nu/htmlparser/">validator.nu HTML parser</a> can build a small document (38 KB HTML) into a few DOM implementations.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>HTML build benchmark</title><defs>
 <clipPath id="html-build-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -125,7 +125,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/html-build.png" xlink:href></image></svg>
+<image src="benchmark/html-build.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -139,7 +139,7 @@ as it cannot be used with <code>HtmlDocumentBuilder</code>.</p>
 <div class="tema" id="xml-build-small">
 <h2>Build small XML documents</h2>
 <p>The SAX parser that comes bundled with the JDK is used to parse and build a document from a small XHTML file (38 KB).</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>XML build benchmark</title><defs>
 <clipPath id="xml-build-small-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -219,7 +219,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/xml-build-small.png" xlink:href></image></svg>
+<image src="benchmark/xml-build-small.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -233,7 +233,7 @@ text {
 <div class="tema" id="xml-build">
 <h2>Build XML documents</h2>
 <p>The SAX parser that comes bundled with the JDK is used to parse and build a document (1MB file).</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>XML build benchmark</title><defs>
 <clipPath id="xml-build-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -316,7 +316,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
-<image src="benchmark/xml-build.png" xlink:href></image></svg>
+<image src="benchmark/xml-build.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -330,7 +330,7 @@ text {
 <div class="tema" id="traversal-next">
 <h2>DOM traversal: <code>getFirstChild()/getNextSibling()</code></h2>
 <p>Count the nodes of an XML document, using a combination of <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getFirstChild()">getFirstChild()</a>/<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getNextSibling()">getNextSibling()</a></code> to traverse it.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM Traversal</title><defs>
 <clipPath id="traversal-next-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -401,7 +401,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/traversal-next.png" xlink:href></image></svg>
+<image src="benchmark/traversal-next.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -418,7 +418,7 @@ although that process is not part of the timed benchmark.</p>
 <div class="tema" id="traversal-prev">
 <h2>DOM traversal: <code>getLastChild()/getPreviousSibling()</code></h2>
 <p>Count the nodes of an XML document, using a combination of <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getLastChild()">getLastChild()</a>/<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#getPreviousSibling()">getPreviousSibling()</a></code> to traverse it.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM Traversal</title><defs>
 <clipPath id="traversal-prev-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -489,7 +489,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/traversal-prev.png" xlink:href></image></svg>
+<image src="benchmark/traversal-prev.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -567,7 +567,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/nodeiterator.png" xlink:href></image></svg>
+<image src="benchmark/nodeiterator.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -589,7 +589,7 @@ java.lang.ArrayIndexOutOfBoundsException: Index 34 out of bounds for length 33
 <div class="tema" id="treewalker">
 <h2>DOM traversal: <code>TreeWalker</code></h2>
 <p>Count the elements of an XML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/TreeWalker.html"><code>TreeWalker</code></a>.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM Traversal</title><defs>
 <clipPath id="treewalker-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -654,7 +654,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/treewalker.png" xlink:href></image></svg>
+<image src="benchmark/treewalker.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -667,7 +667,7 @@ text {
 <h2>DOM traversal: <code>elementIterator()</code></h2>
 <p>Traverse an XML document using native DOM's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ParentNode.html#elementIterator()"><code>elementIterator()</code></a>
 and DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Element.html#elementIterator--"><code>elementIterator()</code></a>.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM Traversal</title><defs>
 <clipPath id="element-iterator-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -742,7 +742,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/element-iterator.png" xlink:href></image></svg>
+<image src="benchmark/element-iterator.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -756,7 +756,7 @@ text {
 <p>Traverse the list given by <code>getElementsByTagName()</code>. In the case of css4j's native DOM, there are two results: one iterating the
 <a href="https://dom.spec.whatwg.org/#interface-nodelist"><code>NodeList</code></a> by the <code>item()</code> method, and another via the iterator
 (the returned <code>NodeList</code> implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a>).</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM Traversal</title><defs>
 <clipPath id="elements-by-tagname-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -841,7 +841,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/elements-by-tagname.png" xlink:href></image></svg>
+<image src="benchmark/elements-by-tagname.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
@@ -857,7 +857,7 @@ but the implementation was switched to one that is more lightweight (and the ite
 <h2>DOM modification: <code>appendChild()/removeChild()</code></h2>
 <p>Modify the nodes of an XML document by appending elements with <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#appendChild(org.w3c.dom.Node)"><code>appendChild()</code></a> and later removing them with
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html#removeChild(org.w3c.dom.Node)"><code>removeChild()</code></a>.</p>
-<svg version="1.1" baseprofile="full" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>DOM document modification</title><defs>
 <clipPath id="dom-change-cut-scale-shadow">
   <rect width="623" height="15" x="71" y="46"></rect>
@@ -928,7 +928,7 @@ text {
 <text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
 <text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
-<image src="benchmark/dom-change.png" xlink:href></image></svg>
+<image src="benchmark/dom-change.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
