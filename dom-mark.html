@@ -950,9 +950,8 @@ text {
 </div>
 <div class="tema" id="analysis">
 <h2>Analysis</h2>
-<p>Building a document with DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. If you use
-instances of DOM4J simultaneously in the same JVM, contention happens even if no common resources are explicitly accessed. This is due to DOM4J using a <code>static</code> synchronized cache of <code>QName</code> objects,
-as shown by the benchmark profiler (e.g. <code>java -jar build/benchmarks.jar XMLBuildBenchmark -prof stack:lines=5;top=3;detailLine=true;period=1</code>):</p>
+<p>Building a document with DOM4J (both plain DOM4J and the CSS-enabled subclasses that CSS4J provide) is fast, but has an important scalability problem. It uses
+a synchronized cache of <code>QName</code> objects, as shown by the benchmark profiler (e.g. <code>java -jar build/benchmarks.jar XMLBuildBenchmark -prof stack:lines=5;top=3;detailLine=true;period=1</code>):</p>
 <pre class="code">Secondary result "io.sf.carte.mark.dom.XMLBuildBenchmark.markBuildDOM4J: stack":
 Stack profiler:
 
@@ -971,7 +970,8 @@ Stack profiler:
 <p>Css4j's native DOM has more features than the other contenders but is slower than the JDK's DOM, otherwise shows reasonable speeds. The DOM implementation that comes bundled with the JDK is the fastest,
 and looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
 Finally, DOM4J is lagging behind in performance for anything other than document build-up.</p>
-<p>For users that do not need to deal with CSS, Jsoup excels at parsing and has quite good iterator speeds, but is several orders of magnitude slower in the document modification benchmark.</p>
+<p>For users that do not need to handle CSS and do not mind dealing with a non-standard API, Jsoup excels at parsing and has quite good iterator speeds,
+but is several orders of magnitude slower in the document modification benchmark.</p>
 </div>
 </div>
 <div class="footnote">
