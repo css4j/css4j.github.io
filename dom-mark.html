@@ -63,8 +63,8 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>HTML build benchmark</title><defs>
 <clipPath id="html-build-cut-scale-shadow">
-  <rect width="623" height="15" x="71" y="46"></rect>
-  <rect width="8" height="418" x="685" y="42"></rect>
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
 </clipPath>
 <linearGradient id="html-build-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
 <stop stop-color="#cde1ff" offset="0"></stop>
@@ -79,67 +79,88 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
 </filter>
 </defs>
-<style>
-text {
-  font-family: "Open Sans",Verdana,sans-serif;
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
 }
-#caption {
-  font-size: 13pt;
-  font-weight: 700;
+#html-build-caption {
+    font-size: 13pt;
+    font-weight: 700;
 }
-#subcaption {
-  font-size: 9pt;
-  font-weight: 600;
+#html-build-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
 }
-#x-title,#y-title{
-  font-size: 10pt;
-  font-weight: 700;
+#html-build-x-title,#html-build-y-title {
+    font-size: 10pt;
+    font-weight: 700;
 }
-.itemlabel {
-  font-size: 10pt;
-  font-weight: 400;
+.html-build-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
 }
-.scaleItem {
-  font-size: 9pt;
-  font-weight: 300;
+.html-build-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
 }
 </style>
 <rect width="100%" height="100%" fill="url('#html-build-background')"></rect>
-<rect width="610" height="400" x="75" y="60" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#html-build-projection')" clip-path="url('#html-build-cut-scale-shadow')"></rect>
-<rect id="html-build-chartbox" width="610" height="400" x="75" y="60" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
-<text id="caption" x="355" y="22" text-anchor="middle" fill="black">HTML build benchmark</text>
-<text id="subcaption" x="355" y="42" text-anchor="middle" fill="black">38 KB html file, validator.nu parser</text>
-<rect width="187.0" height="342.7" x="81.5" y="117.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
-<rect id="html-build-markBuildCss4jDOM4J" width="187.0" height="342.7" x="81.5" y="117.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
-<rect width="187.0" height="342.7" x="81.5" y="117.3" fill="url('#html-build-reflection')"></rect>
-<line x1="179.1" x2="179.1" y1="101.6" y2="132.4" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="174.1" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j-DOM4J</text>
-<rect width="187.0" height="320.4" x="284.9" y="139.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
-<rect id="html-build-markBuildDOM" width="187.0" height="320.4" x="284.9" y="139.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
-<rect width="187.0" height="320.4" x="284.9" y="139.6" fill="url('#html-build-reflection')"></rect>
-<line x1="382.5" x2="382.5" y1="138.1" y2="141.9" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="377.4" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
-<rect width="187.0" height="326.7" x="488.2" y="133.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
-<rect id="html-build-markBuildPlainJDK" width="187.0" height="326.7" x="488.2" y="133.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
-<rect width="187.0" height="326.7" x="488.2" y="133.3" fill="url('#html-build-reflection')"></rect>
-<line x1="585.8" x2="585.8" y1="130.8" y2="135.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="580.7" y="475" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
-<text x="74" y="64" class="scaleitem" text-anchor="end">400</text>
-<text x="74" y="264" class="scaleitem" text-anchor="end">200</text>
-<text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
-<text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
-<text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#html-build-projection')" clip-path="url('#html-build-cut-scale-shadow')"></rect>
+<rect id="html-build-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="html-build-caption" x="355" y="22" text-anchor="middle" fill="black">HTML build benchmark</text>
+<text id="html-build-subcaption" x="355" y="40" text-anchor="middle" fill="black">38 KB html file, validator.nu parser</text>
+<rect width="88.0" height="32.9" x="80.5" y="422.1" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildCss4jDOM4J" width="88.0" height="32.9" x="80.5" y="422.1" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
+<rect width="88.0" height="32.9" x="80.5" y="422.1" fill="url('#html-build-reflection')"></rect>
+<line x1="129.3" x2="129.3" y1="420.9" y2="423.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="126.7" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j-DOM4J</text>
+<rect width="88.0" height="31.4" x="182.1" y="423.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildDOM" width="88.0" height="31.4" x="182.1" y="423.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="88.0" height="31.4" x="182.1" y="423.6" fill="url('#html-build-reflection')"></rect>
+<line x1="230.9" x2="230.9" y1="423.8" y2="424.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="228.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="88.0" height="31.6" x="283.8" y="423.4" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildDOM4J" width="88.0" height="31.6" x="283.8" y="423.4" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
+<rect width="88.0" height="31.6" x="283.8" y="423.4" fill="url('#html-build-reflection')"></rect>
+<line x1="332.6" x2="332.6" y1="422.8" y2="423.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="330.1" y="470" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
+<rect width="88.0" height="30.7" x="385.5" y="424.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildDOMXHTMLBuilder" width="88.0" height="30.7" x="385.5" y="424.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04dc0"></rect>
+<rect width="88.0" height="30.7" x="385.5" y="424.3" fill="url('#html-build-reflection')"></rect>
+<line x1="434.3" x2="434.3" y1="423.8" y2="424.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="431.7" y="470" class="itemlabel" text-anchor="middle" fill="black">
+				<tspan x="431.7">Css4j DOM</tspan> <tspan style="font-size: smaller; " x="431.7" dy="14.4">(own builder)</tspan>
+			</text>
+<rect width="88.0" height="383" x="487.1" y="72" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildJsoup" width="88.0" height="383" x="487.1" y="72" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#a2d87d"></rect>
+<rect width="88.0" height="383" x="487.1" y="72" fill="url('#html-build-reflection')"></rect>
+<line x1="535.9" x2="535.9" y1="67.4" y2="76.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="533.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Jsoup</text>
+<rect width="88.0" height="36.1" x="588.8" y="418.9" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
+<rect id="html-build-markBuildPlainJDK" width="88.0" height="36.1" x="588.8" y="418.9" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
+<rect width="88.0" height="36.1" x="588.8" y="418.9" fill="url('#html-build-reflection')"></rect>
+<line x1="637.6" x2="637.6" y1="418.8" y2="419.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="635.1" y="470" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">4100</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">3280</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">2460</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">1640</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">820</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="html-build-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="html-build-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
 <image src="benchmark/html-build.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
-<tr><td>Css4j-DOM4J</td><td class="number">346.141</td><td class="number">±15.570</td><td>ops/s</td></tr>
-<tr><td>Css4j DOM</td><td class="number">323.596</td><td class="number">±1.869</td><td>ops/s</td></tr>
-<tr><td>JDK</td><td class="number">330.047</td><td class="number">±2.259</td><td>ops/s</td></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">340.335</td><td class="number">±11.214</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">324.864</td><td class="number">±2.160</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">327.604</td><td class="number">±2.210</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM (own builder)</td><td class="number">318.076</td><td class="number">±2.013</td><td>ops/s</td></tr>
+<tr><td>Jsoup</td><td class="number">3,965.423</td><td class="number">±47.869</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">373.517</td><td class="number">±2.223</td><td>ops/s</td></tr>
 </tbody></table>
-<p>If one looks at the error figures, the three implementations are somewhat even in this test. Plain DOM4J is not included in the benchmark,
-as it cannot be used with <code>HtmlDocumentBuilder</code>. A similar test with Jsoup (which cannot use the <code>validator.nu</code>
-parser but has its own) reveals that it is about 17 times faster than the average of the above scores.</p>
+<p>The standard DOM implementations are somewhat even in this test but Jsoup is much faster, about ten times the JDK and 12
+times the speed of the others.</p>
 </div>
 <div class="tema" id="xml-build-small">
 <h2>Build small XML documents</h2>
@@ -756,16 +777,125 @@ text {
 </tbody></table>
 <p>The JDK's DOM provides no element iterator.</p>
 </div>
+<div class="tema" id="elements-by-tagname-small">
+<h2>DOM traversal: <code>getElementsByTagName()</code> (small file)</h2>
+<p>Traverse the list given by <code>getElementsByTagName()</code> from a 38kB document (it is an XHTML file so Jsoup is included
+in the comparison). In the case of css4j's native DOM, there are two results: one iterating the
+<a href="https://dom.spec.whatwg.org/#interface-nodelist"><code>NodeList</code></a> by the <code>item()</code> method, and another
+via the iterator (the returned <code>NodeList</code> implements
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a>).</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM getElementsByTagName() (small file)</title><defs>
+<clipPath id="elements-by-tagname-small-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="elements-by-tagname-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="elements-by-tagname-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="elements-by-tagname-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#elements-by-tagname-small-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#elements-by-tagname-small-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#elements-by-tagname-small-x-title,#elements-by-tagname-small-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.elements-by-tagname-small-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.elements-by-tagname-small-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#elements-by-tagname-small-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#elements-by-tagname-small-projection')" clip-path="url('#elements-by-tagname-small-cut-scale-shadow')"></rect>
+<rect id="elements-by-tagname-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="elements-by-tagname-small-caption" x="355" y="22" text-anchor="middle" fill="black">DOM getElementsByTagName() (small file)</text>
+<text id="elements-by-tagname-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">Traverse 713 elements given by getElementsByTagName()</text>
+<rect width="88.0" height="21.3" x="80.5" y="433.7" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameDOM" width="88.0" height="21.3" x="80.5" y="433.7" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="88.0" height="21.3" x="80.5" y="433.7" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="129.3" x2="129.3" y1="433.4" y2="434.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="126.7" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="88.0" height="35.5" x="182.1" y="419.5" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameDOM4J" width="88.0" height="35.5" x="182.1" y="419.5" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
+<rect width="88.0" height="35.5" x="182.1" y="419.5" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="230.9" x2="230.9" y1="419.8" y2="420.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="228.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j-DOM4J</text>
+<rect width="88.0" height="386.7" x="283.8" y="68.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameDOMit" width="88.0" height="386.7" x="283.8" y="68.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04dc0"></rect>
+<rect width="88.0" height="386.7" x="283.8" y="68.3" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="332.6" x2="332.6" y1="64.8" y2="71.2" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="330.1" y="470" class="itemlabel" text-anchor="middle" fill="black">
+				<tspan x="330.1">Css4j DOM</tspan> <tspan style="font-size: smaller; " x="330.1" dy="14.4">(iterator)</tspan>
+			</text>
+<rect width="88.0" height="237.3" x="385.5" y="217.7" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameJdk" width="88.0" height="237.3" x="385.5" y="217.7" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
+<rect width="88.0" height="237.3" x="385.5" y="217.7" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="434.3" x2="434.3" y1="204.1" y2="231.9" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="431.7" y="470" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
+<rect width="88.0" height="267.5" x="487.1" y="187.5" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameJsoup" width="88.0" height="267.5" x="487.1" y="187.5" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#a2d87d"></rect>
+<rect width="88.0" height="267.5" x="487.1" y="187.5" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="535.9" x2="535.9" y1="185.3" y2="188.7" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="533.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Jsoup</text>
+<rect width="88.0" height="226.2" x="588.8" y="228.8" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-small-projection')"></rect>
+<rect id="elements-by-tagname-small-markElementsByTagNameJsoupIt" width="88.0" height="226.2" x="588.8" y="228.8" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#a57b34"></rect>
+<rect width="88.0" height="226.2" x="588.8" y="228.8" fill="url('#elements-by-tagname-small-reflection')"></rect>
+<line x1="637.6" x2="637.6" y1="214.5" y2="243.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="635.1" y="470" class="itemlabel" text-anchor="middle" fill="black">
+				<tspan x="635.1">Jsoup</tspan> <tspan style="font-size: smaller; " x="635.1" dy="14.4">(iterator)</tspan>
+			</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">143000</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">114400</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">85800</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">57200</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">28600</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="elements-by-tagname-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="elements-by-tagname-small-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/elements-by-tagname-small.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">7,697.823</td><td class="number">±217.977</td><td>ops/s</td></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">12,801.589</td><td class="number">±78.944</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM (iterator)</td><td class="number">139,647.463</td><td class="number">±1,166.246</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">85,690.564</td><td class="number">±5,013.101</td><td>ops/s</td></tr>
+<tr><td>Jsoup</td><td class="number">96,601.555</td><td class="number">±598.216</td><td>ops/s</td></tr>
+<tr><td>Jsoup (iterator)</td><td class="number">81,676.873</td><td class="number">±5,227.310</td><td>ops/s</td></tr>
+</tbody></table>
+</div>
 <div class="tema" id="elements-by-tagname">
 <h2>DOM traversal: <code>getElementsByTagName()</code></h2>
-<p>Traverse the list given by <code>getElementsByTagName()</code>. In the case of css4j's native DOM, there are two results: one iterating the
+<p>Traverse the list given by <code>getElementsByTagName()</code>, this time from a 1MB document. Again, for css4j's native DOM there are two results: one iterating the
 <a href="https://dom.spec.whatwg.org/#interface-nodelist"><code>NodeList</code></a> by the <code>item()</code> method, and another via the iterator
 (the returned <code>NodeList</code> implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a>).</p>
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
-<title>DOM Traversal</title><defs>
+<title>DOM getElementsByTagName()</title><defs>
 <clipPath id="elements-by-tagname-cut-scale-shadow">
-  <rect width="623" height="15" x="71" y="46"></rect>
-  <rect width="8" height="418" x="685" y="42"></rect>
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
 </clipPath>
 <linearGradient id="elements-by-tagname-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
 <stop stop-color="#cde1ff" offset="0"></stop>
@@ -780,80 +910,73 @@ text {
 <feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
 </filter>
 </defs>
-<style>
-text {
-  font-family: "Open Sans",Verdana,sans-serif;
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
 }
-#caption {
-  font-size: 13pt;
-  font-weight: 700;
+#elements-by-tagname-caption {
+    font-size: 13pt;
+    font-weight: 700;
 }
-#subcaption {
-  font-size: 9pt;
-  font-weight: 600;
+#elements-by-tagname-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
 }
-#x-title,#y-title{
-  font-size: 10pt;
-  font-weight: 700;
+#elements-by-tagname-x-title,#elements-by-tagname-y-title {
+    font-size: 10pt;
+    font-weight: 700;
 }
-.itemlabel {
-  font-size: 10pt;
-  font-weight: 400;
+.elements-by-tagname-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
 }
-.scaleItem {
-  font-size: 9pt;
-  font-weight: 300;
+.elements-by-tagname-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
 }
 </style>
 <rect width="100%" height="100%" fill="url('#elements-by-tagname-background')"></rect>
-<rect width="610" height="400" x="75" y="60" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#elements-by-tagname-projection')" clip-path="url('#elements-by-tagname-cut-scale-shadow')"></rect>
-<rect id="elements-by-tagname-chartbox" width="610" height="400" x="75" y="60" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
-<text id="caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal</text>
-<text id="subcaption" x="355" y="42" text-anchor="middle" fill="black">Traverse 3152 elements given by getElementsByTagName()</text>
-<rect width="138.0" height="0.3" x="80.8" y="459.7" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
-<rect id="elements-by-tagname-markElementsByTagNameDOM" width="138.0" height="0.3" x="80.8" y="459.7" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
-<rect width="138.0" height="0.3" x="80.8" y="459.7" fill="url('#elements-by-tagname-reflection')"></rect>
-<line x1="154" x2="154" y1="460" y2="460" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="150.2" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
-<rect width="138.0" height="81.3" x="233.3" y="378.7" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
-<rect id="elements-by-tagname-markElementsByTagNameDOM4J" width="138.0" height="81.3" x="233.3" y="378.7" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
-<rect width="138.0" height="81.3" x="233.3" y="378.7" fill="url('#elements-by-tagname-reflection')"></rect>
-<line x1="306.5" x2="306.5" y1="377.6" y2="380.4" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="302.7" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j-DOM4J</text>
-<rect width="138.0" height="273.7" x="385.8" y="186.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
-<rect id="elements-by-tagname-markElementsByTagNameDOMit" width="138.0" height="273.7" x="385.8" y="186.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04dc0"></rect>
-<rect width="138.0" height="273.7" x="385.8" y="186.3" fill="url('#elements-by-tagname-reflection')"></rect>
-<line x1="459" x2="459" y1="159.5" y2="212.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="455.2" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM (iterator)</text>
-<rect width="138.0" height="371.8" x="538.3" y="88.2" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
-<rect id="elements-by-tagname-markElementsByTagNameJdk" width="138.0" height="371.8" x="538.3" y="88.2" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
-<rect width="138.0" height="371.8" x="538.3" y="88.2" fill="url('#elements-by-tagname-reflection')"></rect>
-<line x1="611.5" x2="611.5" y1="75.4" y2="100.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="607.7" y="475" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
-<text x="74" y="64" class="scaleitem" text-anchor="end">2600</text>
-<text x="74" y="95" class="scaleitem" text-anchor="end">2400</text>
-<text x="74" y="126" class="scaleitem" text-anchor="end">2200</text>
-<text x="74" y="156" class="scaleitem" text-anchor="end">2000</text>
-<text x="74" y="187" class="scaleitem" text-anchor="end">1800</text>
-<text x="74" y="218" class="scaleitem" text-anchor="end">1600</text>
-<text x="74" y="249" class="scaleitem" text-anchor="end">1400</text>
-<text x="74" y="279" class="scaleitem" text-anchor="end">1200</text>
-<text x="74" y="310" class="scaleitem" text-anchor="end">1000</text>
-<text x="74" y="341" class="scaleitem" text-anchor="end">800</text>
-<text x="74" y="372" class="scaleitem" text-anchor="end">600</text>
-<text x="74" y="402" class="scaleitem" text-anchor="end">400</text>
-<text x="74" y="433" class="scaleitem" text-anchor="end">200</text>
-<text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
-<text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
-<text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#elements-by-tagname-projection')" clip-path="url('#elements-by-tagname-cut-scale-shadow')"></rect>
+<rect id="elements-by-tagname-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="elements-by-tagname-caption" x="355" y="22" text-anchor="middle" fill="black">DOM getElementsByTagName()</text>
+<text id="elements-by-tagname-subcaption" x="355" y="40" text-anchor="middle" fill="black">Traverse 3152 elements given by getElementsByTagName()</text>
+<rect width="138.0" height="0.4" x="80.8" y="454.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
+<rect id="elements-by-tagname-markElementsByTagNameDOM" width="138.0" height="0.4" x="80.8" y="454.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="138.0" height="0.4" x="80.8" y="454.6" fill="url('#elements-by-tagname-reflection')"></rect>
+<line x1="154" x2="154" y1="455" y2="455" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="150.2" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="138.0" height="85.4" x="233.3" y="369.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
+<rect id="elements-by-tagname-markElementsByTagNameDOM4J" width="138.0" height="85.4" x="233.3" y="369.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
+<rect width="138.0" height="85.4" x="233.3" y="369.6" fill="url('#elements-by-tagname-reflection')"></rect>
+<line x1="306.5" x2="306.5" y1="369" y2="371" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="302.7" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j-DOM4J</text>
+<rect width="138.0" height="315.4" x="385.8" y="139.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
+<rect id="elements-by-tagname-markElementsByTagNameDOMit" width="138.0" height="315.4" x="385.8" y="139.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04dc0"></rect>
+<rect width="138.0" height="315.4" x="385.8" y="139.6" fill="url('#elements-by-tagname-reflection')"></rect>
+<line x1="459" x2="459" y1="101.5" y2="178.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="455.2" y="470" class="itemlabel" text-anchor="middle" fill="black">
+				<tspan x="455.2">Css4j DOM</tspan> <tspan style="font-size: smaller; " x="455.2" dy="14.4">(iterator)</tspan>
+			</text>
+<rect width="138.0" height="390.2" x="538.3" y="64.8" stroke="#ffffff" stroke-opacity="0.4" filter="url('#elements-by-tagname-projection')"></rect>
+<rect id="elements-by-tagname-markElementsByTagNameJdk" width="138.0" height="390.2" x="538.3" y="64.8" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
+<rect width="138.0" height="390.2" x="538.3" y="64.8" fill="url('#elements-by-tagname-reflection')"></rect>
+<line x1="611.5" x2="611.5" y1="63.4" y2="66.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="607.7" y="470" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">2140</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">1712</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">1284</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">856</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">428</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="elements-by-tagname-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="elements-by-tagname-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
 <image src="benchmark/elements-by-tagname.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
-<tr><td>Css4j DOM</td><td class="number">2.2585</td><td class="number">±0.0571</td><td>ops/s</td></tr>
-<tr><td>Css4j-DOM4J</td><td class="number">533.7092</td><td class="number">±9.1267</td><td>ops/s</td></tr>
-<tr><td>Css4j DOM (iterator)</td><td class="number">1,797.2333</td><td class="number">±173.7811</td><td>ops/s</td></tr>
-<tr><td>JDK</td><td class="number">2,441.1572</td><td class="number">±82.5474</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">2.2340</td><td class="number">±0.0607</td><td>ops/s</td></tr>
+<tr><td>Css4j-DOM4J</td><td class="number">461.7707</td><td class="number">±5.3620</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM (iterator)</td><td class="number">1,704.4536</td><td class="number">±208.2431</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">2,108.4757</td><td class="number">±8.5393</td><td>ops/s</td></tr>
 </tbody></table>
 <p><em>Note:</em> the iterator is documented as the recommended way to traverse the <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ElementList.html"><code>ElementList</code></a> in css4j since version 3.2. Css4j versions prior to 3.2 perform much better in this benchmark,
 but the implementation was switched to one that is more lightweight (and the iterator performance is good enough).</p>
@@ -971,7 +1094,7 @@ Stack profiler:
 and looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
 Finally, DOM4J is lagging behind in performance for anything other than document build-up.</p>
 <p>For users that do not need to handle CSS and do not mind dealing with a non-standard API, Jsoup excels at parsing and has quite good iterator speeds,
-but is several orders of magnitude slower in the document modification benchmark.</p>
+although is several orders of magnitude slower in the document modification benchmark.</p>
 </div>
 </div>
 <div class="footnote">
