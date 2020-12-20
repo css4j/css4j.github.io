@@ -2,36 +2,40 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.1.0 - October 22, 2020
---------------------------------
+Release 3.2.0 - December 20, 2020
+---------------------------------
 
 Release Highlights
 ------------------
- - Previous versions are vulnerable to DoS attacks, and the new protections use
-   the new CSSDocument.isAuthorizedOrigin(URL) method.
- - The method ErrorHandler.hasErrors() now returns true if there are I/O errors.
-   Those errors were previously considered transient, and therefore weren't
-   appearing there.
- - DOM: DOMDocument.getDomConfig() was undeprecated, and the DOMConfiguration
-   can be used to control the normalization of the document.
- - DOM: on attribute nodes, getTextContent() now returns the attribute value
-   instead of the empty string.
- - DOM: DOM nodes now implement java.io.Serializable.
- - DefaultEntityResolver.resolveEntity(DocumentTypeDeclaration) is deprecated.
-
- ("DOM:" means that the change applies to "Native DOM implementation").
-
- These new behaviors mean that this release is not fully backwards-compatible
-with 3.0, so the minor version was bumped to 3.1. Additionally, the following
-are important fixes/improvements:
-
- - Case sensitivity fixes: Native DOM correctly matched the selector [Foo] to
-   the attribute foo="bar" in HTML documents, but neither the XML-oriented DOM
-   implementations in the DOM wrapper nor the DOM4J back-end did. Now they both
-   do, and a few other smaller case sensitivity fixes were applied as well.
- - DOM: normalization of element-content whitespace is now based on the
-   value of the 'whitespace' CSS property, and so does DOMWriter serialization.
- - DOM: indented serialization of inline-block elements in DOMWriter.
+- New additions to the API, notably SelectorList.replace(int, Selector), the new
+  'geom' package, and Visitor<T> added to carte-util.
+- DOM has quite a few traversal methods, but CSSOM just has the rule lists. New
+  (non-standard) style sheet traversal methods have been added, based on the
+  Visitor pattern. The parent Carte project uses them to perform SVG-related
+  processing.
+- A specialized AttributeConditionVisitor allows modification of attribute
+  selectors upon traversal, very useful to integrate SVG inline images in HTML.
+- ":any-link" was overlooked but is now supported. ":link" and ":visited" now
+  only apply to the link-related HTML elements and anything with a "xlink:href",
+  while previously any element with an "href" attribute was matching.
+- Loads of improvements and fixes to the native DOM implementation. The new
+  element-name iterator is a time saver. If you use native DOM, you are invited
+  to upgrade.
+- In the native DOM and DOM4J, embedded style sheets are no longer used if they
+  belong to a different namespace than the document element, preventing -for
+  example- potential clashes with SVG styles and providing less overhead for the
+  style computations when many SVG elements are present. Web browsers do not
+  make this distinction about STYLE elements though, but IMHO is the right
+  behaviour to have.
+- A security loophole was fixed in the DOM wrapper, which could allow setting an
+  unsafe base href.
+- DOM4J module now depends on xmlpull-xpp3 1.2 artifact from
+  https://github.com/xmlpull-xpp3/xmlpull-xpp3 instead of the old xpp3. The new
+  artifact is not available from Maven Central -which is unlikely to make
+  downstream users happy- but it is an optional dependency after all.
+- In the DOM4J module, Element.setAttributeNode() and setAttributeNodeNS() were
+  not working correctly due to an upstream bug. Now css4j overrides the relevant
+  methods.
 
 
 Description
@@ -130,19 +134,20 @@ Software dependencies
  To build this library you need:
 
 - The JCLF package. Version 4.0.4 or higher is required. Go to
-  https://sourceforge.net/projects/jclf for downloads.
+  https://sourceforge.net/projects/jclf for downloads, or install with the
+  release-scripts/install-jclf.sh script.
 
 - The SLF4J package, which is a logging package. See http://www.slf4j.org/ 
   for more information.
 
 To build the dom4j module the following is required:
 
-- The dom4j JAR package (tested with 2.1.1).
+- The dom4j JAR package (tested with 2.1.3).
   URL: https://github.com/dom4j
 
 - The XPP3 Pull Parser (which is supported by this library but beware that it
   does not support entities). See:
-  http://www.extreme.indiana.edu/dist/java-repository/xpp3/distributions/
+  https://github.com/xmlpull-xpp3/xmlpull-xpp3
 
  Optional packages:
 
