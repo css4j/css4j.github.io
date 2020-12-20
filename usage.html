@@ -85,11 +85,13 @@ import org.xml.sax.SAXException;
 import io.sf.carte.doc.dom.CSSDOMImplementation;
 import io.sf.carte.doc.dom.DOMElement;
 import io.sf.carte.doc.dom.HTMLDocument;
+import io.sf.carte.doc.dom.XMLDocumentBuilder;
 import io.sf.carte.doc.style.css.CSSComputedProperties;
 import io.sf.carte.doc.style.css.CSSTypedValue;
 import io.sf.carte.doc.style.css.RGBAColor;
 import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;
-import nu.validator.htmlparser.dom.HtmlDocumentBuilder;
+import nu.validator.htmlparser.common.XmlViolationPolicy;
+import nu.validator.htmlparser.sax.HtmlParser;
 [...]
 
 // Instantiate DOM implementation (with default settings: no IE hacks accepted) 
@@ -98,9 +100,14 @@ CSSDOMImplementation impl = new CSSDOMImplementation();
 // Alternatively, impl = new CSSDOMImplementation(flags);
 // Now load default HTML user agent sheets
 impl.setDefaultHTMLUserAgentSheet();
+// Prepare parser
+HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
+parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
+parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
 // Prepare builder
-HtmlDocumentBuilder builder = new HtmlDocumentBuilder(impl);
-builder.setIgnoringComments(false);
+XMLDocumentBuilder builder = new XMLDocumentBuilder(impl);
+builder.setHTMLProcessing(true);
+builder.setXMLReader(parser);
 // Read the document to parse, and prepare source object
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
@@ -148,14 +155,15 @@ description for additional information.</p>
 <h2>Short example with DOM4J</h2>
 <p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
 module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
-<p>This is the easiest way to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
+<p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
 <pre class="code"><code class="language-java">Reader re = ... [reader for XHTML document]
 InputSource source = new InputSource(re);
 SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
 reader.setEntityResolver(new DefaultEntityResolver());
 XHTMLDocument document = (XHTMLDocument) reader.read(source);
 </code></pre>
-<p>And once you got the element you want the computed style for (see, for example, the <a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
+<p>And once you got the element you want the computed style for (see, for example, the
+<a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
 <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-ViewCSS" target="_blank"><code>ViewCSS</code></a>
 interface:</p>
 <pre class="code"><code class="language-java">CSSComputedProperties style = ((CSSStylableElement) element).getComputedStyle(null);
@@ -167,29 +175,36 @@ which was loaded by default in 1.0 but not in 2.0.</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
-HtmlDocumentBuilder builder = new HtmlDocumentBuilder(factory);
-builder.setIgnoringComments(false);
-// We do not set the EntityResolver, the HtmlDocumentBuilder does not need it
+HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
+parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
+parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
+// Configure the SAXReader with the HtmlParser
+SAXReader builder = new SAXReader(factory);
+builder.setXMLReader(parser);
+// Provide an error handler to avoid exceptions
+ErrorHandler errorHandler = [...]
+builder.setErrorHandler(errorHandler);
+// We do not set the EntityResolver, the HtmlParser does not need it
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 </code></pre>
-<p>Or use a SAX parser to parse an XML document into a css4j-dom4j tree, with
-<a href="api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>
+<p>Or parse the document with the css4j's builder,
+<a href="api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a> (which can account for things like implied HTML parent elements),
 instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/SAXReader.html"><code>SAXReader</code></a>:</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
+HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
+parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
+parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
 XMLDocumentBuilder builder = new XMLDocumentBuilder(factory);
-builder.setEntityResolver(new DefaultEntityResolver());
+builder.setHTMLProcessing(true);
+builder.setXMLReader(parser);
 Reader re = ... [reader for XML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 re.close();
-</code></pre>
-<p>The code above uses the default JAXP SAX parser. You could use a different <code>SAXParserFactory</code>:</p>
-<pre class="code"><code class="language-java">SAXParserFactory parserFactory = ...
-XMLDocumentBuilder builder = new XMLDocumentBuilder(factory, parserFactory);
 </code></pre>
 </div>
 <div class="tema" id="domwrapper">
@@ -206,8 +221,11 @@ values of some nodes.</p>
 <div class="tema">
 <h2>Consistency of different DOM implementations</h2>
 <p>Beware that the computed styles found by each method (native DOM, DOM4J back-end or DOM wrapper) may not be completely identical, due to differences in the
-underlying document DOM implementations. For example, XML-oriented DOM implementations do not implement the case sensitivity subtleties of HTML (although this
-library attempts to emulate the basics).</p>
+underlying document DOM implementations:</p>
+<ul>
+<li>XML-oriented DOM implementations do not implement the case sensitivity subtleties of HTML (although this library attempts to emulate the basics).</li>
+<li>The DOM wrapper accepts <code>style</code> elements coming from SVG trees in its style sheet collection, while the other two DOMs do not.</li>
+</ul>
 <p>If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
 </div>
 <div id="cascade" class="tema">
@@ -453,10 +471,10 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
 <p>The following pseudo-classes are supported by the library:
 <code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
-<code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>link</code>, <code>visited</code>,
-<code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>, <code>disabled</code>, <code>enabled</code>, <code>read-write</code>,
-<code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>, <code>not</code>, <code>placeholder-shown</code>, <code>default</code>,
-<code>checked</code> and <code>indeterminate</code>.</p>
+<code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>any-link</code>, <code>link</code>,
+<code>visited</code>, <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>, <code>disabled</code>, <code>enabled</code>,
+<code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>, <code>not</code>, <code>placeholder-shown</code>,
+<code>default</code>, <code>checked</code> and <code>indeterminate</code>.</p>
 <p>State pseudo-classes like <code>hover</code> are supported through the
 <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
