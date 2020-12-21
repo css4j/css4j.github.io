@@ -59,7 +59,8 @@ that the version shipped with the Oracle JDK may be faster.</p>
 </div>
 <div class="tema" id="html-build">
 <h2>Build HTML documents</h2>
-<p>Measures the speed at which the <a href="https://about.validator.nu/htmlparser/">validator.nu HTML parser</a> can build a small document (38 KB HTML) into a few DOM implementations.</p>
+<p>Measures the speed at which the <a href="https://about.validator.nu/htmlparser/">validator.nu HTML parser</a> can parse a small document (38 KB HTML) into a few DOM implementations.
+As a reference, they are compared to the same document parsed by Jsoup.</p>
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>HTML build benchmark</title><defs>
 <clipPath id="html-build-cut-scale-shadow">
@@ -107,7 +108,7 @@ that the version shipped with the Oracle JDK may be faster.</p>
 <rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#html-build-projection')" clip-path="url('#html-build-cut-scale-shadow')"></rect>
 <rect id="html-build-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
 <text id="html-build-caption" x="355" y="22" text-anchor="middle" fill="black">HTML build benchmark</text>
-<text id="html-build-subcaption" x="355" y="40" text-anchor="middle" fill="black">38 KB html file, validator.nu parser</text>
+<text id="html-build-subcaption" x="355" y="40" text-anchor="middle" fill="black">38 KB html file, validator.nu parser (except Jsoup)</text>
 <rect width="88.0" height="32.9" x="80.5" y="422.1" stroke="#ffffff" stroke-opacity="0.4" filter="url('#html-build-projection')"></rect>
 <rect id="html-build-markBuildCss4jDOM4J" width="88.0" height="32.9" x="80.5" y="422.1" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
 <rect width="88.0" height="32.9" x="80.5" y="422.1" fill="url('#html-build-reflection')"></rect>
@@ -1093,7 +1094,7 @@ Stack profiler:
 <p>Css4j's native DOM has more features than the other contenders but is slower than the JDK's DOM, otherwise shows reasonable speeds. The DOM implementation that comes bundled with the JDK is the fastest,
 and looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
 Finally, DOM4J is lagging behind in performance for anything other than document build-up.</p>
-<p>For users that do not need to handle CSS and do not mind dealing with a non-standard API, Jsoup excels at parsing and has quite good iterator speeds,
+<p>For users that do not need to handle CSS and do not mind dealing with a non-standard API, Jsoup excels at parsing and has good traversal speeds,
 although is several orders of magnitude slower in the document modification benchmark.</p>
 </div>
 </div>
