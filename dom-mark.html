@@ -526,6 +526,84 @@ text {
 </tbody></table>
 <p>The Css4j-DOM4J results are representative for DOM4J as well.</p>
 </div>
+<div class="tema" id="nodeiterator-small">
+<h2>DOM traversal: <code>NodeIterator</code> (small file)</h2>
+<p>Count the elements of a 38kB XHTML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/NodeIterator.html"><code>NodeIterator</code></a>.</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM Traversal: NodeIterator (small file)</title><defs>
+<clipPath id="nodeiterator-small-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="nodeiterator-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="nodeiterator-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="nodeiterator-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#nodeiterator-small-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#nodeiterator-small-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#nodeiterator-small-x-title,#nodeiterator-small-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.nodeiterator-small-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.nodeiterator-small-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#nodeiterator-small-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#nodeiterator-small-projection')" clip-path="url('#nodeiterator-small-cut-scale-shadow')"></rect>
+<rect id="nodeiterator-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="nodeiterator-small-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: NodeIterator (small file)</text>
+<text id="nodeiterator-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">38kB file traversed by NodeIterator</text>
+<rect width="285.0" height="384.7" x="83" y="70.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#nodeiterator-small-projection')"></rect>
+<rect id="nodeiterator-small-markNodeIteratorDOM" width="285.0" height="384.7" x="83" y="70.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="285.0" height="384.7" x="83" y="70.3" fill="url('#nodeiterator-small-reflection')"></rect>
+<line x1="229.4" x2="229.4" y1="65.5" y2="74.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="221.8" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="285.0" height="278" x="388" y="177" stroke="#ffffff" stroke-opacity="0.4" filter="url('#nodeiterator-small-projection')"></rect>
+<rect id="nodeiterator-small-markNodeIteratorJdk" width="285.0" height="278" x="388" y="177" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
+<rect width="285.0" height="278" x="388" y="177" fill="url('#nodeiterator-small-reflection')"></rect>
+<line x1="534.4" x2="534.4" y1="171.6" y2="182.4" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="526.8" y="470" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">118000</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">94400</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">70800</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">47200</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">23600</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="nodeiterator-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="nodeiterator-small-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/nodeiterator-small.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">114,626.460</td><td class="number">±1,353.897</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">82,836.758</td><td class="number">±1,623.679</td><td>ops/s</td></tr>
+</tbody></table>
+<p>DOM4J and Jsoup are not included as they lack a <code>NodeIterator</code>.</p>
+</div>
 <div class="tema" id="nodeiterator">
 <h2>DOM traversal: <code>NodeIterator</code></h2>
 <p>Count the elements of an XML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/NodeIterator.html"><code>NodeIterator</code></a>.</p>
@@ -613,6 +691,84 @@ java.lang.ArrayIndexOutOfBoundsException: Index 34 out of bounds for length 33
 </failure></pre>
 <p>But I have observed this only while benchmarking, and not in other cases.</p>
 </div>
+<div class="tema" id="treewalker-small">
+<h2>DOM traversal: <code>TreeWalker</code> (small file)</h2>
+<p>Count the elements of a 38kB XHTML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/TreeWalker.html"><code>TreeWalker</code></a>.</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM Traversal: TreeWalker (small file)</title><defs>
+<clipPath id="treewalker-small-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="treewalker-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="treewalker-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="treewalker-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#treewalker-small-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#treewalker-small-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#treewalker-small-x-title,#treewalker-small-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.treewalker-small-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.treewalker-small-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#treewalker-small-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#treewalker-small-projection')" clip-path="url('#treewalker-small-cut-scale-shadow')"></rect>
+<rect id="treewalker-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="treewalker-small-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: TreeWalker (small file)</text>
+<text id="treewalker-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">38kB file traversed by TreeWalker</text>
+<rect width="285.0" height="205.2" x="83" y="249.8" stroke="#ffffff" stroke-opacity="0.4" filter="url('#treewalker-small-projection')"></rect>
+<rect id="treewalker-small-markTreeWalkerDOM" width="285.0" height="205.2" x="83" y="249.8" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="285.0" height="205.2" x="83" y="249.8" fill="url('#treewalker-small-reflection')"></rect>
+<line x1="229.4" x2="229.4" y1="248.2" y2="251.8" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="221.8" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="285.0" height="356.3" x="388" y="98.7" stroke="#ffffff" stroke-opacity="0.4" filter="url('#treewalker-small-projection')"></rect>
+<rect id="treewalker-small-markTreeWalkerJdk" width="285.0" height="356.3" x="388" y="98.7" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c0c061"></rect>
+<rect width="285.0" height="356.3" x="388" y="98.7" fill="url('#treewalker-small-reflection')"></rect>
+<line x1="534.4" x2="534.4" y1="64.5" y2="133.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="526.8" y="470" class="itemlabel" text-anchor="middle" fill="black">JDK</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">109000</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">87200</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">65400</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">43600</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">21800</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="treewalker-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="treewalker-small-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/treewalker-small.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">56,486.367</td><td class="number">±487.005</td><td>ops/s</td></tr>
+<tr><td>JDK</td><td class="number">98,074.398</td><td class="number">±9,500.048</td><td>ops/s</td></tr>
+</tbody></table>
+<p>Neither DOM4J nor Jsoup provide a <code>TreeWalker</code>.</p>
+</div>
 <div class="tema" id="treewalker">
 <h2>DOM traversal: <code>TreeWalker</code></h2>
 <p>Count the elements of an XML document traversed by a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/traversal/TreeWalker.html"><code>TreeWalker</code></a>.</p>
@@ -690,15 +846,266 @@ text {
 </tbody></table>
 <p>DOM4J provides no <code>TreeWalker</code>.</p>
 </div>
+<div class="tema" id="iterator-small">
+<h2>DOM traversal: <code>iterator()</code> (small file)</h2>
+<p>Traverse a 38kB XHTML document using native DOM's iterable <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/DOMNode.html#getChildNodes()"><code>getChildNodes()</code></a>,
+DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Branch.html#nodeIterator--"><code>nodeIterator()</code></a> and Jsoup's
+iterable <a href="https://jsoup.org/apidocs/org/jsoup/nodes/Node.html#childNodes()"><code>childNodes()</code></a>.</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM Traversal: child node iterators (small file)</title><defs>
+<clipPath id="iterator-small-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="iterator-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="iterator-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="iterator-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#iterator-small-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#iterator-small-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#iterator-small-x-title,#iterator-small-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.iterator-small-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.iterator-small-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#iterator-small-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#iterator-small-projection')" clip-path="url('#iterator-small-cut-scale-shadow')"></rect>
+<rect id="iterator-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="iterator-small-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: child node iterators (small file)</text>
+<text id="iterator-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">38kB file traversed by child iterators</text>
+<rect width="187.0" height="386.4" x="81.5" y="68.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#iterator-small-projection')"></rect>
+<rect id="iterator-small-markIteratorDOM" width="187.0" height="386.4" x="81.5" y="68.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="187.0" height="386.4" x="81.5" y="68.6" fill="url('#iterator-small-reflection')"></rect>
+<line x1="179.1" x2="179.1" y1="64.6" y2="73.4" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="174.1" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="187.0" height="60" x="284.9" y="395" stroke="#ffffff" stroke-opacity="0.4" filter="url('#iterator-small-projection')"></rect>
+<rect id="iterator-small-markIteratorDOM4J" width="187.0" height="60" x="284.9" y="395" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
+<rect width="187.0" height="60" x="284.9" y="395" fill="url('#iterator-small-reflection')"></rect>
+<line x1="382.5" x2="382.5" y1="394.7" y2="395.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="377.4" y="470" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
+<rect width="187.0" height="350.5" x="488.2" y="104.5" stroke="#ffffff" stroke-opacity="0.4" filter="url('#iterator-small-projection')"></rect>
+<rect id="iterator-small-markIteratorJsoup" width="187.0" height="350.5" x="488.2" y="104.5" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#a2d87d"></rect>
+<rect width="187.0" height="350.5" x="488.2" y="104.5" fill="url('#iterator-small-reflection')"></rect>
+<line x1="585.8" x2="585.8" y1="99.7" y2="108.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="580.7" y="470" class="itemlabel" text-anchor="middle" fill="black">Jsoup</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">114000</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">91200</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">68400</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">45600</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">22800</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="iterator-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="iterator-small-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/iterator-small.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">111,245.785</td><td class="number">±1,273.951</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">17,267.163</td><td class="number">±82.684</td><td>ops/s</td></tr>
+<tr><td>Jsoup</td><td class="number">100,902.880</td><td class="number">±1,250.799</td><td>ops/s</td></tr>
+</tbody></table>
+<p>The JDK's DOM provides no iterable child collections.</p>
+</div>
+<div class="tema" id="iterator">
+<h2>DOM traversal: <code>iterator()</code></h2>
+<p>Traverse an XML document using native DOM's iterable <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/DOMNode.html#getChildNodes()"><code>getChildNodes()</code></a>
+and DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Branch.html#nodeIterator--"><code>nodeIterator()</code></a>.</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM Traversal: child node iterators</title><defs>
+<clipPath id="iterator-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="iterator-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="iterator-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="iterator-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#iterator-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#iterator-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#iterator-x-title,#iterator-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.iterator-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.iterator-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#iterator-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#iterator-projection')" clip-path="url('#iterator-cut-scale-shadow')"></rect>
+<rect id="iterator-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="iterator-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: child node iterators</text>
+<text id="iterator-subcaption" x="355" y="40" text-anchor="middle" fill="black">1MB file traversed by child iterators</text>
+<rect width="285.0" height="367.7" x="83" y="87.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#iterator-projection')"></rect>
+<rect id="iterator-markIteratorDOM" width="285.0" height="367.7" x="83" y="87.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="285.0" height="367.7" x="83" y="87.3" fill="url('#iterator-reflection')"></rect>
+<line x1="229.4" x2="229.4" y1="63" y2="111" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="221.8" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="285.0" height="94.1" x="388" y="360.9" stroke="#ffffff" stroke-opacity="0.4" filter="url('#iterator-projection')"></rect>
+<rect id="iterator-markIteratorDOM4J" width="285.0" height="94.1" x="388" y="360.9" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
+<rect width="285.0" height="94.1" x="388" y="360.9" fill="url('#iterator-reflection')"></rect>
+<line x1="534.4" x2="534.4" y1="358.3" y2="363.7" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="526.8" y="470" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">2150</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">1720</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">1290</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">860</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">430</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="iterator-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="iterator-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/iterator.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">1,996.547</td><td class="number">±130.527</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">510.719</td><td class="number">±14.741</td><td>ops/s</td></tr>
+</tbody></table>
+<p>The JDK's DOM provides no iterable child collections.</p>
+</div>
+<div class="tema" id="element-iterator-small">
+<h2>DOM traversal: <code>elementIterator()</code> (small file)</h2>
+<p>Traverse a 38kB XHTML document using native DOM's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ParentNode.html#elementIterator()"><code>elementIterator()</code></a>,
+DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Element.html#elementIterator--"><code>elementIterator()</code></a> and Jsoup's
+iterable <a href="https://jsoup.org/apidocs/org/jsoup/select/Elements.html"><code>Elements</code></a>.</p>
+<svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
+<title>DOM Traversal: element iterators (small file)</title><defs>
+<clipPath id="element-iterator-small-cut-scale-shadow">
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
+</clipPath>
+<linearGradient id="element-iterator-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
+<stop stop-color="#cde1ff" offset="0"></stop>
+<stop stop-color="#ffffff" offset="0.9"></stop>
+</linearGradient>
+<linearGradient id="element-iterator-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+</linearGradient>
+<filter id="element-iterator-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+</filter>
+</defs>
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
+}
+#element-iterator-small-caption {
+    font-size: 13pt;
+    font-weight: 700;
+}
+#element-iterator-small-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
+}
+#element-iterator-small-x-title,#element-iterator-small-y-title {
+    font-size: 10pt;
+    font-weight: 700;
+}
+.element-iterator-small-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
+}
+.element-iterator-small-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
+}
+</style>
+<rect width="100%" height="100%" fill="url('#element-iterator-small-background')"></rect>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#element-iterator-small-projection')" clip-path="url('#element-iterator-small-cut-scale-shadow')"></rect>
+<rect id="element-iterator-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="element-iterator-small-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: element iterators (small file)</text>
+<text id="element-iterator-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">38kB file traversed by elementIterator()</text>
+<rect width="187.0" height="245.5" x="81.5" y="209.5" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-small-projection')"></rect>
+<rect id="element-iterator-small-markElementIteratorDOM" width="187.0" height="245.5" x="81.5" y="209.5" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="187.0" height="245.5" x="81.5" y="209.5" fill="url('#element-iterator-small-reflection')"></rect>
+<line x1="179.1" x2="179.1" y1="203.3" y2="216.7" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="174.1" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="187.0" height="43" x="284.9" y="412" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-small-projection')"></rect>
+<rect id="element-iterator-small-markElementIteratorDOM4J" width="187.0" height="43" x="284.9" y="412" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
+<rect width="187.0" height="43" x="284.9" y="412" fill="url('#element-iterator-small-reflection')"></rect>
+<line x1="382.5" x2="382.5" y1="411.7" y2="412.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="377.4" y="470" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
+<rect width="187.0" height="383.9" x="488.2" y="71.1" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-small-projection')"></rect>
+<rect id="element-iterator-small-markElementIteratorJsoup" width="187.0" height="383.9" x="488.2" y="71.1" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#a2d87d"></rect>
+<rect width="187.0" height="383.9" x="488.2" y="71.1" fill="url('#element-iterator-small-reflection')"></rect>
+<line x1="585.8" x2="585.8" y1="64.7" y2="77.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="580.7" y="470" class="itemlabel" text-anchor="middle" fill="black">Jsoup</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">162000</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">129600</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">97200</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">64800</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">32400</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="element-iterator-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="element-iterator-small-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
+<image src="benchmark/element-iterator-small.png" xlink:href=""></image></svg>
+<p>Numeric results (higher is better):</p>
+<table class="normaltbl carteitem">
+<thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
+<tr><td>Css4j DOM</td><td class="number">100,430.318</td><td class="number">±2,732.950</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">17,604.422</td><td class="number">±105.011</td><td>ops/s</td></tr>
+<tr><td>Jsoup</td><td class="number">157,064.610</td><td class="number">±2,585.003</td><td>ops/s</td></tr>
+</tbody></table>
+<p>The JDK's DOM provides no element iterator.</p>
+</div>
 <div class="tema" id="element-iterator">
 <h2>DOM traversal: <code>elementIterator()</code></h2>
 <p>Traverse an XML document using native DOM's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/ParentNode.html#elementIterator()"><code>elementIterator()</code></a>
 and DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Element.html#elementIterator--"><code>elementIterator()</code></a>.</p>
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
-<title>DOM Traversal</title><defs>
+<title>DOM Traversal: element iterators</title><defs>
 <clipPath id="element-iterator-cut-scale-shadow">
-  <rect width="623" height="15" x="71" y="46"></rect>
-  <rect width="8" height="418" x="685" y="42"></rect>
+  <rect width="623" height="15" x="71" y="41"></rect>
+  <rect width="8" height="418" x="685" y="37"></rect>
 </clipPath>
 <linearGradient id="element-iterator-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
 <stop stop-color="#cde1ff" offset="0"></stop>
@@ -713,68 +1120,59 @@ and DOM4J's <a href="https://dom4j.github.io/javadoc/2.1.3/org/dom4j/Element.htm
 <feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
 </filter>
 </defs>
-<style>
-text {
-  font-family: "Open Sans",Verdana,sans-serif;
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
 }
-#caption {
-  font-size: 13pt;
-  font-weight: 700;
+#element-iterator-caption {
+    font-size: 13pt;
+    font-weight: 700;
 }
-#subcaption {
-  font-size: 9pt;
-  font-weight: 600;
+#element-iterator-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
 }
-#x-title,#y-title{
-  font-size: 10pt;
-  font-weight: 700;
+#element-iterator-x-title,#element-iterator-y-title {
+    font-size: 10pt;
+    font-weight: 700;
 }
-.itemlabel {
-  font-size: 10pt;
-  font-weight: 400;
+.element-iterator-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
 }
-.scaleItem {
-  font-size: 9pt;
-  font-weight: 300;
+.element-iterator-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
 }
 </style>
 <rect width="100%" height="100%" fill="url('#element-iterator-background')"></rect>
-<rect width="610" height="400" x="75" y="60" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#element-iterator-projection')" clip-path="url('#element-iterator-cut-scale-shadow')"></rect>
-<rect id="element-iterator-chartbox" width="610" height="400" x="75" y="60" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
-<text id="caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal</text>
-<text id="subcaption" x="355" y="42" text-anchor="middle" fill="black">1MB file traversed by elementIterator()</text>
-<rect width="285.0" height="337.6" x="83" y="122.4" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-projection')"></rect>
-<rect id="element-iterator-markIteratorDOM" width="285.0" height="337.6" x="83" y="122.4" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
-<rect width="285.0" height="337.6" x="83" y="122.4" fill="url('#element-iterator-reflection')"></rect>
-<line x1="229.4" x2="229.4" y1="93.7" y2="150.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="221.8" y="475" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
-<rect width="285.0" height="84.5" x="388" y="375.5" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-projection')"></rect>
-<rect id="element-iterator-markIteratorDOM4J" width="285.0" height="84.5" x="388" y="375.5" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
-<rect width="285.0" height="84.5" x="388" y="375.5" fill="url('#element-iterator-reflection')"></rect>
-<line x1="534.4" x2="534.4" y1="371.5" y2="378.5" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
-<text x="526.8" y="475" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
-<text x="74" y="64" class="scaleitem" text-anchor="end">2600</text>
-<text x="74" y="95" class="scaleitem" text-anchor="end">2400</text>
-<text x="74" y="126" class="scaleitem" text-anchor="end">2200</text>
-<text x="74" y="156" class="scaleitem" text-anchor="end">2000</text>
-<text x="74" y="187" class="scaleitem" text-anchor="end">1800</text>
-<text x="74" y="218" class="scaleitem" text-anchor="end">1600</text>
-<text x="74" y="249" class="scaleitem" text-anchor="end">1400</text>
-<text x="74" y="279" class="scaleitem" text-anchor="end">1200</text>
-<text x="74" y="310" class="scaleitem" text-anchor="end">1000</text>
-<text x="74" y="341" class="scaleitem" text-anchor="end">800</text>
-<text x="74" y="372" class="scaleitem" text-anchor="end">600</text>
-<text x="74" y="402" class="scaleitem" text-anchor="end">400</text>
-<text x="74" y="433" class="scaleitem" text-anchor="end">200</text>
-<text x="74" y="464" class="scaleitem" text-anchor="end">0</text>
-<text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
-<text id="x-title" x="350" y="496" text-anchor="middle" fill="black"></text>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#element-iterator-projection')" clip-path="url('#element-iterator-cut-scale-shadow')"></rect>
+<rect id="element-iterator-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<text id="element-iterator-caption" x="355" y="22" text-anchor="middle" fill="black">DOM Traversal: element iterators</text>
+<text id="element-iterator-subcaption" x="355" y="40" text-anchor="middle" fill="black">1MB file traversed by elementIterator()</text>
+<rect width="285.0" height="357.6" x="83" y="97.4" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-projection')"></rect>
+<rect id="element-iterator-markElementIteratorDOM" width="285.0" height="357.6" x="83" y="97.4" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
+<rect width="285.0" height="357.6" x="83" y="97.4" fill="url('#element-iterator-reflection')"></rect>
+<line x1="229.4" x2="229.4" y1="63.7" y2="130.3" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="221.8" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j DOM</text>
+<rect width="285.0" height="78.7" x="388" y="376.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#element-iterator-projection')"></rect>
+<rect id="element-iterator-markElementIteratorDOM4J" width="285.0" height="78.7" x="388" y="376.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
+<rect width="285.0" height="78.7" x="388" y="376.3" fill="url('#element-iterator-reflection')"></rect>
+<line x1="534.4" x2="534.4" y1="374.4" y2="377.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<text x="526.8" y="470" class="itemlabel" text-anchor="middle" fill="black">DOM4J</text>
+<text x="74" y="59" class="scaleitem" text-anchor="end">2600</text>
+<text x="74" y="139" class="scaleitem" text-anchor="end">2080</text>
+<text x="74" y="219" class="scaleitem" text-anchor="end">1560</text>
+<text x="74" y="299" class="scaleitem" text-anchor="end">1040</text>
+<text x="74" y="379" class="scaleitem" text-anchor="end">520</text>
+<text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
+<text id="element-iterator-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="element-iterator-x-title" x="350" y="496" text-anchor="middle" fill="black">DOM Implementation</text>
 <image src="benchmark/element-iterator.png" xlink:href=""></image></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead><tbody>
-<tr><td>Css4j DOM</td><td class="number">2,216.815</td><td class="number">±185.831</td><td>ops/s</td></tr>
-<tr><td>DOM4J</td><td class="number">554.890</td><td class="number">±22.921</td><td>ops/s</td></tr>
+<tr><td>Css4j DOM</td><td class="number">2,348.012</td><td class="number">±218.585</td><td>ops/s</td></tr>
+<tr><td>DOM4J</td><td class="number">516.681</td><td class="number">±10.575</td><td>ops/s</td></tr>
 </tbody></table>
 <p>The JDK's DOM provides no element iterator.</p>
 </div>
