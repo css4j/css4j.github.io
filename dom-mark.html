@@ -1489,8 +1489,8 @@ Stack profiler:
               org.dom4j.tree.NamespaceStack.pushQName
 </pre>
 <p>So its usage is not recommended for multi-core systems.</p>
-<p>Css4j's native DOM has more features than the other contenders but is slower than the JDK's DOM, otherwise shows reasonable speeds. The DOM implementation that comes bundled with the JDK is the fastest,
-and looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
+<p>Css4j's native DOM has more features than the other contenders (which implies a bit of overhead) but is still quite fast, although it is often slower than the JDK's DOM,
+which is the fastest standard DOM. It looks like a good choice for applications that do not require handling styles (or you could use the read-only DOM wrapper with it, if that fits your needs).
 Finally, DOM4J is lagging behind in performance for anything other than document build-up.</p>
 <p>For users that do not need to handle CSS and do not mind dealing with a non-standard API, Jsoup excels at parsing and has good traversal speeds,
 although is several orders of magnitude slower in the document modification benchmark.</p>
