@@ -2,40 +2,17 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.2.0 - December 20, 2020
----------------------------------
+Release 3.3.0 - January 5, 2021
+-------------------------------
 
 Release Highlights
 ------------------
-- New additions to the API, notably SelectorList.replace(int, Selector), the new
-  'geom' package, and Visitor<T> added to carte-util.
-- DOM has quite a few traversal methods, but CSSOM just has the rule lists. New
-  (non-standard) style sheet traversal methods have been added, based on the
-  Visitor pattern. The parent Carte project uses them to perform SVG-related
-  processing.
-- A specialized AttributeConditionVisitor allows modification of attribute
-  selectors upon traversal, very useful to integrate SVG inline images in HTML.
-- ":any-link" was overlooked but is now supported. ":link" and ":visited" now
-  only apply to the link-related HTML elements and anything with a "xlink:href",
-  while previously any element with an "href" attribute was matching.
-- Loads of improvements and fixes to the native DOM implementation. The new
-  element-name iterator is a time saver. If you use native DOM, you are invited
-  to upgrade.
-- In the native DOM and DOM4J, embedded style sheets are no longer used if they
-  belong to a different namespace than the document element, preventing -for
-  example- potential clashes with SVG styles and providing less overhead for the
-  style computations when many SVG elements are present. Web browsers do not
-  make this distinction about STYLE elements though, but IMHO is the right
-  behaviour to have.
-- A security loophole was fixed in the DOM wrapper, which could allow setting an
-  unsafe base href.
-- DOM4J module now depends on xmlpull-xpp3 1.2 artifact from
-  https://github.com/xmlpull-xpp3/xmlpull-xpp3 instead of the old xpp3. The new
-  artifact is not available from Maven Central -which is unlikely to make
-  downstream users happy- but it is an optional dependency after all.
-- In the DOM4J module, Element.setAttributeNode() and setAttributeNodeNS() were
-  not working correctly due to an upstream bug. Now css4j overrides the relevant
-  methods.
+ This release changes the visibility of one class needed by the EchoSVG software
+but also has a couple of interesting additions:
+
+- DOM: new Element.getInnerText().
+- CSSOM: support the :dir() pseudo-class in computed styles, important for users
+  of arabic and other right-to-left languages.
 
 
 Description
