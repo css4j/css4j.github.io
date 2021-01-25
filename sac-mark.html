@@ -50,66 +50,65 @@
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>SAC benchmark</title><defs>
 <clipPath id="sac-226kb-cut-scale-shadow">
-  <rect width="623" height="15" x="71" y="41"></rect>
-  <rect width="8" height="418" x="685" y="37"></rect>
+  <rect width="623" height="15" x="71" y="41"/>
+  <rect width="8" height="418" x="685" y="37"/>
 </clipPath>
 <linearGradient id="sac-226kb-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
-<stop stop-color="#cde1ff" offset="0"></stop>
-<stop stop-color="#ffffff" offset="0.9"></stop>
+<stop stop-color="#cde1ff" offset="0"/>
+<stop stop-color="#ffffff" offset="0.9"/>
 </linearGradient>
 <linearGradient id="sac-226kb-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
-<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
-<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"/>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"/>
 </linearGradient>
 <filter id="sac-226kb-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
-<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
-<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"/>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"/>
 </filter>
 </defs>
-<style>
-text {
-  font-family: "Open Sans",Verdana,sans-serif;
+<style>text {
+    font-family: "Open Sans", Verdana, sans-serif;
 }
-#caption {
-  font-size: 13pt;
-  font-weight: 700;
+#sac-226kb-caption {
+    font-size: 13pt;
+    font-weight: 700;
 }
-#subcaption {
-  font-size: 9pt;
-  font-weight: 600;
+#sac-226kb-subcaption {
+    font-size: 9pt;
+    font-weight: 600;
 }
-#x-title,#y-title{
-  font-size: 10pt;
-  font-weight: 700;
+#sac-226kb-x-title,#sac-226kb-y-title {
+    font-size: 10pt;
+    font-weight: 700;
 }
-.itemlabel {
-  font-size: 10pt;
-  font-weight: 400;
+.sac-226kb-itemlabel {
+    font-size: 9pt;
+    font-weight: 400;
 }
-.scaleItem {
-  font-size: 9pt;
-  font-weight: 300;
+.sac-226kb-scaleItem {
+    font-size: 9pt;
+    font-weight: 300;
 }
 </style>
-<rect width="100%" height="100%" fill="url('#sac-226kb-background')"></rect>
-<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#sac-226kb-projection')" clip-path="url('#sac-226kb-cut-scale-shadow')"></rect>
-<rect id="sac-226kb-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
-<text id="caption" x="355" y="22" text-anchor="middle" fill="black">SAC benchmark</text>
-<text id="subcaption" x="355" y="40" text-anchor="middle" fill="black">Medium-large file (226 kB)</text>
-<rect width="187.0" height="223" x="81.5" y="232" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"></rect>
-<rect id="sac-226kb-markSACParseStyleSheet" width="187.0" height="223" x="81.5" y="232" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
-<rect width="187.0" height="223" x="81.5" y="232" fill="url('#sac-226kb-reflection')"></rect>
-<line x1="179.1" x2="179.1" y1="224.4" y2="239.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="100%" height="100%" fill="url('#sac-226kb-background')"/>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#sac-226kb-projection')" clip-path="url('#sac-226kb-cut-scale-shadow')"/>
+<rect id="sac-226kb-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"/>
+<text id="sac-226kb-caption" x="355" y="22" text-anchor="middle" fill="black">SAC benchmark</text>
+<text id="sac-226kb-subcaption" x="355" y="40" text-anchor="middle" fill="black">Medium-large file (226 kB)</text>
+<rect width="187.0" height="223" x="81.5" y="232" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"/>
+<rect id="sac-226kb-markSACParseStyleSheet" width="187.0" height="223" x="81.5" y="232" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"/>
+<rect width="187.0" height="223" x="81.5" y="232" fill="url('#sac-226kb-reflection')"/>
+<line x1="179.1" x2="179.1" y1="224.4" y2="239.6" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="174.1" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j</text>
-<rect width="187.0" height="387.2" x="284.9" y="67.8" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"></rect>
-<rect id="sac-226kb-markSACParseStyleSheetBatik" width="187.0" height="387.2" x="284.9" y="67.8" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
-<rect width="187.0" height="387.2" x="284.9" y="67.8" fill="url('#sac-226kb-reflection')"></rect>
-<line x1="382.5" x2="382.5" y1="65.9" y2="70.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="187.0" height="387.2" x="284.9" y="67.8" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"/>
+<rect id="sac-226kb-markSACParseStyleSheetBatik" width="187.0" height="387.2" x="284.9" y="67.8" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"/>
+<rect width="187.0" height="387.2" x="284.9" y="67.8" fill="url('#sac-226kb-reflection')"/>
+<line x1="382.5" x2="382.5" y1="65.9" y2="70.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="377.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Batik CSS</text>
-<rect width="187.0" height="7" x="488.2" y="448" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"></rect>
-<rect id="sac-226kb-markSACParseStyleSheetSSParser" width="187.0" height="7" x="488.2" y="448" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
-<rect width="187.0" height="7" x="488.2" y="448" fill="url('#sac-226kb-reflection')"></rect>
-<line x1="585.8" x2="585.8" y1="447.9" y2="448.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="187.0" height="7" x="488.2" y="448" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-226kb-projection')"/>
+<rect id="sac-226kb-markSACParseStyleSheetSSParser" width="187.0" height="7" x="488.2" y="448" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"/>
+<rect width="187.0" height="7" x="488.2" y="448" fill="url('#sac-226kb-reflection')"/>
+<line x1="585.8" x2="585.8" y1="447.9" y2="448.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="580.7" y="470" class="itemlabel" text-anchor="middle" fill="black">SS CSSParser</text>
 <text x="74" y="59" class="scaleitem" text-anchor="end">380</text>
 <text x="74" y="139" class="scaleitem" text-anchor="end">304</text>
@@ -117,9 +116,9 @@ text {
 <text x="74" y="299" class="scaleitem" text-anchor="end">152</text>
 <text x="74" y="379" class="scaleitem" text-anchor="end">76</text>
 <text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
-<text id="y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
-<text id="x-title" x="350" y="496" text-anchor="middle" fill="black">SAC Implementation</text>
-<image src="benchmark/sac-226kb.png" xlink:href=""></image></svg>
+<text id="sac-226kb-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
+<text id="sac-226kb-x-title" x="350" y="496" text-anchor="middle" fill="black">SAC Implementation</text>
+<image src="benchmark/sac-226kb.png" xlink:href=""/></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead>
@@ -132,20 +131,20 @@ text {
 <svg version="1.1" baseprofile="full" xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewbox="0 0 700 500" class="carteitem">
 <title>SAC benchmark</title><defs>
 <clipPath id="sac-small-cut-scale-shadow">
-  <rect width="623" height="15" x="71" y="41"></rect>
-  <rect width="8" height="418" x="685" y="37"></rect>
+  <rect width="623" height="15" x="71" y="41"/>
+  <rect width="8" height="418" x="685" y="37"/>
 </clipPath>
 <linearGradient id="sac-small-background" gradientunits="objectBoundingBox" x1="1" x2="1" y1="0" y2="1">
-<stop stop-color="#cde1ff" offset="0"></stop>
-<stop stop-color="#ffffff" offset="0.9"></stop>
+<stop stop-color="#cde1ff" offset="0"/>
+<stop stop-color="#ffffff" offset="0.9"/>
 </linearGradient>
 <linearGradient id="sac-small-reflection" gradientunits="objectBoundingBox" x1="0" x2="0" y1="0" y2="1">
-<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"></stop>
-<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"></stop>
+<stop stop-color="#eeeeee" offset="0" stop-opacity="0.4"/>
+<stop stop-color="#ffffff" offset="0.75" stop-opacity="0"/>
 </linearGradient>
 <filter id="sac-small-projection" filterunits="objectBoundingBox" x="0" y="-0.1" width="1.2" height="1.2">
-<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"></feGaussianBlur>
-<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"></feOffset>
+<feGaussianBlur in="SourceAlpha" stddeviation="2" result="alpha_blur"/>
+<feOffset in="alpha_blur" dx="3" dy="-3" result="offset_alpha_blur"/>
 </filter>
 </defs>
 <style>text {
@@ -172,25 +171,25 @@ text {
     font-weight: 300;
 }
 </style>
-<rect width="100%" height="100%" fill="url('#sac-small-background')"></rect>
-<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#sac-small-projection')" clip-path="url('#sac-small-cut-scale-shadow')"></rect>
-<rect id="sac-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"></rect>
+<rect width="100%" height="100%" fill="url('#sac-small-background')"/>
+<rect width="610" height="400" x="75" y="55" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0" filter="url('#sac-small-projection')" clip-path="url('#sac-small-cut-scale-shadow')"/>
+<rect id="sac-small-chartbox" width="610" height="400" x="75" y="55" stroke-width="1" stroke="#000000" fill="rgb(0,0,0)" fill-opacity="0"/>
 <text id="sac-small-caption" x="355" y="22" text-anchor="middle" fill="black">SAC benchmark</text>
 <text id="sac-small-subcaption" x="355" y="40" text-anchor="middle" fill="black">Small file (13 kB)</text>
-<rect width="187.0" height="222.7" x="81.5" y="232.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"></rect>
-<rect id="sac-small-markSACParseStyleSheet" width="187.0" height="222.7" x="81.5" y="232.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"></rect>
-<rect width="187.0" height="222.7" x="81.5" y="232.3" fill="url('#sac-small-reflection')"></rect>
-<line x1="179.1" x2="179.1" y1="223" y2="241" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="187.0" height="222.7" x="81.5" y="232.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"/>
+<rect id="sac-small-markSACParseStyleSheet" width="187.0" height="222.7" x="81.5" y="232.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#c04d4d"/>
+<rect width="187.0" height="222.7" x="81.5" y="232.3" fill="url('#sac-small-reflection')"/>
+<line x1="179.1" x2="179.1" y1="223" y2="241" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="174.1" y="470" class="itemlabel" text-anchor="middle" fill="black">Css4j</text>
-<rect width="187.0" height="385.4" x="284.9" y="69.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"></rect>
-<rect id="sac-small-markSACParseStyleSheetBatik" width="187.0" height="385.4" x="284.9" y="69.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"></rect>
-<rect width="187.0" height="385.4" x="284.9" y="69.6" fill="url('#sac-small-reflection')"></rect>
-<line x1="382.5" x2="382.5" y1="67" y2="73" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="187.0" height="385.4" x="284.9" y="69.6" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"/>
+<rect id="sac-small-markSACParseStyleSheetBatik" width="187.0" height="385.4" x="284.9" y="69.6" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#61c061"/>
+<rect width="187.0" height="385.4" x="284.9" y="69.6" fill="url('#sac-small-reflection')"/>
+<line x1="382.5" x2="382.5" y1="67" y2="73" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="377.4" y="470" class="itemlabel" text-anchor="middle" fill="black">Batik CSS</text>
-<rect width="187.0" height="8.7" x="488.2" y="446.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"></rect>
-<rect id="sac-small-markSACParseStyleSheetSSParser" width="187.0" height="8.7" x="488.2" y="446.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"></rect>
-<rect width="187.0" height="8.7" x="488.2" y="446.3" fill="url('#sac-small-reflection')"></rect>
-<line x1="585.8" x2="585.8" y1="445.9" y2="446.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"></line>
+<rect width="187.0" height="8.7" x="488.2" y="446.3" stroke="#ffffff" stroke-opacity="0.4" filter="url('#sac-small-projection')"/>
+<rect id="sac-small-markSACParseStyleSheetSSParser" width="187.0" height="8.7" x="488.2" y="446.3" stroke="black" stroke-width="0.4" stroke-opacity="0.3" fill="#4d4dc0"/>
+<rect width="187.0" height="8.7" x="488.2" y="446.3" fill="url('#sac-small-reflection')"/>
+<line x1="585.8" x2="585.8" y1="445.9" y2="446.1" stroke="#888888" stroke-opacity="0.867" stroke-width="5" stroke-linecap="round" stroke-dasharray="1" class="errorbar"/>
 <text x="580.7" y="470" class="itemlabel" text-anchor="middle" fill="black">SS CSSParser</text>
 <text x="74" y="59" class="scaleitem" text-anchor="end">6700</text>
 <text x="74" y="139" class="scaleitem" text-anchor="end">5360</text>
@@ -200,14 +199,14 @@ text {
 <text x="74" y="459" class="scaleitem" text-anchor="end">0</text>
 <text id="sac-small-y-title" x="16" y="260" text-anchor="middle" fill="black" transform="rotate(270,16,260)">Throughput (ops/s)</text>
 <text id="sac-small-x-title" x="350" y="496" text-anchor="middle" fill="black">SAC Implementation</text>
-<image src="benchmark/sac-small.png" xlink:href=""></image></svg>
+<image src="benchmark/sac-small.png" xlink:href=""/></svg>
 <p>Numeric results (higher is better):</p>
 <table class="normaltbl carteitem">
 <thead><tr><th>Implementation</th><th>Score</th><th>Error</th><th>Unit</th></tr></thead>
 <tbody>
-<tr><td>Css4j</td><td class="number">3,767.204</td><td class="number">±152.243</td><td>ops/s</td></tr>
-<tr><td>Batik CSS</td><td class="number">6,521.440</td><td class="number">±51.305</td><td>ops/s</td></tr>
-<tr><td>SS CSSParser</td><td class="number">146.390</td><td class="number">±1.046</td><td>ops/s</td></tr>
+<tr><td>Css4j</td><td class="number">3,767.20</td><td class="number">±152.24</td><td>ops/s</td></tr>
+<tr><td>Batik CSS</td><td class="number">6,521.44</td><td class="number">±51.31</td><td>ops/s</td></tr>
+<tr><td>SS CSSParser</td><td class="number">146.39</td><td class="number">±1.05</td><td>ops/s</td></tr>
 </tbody></table></div>
 </div>
 <div class="tema" id="analysis">
