@@ -2,17 +2,70 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.3.0 - January 5, 2021
--------------------------------
+Release 3.4.0 - February 28, 2021
+---------------------------------
 
 Release Highlights
 ------------------
- This release changes the visibility of one class needed by the EchoSVG software
-but also has a couple of interesting additions:
+* Support for lab() and lch() color functions.
 
-- DOM: new Element.getInnerText().
-- CSSOM: support the :dir() pseudo-class in computed styles, important for users
-  of arabic and other right-to-left languages.
+  The lab() and lch() functions are finally landing in Webkit, and the other
+  major browsers have shown interest in implementing them (although it may still
+  take some time).
+
+  The usage of these functions in a toolchain with the typical Java open source
+  tools (which tend to use the sRGB default color space) could be problematic,
+  as lab() and lch() are often specified out of that gamut, but an accurate RGB
+  clamping method is provided.
+
+
+* Customizable serialization of computed styles.
+
+  Now you can control the serialization of computed styles thanks to a new
+  factory method:
+    StyleFormattingFactory.createComputedStyleFormattingContext(),
+  which returns a DeclarationFormattingContext.
+
+  A non-default implementation of that interface, called
+  RGBStyleFormattingFactory, is provided for the convenience of users that can
+  only deal with rgb colors in computed styles (for example those feeding CSS4J
+  computed styles into Apache FOP). Basically, it allows to use CSS with Lab,
+  LCh or Hsl colors and then convert them to RGB at the computed-style stage.
+
+
+* CSSOM: make the old rgb(a) color functional serialization with commas the
+  default for color conversions to RGB.
+
+  When parsing, the library uses the same RGB format that was specified. That
+  is, if the input was a rgba() function with commas, it serialized that way.
+  However, when other types of colors were converted to RGB, it defaulted to the
+  modern format without the commas. That default was not the most adequate
+  though:
+
+    1) According to the 2020 Web Almanac, "99.89% of functionally specified sRGB
+       colors are using the since-forever legacy format with commas [...] rather
+       than the new comma-less form".
+
+    2) XSL:FO uses the old format with commas, see
+       https://www.w3.org/TR/xsl/#expr-color-functions
+
+
+* Added method match(CSSValueSyntax) to both LexicalUnit and CSSValue.
+
+  This allows checking the grammar of values against specific syntaxes like
+  <length>+, <string>#, <transform-function> or <unicode-range>#.
+
+
+* Support registered custom properties (including @property rules) from CSS
+  Properties and Values API Level 1.
+
+  The rule (that currently only works in Chrome/Blink) allows to customize the
+  behaviour of custom properties.
+
+
+* DOM: add the DOMNode.removeAllChild() convenience method.
+
+  AFAIK no other DOM implementation contains this useful method.
 
 
 Description
@@ -78,21 +131,23 @@ by the experimental visual formatting model. The following table summarizes
 the basic support for setting/retrieving the main CSS level 3/4 features (other
 specifications are also supported):
   ___________________________________________
- |    CSS3 Spec Name           |   Support   |
+ |    CSS Spec Name            |   Support   |
  |-----------------------------|-------------|
  | Background / Border         | Yes         |
- | Color                       | Yes         |
- | Media Queries               | Partial (1) |
+ | Color                       | Partial (1) |
+ | Media Queries               | Partial (2) |
  | Selectors                   | Yes         |
  | Transitions                 | Yes         |
  | Values                      | Yes         |
- | Grid / Template / Alignment | Partial (2) |
+ | Properties and Values API   | Yes         |
+ | Grid / Template / Alignment | Partial (3) |
  |_____________________________|_____________|
 Notes:
- 1) Event handling with addListener/removeListener is not supported, given that
+ 1) Level 3 is supported, level 4 partially.
+ 2) Event handling with addListener/removeListener is not supported, given that
 the library's user is supposed to be in control of the CSSCanvas instances where
 the information about such events should be available.
- 2) Legacy gap properties (grid-row-gap, grid-column-gap, and grid-gap) are not
+ 3) Legacy gap properties (grid-row-gap, grid-column-gap, and grid-gap) are not
 supported, although the longhands can be used if declared explicitly).
 
 
@@ -110,7 +165,7 @@ Software dependencies
 
  To build this library you need:
 
-- The JCLF package. Version 4.0.4 or higher is required. Go to
+- The jclf-text module; version 5.0.0 or higher is required. Go to
   https://sourceforge.net/projects/jclf for downloads, or install with the
   release-scripts/install-jclf.sh script.
 
