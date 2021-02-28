@@ -402,6 +402,9 @@ You can set your <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/Style
 (which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
 method, or subclass your style sheet factory and override the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
 <p>Look at the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
+<p>To customize the serialization of computed styles, you want to override the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/StyleFormattingFactory.html#createComputedStyleFormattingContext()">createComputedStyleFormattingContext()</a> method.
+The convenience <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/RGBStyleFormattingFactory.html">RGBStyleFormattingFactory</a> serializes all computed colors as RGB and may serve as a customization example.</p>
+<h3>String value formatting</h3>
 <p>There is also the possibility to customize the default serialization of string values, with the <a href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
 <ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
@@ -465,7 +468,8 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
 <tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td><td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td><td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
 <code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands can be used if declared explicitly).</td></tr>
 </table>
 <h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
@@ -497,7 +501,7 @@ probably only going to exist if there is an actual rendering engine implemented.
 <div class="tema" id="jrereq">
 <h2>Java&trade; Runtime Environment requirements</h2>
 <p>The classes in the binary packages have been compiled with a Java compiler with 1.8 compiler compliance level,
-except for the <code>module-info</code> file which targets Java 11. If you are stuck with Java 7, you may want to use css4j 1.0.</p>
+except for the <code>module-info</code> file which targets Java 11. If you are stuck with Java 7, you may want to use css4j 1.2.</p>
 </div>
 </div>
 <div class="footnote"></div>
