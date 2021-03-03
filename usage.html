@@ -74,8 +74,8 @@ target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml
 <h2>Using css4j's native DOM implementation</h2>
 <p>You can create a DOM document from scratch and use the related DOM methods to programatically build a document: just use the provided DOM implementation
 (<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). But if you want to parse an existing document, the procedure depends on the type of document: to parse
-an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code>, while to parse an HTML one (or an
-XHTML document that does not use namespace prefixes) you can use the <a href="https://about.validator.nu/htmlparser/" target="_blank">validator.nu
+an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code> with the SAX parser provided by the JDK, while to parse
+an HTML one (or an XHTML document that does not use namespace prefixes) you can use the <a href="https://about.validator.nu/htmlparser/" target="_blank">validator.nu
 HTML5 parser</a> (be sure to use the latest version from the <a href="https://mvnrepository.com/artifact/nu.validator/htmlparser"><code>nu.validator</code>
 Maven group id</a>).</p>
 <p>An example with that parser follows:</p>
