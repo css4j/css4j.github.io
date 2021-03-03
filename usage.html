@@ -127,7 +127,7 @@ String display = style.getPropertyValue("display");
 // If you use a factory that has been set to setLenientSystemValues(false), next
 // line may throw an exception if the 'color' property was not specified.
 // The default value for lenientSystemValues is TRUE.
-RGBAColor color = ((CSSTypedValue) style.getPropertyCSSValue("color")).toRGBColorValue();
+RGBAColor color = ((CSSTypedValue) style.getPropertyCSSValue("color")).toRGBColor();
 
 // Suppose that the linked style sheet located at 'css/sheet.css' declares:
 // background-image: url('foo.png');
