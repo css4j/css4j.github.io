@@ -4,9 +4,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="Carlos Amengual">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="usage-c.css" rel="stylesheet" type="text/css" />
+<link href="usage-d.css" rel="stylesheet" type="text/css" />
 <title>CSS4J Quick Start User Guide</title>
-<script src="js/usage-c.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/usage-d.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div class="layout">
@@ -68,7 +68,75 @@ the objects required by media queries to work).</p>
 <li><a href="api/xml-dtd/3/"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
 target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>.</li>
 </ul>
-<p>If you use <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's POM files to check for the specific dependencies.</p>
+<p>If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>,
+you may want to look at each module's <code>build.gradle</code> files (or the POM files if you use version 3.4 or lower) to check for the specific module dependencies.</p>
+<br/>
+<h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
+<p>
+If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
+your build file:
+</p>
+<pre class="code"><code class="language-groovy">repositories {
+    maven {
+        url "https://css4j.github.io/maven/"
+        mavenContent {
+            releasesOnly()
+        }
+        content {
+            includeGroup 'io.sf.carte'
+            includeGroup 'io.sf.jclf'
+            includeGroup 'xmlpull'
+            includeGroup 'xpp3'
+        }
+    }
+}
+</code></pre>
+<p>
+please use this repository <b>only</b> for the artifact groups listed in the <code>includeGroup</code> statements.
+</p>
+<p>
+Then, in your <code>build.gradle</code> file:
+</p>
+<pre class="code"><code class="language-groovy">dependencies {
+    api "io.sf.carte:css4j:${css4jVersion}"
+}
+</code></pre>
+<p>
+where <code>css4jVersion</code> could be defined in a <code>gradle.properties</code> file.
+</p>
+<br/>
+<h3 class="subtema" id="maven">Usage from a Maven build</h3>
+<p>
+If you build your project (that depends on css4j) with Apache Maven, please note that some of the css4j dependencies are not in
+Maven Central:
+</p>
+<ul>
+<li><a href="https://sourceforge.net/projects/jclf/">JCLF</a>.</li>
+<li><a href="https://github.com/xmlpull-xpp3/xmlpull-xpp3">XMLPull-XPP3</a> (v1.2, dependency of the DOM4J module only).</li>
+</ul>
+<p>
+You may want to install them manually into your local Maven repository, which can be done easily with the:
+</p>
+<ul>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-jclf.sh"><code>install-jclf.sh</code></a></li>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-xpp3.sh"><code>install-xpp3.sh</code></a></li>
+</ul>
+<p>
+scripts.
+</p>
+<p>
+You can also directly install the CSS4J artifacts into your local Maven repository, with the similar
+<a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-css4j.sh"><code>install-css4j.sh</code></a>.
+</p>
+<p>
+And then, add the following to the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code>:
+</p>
+<pre class="code"><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
+    &lt;artifactId&gt;css4j&lt;/artifactId&gt;
+    &lt;version&gt;${css4j.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
 </div>
 <div class="tema" id="nativedom">
 <h2>Using css4j's native DOM implementation</h2>
@@ -152,9 +220,24 @@ Level 3 Core Specification</a>. For example, on elements and attributes the <cod
 description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
-<h2>Short example with DOM4J</h2>
-<p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the css4j-dom4j module in addition to the core
+<h2>Examples with DOM4J</h2>
+<p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the <code>css4j-dom4j</code> module in addition to the core
 module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
+<p>For example, with Gradle:</p>
+<pre class="code"><code class="language-groovy">dependencies {
+    api "io.sf.carte:css4j-dom4j:${css4jVersion}"
+}
+</code></pre>
+<p>or with Apache Maven:</p>
+<pre class="code"><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
+    &lt;artifactId&gt;css4j-dom4j&lt;/artifactId&gt;
+    &lt;version&gt;${css4j.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module.</p>
+<br/>
+<h3 class="subtema" id="dom4j-parsing">Loading and parsing an XML document</h3>
 <p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
 <pre class="code"><code class="language-java">Reader re = ... [reader for XHTML document]
 InputSource source = new InputSource(re);

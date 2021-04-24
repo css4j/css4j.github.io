@@ -1,19 +1,19 @@
 #!/bin/sh
 #
-# Copyright © 2017-2020 C. Amengual
+# Copyright © 2017-2021 C. Amengual
 #
 YUICOMP=${HOME}/java/lib/yuicompressor-2.4.8.jar
 SRCDIR=${HOME}/www/css4j.github.io/src
 CONTRIBDIR=${SRCDIR}/contrib
 PRISM=${CONTRIBDIR}/prism-markup-css-clike-java-shell
-PRISM_USAGE=${CONTRIBDIR}/prism-markup-css-clike-java
+PRISM_USAGE=${CONTRIBDIR}/prism-markup-css-clike-groovy-java
 LIBDIR=${HOME}/www/jslib
 CSSSRCDIR=${HOME}/www/css4j.github.io/src
 SITEDIR=${HOME}/www/css4j.github.io
 WORKDIR=$TMP/css4j.github
 FAQJSVER=a
-USAGEJSVER=c
-USAGECSSVER=c
+USAGEJSVER=d
+USAGECSSVER=d
 BASECSSVER=c
 # Work directory
 if [ ! -d $WORKDIR ]
