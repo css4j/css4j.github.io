@@ -67,26 +67,12 @@
 can be installed directly to your local Maven repository by using these scripts:
 </p>
 <ul>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/install-css4j.sh"><code>install-css4j.sh</code></a> (3.x).</li>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/install-jclf.sh"><code>install-jclf.sh</code></a> (5.0).</li>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/install-xpp3.sh"><code>install-xpp3.sh</code></a> (1.2, optional dependency of <a href="https://github.com/css4j/css4j-dom4j">css4j-dom4j</a>).</li>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-jclf.sh"><code>install-jclf.sh</code></a> (5.0).</li>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-xpp3.sh"><code>install-xpp3.sh</code></a> (1.2, optional dependency of <a href="https://github.com/css4j/css4j-dom4j">css4j-dom4j</a>).</li>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-css4j.sh"><code>install-css4j.sh</code></a> (3.x).</li>
 </ul>
 <p>The scripts execute Maven plugins: if you run them from a directory which has a <code>pom.xml</code> file, you may experience problems or delays caused by Maven processing that file.</p>
-</div>
-<div class="tema">
-<h3>Building from Git</h3>
-<p>If you want to build css4j from the code that is currently at the Git repositories, you need a JDK version 15 or higher
-and a copy of the <a href="https://github.com/css4j/css4j-dist" target="_blank">CSS4J-distribution</a> repository,
-then run the <code>tree.sh</code> script. For example:</p>
-<ul>
-<li><code>git clone https://github.com/css4j/css4j-dist.git css4j-snapshot</code></li>
-<li><code>cd css4j-snapshot</code></li>
-<li><code>./tree.sh</code></li>
-</ul>
-<p>After running the script you'll have a tree with all the modules, ready to build with Maven (just run <code>mvn</code>).
-Note that -as explained above- a couple of the dependencies are not in Maven Central: you probably need to install them manually first,
-which can be done easily with the aforementioned <a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/install-jclf.sh"><code>install-jclf.sh</code></a>
-and <a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/install-xpp3.sh"><code>install-xpp3.sh</code></a> scripts.</p>
+<p>More information about using the library in a Gradle or Maven project is given at the <a href="usage.html#modules">usage guide</a>.</p>
 </div>
 <div class="tema">
 <h3>Community - Support</h3>
