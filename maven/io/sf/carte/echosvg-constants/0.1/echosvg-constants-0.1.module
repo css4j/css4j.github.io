@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-constants",
+    "version": "0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echosvg-constants-0.1.jar",
+          "url": "echosvg-constants-0.1.jar",
+          "size": 6846,
+          "sha512": "ca975d31307bc8b90812fb51f80d7c2670b117e019d1ab0a85030bf5ec908e43afded0b5339079443e8dcd15a781f1422968393566ab70a276304e28e5d4d68d",
+          "sha256": "7b825cb02c3ee5318565f28054b791de2e73e6ac9493584bd42e3b0e1d561770",
+          "sha1": "a42beb8497cfd69ecd4f2af790c3cc574d34fdf0",
+          "md5": "2200c4d5478eef5ee77f1eeda5b69dd8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-constants-0.1.jar",
+          "url": "echosvg-constants-0.1.jar",
+          "size": 6846,
+          "sha512": "ca975d31307bc8b90812fb51f80d7c2670b117e019d1ab0a85030bf5ec908e43afded0b5339079443e8dcd15a781f1422968393566ab70a276304e28e5d4d68d",
+          "sha256": "7b825cb02c3ee5318565f28054b791de2e73e6ac9493584bd42e3b0e1d561770",
+          "sha1": "a42beb8497cfd69ecd4f2af790c3cc574d34fdf0",
+          "md5": "2200c4d5478eef5ee77f1eeda5b69dd8"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-constants-0.1-sources.jar",
+          "url": "echosvg-constants-0.1-sources.jar",
+          "size": 7223,
+          "sha512": "d9184dfa802720ecc3c28a050ddd213bd5428cfdd8380d383c78f0ff1ef984e281eea15ee72410ee5559093a5867c259fe973bac0dc88d4adddb67508774b21e",
+          "sha256": "cb2a1ba87def3f38106b2982059621bf44d006635e5f9dad91010799bc5a032a",
+          "sha1": "43ebc0584de94ec5ddd240e4df6264600f516ac7",
+          "md5": "c0d3a90f8b8cd62abd3733e0cba79559"
+        }
+      ]
+    }
+  ]
+}
