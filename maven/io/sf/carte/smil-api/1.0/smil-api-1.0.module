@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "smil-api",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "smil-api-1.0.jar",
+          "url": "smil-api-1.0.jar",
+          "size": 6149,
+          "sha512": "559765035bdaa8c82779062397036bebb48e338ae45affc93fec77c249e55e61b83cb2525154f8772dea0c6decfdfbfb1949f2c1b818e6998c540bbbbb1fb0a2",
+          "sha256": "d061e52329888bb8bcde8d09b9b6b0cf7fe4fd3424509187e1d7f9701dddf244",
+          "sha1": "18b31efac1d7b060a74a48b5cc8f18f41b597253",
+          "md5": "6838f670706d2ffc17e5dddd31a3ff71"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "smil-api-1.0.jar",
+          "url": "smil-api-1.0.jar",
+          "size": 6149,
+          "sha512": "559765035bdaa8c82779062397036bebb48e338ae45affc93fec77c249e55e61b83cb2525154f8772dea0c6decfdfbfb1949f2c1b818e6998c540bbbbb1fb0a2",
+          "sha256": "d061e52329888bb8bcde8d09b9b6b0cf7fe4fd3424509187e1d7f9701dddf244",
+          "sha1": "18b31efac1d7b060a74a48b5cc8f18f41b597253",
+          "md5": "6838f670706d2ffc17e5dddd31a3ff71"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "smil-api-1.0-sources.jar",
+          "url": "smil-api-1.0-sources.jar",
+          "size": 6980,
+          "sha512": "af5af3c492f49372404ea4002deabcd149abb70c1c80cd1d434af44288ebd0dee1565c12c5a5fb16587e92dd97acd1d8295a5bf156e77917d6485903688fb92f",
+          "sha256": "5d2bc5e5a221e50d7044cd35c2cc78600a09f1230366813460c8066e69b2f397",
+          "sha1": "77e1754a4599ff27443d6a9c0ad286935b21400c",
+          "md5": "3d00d3993a10d3d866c4b6a90be2fa54"
+        }
+      ]
+    }
+  ]
+}

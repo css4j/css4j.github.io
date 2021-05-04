@@ -39,10 +39,10 @@
           }
         },
         {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
+          "group": "io.sf.carte",
+          "module": "svgom-api",
           "version": {
-            "requires": "1.3.04"
+            "requires": "1.0"
           }
         }
       ],
@@ -50,11 +50,11 @@
         {
           "name": "echosvg-slideshow-0.1.jar",
           "url": "echosvg-slideshow-0.1.jar",
-          "size": 16384,
-          "sha512": "76e647d49ae8efa1abc5c6dc94f0f571c722a5f16eff04e3b5f4cbf3f87f6b04d05c63b19910fcd466bcb9b6e9d82b5b2b31a0dbdaa0d6c80ef3ba2c01108666",
-          "sha256": "e58635d61ebab81f9b6e7e4b2e3d0e2500e1d74c829835e4b0689710f257a8ee",
-          "sha1": "1247ff7935291f45fd38dadf0de07afba5707c36",
-          "md5": "89009287c631e1e8bac137caa536ea21"
+          "size": 16388,
+          "sha512": "b5edd6b9b20f8cc0ea8a90b7aecf805945998496974c51f2c60335f195165986fc39e30af33f7d1fc0c70a0883f56e9b9dffd395f1a5542028674128e9ffa2b5",
+          "sha256": "9d010abe5d2e0d78186a7f980fe71c8e6cfee247841ba85a5720a4ce0c1d9949",
+          "sha1": "d6f4139785969b40021794435eaadc5d9cdec72e",
+          "md5": "9c4d83f1f0aa4fcdb58358d25a4e6f88"
         }
       ]
     },
@@ -83,10 +83,10 @@
           }
         },
         {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
+          "group": "io.sf.carte",
+          "module": "svgom-api",
           "version": {
-            "requires": "1.3.04"
+            "requires": "1.0"
           }
         }
       ],
@@ -94,11 +94,11 @@
         {
           "name": "echosvg-slideshow-0.1.jar",
           "url": "echosvg-slideshow-0.1.jar",
-          "size": 16384,
-          "sha512": "76e647d49ae8efa1abc5c6dc94f0f571c722a5f16eff04e3b5f4cbf3f87f6b04d05c63b19910fcd466bcb9b6e9d82b5b2b31a0dbdaa0d6c80ef3ba2c01108666",
-          "sha256": "e58635d61ebab81f9b6e7e4b2e3d0e2500e1d74c829835e4b0689710f257a8ee",
-          "sha1": "1247ff7935291f45fd38dadf0de07afba5707c36",
-          "md5": "89009287c631e1e8bac137caa536ea21"
+          "size": 16388,
+          "sha512": "b5edd6b9b20f8cc0ea8a90b7aecf805945998496974c51f2c60335f195165986fc39e30af33f7d1fc0c70a0883f56e9b9dffd395f1a5542028674128e9ffa2b5",
+          "sha256": "9d010abe5d2e0d78186a7f980fe71c8e6cfee247841ba85a5720a4ce0c1d9949",
+          "sha1": "d6f4139785969b40021794435eaadc5d9cdec72e",
+          "md5": "9c4d83f1f0aa4fcdb58358d25a4e6f88"
         }
       ]
     },
@@ -114,11 +114,11 @@
         {
           "name": "echosvg-slideshow-0.1-sources.jar",
           "url": "echosvg-slideshow-0.1-sources.jar",
-          "size": 9890,
-          "sha512": "2b48a551904b8717ff684f364fa6032299e5c26708f6f898652e077f0c64119bfff1f9f7867d2b995364e270a3e094cb1696f675889a38a9668edfa9a5e9306e",
-          "sha256": "f58e2de5264e62cb39b5a6ea4482b1dd656ccf39f900584186fc77da5b33965d",
-          "sha1": "6ff5a380cdf07d8599de4cb97ed4140c23417e1d",
-          "md5": "b42cb07de45235c4c9d653c992a60663"
+          "size": 9900,
+          "sha512": "1f3beca35404c4d10aa1bcc236aa9bc2a39e872ca81231daf47469415639932e18277601d9098f080554e977c5a4ba73cf9f675b145a66b02d1ce89002a8aed2",
+          "sha256": "3ae455fdc9fa5ead94cf1bfd81d3e1b24d4c8c5bebe036de96c0ebff95ac44b1",
+          "sha1": "9d60bc63518bbb755f32fac15eb0e14996b8c385",
+          "md5": "f117c3d698105e317ba27905e882823a"
         }
       ]
     }

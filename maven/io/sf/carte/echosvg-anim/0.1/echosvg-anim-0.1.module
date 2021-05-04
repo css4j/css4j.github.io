@@ -44,24 +44,17 @@
           "version": {
             "requires": "0.1"
           }
-        },
-        {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
-          "version": {
-            "requires": "1.3.04"
-          }
         }
       ],
       "files": [
         {
           "name": "echosvg-anim-0.1.jar",
           "url": "echosvg-anim-0.1.jar",
-          "size": 506186,
-          "sha512": "492025a8f2a5ba7a00d0effd894af62171b61ac330a9bf9883900cbf09887b87853dac802687b9e5c23a41be1687ce51ac22c0759b70c5d26242377e46e7d4ff",
-          "sha256": "54cf49b1d9ecada3d67298b7b395ff74d15cd0c97ac6f6ca5ca19662c3e88cf0",
-          "sha1": "d45d25bf7d7adbe99c5076c4e9d56e217e02ddb8",
-          "md5": "c30c91b06cf1a0ac0a0e88ff3290c230"
+          "size": 506165,
+          "sha512": "7784d697f3fd7ef344a6aeb685d9025396257c9d8dc81bc245857840d359d31f7cf20e70bf6f292dc7f34edb16bf48fdd77b93c292ef481289a8d58b54705425",
+          "sha256": "7dbd9149936fc8c31ac33a324328211ddcd0cc909f4857252dadf504fbeac1b7",
+          "sha1": "3c71de7b9b89536bcbb4fc39bfa4b255619af2d5",
+          "md5": "887ebe6384c978ab824ee8390a34c6ba"
         }
       ]
     },
@@ -95,24 +88,17 @@
           "version": {
             "requires": "0.1"
           }
-        },
-        {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
-          "version": {
-            "requires": "1.3.04"
-          }
         }
       ],
       "files": [
         {
           "name": "echosvg-anim-0.1.jar",
           "url": "echosvg-anim-0.1.jar",
-          "size": 506186,
-          "sha512": "492025a8f2a5ba7a00d0effd894af62171b61ac330a9bf9883900cbf09887b87853dac802687b9e5c23a41be1687ce51ac22c0759b70c5d26242377e46e7d4ff",
-          "sha256": "54cf49b1d9ecada3d67298b7b395ff74d15cd0c97ac6f6ca5ca19662c3e88cf0",
-          "sha1": "d45d25bf7d7adbe99c5076c4e9d56e217e02ddb8",
-          "md5": "c30c91b06cf1a0ac0a0e88ff3290c230"
+          "size": 506165,
+          "sha512": "7784d697f3fd7ef344a6aeb685d9025396257c9d8dc81bc245857840d359d31f7cf20e70bf6f292dc7f34edb16bf48fdd77b93c292ef481289a8d58b54705425",
+          "sha256": "7dbd9149936fc8c31ac33a324328211ddcd0cc909f4857252dadf504fbeac1b7",
+          "sha1": "3c71de7b9b89536bcbb4fc39bfa4b255619af2d5",
+          "md5": "887ebe6384c978ab824ee8390a34c6ba"
         }
       ]
     },
@@ -128,11 +114,11 @@
         {
           "name": "echosvg-anim-0.1-sources.jar",
           "url": "echosvg-anim-0.1-sources.jar",
-          "size": 377604,
-          "sha512": "9f4aeb5cef325a77eb1da0047c09a6835f2383b92ce6f180cc87b871b575461e26e6bd435deae8fcc0b8fac694aba279b1949db4ae5382b239cb7c0095cb1223",
-          "sha256": "88800f9495787081aca7b680ad35b918fe4c17b2f3a48c3f994396d834f796b6",
-          "sha1": "3ff5775b6242509b860b71de3104cc53c1826227",
-          "md5": "a4743ad32f84deb7b01453ce63ce27c2"
+          "size": 377662,
+          "sha512": "e7b62164b353e07dbbb4b4df1cf9f51e33fc227d147b2401c88d7042fc91c49c6b5f41ddbda0e29b19b8e7fa4a2be795770ec749614e19a7e71da9d28a627e06",
+          "sha256": "da8f2edf4e9a4ba9d299105511441fb2046119971a7072f98721b2e3f1fd2e59",
+          "sha1": "91dafaaf36b2a25b669bca78de51394007cb12f6",
+          "md5": "d158189c1c058aadc93e32878fa6434d"
         }
       ]
     }

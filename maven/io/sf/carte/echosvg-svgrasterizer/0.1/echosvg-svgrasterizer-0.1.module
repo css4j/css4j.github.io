@@ -51,10 +51,10 @@
           "name": "echosvg-svgrasterizer-0.1.jar",
           "url": "echosvg-svgrasterizer-0.1.jar",
           "size": 61248,
-          "sha512": "9312ccac74272ff962d443fdf9d6264a57c4e2536b007e078f1962a9ca456f2569d24699477101cfedfdda5e5c0c5c65ac308dea9c5f3d50bff028ab2d840ef1",
-          "sha256": "1641193a2f43f0b714856f679579e8faa87799a5c588531ac713fcca4b91f77a",
-          "sha1": "6768c6de67720797df5d1fbc20aa7a5cedf260a0",
-          "md5": "bb9b0ec0fdd554ea7a360d8610e4f467"
+          "sha512": "28f4b6dad4ce2a9c7bf92c1b5cba3aaedf615a27c051346fb3d1884a3536dc7275f510f108ea2400e809fa011ed9471e22beeb720b1690b9f8557deeb43f207b",
+          "sha256": "783815ad289788dc8e9a60544d4b488b94466f3fc0f43fb4d8b816a0e7c7e1a8",
+          "sha1": "6a0ca7dd793cf709252d1ed3184685ccc8be2573",
+          "md5": "5b28007098ca32f993c655de8144b4ae"
         }
       ]
     },
@@ -95,10 +95,10 @@
           "name": "echosvg-svgrasterizer-0.1.jar",
           "url": "echosvg-svgrasterizer-0.1.jar",
           "size": 61248,
-          "sha512": "9312ccac74272ff962d443fdf9d6264a57c4e2536b007e078f1962a9ca456f2569d24699477101cfedfdda5e5c0c5c65ac308dea9c5f3d50bff028ab2d840ef1",
-          "sha256": "1641193a2f43f0b714856f679579e8faa87799a5c588531ac713fcca4b91f77a",
-          "sha1": "6768c6de67720797df5d1fbc20aa7a5cedf260a0",
-          "md5": "bb9b0ec0fdd554ea7a360d8610e4f467"
+          "sha512": "28f4b6dad4ce2a9c7bf92c1b5cba3aaedf615a27c051346fb3d1884a3536dc7275f510f108ea2400e809fa011ed9471e22beeb720b1690b9f8557deeb43f207b",
+          "sha256": "783815ad289788dc8e9a60544d4b488b94466f3fc0f43fb4d8b816a0e7c7e1a8",
+          "sha1": "6a0ca7dd793cf709252d1ed3184685ccc8be2573",
+          "md5": "5b28007098ca32f993c655de8144b4ae"
         }
       ]
     },
@@ -115,10 +115,10 @@
           "name": "echosvg-svgrasterizer-0.1-sources.jar",
           "url": "echosvg-svgrasterizer-0.1-sources.jar",
           "size": 37041,
-          "sha512": "ec21a2f361d2ca95648489b4de188a71483db12785163a69c06a1edbaa0d235c5663a4ff918c3b17314e2433c3f3893f1f1cf64c55f785822c3dcfc28a8e9aa4",
-          "sha256": "cc43f39d624a63694a8e10937843a882db185bc8e8e51113f919b63cb9477c02",
-          "sha1": "7d0507961824244fa377edca72b8b7139a778a3e",
-          "md5": "218ba6f2b9c82b32d3f8be8ecbae4f71"
+          "sha512": "27bacd2ee9ae8772ebe431672bc86c2781bf46f0bff542af36fd12f3d5a7d64b6a18cb77549d34ef24031a8aa1cfefa872f12a8c63f8ffac181aa2b2b04e7579",
+          "sha256": "a941ad46bc5566ae97293d1d415346f704cf83489d38487f3280ed8f8b18856d",
+          "sha1": "c7e350b88346593ecd74068fd75fb3b9dd8f1c9c",
+          "md5": "6cd2dae7356f571531455737d8f1ab9a"
         }
       ]
     }

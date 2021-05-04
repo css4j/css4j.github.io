@@ -32,17 +32,17 @@
           }
         },
         {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
           "group": "org.apache.xmlgraphics",
           "module": "xmlgraphics-commons",
           "version": {
             "requires": "2.4"
-          }
-        },
-        {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
-          "version": {
-            "requires": "1.3.04"
           }
         },
         {
@@ -57,11 +57,11 @@
         {
           "name": "echosvg-css-0.1.jar",
           "url": "echosvg-css-0.1.jar",
-          "size": 293177,
-          "sha512": "11017bc465ade0f63d9c4c33dec26e32dba830d6a2d809e13232a78e07d64cdbd7e083e6ca73184bd6dc648d0bff563c2f64c2af8c76373b06680e7da2b29808",
-          "sha256": "30ce701498e9bce8521c570f961ec8e0b13a9da617c5670d8090b5dac34f4f87",
-          "sha1": "e27c53cb883ee9b334ffae46ba1501880ddd3c44",
-          "md5": "6876e46e4558eb52247349018d3bccd2"
+          "size": 293184,
+          "sha512": "d21b804ba5aef2946556e913e3241b55f5c9d8ebc97e4e5578b493a1f555128a2dbb5f3720bb972b2738010f7bd735b8db623f38fefdc66afdeb492d0a7206ef",
+          "sha256": "d9bcc00edeb046f11811be2778ef1233770723413118bacbada98ca3faa891ac",
+          "sha1": "5219851b840b2cd27ce2167af81fce99d1c0368a",
+          "md5": "9a84aaa11daf1ced3d5ffd47bc0a4395"
         }
       ]
     },
@@ -83,17 +83,17 @@
           }
         },
         {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
           "group": "org.apache.xmlgraphics",
           "module": "xmlgraphics-commons",
           "version": {
             "requires": "2.4"
-          }
-        },
-        {
-          "group": "xml-apis",
-          "module": "xml-apis-ext",
-          "version": {
-            "requires": "1.3.04"
           }
         },
         {
@@ -108,11 +108,11 @@
         {
           "name": "echosvg-css-0.1.jar",
           "url": "echosvg-css-0.1.jar",
-          "size": 293177,
-          "sha512": "11017bc465ade0f63d9c4c33dec26e32dba830d6a2d809e13232a78e07d64cdbd7e083e6ca73184bd6dc648d0bff563c2f64c2af8c76373b06680e7da2b29808",
-          "sha256": "30ce701498e9bce8521c570f961ec8e0b13a9da617c5670d8090b5dac34f4f87",
-          "sha1": "e27c53cb883ee9b334ffae46ba1501880ddd3c44",
-          "md5": "6876e46e4558eb52247349018d3bccd2"
+          "size": 293184,
+          "sha512": "d21b804ba5aef2946556e913e3241b55f5c9d8ebc97e4e5578b493a1f555128a2dbb5f3720bb972b2738010f7bd735b8db623f38fefdc66afdeb492d0a7206ef",
+          "sha256": "d9bcc00edeb046f11811be2778ef1233770723413118bacbada98ca3faa891ac",
+          "sha1": "5219851b840b2cd27ce2167af81fce99d1c0368a",
+          "md5": "9a84aaa11daf1ced3d5ffd47bc0a4395"
         }
       ]
     },
@@ -128,11 +128,11 @@
         {
           "name": "echosvg-css-0.1-sources.jar",
           "url": "echosvg-css-0.1-sources.jar",
-          "size": 208740,
-          "sha512": "72bccaaf1f17767e11a832f5309a759b483d1d704b32cc741bfe0dc309a41161e095410f7d05a5a47bef2f0728f9879c1384dbef01110455c905f12375b7ac6f",
-          "sha256": "fc8d1fdeff7afd9cb3d7503a60a3fc03f5d9b8fce07a760c15933f2427084efb",
-          "sha1": "3ba51d2024bde83d19492a427099543b2a266d24",
-          "md5": "41ec92495b5aebe3007aeb2972a8313e"
+          "size": 208786,
+          "sha512": "38462d957382cd700a74d3a6f3098fad47cc4d0fe02e3d87555de8e8d671ba62adef133cb851e5babf8d97d04e11a798c9431de7938e59ee71c809c238063903",
+          "sha256": "3059c4f63d10611d39976f3a0f16179fb8493c2b40d9bb09156f6beae86df6c6",
+          "sha1": "9f88792a23ed427815b809b4955ed7adec35f5a7",
+          "md5": "05908a823fdc294987759d7b276fd609"
         }
       ]
     }

@@ -44,10 +44,10 @@
           "name": "echosvg-gvt-0.1.jar",
           "url": "echosvg-gvt-0.1.jar",
           "size": 195875,
-          "sha512": "61bb2deafc2426331253869558c44b8c462b7742102f64911de39dd1dca351380e6af9f21f2bcc4071f54519397379f90825a9e29a46abfe77f1b34aadbfef6b",
-          "sha256": "efe6ae9e7d39d942a13c46525a3f8ff8e3a08ca1e67f1ae0b7fed1b9d082a22c",
-          "sha1": "84fd90a3f5f08be3235e22405f41c8266722981e",
-          "md5": "4b61cbd0508b294cf422ac12bfe6acc4"
+          "sha512": "f5405964acba0513329d7a1fea282c255461390aca980d1fb2cacfbf7d1b6d236a7ddbffa522b232f0c520a6980451685b6f0fb5ae4c7321d141033e2d75fd57",
+          "sha256": "dba30a49503e258dcc15098a16e18dfd59ac7d34a843e950a03c5008a61da171",
+          "sha1": "3492b0a10413ceaf4422b79e80cd99c13e8bab19",
+          "md5": "c4f20222a117e0c28415a16213497374"
         }
       ]
     },
@@ -81,10 +81,10 @@
           "name": "echosvg-gvt-0.1.jar",
           "url": "echosvg-gvt-0.1.jar",
           "size": 195875,
-          "sha512": "61bb2deafc2426331253869558c44b8c462b7742102f64911de39dd1dca351380e6af9f21f2bcc4071f54519397379f90825a9e29a46abfe77f1b34aadbfef6b",
-          "sha256": "efe6ae9e7d39d942a13c46525a3f8ff8e3a08ca1e67f1ae0b7fed1b9d082a22c",
-          "sha1": "84fd90a3f5f08be3235e22405f41c8266722981e",
-          "md5": "4b61cbd0508b294cf422ac12bfe6acc4"
+          "sha512": "f5405964acba0513329d7a1fea282c255461390aca980d1fb2cacfbf7d1b6d236a7ddbffa522b232f0c520a6980451685b6f0fb5ae4c7321d141033e2d75fd57",
+          "sha256": "dba30a49503e258dcc15098a16e18dfd59ac7d34a843e950a03c5008a61da171",
+          "sha1": "3492b0a10413ceaf4422b79e80cd99c13e8bab19",
+          "md5": "c4f20222a117e0c28415a16213497374"
         }
       ]
     },
@@ -101,10 +101,10 @@
           "name": "echosvg-gvt-0.1-sources.jar",
           "url": "echosvg-gvt-0.1-sources.jar",
           "size": 199730,
-          "sha512": "c5b0efb84df4c385ed685a2b386c1fa4aee449a7bf28887b286f01e8548152d8fba0677ed430ac80b7c8ead1926161078dc494deb3e8bf795c07368b77123643",
-          "sha256": "f2ed94f1c9c85651e280582d6946a2bae24fe0c3b675306ad10f717443a87a5d",
-          "sha1": "1c7b25acdc5975b058424deef6067f7cf47cfeab",
-          "md5": "b390d3f739cff46caf0c94cb2b27844d"
+          "sha512": "a14e47fb698a553b238f70eaaf17920ec00cda6198829cffd8633b5bd94ee87365242f9c7ccaf2b979da387fad653ffb5dc657760bc10788f22226e917ff8fb3",
+          "sha256": "333f87afe4fceca485f70eda3e7c026b65e8f8dec27afedaee10498351f25184",
+          "sha1": "7e619f21e502b8792586970c090af91918c67df1",
+          "md5": "bb699ce18320575ef0b5c2fbdd01f50c"
         }
       ]
     }
