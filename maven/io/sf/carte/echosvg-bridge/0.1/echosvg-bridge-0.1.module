@@ -84,11 +84,11 @@
         {
           "name": "echosvg-bridge-0.1.jar",
           "url": "echosvg-bridge-0.1.jar",
-          "size": 720856,
-          "sha512": "8f7a87eeec49f8ee1065b9563d85c3097916133b036f4489ad4a070e785d635e01ff856d9d8945a49a27fbf10ef4c4ed8c3beea5567a3d5b5a9b80a2640644a1",
-          "sha256": "917f95395266c46d69602b9c9c5f43c4b0c95c2358bf67a6920d39d8946e039c",
-          "sha1": "13b4e915930bdb944f83a142f73322196f062bb1",
-          "md5": "d8512f0f0b75037e30fc4ae19a09d5a3"
+          "size": 720855,
+          "sha512": "011120865ebcefb39aedefadb72efc35db3a13ec385946d814aa533091254e0b3798adae28aea40db7720e7f687b631a360de66603fc9a0d6e92c82f72a171e3",
+          "sha256": "0eb2242fc167e032ad0fdb3fc36e57aea64a22c14008b12d8350c4ac1bf81f85",
+          "sha1": "dd7dbd7d1a9cbd1f69f64a129a2900501bba3a52",
+          "md5": "74167635a780fb37100be85b5f7f51a6"
         }
       ]
     },
@@ -169,11 +169,11 @@
         {
           "name": "echosvg-bridge-0.1.jar",
           "url": "echosvg-bridge-0.1.jar",
-          "size": 720856,
-          "sha512": "8f7a87eeec49f8ee1065b9563d85c3097916133b036f4489ad4a070e785d635e01ff856d9d8945a49a27fbf10ef4c4ed8c3beea5567a3d5b5a9b80a2640644a1",
-          "sha256": "917f95395266c46d69602b9c9c5f43c4b0c95c2358bf67a6920d39d8946e039c",
-          "sha1": "13b4e915930bdb944f83a142f73322196f062bb1",
-          "md5": "d8512f0f0b75037e30fc4ae19a09d5a3"
+          "size": 720855,
+          "sha512": "011120865ebcefb39aedefadb72efc35db3a13ec385946d814aa533091254e0b3798adae28aea40db7720e7f687b631a360de66603fc9a0d6e92c82f72a171e3",
+          "sha256": "0eb2242fc167e032ad0fdb3fc36e57aea64a22c14008b12d8350c4ac1bf81f85",
+          "sha1": "dd7dbd7d1a9cbd1f69f64a129a2900501bba3a52",
+          "md5": "74167635a780fb37100be85b5f7f51a6"
         }
       ]
     },
@@ -189,11 +189,11 @@
         {
           "name": "echosvg-bridge-0.1-sources.jar",
           "url": "echosvg-bridge-0.1-sources.jar",
-          "size": 484511,
-          "sha512": "42c1d786175cc66486586659e904c32f601ee2cf9397c5d5b0dd20e89e9778344db94e9f95b60936454237e549324916dec31167d0c9f4d1b2033ed46b12986c",
-          "sha256": "c2043dad113fa59c90d3e582995e1841550e6b47da9ec46fae1f5f0443f64b8a",
-          "sha1": "250cb8d3308bbd766051d63a374af2ce5a352ffb",
-          "md5": "42a074b617a222a186624f662b695d0e"
+          "size": 484497,
+          "sha512": "6b4ac682b60ef5414aa67803180f40fe7071a2c9b90e947b0454dbbfdb9f1af1e9b5aa40fa61d312b270ca12dfcd94c1e0779e1f8a0bd85a2e9e825cdb3fdb17",
+          "sha256": "57604cd8332f276e48687079fce0f8019790fc31ff064ab8d0a402e36990f546",
+          "sha1": "90000f9d4e5da2744a34fbbe48c3c556c234d988",
+          "md5": "9e9bd56db9fc812b58428a51e4ed58b9"
         }
       ]
     }
