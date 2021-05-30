@@ -1,0 +1,141 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "xml-dtd",
+    "version": "3.5.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "requires": "3.5.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-3.5.0.jar",
+          "url": "xml-dtd-3.5.0.jar",
+          "size": 186245,
+          "sha512": "a8de79416b422b159bfb12190cab166c821a39f6ab1e27b3bad97a9aec38655e18615463263f318ba01d808793c0867a95fd5a8da58579b5be7319b55c381860",
+          "sha256": "14608833c9edef6e4801e07dd1459c8bef091c8d90ac500e913d4820e9d25ab1",
+          "sha1": "d2feab5945b75f4e63f200e0e11d82aad30a5723",
+          "md5": "eefed0975c9b2a96189c2a75cf542ebe"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "tokenproducer",
+          "version": {
+            "requires": "3.5.0"
+          }
+        },
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-text",
+          "version": {
+            "requires": "[5.0.0,)"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "requires": "3.5.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-3.5.0.jar",
+          "url": "xml-dtd-3.5.0.jar",
+          "size": 186245,
+          "sha512": "a8de79416b422b159bfb12190cab166c821a39f6ab1e27b3bad97a9aec38655e18615463263f318ba01d808793c0867a95fd5a8da58579b5be7319b55c381860",
+          "sha256": "14608833c9edef6e4801e07dd1459c8bef091c8d90ac500e913d4820e9d25ab1",
+          "sha1": "d2feab5945b75f4e63f200e0e11d82aad30a5723",
+          "md5": "eefed0975c9b2a96189c2a75cf542ebe"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-3.5.0-javadoc.jar",
+          "url": "xml-dtd-3.5.0-javadoc.jar",
+          "size": 129238,
+          "sha512": "bed4ef3a962a78abf35f28a6fb9a410f7f64a66ecf837de8583d9b2f621a67b96602f40c5b6617aab73d1fa8d08696920d3665c44226ef8f18ab03858b0bf69a",
+          "sha256": "b063429651d7893e88627cbaf5af4eb5b68360245980c022766321f5df90cf40",
+          "sha1": "57b79304009e4e84d68413dba0a9dd38b24510c3",
+          "md5": "cd7611e1c8877bcab40dfdf7792cecdd"
+        },
+        {
+          "name": "xml-dtd-3.5.0-javadoc.jar",
+          "url": "xml-dtd-3.5.0-javadoc.jar",
+          "size": 129238,
+          "sha512": "bed4ef3a962a78abf35f28a6fb9a410f7f64a66ecf837de8583d9b2f621a67b96602f40c5b6617aab73d1fa8d08696920d3665c44226ef8f18ab03858b0bf69a",
+          "sha256": "b063429651d7893e88627cbaf5af4eb5b68360245980c022766321f5df90cf40",
+          "sha1": "57b79304009e4e84d68413dba0a9dd38b24510c3",
+          "md5": "cd7611e1c8877bcab40dfdf7792cecdd"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-3.5.0-sources.jar",
+          "url": "xml-dtd-3.5.0-sources.jar",
+          "size": 177813,
+          "sha512": "af6a51beb1df9ae739a4ab77097b66ad54f1b7b38105b92d3144780c37ef0d1b396dcfe15626ec09eb199c739a158a15673c6440efcc02124a4e900d91057cff",
+          "sha256": "801062d0258765a4e2887394718961ad0250a43933469fe096807cbbacfafcdf",
+          "sha1": "0f17bb1419c3842345647db4fa8a0338debce59e",
+          "md5": "8b8d02b8451ec8738bcff9b0c968144d"
+        }
+      ]
+    }
+  ]
+}
