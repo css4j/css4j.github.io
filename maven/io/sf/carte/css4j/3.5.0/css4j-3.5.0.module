@@ -35,7 +35,7 @@
           "group": "io.sf.carte",
           "module": "tokenproducer",
           "version": {
-            "requires": "3.5.0"
+            "requires": "1.1.1"
           }
         },
         {
@@ -50,11 +50,11 @@
         {
           "name": "css4j-3.5.0.jar",
           "url": "css4j-3.5.0.jar",
-          "size": 1399563,
-          "sha512": "c9890e51f99a2ed9d3370ca91f15cd39593022474604d9e95426184fcb7243ea25979c10427ff767d2d92c7be0ce22ec6000efb03cb0575da090c153c107f9fb",
-          "sha256": "66dd6ce8e7eb187ce4e515ce81d1bb1eea221b265f2d798849d90f4e496a012b",
-          "sha1": "644944a22475adcf1a5bfd292be895c6c86656bc",
-          "md5": "e45f31ede8050f4cd1fc6de55e34e3a8"
+          "size": 1399575,
+          "sha512": "b84768b02b23befde83d5241bb9e7152fd834c2ea082ea2c84b4364d54c8f8b827ca80289a786591f3afdfbbe271d4e5a555507c6b4b1fb30e220ae5ca7d2e1b",
+          "sha256": "00ac80fdc8d17d5f6c887fb752dde367aebd9a7bd734f525063b63a448a2cfe4",
+          "sha1": "e2963f19018f12d8560c65cc1138208fac164fc6",
+          "md5": "d2d8626784c5829670ab27e546907a52"
         }
       ]
     },
@@ -93,7 +93,7 @@
           "group": "io.sf.carte",
           "module": "tokenproducer",
           "version": {
-            "requires": "3.5.0"
+            "requires": "1.1.1"
           }
         },
         {
@@ -108,11 +108,11 @@
         {
           "name": "css4j-3.5.0.jar",
           "url": "css4j-3.5.0.jar",
-          "size": 1399563,
-          "sha512": "c9890e51f99a2ed9d3370ca91f15cd39593022474604d9e95426184fcb7243ea25979c10427ff767d2d92c7be0ce22ec6000efb03cb0575da090c153c107f9fb",
-          "sha256": "66dd6ce8e7eb187ce4e515ce81d1bb1eea221b265f2d798849d90f4e496a012b",
-          "sha1": "644944a22475adcf1a5bfd292be895c6c86656bc",
-          "md5": "e45f31ede8050f4cd1fc6de55e34e3a8"
+          "size": 1399575,
+          "sha512": "b84768b02b23befde83d5241bb9e7152fd834c2ea082ea2c84b4364d54c8f8b827ca80289a786591f3afdfbbe271d4e5a555507c6b4b1fb30e220ae5ca7d2e1b",
+          "sha256": "00ac80fdc8d17d5f6c887fb752dde367aebd9a7bd734f525063b63a448a2cfe4",
+          "sha1": "e2963f19018f12d8560c65cc1138208fac164fc6",
+          "md5": "d2d8626784c5829670ab27e546907a52"
         }
       ]
     },
@@ -129,19 +129,19 @@
           "name": "css4j-3.5.0-javadoc.jar",
           "url": "css4j-3.5.0-javadoc.jar",
           "size": 1608883,
-          "sha512": "8637b02f75fc4b62a4587b8898f8540918915e90a06a60d45fe1b10692c23826b9143403abd41d3c9f6b6d57b91de994e000fa713e84454f7041a02bf7f7f316",
-          "sha256": "6b0e9206efb2cc1fa74da74bf90db3d98e75cb57a52aef1fc500ed71b9d028fb",
-          "sha1": "ef54a702ff4d428365befe1c9576da8b6a7d4509",
-          "md5": "2fdb0b8ffc5bddf260f09b08d824acaa"
+          "sha512": "4d4c26b21be5b6b77b06fe24730baa8c83518079d9f13f5cf2495120e4653e37530fb005eb20c4b2dd8a094a099558153b57b65f9fbfbc8dd0c9d72be28c3bd0",
+          "sha256": "da3b52a29c6e34a5aa09e8f7fe586264a6a026968208fa88704bf9fb33949188",
+          "sha1": "448c3e0fb730f70365aac0cfcd3810bc2abf50a6",
+          "md5": "34cf912b1598df8abc78477b8f0cd660"
         },
         {
           "name": "css4j-3.5.0-javadoc.jar",
           "url": "css4j-3.5.0-javadoc.jar",
           "size": 1608883,
-          "sha512": "8637b02f75fc4b62a4587b8898f8540918915e90a06a60d45fe1b10692c23826b9143403abd41d3c9f6b6d57b91de994e000fa713e84454f7041a02bf7f7f316",
-          "sha256": "6b0e9206efb2cc1fa74da74bf90db3d98e75cb57a52aef1fc500ed71b9d028fb",
-          "sha1": "ef54a702ff4d428365befe1c9576da8b6a7d4509",
-          "md5": "2fdb0b8ffc5bddf260f09b08d824acaa"
+          "sha512": "4d4c26b21be5b6b77b06fe24730baa8c83518079d9f13f5cf2495120e4653e37530fb005eb20c4b2dd8a094a099558153b57b65f9fbfbc8dd0c9d72be28c3bd0",
+          "sha256": "da3b52a29c6e34a5aa09e8f7fe586264a6a026968208fa88704bf9fb33949188",
+          "sha1": "448c3e0fb730f70365aac0cfcd3810bc2abf50a6",
+          "md5": "34cf912b1598df8abc78477b8f0cd660"
         }
       ]
     },
@@ -158,10 +158,10 @@
           "name": "css4j-3.5.0-sources.jar",
           "url": "css4j-3.5.0-sources.jar",
           "size": 779494,
-          "sha512": "55d131368b242ad34f92999a115c52839a828a5d0a8b8a7e244c4e44a42fce89e9284b73fd695fb53c56d9c8a14b665f8a6a90fa29b660e5a3c9567fa94ac2c8",
-          "sha256": "1342dad540af15302986bcb260de7a2a142e1e412cf6f2f54e31fbb97e12ea0c",
-          "sha1": "88aaab8e9786d3bbf302c2643dd5c5677ecf2978",
-          "md5": "d1eb2a66d15dcfc5ce51720cfff71481"
+          "sha512": "c2a242c8c54c5328cee8f2680ec58cbe6b89683690fd0f26e4be74571aeef83c0a4040775293856512ae08b0376a17c74e437c3cdbe4095b2b30b10ead59f304",
+          "sha256": "e914b6c1db562b89b453cf100433d0e8c3fd8f150ae72ff929efe4ce0eeb3f06",
+          "sha1": "2ca2db55520ada0ff313ba8d52fd36e92ca08129",
+          "md5": "83467ff834abbf47135de62b6e2b9781"
         }
       ]
     }
