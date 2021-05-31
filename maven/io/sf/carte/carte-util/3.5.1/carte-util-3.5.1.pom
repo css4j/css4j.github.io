@@ -9,9 +9,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.sf.carte</groupId>
   <artifactId>carte-util</artifactId>
-  <version>3.5.0</version>
+  <version>3.5.1</version>
   <description>Carte utility library</description>
-  <url>https://github.com/css4j/</url>
+  <url>https://github.com/css4j/carte-util</url>
   <licenses>
     <license>
       <name>BSD 3-clause license</name>
