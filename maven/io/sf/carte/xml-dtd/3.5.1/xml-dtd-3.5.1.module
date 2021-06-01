@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -28,7 +28,7 @@
           "group": "io.sf.carte",
           "module": "carte-util",
           "version": {
-            "requires": "3.4.0"
+            "requires": "[3.4.0,)"
           }
         }
       ],
@@ -36,11 +36,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -58,7 +58,7 @@
           "group": "io.sf.carte",
           "module": "carte-util",
           "version": {
-            "requires": "3.4.0"
+            "requires": "[3.4.0,)"
           }
         }
       ],
@@ -66,11 +66,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ]
     },
@@ -86,11 +86,11 @@
         {
           "name": "xml-dtd-3.5.1-javadoc.jar",
           "url": "xml-dtd-3.5.1-javadoc.jar",
-          "size": 127439,
-          "sha512": "54e4e0875a058afc9126d85a0e279beea4dad41bd95e28a02716c3c54970a4c56d3f62b0f1734f8a9220fca33ed52433696a1ed32406860e7b585e27c243561d",
-          "sha256": "cc2010918150d4151283a9d8870d897f3ae0a1ceae8aab5fbc8fc80c03f652dd",
-          "sha1": "70d91d8af28d5ae943be386ed6fbc80a7b57f029",
-          "md5": "55a16ce1fe2cfc592297a9713e4ab757"
+          "size": 127779,
+          "sha512": "93f38ede471cd95072b86713bb582be8e00d43829a38b455a75bdf8815b9ec53cb294736c312494f130e31af94bd2676e219d93cd851c016b559fb40497d81d1",
+          "sha256": "918c50c4ee152dc06bc26f09725f308169de7d6e62748a2d374d08e65391bcda",
+          "sha1": "522877e21343d9c80c3c07def09d8ccd996b4bd4",
+          "md5": "ae52a29004c9cfb2c05d54439d4efe69"
         }
       ]
     },
@@ -106,11 +106,11 @@
         {
           "name": "xml-dtd-3.5.1-sources.jar",
           "url": "xml-dtd-3.5.1-sources.jar",
-          "size": 178861,
-          "sha512": "c0a3c39e075b19caca8dd8c65d62a187b9c4ea0f0f9b542b1de7283f2a9ba5dd9fd0c2f116d27b9118b4991509ee23a71a73dd175443ea53b90891e624415c93",
-          "sha256": "3d90212e2bc4ef4c58b5fb6c8712cc4dbc1ab3d402d4fe3842106969e40ce677",
-          "sha1": "d61871c8b47e1d37b0d01e37ccf178e35ed3f30f",
-          "md5": "6fbeefe7110b9d4b37b6a227805fa7e5"
+          "size": 179201,
+          "sha512": "be5003cf97a6bb83da93a84cb79a9dc51fe4b41366ce4097643e13be17297a709256d4abcee20f26c36d3efb77b568ffcdd13ec46bdd0db12851cb5bad8bf13b",
+          "sha256": "245567764f6f9a875d456da1ffd8a7c4e7c8ea46831c791db7c384a2db71ede8",
+          "sha1": "0279d712dd23390306b064afdca367f4205ae764",
+          "md5": "63079e07bc3c13ad09067cce10afaa5b"
         }
       ]
     },
@@ -119,7 +119,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -127,11 +127,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ],
       "capabilities": [
@@ -147,7 +147,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -156,7 +156,7 @@
           "group": "io.sf.carte",
           "module": "tokenproducer",
           "version": {
-            "requires": "1.1.1"
+            "requires": "[1.1.1,)"
           }
         }
       ],
@@ -164,11 +164,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ],
       "capabilities": [
@@ -184,7 +184,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -192,11 +192,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ],
       "capabilities": [
@@ -212,7 +212,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -229,11 +229,11 @@
         {
           "name": "xml-dtd-3.5.1.jar",
           "url": "xml-dtd-3.5.1.jar",
-          "size": 187146,
-          "sha512": "2ad948a117e7ea65fc8dc132a1afe28a252cbe1dc36ab8ede6462347e956be8c4d1714631c42f3b5693e1b729df76ac392850eeb5efc33f4eb3456f2b079e752",
-          "sha256": "d08d0c58668dbbf59ffe9989092e2401e00482c71d92651c77d76aa4a5f2f6f9",
-          "sha1": "9e5e746682e6b00b3459de4b1d45e04cee749dd9",
-          "md5": "a62cf032eb5e877c2f6551585fc57318"
+          "size": 186814,
+          "sha512": "814192831a553667470e4932fb80a5626cec390a02fe5060f0fe99e125c4f5b923ef88d59203adcc335aad94c0a4b9ebffdebcd8611bd197fc9d06ae0835eccf",
+          "sha256": "a0941eee02e0bf511d3207ba620956538307b371fb42fe474f268568550d2711",
+          "sha1": "4061c3bce298129fdd5aecb6142a0ed476f68689",
+          "md5": "ca6e649c081c5e3191d3968e1dbf0f58"
         }
       ],
       "capabilities": [

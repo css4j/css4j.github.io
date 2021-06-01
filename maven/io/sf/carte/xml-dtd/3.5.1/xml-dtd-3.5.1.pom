@@ -22,13 +22,13 @@
     <dependency>
       <groupId>io.sf.carte</groupId>
       <artifactId>carte-util</artifactId>
-      <version>3.4.0</version>
+      <version>[3.4.0,)</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>io.sf.carte</groupId>
       <artifactId>tokenproducer</artifactId>
-      <version>1.1.1</version>
+      <version>[1.1.1,)</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
