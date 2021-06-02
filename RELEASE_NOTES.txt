@@ -2,16 +2,20 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.5.0 - May 30, 2021
+Release 3.5.1 - June 2, 2021
 ----------------------------
 
 Release Highlights
 ------------------
 
-* Gradle build.
+* Build fixes.
 
-  The project is now built by Gradle instead of Maven. It is no longer necessary
-  to manually install the dependencies that are not available in Maven Central.
+  The previous version introduced a Gradle build, but there were some quirks
+  and the old Maven build was temporarily recovered.
+
+  As part of this process, the 'tokenproducer', 'carte-util' and 'xml-dtd'
+  modules are now separate projects, although their jar files are included in
+  the 'jar' directory in the distribution zip file.
 
 
 Description
@@ -32,20 +36,16 @@ different licensing).
   extend those of dom4j (for those who are comfortable with dom4j).
 - A device profile API to encapsulate target device-specific information.
 - A few AWT helper classes (AWT module).
-- Some helper XML-DTD classes.
 
 
 Packaging
 ---------
- This project is divided in several modules:
+ This project is divided in four modules:
 
 - Core module: file css4j-<version>.jar
 - User agent module: file css4j-agent-<version>.jar
 - Dom4j backend module: file css4j-dom4j-<version>.jar
 - AWT module, with AWT helper classes: file css4j-awt-<version>.jar
-- XML-DTD module (for DTD utilities): file xml-dtd-<version>.jar
-- Carte-util module: file carte-util-<version>.jar
-- Tokenproducer-uparser module: file tokenproducer-<version>.jar
 
  Depending on your use case, you may need different modules.
 
@@ -114,6 +114,15 @@ Software dependencies
 - The jclf-text module; version 5.0.0 or higher is required. Go to
   https://sourceforge.net/projects/jclf for downloads, or install with the
   release-scripts/install-jclf.sh script.
+
+- The carte-util artifact; version 3.5.1 or higher is recommended:
+  https://github.com/css4j/carte-util/releases
+
+- The xml-dtd artifact; version 3.5.1 or higher is recommended:
+  https://github.com/css4j/xml-dtd/releases
+
+- The tokenproducer artifact; version 1.1.1 or higher is recommended:
+  https://github.com/css4j/tokenproducer/releases
 
 - The SLF4J package, which is a logging package. See http://www.slf4j.org/ 
   for more information.
