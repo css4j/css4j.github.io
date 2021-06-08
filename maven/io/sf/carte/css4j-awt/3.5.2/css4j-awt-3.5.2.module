@@ -1,0 +1,127 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "css4j-awt",
+    "version": "3.5.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "3.5.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.5.2.jar",
+          "url": "css4j-awt-3.5.2.jar",
+          "size": 9114,
+          "sha512": "a107b2667ecf52d442b811368c215e901b853c3a68023470e176cad85126fd61bf81b6deadc4bb80bf6b8cb9ae858baf872ac82cd3fb072896aa65bc97e6a133",
+          "sha256": "06bf7edbb804e7df0536e87135c120f45e5a0c78c58a86835a4ea78e10ad3017",
+          "sha1": "b0cedc1270179a6b9f04d3edbd87ce46fea807a0",
+          "md5": "d0b048b51d7da7d3946c3d14e67bf8a7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "3.5.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.5.2.jar",
+          "url": "css4j-awt-3.5.2.jar",
+          "size": 9114,
+          "sha512": "a107b2667ecf52d442b811368c215e901b853c3a68023470e176cad85126fd61bf81b6deadc4bb80bf6b8cb9ae858baf872ac82cd3fb072896aa65bc97e6a133",
+          "sha256": "06bf7edbb804e7df0536e87135c120f45e5a0c78c58a86835a4ea78e10ad3017",
+          "sha1": "b0cedc1270179a6b9f04d3edbd87ce46fea807a0",
+          "md5": "d0b048b51d7da7d3946c3d14e67bf8a7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.5.2-javadoc.jar",
+          "url": "css4j-awt-3.5.2-javadoc.jar",
+          "size": 115865,
+          "sha512": "61fe8d0478bbb9fcdf5349c0054ed99739aa214a37e27f14d305cd2ce56f098b41e89e8a8b2e846baa3f5018ff62b3d1503ed3e3bfe9e23bf03ca6cd82c4f0d5",
+          "sha256": "0da23718ffa904e4f1a18d8014a9446aef7b33a3c23bb09b990004e85595111d",
+          "sha1": "78cb0311ce7a088f30f4af175867935c02c77ba5",
+          "md5": "68b14fa3236c672efb226e5cd615154e"
+        },
+        {
+          "name": "css4j-awt-3.5.2-javadoc.jar",
+          "url": "css4j-awt-3.5.2-javadoc.jar",
+          "size": 115865,
+          "sha512": "61fe8d0478bbb9fcdf5349c0054ed99739aa214a37e27f14d305cd2ce56f098b41e89e8a8b2e846baa3f5018ff62b3d1503ed3e3bfe9e23bf03ca6cd82c4f0d5",
+          "sha256": "0da23718ffa904e4f1a18d8014a9446aef7b33a3c23bb09b990004e85595111d",
+          "sha1": "78cb0311ce7a088f30f4af175867935c02c77ba5",
+          "md5": "68b14fa3236c672efb226e5cd615154e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.5.2-sources.jar",
+          "url": "css4j-awt-3.5.2-sources.jar",
+          "size": 5968,
+          "sha512": "ad94b176abd7ca400b2b283e078a018fbfdb54ae133d2806e0789981b756e0aef182901c5e02e0abf384c451cb423856df6b857360e399971e8d0ce3e2163593",
+          "sha256": "132d72fdb80e15564dd67bce006058202973daa11cf7bac3dbd27c6c4710c8aa",
+          "sha1": "7ce0d15fa7068c4f4e1daf14fe53d0f7f555f2c4",
+          "md5": "39f550f022a4ac11d786e32e1076f951"
+        }
+      ]
+    }
+  ]
+}

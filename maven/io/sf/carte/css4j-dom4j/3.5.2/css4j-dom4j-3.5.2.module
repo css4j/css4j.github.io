@@ -1,0 +1,269 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "css4j-dom4j",
+    "version": "3.5.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "3.5.2"
+          }
+        },
+        {
+          "group": "org.dom4j",
+          "module": "dom4j",
+          "version": {
+            "requires": "2.1.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "3.5.2"
+          }
+        },
+        {
+          "group": "org.dom4j",
+          "module": "dom4j",
+          "version": {
+            "requires": "2.1.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2-javadoc.jar",
+          "url": "css4j-dom4j-3.5.2-javadoc.jar",
+          "size": 156731,
+          "sha512": "9d34eabc50644d071f0eb1f81f67b3d2ed2f455fa41e2aafdb2faf2ac6038a94515b1baf074aeb95f871184353b64072db4706b8f87508464e2afd6654cd3f28",
+          "sha256": "c44127d99651106a984a0399db55393376effe9a883d3fc30a74df7dc4b9d20a",
+          "sha1": "14129c50febb8ea75559635a89c60c458bd44797",
+          "md5": "ca87bb34b2cf6e0549a60fadfb31f457"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2-sources.jar",
+          "url": "css4j-dom4j-3.5.2-sources.jar",
+          "size": 40568,
+          "sha512": "1bf13187fd004795f5cc88775df1073d9f9444b9639e13332a7843ad907df194f9f93e2a0e9ea09304fc27e54154ccdcb69980838485a83253619b331df7c7e7",
+          "sha256": "b8b9643a0cd020507738aa05b4930e00c1f2f8eb1f0fe3066605428a5924a924",
+          "sha1": "7b7385b1e8897858bfb17b5f8942f846fdb76cbf",
+          "md5": "9f98c387b5855061cbd7c61d62915016"
+        }
+      ]
+    },
+    {
+      "name": "xmlpullApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-dom4j-xmlpull",
+          "version": "3.5.2"
+        }
+      ]
+    },
+    {
+      "name": "xmlpullRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "xmlpull",
+          "module": "xmlpull",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "xpp3",
+          "module": "xpp3_min",
+          "version": {
+            "requires": "1.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-dom4j-xmlpull",
+          "version": "3.5.2"
+        }
+      ]
+    },
+    {
+      "name": "useragentApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-dom4j-useragent",
+          "version": "3.5.2"
+        }
+      ]
+    },
+    {
+      "name": "useragentRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j-agent",
+          "version": {
+            "requires": "3.5.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-dom4j-3.5.2.jar",
+          "url": "css4j-dom4j-3.5.2.jar",
+          "size": 69110,
+          "sha512": "2454441de66d5ee176390a9125e1bf58f005c4d3bcc82119c2de508cd5bb1ffe3770ea32a4e06bdf08b2785f6965494836a93bc798118e4be7b09e2483e1973a",
+          "sha256": "b18da44b546032a4d687fcc0d9765b845793964a9eb083ae7b7f568a28cbd3b7",
+          "sha1": "a51846c35aa69553f64deb063b8fda6945fbfec2",
+          "md5": "3c22830f2d649a4086ef7c9e05d29fe2"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-dom4j-useragent",
+          "version": "3.5.2"
+        }
+      ]
+    }
+  ]
+}
