@@ -2,21 +2,20 @@
                             CSS4J RELEASE NOTES
                             ===================
 
-Release 3.5.2 - June 8, 2021
-----------------------------
+Release 3.6.0 - July 30, 2021
+-----------------------------
 
 Release Highlights
 ------------------
 
-* Build fixes.
+* Build improvements.
 
-  The previous 3.5.x versions were producing correct Maven metadata, but the
-  generated Gradle metadata was incorrect (it advertised a minimum required
-  version of Java 11).
+  The Gradle build is now independent from css4j-dist.
 
-  Even if you use Maven to build your project, you may have downstream users
-  with Gradle builds. If you are using css4j 3.5.0 or 3.5.1 you are encouraged
-  to upgrade to 3.5.2.
+* Color() function
+
+  The color() function from Color Level 4 is now fully supported as a color.
+  Previously, it was handled as a generic function.
 
 
 Description
@@ -33,28 +32,21 @@ different licensing).
   Document, as well as getting computed styles for its elements.
 - A CSS-enabled native DOM implementation.
 - A DOM wrapper that can be used with an external DOM implementation.
+- A device profile API to encapsulate target device-specific information.
+
+ In separate modules you can find:
+
 - A DOM4J backend (module css4j-dom4j) which uses documents and elements that
   extend those of dom4j (for those who are comfortable with dom4j).
-- A device profile API to encapsulate target device-specific information.
+- User agent helper classes, that enable the use of the library with correct
+  cookie settings etc. (css4j-agent module).
 - A few AWT helper classes (AWT module).
-
-
-Packaging
----------
- This project is divided in four modules:
-
-- Core module: file css4j-<version>.jar
-- User agent module: file css4j-agent-<version>.jar
-- Dom4j backend module: file css4j-dom4j-<version>.jar
-- AWT module, with AWT helper classes: file css4j-awt-<version>.jar
-
- Depending on your use case, you may need different modules.
 
 
 Java(tm) Runtime Environment requirements
 -----------------------------------------
  All the classes in the binary package have been compiled with a Java compiler
-set to 1.8 compiler compliance level, except the module-info files.
+set to 1.8 compiler compliance level, except the module-info file.
 
  Building the library requires JDK 15 or higher, although the resulting jar
 files can be run with a 1.8 JRE.
@@ -110,11 +102,10 @@ declarations and style sheets is also possible.
 Software dependencies
 =====================
 
- To build this library you need:
+ The build script fetches all the required dependencies for you, basically:
 
-- The jclf-text module; version 5.0.0 or higher is required. Go to
-  https://sourceforge.net/projects/jclf for downloads, or install with the
-  release-scripts/install-jclf.sh script.
+- The jclf-text (5.0.0 or higher) and jclf-linear3 (1.0.0 or higher) modules:
+  https://sourceforge.net/projects/jclf
 
 - The carte-util artifact; version 3.5.1 or higher is recommended:
   https://github.com/css4j/carte-util/releases
@@ -128,30 +119,15 @@ Software dependencies
 - The SLF4J package, which is a logging package. See http://www.slf4j.org/ 
   for more information.
 
-To build the dom4j module the following is required:
-
-- The dom4j JAR package (tested with 2.1.3).
-  URL: https://github.com/dom4j
-
-- The XPP3 Pull Parser (which is supported by this library but beware that it
-  does not support entities). See:
-  https://github.com/xmlpull-xpp3/xmlpull-xpp3
 
  Optional packages:
 
-To run the unit tests you need a recent version of JUnit 4. Tests and the agent
-module also require the validator.nu html5 parser:
+To run the unit tests you need a recent version of JUnit 4. Tests also require
+the validator.nu html5 parser:
     https://about.validator.nu/htmlparser/
-
-- Dom4j module: unit tests require Jaxen (https://github.com/jaxen-xpath/jaxen).
-  This software was tested with 1.2.0.
-
- A Maven build (which requires Java 15 or higher) is provided. The dom4j module
-requires dom4j 2.x to build, although you should be able to run the resulting
-jar file with dom4j 1.6 if you are stuck with it.
 
 
 Project Sites
 =============
 Project home: https://css4j.github.io/
-Development site: https://github.com/css4j
+Development site: https://github.com/css4j/css4j
