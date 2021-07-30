@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "css4j-awt",
+    "version": "3.6.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2-rc-1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "strictly": "[3.4.0,4.0[",
+            "requires": "[3.4.0,4.0[",
+            "prefers": "3.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.6.0.jar",
+          "url": "css4j-awt-3.6.0.jar",
+          "size": 9114,
+          "sha512": "a107b2667ecf52d442b811368c215e901b853c3a68023470e176cad85126fd61bf81b6deadc4bb80bf6b8cb9ae858baf872ac82cd3fb072896aa65bc97e6a133",
+          "sha256": "06bf7edbb804e7df0536e87135c120f45e5a0c78c58a86835a4ea78e10ad3017",
+          "sha1": "b0cedc1270179a6b9f04d3edbd87ce46fea807a0",
+          "md5": "d0b048b51d7da7d3946c3d14e67bf8a7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "strictly": "[3.4.0,4.0[",
+            "requires": "[3.4.0,4.0[",
+            "prefers": "3.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.6.0.jar",
+          "url": "css4j-awt-3.6.0.jar",
+          "size": 9114,
+          "sha512": "a107b2667ecf52d442b811368c215e901b853c3a68023470e176cad85126fd61bf81b6deadc4bb80bf6b8cb9ae858baf872ac82cd3fb072896aa65bc97e6a133",
+          "sha256": "06bf7edbb804e7df0536e87135c120f45e5a0c78c58a86835a4ea78e10ad3017",
+          "sha1": "b0cedc1270179a6b9f04d3edbd87ce46fea807a0",
+          "md5": "d0b048b51d7da7d3946c3d14e67bf8a7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.6.0-javadoc.jar",
+          "url": "css4j-awt-3.6.0-javadoc.jar",
+          "size": 115886,
+          "sha512": "40e07240257a6534dae5004c7f8f016eb34061a3b77919c3495c1dc0835f2ce1e04cc3038c93d7b708db26dc9daba7668d60d4d8dfc238be84da9a73de0d987e",
+          "sha256": "3ad44f51f655e36bf6ef319a2869b2aafddfccd86768e896b8959418c7a956e7",
+          "sha1": "a536d454d3b5834ac20da6dcab20e2d170fffe44",
+          "md5": "470be8422040a98ea22ade38d82a8999"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.6.0-sources.jar",
+          "url": "css4j-awt-3.6.0-sources.jar",
+          "size": 5997,
+          "sha512": "3dd030838aede039100aca37b519831dff3f360584a9e3ad8ce7b8d8f0d7c1034bcb48aee8a5acf0750ebe82f24402f411e0a7fe051428e62371b7972b146c0f",
+          "sha256": "54624a47529740e7e9d0ced5158853276c81aec4262366d3731e8d6419d97327",
+          "sha1": "80f197cb2ce590f639b9476e0291af0378fee6a5",
+          "md5": "a2bf8b8cc581c86d12874702013596eb"
+        }
+      ]
+    }
+  ]
+}
