@@ -57,19 +57,19 @@ the objects required by media queries to work).</p>
 </div>
 <div class="tema" id="modules">
 <h2>Modules</h2>
-<p>The library is organized in several modules:</p>
+<p>The project is organized in several modules:</p>
 <ul>
-<li><code>css4j</code> core module, which depends on the next two:</li>
+<li><a href="https://github.com/css4j/css4j"><code>css4j</code></a> core module, which depends on the next two (they are included in the Zip distribution):</li>
 <li><a href="api/carte-util/3/"><code>carte-util</code></a>, a very small collection of interfaces and utility classes.</li>
-<li><code>tokenproducer</code>, the low-level parser at the core of css4j.</li>
-<li><code>css4j-agent</code>, a collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
-<li><code>css4j-awt</code>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related utility classes.</li>
-<li><code>css4j-dom4j</code>: to use css4j together with dom4j.</li>
-<li><a href="api/xml-dtd/3/"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
+<li><a href="https://github.com/css4j/tokenproducer"><code>tokenproducer</code></a>, the low-level parser at the core of css4j.</li>
+<li><a href="https://github.com/css4j/css4j-agent"><code>css4j-agent</code></a>, a collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
+<li><a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code></a>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related utility classes.</li>
+<li><a href="https://github.com/css4j/css4j-dom4j"><code>css4j-dom4j</code></a>: to use css4j together with dom4j.</li>
+<li><a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
 target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>.</li>
 </ul>
 <p>If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>,
-you may want to look at each module's <code>build.gradle</code> files (or the POM files if you use version 3.4 or lower) to check for the specific module dependencies.</p>
+you may want to look at each module's <code>build.gradle</code> files to check for the specific module dependencies.</p>
 <br/>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
