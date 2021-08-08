@@ -111,9 +111,13 @@ is document-independent (but medium-specific).</p>
 <p>This library's support for minification (<code>getMinifiedCssText()</code> and related methods) is not intended as a
 general-purpose minification solution, but could be useful as part of a wider CSS toolchain, perhaps with a specialized
 minifier at its end.</p>
-<p>If you decide to use the minification methods in 1.0 be sure to use this library's internal parser, and not the other SAC parsers.
-And if you use any kind of Internet Explorer hack, use a sheet factory with the proper NSAC parser flags set. Some IE hacks are
+<p>If you decide to use the minification methods in 1.x be sure to use this library's internal parser, and not the other SAC parsers.
+And if you use any kind of Internet Explorer hack, please use a sheet factory with the proper NSAC parser flags set. Some IE hacks are
 supported, but others may give unexpected results so you should be very careful about that.</p>
+</div>
+<div id="mavencentral">
+<h4>Are this project's artifacts available on Maven Central?</h4>
+<p>No, as <a href="https://groups.google.com/g/css4j/c/op5jIoINb3M/m/IiiN-LfkDAAJ">this project does not accept Maven Central's terms of use</a>.</p>
 </div>
 </div>
 </div>
