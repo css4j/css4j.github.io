@@ -62,14 +62,20 @@ the objects required by media queries to work).</p>
 <li><a href="https://github.com/css4j/css4j"><code>css4j</code></a> core module, which depends on the next two (they are included in the Zip distribution):</li>
 <li><a href="api/carte-util/3/"><code>carte-util</code></a>, a very small collection of interfaces and utility classes.</li>
 <li><a href="https://github.com/css4j/tokenproducer"><code>tokenproducer</code></a>, the low-level parser at the core of css4j.</li>
-<li><a href="https://github.com/css4j/css4j-agent"><code>css4j-agent</code></a>, a collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
-<li><a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code></a>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related utility classes.</li>
-<li><a href="https://github.com/css4j/css4j-dom4j"><code>css4j-dom4j</code></a>: to use css4j together with dom4j.</li>
+<li><a href="https://github.com/css4j/css4j-agent"><code>css4j-agent</code></a>, an optional collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
+<li><a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code></a>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related
+utility classes (also optional).</li>
+<li><a href="https://github.com/css4j/css4j-dom4j"><code>css4j-dom4j</code></a>: to use css4j together with dom4j, if you prefer that API.</li>
 <li><a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
-target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>.</li>
+target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>. It is not needed if you do not process XML.</li>
 </ul>
-<p>If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>,
-you may want to look at each module's <code>build.gradle</code> files to check for the specific module dependencies.</p>
+<p>In general, you'll need to have at least <code>css4j</code>, <code>carte-util</code> and <code>tokenproducer</code> in your classpath/modulepath.
+If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
+<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.6.0/css4j-dom4j-3.6.0.pom"><code>.pom</code></a>
+or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.6.0/css4j-dom4j-3.6.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
+<p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 3.6.0 is compatible with
+<code>css4j</code> 3.6.1 and will be compatible with the forthcoming 3.7.0 when it is released.</p>
+
 <br/>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
@@ -225,17 +231,21 @@ description for additional information.</p>
 module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
 <p>For example, with Gradle:</p>
 <pre class="code"><code class="language-groovy">dependencies {
-    api "io.sf.carte:css4j-dom4j:${css4jVersion}"
+    api "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
 }
 </code></pre>
 <p>or with Apache Maven:</p>
 <pre class="code"><code class="language-xml">&lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
     &lt;artifactId&gt;css4j-dom4j&lt;/artifactId&gt;
-    &lt;version&gt;${css4j.version}&lt;/version&gt;
+    &lt;version&gt;${css4jDom4j.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
-<p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module.</p>
+<p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module, but since both artifacts have
+different release cycles you may want to add an explicit dependency for the core module, with the latest version.</p>
+<p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are compatible with <code>css4j</code>
+artifacts that have the same major version number, for example both <code>css4j-dom4j</code> 3.5.2 and 3.6.0 are compatible with
+<code>css4j</code> 3.6.1.</p>
 <br/>
 <h3 class="subtema" id="dom4j-parsing">Loading and parsing an XML document</h3>
 <p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
