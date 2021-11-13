@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>XML parsing in Java with DefaultEntityResolver</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="code-c.css" rel="stylesheet" type="text/css" />
+<script src="js/code-a.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="/"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><a id="mnuindice" href="/"><span>Home</span></a></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li class="menulvl2"><a id="mnuembedsvg" href="embed-svg.html"><span>Embed SVG</span></a></li>
+<li class="menulvl2"><div id="mnuresolver-sel"><span>Resolver</span></div></li>
+<li><a id="mnuapi2" href="api/3/"><span>API 3.x</span></a></li>
+<li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
+<li><a id="mnubenchmarks" href="benchmarks.html"><span>Benchmarks</span></a></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>Resolver</span></div>
+<div class="cos">
+<h1>XML parsing in Java with <code>DefaultEntityResolver</code></h1>
+<div class="tema" id="overview">
+<h2>Overview</h2>
+<p>XML parsing should be done in a way that avoids <a href="https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing">XXE security vulnerabilities</a>.
+For the Java™ language, the advice found on the Internet is generally based on applying at least one of the following (see for example
+<a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP's XML External Entity Prevention Cheat Sheet</a>):</p>
+<ol>
+<li>Disabling the <a href="https://xerces.apache.org/xerces2-j/features.html#nonvalidating.load-external-dtd">http://apache.org/xml/features/nonvalidating/load-external-dtd</a>
+feature. This results in the loss of <a href="https://www.w3.org/TR/xml-entity-names/">XML character entities</a> that the document could contain, like "<code>&amp;eacute;</code>".
+(Note: <a href="https://www.w3.org/TR/xml-entity-names/predefined.html">predefined entities</a> like "<code>&amp;amp;</code>" are not affected)</li>
+<li>Enabling the feature <a href="https://xerces.apache.org/xerces2-j/features.html#disallow-doctype-decl">http://apache.org/xml/features/disallow-doctype-decl</a>,
+which throws an error if the parsed document contains a <code>DOCTYPE</code> declaration.
+Since many documents contain <code>DOCTYPE</code> declarations, that prevents the parsing of a lot of documents.</p>
+</ol>
+<p>Those two workarounds assume that your XML parser is based on <a href="https://xerces.apache.org/xerces2-j/">Apache Xerces2</a>,
+although other parsers are sometimes still in use (for example variants of the <a href="http://saxon.sourceforge.net/aelfred.html">Ælfred XML Parser</a>)
+in which case you cannot apply them.</p>
+<p>There are many internet pages explaining how to apply the above configurations, yet none alerts about the very real possibility of
+data loss with (1.): the entire entity is silently wiped out. If your use case involves a Xerces-based parser and you are completely sure that
+none of your documents contains XML entities, then you could apply (1.); and if you only care about documents without a <code>DOCTYPE</code>,
+could use (2.). Otherwise, you may want to look for an alternative like the one described here.</p>
+</div>
+<div class="tema" id="resolver">
+<h2><code>DefaultEntityResolver</code></h2>
+<p>The <a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code> project</a> (which is a small set of
+code that does not require the main CSS4J) provides the
+<a class="codeitem" href="https://css4j.github.io/api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>
+class, which you can use to parse your document without loosing your XML entities.</p>
+<p>By default, <code>DefaultEntityResolver</code> is configured to not attempt network connections and use
+its own set of pre-loaded DTDs instead. If you are using a customized DTD from a specific host, you can
+whitelist that host so connections to it are allowed (although even in that case, if the resolver decides
+that the connection does not look like pointing to a legitimate DTD, shall disallow it). You can also
+subclass the resolver and allow loading specific DTD files from the classpath.</p>
+<p>Please read the <a class="codeitem" href="https://css4j.github.io/api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>
+javadoc for more information about using the resolver.</p>
+<br/>
+<h3 class="subtema" id="applying">How to apply it</h3>
+<p>Before trying to use it, first you must protect your XML parser against DoS attacks based on entity expansion/recursion,
+by setting the <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/XMLConstants.html#FEATURE_SECURE_PROCESSING"><code>FEATURE_SECURE_PROCESSING</code></a>
+feature —see <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/parsers/SAXParserFactory.html#setFeature(java.lang.String,boolean)"><code>SAXParserFactory.setFeature(String, boolean)</code></a>.
+Which is what the following example does:</p>
+<pre class="code"><code class="language-java">import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXNotRecognizedException;
+import org.xml.sax.SAXNotSupportedException;
+
+// Obtain and configure a SAXParserFactory
+SAXParserFactory parserFactory = SAXParserFactory.newInstance();
+try {
+    parserFactory.setFeature(javax.xml.XMLConstants.FEATURE_SECURE_PROCESSING, true);
+} catch (SAXNotRecognizedException | SAXNotSupportedException e) {
+    // Beware: old parsers do not recognize FEATURE_SECURE_PROCESSING!
+    throw new IllegalStateException(e);
+}
+
+// Obtain the SAXParser and the XMLReader
+javax.xml.parsers.SAXParser parser = parserFactory.newSAXParser();
+
+org.xml.sax.XMLReader reader = parser.getXMLReader();
+
+// Set the EntityResolver
+DefaultEntityResolver resolver = new DefaultEntityResolver();
+reader.setEntityResolver(resolver);
+</code></pre>
+<p>Then you can proceed and parse your document with that <code>XMLReader</code>.</p>
+<br/>
+<h3 class="subtema" id="builder">Usage with <code>XMLDocumentBuilder</code></h3>
+<p>Using your own <code>XMLReader</code> to parse XML can be complicated, and to simplify the process you may want to use CSS4J's
+<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>.
+In that case you'd be using the following snippet instead of the above:
+<pre class="code"><code class="language-java">import io.sf.carte.doc.dom.XMLDocumentBuilder;
+import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.bootstrap.DOMImplementationRegistry;
+import org.xml.sax.InputSource;
+
+/*
+ * Obtain and configure a DOMImplementation and a DocumentBuilder
+ */
+DOMImplementationRegistry registry = DOMImplementationRegistry.newInstance();
+DOMImplementation domImpl = registry.getDOMImplementation("XML 3.0");
+XMLDocumentBuilder builder = new XMLDocumentBuilder(domImpl);
+
+// We generally do not want element content whitespace
+builder.setIgnoreElementContentWhitespace(true);
+
+// Set the EntityResolver
+DefaultEntityResolver resolver = new DefaultEntityResolver();
+builder.setEntityResolver(resolver);
+
+// Parse the document
+java.io.Reader re = ... [obtain the document]
+InputSource source = new InputSource(re);
+Document document = builder.parse(source);
+re.close();
+</code></pre>
+<p>Note that <code>XMLDocumentBuilder</code> sets <code>FEATURE_SECURE_PROCESSING</code> by default.</p>
+</div>
+</div>
+<div class="footnote">
+</div>
+</div>
+</div>
+</body></html>

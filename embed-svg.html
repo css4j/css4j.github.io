@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>Embedding SVG in HTML</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="code-c.css" rel="stylesheet" type="text/css" />
+<script src="js/code-a.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="layout">
+<div id="hdr01"></div>
+<a id="mylinkhome" href="/"><span>CSS4J</span></a>
+</div>
+<div class="container">
+<div class="menu">
+<ul class="menulist">
+<li><a id="mnuindice" href="/"><span>Home</span></a></li>
+<li><a id="mnuusage" href="usage.html"><span>Usage</span></a></li>
+<li class="menulvl2"><div id="mnuembedsvg-sel"><span>Embed SVG</span></div></li>
+<li class="menulvl2"><a id="mnuresolver" href="resolver.html"><span>Resolver</span></a></li>
+<li><a id="mnuapi2" href="api/3/"><span>API 3.x</span></a></li>
+<li><a id="mnufaq" href="faq.html"><span>FAQ</span></a></li>
+<li><a id="mnubenchmarks" href="benchmarks.html"><span>Benchmarks</span></a></li>
+<li><a id="mnugithub" href="https://github.com/css4j"><span>Github</span></a></li>
+</ul>
+</div>
+<div class="beforemain"></div>
+<div class="main">
+<div id="presentacion_top" class="textheader"><span>Embed SVG</span></div>
+<div class="cos">
+<h1>Embedding SVG in HTML documents</h1>
+<div class="tema" id="overview">
+<h2>Overview</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG images</a> can be used as stand-alone files, but the
+most efficient way to include them in an HTML document is by embedding them. However, this may cause unexpected problems due to
+two factors:</p>
+<ul>
+<li>Element IDs that were unique in the SVG image and the main document may collide, causing the HTML to become non-conformant
+due to the presence of two (or more) <a href="https://html.spec.whatwg.org/multipage/introduction.html#restrictions-on-content-models-and-on-attribute-values:the-id-attribute">elements with the same ID</a>.</li>
+<li>The way that <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style"><code>STYLE</code></a> elements are handled in HTML documents may cause further collisions (see below).</li>
+</ul>
+<p>The <code>STYLE</code> elements contained inside the hierarchy of the <code>SVG</code> elements are used for the
+computation of the styles of the whole document. That is, the rules located in a style sheet that was written for a
+specific SVG image are accounted like if the <code>STYLE</code> was located at the <code>HEAD</code> element (but applying
+the CSS precedence rules).</p>
+<p>Due to that, there could be a collision between IDs and class names in the CSS from the SVG image(s) and the main document,
+or among the embedded SVG images.</p> 
+</div>
+<div class="tema" id="visitor">
+<h2>Using the visitor pattern to replace identifiers</h2>
+<p>Fortunately, the css4j library provides the necessary tools to visit the CSS rules and make the necessary checks and
+modifications to the relevant selectors. You can use your favourite DOM implementation to check and modify duplicate <code>id</code>
+attributes (if you use css4j's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/package-summary.html">native DOM</a>,
+a <a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/NodeIterator.html"><code>NodeIterator</code></a>
+could be a good choice), but the changes must be consistent with what you apply on the selectors.</p>
+<p>For example, the
+<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/style/css/parser/AttributeConditionVisitor.html"><code>AttributeConditionVisitor</code></a>
+class can be of help for the task. Let us subclass it to provide our own logic:</p>
+<pre class="code"><code class="language-java">package com.example;
+
+import io.sf.carte.doc.style.css.nsac.AttributeCondition;
+import io.sf.carte.doc.style.css.nsac.Condition.ConditionType;
+import io.sf.carte.doc.style.css.parser.AttributeConditionVisitor;
+
+class DupeConditionVisitor extends AttributeConditionVisitor {
+
+    @Override
+    public void visit(AttributeCondition condition) {
+        ConditionType type = condition.getConditionType();
+        if (type == ConditionType.ID || type == ConditionType.CLASS) {
+            String currentName = condition.getValue();
+            if (isBadName(currentName)) {
+                String newName = getNewName(currentName);
+                setConditionValue(condition, newName);
+            }
+        }
+    }
+
+    private boolean isBadName(String name) {
+        // Your logic comes here
+        ...
+    }
+
+    private String getNewName(String oldName) {
+        // Your logic comes here
+        ...
+    }
+
+}
+</code></pre>
+<p>As you can see, for each visit it is checked whether the selector condition is a ID or class, and
+in that case checks for the name (for which you need to provide your own logic).</p>
+<p>Your visitor based on the above code is now prepared to perform the task, but first you need to find the
+right CSS rules to apply it, for which we will use another visitor. For example, this is an excerpt from Carte's
+<a class="codeitem" href="https://sourceforge.net/p/carte/carte/ci/master/tree/carte/src/io/sf/carte/report/SelectorRuleVisitor.java"><code>SelectorRuleVisitor</code></a>:</p>
+<pre class="code"><code class="language-java">package io.sf.carte.report;
+
+import io.sf.carte.doc.style.css.CSSStyleRule;
+import io.sf.carte.doc.style.css.nsac.SelectorList;
+import io.sf.carte.doc.style.css.parser.AttributeConditionVisitor;
+import io.sf.carte.util.Visitor;
+
+class SelectorRuleVisitor implements Visitor&lt;CSSStyleRule&gt; {
+
+    private final AttributeConditionVisitor visitor;
+
+    SelectorRuleVisitor(AttributeConditionVisitor visitor) {
+        super();
+        this.visitor = visitor;
+    }
+
+    @Override
+    public void visit(CSSStyleRule rule) {
+        SelectorList selist = rule.getSelectorList();
+        visitor.visit(selist);
+        rule.setSelectorList(selist); // Refresh serialization
+    }
+
+}
+</code></pre>
+<p>Then you can visit the style sheets by using any of the DOM backends that the library provides.
+You could gather identifier information from the main document first, then check with the SVG files that you
+want to embed. Or you may prefer to apply a systematic approach with the identifiers declared in the SVG files.</p>
+<p>Here is an example that visits the sheets contained by an element, it uses css4j's native DOM (adapted from Carte's
+<a class="codeitem" href="https://sourceforge.net/p/carte/carte/ci/45750bce9ad0ea75026f96c8f4d9ce2fa9ffed66/tree/carte/src/io/sf/carte/report/DocumentStore.java#l206"><code>DocumentStore</code></a>):</p>
+<pre class="code"><code class="language-java">DOMElement svg = ... [the SVG element containing the image]
+
+DupeConditionVisitor dupeVisitor = new DupeConditionVisitor();
+Visitor&lt;CSSStyleRule&gt; ruleVisitor = new SelectorRuleVisitor(dupeVisitor);
+Iterator&lt;DOMElement&gt; styleIt = svg.getElementsByTagNameNS("*", "style").iterator();
+while (styleIt.hasNext()) {
+    DOMElement style = styleIt.next();
+    AbstractCSSStyleSheet sheet = (AbstractCSSStyleSheet) ((LinkStyle&lt;?&gt;) style).getSheet();
+    if (sheet != null) {
+        sheet.acceptStyleRuleVisitor(ruleVisitor);
+        style.normalize(); // Write the result to the inner text node
+    }
+}
+</code></pre>
+<p>And now you only need to serialize the resulting document. (To serialize the native DOM, look at the powerful
+<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/DOMWriter.html"><code>DOMWriter</code></a>
+or just call <code>toString()</code>).</p>
+</div>
+</div>
+<div class="footnote">
+</div>
+</div>
+</div>
+</body></html>

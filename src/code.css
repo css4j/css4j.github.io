@@ -1,0 +1,5 @@
+pre.code
+{
+	padding: 1em; background-color: #32312e;
+}
+.codeitem {font-family: monospace; font-size: larger;}
