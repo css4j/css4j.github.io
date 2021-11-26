@@ -10,7 +10,7 @@
   },
   "createdBy": {
     "gradle": {
-      "version": "7.0"
+      "version": "7.3"
     }
   },
   "variants": [
@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -27,11 +27,11 @@
         {
           "name": "smil-api-1.0.jar",
           "url": "smil-api-1.0.jar",
-          "size": 6149,
-          "sha512": "559765035bdaa8c82779062397036bebb48e338ae45affc93fec77c249e55e61b83cb2525154f8772dea0c6decfdfbfb1949f2c1b818e6998c540bbbbb1fb0a2",
-          "sha256": "d061e52329888bb8bcde8d09b9b6b0cf7fe4fd3424509187e1d7f9701dddf244",
-          "sha1": "18b31efac1d7b060a74a48b5cc8f18f41b597253",
-          "md5": "6838f670706d2ffc17e5dddd31a3ff71"
+          "size": 6171,
+          "sha512": "790ca5b2bdfed6daf15bda97f3c0d03e5d239a9758eca1b2c771977e26ed72f015b8add4ac4c0e5062d23618630ef21f72bfc5440990fc93500eeddced255b8a",
+          "sha256": "8476bf8db349cd8be3c273c0d5385c321777f44d50fc67bdcdd3c6224b06a9de",
+          "sha1": "9e7d671b665c4b2a68e0e9db12bc59b67c315e2f",
+          "md5": "6cfc8da92a994368dcc3e62a9131d71b"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -48,11 +48,11 @@
         {
           "name": "smil-api-1.0.jar",
           "url": "smil-api-1.0.jar",
-          "size": 6149,
-          "sha512": "559765035bdaa8c82779062397036bebb48e338ae45affc93fec77c249e55e61b83cb2525154f8772dea0c6decfdfbfb1949f2c1b818e6998c540bbbbb1fb0a2",
-          "sha256": "d061e52329888bb8bcde8d09b9b6b0cf7fe4fd3424509187e1d7f9701dddf244",
-          "sha1": "18b31efac1d7b060a74a48b5cc8f18f41b597253",
-          "md5": "6838f670706d2ffc17e5dddd31a3ff71"
+          "size": 6171,
+          "sha512": "790ca5b2bdfed6daf15bda97f3c0d03e5d239a9758eca1b2c771977e26ed72f015b8add4ac4c0e5062d23618630ef21f72bfc5440990fc93500eeddced255b8a",
+          "sha256": "8476bf8db349cd8be3c273c0d5385c321777f44d50fc67bdcdd3c6224b06a9de",
+          "sha1": "9e7d671b665c4b2a68e0e9db12bc59b67c315e2f",
+          "md5": "6cfc8da92a994368dcc3e62a9131d71b"
         }
       ]
     },
@@ -68,11 +68,11 @@
         {
           "name": "smil-api-1.0-sources.jar",
           "url": "smil-api-1.0-sources.jar",
-          "size": 6980,
-          "sha512": "af5af3c492f49372404ea4002deabcd149abb70c1c80cd1d434af44288ebd0dee1565c12c5a5fb16587e92dd97acd1d8295a5bf156e77917d6485903688fb92f",
-          "sha256": "5d2bc5e5a221e50d7044cd35c2cc78600a09f1230366813460c8066e69b2f397",
-          "sha1": "77e1754a4599ff27443d6a9c0ad286935b21400c",
-          "md5": "3d00d3993a10d3d866c4b6a90be2fa54"
+          "size": 7015,
+          "sha512": "2201ce4e559801ebcbaf7a85a16498b3822e465e6982a564de02a888a96ba330d86bf58ec9c3bf1eb9d6980164b255a62a54ad39ca463ed1e07469cb62c6949d",
+          "sha256": "bd119aaa55dde73955609950ffb8aed4512d9ed70ebaf9d9d61667e1db644dbe",
+          "sha1": "d3eb99199ef98c1876bd532811f72f4061e1ecd9",
+          "md5": "2d0e32b659f07b3339ca606828609c04"
         }
       ]
     }

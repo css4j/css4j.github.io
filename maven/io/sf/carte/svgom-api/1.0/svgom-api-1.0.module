@@ -10,7 +10,7 @@
   },
   "createdBy": {
     "gradle": {
-      "version": "7.0"
+      "version": "7.3"
     }
   },
   "variants": [
@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -36,11 +36,11 @@
         {
           "name": "svgom-api-1.0.jar",
           "url": "svgom-api-1.0.jar",
-          "size": 69821,
-          "sha512": "ca65a4ab8fb9c2f222e8904b4bac374759f38fe9ee69fd5885587657c0b62126f6b750239465a17553d2ccffe65fa6d0ebf2dd1443ecca9f46f27189247160a5",
-          "sha256": "a691f67eb88212df88a2bc5aa47e6f1dd253b8a508a73e527989504457bf13bc",
-          "sha1": "67fd733668d7a9bd7dc2d51da64919bc07d74320",
-          "md5": "78751f5fb971663e9684e53b58de78e0"
+          "size": 69773,
+          "sha512": "2b2e2d12eae792f93ab83f5f17c757c9426a0f38f9836ce91d63e3f048b992d556a322cad386e04c415c6277bd52573b5bfd46da45530bcc555b2b1d53baeab9",
+          "sha256": "3f58abeac08e151ae61df8a69bbd4dc8b514a7ea903a52ad5a3831e700e898c1",
+          "sha1": "114142943de4e05500359272c39ac1fc09b5dd3d",
+          "md5": "f515df3e245f36ad9c4ea8d313372da7"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 11,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -66,11 +66,11 @@
         {
           "name": "svgom-api-1.0.jar",
           "url": "svgom-api-1.0.jar",
-          "size": 69821,
-          "sha512": "ca65a4ab8fb9c2f222e8904b4bac374759f38fe9ee69fd5885587657c0b62126f6b750239465a17553d2ccffe65fa6d0ebf2dd1443ecca9f46f27189247160a5",
-          "sha256": "a691f67eb88212df88a2bc5aa47e6f1dd253b8a508a73e527989504457bf13bc",
-          "sha1": "67fd733668d7a9bd7dc2d51da64919bc07d74320",
-          "md5": "78751f5fb971663e9684e53b58de78e0"
+          "size": 69773,
+          "sha512": "2b2e2d12eae792f93ab83f5f17c757c9426a0f38f9836ce91d63e3f048b992d556a322cad386e04c415c6277bd52573b5bfd46da45530bcc555b2b1d53baeab9",
+          "sha256": "3f58abeac08e151ae61df8a69bbd4dc8b514a7ea903a52ad5a3831e700e898c1",
+          "sha1": "114142943de4e05500359272c39ac1fc09b5dd3d",
+          "md5": "f515df3e245f36ad9c4ea8d313372da7"
         }
       ]
     },
@@ -86,11 +86,11 @@
         {
           "name": "svgom-api-1.0-sources.jar",
           "url": "svgom-api-1.0-sources.jar",
-          "size": 112287,
-          "sha512": "64f909324340befc6d05b34b3ed586d8445dfe939b10af1a1d93b978aeb7b59e77614b79ed81d5a6f964a4beae7abc3b80fc93588160511d1c52bbebdf4c4e99",
-          "sha256": "6902ebbd38e32f02d5c966032eeb165e0063fec74da66238e2fec1063e3a9733",
-          "sha1": "a9b4117fa47d61715f74ee9e126f289a99a7df62",
-          "md5": "8c98961f89303418e2dbb74b52d195f6"
+          "size": 112308,
+          "sha512": "178a6572b74246dd97449af8eba6f700b7e4cbffea95b824c9be7945fcd367fe60156d9b8f5c5249da6ec92e5c630f720d9f39e4d6b1f7359eba37e07ddaf90d",
+          "sha256": "0fa846172254f0359f499cdb97b7807ed3b1bb1f69037a689eeaf78d20418b3d",
+          "sha1": "d5dcfd3b97d5f1f62fabb3ba3766bd50fe5e9624",
+          "md5": "25e7e1acd48836e1c1f8568de771a3ad"
         }
       ]
     }
