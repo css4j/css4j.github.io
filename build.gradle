@@ -1,0 +1,59 @@
+plugins {
+	id 'java-library'
+}
+
+group = 'io.sf.carte'
+
+description = 'css4j.github.io'
+
+version = '1.0'
+
+sourceSets {
+	test {
+		java {
+			srcDirs = ['src/examples/java']
+		}
+		resources {
+			srcDirs = ['imag']
+			includes = ['hdrbg.svg']
+		}
+	}
+}
+
+dependencies {
+	testImplementation 'io.sf.carte:xml-dtd:3.5.2'
+	testImplementation 'io.sf.carte:css4j-dom4j:3.6.1'
+	testImplementation 'io.sf.carte:css4j:3.6.1'
+	testImplementation ('io.sf.carte:echosvg-transcoder:0.1.1') {
+		exclude group: 'xml-apis', module: 'xml-apis'
+	}
+	testImplementation 'junit:junit:4.13.2'
+	testImplementation 'nu.validator:htmlparser:1.4.16'
+}
+
+repositories {
+	maven {
+		url = uri('https://repo.maven.apache.org/maven2/')
+	}
+	maven {
+		url "https://css4j.github.io/maven/"
+		mavenContent {
+			releasesOnly()
+		}
+		content {
+			includeGroup 'io.sf.carte'
+			includeGroup 'io.sf.jclf'
+			includeGroup 'xmlpull'
+			includeGroup 'xpp3'
+		}
+	}
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
