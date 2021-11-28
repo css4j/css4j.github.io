@@ -31,9 +31,8 @@
 <div id="presentacion_top" class="textheader"><span>Usage</span></div>
 <div class="cos">
 <h1>CSS4J User Guide</h1>
-<p class="author">Carlos Amengual</p>
 <p>This project is an implementation of W3C's <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/" target="_blank">CSS Object Model API</a>
-in the Java&trade; language, and also adds CSS support to the <a href="https://github.com/dom4j" target="_blank">DOM4J</a> package. It
+in the Java&trade; language, and also adds CSS support to the <a href="https://dom4j.github.io/" target="_blank">DOM4J</a> package. It
 targets several different use cases, with functionalities from style sheet error detection to style computation.</p>
 <div class="tema" id="overview">
 <h2>Overview</h2>
@@ -139,7 +138,8 @@ You can also directly install the CSS4J artifacts into your local Maven reposito
 <p>
 And then, add the following to the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code>:
 </p>
-<pre class="code"><code class="language-xml">&lt;dependency&gt;
+<pre class="code"><code class="language-xml">&lt;!-- This artifact is not in Maven Central --&gt;
+&lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
     &lt;artifactId&gt;css4j&lt;/artifactId&gt;
     &lt;version&gt;${css4j.version}&lt;/version&gt;
@@ -148,7 +148,7 @@ And then, add the following to the <code>&lt;dependencies&gt;</code> section of 
 </div>
 <div class="tema" id="nativedom">
 <h2>Using css4j's native DOM implementation</h2>
-<p>You can create a DOM document from scratch and use the related DOM methods to programatically build a document: just use the provided DOM implementation
+<p>You can create a DOM document from scratch and use the related DOM methods to programmatically build a document: just use the provided DOM implementation
 (<code>io.sf.carte.doc.dom.CSSDOMImplementation</code>). But if you want to parse an existing document, the procedure depends on the type of document: to parse
 an XML document (including XHTML documents), you can use this library's <code>XMLDocumentBuilder</code> with the SAX parser provided by the JDK, while to parse
 an HTML one (or an XHTML document that does not use namespace prefixes) you can use the <a href="https://about.validator.nu/htmlparser/" target="_blank">validator.nu
@@ -176,20 +176,24 @@ CSSDOMImplementation impl = new CSSDOMImplementation();
 // Alternatively, impl = new CSSDOMImplementation(flags);
 // Now load default HTML user agent sheets
 impl.setDefaultHTMLUserAgentSheet();
+
 // Prepare parser
 HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
 parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
 parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
+
 // Prepare builder
 XMLDocumentBuilder builder = new XMLDocumentBuilder(impl);
 builder.setHTMLProcessing(true);
 builder.setXMLReader(parser);
+
 // Read the document to parse, and prepare source object
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
 // Parse. If the document is not HTML, you want to use DOMDocument instead
 HTMLDocument document = (HTMLDocument) builder.parse(source);
 re.close();
+
 // Set document URI
 document.setDocumentURI("http://www.example.com/mydocument.html");
 </code></pre>
@@ -229,8 +233,10 @@ description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
 <h2>Examples with DOM4J</h2>
-<p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the <code>css4j-dom4j</code> module in addition to the core
-module. The -dom4j module optionally depends on the -agent module, so you do not need the latter unless you plan to use the DOM4J agent.</p>
+<p>To use the library with dom4j (using dom4j-like documents, elements and factory) you need the
+<a href="https://github.com/css4j/css4j-dom4j">css4j-dom4j module</a> in addition to the core
+module. The -dom4j module optionally depends on the <a href="https://github.com/css4j/css4j-agent">-agent module</a>,
+but you do not need the latter unless you plan to use the DOM4J agent.</p>
 <p>For example, with Gradle:</p>
 <pre class="code"><code class="language-groovy">dependencies {
     api "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
@@ -251,11 +257,10 @@ artifacts that have the same major version number, for example both <code>css4j-
 <br/>
 <h3 class="subtema" id="dom4j-parsing">Loading and parsing an XML document</h3>
 <p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
-<pre class="code"><code class="language-java">Reader re = ... [reader for XHTML document]
-InputSource source = new InputSource(re);
-SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
+<pre class="code"><code class="language-java">SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
 reader.setEntityResolver(new DefaultEntityResolver());
-XHTMLDocument document = (XHTMLDocument) reader.read(source);
+Reader re = ... [reader for HTML document]
+XHTMLDocument document = (XHTMLDocument) reader.read(re);
 </code></pre>
 <p>And once you got the element you want the computed style for (see, for example, the
 <a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
@@ -273,16 +278,17 @@ which was loaded by default in 1.0 but not in 2.0.</p>
 HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
 parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
 parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
+
 // Configure the SAXReader with the HtmlParser
 SAXReader builder = new SAXReader(factory);
 builder.setXMLReader(parser);
 // Provide an error handler to avoid exceptions
 ErrorHandler errorHandler = [...]
 builder.setErrorHandler(errorHandler);
+
 // We do not set the EntityResolver, the HtmlParser does not need it
 Reader re = ... [reader for HTML document]
-InputSource source = new InputSource(re);
-XHTMLDocument document = (XHTMLDocument) builder.parse(source);
+XHTMLDocument document = (XHTMLDocument) builder.read(re);
 </code></pre>
 <p>Or parse the document with the css4j's builder,
 <a href="api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a> (which can account for things like implied HTML parent elements),
@@ -290,17 +296,35 @@ instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/S
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
+
 HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
 parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
 parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
+
 XMLDocumentBuilder builder = new XMLDocumentBuilder(factory);
 builder.setHTMLProcessing(true);
 builder.setXMLReader(parser);
+
 Reader re = ... [reader for XML document]
 InputSource source = new InputSource(re);
 XHTMLDocument document = (XHTMLDocument) builder.parse(source);
 re.close();
 </code></pre>
+<br/>
+<h3 class="subtema" id="html-caveats">Caveats about DOM4J and HTML</h3>
+<p>A plain HTML document may contain <code>STYLE</code> elements with selectors like <code>div&gt;p</code>,
+and css4j's native DOM handles that correctly. However, XML-oriented DOM implementations are likely to serialize
+them as "<code>div&amp;gt;p</code>", breaking the CSS. For example, if you serialize a DOM4J document
+with <code>asXML()</code> or code like the following:</p>
+<pre class="code"><code class="language-java">Writer wri = ... [put your writer here]
+OutputFormat format = OutputFormat.createPrettyPrint();
+format.setXHTML(true);
+HTMLWriter writer = new HTMLWriter(wri, format);
+writer.write(document);
+</code></pre>
+<p>The result will be the "<code>div&amp;gt;p</code>". As explained below, with other DOM implementations
+it is possible to work around this problem if one serializes to XHTML with a <a href="#serial-xml-html">properly
+configured <code>Transformer</code></a>, but not with DOM4J.</p>
 </div>
 <div class="tema" id="domwrapper">
 <h2>Usage with the DOM wrapper</h2>
@@ -312,6 +336,35 @@ CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
 </code></pre>
 <p>Unlike the native DOM or the DOM4J back-end, the DOM resulting from the DOM wrapper is read-only, although you can change the
 values of some nodes.</p>
+<br/>
+<h3 class="subtema" id="serial-xml-html">Serializing HTML with an XML DOM</h3>
+<p>As was <a href="#html-caveats">previously mentioned</a>, if you serialize a plain HTML document
+(which does not contain <code>CDATA</code> sections) with an XML-oriented DOM, you can avoid serializing
+<code>div&gt;p</code> as "<code>div&amp;gt;p</code>" if you use a <code>Transformer</code> which is
+configured for the task. The code would be like the following:</p>
+<pre class="code"><code class="language-java">TransformerFactory tf = TransformerFactory.newInstance();
+Transformer transformer = tf.newTransformer();
+transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+// Put other Transformer configurations here
+// ...
+transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+// Put the embedded style sheets inside <code>CDATA</code> sections
+transformer.setOutputProperty(OutputKeys.CDATA_SECTION_ELEMENTS, "script style");
+
+Writer wri = ... [put your writer here]
+transformer.transform(new DOMSource(document), new StreamResult(wri));
+</code></pre>
+<p>which —as the comment says— puts the embedded style sheets inside <code>CDATA</code> sections.
+Note, however, that:</p>
+<ol>
+<li>In HTML, the
+<a href="https://html.spec.whatwg.org/multipage/syntax.html#cdata-sections">CDATA sections can only be used in foreign content</a>
+—otherwise being considered as "bogus comments"— so you are now in XHTML instead of HTML.</li>
+<li>If you use the above code with css4j-dom4j (3.6.1 or later is required), it will not produce
+the desired result.</li>
+</ol>
+<p>To handle HTML, the <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/package-summary.html">native DOM</a>
+is recommended over any XML DOM.</p>
 </div>
 <div class="tema">
 <h2>Consistency of different DOM implementations</h2>
@@ -322,7 +375,7 @@ underlying document DOM implementations:</p>
 <li>The DOM wrapper accepts <code>style</code> elements coming from SVG trees in its style sheet collection, while the other two DOMs do not.</li>
 <li>The <code>:dir()</code> pseudo-class is not fully supported on DOM4J, due to limitations in its DOM support.</li>
 </ul>
-<p>If you find a difference in styles computed from different back-ends that you believe to be a bug, please report.</p>
+<p>If you find a difference in styles computed from different back-ends that you believe to be a bug, please report it.</p>
 </div>
 <div id="cascade" class="tema">
 <h2>Configuring the cascade</h2>
