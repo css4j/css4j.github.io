@@ -1,0 +1,38 @@
+# Examples CI workflow
+#
+# Verifies that the Maven repository is correctly set to be used
+# by downstream Java 8 applications.
+
+name: Examples
+
+on:
+  push:
+    branches: [ master ]
+
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  check:
+    runs-on: ubuntu-latest
+
+    name: Java Examples check
+
+    steps:
+      # Check-out the repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+
+      - name: Setup JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+
+      # Validate wrapper to prevent potential supply chain attack
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      # Check the build
+      - name: Test the build
+        run: ./gradlew test
