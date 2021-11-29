@@ -8,8 +8,8 @@
 *.ent text
 *.sh text
 *.txt text eol=crlf
-*.xml text eol=lf
 *.js text eol=lf
 *.png binary
-*.module binary
-*.pom binary
+*.module -text
+*.pom -text
+*.xml -text
