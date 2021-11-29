@@ -23,7 +23,7 @@ sourceSets {
 dependencies {
 	testImplementation 'io.sf.carte:xml-dtd:3.5.2'
 	testImplementation 'io.sf.carte:css4j-dom4j:3.6.1'
-	testImplementation 'io.sf.carte:css4j:3.6.1'
+	testImplementation 'io.sf.carte:css4j:3.7.0'
 	testImplementation ('io.sf.carte:echosvg-transcoder:0.1.1') {
 		exclude group: 'xml-apis', module: 'xml-apis'
 	}

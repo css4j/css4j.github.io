@@ -50,7 +50,7 @@ public class EchoSVGTest {
 		trans.setErrorHandler(handler);
 		trans.transcode(input, output);
 
-		assertTrue(ostream.size() > 600);
+		assertTrue(ostream.size() > 400);
 	}
 
 	private Reader loadDocumentFromClasspath(String filename) {
