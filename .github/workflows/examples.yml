@@ -29,10 +29,6 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
 
-      # Validate wrapper to prevent potential supply chain attack
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@v1
-
       # Check the build
       - name: Test the build
         run: ./gradlew test
