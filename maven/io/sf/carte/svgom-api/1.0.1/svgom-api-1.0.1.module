@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "svgom-api",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "smil-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "svgom-api-1.0.1.jar",
+          "url": "svgom-api-1.0.1.jar",
+          "size": 66433,
+          "sha512": "d509da56ab5675ed8bd4a59ba17debe0d5042aeae0975a22eec61f111ed02b41e0d9a19881593023f545f9daabbaa2749aa7204ab65729f480e47778cb0968de",
+          "sha256": "fae7213b025e8b67fd00a2c117756a2aeb36f2b5b479e0eaccd166979a1ebafa",
+          "sha1": "e108322e37098b35d248af4c34984786429a2b78",
+          "md5": "7af4f536a0ab656883913eb5465febb4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "smil-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "svgom-api-1.0.1.jar",
+          "url": "svgom-api-1.0.1.jar",
+          "size": 66433,
+          "sha512": "d509da56ab5675ed8bd4a59ba17debe0d5042aeae0975a22eec61f111ed02b41e0d9a19881593023f545f9daabbaa2749aa7204ab65729f480e47778cb0968de",
+          "sha256": "fae7213b025e8b67fd00a2c117756a2aeb36f2b5b479e0eaccd166979a1ebafa",
+          "sha1": "e108322e37098b35d248af4c34984786429a2b78",
+          "md5": "7af4f536a0ab656883913eb5465febb4"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "svgom-api-1.0.1-javadoc.jar",
+          "url": "svgom-api-1.0.1-javadoc.jar",
+          "size": 644512,
+          "sha512": "20d08c02165489ab34204b9e99717fd930504cea4412117cafc5e245388b891798c54f1e087d4da3c9957708066c8734d2749bd24d9ea8b008a05373ff7fd585",
+          "sha256": "ce2c9f24a0a19139a46120a4045b68e0dc1684a640bd1f83f395e40fe451895a",
+          "sha1": "360cadfc2e419522742ef18bab0f5e9badd5f737",
+          "md5": "6984e1aaa148bca68e692fb9dbd274ea"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "svgom-api-1.0.1-sources.jar",
+          "url": "svgom-api-1.0.1-sources.jar",
+          "size": 109558,
+          "sha512": "a8d3dc13aae2fa4365dc5bb9daadf2e3ddac3af3b459184ebe7452d0b0eba2a321685818d73d705714351bb31173412f68d65abdd03192ef37ecc902c02ae26c",
+          "sha256": "2851df6b8ea178f5c686fce4c57eee96e95a47af1c8e34b2961ffdf68ea5e5ba",
+          "sha1": "92418e20e0a49eb6ea0343a360a716e4d7b55468",
+          "md5": "39da1d6c6505015d3f2f42bbfee116fd"
+        }
+      ]
+    }
+  ]
+}
