@@ -21,6 +21,8 @@ sourceSets {
 }
 
 dependencies {
+	testImplementation 'io.sf.jclf:jclf-text:latest.release'
+	testImplementation 'io.sf.jclf:jclf-linear3:latest.release'
 	testImplementation 'io.sf.carte:xml-dtd:latest.release'
 	testImplementation 'io.sf.carte:css4j-dom4j:latest.release'
 	testImplementation 'io.sf.carte:css4j:latest.release'
