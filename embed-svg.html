@@ -90,20 +90,22 @@ class DupeConditionVisitor extends AttributeConditionVisitor {
 <p>As you can see, for each visit it is checked whether the selector condition is a ID or class, and
 in that case checks for the name (for which you need to provide your own logic).</p>
 <p>Your visitor based on the above code is now prepared to perform the task, but first you need to find the
-right CSS rules to apply it, for which we will use another visitor. For example, this is an excerpt from Carte's
-<a class="codeitem" href="https://sourceforge.net/p/carte/carte/ci/master/tree/carte/src/io/sf/carte/report/SelectorRuleVisitor.java"><code>SelectorRuleVisitor</code></a>:</p>
-<pre class="code"><code class="language-java">package io.sf.carte.report;
+right CSS rules to apply it, for which we will use another visitor. You could use the
+<a class="codeitem" href="https://github.com/css4j/css4j/blob/bedd7b3d59e7551069546f5ced57ef7c6bc610bb/src/io/sf/carte/doc/style/css/util/AttrStyleRuleVisitor.java"><code>AttrStyleRuleVisitor</code></a>
+convenience class for this. Let's see an excerpt of what it does:</p>
+<pre class="code"><code class="language-java">package io.sf.carte.doc.style.css.util;
 
 import io.sf.carte.doc.style.css.CSSStyleRule;
 import io.sf.carte.doc.style.css.nsac.SelectorList;
+import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet;
 import io.sf.carte.doc.style.css.parser.AttributeConditionVisitor;
 import io.sf.carte.util.Visitor;
 
-class SelectorRuleVisitor implements Visitor&lt;CSSStyleRule&gt; {
+public class AttrStyleRuleVisitor implements Visitor&lt;CSSStyleRule&gt; {
 
     private final AttributeConditionVisitor visitor;
 
-    SelectorRuleVisitor(AttributeConditionVisitor visitor) {
+    public AttrStyleRuleVisitor(AttributeConditionVisitor visitor) {
         super();
         this.visitor = visitor;
     }
@@ -117,6 +119,7 @@ class SelectorRuleVisitor implements Visitor&lt;CSSStyleRule&gt; {
 
 }
 </code></pre>
+<p>As you see, it just accepts the style rule, obtains the selector list and applies the condition visitor to it.</p>
 <p>Then you can visit the style sheets by using any of the DOM backends that the library provides.
 You could gather identifier information from the main document first, then check with the SVG files that you
 want to embed. Or you may prefer to apply a systematic approach with the identifiers declared in the SVG files.</p>
@@ -125,7 +128,7 @@ want to embed. Or you may prefer to apply a systematic approach with the identif
 <pre class="code"><code class="language-java">DOMElement svg = ... [the SVG element containing the image]
 
 DupeConditionVisitor dupeVisitor = new DupeConditionVisitor();
-Visitor&lt;CSSStyleRule&gt; ruleVisitor = new SelectorRuleVisitor(dupeVisitor);
+Visitor&lt;CSSStyleRule&gt; ruleVisitor = new AttrStyleRuleVisitor(dupeVisitor);
 Iterator&lt;DOMElement&gt; styleIt = svg.getElementsByTagNameNS("*", "style").iterator();
 while (styleIt.hasNext()) {
     DOMElement style = styleIt.next();
