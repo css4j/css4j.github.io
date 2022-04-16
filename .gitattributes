@@ -4,10 +4,10 @@
 *.css text
 *.html text
 *.xhtml text
-*.dtd text
-*.ent text
+*.yml text
 *.sh text
 *.txt text eol=crlf
+*.bat text eol=crlf
 *.js text eol=lf
 *.png binary
 *.module -text
