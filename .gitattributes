@@ -1,11 +1,13 @@
-* text=auto -text
+* text=auto
 *.java text
 *.properties text
 *.css text
 *.html text
 *.xhtml text
 *.yml text
+*.gradle text
 *.sh text
+*.svg text
 *.txt text eol=crlf
 *.bat text eol=crlf
 *.js text eol=lf
