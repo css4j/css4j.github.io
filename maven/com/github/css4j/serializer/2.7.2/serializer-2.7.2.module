@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.css4j",
+    "module": "serializer",
+    "version": "2.7.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "serializer-2.7.2.jar",
+          "url": "serializer-2.7.2.jar",
+          "size": 289432,
+          "sha512": "bfe0ec35693378092ff5a54c5f848f0addd4b61232b1d2e324bce472fc414a4a6eeddeed7e4df2e0734439507390fcf55b3e1d37938550d0ac3cc4d32cb45e06",
+          "sha256": "4eda19c1fb2f0dc36590b809424f65e5c54e3cddd82954f958c2326cdfb2a13d",
+          "sha1": "2ce97bbe97b7d9ecf80f0d705ac0a1f6db3dd5bc",
+          "md5": "c2fc8da29e96957a15ad7db876f27678"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "serializer-2.7.2.jar",
+          "url": "serializer-2.7.2.jar",
+          "size": 289432,
+          "sha512": "bfe0ec35693378092ff5a54c5f848f0addd4b61232b1d2e324bce472fc414a4a6eeddeed7e4df2e0734439507390fcf55b3e1d37938550d0ac3cc4d32cb45e06",
+          "sha256": "4eda19c1fb2f0dc36590b809424f65e5c54e3cddd82954f958c2326cdfb2a13d",
+          "sha1": "2ce97bbe97b7d9ecf80f0d705ac0a1f6db3dd5bc",
+          "md5": "c2fc8da29e96957a15ad7db876f27678"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "serializer-2.7.2-javadoc.jar",
+          "url": "serializer-2.7.2-javadoc.jar",
+          "size": 428699,
+          "sha512": "90577f2950935adb3013f7a5b52d4c9486e9f959193dec8109bdfcaa6b40c6e635e6795602bbd05a6b6f11149246bd6260a0ad45405b5be34406d5be4498bcae",
+          "sha256": "20cd89cf6241536d5d6b12da7c157de60acdfa79ca0b65dfd2f05767c02691e9",
+          "sha1": "81a3dbadfc163bb60506106c7104ce5bee25068f",
+          "md5": "956f2378602fcb8e6b67fab6f9a18e25"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "serializer-2.7.2-sources.jar",
+          "url": "serializer-2.7.2-sources.jar",
+          "size": 354100,
+          "sha512": "e9bf4bcf99c65bec6de22c940224500d9e5b8eeb8a3ec8d478952018e439fcf5f4ab417bc68b860e1014006ba4f2a5d0467d1a76ac9613a8b888d0031fbb3954",
+          "sha256": "0ab972f9e7579e8130d0f302e011a5f424f29fabfb42b4ef60aeec43c086349a",
+          "sha1": "8ef95fd97537be4db60066945466e14cb09c3138",
+          "md5": "634bdd8fbb0e44dfa28afdbea384af98"
+        }
+      ]
+    }
+  ]
+}
