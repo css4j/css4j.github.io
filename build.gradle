@@ -6,7 +6,7 @@ group = 'io.sf.carte'
 
 description = 'css4j.github.io'
 
-version = '1.0'
+version = '1.1'
 
 sourceSets {
 	test {
@@ -26,9 +26,7 @@ dependencies {
 	testImplementation 'io.sf.carte:xml-dtd:latest.release'
 	testImplementation 'io.sf.carte:css4j-dom4j:latest.release'
 	testImplementation 'io.sf.carte:css4j:latest.release'
-	testImplementation ('io.sf.carte:echosvg-transcoder:latest.release') {
-		exclude group: 'xml-apis', module: 'xml-apis'
-	}
+	testImplementation 'io.sf.carte:echosvg-transcoder:latest.release'
 	testImplementation 'junit:junit:4.13.2'
 	testImplementation 'nu.validator:htmlparser:1.4.16'
 }
@@ -43,6 +41,7 @@ repositories {
 			releasesOnly()
 		}
 		content {
+			includeGroup 'com.github.css4j'
 			includeGroup 'io.sf.carte'
 			includeGroup 'io.sf.jclf'
 			includeGroup 'xmlpull'
