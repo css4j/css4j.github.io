@@ -46,7 +46,6 @@ import io.sf.carte.doc.style.css.CSSDocument;
 import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet;
 import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory;
 import io.sf.carte.doc.style.css.om.DOMCSSStyleSheetFactory;
-import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;
 import nu.validator.htmlparser.common.XmlViolationPolicy;
 import nu.validator.htmlparser.sax.HtmlParser;
 
@@ -115,7 +114,6 @@ public class Css4jTest {
 	@Test
 	public void testUsageDOMWrapper() throws Exception {
 		DocumentBuilder docbuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		docbuilder.setEntityResolver(new DefaultEntityResolver());
 
 		// Read the document to parse, and prepare source object
 		Reader re = new StringReader(htmlString1);
