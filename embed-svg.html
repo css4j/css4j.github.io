@@ -31,8 +31,8 @@
 <div class="tema" id="overview">
 <h2>Overview</h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG images</a> can be used as stand-alone files, but the
-most efficient way to include them in an HTML document is by embedding them. However, this may cause unexpected problems due to
-two factors:</p>
+most efficient way to include them in an HTML document is by embedding them as <code>&lt;svg&gt;</code> subtrees.
+However, this may cause unexpected problems due to two factors:</p>
 <ul>
 <li>Element IDs that were unique in the SVG image and the main document may collide, causing the HTML to become non-conformant
 due to the presence of two (or more) <a href="https://html.spec.whatwg.org/multipage/introduction.html#restrictions-on-content-models-and-on-attribute-values:the-id-attribute">elements with the same ID</a>.</li>
@@ -142,6 +142,11 @@ while (styleIt.hasNext()) {
 <p>And now you only need to serialize the resulting document. (To serialize the native DOM, look at the powerful
 <a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/DOMWriter.html"><code>DOMWriter</code></a>
 or just call <code>toString()</code>).</p>
+</div>
+<div class="tema" id="examples">
+<h2>Examples of embedded SVG</h2>
+<p>You may want to look at the CSS4J benchmark pages for <a href="dom-mark.html">examples of pages where SVG
+images were embedded</a> in the way described by this document.</p>
 </div>
 </div>
 <div class="footnote">
