@@ -469,11 +469,13 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
                      throws <span class="exceptions"><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../nsac/Parser.html#parseStyleSheet(java.lang.String)">Parser</a></code></span></div>
 <div class="block">Parse a CSS sheet from a URI.
  <p>
  The sheet is parsed as a rule list, that is, XML's <code>CDO</code>-<code>CDC</code>
  comments are not expected.
+ </p>
+ <p>
+ The timeout to establish a connection is of 30 seconds.
  </p>
  <p>
  Usage of this method may have security implications. Please make sure that
@@ -493,8 +495,8 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list-long">
-<li><a href="../nsac/Parser.html#setDocumentHandler(io.sf.carte.doc.style.css.nsac.CSSHandler)"><code>Parser.setDocumentHandler(io.sf.carte.doc.style.css.nsac.CSSHandler)</code></a></li>
-<li><a href="../nsac/Parser.html#setErrorHandler(io.sf.carte.doc.style.css.nsac.CSSErrorHandler)"><code>Parser.setErrorHandler(io.sf.carte.doc.style.css.nsac.CSSErrorHandler)</code></a></li>
+<li><a href="#setDocumentHandler(io.sf.carte.doc.style.css.nsac.CSSHandler)"><code>setDocumentHandler(io.sf.carte.doc.style.css.nsac.CSSHandler)</code></a></li>
+<li><a href="#setErrorHandler(io.sf.carte.doc.style.css.nsac.CSSErrorHandler)"><code>setErrorHandler(io.sf.carte.doc.style.css.nsac.CSSErrorHandler)</code></a></li>
 </ul>
 </dd>
 </dl>

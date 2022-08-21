@@ -83,14 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="property/LCHColorValue.html" title="class in io.sf.carte.doc.style.css.property">LCHColorValue</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LCHColorValue</span><span class="extends-implements">
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">LCHColorValue</span><span class="extends-implements">
 extends <a href="CSSColorValue.html" title="interface in io.sf.carte.doc.style.css">CSSColorValue</a></span></div>
-<div class="block">Represents a <code>lch()</code> color value.
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Instead of using this interface, just cast the result of
+             <a href="CSSColorValue.html#getColor()"><code>CSSColorValue.getColor()</code></a> to the appropriate interface
+             (like <a href="LCHColor.html" title="interface in io.sf.carte.doc.style.css"><code>LCHColor</code></a>) according to the given
+             <a href="CSSColorValue.html#getColorModel()"><code>CSSColorValue.getColorModel()</code></a>.</div>
+</div>
+<div class="block">Represents a color value with the LCh color model, like <code>lch()</code> or
+ <code>oklch()</code>.
  <p>
- Instead of using this interface, you may want to just cast the result of
- <a href="CSSColorValue.html#getColor()"><code>CSSColorValue.getColor()</code></a> to the appropriate interface (like
- <a href="LCHColor.html" title="interface in io.sf.carte.doc.style.css"><code>LCHColor</code></a>) according to the given
- <a href="CSSColorValue.html#getColorModel()"><code>CSSColorValue.getColorModel()</code></a>.
+ It is not guaranteed that all colors with a LCh model shall implement this
+ interface, therefore its usage is not recommended.
  </p></div>
 </section>
 <section class="summary">
@@ -112,21 +118,23 @@ extends <a href="CSSColorValue.html" title="interface in io.sf.carte.doc.style.c
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LCHColorValue.html" title="interface in io.sf.carte.doc.style.css">LCHColorValue</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="LCHColorValue.html" title="interface in io.sf.carte.doc.style.css">LCHColorValue</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block">Creates and returns a copy of this value.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSColor.html" title="interface in io.sf.carte.doc.style.css">CSSColor</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getColor()" class="member-name-link">getColor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get the <code>lch()</code> color represented by this value.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="LCHColor.html" title="interface in io.sf.carte.doc.style.css">LCHColor</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6"><code><a href="#getColor()" class="member-name-link">getColor</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Get the <code>lch()</code> or <code>oklch()</code> color represented by this value.</div>
 </div>
 </div>
 </div>
@@ -157,13 +165,14 @@ extends <a href="CSSColorValue.html" title="interface in io.sf.carte.doc.style.c
 <li>
 <section class="detail" id="getColor()">
 <h3>getColor</h3>
-<div class="member-signature"><span class="return-type"><a href="CSSColor.html" title="interface in io.sf.carte.doc.style.css">CSSColor</a></span>&nbsp;<span class="element-name">getColor</span>()</div>
-<div class="block">Get the <code>lch()</code> color represented by this value.</div>
+<div class="member-signature"><span class="return-type"><a href="LCHColor.html" title="interface in io.sf.carte.doc.style.css">LCHColor</a></span>&nbsp;<span class="element-name">getColor</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Get the <code>lch()</code> or <code>oklch()</code> color represented by this value.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CSSColorValue.html#getColor()">getColor</a></code>&nbsp;in interface&nbsp;<code><a href="CSSColorValue.html" title="interface in io.sf.carte.doc.style.css">CSSColorValue</a></code></dd>
 <dt>Returns:</dt>
-<dd>the <code>lch()</code> color.</dd>
+<dd>the <code>lch()</code> or <code>oklch()</code> color.</dd>
 </dl>
 </section>
 </li>
@@ -171,6 +180,7 @@ extends <a href="CSSColorValue.html" title="interface in io.sf.carte.doc.style.c
 <section class="detail" id="clone()">
 <h3>clone</h3>
 <div class="member-signature"><span class="return-type"><a href="LCHColorValue.html" title="interface in io.sf.carte.doc.style.css">LCHColorValue</a></span>&nbsp;<span class="element-name">clone</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="CSSValue.html#clone()">CSSValue</a></code></span></div>
 <div class="block">Creates and returns a copy of this value.</div>
 <dl class="notes">

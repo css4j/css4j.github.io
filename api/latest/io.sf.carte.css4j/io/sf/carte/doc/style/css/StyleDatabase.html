@@ -82,9 +82,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StyleDatabase</span></div>
 <div class="block">CSS Style database.
  <p>
- To use CSS in practice, you need to have information about the target rendering device:
- available fonts, page sizes, etc. This information is supplied by an instance of the
- <code>StyleDatabase</code> interface.
+ To use CSS in practice, you need to have information about the target
+ rendering device: available fonts, page sizes, etc. This information is
+ supplied by an instance of the <code>StyleDatabase</code> interface.
  </p></div>
 </section>
 <section class="summary">
@@ -94,7 +94,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -103,19 +103,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getColorDepth()" class="member-name-link">getColorDepth</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gives the number of bits allocated to colors (excluding the alpha channel) in the
- output device.</div>
+<div class="block">Gives the number of bits allocated to colors (excluding the alpha channel) in
+ the output device.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultGenericFontFamily()" class="member-name-link">getDefaultGenericFontFamily</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getDefaultGenericFontFamily()" class="member-name-link">getDefaultGenericFontFamily</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the real name of the default font.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultGenericFontFamily(java.lang.String)" class="member-name-link">getDefaultGenericFontFamily</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;genericFamily)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gets the name of the default font used when a generic font family (serif, sans-serif,
- monospace, cursive, fantasy) is specified.</div>
+<div class="block">Gets the name of the default font used when a generic font family (serif,
+ sans-serif, monospace, cursive, fantasy) is specified.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeviceHeight()" class="member-name-link">getDeviceHeight</a>()</code></div>
@@ -127,37 +127,37 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gets the width of the device, expressed in its natural unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEnvValue(java.lang.String)" class="member-name-link">getEnvValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;envVarName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getEnvValue(java.lang.String)" class="member-name-link">getEnvValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;envVarName)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Get the value of the given <code>env</code> variable.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExSizeInPt(java.lang.String,float)" class="member-name-link">getExSizeInPt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getExSizeInPt(java.lang.String,float)" class="member-name-link">getExSizeInPt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
  float&nbsp;size)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gives the size of the 'ex' unit, expressed in 'pt' (typographic points) unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFontSizeFromIdentifier(java.lang.String,java.lang.String)" class="member-name-link">getFontSizeFromIdentifier</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default float</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getFontSizeFromIdentifier(java.lang.String,java.lang.String)" class="member-name-link">getFontSizeFromIdentifier</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fontSizeIdentifier)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gets the font size from the given size identifier (small, medium, etc.), expressed in
- typographic points.</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Gets the font size from the given size identifier (small, medium, etc.),
+ expressed in typographic points.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInitialColor()" class="member-name-link">getInitialColor</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gives the initial (default) value for the 'color' property on this device.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>short</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNaturalUnit()" class="member-name-link">getNaturalUnit</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default short</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getNaturalUnit()" class="member-name-link">getNaturalUnit</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the identifier of the device's natural unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSystemFontDeclaration(java.lang.String)" class="member-name-link">getSystemFontDeclaration</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;systemFontName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getSystemFontDeclaration(java.lang.String)" class="member-name-link">getSystemFontDeclaration</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;systemFontName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gives the style declaration adequate to provide the given system font.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
@@ -165,10 +165,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gets the used font family name according to the given style.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWidthSize(java.lang.String,float)" class="member-name-link">getWidthSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;widthIdentifier,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getWidthSize(java.lang.String,float)" class="member-name-link">getWidthSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;widthIdentifier,
  float&nbsp;fontSize)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the size corresponding to the given identifier (thin, thick, medium), in
  typographic points.</div>
 </div>
@@ -181,18 +181,18 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#loadFontFaceRule(io.sf.carte.doc.style.css.CSSFontFaceRule)" class="member-name-link">loadFontFaceRule</a><wbr>(<a href="CSSFontFaceRule.html" title="interface in io.sf.carte.doc.style.css">CSSFontFaceRule</a>&nbsp;rule)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Try to load the font family according to the given font face rule, and
- make it available to this object.</div>
+<div class="block">Try to load the font family according to the given font face rule, and make
+ it available to this object.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInitialColor(java.lang.String)" class="member-name-link">setInitialColor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;initialColor)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Sets the initial (default) value for the 'color' property on this device.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)" class="member-name-link">supports</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)" class="member-name-link">supports</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
  <a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Does this medium support the given property-value pair?</div>
 </div>
 </div>
@@ -235,25 +235,25 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDefaultGenericFontFamily(java.lang.String)">
 <h3>getDefaultGenericFontFamily</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultGenericFontFamily</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;genericFamily)</span></div>
-<div class="block">Gets the name of the default font used when a generic font family (serif, sans-serif,
- monospace, cursive, fantasy) is specified.</div>
+<div class="block">Gets the name of the default font used when a generic font family (serif,
+ sans-serif, monospace, cursive, fantasy) is specified.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>genericFamily</code> - the name of the logical font.</dd>
 <dt>Returns:</dt>
-<dd>the name of the real font to which the generic name is mapped to, or null if
-         none.</dd>
+<dd>the name of the real font to which the generic name is mapped to, or
+         null if none.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDefaultGenericFontFamily()">
 <h3>getDefaultGenericFontFamily</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultGenericFontFamily</span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultGenericFontFamily</span>()</div>
 <div class="block">Gets the real name of the default font.
  <p>
- For example, if the default generic font name is 'serif', this method should return the
- same as getDefaultGenericFontFamily("serif").</div>
+ For example, if the default generic font name is 'serif', this method should
+ return the same as getDefaultGenericFontFamily("serif").</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the name of the default real font.</dd>
@@ -276,11 +276,11 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getFontSizeFromIdentifier(java.lang.String,java.lang.String)">
 <h3>getFontSizeFromIdentifier</h3>
-<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getFontSizeFromIdentifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFontSizeFromIdentifier</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fontSizeIdentifier)</span>
-                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block">Gets the font size from the given size identifier (small, medium, etc.), expressed in
- typographic points.</div>
+                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
+<div class="block">Gets the font size from the given size identifier (small, medium, etc.),
+ expressed in typographic points.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>familyName</code> - the font family name. Could be null.</dd>
@@ -295,13 +295,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getSystemFontDeclaration(java.lang.String)">
 <h3>getSystemFontDeclaration</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSystemFontDeclaration</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;systemFontName)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSystemFontDeclaration</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;systemFontName)</span></div>
 <div class="block">Gives the style declaration adequate to provide the given system font.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>systemFontName</code> - the system font name.</dd>
 <dt>Returns:</dt>
-<dd>the style declaration, or null if the system font name was not recognized.</dd>
+<dd>the style declaration, or null if the system font name was not
+         recognized.</dd>
 </dl>
 </section>
 </li>
@@ -315,7 +316,8 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>requestedFamily</code> - the font family name in lower case.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if is an available font family, <code>false</code> otherwise.</dd>
+<dd><code>true</code> if is an available font family, <code>false</code>
+         otherwise.</dd>
 </dl>
 </section>
 </li>
@@ -323,8 +325,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="loadFontFaceRule(io.sf.carte.doc.style.css.CSSFontFaceRule)">
 <h3>loadFontFaceRule</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">loadFontFaceRule</span><wbr><span class="parameters">(<a href="CSSFontFaceRule.html" title="interface in io.sf.carte.doc.style.css">CSSFontFaceRule</a>&nbsp;rule)</span></div>
-<div class="block">Try to load the font family according to the given font face rule, and
- make it available to this object.</div>
+<div class="block">Try to load the font family according to the given font face rule, and make
+ it available to this object.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>rule</code> - the font face rule.</dd>
@@ -334,7 +336,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getNaturalUnit()">
 <h3>getNaturalUnit</h3>
-<div class="member-signature"><span class="return-type">short</span>&nbsp;<span class="element-name">getNaturalUnit</span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">short</span>&nbsp;<span class="element-name">getNaturalUnit</span>()</div>
 <div class="block">Gets the identifier of the device's natural unit.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -345,12 +347,12 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getExSizeInPt(java.lang.String,float)">
 <h3>getExSizeInPt</h3>
-<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getExSizeInPt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getExSizeInPt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;familyName,
  float&nbsp;size)</span></div>
 <div class="block">Gives the size of the 'ex' unit, expressed in 'pt' (typographic points) unit.
  <p>
- Although this type of information really belongs to <code>CSSCanvas</code>, having even
- an approximate value here is helpful.
+ Although this type of information really belongs to <code>CSSCanvas</code>,
+ having even an approximate value here is helpful.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -364,9 +366,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getWidthSize(java.lang.String,float)">
 <h3>getWidthSize</h3>
-<div class="member-signature"><span class="return-type">float</span>&nbsp;<span class="element-name">getWidthSize</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;widthIdentifier,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getWidthSize</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;widthIdentifier,
  float&nbsp;fontSize)</span>
-            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
+                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
 <div class="block">Gets the size corresponding to the given identifier (thin, thick, medium), in
  typographic points.</div>
 <dl class="notes">
@@ -384,8 +386,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getColorDepth()">
 <h3>getColorDepth</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getColorDepth</span>()</div>
-<div class="block">Gives the number of bits allocated to colors (excluding the alpha channel) in the
- output device.
+<div class="block">Gives the number of bits allocated to colors (excluding the alpha channel) in
+ the output device.
  <p>
  If the device is not a color device, the value is zero.
  </p>
@@ -393,8 +395,8 @@ loadScripts(document, 'script');</script>
  From W3C's Screen interface.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the number of bits allocated to colors, or zero if the output device does not
-         support colors.</dd>
+<dd>the number of bits allocated to colors, or zero if the output device
+         does not support colors.</dd>
 </dl>
 </section>
 </li>
@@ -423,7 +425,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getEnvValue(java.lang.String)">
 <h3>getEnvValue</h3>
-<div class="member-signature"><span class="return-type"><a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></span>&nbsp;<span class="element-name">getEnvValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;envVarName)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></span>&nbsp;<span class="element-name">getEnvValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;envVarName)</span></div>
 <div class="block">Get the value of the given <code>env</code> variable.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -436,7 +438,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)">
 <h3>supports</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">supports</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">supports</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
  <a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a>&nbsp;value)</span></div>
 <div class="block">Does this medium support the given property-value pair?</div>
 <dl class="notes">
@@ -444,8 +446,8 @@ loadScripts(document, 'script');</script>
 <dd><code>property</code> - the property name.</dd>
 <dd><code>value</code> - the optional property value to be tested against.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the property (with the given value, if any) is supported,
-         <code>false</code> otherwise.</dd>
+<dd><code>true</code> if the property (with the given value, if any) is
+         supported, <code>false</code> otherwise.</dd>
 </dl>
 </section>
 </li>

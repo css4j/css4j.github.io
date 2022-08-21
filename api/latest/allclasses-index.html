@@ -906,11 +906,14 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LABColor.html" title="interface in io.sf.carte.doc.style.css">LABColor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Represents a LAB (<code>lab()</code>) color.</div>
+<div class="block">Represents a color in the LAB color model (<code>lab()</code> or <code>oklab()</code>).</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LABColorValue.html" title="interface in io.sf.carte.doc.style.css">LABColorValue</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Represents a Lab (<code>lab()</code>) color value.</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">Deprecated.
+<div class="deprecation-comment">Instead of using this interface, just cast the result of
+             <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColorValue.html#getColor()"><code>CSSColorValue.getColor()</code></a> to the appropriate interface
+             (like <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LABColor.html" title="interface in io.sf.carte.doc.style.css"><code>LABColor</code></a>) according to the given
+             <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColorValue.html#getColorModel()"><code>CSSColorValue.getColorModel()</code></a>.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LABColorValue.html" title="class in io.sf.carte.doc.style.css.property">LABColorValue</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -922,11 +925,14 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LCHColor.html" title="interface in io.sf.carte.doc.style.css">LCHColor</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Represents a <code>lch()</code> color.</div>
+<div class="block">Represents a color in the LCh color model (<code>lch()</code> or <code>oklch()</code>).</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LCHColorValue.html" title="interface in io.sf.carte.doc.style.css">LCHColorValue</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Represents a <code>lch()</code> color value.</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">Deprecated.
+<div class="deprecation-comment">Instead of using this interface, just cast the result of
+             <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColorValue.html#getColor()"><code>CSSColorValue.getColor()</code></a> to the appropriate interface
+             (like <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/LCHColor.html" title="interface in io.sf.carte.doc.style.css"><code>LCHColor</code></a>) according to the given
+             <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColorValue.html#getColorModel()"><code>CSSColorValue.getColorModel()</code></a>.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LCHColorValue.html" title="class in io.sf.carte.doc.style.css.property">LCHColorValue</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -937,7 +943,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Based on SAC's <code>LexicalUnit</code> interface by Philippe Le Hegaret.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LexicalUnit.LexicalType.html" title="enum class in io.sf.carte.doc.style.css.nsac">LexicalUnit.LexicalType</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="block">The lexical type.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LexicalValue.html" title="class in io.sf.carte.doc.style.css.property">LexicalValue</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A value that contains a <code>var</code> value as part of its declaration.</div>
@@ -1154,7 +1162,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/RGBColorDeclarationFormattingContext.html" title="class in io.sf.carte.doc.style.css.om">RGBColorDeclarationFormattingContext</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">DeclarationFormattingContext that serializes colors as RGB.</div>
+<div class="block">DeclarationFormattingContext that serializes colors as RGB (sRGB).</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/RGBColorValue.html" title="class in io.sf.carte.doc.style.css.property">RGBColorValue</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">

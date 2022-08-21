@@ -171,8 +171,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isPositiveSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isPositiveSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC value could represent a size greater than zero (e.g. font
- size).</div>
+<div class="block">Tests whether the given NSAC value could represent a size greater than zero
+ (e.g. font size).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isResolutionSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isResolutionSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
@@ -182,7 +182,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isSizeOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeOrNumberSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC unit type is a size or numeric unit.</div>
+<div class="block">Tests whether the given NSAC unit type is a size or numeric unit (or a
+ unknown unit).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
@@ -306,14 +307,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isPositiveSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isPositiveSizeSACUnit</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPositiveSizeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC value could represent a size greater than zero (e.g. font
- size).</div>
+<div class="block">Tests whether the given NSAC value could represent a size greater than zero
+ (e.g. font size).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if it is a size type (including percentage and unknown dimension), false
-         otherwise.</dd>
+<dd><code>true</code> if it is a size type (including percentage and
+         unknown dimension), false otherwise.</dd>
 </dl>
 </section>
 </li>
@@ -321,7 +322,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isSizeOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isSizeOrNumberSACUnit</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSizeOrNumberSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC unit type is a size or numeric unit.</div>
+<div class="block">Tests whether the given NSAC unit type is a size or numeric unit (or a
+ unknown unit).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unit</code> - the lexical value.</dd>
