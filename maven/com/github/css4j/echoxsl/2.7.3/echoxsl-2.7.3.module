@@ -1,0 +1,255 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.css4j",
+    "module": "echoxsl",
+    "version": "2.7.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.css4j",
+          "module": "serializer",
+          "version": {
+            "requires": "2.7.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.css4j",
+          "module": "serializer",
+          "version": {
+            "requires": "2.7.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echoxsl-2.7.3-javadoc.jar",
+          "url": "echoxsl-2.7.3-javadoc.jar",
+          "size": 4931663,
+          "sha512": "6ca4bd141c2e6197a816762710a99a6c0f457029a38aed78f997da2d89a632273707de8e287543ae40a11c9dc8c838932941b0f444705c81ce277eb5816d4023",
+          "sha256": "49122db2416991e57b0ef5c901f8fb54704cf52b923557e554e2b29d573b4361",
+          "sha1": "ef7531c63a16ac11fa70935c33c8f63516d7de87",
+          "md5": "b9fda3767649ae7b52789f69069f15cf"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echoxsl-2.7.3-sources.jar",
+          "url": "echoxsl-2.7.3-sources.jar",
+          "size": 2985389,
+          "sha512": "0f3accc398abb0d6b76e7ac1c5a4ecbd98bf71190b2810d4b214c3f68514371bc79e840a42349a2ffd7b9bb779e31663582f75d53e4ee0ad51b5f2dd4f546b5d",
+          "sha256": "cff7653dd778868e06c95aae51dfcd929a42490f5873307e2f8938c0a7469400",
+          "sha1": "658034f43cb41a321144b47efb50b4b8a52aaf90",
+          "md5": "51e9a9d80a06be354896ea31ba0f7740"
+        }
+      ]
+    },
+    {
+      "name": "dtmApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.css4j",
+          "name": "echoxsl-dtm",
+          "version": "2.7.3"
+        }
+      ]
+    },
+    {
+      "name": "dtmRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "xerces",
+          "module": "xercesImpl",
+          "version": {
+            "requires": "2.12.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.css4j",
+          "name": "echoxsl-dtm",
+          "version": "2.7.3"
+        }
+      ]
+    },
+    {
+      "name": "xsltcApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.css4j",
+          "name": "echoxsl-xsltc",
+          "version": "2.7.3"
+        }
+      ]
+    },
+    {
+      "name": "xsltcRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.bcel",
+          "module": "bcel",
+          "version": {
+            "requires": "6.5.0"
+          }
+        },
+        {
+          "group": "edu.princeton.cup",
+          "module": "java-cup",
+          "version": {
+            "requires": "10k"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echoxsl-2.7.3.jar",
+          "url": "echoxsl-2.7.3.jar",
+          "size": 2736798,
+          "sha512": "edde74ab700d2c676ad0df8c9823713de3f5ca75440e3e1bc7de5d9714e600286fc5242fe06566ec8ac44674deae907e2ee66b4452a5cf220e42ad738eee5eb2",
+          "sha256": "3026f15e4c5439846376a29823186ecbee6b2f01266ab6a35f1896c1bc603cc6",
+          "sha1": "9a2cc2de8100f0f5dab1d793bbb4ca53dfc51869",
+          "md5": "28785034ca0f8362553d1a017740c866"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.css4j",
+          "name": "echoxsl-xsltc",
+          "version": "2.7.3"
+        }
+      ]
+    }
+  ]
+}
