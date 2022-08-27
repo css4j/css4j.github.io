@@ -1,0 +1,175 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-dom",
+    "version": "0.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "com.github.css4j",
+          "module": "echoxsl",
+          "version": {
+            "requires": "2.7.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.1.0"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "2.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-0.2.1.jar",
+          "url": "echosvg-dom-0.2.1.jar",
+          "size": 196813,
+          "sha512": "524da8525f79a9aae3339f67f2b2e0f93c2027cd97877a5538e7e7d92e965f1ecf7c5ed7a01e9b8e108b71ff121bd70ac1a21f3dc093d69eab58cb3ec355f4ba",
+          "sha256": "7b25960c539b06ac3751fc6487b070f39a64a74d6167e3d61cf714006649b7e5",
+          "sha1": "10aff39c232bf7bd71d2b30682e2c9a63b95845d",
+          "md5": "a7330dc2814edc144e06cb9fb9b4b34d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "xml-apis",
+          "module": "xml-apis",
+          "version": {
+            "requires": "1.4.01"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "0.2.1"
+          }
+        },
+        {
+          "group": "com.github.css4j",
+          "module": "echoxsl",
+          "version": {
+            "requires": "2.7.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.1.0"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "2.7"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-0.2.1.jar",
+          "url": "echosvg-dom-0.2.1.jar",
+          "size": 196813,
+          "sha512": "524da8525f79a9aae3339f67f2b2e0f93c2027cd97877a5538e7e7d92e965f1ecf7c5ed7a01e9b8e108b71ff121bd70ac1a21f3dc093d69eab58cb3ec355f4ba",
+          "sha256": "7b25960c539b06ac3751fc6487b070f39a64a74d6167e3d61cf714006649b7e5",
+          "sha1": "10aff39c232bf7bd71d2b30682e2c9a63b95845d",
+          "md5": "a7330dc2814edc144e06cb9fb9b4b34d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-dom-0.2.1-sources.jar",
+          "url": "echosvg-dom-0.2.1-sources.jar",
+          "size": 169800,
+          "sha512": "d64c16871610f0291900dd315e3638493c1d7e9006888c8aaba7cecb4298713ce3abf748f5779d2559f0624bd21f4caf25b41dfe2a78bca3b48798a0b779f001",
+          "sha256": "9ba8aa364bea4649a8bf181fd2ce32324bc9164739c904ee9899e990dbe79bbe",
+          "sha1": "537d6374c24c699b6c59f9278da67fd324916f77",
+          "md5": "2e5714b27c3cdc1bba46c45063df6a43"
+        }
+      ]
+    }
+  ]
+}
