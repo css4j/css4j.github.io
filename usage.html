@@ -36,39 +36,87 @@ in the Java&trade; language, and also adds CSS support to the <a href="https://d
 targets several different use cases, with functionalities from style sheet error detection to style computation.</p>
 <div class="tema" id="overview">
 <h2>Overview</h2>
-<p>This implementation can be used in several ways: with stand-alone style sheets, with its own <a href="http://www.w3.org/DOM/" target="_blank">DOM</a>
-implementation, combined with DOM4J, or by wrapping a pre-existing DOM tree.</p>
-<p>You can play with independent style sheets created with the <code>createStyleSheet("<i>title</i>", "<i>media</i>")</code> method of the
-<a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html"><code>CSSStyleSheetFactory</code></a> interface.
-There are three implementations of that interface:
+<p>This library provides a number of classes to deal with different CSS Object Model abstractions. For example:</p>
 <ul>
-<li><a class="codeitem" href="api/3/io/sf/carte/doc/dom/CSSDOMImplementation.html"><code>CSSDOMImplementation</code></a>, the native DOM implementation.</li>
-<li><a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html"><code>DOMCSSStyleSheetFactory</code></a> for the DOM Wrapper.</li>
-<li>If you use DOM4J, get it through <code>XHTMLDocumentFactory.getStyleSheetFactory()</code>.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html">AbstractCSSStyleSheet</a>
+for style sheets.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleRule.html">StyleRule</a>
+for style rules.</a></li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html">StyleValue</a>
+for values like <code>rgb(12% 0% 67%)</code> or <code>var(--customProperty)</code>.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LexicalUnit.html">LexicalUnit</a>
+for low-level CSS syntax.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Selector.html">Selector</a>
+and <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SelectorList.html">SelectorList</a>
+for <a href="https://www.w3.org/TR/selectors-4/" target="_blank">CSS Selectors</a>.</li>
 </ul>
-<p>The document back-end is only important if you plan to use the sheets inside a document.
-The resulting style sheets are empty, but you can load a style sheet with the <code>AbstractCSSStyleSheet.parseStyleSheet(<i>reader</i>)</code>
-method (see <a href="#sheetparsing">Parsing a Style Sheet</a>).</p>
-<p>One of the most important functionalities in the library is the ability to compute styles for a given element:</p>
-In practice, to obtain the 'computed' or 'used' values required for actual rendering a box model implementation is needed, and also
-device information. The library provides a simple box model that could be used, but the details of the rendering device can be more difficult.</p>
-<p>Depending on the use case, the target device may not be the same one where the library is running (and some exact details hence not available).
-To help in the computation, the library defines the <code>DeviceFactory</code> interface to supply device and media-specific data (also provides
-the objects required by media queries to work).</p>
+<p>You can use those classes as stand-alone objects or have them all together in a document, one of the implementations
+of the <a href="https://dom.spec.whatwg.org/" target="_blank">DOM</a>-based <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.html">CSSDocument</a> interface:</p>
+<ul>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/HTMLDocument.html">HTMLDocument</a> and
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html">DOMDocument</a>
+of css4j's native DOM, available from the <a href="api/latest/io.sf.carte.css4j/module-summary.html">core css4j module</a>.
+Native DOM is recommended for new projects.</li>
+<li>The <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StylableDocumentWrapper.html">StylableDocumentWrapper</a>
+can wrap any valid DOM document, thus adding (read-only) style capabilities to a pre-existing document in your favourite
+DOM implementation. The documentation often refers to this approach as the "DOM Wrapper", and is also available from the
+<a href="api/latest/io.sf.carte.css4j/module-summary.html">core css4j module</a>.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocument.html">XHTMLDocument</a>
+is a DOM4J subclass which comes with the <a href="api/latest/io.sf.carte.css4j.dom4j/module-summary.html">css4j-dom4j
+module</a>. Recommended only for dealing with legacy DOM4J code.</li>
+</ul>
+<p>An important advantage of using <a href="http://www.w3.org/DOM/" target="_blank">DOM</a>-based interfaces is that you
+can use the same or very similar methods in your web browser's Javascript (with the exception of the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html">CSSValue</a> API which
+is based on an old W3C standard instead of the more recent Houdini's Typed OM).</p>
+<br/>
+<h3 class="subtema" id="choosing-dom">Choosing a DOM implementation</h3>
+<p>Once you have chosen which DOM you prefer to use, the first step is to obtain an instance of a compatible
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html">CSSStyleSheetFactory</a>.
+<p>There are three implementations of that interface:</p>
+<ul>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/CSSDOMImplementation.html">CSSDOMImplementation</a>, the native DOM implementation.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html">DOMCSSStyleSheetFactory</a> for the DOM Wrapper.</li>
+<li>If you use DOM4J, get it through <a class="codeitem"
+href="api/latest/io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocumentFactory.html#getStyleSheetFactory()">XHTMLDocumentFactory.getInstance().getStyleSheetFactory()</a>.</li>
+</ul>
+<p>Even if you want to use only stand-alone style sheets, you should use one of the above factories to create them with the
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#createStyleSheet(java.lang.String,io.sf.carte.doc.style.css.MediaQueryList)">createStyleSheet("<i>title</i>",
+"<i>media</i>")</a> method.</p>
+<p>The style sheet objects created by that method are empty, but you can load the style sheet rules with the
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">AbstractCSSStyleSheet.parseStyleSheet(<i>reader</i>,
+<i>short</i>)</a> method (see <a href="#sheetparsing">Parsing a Style Sheet</a>).</p>
+<br/>
+<h3 class="subtema" id="style-computation-caveats">Style computation caveats</h3>
+<p>One of the most important functionalities in the library is the ability to compute styles for a given element.</p>
+<p>In practice, to obtain the 'computed' or 'used' values required for actual rendering, a box model implementation
+is needed, and also device information. The library provides a simple box model that could be used, but the details
+of the rendering device can be more difficult.</p>
+<p>Depending on the use case, the target device may not be the same one where the library is running (and some exact
+details hence not available). To help in the computation, the library defines the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a> interface
+to supply device and media-specific data (also provides the objects required by media queries to work).</p>
 </div>
 <div class="tema" id="modules">
 <h2>Modules</h2>
 <p>The project is organized in several modules:</p>
 <ul>
-<li><a href="https://github.com/css4j/css4j"><code>css4j</code></a> core module, which depends on the next two (they are included in the Zip distribution):</li>
+<li><a href="https://github.com/css4j/css4j"><code>css4j</code></a> core module (providing the <a href="api/latest/io.sf.carte.css4j/module-summary.html">io.sf.carte.css4j</a>
+JPMS module), which depends on the next two (they are included in the Zip distribution):</li>
 <li><a href="api/carte-util/3/"><code>carte-util</code></a>, a very small collection of interfaces and utility classes.</li>
 <li><a href="https://github.com/css4j/tokenproducer"><code>tokenproducer</code></a>, the low-level parser at the core of css4j.</li>
-<li><a href="https://github.com/css4j/css4j-agent"><code>css4j-agent</code></a>, an optional collection of agent-related classes that makes the processing of remote documents a bit easier.</li>
+<li><a href="https://github.com/css4j/css4j-agent"><code>css4j-agent</code></a>, an optional collection of agent-related
+classes that makes the processing of remote documents a bit easier. JPMS module: <a
+href="api/latest/io.sf.carte.css4j.agent.net/module-summary.html">io.sf.carte.css4j.agent.net</a>.</li>
 <li><a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code></a>, a small set of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/package-summary.html">AWT</a>-related
-utility classes (also optional).</li>
-<li><a href="https://github.com/css4j/css4j-dom4j"><code>css4j-dom4j</code></a>: to use css4j together with dom4j, if you prefer that API.</li>
+utility classes (also optional). Module: <a href="api/latest/io.sf.carte.css4j.awt/module-summary.html">io.sf.carte.css4j.awt</a>.</li>
+<li><a href="https://github.com/css4j/css4j-dom4j"><code>css4j-dom4j</code></a>: to use css4j together with dom4j, if you prefer that API.
+The JPMS module name is <a href="api/latest/io.sf.carte.css4j.dom4j/module-summary.html">io.sf.carte.css4j.dom4j</a>.</li>
 <li><a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code></a> is a small set of classes to aid in the processing of XML <a href="https://en.wikipedia.org/wiki/Document_type_definition"
-target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>. It is not needed if you do not process XML.</li>
+target="_blank">DTD</a>s, including the useful <a class="codeitem" href="api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>.
+It is not needed if you do not process XML. The JPMS module is <a
+href="api/latest/io.sf.carte.xml.dtd/module-summary.html">io.sf.carte.xml.dtd</a>.</li>
 </ul>
 <p>In general, you'll need to have at least <code>css4j</code>, <code>carte-util</code> and <code>tokenproducer</code> in your classpath/modulepath.
 If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
@@ -197,7 +245,12 @@ re.close();
 // Set document URI
 document.setDocumentURI("http://www.example.com/mydocument.html");
 </code></pre>
-<p>Then you have a CSS-enabled document. To compute styles, use <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
+<p>Now, you have a CSS-enabled document.</p>
+<p>You can see the above code example (and others in this guide) in the <a href="https://github.com/css4j/css4j.github.io/blob/master/src/examples/java/io/sf/carte/example/Css4jTest.java">Css4jTest.java</a>
+example file.</p>
+<br/>
+<h3 class="subtema" id="computing-styles">Computing styles</h3>
+<p>To compute styles, use <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSElement.html#getComputedStyle(java.lang.String)">getComputedStyle</a>:</p>
 <pre class="code"><code class="language-java">DOMElement element = document.getElementById("someId");
 CSSComputedProperties style = element.getComputedStyle(null);
 
@@ -219,7 +272,8 @@ String image_uri = ((CSSTypedValue) style.getPropertyCSSValue("background-image"
 // image_css will be set to "url('http://www.example.com/css/foo.png')",
 // and image_uri to "http://www.example.com/css/foo.png"
 </code></pre>
-<p>The <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSComputedProperties.html"><code>CSSComputedProperties</code></a> interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
+<p>The <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSComputedProperties.html">CSSComputedProperties</a>
+interface extends W3C's <a href="https://www.w3.org/TR/cssom-1/#the-cssstyledeclaration-interface" target="_blank"><code>CSSStyleDeclaration</code></a>
 for computed styles, adding methods like <code>getComputedFontSize()</code> or <code>getComputedLineHeight()</code>.</p>
 <p>If you are computing styles for a specific medium, tell the document about it (see "<a href="#mediahandling">Media Handling</a>"):</p>
 <pre class="code"><code class="language-java">document.setTargetMedium("print");
@@ -228,7 +282,7 @@ for computed styles, adding methods like <code>getComputedFontSize()</code> or <
 <p>This library's native DOM implementation has some minor behavior differences with what is written in the <a href="https://www.w3.org/TR/DOM-Level-3-Core/" target="_blank">DOM
 Level 3 Core Specification</a>. For example, on elements and attributes the <code>Node.getLocalName()</code> method returns the tag name instead of
 <code>null</code> when the node was created with a DOM Level 1 method such as <code>Document.createElement()</code>. Read the
-<a class="codeitem" href="api/3/io/sf/carte/doc/dom/package-summary.html">io.sf.carte.doc.dom</a> package
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">io.sf.carte.doc.dom</a> package
 description for additional information.</p>
 </div>
 <div class="tema" id="dom4j">
@@ -262,7 +316,9 @@ reader.setEntityResolver(new DefaultEntityResolver());
 Reader re = ... [reader for HTML document]
 XHTMLDocument document = (XHTMLDocument) reader.read(re);
 </code></pre>
-<p>And once you got the element you want the computed style for (see, for example, the
+<p>As you see, a document factory called <a class="codeitem" href="api/latest/io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocumentFactory.html">XHTMLDocumentFactory</a>
+is used.</p>
+<p>Once you got the element you want the computed style for (see, for example, the
 <a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
 <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-ViewCSS" target="_blank"><code>ViewCSS</code></a>
 interface:</p>
@@ -270,7 +326,7 @@ interface:</p>
 String display = style.getPropertyValue("display");
 </code></pre>
 <p>Be careful to have the <code>XHTMLDocumentFactory</code> loaded with the desired defaults, like the user agent style sheet
-which was loaded by default in 1.0 but not in 2.0.</p>
+which was loaded by default in 1.0 but not in 2.0 and later.</p>
 <p>It is also possible to parse an HTML5 document into a css4j-dom4j tree with the aforementioned validator.nu HTML5 parser:</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
@@ -291,7 +347,7 @@ Reader re = ... [reader for HTML document]
 XHTMLDocument document = (XHTMLDocument) builder.read(re);
 </code></pre>
 <p>Or parse the document with the css4j's builder,
-<a href="api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a> (which can account for things like implied HTML parent elements),
+<a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a> (which can account for things like implied HTML parent elements),
 instead of dom4j's <a href="https://dom4j.github.io/javadoc/2.1.1/org/dom4j/io/SAXReader.html"><code>SAXReader</code></a>:</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
@@ -329,7 +385,7 @@ configured <code>Transformer</code></a>, but not with DOM4J.</p>
 <div class="tema" id="domwrapper">
 <h2>Usage with the DOM wrapper</h2>
 <p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
-<a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
 method to wrap a pre-existing DOM Document. Example:</p>
 <pre class="code"><code class="language-java">DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
 CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
@@ -363,10 +419,10 @@ Note, however, that:</p>
 <li>If you use the above code with css4j-dom4j (3.6.1 or later is required), it will not produce
 the desired result.</li>
 </ol>
-<p>To handle HTML, the <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/package-summary.html">native DOM</a>
+<p>To handle HTML, the <a href="https://css4j.github.io/api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">native DOM</a>
 is recommended over any XML DOM.</p>
 </div>
-<div class="tema">
+<div id="dom-impls-diff" class="tema">
 <h2>Consistency of different DOM implementations</h2>
 <p>Beware that the computed styles found by each method (native DOM, DOM4J back-end or DOM wrapper) may not be completely identical, due to differences in the
 underlying document DOM implementations:</p>
@@ -376,9 +432,281 @@ underlying document DOM implementations:</p>
 </ul>
 <p>If you find a difference in styles computed from different back-ends that you believe to be a bug, please report it.</p>
 </div>
+<div class="tema" id="declared-styles">
+<h2>Accessing the declared style sheets</h2>
+<p>To access the styles declared in style sheets, we can use the relevant
+<a href="https://www.w3.org/TR/cssom-1/" target="_blank">CSS Object Model</a> methods.
+For example, suppose that the first style sheet of the document contains only the following rule:</p>
+<pre class="code"><code class="language-css">div > .myClass {
+  font-size: 14pt;
+  color: var(--myColor, #46f);
+}
+</code></pre>
+<p>then, to access that style sheet and that rule we could use something like this:</p>
+<pre class="code"><code class="language-java">/*
+ * Access style sheet(s) and its rule(s)
+ */
+// Obtain the list of CSS style sheets
+StyleSheetList sheets = document.getStyleSheets();
+// Access the first sheet
+AbstractCSSStyleSheet sheet = sheets.item(0);
+// The first rule in the sheet
+AbstractCSSRule rule = sheet.getCssRules().item(0);
+// What kind of rule is it?
+int ruleType = rule.getType();
+// It is a style rule (CSSRule.STYLE_RULE)
+</code></pre>
+<p>Now we can cast to a <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleRule.html">StyleRule</a>
+which gives us access to the selector list and the declared style.</p>
+<p>Keep in mind that you can also use the <a class="codeitem" href="api/latest/io.sf.carte.util/io/sf/carte/util/Visitor.html">Visitor</a>
+API to perform many of the tasks that can be achieved with the standard CSSOM, for example:</p>
+<ul>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptStyleRuleVisitor(io.sf.carte.util.Visitor)">acceptStyleRuleVisitor</a>
+ to visit style rules in a sheet.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptDeclarationRuleVisitor(io.sf.carte.util.Visitor)">acceptDeclarationRuleVisitor</a>
+ to visit declaration rules in a sheet.</li>
+<li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptDescriptorRuleVisitor(io.sf.carte.util.Visitor)">acceptDescriptorRuleVisitor</a>
+ to visit declaration rules with descriptors within a sheet.</li>
+</ul>
+<p>With Visitors, you do not need to navigate the different rules yourself.</p>
+<br/>
+<h3 class="subtema" id="selectors">Dealing with selectors</h3>
+<p>If your use case requires inspecting the selectors, you will need to look at the NSAC api, starting with the
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Selector.html">Selector</a> class.</p>
+<pre class="code"><code class="language-java">// Cast
+StyleRule styleRule = (StyleRule) rule;
+// Obtain the selector list
+SelectorList selist = styleRule.getSelectorList();
+
+// First (and only) selector
+Selector selector = selist.item(0);
+// Selector type (which we can use to cast the selector)
+SelectorType selType = selector.getSelectorType();
+// For "div > .myClass" selType would be SelectorType.CHILD
+
+// Cast to CombinatorSelector (see CHILD javadoc)
+CombinatorSelector comb = (CombinatorSelector) selector;
+// Obtain the two selectors that are combined by ">"
+Selector firstSel = comb.getSelector();
+SimpleSelector secondSel = comb.getSecondSelector();
+
+// Examine the first selector
+SelectorType firstSelType = firstSel.getSelectorType();
+// Type is SelectorType.ELEMENT (div)
+
+// Cast to ElementSelector (see ELEMENT javadoc)
+ElementSelector elemSel = (ElementSelector) firstSel;
+String elemName = elemSel.getLocalName();
+// It is "div"
+
+// Now the second selector
+SelectorType secondSelType = secondSel.getSelectorType();
+// Type is SelectorType.CONDITIONAL (.myClass)
+
+// Cast to ConditionalSelector
+ConditionalSelector condSel = (ConditionalSelector) secondSel;
+Condition condition = condSel.getCondition();
+ConditionType condType = condition.getConditionType();
+// The condition type is ConditionType.CLASS
+
+// Cast condition to AttributeCondition (as suggested by the CLASS javadoc)
+AttributeCondition attrCond = (AttributeCondition) condition;
+// Retrieve the condition (class) name
+String cssClassName = attrCond.getValue();
+// It is "myClass"
+</code></pre>
+<br/>
+<h3 class="subtema" id="use-declared-styles">Using the declared styles</h3>
+<p>In the previous example we got the style rule in a <code>styleRule</code> variable.
+Now we use it to obtain the declared style and examine the declared properties:</p>
+<pre class="code"><code class="language-java">// Obtain the declared style from the rule
+AbstractCSSStyleDeclaration style = styleRule.getStyle();
+
+// Obtain the number of properties
+int pCount = style.getLength();
+// Two properties
+
+/*
+ * The first property
+ */
+// Retrieve the name of the first property
+String pname0 = style.item(0);
+// pname0 is "font-size"
+
+// Obtain the value of "font-size"
+StyleValue fontSize = style.getPropertyCSSValue("font-size");
+
+// Is it a length?
+SyntaxParser synparser = new SyntaxParser();
+CSSValueSyntax syntaxLength = synparser.parseSyntax("&lt;length&gt;");
+Match match0 = fontSize.matches(syntaxLength);
+// Match.TRUE: yes it is a length
+
+// Let's check the primitive type
+CSSValue.Type primiType0 = fontSize.getPrimitiveType();
+// CSSValue.Type.NUMERIC: It is numeric
+
+// Obtain the CSS unit and numeric value
+NumberValue numericValue = (NumberValue) fontSize;
+short unit = numericValue.getUnitType();
+// Unit is typographic points (CSSUnit.CSS_PT)
+float floatVal = numericValue.getFloatValue(unit);
+// Value is 14 (14pt)
+
+/*
+ * The second property
+ */
+// Retrieve the name of the second property
+String pname1 = style.item(1);
+// pname1 is "color"
+
+// Obtain the value of "color"
+StyleValue color = style.getPropertyCSSValue("color");
+
+// Let's check the global type
+CSSValue.CssType type1 = color.getCssValueType();
+// It is a CSSValue.CssType.PROXY, which means that it is either a
+// custom property value (it is not) or a type not known in advance
+
+// But may it be a color?
+CSSValueSyntax syntaxColor = synparser.parseSyntax("&lt;color&gt;");
+Match match1 = color.matches(syntaxColor);
+// Gives Match.PENDING: yes it could be a color, but we do not know for sure
+// until the value is computed
+
+// Check the primitive type
+CSSValue.Type primiType1 = color.getPrimitiveType();
+// It is a var() function (CSSValue.Type.VAR)
+
+// Obtain the custom property name
+VarValue varValue = (VarValue) color;
+String customPropertyName = varValue.getName();
+// Name is --myColor
+
+// In this case we have a fallback value (otherwise next line returns null)
+LexicalUnit lexUnit = varValue.getFallback();
+// Let's see its unit type
+LexicalType luType = lexUnit.getLexicalUnitType();
+// It is a LexicalType.RGBCOLOR
+
+// And the color is...
+String strColor = lexUnit.getCssText();
+// Is '#46f'
+
+// Access the individual color components.
+// RGB colors are accessed as a rgb() function, so we retrieve
+// the function parameters as a doubly-linked list:
+LexicalUnit firstComponent = lexUnit.getParameters();
+
+// Let's see the lexical type to see how we access the value
+LexicalType firstLexUnitType = firstComponent.getLexicalUnitType();
+// It is a LexicalType.INTEGER (RGB components could be PERCENTAGE as well)
+
+// Therefore we use getIntegerValue()
+int color_R = firstComponent.getIntegerValue();
+// Is 0x44 hex (68 decimal)
+
+// Second component is the next in the linked list.
+// Beware that if the color was specified with commas,
+// like "rgb(20, 30, 40)", the next one could be a comma!
+LexicalUnit secondComponent = firstComponent.getNextLexicalUnit();
+int color_G = secondComponent.getIntegerValue();
+// Is 0x66 (102 decimal)
+
+// Third component
+LexicalUnit thirdComponent = secondComponent.getNextLexicalUnit();
+int color_B = thirdComponent.getIntegerValue();
+// Is 0xff (255 decimal)
+</code></pre>
+<p>Now let's set another property</p>
+<pre class="code"><code class="language-java">/*
+ * Set another property, with important priority
+ */
+style.setProperty("background-color", "#d0dfee7a", "important");
+
+pCount = style.getLength();
+// Now we have three properties
+</code></pre>
+</div>
+<div class="tema" id="inline-styles">
+<h2>Working with inline styles</h2>
+<p>Now we are going to obtain the inline style of an element, as given by the <code>style</code> attribute.
+In the next example, the inline style is supposed to contain the declaration of a custom property called
+<code>--myColor</code> with a value <code>#54e</code>.</p>
+<pre class="code"><code class="language-java">/*
+ * Access a style attribute (inline styles)
+ */
+// First obtain the desired element, for example:
+CSSElement element = document.getElementById("someId");
+// Now the inline style. It can be directly accessed
+CSSStyleDeclaration inlineStyle = element.getStyle();
+
+// How many properties are defined?
+int inlinePCount = inlineStyle.getLength();
+// Suppose that it is just one called --myColor
+
+// Retrieve its name
+String inlinePname0 = inlineStyle.item(0);
+// It is "--myColor"
+
+// Now get the value
+CSSValue myColor = inlineStyle.getPropertyCSSValue(inlinePname0);
+
+/*
+ * Handle the custom property in myColor
+ */
+// Get the general value type
+CSSValue.CssType type = myColor.getCssValueType();
+// Being a custom property, it must be a CssType.PROXY
+
+// But is it (or could be) a color?
+Match matchCP = myColor.matches(syntaxColor);
+// Match.TRUE: Yes it is for sure!
+
+// Let's see the primitive type, although...
+CSSValue.Type primiType = myColor.getPrimitiveType();
+// custom properties are *always* Type.LEXICAL values
+
+LexicalValue lvColor = (LexicalValue) myColor;
+// Can we know its final value type once it is processed?
+Type finalType = lvColor.getFinalType();
+// Yes, as suggested by the result of calling 'matches'
+// ...it is a Type.COLOR
+
+// Let's retrieve its value
+LexicalUnit lexUnitCP = lvColor.getLexicalUnit();
+// First see its unit type
+LexicalType luTypeCP = lexUnitCP.getLexicalUnitType();
+// It is a RGBCOLOR
+
+// And the color is...
+String strlexUnitCP = lexUnitCP.getCssText();
+// Is '#54e'. We could also access its components
+
+// Let's change the value of the custom property
+// We want to set '#667'
+inlineStyle.setProperty(inlinePname0, "#667", null);
+
+// Check that we successfully assigned the new value:
+String newInlineValue = inlineStyle.getPropertyValue(inlinePname0);
+// Yes it is '#667' as we wanted
+</code></pre>
+</div>
+<div class="tema" id="overridestyles">
+<h2>Override styles</h2>
+<p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
+but are supported by this library; they are like "hidden" inline styles.</p>
+<p>To access the override style of an element, use <code>CSSElement</code>'s <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
+For example:</p>
+<pre class="code"><code class="language-java">element.getOverrideStyle(null).setCssText("padding: 6pt;");
+</code></pre>
+<p>Override styles are defined at the <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-DocumentCSS" target="_blank">DocumentCSS interface</a> description.</p>
+</div>
 <div id="cascade" class="tema">
 <h2>Configuring the cascade</h2>
-<p>Depending on your use case, you may need to set the <a href="https://www.w3.org/TR/css-cascade-3/#origin">user agent (UA) style sheet</a>.
+<p>Depending on your use case, you may need to set the <a href="https://www.w3.org/TR/css-cascade-3/#origin">user
+agent (UA) style sheet</a> before starting to compute styles.
 The library supports two different UA sheets, one for <code>STRICT</code> ('standards') mode and another for <code>QUIRKS</code>.
 To set either of those sheets, first obtain an instance of the factory that you are using:
 </p>
@@ -396,7 +724,7 @@ appropriate for you:
 <p>But if you want to set your own UA sheet, first obtain a reference to the sheet:</p>
 <pre class="code"><code class="language-java">BaseCSSStyleSheet sheet = cssFactory.getUserAgentStyleSheet(CSSDocument.ComplianceMode.STRICT);
 </code></pre>
-<p>This is assuming the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
+<p>This is assuming the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.ComplianceMode.html#STRICT">STRICT</a>
 mode, <i>i.e.</i> that you use documents with a <code>DOCTYPE</code>, otherwise use <code>QUIRKS</code> (or you may want to set both UA sheets).
 </p>
 <p>If the UA sheet already contains rules (it is empty by default), clean it:</p>
@@ -410,13 +738,14 @@ reader.close();
 <p>As the UA sheet's comments are rarely of interest at the OM level, they were ignored during the parse
 process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 <p><em>Note: this implementation does not support <code>important</code> style declarations in the UA sheet.</em></p>
+<br/>
 <h3>Setting the user style sheet</h3>
-<p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
+<p>There is also the possibility to set a user style sheet (with 'user' origin) via <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>:</p>
 <pre class="code"><code class="language-java">Reader reader = ... [reads the user sheet]
 cssFactory.setUserStyleSheet(reader);
 reader.close();
 </code></pre>
-<p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
+<p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
 <h2>Media handling</h2>
@@ -436,7 +765,7 @@ but this approach allows to isolate DOM logic inside DOM objects and keep the <c
 <div class="tema" id="sheetsets">
 <h2>Style sheet sets</h2>
 <p>The library supports alternative style sheets: see CSSDocument's methods
-<a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.html#enableStyleSheetsForSet(java.lang.String)">enableStyleSheetsForSet</a>,
 getStyleSheetSets, getSelectedStyleSheetSet and setSelectedStyleSheetSet. For example, if you have a document with these linked sheets:</p>
 <pre class="code"><code class="language-xml">&lt;link href="http://www.example.com/commonsheet.css" rel="stylesheet" type="text/css" /&gt;
 &lt;link href="http://www.example.com/alter1.css" rel="alternate stylesheet" type="text/css" title="Alter 1" /&gt;
@@ -453,7 +782,7 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 <div class="tema" id="errorchecking">
 <h2>Style sheet error checking</h2>
 <p>You can check for errors and warnings in the document's sheets using the non-standard
-<a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#getErrorHandler()">getErrorHandler</a> method. Example:</p>
 <pre class="code"><code class="language-java">if (document.getStyleSheets().item(0).getErrorHandler().hasSacErrors())
 	... error processing / reporting
 </code></pre>
@@ -462,23 +791,14 @@ document.setSelectedStyleSheetSet("Alter 2");  // Selects the set with title "Al
 NSAC flags when creating the factory, see <a href="#legacycompat">Compatibility with legacy browsers</a>),
 or charset rules found in the wrong place.</p>
 </div>
-<div class="tema" id="overridestyles">
-<h2>Override styles</h2>
-<p>Override styles, that come after the author style sheet in the cascade algorithm, are not part of the formal standard
-but are supported by this library; use <code>CSSElement</code>'s <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSElement.html#getOverrideStyle(io.sf.carte.doc.style.css.nsac.Condition)">getOverrideStyle</a>.
-For example:</p>
-<pre class="code"><code class="language-java">element.getOverrideStyle(null).setCssText("padding: 6pt;");
-</code></pre>
-<p>Override styles are defined at the <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-DocumentCSS" target="_blank">DocumentCSS interface</a> description.</p>
-</div>
 <div class="tema" id="sheetparsing">
 <h2>Parsing a style sheet</h2>
 <p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
-from a source stream with the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
+from a source stream with the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
 <pre class="code"><code class="language-java">Reader re = ...
 sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 </code></pre>
-<p>When the second argument is <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
+<p>When the second argument is <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
 (see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
 <p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
 (although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
@@ -508,7 +828,7 @@ Several web sites contain information about that, including:</p>
 library supports them.</p>
 <p>By default, a factory is configured to use a flagless NSAC parser which would produce an error on any of those non-standard constructs,
 but a set of compatibility flags can be specified in the constructors for the factory implementations. The different flags
-are documented in the <a href="api/3/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC javadocs</a>.</p>
+are documented in the <a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC javadocs</a>.</p>
 <p>The flags available at the time of this guide's update are the following:</p>
 <ul>
 <li><code>STARHACK</code>. When set, the parser will handle asterisk-prefixed property names as accepted, normal names.</li>
@@ -539,26 +859,28 @@ length. For example, the length of the following declaration would be <code>2</c
 </code></pre>
 <p>If you want to use these flags at the NSAC level (instead of the Object Model), you may want to read the 'Parser Flags' section in the
 NSAC package description, as well as the documentation for the individual flags in
-<a href="api/3/io/sf/carte/doc/style/css/nsac/Parser.Flag.html"><code>Parser.Flag</code></a>.</p>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Parser.Flag.html">Parser.Flag</a>.</p>
 </div>
 <div class="tema" id="styleformatting">
 <h2>CSS style formatting</h2>
 <p>The serialization of the <code>cssText</code> attribute in <a href="https://www.w3.org/TR/cssom-1/#dom-cssrule-csstext" target="_blank">rules</a> and
 <a href="https://www.w3.org/TR/cssom-1/#dom-cssstyledeclaration-csstext" target="_blank">style declarations</a> can be customized with an implementation
-of the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
-You can set your <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/StyleFormattingFactory.html">StyleFormattingFactory</a>
-(which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
-method, or subclass your style sheet factory and override the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
-<p>Look at the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a> class for an example of a formatting context implementation.</p>
-<p>To customize the serialization of computed styles, you want to override the <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/StyleFormattingFactory.html#createComputedStyleFormattingContext()">createComputedStyleFormattingContext()</a> method.
-The convenience <a class="codeitem" href="api/3/io/sf/carte/doc/style/css/om/RGBStyleFormattingFactory.html">RGBStyleFormattingFactory</a> serializes all computed colors as RGB and may serve as a customization example.</p>
+of the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleFormattingContext.html">StyleFormattingContext</a> interface.
+You can set your <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleFormattingFactory.html">StyleFormattingFactory</a>
+(which produces your customized formatting context) to the sheet factory with the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">CSSStyleSheetFactory.setStyleFormattingFactory</a>
+method, or subclass your style sheet factory and override the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#createDefaultStyleFormattingFactory()">createDefaultStyleFormattingFactory</a> method.</p>
+<p>Look at the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DefaultStyleFormattingContext.html">DefaultStyleFormattingContext</a>
+class for an example of a formatting context implementation.</p>
+<p>To customize the serialization of computed styles, you want to override the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleFormattingFactory.html#createComputedStyleFormattingContext()">createComputedStyleFormattingContext()</a> method.
+The convenience <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/RGBStyleFormattingFactory.html">RGBStyleFormattingFactory</a>
+serializes computed colors as RGB and may serve as a customization example.</p>
 <h3>String value formatting</h3>
-<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/3/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
+<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
 <ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
-<li><b><a href="api/3/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
+<li><b><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
 Use double quotes unless single quotes are more efficient (when the string contains more double quotes than single).</li>
-<li><b><a href="api/3/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
+<li><b><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
 Use single quotes unless double quotes are more efficient (when the string contains more single quotes than double).</li>
 </ul>
 </div>
@@ -569,23 +891,25 @@ Use single quotes unless double quotes are more efficient (when the string conta
 p {color: blue; } /* This is a trailing comment */
 </code></pre>
 <p><em>(XML-style comments can also be present in a style sheet, but both NSAC and the CSSOM skip them.)</em></p>
-<p>There is no standard CSSOM API for accessing comments in style sheets, but the <a href="api/3/io/sf/carte/doc/style/css/CSSRule.html#getPrecedingComments()"><code>CSSRule.getPrecedingComments()</code></a>
-and <a href="api/3/io/sf/carte/doc/style/css/CSSRule.html#getTrailingComments()"><code>CSSRule.getTrailingComments()</code></a> methods are provided for that:</p>
+<p>There is no standard CSSOM API for accessing comments in style sheets, but the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRule.html#getPrecedingComments()">CSSRule.getPrecedingComments()</a>
+and <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRule.html#getTrailingComments()">CSSRule.getTrailingComments()</a>
+methods are provided for that:</p>
 <pre class="code"><code class="language-java">StringList pcomments = document.getStyleSheets().item(0).getCssRules().item(3).getPrecedingComments();
 StringList tcomments = document.getStyleSheets().item(0).getCssRules().item(3).getTrailingComments();
 </code></pre>
 <p>Other API models were considered for object-model comments, like having a special type of comment rule, but stylesheet-level comments
 are often related to a rule and if that rule is moved or deleted, those stand-alone comments would have the potential to create
 a lot of confusion.</p>
-<p>By default, comments are parsed with the <code><a href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_AUTO">COMMENTS_AUTO</a></code>
+<p>By default, comments are parsed with the <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_AUTO">COMMENTS_AUTO</a></code>
 mode, which should be appropriate for human-readable sheets like the one shown above. But a lot of sheets are serialized
 in a way that there are no newline characters (or only a few). For these cases, 
-<code><a href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_PRECEDING">COMMENTS_PRECEDING</a></code> could be used in
-<code><a href="api/3/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">parseStyleSheet(Reader,short)</a></code>,
-and all the comments will be considered as belonging to the next rule. With <code><a href="api/3/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a></code>,
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_PRECEDING">COMMENTS_PRECEDING</a> could be used in
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">parseStyleSheet(Reader,short)</a>,
+and all the comments will be considered as belonging to the next rule. With <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a></code>,
 all comments found while parsing the sheet will be ignored.</p>
 <p>The comments preceding/trailing any rule will be included in the text returned by the sheet's <code>AbstractCSSStyleSheet.toString()</code> and
-<code><a href="api/3/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
+<code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
 while other comments (located at places that cannot be easily related to a rule) are lost.</p>
 <p>In css4j version 1.0, comments that were intended to apply to the previous rule may be assigned to the next one,
 but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
@@ -594,7 +918,7 @@ but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate appro
 <div class="tema" id="awt">
 <h2>Create an AWT font/color from a computed style (css4j-awt module)</h2>
 <p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color with the <code>createFont</code> and <code>getAWTColor</code>
-static methods in the <code>AWTHelper</code> class:</p>
+static methods in the <a class="codeitem" href="api/latest/io.sf.carte.css4j.awt/io/sf/carte/doc/style/css/awt/AWTHelper.html">AWTHelper</a> class:</p>
 <pre class="code"><code class="language-java">CSSComputedProperties style = ...
 java.awt.Font font = AWTHelper.createFont(style);
 CSSTypedValue cssColor = (CSSTypedValue) style.getPropertyCSSValue("color");
@@ -628,19 +952,19 @@ Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
 <code>disabled</code>, <code>enabled</code>, <code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>,
 <code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code> and <code>indeterminate</code>.</p>
 <p>State pseudo-classes like <code>hover</code> are supported through the
-<a class="codeitem" href="api/3/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
 <div class="tema" id="renderinterfaces">
 <h2>Rendering-oriented interfaces</h2>
 <p>To help with the determination of 'used' values and the actual rendering, this library provides a few helper interfaces. The most important are:</p>
-<ul><li><a class="itemtitle codeitem" href="api/3/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. Delivers the relevant abstractions for a
+<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. Delivers the relevant abstractions for a
 requested medium: <code>StyleDatabase</code> and <code>CSSCanvas</code>.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/3/io/sf/carte/doc/style/css/StyleDatabase.html">StyleDatabase</a>.
+<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html">StyleDatabase</a>.
 Provides medium-specific information like available fonts and colors.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/3/io/sf/carte/doc/style/css/CSSCanvas.html">CSSCanvas</a>.
+<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html">CSSCanvas</a>.
 Has knowledge of medium-specific information that depends (or may depend) on a specific viewport, like supported media features. It is linked
 to a viewport, if there is any. This interface is used to determine the state of active pseudo-classes.</li></ul>
-<ul><li><a class="itemtitle codeitem" href="api/3/io/sf/carte/doc/style/css/Viewport.html">Viewport</a>. It represents a viewport defined
+<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/Viewport.html">Viewport</a>. It represents a viewport defined
 as per the CSS specifications.</li></ul>
 <p>The differences between style databases and canvases can be subtle, and for some media features it could be argued that they belong to
 one or the other. The basic idea is that style databases should be relatively easy to implement for a given medium, while canvases are
