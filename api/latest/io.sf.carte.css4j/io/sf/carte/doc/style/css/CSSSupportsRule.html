@@ -152,10 +152,15 @@ extends <a href="CSSConditionRule.html" title="interface in io.sf.carte.doc.styl
 <section class="detail" id="getCondition()">
 <h3>getCondition</h3>
 <div class="member-signature"><span class="return-type"><a href="BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">getCondition</span>()</div>
-<div class="block">Get the object model representation of the condition associated to this rule.</div>
+<div class="block">Get the object model representation of the condition associated to this rule.
+ <p>
+ In this implementation, <code>@supports</code> predicates implement the
+ <a href="parser/DeclarationCondition.html" title="interface in io.sf.carte.doc.style.css.parser"><code>DeclarationCondition</code></a> interface.
+ </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the object model representation of the condition associated to this rule.</dd>
+<dd>the object model representation of the condition associated to this
+         rule.</dd>
 </dl>
 </section>
 </li>

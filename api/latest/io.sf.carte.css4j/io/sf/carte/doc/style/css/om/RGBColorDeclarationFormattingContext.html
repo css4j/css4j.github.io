@@ -178,12 +178,11 @@ loadScripts(document, 'script');</script>
  <a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a>&nbsp;value)</span>
                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../DeclarationFormattingContext.html#writeValue(io.sf.carte.util.SimpleWriter,java.lang.String,io.sf.carte.doc.style.css.CSSValue)">DeclarationFormattingContext</a></code></span></div>
-<div class="block">Write a css value to the given writer.</div>
+<div class="block">Write a css value to the given writer.
+ <p>
+ The default implementation calls <a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)"><code>CSSValue.writeCssText(SimpleWriter)</code></a>.
+ </p></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../DeclarationFormattingContext.html#writeValue(io.sf.carte.util.SimpleWriter,java.lang.String,io.sf.carte.doc.style.css.CSSValue)">writeValue</a></code>&nbsp;in interface&nbsp;<code><a href="../DeclarationFormattingContext.html" title="interface in io.sf.carte.doc.style.css">DeclarationFormattingContext</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="DefaultDeclarationFormattingContext.html#writeValue(io.sf.carte.util.SimpleWriter,java.lang.String,io.sf.carte.doc.style.css.CSSValue)">writeValue</a></code>&nbsp;in class&nbsp;<code><a href="DefaultDeclarationFormattingContext.html" title="class in io.sf.carte.doc.style.css.om">DefaultDeclarationFormattingContext</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>wri</code> - the writer.</dd>
 <dd><code>propertyName</code> - the name of the property whose value is being printed.</dd>
@@ -205,12 +204,12 @@ loadScripts(document, 'script');</script>
  <p>
  Note that in order to guarantee some consistency, shorthands may not use this
  method to minify values.
+ </p>
+ <p>
+ The default implementation just writes
+ <a href="../CSSValue.html#getMinifiedCssText(java.lang.String)"><code>CSSValue.getMinifiedCssText(String)</code></a>.
  </p></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../DeclarationFormattingContext.html#writeMinifiedValue(io.sf.carte.util.SimpleWriter,java.lang.String,io.sf.carte.doc.style.css.CSSValue)">writeMinifiedValue</a></code>&nbsp;in interface&nbsp;<code><a href="../DeclarationFormattingContext.html" title="interface in io.sf.carte.doc.style.css">DeclarationFormattingContext</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="DefaultDeclarationFormattingContext.html#writeMinifiedValue(io.sf.carte.util.SimpleWriter,java.lang.String,io.sf.carte.doc.style.css.CSSValue)">writeMinifiedValue</a></code>&nbsp;in class&nbsp;<code><a href="DefaultDeclarationFormattingContext.html" title="class in io.sf.carte.doc.style.css.om">DefaultDeclarationFormattingContext</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>wri</code> - the writer.</dd>
 <dd><code>propertyName</code> - the name of the property whose value is being printed.</dd>

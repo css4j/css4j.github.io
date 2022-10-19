@@ -114,13 +114,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#AND" class="member-name-link">AND</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">An <code>AND</code> condition.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="#NOT" class="member-name-link">NOT</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">A <code>NOT</code> condition.</div>
+</div>
 <div class="col-first even-row-color"><code><a href="#OR" class="member-name-link">OR</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">An <code>OR</code> condition.</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="#PREDICATE" class="member-name-link">PREDICATE</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">An implementation-dependent predicate.</div>
+</div>
 </div>
 </section>
 </li>
@@ -170,24 +178,37 @@ the order they are declared.</div>
 <section class="detail" id="PREDICATE">
 <h3>PREDICATE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BooleanCondition.Type.html" title="enum class in io.sf.carte.doc.style.css">BooleanCondition.Type</a></span>&nbsp;<span class="element-name">PREDICATE</span></div>
+<div class="block">An implementation-dependent predicate.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="OR">
 <h3>OR</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BooleanCondition.Type.html" title="enum class in io.sf.carte.doc.style.css">BooleanCondition.Type</a></span>&nbsp;<span class="element-name">OR</span></div>
+<div class="block">An <code>OR</code> condition.
+ <p>
+ Use <a href="BooleanCondition.html#getSubConditions()"><code>BooleanCondition.getSubConditions()</code></a>.
+ </p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="AND">
 <h3>AND</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BooleanCondition.Type.html" title="enum class in io.sf.carte.doc.style.css">BooleanCondition.Type</a></span>&nbsp;<span class="element-name">AND</span></div>
+<div class="block">An <code>AND</code> condition.
+ <p>
+ Use <a href="BooleanCondition.html#getSubConditions()"><code>BooleanCondition.getSubConditions()</code></a>.
+ </p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="NOT">
 <h3>NOT</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="BooleanCondition.Type.html" title="enum class in io.sf.carte.doc.style.css">BooleanCondition.Type</a></span>&nbsp;<span class="element-name">NOT</span></div>
+<div class="block">A <code>NOT</code> condition.
+ <p>
+ Use <a href="BooleanCondition.html#getNestedCondition()"><code>BooleanCondition.getNestedCondition()</code></a>.
+ </p></div>
 </section>
 </li>
 </ul>

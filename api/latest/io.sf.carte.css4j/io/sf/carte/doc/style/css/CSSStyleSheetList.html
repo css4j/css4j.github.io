@@ -103,9 +103,24 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a>&lt;<a href="CSSStyleSheetList.html" title="type parameter in CSSStyleSheetList">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#item(int)" class="member-name-link">item</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#acceptDeclarationRuleVisitor(io.sf.carte.util.Visitor)" class="member-name-link">acceptDeclarationRuleVisitor</a><wbr>(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a>&gt;&nbsp;visitor)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Accept a declaration rule visitor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#acceptDescriptorRuleVisitor(io.sf.carte.util.Visitor)" class="member-name-link">acceptDescriptorRuleVisitor</a><wbr>(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a>&gt;&nbsp;visitor)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Accept a descriptor rule visitor.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#acceptStyleRuleVisitor(io.sf.carte.util.Visitor)" class="member-name-link">acceptStyleRuleVisitor</a><wbr>(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a>&gt;&nbsp;visitor)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Accept a style rule visitor.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a>&lt;<a href="CSSStyleSheetList.html" title="type parameter in CSSStyleSheetList">T</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#item(int)" class="member-name-link">item</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">retrieve a <code>CSSStyleSheet</code> by ordinal index.</div>
 </div>
 </div>
@@ -139,6 +154,51 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <dd>the sheet at <code>index</code>, or <code>null</code> if
          <code>index</code> is less than zero, or greater or equal to the list
          length.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="acceptStyleRuleVisitor(io.sf.carte.util.Visitor)">
+<h3>acceptStyleRuleVisitor</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">acceptStyleRuleVisitor</span><wbr><span class="parameters">(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a>&gt;&nbsp;visitor)</span></div>
+<div class="block">Accept a style rule visitor.
+ <p>
+ This method scans all the sheets in this list for style rules and visits
+ them.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>visitor</code> - the visitor.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="acceptDeclarationRuleVisitor(io.sf.carte.util.Visitor)">
+<h3>acceptDeclarationRuleVisitor</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">acceptDeclarationRuleVisitor</span><wbr><span class="parameters">(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a>&gt;&nbsp;visitor)</span></div>
+<div class="block">Accept a declaration rule visitor.
+ <p>
+ This method scans all the sheets in this list for declaration rules and
+ visits them.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>visitor</code> - the visitor.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="acceptDescriptorRuleVisitor(io.sf.carte.util.Visitor)">
+<h3>acceptDescriptorRuleVisitor</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">acceptDescriptorRuleVisitor</span><wbr><span class="parameters">(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a>&gt;&nbsp;visitor)</span></div>
+<div class="block">Accept a descriptor rule visitor.
+ <p>
+ This method scans all the sheets in this list for declaration rules that
+ declare descriptors, and visits them.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>visitor</code> - the visitor.</dd>
 </dl>
 </section>
 </li>

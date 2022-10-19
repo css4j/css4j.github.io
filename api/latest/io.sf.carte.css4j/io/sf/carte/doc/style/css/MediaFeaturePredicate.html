@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></dd>
+<dd><code><a href="BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code>, <code><a href="MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -84,7 +84,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MediaFeaturePredicate</span><span class="extends-implements">
-extends <a href="BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span></div>
+extends <a href="MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a></span></div>
 <div class="block">Media Feature predicate.
  <p>
  Represents a predicate like <code>(min-width: 600px)</code> or
@@ -154,6 +154,9 @@ extends <a href="BooleanCondition.html" title="interface in io.sf.carte.doc.styl
 <div class="col-second odd-row-color"><code><a href="#FEATURE_PLAIN" class="member-name-link">FEATURE_PLAIN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.MediaQueryPredicate">Fields inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a></h3>
+<code><a href="MediaQueryPredicate.html#MEDIA_FEATURE">MEDIA_FEATURE</a>, <a href="MediaQueryPredicate.html#MEDIA_TYPE">MEDIA_TYPE</a></code></div>
 </section>
 </li>
 <!-- ========== METHOD SUMMARY =========== -->
@@ -200,6 +203,9 @@ extends <a href="BooleanCondition.html" title="interface in io.sf.carte.doc.styl
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.BooleanCondition">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></h3>
 <code><a href="BooleanCondition.html#addCondition(io.sf.carte.doc.style.css.BooleanCondition)">addCondition</a>, <a href="BooleanCondition.html#appendMinifiedText(java.lang.StringBuilder)">appendMinifiedText</a>, <a href="BooleanCondition.html#appendText(java.lang.StringBuilder)">appendText</a>, <a href="BooleanCondition.html#getNestedCondition()">getNestedCondition</a>, <a href="BooleanCondition.html#getParentCondition()">getParentCondition</a>, <a href="BooleanCondition.html#getSubConditions()">getSubConditions</a>, <a href="BooleanCondition.html#getType()">getType</a>, <a href="BooleanCondition.html#replaceLast(io.sf.carte.doc.style.css.BooleanCondition)">replaceLast</a>, <a href="BooleanCondition.html#setParentCondition(io.sf.carte.doc.style.css.BooleanCondition)">setParentCondition</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.MediaQueryPredicate">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a></h3>
+<code><a href="MediaQueryPredicate.html#getPredicateType()">getPredicateType</a></code></div>
 </section>
 </li>
 </ul>
@@ -423,6 +429,8 @@ extends <a href="BooleanCondition.html" title="interface in io.sf.carte.doc.styl
  <p>
  Example: <code>width</code>.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="MediaQueryPredicate.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a></code></dd>
 <dt>Returns:</dt>
 <dd>the name of the feature.</dd>
 </dl>
