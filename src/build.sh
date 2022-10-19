@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright © 2017-2021 C. Amengual
+# Copyright © 2017-2022 C. Amengual
 #
 # This script generates the aggregated Javascript and CSS files used in this
 # website. Some small CSS files are located in $CSSSRCDIR, but the main style
@@ -26,7 +26,7 @@ WORKDIR=$TMP/css4j.github
 # Versioning
 FAQJSVER=a
 USAGEJSVER=d
-USAGECSSVER=d
+USAGECSSVER=e
 BASEJSVER=a
 BASECSSVER=c
 # Create working directory, if does not exist
