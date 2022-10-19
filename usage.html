@@ -120,10 +120,10 @@ href="api/latest/io.sf.carte.xml.dtd/module-summary.html">io.sf.carte.xml.dtd</a
 </ul>
 <p>In general, you'll need to have at least <code>css4j</code>, <code>carte-util</code> and <code>tokenproducer</code> in your classpath/modulepath.
 If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
-<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.6.0/css4j-dom4j-3.6.0.pom"><code>.pom</code></a>
-or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.6.0/css4j-dom4j-3.6.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
+<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.8.0/css4j-dom4j-3.8.0.pom"><code>.pom</code></a>
+or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.8.0/css4j-dom4j-3.8.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
 <p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 3.6.1 is compatible with
-<code>css4j</code> 3.6.1 and also with 3.7.0.</p>
+<code>css4j</code> 3.6.1 and also with 3.8.0.</p>
 
 <br/>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
@@ -553,6 +553,9 @@ short unit = numericValue.getUnitType();
 float floatVal = numericValue.getFloatValue(unit);
 // Value is 14 (14pt)
 
+// Change the value to 10pt
+numericValue.setFloatValue(CSSUnit.CSS_PT, 10f);
+
 /*
  * The second property
  */
@@ -608,7 +611,7 @@ int color_R = firstComponent.getIntegerValue();
 
 // Second component is the next in the linked list.
 // Beware that if the color was specified with commas,
-// like "rgb(20, 30, 40)", the next one could be a comma!
+// like "rgb(68, 102, 255)", the next one could be a comma!
 LexicalUnit secondComponent = firstComponent.getNextLexicalUnit();
 int color_G = secondComponent.getIntegerValue();
 // Is 0x66 (102 decimal)
@@ -626,6 +629,33 @@ style.setProperty("background-color", "#d0dfee7a", "important");
 
 pCount = style.getLength();
 // Now we have three properties
+</code></pre>
+<br/>
+<h3 class="subtema" id="update-internal-sheets">Updating internal sheets</h3>
+<p><b>IMPORTANT:</b> once we are done updating a style sheet, if the sheet is internal to the
+document (that is, it is located inside a <code>&lt;style&gt;</code> element), the actual
+contents of the <code>&lt;style&gt;</code> element will not be updated until you execute
+<code>normalize()</code> on that element node:</p>
+<pre class="code"><code class="language-java">// Obtain the owner node
+org.w3c.dom.Node styleNode = sheet.getOwnerNode();
+
+// Which type is it?
+short nodeType = styleNode.getNodeType();
+// It is a ELEMENT_NODE (could also be a PROCESSING_INSTRUCTION_NODE)
+
+// Get the name of the element
+String nodeName = styleNode.getNodeName();
+// It is "style", as expected
+
+// Get the element content (the initial serialized style sheet)
+String preContent = styleNode.getTextContent();
+
+// Serialize the current style sheet into the inner text node
+styleNode.normalize();
+
+// Get the normalized element content (the current serialization)
+String afterContent = styleNode.getTextContent();
+// preContent and afterContent are different
 </code></pre>
 </div>
 <div class="tema" id="inline-styles">
@@ -691,6 +721,13 @@ inlineStyle.setProperty(inlinePname0, "#667", null);
 String newInlineValue = inlineStyle.getPropertyValue(inlinePname0);
 // Yes it is '#667' as we wanted
 </code></pre>
+<p>After changing an inline style you do not need to call any method (like how <code>normalize()</code> was used for
+internal sheets) to modify the document. The serialization of (inline) style attributes is always up to date.</p>
+<p>The small drawback is that the <code>style</code> attributes may not appear exactly as they were specified, but instead
+according to the serialization given by this library (which can be tailored a bit, for example by customizing <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleFormattingContext.html#endInlinePropertyDeclaration(io.sf.carte.util.SimpleWriter)"
+>endInlinePropertyDeclaration()</a> in your own <code>StyleFormattingContext</code>, see <a href="#styleformatting">CSS
+style formatting</a> for details).</p>
 </div>
 <div class="tema" id="overridestyles">
 <h2>Override styles</h2>
