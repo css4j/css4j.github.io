@@ -12,12 +12,18 @@
 package io.sf.carte.example;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -42,15 +48,21 @@ import io.sf.carte.doc.dom.HTMLDocument;
 import io.sf.carte.doc.dom.XMLDocumentBuilder;
 import io.sf.carte.doc.dom4j.XHTMLDocument;
 import io.sf.carte.doc.dom4j.XHTMLDocumentFactory;
+import io.sf.carte.doc.style.css.BooleanCondition;
 import io.sf.carte.doc.style.css.CSSDocument;
 import io.sf.carte.doc.style.css.CSSElement;
 import io.sf.carte.doc.style.css.CSSRule;
 import io.sf.carte.doc.style.css.CSSStyleDeclaration;
+import io.sf.carte.doc.style.css.CSSTypedValue;
 import io.sf.carte.doc.style.css.CSSUnit;
 import io.sf.carte.doc.style.css.CSSValue;
 import io.sf.carte.doc.style.css.CSSValue.Type;
 import io.sf.carte.doc.style.css.CSSValueSyntax;
 import io.sf.carte.doc.style.css.CSSValueSyntax.Match;
+import io.sf.carte.doc.style.css.MediaFeaturePredicate;
+import io.sf.carte.doc.style.css.MediaQuery;
+import io.sf.carte.doc.style.css.MediaQueryList;
+import io.sf.carte.doc.style.css.MediaQueryPredicate;
 import io.sf.carte.doc.style.css.nsac.AttributeCondition;
 import io.sf.carte.doc.style.css.nsac.CombinatorSelector;
 import io.sf.carte.doc.style.css.nsac.Condition;
@@ -68,8 +80,11 @@ import io.sf.carte.doc.style.css.om.AbstractCSSStyleDeclaration;
 import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet;
 import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory;
 import io.sf.carte.doc.style.css.om.DOMCSSStyleSheetFactory;
+import io.sf.carte.doc.style.css.om.MediaFeature;
 import io.sf.carte.doc.style.css.om.StyleRule;
 import io.sf.carte.doc.style.css.om.StyleSheetList;
+import io.sf.carte.doc.style.css.om.SupportsRule;
+import io.sf.carte.doc.style.css.parser.DeclarationCondition;
 import io.sf.carte.doc.style.css.parser.SyntaxParser;
 import io.sf.carte.doc.style.css.property.LexicalValue;
 import io.sf.carte.doc.style.css.property.NumberValue;
@@ -243,6 +258,9 @@ public class Css4jTest {
 		// Value is 14 (14pt)
 		assertEquals(14f, floatVal, 1e-5);
 
+		// Change the value to 10pt
+		numericValue.setFloatValue(CSSUnit.CSS_PT, 10f);
+
 		/*
 		 * The second property
 		 */
@@ -322,6 +340,58 @@ public class Css4jTest {
 		pCount = style.getLength();
 		// Now we have three properties
 		assertEquals(3, pCount);
+
+		/*
+		 * IMPORTANT: once we are done updating a style sheet, if the sheet is internal
+		 * to the document (that is, it is located inside a <style> element), the actual
+		 * contents of the <style> element will not be updated until you execute
+		 * normalize() on that element node:
+		 */
+		// Obtain the owner node
+		org.w3c.dom.Node styleNode = sheet.getOwnerNode();
+		assertNotNull(styleNode);
+
+		// Which type is it?
+		short nodeType = styleNode.getNodeType();
+		// It is a ELEMENT_NODE (could also be a PROCESSING_INSTRUCTION_NODE)
+		assertEquals(org.w3c.dom.Node.ELEMENT_NODE, nodeType);
+
+		// Get the name of the element
+		String nodeName = styleNode.getNodeName();
+		// It is "style", as expected
+		assertEquals("style", nodeName);
+
+		// Get the element content (the initial serialized style sheet)
+		String preContent = styleNode.getTextContent();
+
+		// Serialize the current style sheet into the inner text node
+		styleNode.normalize();
+
+		// Get the normalized element content (the current serialization)
+		String afterContent = styleNode.getTextContent();
+		// preContent and afterContent are different
+
+		assertNotEquals(preContent, afterContent);
+		assertFalse(preContent.contains("important"));
+		assertTrue(afterContent.contains("important"));
+
+		/*
+		 * Using iterators
+		 */
+		/*
+		 * It is possible to use iterators to retrieve the rules.
+		 */
+		sheet = sheets.item(0);
+		Iterator<AbstractCSSRule> it = sheet.getCssRules().iterator();
+		// Assume it.hasNext() returns true
+		assertTrue(it.hasNext());
+
+		// Access the first rule in the sheet
+		rule = it.next();
+		// What kind of rule is it?
+		ruleType = rule.getType();
+		// It is a style rule (CSSRule.STYLE_RULE)
+		assertEquals(CSSRule.STYLE_RULE, ruleType);
 
 		/*
 		 * Access a style attribute (inline styles)
@@ -502,6 +572,155 @@ public class Css4jTest {
 		re.close();
 
 		assertEquals(sheet1, sheet.toMinifiedString());
+	}
+
+	@Test
+	public void testUsageMediaQuery() throws Exception {
+		// We instantiate a factory based on CSSDOMImplementation,
+		// but could do the same with any of the other factories
+		AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation();
+
+		/*
+		 * Parsing a Media Query
+		 */
+		MediaQueryList mql = cssFactory.createMediaQueryList("screen and (600px <= width < 1200px)",
+			null);
+		assertNotNull(mql);
+
+		// How many queries we got?
+		int numQueries = mql.getLength();
+		// One
+		assertEquals(1, numQueries);
+
+		// Get the first and only query
+		MediaQuery mediaQ = mql.getMediaQuery(0);
+		assertNotNull(mediaQ);
+
+		// The media type
+		String medium = mediaQ.getMediaType();
+		// It is "screen"
+		assertEquals("screen", medium);
+
+		/*
+		 * Have a look at the associated boolean condition(s)
+		 */
+		BooleanCondition cond = mediaQ.getCondition();
+		assertNotNull(cond);
+
+		// The condition type
+		BooleanCondition.Type condType = cond.getType();
+		// It is BooleanCondition.Type.AND
+		assertEquals(BooleanCondition.Type.AND, condType);
+
+		// As the AND javadoc suggests, call getSubConditions()
+		List<BooleanCondition> andConds = cond.getSubConditions();
+		// andConds.size() is 2
+		assertEquals(2, andConds.size());
+
+		// The first operand of the AND
+		BooleanCondition cond1 = andConds.get(0);
+		// The condition type
+		BooleanCondition.Type cond1Type = cond1.getType();
+		// It is BooleanCondition.Type.PREDICATE
+		assertEquals(BooleanCondition.Type.PREDICATE, cond1Type);
+
+		// Now, following the indication from the getCondition() javadoc,
+		// we cast the predicate to a MediaQueryPredicate
+		MediaQueryPredicate predicate1 = (MediaQueryPredicate) cond1;
+		// predicate1.getPredicateType() is MediaQueryPredicate.MEDIA_TYPE
+		// predicate1.getName() is "screen"
+		assertEquals(MediaQueryPredicate.MEDIA_TYPE, predicate1.getPredicateType());
+		assertEquals("screen", predicate1.getName());
+
+		// The second operand of the AND
+		BooleanCondition cond2 = andConds.get(1);
+		// The condition type
+		BooleanCondition.Type cond2Type = cond2.getType();
+		// It is BooleanCondition.Type.PREDICATE
+		assertEquals(BooleanCondition.Type.PREDICATE, cond2Type);
+
+		// Again, following the indication from the getCondition() javadoc,
+		// we cast the predicate to a MediaQueryPredicate
+		MediaQueryPredicate predicate2 = (MediaQueryPredicate) cond2;
+		// predicate2.getPredicateType() is MediaQueryPredicate.MEDIA_FEATURE
+		// predicate2.getName() is "width"
+		assertEquals(MediaQueryPredicate.MEDIA_FEATURE, predicate2.getPredicateType());
+		assertEquals("width", predicate2.getName());
+
+		// Cast predicate2 to MediaFeature
+		MediaFeature feature = (MediaFeature) predicate2;
+		// feature.getRangeType() is MediaFeaturePredicate.FEATURE_LE_AND_LT
+		assertEquals(MediaFeaturePredicate.FEATURE_LE_AND_LT, feature.getRangeType());
+
+		// Obtain the first value in the LE_AND_LT range
+		CSSTypedValue value = feature.getValue();
+		// value.getPrimitiveType() is Type.NUMERIC
+		// value.getUnitType() is CSSUnit.CSS_PX (pixels)
+		assertEquals(Type.NUMERIC, value.getPrimitiveType());
+		assertEquals(CSSUnit.CSS_PX, value.getUnitType());
+
+		// Get the numeric value
+		float floatValue = value.getFloatValue(CSSUnit.CSS_PX);
+		// Value is 600 (px)
+		assertEquals(600f, floatValue, 1e-5);
+
+		// Now the second value in the LE_AND_LT range
+		CSSTypedValue value2 = feature.getRangeSecondValue();
+		// value.getPrimitiveType() is Type.NUMERIC
+		// value.getUnitType() is CSSUnit.CSS_PX
+		assertEquals(Type.NUMERIC, value2.getPrimitiveType());
+		assertEquals(CSSUnit.CSS_PX, value2.getUnitType());
+
+		// Get the numeric value
+		float floatValue2 = value2.getFloatValue(CSSUnit.CSS_PX);
+		// Value is 1200 (px)
+		assertEquals(1200f, floatValue2, 1e-5);
+
+		// Finally, create a sheet attached to that query
+		AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, mql);
+
+		assertSame(mql, sheet.getMedia());
+	}
+
+	@Test
+	public void testUsageSupportsCondition() throws Exception {
+		// Instantiate a css factory (we could also obtain it from a
+		// pre-existing css4j object)
+		AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation();
+
+		// Create a style sheet
+		AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
+		// Create a @supports rule
+		SupportsRule supports = sheet.createSupportsRule();
+
+		// Assign a conditional expression
+		supports.setConditionText("(display: flex)");
+
+		// Get the condition
+		BooleanCondition cond = supports.getCondition();
+		assertNotNull(cond);
+
+		// Get the condition type
+		BooleanCondition.Type condType = cond.getType();
+		// It is a BooleanCondition.Type.PREDICATE
+		assertEquals(BooleanCondition.Type.PREDICATE, condType);
+
+		// So we cast it to DeclarationCondition
+		DeclarationCondition dCond = (DeclarationCondition) cond;
+		String predName = dCond.getName();
+		// It is "display"
+		assertEquals("display", predName);
+
+		// Now obtain the value
+		CSSValue value = dCond.getValue();
+		Type priType = value.getPrimitiveType();
+		// It is a Type.IDENT
+		assertEquals(Type.IDENT, priType);
+
+		// IDENT is a TYPED value, so we can cast and get the string value
+		String condValue = ((CSSTypedValue) value).getStringValue();
+		// It is "flex"
+		assertEquals("flex", condValue);
 	}
 
 }
