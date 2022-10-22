@@ -451,7 +451,7 @@ int ruleType = rule.getType();
 <p>Now we can cast to a <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleRule.html">StyleRule</a>
 which gives us access to the selector list and the declared style.</p>
 <h3 class="subtema" id="rule-iterators">Rule iterators</h3>
-<p>The same as bove, but with a rule iterator:</p>
+<p>The same as above, but with a rule iterator:</p>
 <pre class="code"><code class="language-java">/*
  * It is possible to use iterators to retrieve the rules.
  */
@@ -487,7 +487,8 @@ keyframe rules are all "declaration rules".</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetList.html#acceptDescriptorRuleVisitor(io.sf.carte.util.Visitor)">acceptDescriptorRuleVisitor</a>
  to visit declaration rules with descriptors within a list of sheets.</li>
 </ul>
-<p>With Visitors, you do not need to navigate the different rules yourself.</p>
+<p>With Visitors, you do not need to navigate the different rules yourself. For an example of its use, see <a
+href="embed-svg.html">Embedding SVG in HTML documents</a>.</p>
 <h3 class="subtema" id="selectors">Dealing with selectors</h3>
 <p>If your use case requires inspecting the selectors, you will need to look at the NSAC api, starting with the
 <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Selector.html">Selector</a> class.</p>
@@ -938,11 +939,11 @@ or charset rules found in the wrong place.</p>
 <div class="tema" id="sheetparsing">
 <h2>Parsing a style sheet</h2>
 <p>Although document's style sheet fetching and parsing is automatic with this library (for sheets referenced from a document), it is possible to manually parse rules
-from a source stream with the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(Reader, short)</code></a> method:</p>
+from a source stream with the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">CSSStyleSheet.parseStyleSheet(Reader, short)</a> method:</p>
 <pre class="code"><code class="language-java">Reader re = ...
 sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 </code></pre>
-<p>When the second argument is <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE"><code>COMMENTS_IGNORE</code></a>, the comments in the source stream are ignored when parsing
+<p>When the second argument is <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a>, the comments in the source stream are ignored when parsing
 (see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
 <p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
 (although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
@@ -1002,8 +1003,9 @@ length. For example, the length of the following declaration would be <code>2</c
 *width: 890px;
 </code></pre>
 <p>If you want to use these flags at the NSAC level (instead of the Object Model), you may want to read the 'Parser Flags' section in the
-NSAC package description, as well as the documentation for the individual flags in
-<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Parser.Flag.html">Parser.Flag</a>.</p>
+<a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC package description</a>,
+as well as the documentation for the individual flags in <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Parser.Flag.html">Parser.Flag</a>.</p>
 </div>
 <div class="tema" id="styleformatting">
 <h2>CSS style formatting</h2>

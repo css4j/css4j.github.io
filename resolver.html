@@ -53,20 +53,20 @@ could use (2.). Otherwise, you may want to look for an alternative like the one 
 <h2><code>DefaultEntityResolver</code></h2>
 <p>The <a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code> project</a> (which is a small set of
 code that does not require the main CSS4J) provides the
-<a class="codeitem" href="https://css4j.github.io/api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>
+<a class="codeitem" href="api/latest/io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html">DefaultEntityResolver</a>
 class, which you can use to parse your document without loosing your XML entities.</p>
 <p>By default, <code>DefaultEntityResolver</code> is configured to not attempt network connections and use
 its own set of pre-loaded DTDs instead. If you are using a customized DTD from a specific host, you can
 whitelist that host so connections to it are allowed (although even in that case, if the resolver decides
 that the connection does not look like pointing to a legitimate DTD, shall disallow it). You can also
 subclass the resolver and allow loading specific DTD files from the classpath.</p>
-<p>Please read the <a class="codeitem" href="https://css4j.github.io/api/xml-dtd/3/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html"><code>DefaultEntityResolver</code></a>
+<p>Please read the <a class="codeitem" href="api/latest/io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html">DefaultEntityResolver</a>
 javadoc for more information about using the resolver.</p>
 <br/>
 <h3 class="subtema" id="applying">How to apply it</h3>
 <p>Before trying to use it, first you must protect your XML parser against DoS attacks based on entity expansion/recursion,
-by setting the <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/XMLConstants.html#FEATURE_SECURE_PROCESSING"><code>FEATURE_SECURE_PROCESSING</code></a>
-feature —see <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/parsers/SAXParserFactory.html#setFeature(java.lang.String,boolean)"><code>SAXParserFactory.setFeature(String, boolean)</code></a>.
+by setting the <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/XMLConstants.html#FEATURE_SECURE_PROCESSING">FEATURE_SECURE_PROCESSING</a>
+feature —see <a class="codeitem" href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/parsers/SAXParserFactory.html#setFeature(java.lang.String,boolean)">SAXParserFactory.setFeature(String, boolean)</a>.
 Which is what the following example does:</p>
 <pre class="code"><code class="language-java">import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;
 import javax.xml.parsers.ParserConfigurationException;
@@ -97,7 +97,7 @@ reader.setEntityResolver(resolver);
 <br/>
 <h3 class="subtema" id="builder">Usage with <code>XMLDocumentBuilder</code></h3>
 <p>Using your own <code>XMLReader</code> to parse XML can be complicated, and to simplify the process you may want to use CSS4J's
-<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/XMLDocumentBuilder.html"><code>XMLDocumentBuilder</code></a>.
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/XMLDocumentBuilder.html">XMLDocumentBuilder</a>.
 In that case you'd be using the following snippet instead of the above:
 <pre class="code"><code class="language-java">import io.sf.carte.doc.dom.XMLDocumentBuilder;
 import io.sf.carte.doc.xml.dtd.DefaultEntityResolver;

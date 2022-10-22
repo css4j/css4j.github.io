@@ -40,7 +40,7 @@ or the <code>var()</code>-related <a href="api/3/io/sf/carte/doc/style/css/CSSLe
 <div id="cssvalue">
 <h4>Are W3C's <code>CSSValue</code> and <code>CSSPrimitiveValue</code> interfaces supported?</h4>
 <p>That API was <a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">deprecated by W3C</a>
-but version 1.0 does implement them. Version 2 uses those names but the actual interfaces are different and
+but version 1.0 does implement them. Version 2 and later uses those names but the actual interfaces are different and
 not backwards-compatible.</p>
 </div>
 <div id="getstylesheets">
@@ -48,37 +48,38 @@ not backwards-compatible.</p>
 <p>The <a href="https://www.w3.org/TR/cssom-1/#document-css-style-sheets">document style sheets</a> are a collection of style sheets
 associated with the document. W3C's DOM Level 2 Style standard provides the <code><a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-DocumentStyle">DocumentStyle</a></code>
 interface for that, see also <a href="https://www.w3.org/TR/cssom-1/#extensions-to-the-document-interface">Extensions to the Document Interface</a> in the more modern CSSOM.
-That is, just use <code><a href="api/3/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheets()">document.getStyleSheets()</a></code> to get the list of style sheets.</p>
+That is, just use <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheets()">document.getStyleSheets()</a></code> to get the list of style sheets.</p>
 </div>
 <div id="getstylesheet">
 <h4>Can I get the merged style sheet that applies to the document?</h4>
-<p>The <code><a href="api/3/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheet()">document.getStyleSheet()</a></code> method does that.
+<p>The <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.html#getStyleSheet()">document.getStyleSheet()</a></code> method does that.
 Although you can add style rules to it, you may consider using overriden styles or the user-defined style sheet
 (neither are included in the sheet returned by that method) instead.</p>
 </div>
 <div id="clearrules">
 <h4>How can I remove all the rules in a style sheet?</h4>
-<p>Use <code>sheet.getCssRules().<a href="api/3/io/sf/carte/doc/style/css/CSSRuleList.html#clear()">clear()</a></code>.</p>
+<p>Use <code>sheet.getCssRules().<a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRuleList.html#clear()">clear()</a></code>.</p>
 </div>
 <div id="cssomparser">
 <h4>What is the difference between <code>CSSParser</code> and <code>CSSOMParser</code>? [2.0 or higher]</h4>
-<p>When parsing media queries, the <code><a href="api/3/io/sf/carte/doc/style/css/om/CSSOMParser.html">CSSOMParser</a></code>
-class has an object-model internal <a href="api/3/io/sf/carte/doc/style/css/MediaQueryFactory.html">factory</a>
-that directly produces CSSOM-enabled media queries, while <code><a href="api/3/io/sf/carte/doc/style/css/parser/CSSParser.html">CSSParser</a></code>
+<p>When parsing media queries, the <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSOMParser.html">CSSOMParser</a></code>
+class has an object-model internal <a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryFactory.html">factory</a>
+that directly produces CSSOM-enabled media queries, while <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html">CSSParser</a></code>
 has a -less useful- factory based on NSAC lexical units.</p>
 <p>If you want to parse media queries you probably want to use <code>CSSOMParser</code>, otherwise <code>CSSParser</code> should be adequate.</p>
 </div>
 <div id="dom4jdepend">
 <h4>Does css4j depend on dom4j?</h4>
-<p>No, dom4j is just an available DOM backend.</p>
+<p>The core module does not, but <a href="https://github.com/css4j/css4j-dom4j/">css4j-dom4j</a> is one of the available
+DOM back-ends (and that one does depend on dom4j).</p>
 </div>
 <div id="dom4j12">
-<h4>Does css4j work with dom4j 1.x or 2.x?</h4>
-<p>Although the provided Maven build requires dom4j 2.x, the resulting jar file can be used in runtime with 1.x too. Css4j makes no use of the
+<h4>Does css4j-dom4j work with dom4j 1.x or 2.x?</h4>
+<p>Although the provided Maven build requires dom4j 2.x, the resulting jar file can be used in runtime with 1.x too. Css4j-dom4j makes no use of the
 methods that dom4j implements in 2.x but not in 1.6, so it is safe to use with 1.6. Recent versions aren't tested with 1.6 however.</p>
 </div>
 <div id="dom4jbase">
-<h4>Using the dom4j backend prior to version 3.1, I find that dom4j does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
+<h4>Using the dom4j back-end prior to version 3.1, I find that dom4j does not support using the document's uri to retrieve relative urls. How can I work around?</h4>
 <p>You can manually set the base url, doing something like:</p>
 <pre>
 if (document.getBaseURL() == null) {

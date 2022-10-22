@@ -49,11 +49,11 @@ or among the embedded SVG images.</p>
 <h2>Using the visitor pattern to replace identifiers</h2>
 <p>Fortunately, the css4j library provides the necessary tools to visit the CSS rules and make the necessary checks and
 modifications to the relevant selectors. You can use your favourite DOM implementation to check and modify duplicate <code>id</code>
-attributes (if you use css4j's <a href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/package-summary.html">native DOM</a>,
-a <a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/NodeIterator.html"><code>NodeIterator</code></a>
+attributes (if you use css4j's <a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">native DOM</a>,
+a <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/NodeIterator.html">NodeIterator</a>
 could be a good choice), but the changes must be consistent with what you apply on the selectors.</p>
 <p>For example, the
-<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/style/css/parser/AttributeConditionVisitor.html"><code>AttributeConditionVisitor</code></a>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/AttributeConditionVisitor.html">AttributeConditionVisitor</a>
 class can be of help for the task. Let us subclass it to provide our own logic:</p>
 <pre class="code"><code class="language-java">package com.example;
 
@@ -90,9 +90,10 @@ class DupeConditionVisitor extends AttributeConditionVisitor {
 <p>As you can see, for each visit it is checked whether the selector condition is a ID or class, and
 in that case checks for the name (for which you need to provide your own logic).</p>
 <p>Your visitor based on the above code is now prepared to perform the task, but first you need to find the
-right CSS rules to apply it, for which we will use another visitor. You could use the
-<a class="codeitem" href="https://github.com/css4j/css4j/blob/bedd7b3d59e7551069546f5ced57ef7c6bc610bb/src/io/sf/carte/doc/style/css/util/AttrStyleRuleVisitor.java"><code>AttrStyleRuleVisitor</code></a>
-convenience class for this. Let's see an excerpt of what it does:</p>
+right CSS rules to apply it, for which we will use another visitor. You could use the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/AttrStyleRuleVisitor.html">AttrStyleRuleVisitor</a>
+convenience class for this. Let's see an excerpt of what it does, adapted from <a
+href="https://github.com/css4j/css4j/blob/bedd7b3d59e7551069546f5ced57ef7c6bc610bb/src/io/sf/carte/doc/style/css/util/AttrStyleRuleVisitor.java">its source</a>:</p>
 <pre class="code"><code class="language-java">package io.sf.carte.doc.style.css.util;
 
 import io.sf.carte.doc.style.css.CSSStyleRule;
@@ -124,7 +125,7 @@ public class AttrStyleRuleVisitor implements Visitor&lt;CSSStyleRule&gt; {
 You could gather identifier information from the main document first, then check with the SVG files that you
 want to embed. Or you may prefer to apply a systematic approach with the identifiers declared in the SVG files.</p>
 <p>Here is an example that visits the sheets contained by an element, it uses css4j's native DOM (adapted from Carte's
-<a class="codeitem" href="https://sourceforge.net/p/carte/carte/ci/45750bce9ad0ea75026f96c8f4d9ce2fa9ffed66/tree/carte/src/io/sf/carte/report/DocumentStore.java#l206"><code>DocumentStore</code></a>):</p>
+<a class="codeitem" href="https://github.com/css4j/carte/blob/1f685aeefbfd666e3a386ba9d4f701811b102b7a/carte/src/io/sf/carte/report/DocumentStore.java#L235">DocumentStore</a>):</p>
 <pre class="code"><code class="language-java">DOMElement svg = ... [the SVG element containing the image]
 
 DupeConditionVisitor dupeVisitor = new DupeConditionVisitor();
@@ -140,7 +141,7 @@ while (styleIt.hasNext()) {
 }
 </code></pre>
 <p>And now you only need to serialize the resulting document. (To serialize the native DOM, look at the powerful
-<a class="codeitem" href="https://css4j.github.io/api/3/io/sf/carte/doc/dom/DOMWriter.html"><code>DOMWriter</code></a>
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/DOMWriter.html">DOMWriter</a>
 or just call <code>toString()</code>).</p>
 </div>
 <div class="tema" id="examples">
