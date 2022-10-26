@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /api/1.0/
+Disallow: /api/1.2/
 Disallow: /api/2.0/
 Disallow: /api/2.1/
+Disallow: /api/xml-dtd/
