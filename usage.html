@@ -536,7 +536,9 @@ String cssClassName = attrCond.getValue();
 </code></pre>
 <h3 class="subtema" id="use-declared-styles">Using the declared styles</h3>
 <p>In the previous example we got the style rule in a <code>styleRule</code> variable.
-Now we use it to obtain the declared style and examine the declared properties:</p>
+Now we use it to obtain the declared style with <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDeclarationRule.html#getStyle()">getStyle()</a>
+and examine the declared properties:</p>
 <pre class="code"><code class="language-java">// Obtain the declared style from the rule
 AbstractCSSStyleDeclaration style = styleRule.getStyle();
 
@@ -639,7 +641,8 @@ LexicalUnit thirdComponent = secondComponent.getNextLexicalUnit();
 int color_B = thirdComponent.getIntegerValue();
 // Is 0xff (255 decimal)
 </code></pre>
-<p>Now let's set another property</p>
+<p>Now let's set another property using <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleDeclaration.html#setProperty(java.lang.String,java.lang.String,java.lang.String)">setProperty</a>:</p>
 <pre class="code"><code class="language-java">/*
  * Set another property, with important priority
  */
@@ -648,6 +651,10 @@ style.setProperty("background-color", "#d0dfee7a", "important");
 pCount = style.getLength();
 // Now we have three properties
 </code></pre>
+<p>If you are updating any of the declared sheets —that is, the sheets returned by <code>document.getStyleSheets()</code>—
+with <code>setProperty</code> while you are computing styles, the changes will not apply to the computed styles
+until you update the cascade with a call to <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSDocument.html#rebuildCascade()">rebuildCascade()</a>.</p>
 <h3 class="subtema" id="update-internal-sheets">Updating internal sheets</h3>
 <p><b>IMPORTANT:</b> once we are done updating a style sheet, if the sheet is internal to the
 document (that is, it is located inside a <code>&lt;style&gt;</code> element), the actual
