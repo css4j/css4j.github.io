@@ -35,7 +35,8 @@ For the Java™ language, the advice found on the Internet is generally based on
 <a href="https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html">OWASP's XML External Entity Prevention Cheat Sheet</a>):</p>
 <ol>
 <li>Disabling the <a href="https://xerces.apache.org/xerces2-j/features.html#nonvalidating.load-external-dtd">http://apache.org/xml/features/nonvalidating/load-external-dtd</a>
-feature. This results in the loss of <a href="https://www.w3.org/TR/xml-entity-names/">XML character entities</a> that the document could contain, like "<code>&amp;eacute;</code>".
+feature. This results in the loss of <a href="https://www.w3.org/TR/xml-entity-names/">XML character entities</a>
+that the document could contain, like "<code>&amp;eacute;</code>".
 (Note: <a href="https://www.w3.org/TR/xml-entity-names/predefined.html">predefined entities</a> like "<code>&amp;amp;</code>" are not affected)</li>
 <li>Enabling the feature <a href="https://xerces.apache.org/xerces2-j/features.html#disallow-doctype-decl">http://apache.org/xml/features/disallow-doctype-decl</a>,
 which throws an error if the parsed document contains a <code>DOCTYPE</code> declaration.
@@ -54,7 +55,14 @@ could use (2.). Otherwise, you may want to look for an alternative like the one 
 <p>The <a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code> project</a> (which is a small set of
 code that does not require the main CSS4J) provides the
 <a class="codeitem" href="api/latest/io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html">DefaultEntityResolver</a>
-class, which you can use to parse your document without loosing your XML entities.</p>
+class, which you can use to parse your document without losing your XML entities.</p>
+<p>The resolver alone cannot protect your XML parser from <a href="https://www.ws-attacks.org/XML_Entity_Expansion">XML
+entity expansion</a> attacks so, as will be seen later, you have to use a parser that enables <a class="codeitem"
+href="https://docs.oracle.com/en/java/javase/17/docs/api/java.xml/javax/xml/XMLConstants.html#FEATURE_SECURE_PROCESSING">FEATURE_SECURE_PROCESSING</a>.
+Once that is done, the <code>DefaultEntityResolver</code> can filter other threats like the access to local resources,
+or <code>jar:</code> decompression bombs like:</p>
+<pre class="code"><code class="language-xml">&lt;!DOCTYPE doc PUBLIC "-//W3C//DTD FOO 1.0//EN" "jar:http://www.example.com/evil.jar!/file.dtd"&gt;
+</code></pre>
 <p>By default, <code>DefaultEntityResolver</code> is configured to not attempt network connections and use
 its own set of pre-loaded DTDs instead. If you are using a customized DTD from a specific host, you can
 whitelist that host so connections to it are allowed (although even in that case, if the resolver decides
