@@ -1,3 +1,3 @@
 /*!
- * Copyright © 2017-2019 C. Amengual.
+ * Copyright © 2017-2022 C. Amengual.
  */
