@@ -181,7 +181,7 @@ implements <a href="../HWBColorValue.html" title="interface in io.sf.carte.doc.s
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)" class="member-name-link">setComponent</a><wbr>(int&nbsp;index,
  <a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a>&nbsp;component)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If this value has components, set the component at <code>index</code>.</div>
+<div class="block">Set the color component at <code>index</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../RGBAColor.html" title="interface in io.sf.carte.doc.style.css">RGBAColor</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRGBColor()" class="member-name-link">toRGBColor</a>()</code></div>
@@ -323,8 +323,8 @@ implements <a href="../HWBColorValue.html" title="interface in io.sf.carte.doc.s
 <h3>setComponent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setComponent</span><wbr><span class="parameters">(int&nbsp;index,
  <a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a>&nbsp;component)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="TypedValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">TypedValue</a></code></span></div>
-<div class="block">If this value has components, set the component at <code>index</code>.
+<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="ColorValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">ColorValue</a></code></span></div>
+<div class="block">Set the color component at <code>index</code>.
  <p>
  This method allows to access the components regardless of them being formally
  indexed or not. It is convenient to perform common tasks at the components
@@ -332,12 +332,15 @@ implements <a href="../HWBColorValue.html" title="interface in io.sf.carte.doc.s
  </p></div>
 <dl class="notes">
 <dt>Overrides:</dt>
-<dd><code><a href="TypedValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">setComponent</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
+<dd><code><a href="ColorValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">setComponent</a></code>&nbsp;in class&nbsp;<code><a href="ColorValue.html" title="class in io.sf.carte.doc.style.css.property">ColorValue</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index. For colors, index <code>0</code> is always the alpha
                   channel. Setting a component at an index that does not exist
                   has no effect.</dd>
-<dd><code>component</code> - the new color component.</dd>
+<dd><code>component</code> - the new color component. Must be a primitive value (that is,
+                  either
+                  <a href="../CSSValue.CssType.html#TYPED"><code>TYPED</code></a> or a
+                  <a href="../CSSValue.CssType.html#PROXY"><code>PROXY</code></a>).</dd>
 </dl>
 </section>
 </li>

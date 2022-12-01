@@ -204,14 +204,24 @@ the order they are declared.</div>
 <section class="detail" id="TYPED">
 <h3>TYPED</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CSSValue.CssType.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.CssType</a></span>&nbsp;<span class="element-name">TYPED</span></div>
-<div class="block">A typed primitive value, includes numbers and identifiers.</div>
+<div class="block">A typed primitive value, includes numbers and identifiers.
+ <p>
+ You can cast to <a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css"><code>CSSTypedValue</code></a> (interface) or
+ <a href="property/TypedValue.html" title="class in io.sf.carte.doc.style.css.property"><code>TypedValue</code></a> (base
+ implementation class).
+ </p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="LIST">
 <h3>LIST</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CSSValue.CssType.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.CssType</a></span>&nbsp;<span class="element-name">LIST</span></div>
-<div class="block">A list of values.</div>
+<div class="block">A list of values.
+ <p>
+ You can always cast to <a href="CSSValueList.html" title="interface in io.sf.carte.doc.style.css"><code>CSSValueList</code></a> but, unless you are dealing with
+ the argument list of a <a href="CSSValue.Type.html#FUNCTION"><code>FUNCTION</code></a>, it is better to cast
+ directly to a <a href="property/ValueList.html" title="class in io.sf.carte.doc.style.css.property"><code>ValueList</code></a>.
+ </p></div>
 </section>
 </li>
 <li>
@@ -221,6 +231,10 @@ the order they are declared.</div>
 <div class="block">A shorthand property.
  <p>
  Declared shorthands can be retrieved from style declarations.
+ </p>
+ <p>
+ Cast it to <a href="CSSShorthandValue.html" title="interface in io.sf.carte.doc.style.css"><code>CSSShorthandValue</code></a> to have access to the set of longhand
+ property names set by the shorthand.
  </p></div>
 </section>
 </li>

@@ -453,7 +453,11 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
 <dd><code>index</code> - the index. For colors, index <code>0</code> is always the alpha
                   channel. Setting a component at an index that does not exist
                   has no effect.</dd>
-<dd><code>component</code> - the new color component.</dd>
+<dd><code>component</code> - the new component. Cannot be a <code>KEYWORD</code> nor a
+                  <code>SHORTHAND</code>. For colors, must be a primitive value
+                  (that is, either
+                  <a href="../CSSValue.CssType.html#TYPED"><code>TYPED</code></a> or a
+                  <a href="../CSSValue.CssType.html#PROXY"><code>PROXY</code></a>).</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the index is valid but the <code>component</code>
                               is <code>null</code>.</dd>

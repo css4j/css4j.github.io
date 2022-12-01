@@ -377,7 +377,11 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <dd><code>index</code> - the index. For colors, index <code>0</code> is always the alpha
                   channel. Setting a component at an index that does not exist
                   has no effect.</dd>
-<dd><code>component</code> - the new color component.</dd>
+<dd><code>component</code> - the new component. Cannot be a <code>KEYWORD</code> nor a
+                  <code>SHORTHAND</code>. For colors, must be a primitive value
+                  (that is, either
+                  <a href="../CSSValue.CssType.html#TYPED"><code>TYPED</code></a> or a
+                  <a href="../CSSValue.CssType.html#PROXY"><code>PROXY</code></a>).</dd>
 </dl>
 </section>
 </li>
