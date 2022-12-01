@@ -534,6 +534,20 @@ AttributeCondition attrCond = (AttributeCondition) condition;
 String cssClassName = attrCond.getValue();
 // It is "myClass"
 </code></pre>
+<h4 class="subtema4" id="nsac-selectors">Low-level selector parsing</h4>
+<p>
+Sometimes one has to work with stand-alone selectors, for which you can use a NSAC parser:
+</p>
+<pre class="code"><code class="language-java">CSSParser parser = new CSSParser();
+SelectorList selist = parser.parseSelectors("a:not([href]):not([tabindex]):focus,pre,.myClass span");
+</code></pre>
+<p><em>
+Note: you should avoid stand-alone parsing namespaced selectors with <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#parseSelectors(java.io.Reader)">parseSelectors</a>
+and equivalent single-argument methods in <code>CSSParser</code>, as the namespace prefixes
+won't map to any namespace URI. See <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#parseSelectors(java.lang.String,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)"
+>parseSelectors(String,Parser.NamespaceMap)</a> for a solution to the issue.</em></p>
 <h3 class="subtema" id="use-declared-styles">Using the declared styles</h3>
 <p>In the previous example we got the style rule in a <code>styleRule</code> variable.
 Now we use it to obtain the declared style with <a class="codeitem"
