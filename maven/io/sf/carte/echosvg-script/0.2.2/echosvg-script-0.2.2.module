@@ -1,0 +1,119 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-script",
+    "version": "0.2.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "0.2.2"
+          }
+        },
+        {
+          "group": "org.mozilla",
+          "module": "rhino",
+          "version": {
+            "requires": "1.7.14"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-script-0.2.2.jar",
+          "url": "echosvg-script-0.2.2.jar",
+          "size": 25669,
+          "sha512": "a77faba34940df501f8c60ce0f9df3cfed86ba9fd9065a63be63c39ea16242566ece32fff790035b810714e12edf00f661100ea4f8f0334d0aadad818aab3cd2",
+          "sha256": "8deede182d16772cac6adf7d3246e572594651d70b3a1e47e92449f72a50fa08",
+          "sha1": "5c153737b54143b5b4b4cabd608d8e2ebdbc5f26",
+          "md5": "fdad6072e2b3592c6c178df5f2848460"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "xml-apis",
+          "module": "xml-apis",
+          "version": {
+            "requires": "1.4.01"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "0.2.2"
+          }
+        },
+        {
+          "group": "org.mozilla",
+          "module": "rhino",
+          "version": {
+            "requires": "1.7.14"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-script-0.2.2.jar",
+          "url": "echosvg-script-0.2.2.jar",
+          "size": 25669,
+          "sha512": "a77faba34940df501f8c60ce0f9df3cfed86ba9fd9065a63be63c39ea16242566ece32fff790035b810714e12edf00f661100ea4f8f0334d0aadad818aab3cd2",
+          "sha256": "8deede182d16772cac6adf7d3246e572594651d70b3a1e47e92449f72a50fa08",
+          "sha1": "5c153737b54143b5b4b4cabd608d8e2ebdbc5f26",
+          "md5": "fdad6072e2b3592c6c178df5f2848460"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-script-0.2.2-sources.jar",
+          "url": "echosvg-script-0.2.2-sources.jar",
+          "size": 28946,
+          "sha512": "bcada5dfa9cb39c6ca7dc49fcdc16995e6218dbab15ba84d3edbfa104bd613d71cfdab79e0a338768a20d09aeaa0dea14cd32ab20543f1b8b42ca9830ae62752",
+          "sha256": "c451d93a46fa867af1dcdb1ccb3ce1ab37e276ba1f082952d7c24c0166944c3b",
+          "sha1": "a6ef9e87e14317ffcb61a264729f105fa6d669e3",
+          "md5": "5e7114300c0572d87a2dba8a1455c64d"
+        }
+      ]
+    }
+  ]
+}
