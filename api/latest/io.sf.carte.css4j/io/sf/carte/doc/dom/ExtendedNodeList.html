@@ -107,7 +107,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Check whether this list is empty.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ExtendedNodeList.html" title="type parameter in ExtendedNodeList">T</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#item(int)" class="member-name-link">item</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -152,7 +154,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <section class="detail" id="item(int)">
 <h3>item</h3>
 <div class="member-signature"><span class="return-type"><a href="ExtendedNodeList.html" title="type parameter in ExtendedNodeList">T</a></span>&nbsp;<span class="element-name">item</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block">Get the node located at the <code>index</code> position in this list.</div>
+<div class="block">Get the node located at the <code>index</code> position in this list.
+ <p>
+ For better performance, please use an iterator instead of this method.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/NodeList.html#item(int)" title="class or interface in org.w3c.dom" class="external-link">item</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/NodeList.html" title="class or interface in org.w3c.dom" class="external-link">NodeList</a></code></dd>
@@ -167,6 +172,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <section class="detail" id="isEmpty()">
 <h3>isEmpty</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isEmpty</span>()</div>
+<div class="block">Check whether this list is empty.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if this list is empty.</dd>
+</dl>
 </section>
 </li>
 </ul>

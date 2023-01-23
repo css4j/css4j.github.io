@@ -134,7 +134,10 @@ extends <a href="ExtendedNodeList.html" title="interface in io.sf.carte.doc.dom"
 <div class="member-signature"><span class="return-type"><a href="DOMElement.html" title="class in io.sf.carte.doc.dom">DOMElement</a></span>&nbsp;<span class="element-name">item</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block">Given the subset of child nodes that are elements, access the element at the
  <code>index</code> position of this list, with the index starting with
- <code>0</code>.</div>
+ <code>0</code>.
+ <p>
+ For better performance, please use an iterator instead of this method.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExtendedNodeList.html#item(int)">item</a></code>&nbsp;in interface&nbsp;<code><a href="ExtendedNodeList.html" title="interface in io.sf.carte.doc.dom">ExtendedNodeList</a>&lt;<a href="DOMElement.html" title="class in io.sf.carte.doc.dom">DOMElement</a>&gt;</code></dd>
