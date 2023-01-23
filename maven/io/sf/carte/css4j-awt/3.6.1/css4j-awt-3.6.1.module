@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "css4j-awt",
+    "version": "3.6.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "strictly": "[3.4.0,)",
+            "requires": "[3.4.0,)",
+            "prefers": "3.9.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.6.1.jar",
+          "url": "css4j-awt-3.6.1.jar",
+          "size": 10161,
+          "sha512": "bc997936ee99bf0b0ceae3ade8fe66a96d60ad9a7fe06beb74e1d28d17ddc17337025004dd0099851f8c2aa7e970298d26df3fb7931bb8e5c12cf68ccffae629",
+          "sha256": "43dc860665a8e26bb0e6752030d0d9e83570c30de0d7a8d12b596f7695e7ba4b",
+          "sha1": "5fa3bfe507834d218f31f6f8c9cd1abee5beb639",
+          "md5": "30994350db41fedaea17f6d7545d9855"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "strictly": "[3.4.0,)",
+            "requires": "[3.4.0,)",
+            "prefers": "3.9.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-awt-3.6.1.jar",
+          "url": "css4j-awt-3.6.1.jar",
+          "size": 10161,
+          "sha512": "bc997936ee99bf0b0ceae3ade8fe66a96d60ad9a7fe06beb74e1d28d17ddc17337025004dd0099851f8c2aa7e970298d26df3fb7931bb8e5c12cf68ccffae629",
+          "sha256": "43dc860665a8e26bb0e6752030d0d9e83570c30de0d7a8d12b596f7695e7ba4b",
+          "sha1": "5fa3bfe507834d218f31f6f8c9cd1abee5beb639",
+          "md5": "30994350db41fedaea17f6d7545d9855"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.6.1-javadoc.jar",
+          "url": "css4j-awt-3.6.1-javadoc.jar",
+          "size": 85063,
+          "sha512": "be0d18cc887e78d228494c5a431fcc1808b739056b028b02d304d59d8284b6ffaa32f01f88da7ec92b495e7b4a9cf937a3a6aad827b99303215eb098b4886227",
+          "sha256": "c24ba55a7568eddba1672583ab34c948685a68469d9b44a641f1f521bd3ec281",
+          "sha1": "61577f1b2910363d5f5e556fa8283baa1968b24a",
+          "md5": "839d9e40189da508729e6fdc14985f62"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-awt-3.6.1-sources.jar",
+          "url": "css4j-awt-3.6.1-sources.jar",
+          "size": 7021,
+          "sha512": "36f6036d1e821c07b1f7d9bb7eba48afb0b02390e80fbd34918ec5262ed59b31dc4346cfbfa25701c6079c86a9319f2af204d7d585d7d0b8e189588d4709bea8",
+          "sha256": "e6d1caee846333ba8aeef459694ffb3d10d9baec4acb3a7bc2a3dbefad11ffeb",
+          "sha1": "a955c42d1c8f24d5865fa55e8b22c440c2e34430",
+          "md5": "27f9d1025e03ae4c9da2cbbd661cad43"
+        }
+      ]
+    }
+  ]
+}
