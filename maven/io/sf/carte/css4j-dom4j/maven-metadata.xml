@@ -3,8 +3,8 @@
   <groupId>io.sf.carte</groupId>
   <artifactId>css4j-dom4j</artifactId>
   <versioning>
-    <latest>3.9.0</latest>
-    <release>3.9.0</release>
+    <latest>3.9.1</latest>
+    <release>3.9.1</release>
     <versions>
       <version>2.1.0</version>
       <version>1.0.8</version>
@@ -28,7 +28,8 @@
       <version>3.7.1</version>
       <version>3.8.0</version>
       <version>3.9.0</version>
+      <version>3.9.1</version>
     </versions>
-    <lastUpdated>20221019102106</lastUpdated>
+    <lastUpdated>20230123151122</lastUpdated>
   </versioning>
 </metadata>
