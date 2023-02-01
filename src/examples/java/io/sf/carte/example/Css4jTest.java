@@ -258,8 +258,8 @@ public class Css4jTest {
 		// Value is 14 (14pt)
 		assertEquals(14f, floatVal, 1e-5);
 
-		// Change the value to 10pt
-		numericValue.setFloatValue(CSSUnit.CSS_PT, 10f);
+		// Change the value to 23px
+		numericValue.setFloatValue(CSSUnit.CSS_PX, 23f);
 
 		/*
 		 * The second property

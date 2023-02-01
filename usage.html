@@ -587,8 +587,8 @@ short unit = numericValue.getUnitType();
 float floatVal = numericValue.getFloatValue(unit);
 // Value is 14 (14pt)
 
-// Change the value to 10pt
-numericValue.setFloatValue(CSSUnit.CSS_PT, 10f);
+// Change the value to 23px (could use any length unit)
+numericValue.setFloatValue(CSSUnit.CSS_PX, 23f);
 
 /*
  * The second property
@@ -637,7 +637,7 @@ LexicalUnit firstComponent = lexUnit.getParameters();
 
 // Let's see the lexical type to see how we access the value
 LexicalType firstLexUnitType = firstComponent.getLexicalUnitType();
-// It is a LexicalType.INTEGER (RGB components could be PERCENTAGE as well)
+// It is a LexicalType.INTEGER (RGB components could be REAL and PERCENTAGE as well)
 
 // Therefore we use getIntegerValue()
 int color_R = firstComponent.getIntegerValue();
