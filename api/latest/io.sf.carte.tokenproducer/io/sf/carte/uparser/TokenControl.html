@@ -150,6 +150,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a new <code>TokenHandler</code>.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#skipNextCodepoint()" class="member-name-link">skipNextCodepoint</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Gives the next code point in the stream, bypassing the general processing for
+ that one.</div>
+</div>
 </div>
 </div>
 </div>
@@ -199,6 +205,21 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>accept</code> - true to process quoted strings that ends with an EOF, <code>false</code> otherwise.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="skipNextCodepoint()">
+<h3>skipNextCodepoint</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">skipNextCodepoint</span>()
+               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Gives the next code point in the stream, bypassing the general processing for
+ that one.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the next code point, or -1 if the end of the stream was reached.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem occurs.</dd>
 </dl>
 </section>
 </li>
