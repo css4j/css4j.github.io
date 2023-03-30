@@ -161,7 +161,10 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseDeclarationRule(java.io.Reader)" class="member-name-link">parseDeclarationRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Parse any simple (non-nesting) at-rule containing descriptors, using a
+ generic <a href="CSSParser.DeclarationRuleHandler.html" title="interface in io.sf.carte.doc.style.css.parser"><code>CSSParser.DeclarationRuleHandler</code></a>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseFontFeatureValuesBody(java.lang.String)" class="member-name-link">parseFontFeatureValuesBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -440,7 +443,11 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../nsac/Parser.html#parseStyleSheet(java.io.Reader)">Parser</a></code></span></div>
-<div class="block">Parse a CSS style sheet.</div>
+<div class="block">Parse a CSS style sheet.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../nsac/Parser.html#parseStyleSheet(java.io.Reader)">parseStyleSheet</a></code>&nbsp;in interface&nbsp;<code><a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></dd>
@@ -511,7 +518,11 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../nsac/Parser.html#parseStyleSheet(io.sf.carte.doc.style.css.nsac.InputSource)">Parser</a></code></span></div>
-<div class="block">Parse a CSS style sheet.</div>
+<div class="block">Parse a CSS style sheet.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../nsac/Parser.html#parseStyleSheet(io.sf.carte.doc.style.css.nsac.InputSource)">parseStyleSheet</a></code>&nbsp;in interface&nbsp;<code><a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></dd>
@@ -579,10 +590,31 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parseDeclarationRule</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</span>
                           throws <span class="exceptions"><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Parse any simple (non-nesting) at-rule containing descriptors, using a
+ generic <a href="CSSParser.DeclarationRuleHandler.html" title="interface in io.sf.carte.doc.style.css.parser"><code>CSSParser.DeclarationRuleHandler</code></a>.
+ <p>
+ In general it is recommended to use <a href="#parseRule(java.io.Reader)"><code>parseRule(Reader)</code></a> to parse
+ individual at-rules, however this method can be useful for generic rules that
+ are not yet supported by the <a href="../nsac/CSSHandler.html" title="interface in io.sf.carte.doc.style.css.nsac"><code>CSSHandler</code></a> interface, as well as for
+ <code>@keyframe</code> which isn't a top-level rule.
+ </p>
+ <p>
+ As mentioned, the rule cannot have nested rules.
+ </p>
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>DeclarationRuleHandler</code>.
+ </p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>reader</code> - the character stream containing the CSS rule.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+<dd><code><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a></code> - if an error was found and no error handler was
+                               set.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a I/O error was found while retrieving the
+                               rule.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if the <code>CSSHandler</code> is not set or is not
+                               a <code>DeclarationRuleHandler</code>.</dd>
 </dl>
 </section>
 </li>
@@ -605,7 +637,11 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../nsac/Parser.html#parseRule(java.io.Reader)">Parser</a></code></span></div>
-<div class="block">Parse a namespaceless CSS rule.</div>
+<div class="block">Parse a namespaceless CSS rule.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../nsac/Parser.html#parseRule(java.io.Reader)">parseRule</a></code>&nbsp;in interface&nbsp;<code><a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></dd>
@@ -629,7 +665,11 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../nsac/Parser.html#parseRule(java.io.Reader,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)">Parser</a></code></span></div>
-<div class="block">Parse a CSS rule.</div>
+<div class="block">Parse a CSS rule.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../nsac/Parser.html#parseRule(java.io.Reader,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)">parseRule</a></code>&nbsp;in interface&nbsp;<code><a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></dd>

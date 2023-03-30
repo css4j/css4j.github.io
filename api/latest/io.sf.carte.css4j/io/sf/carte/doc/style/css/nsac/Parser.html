@@ -313,7 +313,11 @@ loadScripts(document, 'script');</script>
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
-<div class="block">Parse a CSS style sheet.</div>
+<div class="block">Parse a CSS style sheet.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>source</code> - the input source of the CSS sheet.</dd>
@@ -342,7 +346,11 @@ loadScripts(document, 'script');</script>
               throws <span class="exceptions"><a href="CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
-<div class="block">Parse a CSS style sheet.</div>
+<div class="block">Parse a CSS style sheet.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>reader</code> - the character stream containing the CSS sheet.</dd>
@@ -377,6 +385,10 @@ loadScripts(document, 'script');</script>
  <p>
  Usage of this method may have security implications. Please make sure that
  the URI being passed is safe to use.
+ </p>
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -459,8 +471,7 @@ loadScripts(document, 'script');</script>
 <h3>parsePropertyValue</h3>
 <div class="member-signature"><span class="return-type"><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></span>&nbsp;<span class="element-name">parsePropertyValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</span>
                         throws <span class="exceptions"><a href="CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
-<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
-<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">Parse a CSS property value.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -474,7 +485,6 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a I/O error was found while retrieving the
                               value.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>reader</code> is <code>null</code>.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code></dd>
 </dl>
 </section>
 </li>
@@ -504,7 +514,11 @@ loadScripts(document, 'script');</script>
         throws <span class="exceptions"><a href="CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
-<div class="block">Parse a namespaceless CSS rule.</div>
+<div class="block">Parse a namespaceless CSS rule.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>reader</code> - the character stream containing the CSS rule.</dd>
@@ -525,7 +539,11 @@ loadScripts(document, 'script');</script>
         throws <span class="exceptions"><a href="CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
-<div class="block">Parse a CSS rule.</div>
+<div class="block">Parse a CSS rule.
+ <p>
+ Note: in addition to the listed exceptions, this method may raise runtime
+ exceptions produced by the <code>CSSHandler</code>.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>reader</code> - the character stream containing the CSS rule.</dd>

@@ -253,7 +253,7 @@ implements <a href="../CSSNamespaceRule.html" title="interface in io.sf.carte.do
 <code><a href="../CSSRule.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSRule.html#getParentRule()">getParentRule</a>, <a href="../CSSRule.html#getParentStyleSheet()">getParentStyleSheet</a>, <a href="../CSSRule.html#getPrecedingComments()">getPrecedingComments</a>, <a href="../CSSRule.html#getTrailingComments()">getTrailingComments</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.w3c.dom.css.CSSRule">Methods inherited from interface&nbsp;org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getType()" title="class or interface in org.w3c.dom.css" class="external-link">getType</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getType()" title="class or interface in org.w3c.dom.css" class="external-link">getType</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#setCssText(java.lang.String)" title="class or interface in org.w3c.dom.css" class="external-link">setCssText</a></code></div>
 </section>
 </li>
 </ul>
@@ -321,21 +321,6 @@ implements <a href="../CSSNamespaceRule.html" title="interface in io.sf.carte.do
 <dd><code><a href="../CSSNamespaceRule.html#setPrefix(java.lang.String)">setPrefix</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSNamespaceRule.html" title="interface in io.sf.carte.doc.style.css">CSSNamespaceRule</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>prefix</code> - the prefix.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCssText(java.lang.String)">
-<h3>setCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCssText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</span>
-                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#setCssText(java.lang.String)" title="class or interface in org.w3c.dom.css" class="external-link">setCssText</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="AbstractCSSRule.html#setCssText(java.lang.String)">setCssText</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></code></dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code></dd>
 </dl>
 </section>
 </li>
@@ -580,6 +565,17 @@ implements <a href="../CSSNamespaceRule.html" title="interface in io.sf.carte.do
 <dd><code><a href="AbstractCSSRule.html#getMinifiedCssText()">getMinifiedCssText</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></code></dd>
 <dt>Returns:</dt>
 <dd>the minified textual representation of the rule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCssText(java.lang.String)">
+<h3>setCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCssText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</span>
+                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code></dd>
 </dl>
 </section>
 </li>

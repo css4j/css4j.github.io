@@ -15,7 +15,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -50,7 +54,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -89,6 +93,21 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="StringList.html" title="interface in io.sf.carte.doc">StringList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns a shallow copy of this <code>StringList</code> instance.</div>
+</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.util.Collection">Methods inherited from interface&nbsp;java.util.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#parallelStream()" title="class or interface in java.util" class="external-link">parallelStream</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#removeIf(java.util.function.Predicate)" title="class or interface in java.util" class="external-link">removeIf</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#stream()" title="class or interface in java.util" class="external-link">stream</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#toArray(java.util.function.IntFunction)" title="class or interface in java.util" class="external-link">toArray</a></code></div>
@@ -101,6 +120,30 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.util.List">Methods inherited from interface&nbsp;java.util.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#add(int,E)" title="class or interface in java.util" class="external-link">add</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#add(E)" title="class or interface in java.util" class="external-link">add</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#addAll(int,java.util.Collection)" title="class or interface in java.util" class="external-link">addAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#addAll(java.util.Collection)" title="class or interface in java.util" class="external-link">addAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#clear()" title="class or interface in java.util" class="external-link">clear</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#contains(java.lang.Object)" title="class or interface in java.util" class="external-link">contains</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#containsAll(java.util.Collection)" title="class or interface in java.util" class="external-link">containsAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#equals(java.lang.Object)" title="class or interface in java.util" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#get(int)" title="class or interface in java.util" class="external-link">get</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#hashCode()" title="class or interface in java.util" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#indexOf(java.lang.Object)" title="class or interface in java.util" class="external-link">indexOf</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#isEmpty()" title="class or interface in java.util" class="external-link">isEmpty</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#iterator()" title="class or interface in java.util" class="external-link">iterator</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#lastIndexOf(java.lang.Object)" title="class or interface in java.util" class="external-link">lastIndexOf</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#listIterator()" title="class or interface in java.util" class="external-link">listIterator</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#listIterator(int)" title="class or interface in java.util" class="external-link">listIterator</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#remove(int)" title="class or interface in java.util" class="external-link">remove</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#remove(java.lang.Object)" title="class or interface in java.util" class="external-link">remove</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#removeAll(java.util.Collection)" title="class or interface in java.util" class="external-link">removeAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#replaceAll(java.util.function.UnaryOperator)" title="class or interface in java.util" class="external-link">replaceAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#retainAll(java.util.Collection)" title="class or interface in java.util" class="external-link">retainAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#set(int,E)" title="class or interface in java.util" class="external-link">set</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#size()" title="class or interface in java.util" class="external-link">size</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#sort(java.util.Comparator)" title="class or interface in java.util" class="external-link">sort</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#spliterator()" title="class or interface in java.util" class="external-link">spliterator</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#subList(int,int)" title="class or interface in java.util" class="external-link">subList</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#toArray()" title="class or interface in java.util" class="external-link">toArray</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html#toArray(T%5B%5D)" title="class or interface in java.util" class="external-link">toArray</a></code></div>
+</section>
+</li>
+</ul>
+</section>
+<section class="details">
+<ul class="details-list">
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="clone()">
+<h3>clone</h3>
+<div class="member-signature"><span class="return-type"><a href="StringList.html" title="interface in io.sf.carte.doc">StringList</a></span>&nbsp;<span class="element-name">clone</span>()</div>
+<div class="block">Returns a shallow copy of this <code>StringList</code> instance. (The elements
+ themselves are not copied.)</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a clone of this <code>StringList</code>.</dd>
+</dl>
+</section>
+</li>
+</ul>
 </section>
 </li>
 </ul>

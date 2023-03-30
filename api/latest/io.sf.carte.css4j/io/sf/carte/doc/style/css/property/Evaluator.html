@@ -141,10 +141,10 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Evaluate the given expression.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#evaluateFunction(io.sf.carte.doc.style.css.CSSFunctionValue)" class="member-name-link">evaluateFunction</a><wbr>(<a href="../CSSFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSFunctionValue</a>&nbsp;function)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#evaluateFunction(io.sf.carte.doc.style.css.CSSMathFunctionValue)" class="member-name-link">evaluateFunction</a><wbr>(<a href="../CSSMathFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathFunctionValue</a>&nbsp;function)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Evaluate the given function.</div>
+<div class="block">Evaluate the given mathematical function.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected float</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#percentage(io.sf.carte.doc.style.css.CSSTypedValue,short)" class="member-name-link">percentage</a><wbr>(<a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a>&nbsp;value,
@@ -197,18 +197,18 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="evaluateFunction(io.sf.carte.doc.style.css.CSSFunctionValue)">
+<section class="detail" id="evaluateFunction(io.sf.carte.doc.style.css.CSSMathFunctionValue)">
 <h3>evaluateFunction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></span>&nbsp;<span class="element-name">evaluateFunction</span><wbr><span class="parameters">(<a href="../CSSFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSFunctionValue</a>&nbsp;function)</span>
-                               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block">Evaluate the given function.
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></span>&nbsp;<span class="element-name">evaluateFunction</span><wbr><span class="parameters">(<a href="../CSSMathFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathFunctionValue</a>&nbsp;function)</span>
+                            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
+<div class="block">Evaluate the given mathematical function.
  <p>
  This method checks the result unit, assuming that the unit must match that of
  the returned primitive value (some functions may return values where the
  units are raised to a power greater than one, or lesser than zero).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>function</code> - the function to evaluate.</dd>
+<dd><code>function</code> - the mathematical function to evaluate.</dd>
 <dt>Returns:</dt>
 <dd>the result of evaluating the function, or the function itself if this
          class does not know how to evaluate it.</dd>

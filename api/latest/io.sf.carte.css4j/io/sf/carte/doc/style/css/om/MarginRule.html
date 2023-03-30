@@ -216,14 +216,17 @@ implements <a href="../CSSMarginRule.html" title="interface in io.sf.carte.doc.s
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParentRule(io.sf.carte.doc.style.css.om.AbstractCSSRule)" class="member-name-link">setParentRule</a><wbr>(<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a>&nbsp;parent)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCssText(java.lang.String)" class="member-name-link">setCssText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParentRule(io.sf.carte.doc.style.css.om.AbstractCSSRule)" class="member-name-link">setParentRule</a><wbr>(<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a>&nbsp;parent)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the parent CSS rule, in case this rule is contained by another.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
  <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Write a serialization of this rule to the given simple writer, according to the given
  context.</div>
 </div>
@@ -232,7 +235,7 @@ implements <a href="../CSSMarginRule.html" title="interface in io.sf.carte.doc.s
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.BaseCSSDeclarationRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="BaseCSSDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSDeclarationRule</a></h3>
-<code><a href="BaseCSSDeclarationRule.html#getStyle()">getStyle</a>, <a href="BaseCSSDeclarationRule.html#getStyleDeclarationErrorHandler()">getStyleDeclarationErrorHandler</a>, <a href="BaseCSSDeclarationRule.html#setCssText(java.lang.String)">setCssText</a>, <a href="BaseCSSDeclarationRule.html#setStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">setStyleDeclarationErrorHandler</a></code></div>
+<code><a href="BaseCSSDeclarationRule.html#getStyle()">getStyle</a>, <a href="BaseCSSDeclarationRule.html#getStyleDeclarationErrorHandler()">getStyleDeclarationErrorHandler</a>, <a href="BaseCSSDeclarationRule.html#setStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">setStyleDeclarationErrorHandler</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.AbstractCSSRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></h3>
 <code><a href="AbstractCSSRule.html#toString()">toString</a></code></div>
@@ -526,6 +529,17 @@ implements <a href="../CSSMarginRule.html" title="interface in io.sf.carte.doc.s
 <li><a href="../CSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)"><code>CSSStyleSheet.parseStyleSheet(java.io.Reader, short)</code></a></li>
 </ul>
 </dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCssText(java.lang.String)">
+<h3>setCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCssText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</span>
+                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code></dd>
 </dl>
 </section>
 </li>
