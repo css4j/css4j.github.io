@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "tokenproducer",
+    "version": "2.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "tokenproducer-2.0.1.jar",
+          "url": "tokenproducer-2.0.1.jar",
+          "size": 36992,
+          "sha512": "7c1ee17c94d5e623df5587e6ae3baed06ed688072472f77481bb01632b15296fe9728968eab33b0bf57f86c523a099b3cd5e6a8a04dd63a50ae8b802df8fe506",
+          "sha256": "4331fcc05312237370468e5840a823444dc84f1213ebbdaef181f42b718f6ffb",
+          "sha1": "3da1bdf00ca69f829d3540b1de42f35f19f7e17e",
+          "md5": "2f121c4088c414b52bf8bb8d766fc6c2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tokenproducer-2.0.1.jar",
+          "url": "tokenproducer-2.0.1.jar",
+          "size": 36992,
+          "sha512": "7c1ee17c94d5e623df5587e6ae3baed06ed688072472f77481bb01632b15296fe9728968eab33b0bf57f86c523a099b3cd5e6a8a04dd63a50ae8b802df8fe506",
+          "sha256": "4331fcc05312237370468e5840a823444dc84f1213ebbdaef181f42b718f6ffb",
+          "sha1": "3da1bdf00ca69f829d3540b1de42f35f19f7e17e",
+          "md5": "2f121c4088c414b52bf8bb8d766fc6c2"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tokenproducer-2.0.1-javadoc.jar",
+          "url": "tokenproducer-2.0.1-javadoc.jar",
+          "size": 111311,
+          "sha512": "43044be9f5e0cd24d2563c1414c6f45fcdf1e4c4d20ed5cce5bfeb379d3a20015f1d3a20681c6d05240693b1457f9fa821bc01820e5990017de8e1ae773f3069",
+          "sha256": "c6dc112a824c85348cd461f9f09416e679b96ad3a060f008da309e2631faa83d",
+          "sha1": "4a9ba967b35c969bdb1abcfc79757b78d442df4f",
+          "md5": "a8bdc3c7a0d1a709fd7fcced2aaa5f27"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "tokenproducer-2.0.1-sources.jar",
+          "url": "tokenproducer-2.0.1-sources.jar",
+          "size": 17235,
+          "sha512": "eba88bb66a06186efa57893ee5ec0805ec9b5f535fa6bcfa4038e984e5c863bb7bb054899d346f923ea334078b000fa36d50d6087d54b159cfe86cb24cee6a1d",
+          "sha256": "01892fbc2549668ee0443227a4b3a43bdcb06aa5a8bf40d6261948d96e5ad875",
+          "sha1": "3ef0058bb576a6077a6be113bd347183f7dfa140",
+          "md5": "4624209826f4285943100da389c255c2"
+        }
+      ]
+    }
+  ]
+}
