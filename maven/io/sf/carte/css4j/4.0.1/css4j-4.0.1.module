@@ -1,0 +1,269 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "css4j",
+    "version": "4.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "requires": "[3.6.0,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "tokenproducer",
+          "version": {
+            "requires": "[2.0.1,)"
+          }
+        },
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-text",
+          "version": {
+            "requires": "[5.0.0,)"
+          }
+        },
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-linear3",
+          "version": {
+            "requires": "[1.0.0,)"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "requires": "[3.6.0,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-4.0.1-javadoc.jar",
+          "url": "css4j-4.0.1-javadoc.jar",
+          "size": 1656362,
+          "sha512": "76641127669cfc60504366ad18879555f81f5f2fad8403fa910f25012fd9297f5e7c61822658076e4e1957e91a4ad36961d4be4ef0592a0830b532b82803627f",
+          "sha256": "04a74746c95bcd34f6eafe745eaf38a8024a02da2ca34e3c56fadc7d72b54d70",
+          "sha1": "1d305121441030f6e1b887b0ede1a3b624ee5b43",
+          "md5": "b192d631a2c593a2b18fd6595123d905"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "css4j-4.0.1-sources.jar",
+          "url": "css4j-4.0.1-sources.jar",
+          "size": 873835,
+          "sha512": "d0d4871bc8da0b32a323f901010ae3fdbcb2169d14eec7c7c5fa13777932bce9f705294342503b1e3ba87c19105c2ebc4022a4c42029f0132c1c70439cb4e2ab",
+          "sha256": "57093edb6822ec5f1db68b4892d47c47853ba5e5c7fe1bf87a123fdbd8b11c25",
+          "sha1": "df671d6b7e1121ba8c93c439ca7619da8e6160e7",
+          "md5": "0d6732c25bad7406c5bf900b2c4b2336"
+        }
+      ]
+    },
+    {
+      "name": "xmldtdApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-xmldtd",
+          "version": "4.0.1"
+        }
+      ]
+    },
+    {
+      "name": "xmldtdRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "[4.2,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-xmldtd",
+          "version": "4.0.1"
+        }
+      ]
+    },
+    {
+      "name": "loggingApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-logging",
+          "version": "4.0.1"
+        }
+      ]
+    },
+    {
+      "name": "loggingRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "[1.7.28,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "css4j-4.0.1.jar",
+          "url": "css4j-4.0.1.jar",
+          "size": 1545744,
+          "sha512": "99fe4f98aa1b67470bea9c2fba90d3fcfb29e9206c159fc51cf356d19bfeb59a69746a6656d1456cf6a29b2878a4a1e67e737404df8b14f1653c76c3d100ab78",
+          "sha256": "a1b3c19293430de60e68787f370e6ee9ab31e71e4308b9039167d7ff6c528593",
+          "sha1": "efeed4badd107a65f64ea49b181dbb8ff7cc8a32",
+          "md5": "ebc2b1b88539e3c8ae84df2bab29e10e"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "css4j-logging",
+          "version": "4.0.1"
+        }
+      ]
+    }
+  ]
+}
