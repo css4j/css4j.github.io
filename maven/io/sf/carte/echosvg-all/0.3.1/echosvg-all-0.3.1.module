@@ -1,0 +1,210 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-all",
+    "version": "0.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-extension",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gui-util",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-swing",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-slideshow",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-svgpp",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ttf2svg",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-svgrasterizer",
+          "version": {
+            "requires": "0.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-all-0.3.1.jar",
+          "url": "echosvg-all-0.3.1.jar",
+          "size": 5347,
+          "sha512": "d7af2566d1b7d7bd6c03ff7b034d802b4debc1c794b9fd4e784b30a7334df1ff57a84246639935ab97d71c04f81679084bdcceaa37d108efa19fc862abc22bf8",
+          "sha256": "f1063aff4689bd55d1ff7fbc57d892e3e8a2640a3554b7485101dceeafad0c5b",
+          "sha1": "3e4328a03b84381a27180e6560d24c944b58ab01",
+          "md5": "d3df447232a6876582e3e06fbd91df52"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-extension",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gui-util",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-swing",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-slideshow",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-svgpp",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ttf2svg",
+          "version": {
+            "requires": "0.3.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-svgrasterizer",
+          "version": {
+            "requires": "0.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-all-0.3.1.jar",
+          "url": "echosvg-all-0.3.1.jar",
+          "size": 5347,
+          "sha512": "d7af2566d1b7d7bd6c03ff7b034d802b4debc1c794b9fd4e784b30a7334df1ff57a84246639935ab97d71c04f81679084bdcceaa37d108efa19fc862abc22bf8",
+          "sha256": "f1063aff4689bd55d1ff7fbc57d892e3e8a2640a3554b7485101dceeafad0c5b",
+          "sha1": "3e4328a03b84381a27180e6560d24c944b58ab01",
+          "md5": "d3df447232a6876582e3e06fbd91df52"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-all-0.3.1-sources.jar",
+          "url": "echosvg-all-0.3.1-sources.jar",
+          "size": 5501,
+          "sha512": "ac5b9bf264ed884140cd3a29652384ca0e5576c0de21dfa4087809a167fb1e9c8ca91da0dcae09a341191628fd6864f48787acfa28978d35de00b838a86b194c",
+          "sha256": "bedb020f7820245aa8b221622ba0fc6f612d4adf79dd471be4801943ec45a17e",
+          "sha1": "8e1e3658cae20ff0e5a6150c659baae6b8824741",
+          "md5": "cd25d97e37ade38ea188c08f4f8e6167"
+        }
+      ]
+    }
+  ]
+}
