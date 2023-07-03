@@ -27,8 +27,9 @@ dependencies {
 	testImplementation 'io.sf.carte:css4j-dom4j:latest.release'
 	testImplementation 'io.sf.carte:css4j:latest.release'
 	testImplementation 'io.sf.carte:echosvg-transcoder:latest.release'
-	testImplementation 'junit:junit:4.13.2'
 	testImplementation 'nu.validator:htmlparser:1.4.16'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 repositories {
