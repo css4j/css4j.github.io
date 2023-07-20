@@ -55,7 +55,10 @@ java {
 	sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
+test {
+	useJUnitPlatform()
+}
+
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
-
