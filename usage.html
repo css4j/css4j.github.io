@@ -1137,6 +1137,9 @@ as per the CSS specifications.</li></ul>
 <p>The differences between style databases and canvases can be subtle, and for some media features it could be argued that they belong to
 one or the other. The basic idea is that style databases should be relatively easy to implement for a given medium, while canvases are
 probably only going to exist if there is an actual rendering engine implemented.</p>
+<p>For an example implementation of a <code>DeviceFactory</code> and related classes, please check out
+<code>MyDeviceFactory</code>, <code>MyStyleDatabase</code> and <code>MyCanvas</code> in EchoSVG's <a class="codeitem" href="https://github.com/css4j/echosvg/blob/master/echosvg-transcoder/src/main/java/io/sf/carte/echosvg/transcoder/util/CSSTranscodingHelper.java">CSSTranscodingHelper</a>,
+or <a class="codeitem" href="https://github.com/css4j/css4j-awt/blob/master/src/io/sf/carte/doc/style/css/awt/AWTStyleDatabase.java">AWTStyleDatabase</a> in the <a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code> project</a>.</p>
 </div>
 <div class="tema" id="jrereq">
 <h2>Java&trade; Runtime Environment requirements</h2>
