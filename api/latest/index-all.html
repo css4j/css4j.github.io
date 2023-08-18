@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="script-dir/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="index-page">
@@ -1883,7 +1883,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createSupportsRule()" class="member-name-link">createSupportsRule()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a></dt>
 <dd>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createSupportsRule(io.sf.carte.doc.style.css.BooleanCondition)"><code>CSSStyleSheet.createSupportsRule(BooleanCondition)</code></a></div>
+<div class="deprecation-comment">use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createSupportsRule(java.lang.String)"><code>CSSStyleSheet.createSupportsRule(String)</code></a> or
+             <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createSupportsRule(io.sf.carte.doc.style.css.BooleanCondition)"><code>CSSStyleSheet.createSupportsRule(BooleanCondition)</code></a></div>
 </div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#createSupportsRule()" class="member-name-link">createSupportsRule()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
@@ -1901,6 +1902,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#createSupportsRule(io.sf.carte.doc.style.css.BooleanCondition)" class="member-name-link">createSupportsRule(BooleanCondition)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html#createSupportsRule(io.sf.carte.doc.style.css.BooleanCondition)" class="member-name-link">createSupportsRule(BooleanCondition)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createSupportsRule(java.lang.String)" class="member-name-link">createSupportsRule(String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a></dt>
+<dd>
+<div class="block">Create a CSSSupportsRule compatible with this implementation.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#createSupportsRule(java.lang.String)" class="member-name-link">createSupportsRule(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html#createSupportsRule(java.lang.String)" class="member-name-link">createSupportsRule(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheet</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html#createTextNode(java.lang.String)" class="member-name-link">createTextNode(String)</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html" title="class in io.sf.carte.doc.dom">DOMDocument</a></dt>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StylableDocumentWrapper.html#createTextNode(java.lang.String)" class="member-name-link">createTextNode(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StylableDocumentWrapper.html" title="class in io.sf.carte.doc.style.css.om">StylableDocumentWrapper</a></dt>
@@ -9122,7 +9131,15 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reports that the current query is a negative query.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/CSSDOMImplementation.html#newDocument()" class="member-name-link">newDocument()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/CSSDOMImplementation.html" title="class in io.sf.carte.doc.dom">CSSDOMImplementation</a></dt>
+<dd>
+<div class="block">Creates an empty, plain XML document with no HTML capabilities.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/XMLDocumentBuilder.html#newDocument()" class="member-name-link">newDocument()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/XMLDocumentBuilder.html" title="class in io.sf.carte.doc.dom">XMLDocumentBuilder</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/CSSDOMImplementation.html#newHTMLDocument()" class="member-name-link">newHTMLDocument()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/CSSDOMImplementation.html" title="class in io.sf.carte.doc.dom">CSSDOMImplementation</a></dt>
+<dd>
+<div class="block">Creates an HTML-specific DOM Document with an html element and DOCTYPE.</div>
+</dd>
 <dt><a href="io.sf.carte.util/io/sf/carte/util/BufferSimpleWriter.html#newLine()" class="member-name-link">newLine()</a> - Method in class io.sf.carte.util.<a href="io.sf.carte.util/io/sf/carte/util/BufferSimpleWriter.html" title="class in io.sf.carte.util">BufferSimpleWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.util/io/sf/carte/util/SimpleWriter.html#newLine()" class="member-name-link">newLine()</a> - Method in interface io.sf.carte.util.<a href="io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a></dt>
@@ -9868,6 +9885,16 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:Q">Q</h2>
 <dl class="index">
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html#querySelector(java.lang.String)" class="member-name-link">querySelector(String)</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html" title="class in io.sf.carte.doc.dom">DOMElement</a></dt>
+<dd>
+<div class="block">Returns the first element that is a descendant of this node and matches the
+ given selector list.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html#querySelector(java.lang.String)" class="member-name-link">querySelector(String)</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html" title="class in io.sf.carte.doc.dom">DOMDocument</a></dt>
+<dd>
+<div class="block">Returns the first element that is a descendant of this node and matches the
+ given selector list.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html#querySelectorAll(java.lang.String)" class="member-name-link">querySelectorAll(String)</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html" title="class in io.sf.carte.doc.dom">DOMElement</a></dt>
 <dd>
 <div class="block">Gets a static list of the descendant elements that match any of the specified group of
