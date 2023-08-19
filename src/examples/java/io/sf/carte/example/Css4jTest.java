@@ -691,10 +691,7 @@ public class Css4jTest {
 		// Create a style sheet
 		AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
 		// Create a @supports rule
-		SupportsRule supports = sheet.createSupportsRule();
-
-		// Assign a conditional expression
-		supports.setConditionText("(display: flex)");
+		SupportsRule supports = sheet.createSupportsRule("(display: flex)");
 
 		// Get the condition
 		BooleanCondition cond = supports.getCondition();
