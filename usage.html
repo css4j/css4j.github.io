@@ -87,15 +87,6 @@ href="api/latest/io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocumentFact
 <p>The style sheet objects created by that method are empty, but you can load the style sheet rules with the
 <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#parseStyleSheet(java.io.Reader,short)">AbstractCSSStyleSheet.parseStyleSheet(<i>reader</i>,
 <i>short</i>)</a> method (see <a href="#sheetparsing">Parsing a Style Sheet</a>).</p>
-<h3 class="subtema" id="style-computation-caveats">Style computation caveats</h3>
-<p>One of the most important functionalities in the library is the ability to compute styles for a given element.</p>
-<p>In practice, to obtain the 'computed' or 'used' values required for actual rendering, a box model implementation
-is needed, and also device information. The library provides a simple box model that could be used, but the details
-of the rendering device can be more difficult.</p>
-<p>Depending on the use case, the target device may not be the same one where the library is running (and some exact
-details hence not available). To help in the computation, the library defines the <a class="codeitem"
-href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a> interface
-to supply device and media-specific data (also provides the objects required by media queries to work).</p>
 </div>
 <div class="tema" id="modules">
 <h2>Modules</h2>
@@ -119,10 +110,10 @@ href="api/latest/io.sf.carte.xml.dtd/module-summary.html">io.sf.carte.xml.dtd</a
 </ul>
 <p>In general, you'll need to have at least <code>css4j</code>, <code>carte-util</code> and <code>tokenproducer</code> in your classpath/modulepath.
 If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
-<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.9.1/css4j-dom4j-3.9.1.pom"><code>.pom</code></a>
-or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/3.9.1/css4j-dom4j-3.9.1.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
+<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.pom"><code>.pom</code></a>
+or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
 <p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 3.6.1 is compatible with
-<code>css4j</code> 3.6.1 and also with 3.9.1. (css4j-dom4j 3.9.1 happens to be compatible with css4j 4.0)</p>
+<code>css4j</code> 3.6.1 and also with 3.9.1. (css4j-dom4j 4.x is recommended for css4j 4.x compatibility)</p>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
 If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
@@ -1083,50 +1074,18 @@ while other comments (located at places that cannot be easily related to a rule)
 but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
 <p>Comments in the default HTML UA style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
 </div>
-<div class="tema" id="awt">
-<h2>Create an AWT font/color from a computed style (css4j-awt module)</h2>
-<p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color with the <code>createFont</code> and <code>getAWTColor</code>
-static methods in the <a class="codeitem" href="api/latest/io.sf.carte.css4j.awt/io/sf/carte/doc/style/css/awt/AWTHelper.html">AWTHelper</a> class:</p>
-<pre class="code"><code class="language-java">CSSComputedProperties style = ...
-java.awt.Font font = AWTHelper.createFont(style);
-CSSTypedValue cssColor = (CSSTypedValue) style.getPropertyCSSValue("color");
-java.awt.Color color = AWTHelper.getAWTColor(cssColor);
-</code></pre>
-<p>Note that the <code>AWTHelper.getAWTColor</code> method can create colors from a value coming from just a style declaration (the <code>getPropertyCSSValue</code> used above does not require the style to be computed).</p>
-<p>These classes and methods belong to the css4j-awt module (the other css4j modules have no dependencies on AWT).</p>
-</div>
-<div class="tema" id="css3">
-<h2>CSS3 support</h2>
-<p>CSS3 (defined as "all CSS after CSS2.1") is partially supported by the library; the following table summarizes the basic support for setting/retrieving the main CSS features:</p>
-<table id="spectbl">
-<tr class="hdrow"><th>CSS3 Spec Name</th><th class="yesno">Support</th><th>Observations</th></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-backgrounds-3/">Background / Border</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-color-4/">Color</a></td><td class="yesno">Partial</td><td class="obsrv">Some level 4 color functions are not implemented yet; they can be parsed and serialized, but do not convert to RGB in computed styles.</td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/mediaqueries-4/">Media Queries</a></td><td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
-Relies on CSSCanvas implementations to match/unmatch media features.</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/selectors-4/">Selectors</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td><td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
-<code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands can be used if declared explicitly).</td></tr>
-</table>
-<h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
-<p>The following pseudo-classes are supported by the library:
-<code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
-<code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>dir</code>, <code>lang</code>,
-<code>any-link</code>, <code>link</code>, <code>visited</code>, <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>,
-<code>disabled</code>, <code>enabled</code>, <code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>,
-<code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code> and <code>indeterminate</code>.</p>
-<p>State pseudo-classes like <code>hover</code> are supported through the
-<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
-</div>
 <div class="tema" id="renderinterfaces">
-<h2>Rendering-oriented interfaces</h2>
-<p>To help with the determination of 'used' values and the actual rendering, this library provides a few helper interfaces. The most important are:</p>
-<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/agent/DeviceFactory.html">DeviceFactory</a>. Delivers the relevant abstractions for a
-requested medium: <code>StyleDatabase</code> and <code>CSSCanvas</code>.</li></ul>
+<h2>Providing device information for style computation</h2>
+<p>One of the most important functionalities in the library is the ability to compute styles for a given element.</p>
+<p>In practice, to obtain the 'computed' or 'used' values required for actual rendering, a box model implementation
+is needed, and also device information. The library provides a simple box model that could be used, but the details
+of the rendering device can be more difficult.</p>
+<p>Depending on the use case, the target device may not be the same one where the library is running (and some exact
+details hence not available). To help in the computation, this library provides a few helper interfaces. The most
+important are:</p>
+<ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/agent/DeviceFactory.html"
+>DeviceFactory</a>. Delivers the relevant abstractions for a requested medium: <code>StyleDatabase</code> and
+<code>CSSCanvas</code> (also provides the objects required by media queries to work).</li></ul>
 <ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html">StyleDatabase</a>.
 Provides medium-specific information like available fonts and colors.</li></ul>
 <ul><li><a class="itemtitle codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html">CSSCanvas</a>.
@@ -1140,6 +1099,71 @@ probably only going to exist if there is an actual rendering engine implemented.
 <p>For an example implementation of a <code>DeviceFactory</code> and related classes, please check out
 <code>MyDeviceFactory</code>, <code>MyStyleDatabase</code> and <code>MyCanvas</code> in EchoSVG's <a class="codeitem" href="https://github.com/css4j/echosvg/blob/master/echosvg-transcoder/src/main/java/io/sf/carte/echosvg/transcoder/util/CSSTranscodingHelper.java">CSSTranscodingHelper</a>,
 or <a class="codeitem" href="https://github.com/css4j/css4j-awt/blob/master/src/io/sf/carte/doc/style/css/awt/AWTStyleDatabase.java">AWTStyleDatabase</a> in the <a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code> project</a>.</p>
+</div>
+<div class="tema" id="awt">
+<h2>Create an AWT font/color from a computed style (css4j-awt module)</h2>
+<p>Once you have a computed style, on systems where AWT is available you can create an AWT font or color
+with the <code>createFont</code> and <code>getAWTColor</code> static methods found in the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j.awt/io/sf/carte/doc/style/css/awt/AWTHelper.html">AWTHelper</a> class:</p>
+<pre class="code"><code class="language-java">CSSComputedProperties style = ...
+java.awt.Font font = AWTHelper.createFont(style);
+CSSTypedValue cssColor = (CSSTypedValue) style.getPropertyCSSValue("color");
+java.awt.Color color = AWTHelper.getAWTColor(cssColor);
+</code></pre>
+<p>Note that <code>AWTHelper.createFont</code> requires a computed style as argument, while the
+<code>AWTHelper.getAWTColor</code> method can create colors from any typed value that represents
+a color, regardless of it coming from a computed style or a style declaration (the
+<code>getPropertyCSSValue</code> shown above does not require the style to be computed).</p>
+<p>These classes and methods belong to the <a href="api/latest/io.sf.carte.css4j.awt/module-summary.html"
+>css4j-awt module</a> (which is the only css4j module that has a dependency on <a
+href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/module-summary.html">AWT</a>).</p>
+</div>
+<div class="tema" id="css3">
+<h2>CSS3 support</h2>
+<p>CSS3 (defined as "all CSS after CSS2.1") is partially supported by the library; the following table summarizes the
+support (supporting generally means that it can decompose shorthands, initial values are known, the rules are in the
+Object Model, etc.):</p>
+<table id="spectbl">
+<tr class="hdrow"><th>CSS3 Spec Name</th><th class="yesno">Support</th><th>Observations</th></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-animations-2/">Animations 2</a></td><td class="yesno"
+>Yes</td><td class="obsrv">Supports the <code>@keyframes</code> rule and decomposes the the <code>animation</code>
+shorthand.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-backgrounds-3/">Background / Border 3</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-color-4/">Color 4</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-color-5/">Color 5</a></td><td class="yesno">Partial</td>
+<td class="obsrv">Supports full level 4 but only <code>color-mix()</code> from level 5 (this is aligned with web browser
+support at the time of writing).</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-fonts-4/">Fonts 4</a></td><td class="yesno"
+>Partial</td><td class="obsrv">Has the <code>@font-face</code> and <code>@font-feature-values</code> rules,
+also decomposes the the <code>font</code> shorthand.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/mediaqueries-4/">Media Queries 4</a></td>
+<td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
+Relies on <code>CSSCanvas</code> implementations to match/unmatch media features.</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/selectors-4/">Selectors 4</a></td><td class="yesno">Yes</td>
+<td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-lists-3/">Lists and Counters 3</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>list-style</code> shorthand. <em>Limited support by the simple box model.
+</em></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-multicol-1/">Multi-column Layout</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>columns</code> shorthand. <em>Not supported by the simple box model.
+</em></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-masking-1/">Masking</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>mask</code> shorthand. <em>Not supported by the simple box model.</em></td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv">Decomposes the <code>transition</code> shorthand.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values 4</a></td><td class="yesno">Yes</td><td class="obsrv">Advanced <code>attr()</code> from level 5 also has early support.</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"><code>var()</code> is supported in computed styles.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv">Full support (also in computed styles).</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td>
+<td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
+<code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands
+can be used if declared explicitly). <em>Not supported by the simple box model.</em></td></tr>
+</table>
+<h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
+<p>The following pseudo-classes are supported by the library:
+<code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
+<code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>dir</code>, <code>lang</code>,
+<code>any-link</code>, <code>link</code>, <code>visited</code>, <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>,
+<code>disabled</code>, <code>enabled</code>, <code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>,
+<code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code> and <code>indeterminate</code>.</p>
+<p>State pseudo-classes like <code>hover</code> are supported through the
+<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
 <div class="tema" id="jrereq">
 <h2>Java&trade; Runtime Environment requirements</h2>
