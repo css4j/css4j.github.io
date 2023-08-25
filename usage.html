@@ -1043,6 +1043,40 @@ Use double quotes unless single quotes are more efficient (when the string conta
 Use single quotes unless double quotes are more efficient (when the string contains more single quotes than double).</li>
 </ul>
 </div>
+<div class="tema" id="minification">
+<h2>Minification</h2>
+<p>The library provides methods for minified serialization at different levels (values, declarations, rules, lists, etc)
+but one generally wants to work at the style sheet level, in which case a generic CSS minification method could
+look like the following:</p>
+<pre class="code"><code class="language-java">import io.sf.carte.doc.dom.CSSDOMImplementation;
+import io.sf.carte.doc.style.css.CSSStyleSheet;
+import io.sf.carte.doc.style.css.nsac.Parser;
+import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet;
+import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory;
+
+public static String minifyCSS(String css) {
+    // Instantiate any style sheet factory, with parser flags allowing IE hacks
+    AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation(
+        EnumSet.allOf(Parser.Flag.class));
+    // Create an empty style sheet
+    AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
+    // Parse and check for return value
+    if (sheet.parseStyleSheet(new StringReader(css),
+            CSSStyleSheet.COMMENTS_IGNORE)) {
+        // Parsed without errors
+        return sheet.toMinifiedString();
+    } // Error detected, return the source
+    return css;
+}
+</code></pre>
+<p>You could choose to apply a minification utility to the output of <code>toMinifiedString()</code>, and
+<a href="https://github.com/yui/yuicompressor" target="_blank">YUI Compressor</a> is a popular choice. But <a
+href="https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui" target="_blank">that
+library is not maintained anymore</a> and the latest release was done in 2013. If you decide to apply the
+YUI Compressor, make sure to use the latest <code>master</code> branch from its <a
+href="https://github.com/yui/yuicompressor" target="_blank">Github repository</a>, which contains a few fixes
+over the 2013 release, and beware that the tool was designed around CSS version 2.1.</p>
+</div>
 <div class="tema" id="sheetcomments">
 <h2>Accessing style sheet comments</h2>
 <p>CSS style sheets often have comments, like:</p>
