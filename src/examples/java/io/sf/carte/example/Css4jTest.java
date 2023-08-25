@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
 
@@ -70,6 +71,7 @@ import io.sf.carte.doc.style.css.nsac.Condition.ConditionType;
 import io.sf.carte.doc.style.css.nsac.ConditionalSelector;
 import io.sf.carte.doc.style.css.nsac.ElementSelector;
 import io.sf.carte.doc.style.css.nsac.LexicalUnit;
+import io.sf.carte.doc.style.css.nsac.Parser;
 import io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType;
 import io.sf.carte.doc.style.css.nsac.Selector;
 import io.sf.carte.doc.style.css.nsac.Selector.SelectorType;
@@ -565,11 +567,11 @@ public class Css4jTest {
 
 	@Test
 	public void testUsageCSSFactory() throws Exception {
-		AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation();
+		AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation(
+				EnumSet.allOf(Parser.Flag.class));
 		AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
 		Reader re = new StringReader(sheet1);
 		assertTrue(sheet.parseStyleSheet(re));
-		re.close();
 
 		assertEquals(sheet1, sheet.toMinifiedString());
 	}
