@@ -1069,13 +1069,16 @@ public static String minifyCSS(String css) {
     return css;
 }
 </code></pre>
-<p>You could choose to apply a minification utility to the output of <code>toMinifiedString()</code>, and
-<a href="https://github.com/yui/yuicompressor" target="_blank">YUI Compressor</a> is a popular choice. But <a
-href="https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui" target="_blank">that
-library is not maintained anymore</a> and the latest release was done in 2013. If you decide to apply the
-YUI Compressor, make sure to use the latest <code>master</code> branch from its <a
-href="https://github.com/yui/yuicompressor" target="_blank">Github repository</a>, which contains a few fixes
-over the 2013 release, and beware that the tool was designed around CSS version 2.1.</p>
+<h3 class="subtema" id="yuicompressor">Beware of YUI Compressor</h3>
+<p>For further minification, you could choose to apply a specialized minification utility to the output of
+<code>toMinifiedString()</code>, and <a href="https://github.com/yui/yuicompressor" target="_blank">YUI
+Compressor</a> was a popular choice. But
+<a href="https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui" target="_blank">that
+library is not maintained anymore</a> and the latest release was done in 2013: if you decide to apply the
+YUI Compressor anyway, beware that it will break <code>calc()</code> expressions and other stuff.</p>
+<p>Although there are a few post-2.4.8 updates that were applied to the Compressor's <code>master</code>
+branch on its <a href="https://github.com/yui/yuicompressor" target="_blank">Github repository</a>, that
+code is completely broken: it does not compile and at least one of the new regular expressions is wrong.</p>
 </div>
 <div class="tema" id="sheetcomments">
 <h2>Accessing style sheet comments</h2>
