@@ -958,10 +958,15 @@ sheet.parseStyleSheet(re, CSSStyleSheet.COMMENTS_AUTO);
 </code></pre>
 <p>When the second argument is <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#COMMENTS_IGNORE">COMMENTS_IGNORE</a>, the comments in the source stream are ignored when parsing
 (see <a href="#sheetcomments"><em>Accessing Style Sheet Comments</em></a>).</p>
-<p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
+<p>Important notes:</p>
+<ul>
+<li>Parsing a style sheet won't produce a <code>DOMException</code> unless the error handler (which you can
+customize) does raise it.</li>
+<li><p>The new CSS rules found in the source stream are added to the already present ones, <em>i.e.</em> the sheet is not reset by this method
 (although the error handler is), so if you want to refill a sheet you need to clear the rules before parsing:</p>
 <pre class="code"><code class="language-java">sheet.getCssRules().clear();
-</code></pre>
+</code></pre></li>
+</ul>
 </div>
 <div class="tema" id="securitymodel">
 <h2>Security model</h2>
@@ -1061,11 +1066,16 @@ public static String minifyCSS(String css) {
     // Create an empty style sheet
     AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
     // Parse and check for return value
-    if (sheet.parseStyleSheet(new StringReader(css),
-            CSSStyleSheet.COMMENTS_IGNORE)) {
-        // Parsed without errors
-        return sheet.toMinifiedString();
-    } // Error detected, return the source
+    try {
+        if (sheet.parseStyleSheet(new StringReader(css),
+                CSSStyleSheet.COMMENTS_IGNORE)) {
+            // Parsed without errors
+            return sheet.toMinifiedString();
+        }
+    } catch (IOException e) {
+        // Cannot happen with StringReader
+    }
+    // Error detected, return the source
     return css;
 }
 </code></pre>
