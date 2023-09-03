@@ -149,29 +149,35 @@ where <code>css4jVersion</code> could be defined in a <code>gradle.properties</c
 </p>
 <h3 class="subtema" id="maven">Usage from a Maven build</h3>
 <p>
-If you build your project (that depends on css4j) with Apache Maven, please note that some of the css4j dependencies are not in
-Maven Central:
+If you build your project (that depends on css4j) with Apache Maven, please note that neither css4j nor some of its
+dependencies are in Maven Central:
 </p>
 <ul>
 <li><a href="https://sourceforge.net/projects/jclf/">JCLF</a>.</li>
 <li><a href="https://github.com/xmlpull-xpp3/xmlpull-xpp3">XMLPull-XPP3</a> (v1.2, dependency of the DOM4J module only).</li>
 </ul>
 <p>
-You may want to install them manually into your local Maven repository, which can be done easily with the:
+So you may want to add css4j's Maven repository to your POM file:
+</p>
+<pre class="code"><code class="language-xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;css4j&lt;/id&gt;
+        &lt;name&gt;CSS4J repository&lt;/name&gt;
+        &lt;url&gt;https://css4j.github.io/maven/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
+<p>
+Alternatively, you can also install the artifacts manually into your local Maven repository,
+which can be done easily with the:
 </p>
 <ul>
+<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-css4j.sh"><code>install-css4j.sh</code></a></li>
 <li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-jclf.sh"><code>install-jclf.sh</code></a></li>
 <li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-xpp3.sh"><code>install-xpp3.sh</code></a></li>
 </ul>
 <p>
-scripts.
-</p>
-<p>
-You can also directly install the CSS4J artifacts into your local Maven repository, with the similar
-<a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-css4j.sh"><code>install-css4j.sh</code></a>.
-</p>
-<p>
-And then, add the following to the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code>:
+scripts. And then, add the following to the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code>:
 </p>
 <pre class="code"><code class="language-xml">&lt;!-- This artifact is not in Maven Central --&gt;
 &lt;dependency&gt;
@@ -282,18 +288,44 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
     api "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
 }
 </code></pre>
-<p>or with Apache Maven:</p>
+<p>But please remember that you have to set up css4j's repository, if you haven't already:</p>
+<pre class="code"><code class="language-groovy">repositories {
+    maven {
+        url "https://css4j.github.io/maven/"
+        mavenContent {
+            releasesOnly()
+        }
+        content {
+            includeGroup 'io.sf.carte'
+            includeGroup 'io.sf.jclf'
+            includeGroup 'xmlpull'
+            includeGroup 'xpp3'
+        }
+    }
+}
+</code></pre>
+<p>Same with Apache Maven:</p>
 <pre class="code"><code class="language-xml">&lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
     &lt;artifactId&gt;css4j-dom4j&lt;/artifactId&gt;
     &lt;version&gt;${css4jDom4j.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
+<p>Again, please keep in mind adding css4j's Maven repository to your POM file:
+</p>
+<pre class="code"><code class="language-xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;css4j&lt;/id&gt;
+        &lt;name&gt;CSS4J repository&lt;/name&gt;
+        &lt;url&gt;https://css4j.github.io/maven/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
 <p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module, but since both artifacts have
 different release cycles you may want to add an explicit dependency for the core module, with the latest version.</p>
 <p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are compatible with <code>css4j</code>
 artifacts that have the same major version number, for example both <code>css4j-dom4j</code> 3.5.2 and 3.6.0 are compatible with
-<code>css4j</code> 3.7.0.</p>
+<code>css4j</code> 3.9.1.</p>
 <h3 class="subtema" id="dom4j-parsing">Loading and parsing an XML document</h3>
 <p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
 <pre class="code"><code class="language-java">SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
