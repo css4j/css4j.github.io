@@ -285,7 +285,8 @@ module. The -dom4j module optionally depends on the <a href="https://github.com/
 but you do not need the latter unless you plan to use the DOM4J agent.</p>
 <p>For example, with Gradle:</p>
 <pre class="code"><code class="language-groovy">dependencies {
-    api "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
+    implementation "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
+    implementation "io.sf.carte:xml-dtd:4.2"
 }
 </code></pre>
 <p>But please remember that you have to set up css4j's repository, if you haven't already:</p>
@@ -305,10 +306,18 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
 }
 </code></pre>
 <p>Same with Apache Maven:</p>
-<pre class="code"><code class="language-xml">&lt;dependency&gt;
+<pre class="code"><code class="language-xml">&lt;!-- This artifact requires the css4j Maven repository --&gt;
+&lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
     &lt;artifactId&gt;css4j-dom4j&lt;/artifactId&gt;
     &lt;version&gt;${css4jDom4j.version}&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;!-- This artifact requires the css4j Maven repository --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
+    &lt;artifactId&gt;xml-dtd&lt;/artifactId&gt;
+    &lt;version&gt;4.2&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 <p>Again, please keep in mind adding css4j's Maven repository to your POM file:
@@ -323,9 +332,13 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
 </code></pre>
 <p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module, but since both artifacts have
 different release cycles you may want to add an explicit dependency for the core module, with the latest version.</p>
-<p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are compatible with <code>css4j</code>
-artifacts that have the same major version number, for example both <code>css4j-dom4j</code> 3.5.2 and 3.6.0 are compatible with
-<code>css4j</code> 3.9.1.</p>
+<p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are
+compatible with <code>css4j</code> artifacts that have the same major version number, for example both
+<code>css4j-dom4j</code> 3.5.2 and 3.6.0 are compatible with <code>css4j</code> 3.9.1.</p>
+<p>If your project is modular you will need this:</p>
+<pre class="code"><code class="language-java">requires io.sf.carte.css4j.dom4j;
+requires io.sf.carte.xml.dtd; // Only if you use DefaultEntityResolver
+</code></pre>
 <h3 class="subtema" id="dom4j-parsing">Loading and parsing an XML document</h3>
 <p>This is the easiest way to parse an XML document to use this package with DOM4J, using that library's <code>SAXReader</code>:</p>
 <pre class="code"><code class="language-java">SAXReader reader = new SAXReader(XHTMLDocumentFactory.getInstance());
@@ -334,7 +347,10 @@ Reader re = ... [reader for HTML document]
 XHTMLDocument document = (XHTMLDocument) reader.read(re);
 </code></pre>
 <p>As you see, a document factory called <a class="codeitem" href="api/latest/io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocumentFactory.html">XHTMLDocumentFactory</a>
-is used.</p>
+is used. And as mentioned previously, the <a class="codeitem" href=
+"api/latest/io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html">DefaultEntityResolver</a>
+class is provided by the <a href="https://github.com/css4j/xml-dtd"><code>xml-dtd</code></a>
+project.</p>
 <p>Once you got the element you want the computed style for (see, for example, the
 <a href="https://github.com/dom4j/dom4j/wiki/Quick-Start-Guide" target="_blank">DOM4J Quick Start Guide</a>), just get it with a procedure analogous to the
 <a href="https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-ViewCSS" target="_blank"><code>ViewCSS</code></a>
