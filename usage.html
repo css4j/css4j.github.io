@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="usage-e.css" rel="stylesheet" type="text/css" />
 <title>CSS4J Quick Start User Guide</title>
-<script src="js/usage-d.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/usage-d.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="layout">
@@ -42,7 +42,7 @@ targets several different use cases, with functionalities from style sheet error
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html">AbstractCSSStyleSheet</a>
 for style sheets.</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleRule.html">StyleRule</a>
-for style rules.</a></li>
+for style rules.</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html">StyleValue</a>
 for values like <code>rgb(12% 0% 67%)</code> or <code>var(--customProperty)</code>.</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LexicalUnit.html">LexicalUnit</a>
@@ -283,7 +283,9 @@ description for additional information.</p>
 <a href="https://github.com/css4j/css4j-dom4j">css4j-dom4j module</a> in addition to the core
 module. The -dom4j module optionally depends on the <a href="https://github.com/css4j/css4j-agent">-agent module</a>,
 but you do not need the latter unless you plan to use the DOM4J agent.</p>
-<p>For example, with Gradle:</p>
+<h3 class="subtema" id="dom4j-gradle">Gradle setup</h3>
+<p>For example, to set up css4j-dom4j (and the generally useful xml-dtd) with Gradle, put the following in your
+build file:</p>
 <pre class="code"><code class="language-groovy">dependencies {
     implementation "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
     implementation "io.sf.carte:xml-dtd:4.2"
@@ -305,6 +307,7 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
     }
 }
 </code></pre>
+<h3 class="subtema" id="dom4j-maven">Maven setup</h3>
 <p>Same with Apache Maven:</p>
 <pre class="code"><code class="language-xml">&lt;!-- This artifact requires the css4j Maven repository --&gt;
 &lt;dependency&gt;
@@ -330,6 +333,7 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
     &lt;/repository&gt;
 &lt;/repositories&gt;
 </code></pre>
+<h3 class="subtema" id="dom4j-depend-compat">Dependencies and compatibility</h3>
 <p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module, but since both artifacts have
 different release cycles you may want to add an explicit dependency for the core module, with the latest version.</p>
 <p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are
@@ -360,7 +364,9 @@ String display = style.getPropertyValue("display");
 </code></pre>
 <p>Be careful to have the <code>XHTMLDocumentFactory</code> loaded with the desired defaults, like the user agent style sheet
 which was loaded by default in 1.0 but not in 2.0 and later.</p>
-<p>It is also possible to parse an HTML5 document into a css4j-dom4j tree with the aforementioned validator.nu HTML5 parser:</p>
+<h3 class="subtema" id="dom4j-html">Parsing HTML5 into DOM4J</h3>
+<p>It is also possible to parse an HTML5 document into a css4j-dom4j tree, with the aforementioned
+validator.nu HTML5 parser:</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
@@ -414,18 +420,9 @@ writer.write(document);
 it is possible to work around this problem if one serializes to XHTML with a <a href="#serial-xml-html">properly
 configured <code>Transformer</code></a>, but not with DOM4J.</p>
 </div>
-<div class="tema" id="domwrapper">
-<h2>Usage with the DOM wrapper</h2>
-<p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J one or the DOM4J back-end, you can use the
-<a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
-method to wrap a pre-existing DOM Document. Example:</p>
-<pre class="code"><code class="language-java">DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
-CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
-</code></pre>
-<p>Unlike the native DOM or the DOM4J back-end, the DOM resulting from the DOM wrapper is read-only, although you can change the
-values of some nodes.</p>
-<h3 class="subtema" id="serial-xml-html">Serializing HTML with an XML DOM</h3>
-<p>As was <a href="#html-caveats">previously mentioned</a>, if you serialize a plain HTML document
+<div class="tema" id="serial-xml-html">
+<h2>Serializing HTML with an XML DOM</h2>
+<p>As was previously mentioned, if you serialize a plain HTML document
 (which does not contain <code>CDATA</code> sections) with an XML-oriented DOM, you can avoid serializing
 <code>div&gt;p</code> as "<code>div&amp;gt;p</code>" if you use a <code>Transformer</code> which is
 configured for the task. The code would be like the following:</p>
@@ -435,7 +432,7 @@ transformer.setOutputProperty(OutputKeys.METHOD, "xml");
 // Put other Transformer configurations here
 // ...
 transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-// Put the embedded style sheets inside <code>CDATA</code> sections
+// Put the embedded style sheets inside CDATA sections
 transformer.setOutputProperty(OutputKeys.CDATA_SECTION_ELEMENTS, "script style");
 
 Writer wri = ... [put your writer here]
@@ -452,6 +449,18 @@ the desired result.</li>
 </ol>
 <p>To handle HTML, the <a href="https://css4j.github.io/api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">native DOM</a>
 is recommended over any XML DOM.</p>
+</div>
+<div class="tema" id="domwrapper">
+<h2>Usage with the DOM wrapper</h2>
+<p>If you choose to build your document with your favorite DOM implementation instead of the CSS4J
+one or the DOM4J back-end, you can use the <a class="codeitem" href=
+"api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.html#createCSSDocument(org.w3c.dom.Document)">DOMCSSStyleSheetFactory.createCSSDocument(document)</a>
+method to wrap a pre-existing DOM Document. Example:</p>
+<pre class="code"><code class="language-java">DOMCSSStyleSheetFactory cssFactory = new DOMCSSStyleSheetFactory();
+CSSDocument document = cssFactory.createCSSDocument(otherDOMdocument);
+</code></pre>
+<p>Unlike the native DOM or the DOM4J back-end, the DOM resulting from the DOM wrapper is read-only, although you can change the
+values of some nodes.</p>
 </div>
 <div id="dom-impls-diff" class="tema">
 <h2>Consistency of different DOM implementations</h2>
@@ -496,7 +505,7 @@ which gives us access to the selector list and the declared style.</p>
  * It is possible to use iterators to retrieve the rules.
  */
 sheet = sheets.item(0);
-Iterator<AbstractCSSRule> it = sheet.getCssRules().iterator();
+Iterator&lt;AbstractCSSRule&gt; it = sheet.getCssRules().iterator();
 // Assume it.hasNext() returns true
 
 // Access the first rule in the sheet
@@ -541,11 +550,11 @@ SelectorList selist = styleRule.getSelectorList();
 Selector selector = selist.item(0);
 // Selector type (which we can use to cast the selector)
 SelectorType selType = selector.getSelectorType();
-// For "div > .myClass" selType would be SelectorType.CHILD
+// For "div &gt; .myClass" selType would be SelectorType.CHILD
 
 // Cast to CombinatorSelector (see CHILD javadoc)
 CombinatorSelector comb = (CombinatorSelector) selector;
-// Obtain the two selectors that are combined by ">"
+// Obtain the two selectors that are combined by "&gt;"
 Selector firstSel = comb.getSelector();
 SimpleSelector secondSel = comb.getSecondSelector();
 
@@ -888,7 +897,7 @@ AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation();
 /*
  * Parsing a Media Query
  */
-MediaQueryList mql = cssFactory.createMediaQueryList("screen and (600px <= width < 1200px)",
+MediaQueryList mql = cssFactory.createMediaQueryList("screen and (600px &lt;= width &lt; 1200px)",
 	null);
 
 // How many queries we got?
@@ -912,7 +921,7 @@ BooleanCondition.Type condType = cond.getType();
 // It is BooleanCondition.Type.AND
 
 // As the AND javadoc suggests, call getSubConditions()
-List<BooleanCondition> andConds = cond.getSubConditions();
+List&lt;BooleanCondition&gt; andConds = cond.getSubConditions();
 // andConds.size() is 2
 
 // The first operand of the AND
