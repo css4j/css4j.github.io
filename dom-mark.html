@@ -685,14 +685,14 @@ although that process is not part of the timed benchmark.</p>
 </tbody></table>
 <p>DOM4J is not included as it lacks a <code>NodeIterator</code>.</p>
 <p><em>Note:</em> sometimes the <code>NodeIterator</code> created by the JDK is in an inconsistent state, and fails with an exception like:</p>
-<pre class="code"># Warmup Iteration   1: <failure>
+<pre class="code"># Warmup Iteration   1: &lt;failure&gt;
 
 java.lang.ArrayIndexOutOfBoundsException: Index 34 out of bounds for length 33
         at java.base/java.util.ArrayList.add(ArrayList.java:455)
         at java.base/java.util.ArrayList.add(ArrayList.java:467)
         at java.xml/com.sun.org.apache.xerces.internal.dom.DocumentImpl.createNodeIterator(DocumentImpl.java:255)
         at io.sf.carte.mark.dom.DOMIteratorMark.markNodeIteratorJdk(DOMIteratorMark.java:46)
-</failure></pre>
+&lt;/failure&gt;</pre>
 <p>But I have observed this only while benchmarking, and not in other cases.</p>
 </div>
 <div class="tema" id="treewalker-small">

@@ -3,7 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="code-c.css" rel="stylesheet" type="text/css" />
-<script src="js/code-a.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/code-a.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="layout">
@@ -40,7 +40,7 @@ that the document could contain, like "<code>&amp;eacute;</code>".
 (Note: <a href="https://www.w3.org/TR/xml-entity-names/predefined.html">predefined entities</a> like "<code>&amp;amp;</code>" are not affected)</li>
 <li>Enabling the feature <a href="https://xerces.apache.org/xerces2-j/features.html#disallow-doctype-decl">http://apache.org/xml/features/disallow-doctype-decl</a>,
 which throws an error if the parsed document contains a <code>DOCTYPE</code> declaration.
-Since many documents contain <code>DOCTYPE</code> declarations, that prevents the parsing of a lot of documents.</p>
+Since many documents contain <code>DOCTYPE</code> declarations, that prevents the parsing of a lot of documents.</li>
 </ol>
 <p>Those two workarounds assume that your XML parser is based on <a href="https://xerces.apache.org/xerces2-j/">Apache Xerces2</a>,
 although other parsers are sometimes still in use (for example variants of the <a href="http://saxon.sourceforge.net/aelfred.html">Ælfred XML Parser</a>)
