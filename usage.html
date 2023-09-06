@@ -370,6 +370,7 @@ validator.nu HTML5 parser:</p>
 <pre class="code"><code class="language-java">XHTMLDocumentFactory factory = XHTMLDocumentFactory.getInstance();
 // Next line is optional: default is TRUE, and is probably what you want
 // factory.getStyleSheetFactory().setLenientSystemValues(false);
+
 HtmlParser parser = new HtmlParser(XmlViolationPolicy.ALTER_INFOSET);
 parser.setCommentPolicy(XmlViolationPolicy.ALLOW);
 parser.setXmlnsPolicy(XmlViolationPolicy.ALLOW);
@@ -478,7 +479,7 @@ underlying document DOM implementations:</p>
 <p>To access the styles declared in style sheets, we can use the relevant
 <a href="https://www.w3.org/TR/cssom-1/" target="_blank">CSS Object Model</a> methods.
 For example, suppose that the first style sheet of the document contains only the following rule:</p>
-<pre class="code"><code class="language-css">div > .myClass {
+<pre class="code"><code class="language-css">div &gt; .myClass {
   font-size: 14pt;
   color: var(--myColor, #46f);
 }
@@ -506,7 +507,7 @@ which gives us access to the selector list and the declared style.</p>
  */
 sheet = sheets.item(0);
 Iterator&lt;AbstractCSSRule&gt; it = sheet.getCssRules().iterator();
-// Assume it.hasNext() returns true
+// it.hasNext() returns true
 
 // Access the first rule in the sheet
 rule = it.next();
@@ -521,7 +522,7 @@ API to perform many of the tasks that can be achieved with the standard CSSOM, f
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptStyleRuleVisitor(io.sf.carte.util.Visitor)">acceptStyleRuleVisitor</a>
  to visit style rules in a sheet.</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptDeclarationRuleVisitor(io.sf.carte.util.Visitor)">acceptDeclarationRuleVisitor</a>
- to visit declaration rules in a sheet. In the terminology of this library, a declaration rule is a rule that
+to visit declaration rules in a sheet. In the terminology of this library, a declaration rule is a rule that
 contains any kind of declaration, be it property or descriptor declarations. For example, style, font-face and
 keyframe rules are all "declaration rules".</li>
 <li><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#acceptDescriptorRuleVisitor(io.sf.carte.util.Visitor)">acceptDescriptorRuleVisitor</a>
