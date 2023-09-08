@@ -419,15 +419,18 @@ writer.write(document);
 </code></pre>
 <p>The result will be the "<code>div&amp;gt;p</code>". As explained below, with other DOM implementations
 it is possible to work around this problem if one serializes to XHTML with a <a href="#serial-xml-html">properly
-configured <code>Transformer</code></a>, but not with DOM4J.</p>
+configured <code>Transformer</code></a>, but not with DOM4J where you are forced to serialize to plain HTML instead.</p>
 </div>
 <div class="tema" id="serial-xml-html">
 <h2>Serializing HTML with an XML DOM</h2>
 <p>As was previously mentioned, if you serialize a plain HTML document
-(which does not contain <code>CDATA</code> sections) with an XML-oriented DOM, you can avoid serializing
-<code>div&gt;p</code> as "<code>div&amp;gt;p</code>" if you use a <code>Transformer</code> which is
-configured for the task. The code would be like the following:</p>
-<pre class="code"><code class="language-java">TransformerFactory tf = TransformerFactory.newInstance();
+(which does not contain <code>CDATA</code> sections) with an XML-oriented DOM to obtain XHTML,
+you can avoid serializing <code>div&gt;p</code> as "<code>div&amp;gt;p</code>" if you use a
+<code>Transformer</code> which is configured for the task.</p>
+<h3 class="subtema" id="xml-serial-xhtml">Serializing to XHTML</h3>
+<p>The code would be like the following:</p>
+<pre class="code"><code class="language-java">// Serialize to XHTML
+TransformerFactory tf = TransformerFactory.newInstance();
 Transformer transformer = tf.newTransformer();
 transformer.setOutputProperty(OutputKeys.METHOD, "xml");
 // Put other Transformer configurations here
@@ -446,10 +449,24 @@ Note, however, that:</p>
 <a href="https://html.spec.whatwg.org/multipage/syntax.html#cdata-sections">CDATA sections can only be used in foreign content</a>
 —otherwise being considered as "bogus comments"— so you are now in XHTML instead of HTML.</li>
 <li>If you use the above code with css4j-dom4j (3.6.1 or later is required), it will not produce
-the desired result.</li>
+the desired result, so you have to resort to plain HTML serialization by setting <code>OutputKeys.METHOD</code>
+to <code>"html"</code> (see next example).</li>
 </ol>
-<p>To handle HTML, the <a href="https://css4j.github.io/api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">native DOM</a>
-is recommended over any XML DOM.</p>
+<h3 class="subtema" id="xml-serial-plain-html">Serializing to plain HTML (no <code>CDATA</code> sections)</h3>
+<pre class="code"><code class="language-java">// Serialize to plain HTML
+TransformerFactory tf = TransformerFactory.newInstance();
+Transformer transformer = tf.newTransformer();
+transformer.setOutputProperty(OutputKeys.METHOD, "html");
+transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+
+Writer wri = ... [put your writer here]
+transformer.transform(new DOMSource(document), new StreamResult(wri));
+</code></pre>
+<p>Unfortunately this procedure adds a <code>META</code> element with an <code>http-equiv</code> attribute,
+which is something that you probably did not want.</p>
+<p>To handle HTML, the <a
+href="https://css4j.github.io/api/latest/io.sf.carte.css4j/io/sf/carte/doc/dom/package-summary.html">native
+DOM</a> is recommended over any XML DOM.</p>
 </div>
 <div class="tema" id="domwrapper">
 <h2>Usage with the DOM wrapper</h2>

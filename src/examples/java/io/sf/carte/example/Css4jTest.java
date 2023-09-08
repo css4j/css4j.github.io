@@ -102,24 +102,36 @@ import nu.validator.htmlparser.sax.HtmlParser;
  */
 public class Css4jTest {
 
-	private static final String htmlString1 = "<html><head><title>Example</title><style>div>.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+	private static final String htmlString1 =
+			"<html><head><title>Example</title><style>div>.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
 
-	private static final String xmlString1 = "<html><head><title>Example</title><style><![CDATA[div>.myClass{font-size:14pt;color:var(--myColor,#46f)}]]></style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+	private static final String xmlString1 =
+			"<html><head><title>Example</title><style><![CDATA[div>.myClass{font-size:14pt;color:var(--myColor,#46f)}]]></style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+
+	private static final String htmlTransformedString1 =
+			"<html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>Example</title><style>div>.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+
+	private static final String dom4jHtmlTransformedString1 =
+			"<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><title>Example</title><style>div>.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
 
 	/*
-	 * DOM4J does not serialize the STYLE element as raw, nor is
-	 * being appropriately transformed by the Transformer.
+	 * DOM4J does not serialize the STYLE element as raw, nor is being appropriately
+	 * transformed by the Transformer.
 	 */
-	private static final String dom4jXmlString1 = "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Example</title><style>div&gt;.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+	private static final String dom4jXmlString1 =
+			"<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Example</title><style>div&gt;.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
 
 	/*
 	 * The DOM4J namespace DOM bug
 	 */
-	private static final String dom4jXmlString1_bug = "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Example</title><style>div&gt;.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p xmlns=\"\" id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
+	private static final String dom4jXmlString1_bug =
+			"<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title>Example</title><style>div&gt;.myClass{font-size:14pt;color:var(--myColor,#46f)}</style></head><body><div><p xmlns=\"\" id=\"hi\" style=\"--myColor: #54e; \">Hi</p></div></body></html>";
 
 	private static final String sheet1 = "html{font-size:12pt}p{font-size:10pt}";
 
 	private static Transformer transformer;
+
+	private static Transformer transformerHTML;
 
 	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
@@ -130,6 +142,11 @@ public class Css4jTest {
 		transformer.setOutputProperty(OutputKeys.INDENT, "no");
 		transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 		transformer.setOutputProperty(OutputKeys.CDATA_SECTION_ELEMENTS, "script style");
+
+		transformerHTML = tf.newTransformer();
+		transformerHTML.setOutputProperty(OutputKeys.METHOD, "html");
+		transformerHTML.setOutputProperty(OutputKeys.INDENT, "no");
+		transformerHTML.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 	}
 
 	@Test
@@ -474,6 +491,7 @@ public class Css4jTest {
 		// Set document URI
 		otherDOMdocument.setDocumentURI("http://www.example.com/mydocument.html");
 
+		// Transform to XHTML
 		StringWriter sw = new StringWriter(xmlString1.length());
 		transformer.transform(new DOMSource(otherDOMdocument), new StreamResult(sw));
 
@@ -486,6 +504,12 @@ public class Css4jTest {
 		transformer.transform(new DOMSource(document), new StreamResult(sw));
 
 		assertEquals(xmlString1, sw.toString());
+
+		// Transform to HTML
+		sw = new StringWriter(htmlTransformedString1.length());
+		transformerHTML.transform(new DOMSource(document), new StreamResult(sw));
+
+		assertEquals(htmlTransformedString1, sw.toString());
 	}
 
 	@Test
@@ -522,6 +546,12 @@ public class Css4jTest {
 		transformer.transform(new DOMSource(document), new StreamResult(sw));
 
 		assertEquals(dom4jXmlString1, sw.toString());
+
+		// Transform to HTML
+		sw = new StringWriter(dom4jHtmlTransformedString1.length());
+		transformerHTML.transform(new DOMSource(document), new StreamResult(sw));
+
+		assertEquals(dom4jHtmlTransformedString1, sw.toString());
 	}
 
 	@Test
@@ -551,6 +581,12 @@ public class Css4jTest {
 		String s = serializeDOM4J(document);
 
 		assertEquals(dom4jXmlString1_bug, s);
+
+		// Transform to HTML
+		StringWriter sw = new StringWriter(dom4jHtmlTransformedString1.length());
+		transformerHTML.transform(new DOMSource(document), new StreamResult(sw));
+
+		assertEquals(dom4jHtmlTransformedString1, sw.toString());
 	}
 
 	private String serializeDOM4J(XHTMLDocument document) throws IOException {
@@ -586,7 +622,7 @@ public class Css4jTest {
 		 * Parsing a Media Query
 		 */
 		MediaQueryList mql = cssFactory.createMediaQueryList("screen and (600px <= width < 1200px)",
-			null);
+				null);
 		assertNotNull(mql);
 
 		// How many queries we got?
