@@ -79,12 +79,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></code></dd>
+<dd><code><a href="../BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></code>, <code><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">SupportsConditionFactory</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></span></div>
+implements <a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></span></div>
 <div class="block">Contains factory methods related to <code>@supports</code>
  conditions.</div>
 </section>
@@ -98,8 +98,11 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">SupportsConditionFactory</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">SupportsConditionFactory</a><wbr>(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Construct a new condition factory for rules belonging to the given style
+ sheet.</div>
+</div>
 </div>
 </section>
 </li>
@@ -120,20 +123,31 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <div class="block">Create a boolean condition of the <code>and</code> type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createNotCondition()" class="member-name-link">createNotCondition</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createFalseCondition(java.lang.String)" class="member-name-link">createFalseCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;condition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a boolean condition of the <code>not</code> type.</div>
+<div class="block">Create a condition that was not recognized by the parser and therefore will
+ never match.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createOrCondition()" class="member-name-link">createOrCondition</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createNotCondition()" class="member-name-link">createNotCondition</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a boolean condition of the given type (<code>and</code>, <code>or</code>,
- <code>not</code>).</div>
+<div class="block">Create a boolean condition of the <code>not</code> type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPredicate(java.lang.String)" class="member-name-link">createPredicate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;featureName)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createOrCondition()" class="member-name-link">createOrCondition</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a boolean condition of the given type (<code>and</code>,
+ <code>or</code>, <code>not</code>).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createPredicate(java.lang.String)" class="member-name-link">createPredicate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;featureName)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a declaration (operand) condition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSelectorFunction(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">createSelectorFunction</a><wbr>(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectors)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a selector function.</div>
 </div>
 </div>
 </div>
@@ -153,9 +167,15 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;()">
+<section class="detail" id="&lt;init&gt;(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
 <h3>SupportsConditionFactory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SupportsConditionFactory</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SupportsConditionFactory</span><wbr><span class="parameters">(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</span></div>
+<div class="block">Construct a new condition factory for rules belonging to the given style
+ sheet.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>parentStyleSheet</code> - the style sheet.</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -183,8 +203,8 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <section class="detail" id="createOrCondition()">
 <h3>createOrCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">createOrCondition</span>()</div>
-<div class="block">Create a boolean condition of the given type (<code>and</code>, <code>or</code>,
- <code>not</code>).</div>
+<div class="block">Create a boolean condition of the given type (<code>and</code>,
+ <code>or</code>, <code>not</code>).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../BooleanConditionFactory.html#createOrCondition()">createOrCondition</a></code>&nbsp;in interface&nbsp;<code><a href="../BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></code></dd>
@@ -213,7 +233,7 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <div class="block">Create a declaration (operand) condition.
  <p>
  The value of the feature can be set later with
- <a href="../parser/DeclarationCondition.html#setValue(io.sf.carte.doc.style.css.CSSValue)"><code>DeclarationCondition.setValue(CSSValue)</code></a>.</div>
+ <a href="../nsac/DeclarationPredicate.html#setValue(io.sf.carte.doc.style.css.nsac.LexicalUnit)"><code>DeclarationPredicate.setValue(LexicalUnit)</code></a>.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../BooleanConditionFactory.html#createPredicate(java.lang.String)">createPredicate</a></code>&nbsp;in interface&nbsp;<code><a href="../BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></code></dd>
@@ -221,6 +241,42 @@ implements <a href="../BooleanConditionFactory.html" title="interface in io.sf.c
 <dd><code>featureName</code> - the name of the declared feature.</dd>
 <dt>Returns:</dt>
 <dd>the condition.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="createSelectorFunction(io.sf.carte.doc.style.css.nsac.SelectorList)">
+<h3>createSelectorFunction</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">createSelectorFunction</span><wbr><span class="parameters">(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectors)</span></div>
+<div class="block">Create a selector function.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../SupportsConditionFactory.html#createSelectorFunction(io.sf.carte.doc.style.css.nsac.SelectorList)">createSelectorFunction</a></code>&nbsp;in interface&nbsp;<code><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>selectors</code> - the selectors.</dd>
+<dt>Returns:</dt>
+<dd>the condition.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="createFalseCondition(java.lang.String)">
+<h3>createFalseCondition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">createFalseCondition</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;condition)</span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../SupportsConditionFactory.html#createFalseCondition(java.lang.String)">SupportsConditionFactory</a></code></span></div>
+<div class="block">Create a condition that was not recognized by the parser and therefore will
+ never match.
+ <p>
+ False conditions belong to the <a href="../BooleanCondition.Type.html#OTHER"><code>OTHER</code></a>
+ type.
+ </p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../SupportsConditionFactory.html#createFalseCondition(java.lang.String)">createFalseCondition</a></code>&nbsp;in interface&nbsp;<code><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>condition</code> - the condition that was not recognized.</dd>
+<dt>Returns:</dt>
+<dd>a condition that never matches.</dd>
 </dl>
 </section>
 </li>

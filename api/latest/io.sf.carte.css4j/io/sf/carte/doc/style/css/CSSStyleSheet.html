@@ -754,9 +754,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <dt>Returns:</dt>
 <dd><code>true</code> if the NSAC parser reported no errors or fatal errors, <code>false</code> otherwise.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a DOM problem is found parsing the sheet.</dd>
-<dd><code><a href="nsac/CSSException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSException</a></code> - if a non-DOM problem is found parsing the sheet.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a problem is found reading the sheet.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a DOM problem was found parsing the sheet, and raised by the error handler.</dd>
+<dd><code><a href="nsac/CSSException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSException</a></code> - if a non-DOM problem was found parsing the sheet, and raised by the error handler.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a I/O problem was found reading the sheet.</dd>
 </dl>
 </section>
 </li>
@@ -792,8 +792,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <dd><code>true</code> if the NSAC parser reported no errors or fatal
          errors, <code>false</code> otherwise.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a problem is found parsing the sheet.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a problem is found reading the sheet.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a DOM problem was found parsing the sheet, and raised by the error handler.</dd>
+<dd><code><a href="nsac/CSSException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSException</a></code> - if a non-DOM problem was found parsing the sheet, and raised by the error handler.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a I/O problem was found reading the sheet.</dd>
 </dl>
 </section>
 </li>

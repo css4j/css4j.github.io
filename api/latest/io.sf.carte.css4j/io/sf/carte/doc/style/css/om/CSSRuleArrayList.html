@@ -166,14 +166,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toMinifiedString()" class="member-name-link">toMinifiedString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gives a minified parsable representation of this rule list.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
  <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write a serialization of this rule list to the given simple writer, according
+ to the given context.</div>
+</div>
 </div>
 </div>
 </div>
@@ -271,11 +276,17 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeCssText</span><wbr><span class="parameters">(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
  <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</span>
                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRuleList.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">CSSRuleList</a></code></span></div>
+<div class="block">Write a serialization of this rule list to the given simple writer, according
+ to the given context.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CSSRuleList.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">writeCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSRuleList.html" title="interface in io.sf.carte.doc.style.css">CSSRuleList</a>&lt;<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a>&gt;</code></dd>
+<dt>Parameters:</dt>
+<dd><code>wri</code> - the simple writer object.</dd>
+<dd><code>context</code> - the formatting context.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an error happened while writing.</dd>
 </dl>
 </section>
 </li>
@@ -333,9 +344,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toMinifiedString()">
 <h3>toMinifiedString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toMinifiedString</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRuleList.html#toMinifiedString()">CSSRuleList</a></code></span></div>
+<div class="block">Gives a minified parsable representation of this rule list.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CSSRuleList.html#toMinifiedString()">toMinifiedString</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSRuleList.html" title="interface in io.sf.carte.doc.style.css">CSSRuleList</a>&lt;T extends <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>the minified rule list.</dd>
 </dl>
 </section>
 </li>

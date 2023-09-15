@@ -1374,13 +1374,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Parses a style sheet.
  <p>
  If the style sheet is not empty, the rules from the parsed source will be
- added at the end of the rule list, with the same origin as the rule with
- a highest precedence origin.
+ added at the end of the rule list, with the same origin as the rule with a
+ highest precedence origin.
  <p>
  Even if a specific media is set at the <code>InputSource</code>, this method
  does not alter the sheet's current media attribute.
  <p>
- The comments shall be processed according to <a href="../CSSStyleSheet.html#COMMENTS_AUTO"><code>CSSStyleSheet.COMMENTS_AUTO</code></a>.
+ The comments shall be processed according to
+ <a href="../CSSStyleSheet.html#COMMENTS_AUTO"><code>CSSStyleSheet.COMMENTS_AUTO</code></a>.
  <p>
  To create a sheet, see
  <a href="../CSSStyleSheetFactory.html#createStyleSheet(java.lang.String,io.sf.carte.doc.style.css.MediaQueryList)"><code>CSSStyleSheetFactory.createStyleSheet(String,MediaQueryList)</code></a></div>
@@ -1392,10 +1393,10 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>reader</code> - the character stream containing the CSS sheet.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the NSAC parser reported no errors or fatal errors, false
-         otherwise.</dd>
+<dd><code>true</code> if the NSAC parser reported no errors or fatal
+         errors, false otherwise.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a problem is found parsing the sheet.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if raised by the error handler.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a problem is found reading the sheet.</dd>
 </dl>
 </section>
@@ -1438,7 +1439,7 @@ loadScripts(document, 'script');</script>
 <dd><code>true</code> if the SAC parser reported no errors or fatal
          errors, false otherwise.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a problem is found parsing the sheet.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if raised by the error handler.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if a problem is found reading the sheet.</dd>
 </dl>
 </section>

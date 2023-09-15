@@ -15,11 +15,7 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var evenRowColor = "even-row-color";
-var oddRowColor = "odd-row-color";
-var tableTab = "table-tab";
-var activeTableTab = "active-table-tab";
-var pathtoroot = "../../../../../";
+<script type="text/javascript">var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -52,9 +48,9 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method-detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -74,13 +70,24 @@ loadScripts(document, 'script');</script>
 <h1 title="Class TokenProducer" class="title">Class TokenProducer</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="TokenProducer3.html" title="class in io.sf.carte.uparser">io.sf.carte.uparser.TokenProducer3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;
 <div class="inheritance">io.sf.carte.uparser.TokenProducer</div>
+</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">TokenProducer</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">A simple parser that produces tokens from a String or Reader.
+<span class="extends-implements">extends <a href="TokenProducer3.html" title="class in io.sf.carte.uparser">TokenProducer3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</span></div>
+<div class="block">A simple parser that produces tokens from a String or Reader, and processes
+ them through a user-provided handler.
+ <p>
+ This parser is intended to deal with handlers that produce only runtime
+ (unchecked) exceptions. If your use case requires dealing with checked
+ exceptions, please use <a href="TokenProducer3.html" title="class in io.sf.carte.uparser"><code>TokenProducer3</code></a> instead.
+ </p>
+ <p>
+ <strong>Tokenization Overview</strong>
+ </p>
  <p>
  The tokens produced are:
  <ul>
@@ -115,181 +122,18 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="nested-class-summary" id="nested-class-summary">
 <h2>Nested Class Summary</h2>
-<div class="caption"><span>Nested Classes</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Class</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second even-row-color"><code><a href="TokenProducer.CharacterCheck.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenProducer.CharacterCheck</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">Check whether a character codepoint would be a valid addition to a word.</div>
-</div>
-<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
-<div class="col-second odd-row-color"><code><a href="TokenProducer.SequenceParser.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenProducer.SequenceParser</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">Basic access to the current sequence in this tokenizer.</div>
-</div>
-</div>
+<div class="inherited-list">
+<h2 id="nested-classes-inherited-from-class-io.sf.carte.uparser.TokenProducer3">Nested classes/interfaces inherited from class&nbsp;io.sf.carte.uparser.<a href="TokenProducer3.html" title="class in io.sf.carte.uparser">TokenProducer3</a></h2>
+<code><a href="TokenProducer3.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer3.CharacterCheck</a>, <a href="TokenProducer3.SequenceParser.html" title="interface in io.sf.carte.uparser">TokenProducer3.SequenceParser</a>&lt;<a href="TokenProducer3.SequenceParser.html" title="type parameter in TokenProducer3.SequenceParser">E</a> extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&gt;</code></div>
 </section>
 </li>
 <!-- =========== FIELD SUMMARY =========== -->
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
-<div class="caption"><span>Fields</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Field</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_ASTERISK" class="member-name-link">CHAR_ASTERISK</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">*</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_CIRCUMFLEX_ACCENT" class="member-name-link">CHAR_CIRCUMFLEX_ACCENT</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">^</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_COLON" class="member-name-link">CHAR_COLON</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">:</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_COMMA" class="member-name-link">CHAR_COMMA</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">,</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_COMMERCIAL_AT" class="member-name-link">CHAR_COMMERCIAL_AT</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">@</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_DOLLAR" class="member-name-link">CHAR_DOLLAR</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">$</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_EQUALS" class="member-name-link">CHAR_EQUALS</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">=</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_EXCLAMATION" class="member-name-link">CHAR_EXCLAMATION</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">!</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_FULL_STOP" class="member-name-link">CHAR_FULL_STOP</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">.</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_GREATER_THAN" class="member-name-link">CHAR_GREATER_THAN</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">&gt;</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_HYPHEN_MINUS" class="member-name-link">CHAR_HYPHEN_MINUS</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">-</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_LEFT_CURLY_BRACKET" class="member-name-link">CHAR_LEFT_CURLY_BRACKET</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">{</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_LEFT_PAREN" class="member-name-link">CHAR_LEFT_PAREN</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">(</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_LEFT_SQ_BRACKET" class="member-name-link">CHAR_LEFT_SQ_BRACKET</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">[</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_LESS_THAN" class="member-name-link">CHAR_LESS_THAN</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">&lt;</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_LOW_LINE" class="member-name-link">CHAR_LOW_LINE</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">_</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_NUMBER_SIGN" class="member-name-link">CHAR_NUMBER_SIGN</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">#</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_PERCENT_SIGN" class="member-name-link">CHAR_PERCENT_SIGN</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">%</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_PLUS" class="member-name-link">CHAR_PLUS</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">+</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_QUESTION_MARK" class="member-name-link">CHAR_QUESTION_MARK</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">?</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_RIGHT_CURLY_BRACKET" class="member-name-link">CHAR_RIGHT_CURLY_BRACKET</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">}</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_RIGHT_PAREN" class="member-name-link">CHAR_RIGHT_PAREN</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">)</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_RIGHT_SQ_BRACKET" class="member-name-link">CHAR_RIGHT_SQ_BRACKET</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">]</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_SEMICOLON" class="member-name-link">CHAR_SEMICOLON</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">;</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_SLASH" class="member-name-link">CHAR_SLASH</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">/</div>
-</div>
-<div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#CHAR_TILDE" class="member-name-link">CHAR_TILDE</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block">~</div>
-</div>
-<div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#CHAR_VERTICAL_LINE" class="member-name-link">CHAR_VERTICAL_LINE</a></code></div>
-<div class="col-last even-row-color">
-<div class="block">|</div>
-</div>
-<div class="col-first odd-row-color"><code>static final byte</code></div>
-<div class="col-second odd-row-color"><code><a href="#ERR_LASTCHAR_BACKSLASH" class="member-name-link">ERR_LASTCHAR_BACKSLASH</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final byte</code></div>
-<div class="col-second even-row-color"><code><a href="#ERR_UNEXPECTED_CONTROL" class="member-name-link">ERR_UNEXPECTED_CONTROL</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final byte</code></div>
-<div class="col-second odd-row-color"><code><a href="#ERR_UNEXPECTED_END_COMMENTED" class="member-name-link">ERR_UNEXPECTED_END_COMMENTED</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code>static final byte</code></div>
-<div class="col-second even-row-color"><code><a href="#ERR_UNEXPECTED_END_QUOTED" class="member-name-link">ERR_UNEXPECTED_END_QUOTED</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-</div>
+<div class="inherited-list">
+<h3 id="fields-inherited-from-class-io.sf.carte.uparser.TokenProducer3">Fields inherited from class&nbsp;io.sf.carte.uparser.<a href="TokenProducer3.html" title="class in io.sf.carte.uparser">TokenProducer3</a></h3>
+<code><a href="TokenProducer3.html#CHAR_ASTERISK">CHAR_ASTERISK</a>, <a href="TokenProducer3.html#CHAR_CIRCUMFLEX_ACCENT">CHAR_CIRCUMFLEX_ACCENT</a>, <a href="TokenProducer3.html#CHAR_COLON">CHAR_COLON</a>, <a href="TokenProducer3.html#CHAR_COMMA">CHAR_COMMA</a>, <a href="TokenProducer3.html#CHAR_COMMERCIAL_AT">CHAR_COMMERCIAL_AT</a>, <a href="TokenProducer3.html#CHAR_DOLLAR">CHAR_DOLLAR</a>, <a href="TokenProducer3.html#CHAR_EQUALS">CHAR_EQUALS</a>, <a href="TokenProducer3.html#CHAR_EXCLAMATION">CHAR_EXCLAMATION</a>, <a href="TokenProducer3.html#CHAR_FULL_STOP">CHAR_FULL_STOP</a>, <a href="TokenProducer3.html#CHAR_GREATER_THAN">CHAR_GREATER_THAN</a>, <a href="TokenProducer3.html#CHAR_HYPHEN_MINUS">CHAR_HYPHEN_MINUS</a>, <a href="TokenProducer3.html#CHAR_LEFT_CURLY_BRACKET">CHAR_LEFT_CURLY_BRACKET</a>, <a href="TokenProducer3.html#CHAR_LEFT_PAREN">CHAR_LEFT_PAREN</a>, <a href="TokenProducer3.html#CHAR_LEFT_SQ_BRACKET">CHAR_LEFT_SQ_BRACKET</a>, <a href="TokenProducer3.html#CHAR_LESS_THAN">CHAR_LESS_THAN</a>, <a href="TokenProducer3.html#CHAR_LOW_LINE">CHAR_LOW_LINE</a>, <a href="TokenProducer3.html#CHAR_NUMBER_SIGN">CHAR_NUMBER_SIGN</a>, <a href="TokenProducer3.html#CHAR_PERCENT_SIGN">CHAR_PERCENT_SIGN</a>, <a href="TokenProducer3.html#CHAR_PLUS">CHAR_PLUS</a>, <a href="TokenProducer3.html#CHAR_QUESTION_MARK">CHAR_QUESTION_MARK</a>, <a href="TokenProducer3.html#CHAR_RIGHT_CURLY_BRACKET">CHAR_RIGHT_CURLY_BRACKET</a>, <a href="TokenProducer3.html#CHAR_RIGHT_PAREN">CHAR_RIGHT_PAREN</a>, <a href="TokenProducer3.html#CHAR_RIGHT_SQ_BRACKET">CHAR_RIGHT_SQ_BRACKET</a>, <a href="TokenProducer3.html#CHAR_SEMICOLON">CHAR_SEMICOLON</a>, <a href="TokenProducer3.html#CHAR_SLASH">CHAR_SLASH</a>, <a href="TokenProducer3.html#CHAR_TILDE">CHAR_TILDE</a>, <a href="TokenProducer3.html#CHAR_VERTICAL_LINE">CHAR_VERTICAL_LINE</a>, <a href="TokenProducer3.html#ERR_LASTCHAR_BACKSLASH">ERR_LASTCHAR_BACKSLASH</a>, <a href="TokenProducer3.html#ERR_UNEXPECTED_CONTROL">ERR_UNEXPECTED_CONTROL</a>, <a href="TokenProducer3.html#ERR_UNEXPECTED_END_COMMENTED">ERR_UNEXPECTED_END_COMMENTED</a>, <a href="TokenProducer3.html#ERR_UNEXPECTED_END_QUOTED">ERR_UNEXPECTED_END_QUOTED</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -323,14 +167,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Construct a <code>TokenProducer</code> object with the given handler and
  an array of codepoints allowed in words.</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer.CharacterCheck)" class="member-name-link">TokenProducer</a><wbr>(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
- <a href="TokenProducer.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer.CharacterCheck</a>&nbsp;charCheck)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer3.CharacterCheck)" class="member-name-link">TokenProducer</a><wbr>(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
+ <a href="TokenProducer3.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer3.CharacterCheck</a>&nbsp;charCheck)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Instantiate a <code>TokenProducer</code> object with the given handler and
  <code>CharacterCheck</code>.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer.CharacterCheck,int)" class="member-name-link">TokenProducer</a><wbr>(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
- <a href="TokenProducer.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer.CharacterCheck</a>&nbsp;charCheck,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer3.CharacterCheck,int)" class="member-name-link">TokenProducer</a><wbr>(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
+ <a href="TokenProducer3.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer3.CharacterCheck</a>&nbsp;charCheck,
  int&nbsp;characterCountLimit)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Instantiate a <code>TokenProducer</code> object with the given handler and
@@ -343,73 +187,9 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
-<div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Method</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parse(java.io.Reader)" class="member-name-link">parse</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize the contents of the given <code>Reader</code> without any comment
- handling.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parse(java.io.Reader,int)" class="member-name-link">parse</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- int&nbsp;bufferCapacity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize the contents of a <code>Reader</code> without any comment handling, using
- a buffer with the given initial capacity.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parse(java.io.Reader,java.lang.String,java.lang.String)" class="member-name-link">parse</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentOpen,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentClose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize the given reader, with a single comment layout.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parse(java.lang.String)" class="member-name-link">parse</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;string)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize a string, without any comment handling.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parse(java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">parse</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;string,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentOpen,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentClose)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize a string, accounting for the given comment syntax.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseMultiComment(java.io.Reader,java.lang.String%5B%5D,java.lang.String%5B%5D)" class="member-name-link">parseMultiComment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;opening,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;closing)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Tokenize the given reader, with multiple comment layouts.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAcceptEofEndingQuoted(boolean)" class="member-name-link">setAcceptEofEndingQuoted</a><wbr>(boolean&nbsp;accept)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If set, quoted strings ending with an EOF (End Of File). are processed through the
- relevant <code>quoted</code> method, albeit an error is reported in any case.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAcceptNewlineEndingQuote(boolean)" class="member-name-link">setAcceptNewlineEndingQuote</a><wbr>(boolean&nbsp;accept)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If set, quoted strings ending with an unescaped newline (instead of the closing quote)
- are processed through the relevant <code>quoted</code> method, albeit an error is
- reported in any case.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHandleAllSeparators(boolean)" class="member-name-link">setHandleAllSeparators</a><wbr>(boolean&nbsp;handleAllSeparators)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set the handling of consecutive separators like whitespace or tabs.</div>
-</div>
-</div>
-</div>
-</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-io.sf.carte.uparser.TokenProducer3">Methods inherited from class&nbsp;io.sf.carte.uparser.<a href="TokenProducer3.html" title="class in io.sf.carte.uparser">TokenProducer3</a></h3>
+<code><a href="TokenProducer3.html#parse(java.io.Reader)">parse</a>, <a href="TokenProducer3.html#parse(java.io.Reader,int)">parse</a>, <a href="TokenProducer3.html#parse(java.io.Reader,java.lang.String,java.lang.String)">parse</a>, <a href="TokenProducer3.html#parse(java.lang.String)">parse</a>, <a href="TokenProducer3.html#parse(java.lang.String,java.lang.String,java.lang.String)">parse</a>, <a href="TokenProducer3.html#parseMultiComment(java.io.Reader,java.lang.String%5B%5D,java.lang.String%5B%5D)">parseMultiComment</a>, <a href="TokenProducer3.html#setAcceptEofEndingQuoted(boolean)">setAcceptEofEndingQuoted</a>, <a href="TokenProducer3.html#setAcceptNewlineEndingQuote(boolean)">setAcceptNewlineEndingQuote</a>, <a href="TokenProducer3.html#setHandleAllSeparators(boolean)">setHandleAllSeparators</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -419,476 +199,6 @@ loadScripts(document, 'script');</script>
 </section>
 <section class="details">
 <ul class="details-list">
-<!-- ============ FIELD DETAIL =========== -->
-<li>
-<section class="field-details" id="field-detail">
-<h2>Field Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="ERR_UNEXPECTED_END_QUOTED">
-<h3>ERR_UNEXPECTED_END_QUOTED</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">ERR_UNEXPECTED_END_QUOTED</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.ERR_UNEXPECTED_END_QUOTED">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="ERR_LASTCHAR_BACKSLASH">
-<h3>ERR_LASTCHAR_BACKSLASH</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">ERR_LASTCHAR_BACKSLASH</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.ERR_LASTCHAR_BACKSLASH">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="ERR_UNEXPECTED_END_COMMENTED">
-<h3>ERR_UNEXPECTED_END_COMMENTED</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">ERR_UNEXPECTED_END_COMMENTED</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.ERR_UNEXPECTED_END_COMMENTED">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="ERR_UNEXPECTED_CONTROL">
-<h3>ERR_UNEXPECTED_CONTROL</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">ERR_UNEXPECTED_CONTROL</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.ERR_UNEXPECTED_CONTROL">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_EXCLAMATION">
-<h3>CHAR_EXCLAMATION</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_EXCLAMATION</span></div>
-<div class="block">!</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_EXCLAMATION">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_NUMBER_SIGN">
-<h3>CHAR_NUMBER_SIGN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_NUMBER_SIGN</span></div>
-<div class="block">#</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_NUMBER_SIGN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_DOLLAR">
-<h3>CHAR_DOLLAR</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_DOLLAR</span></div>
-<div class="block">$</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_DOLLAR">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_PERCENT_SIGN">
-<h3>CHAR_PERCENT_SIGN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_PERCENT_SIGN</span></div>
-<div class="block">%</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_PERCENT_SIGN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_LEFT_PAREN">
-<h3>CHAR_LEFT_PAREN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_LEFT_PAREN</span></div>
-<div class="block">(</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_LEFT_PAREN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_RIGHT_PAREN">
-<h3>CHAR_RIGHT_PAREN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_RIGHT_PAREN</span></div>
-<div class="block">)</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_RIGHT_PAREN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_ASTERISK">
-<h3>CHAR_ASTERISK</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_ASTERISK</span></div>
-<div class="block">*</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_ASTERISK">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_PLUS">
-<h3>CHAR_PLUS</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_PLUS</span></div>
-<div class="block">+</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_PLUS">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_COMMA">
-<h3>CHAR_COMMA</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_COMMA</span></div>
-<div class="block">,</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_COMMA">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_HYPHEN_MINUS">
-<h3>CHAR_HYPHEN_MINUS</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_HYPHEN_MINUS</span></div>
-<div class="block">-</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_HYPHEN_MINUS">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_FULL_STOP">
-<h3>CHAR_FULL_STOP</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_FULL_STOP</span></div>
-<div class="block">.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_FULL_STOP">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_SLASH">
-<h3>CHAR_SLASH</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_SLASH</span></div>
-<div class="block">/</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_SLASH">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_COLON">
-<h3>CHAR_COLON</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_COLON</span></div>
-<div class="block">:</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_COLON">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_SEMICOLON">
-<h3>CHAR_SEMICOLON</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_SEMICOLON</span></div>
-<div class="block">;</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_SEMICOLON">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_LESS_THAN">
-<h3>CHAR_LESS_THAN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_LESS_THAN</span></div>
-<div class="block">&lt;</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_LESS_THAN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_EQUALS">
-<h3>CHAR_EQUALS</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_EQUALS</span></div>
-<div class="block">=</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_EQUALS">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_GREATER_THAN">
-<h3>CHAR_GREATER_THAN</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_GREATER_THAN</span></div>
-<div class="block">&gt;</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_GREATER_THAN">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_QUESTION_MARK">
-<h3>CHAR_QUESTION_MARK</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_QUESTION_MARK</span></div>
-<div class="block">?</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_QUESTION_MARK">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_COMMERCIAL_AT">
-<h3>CHAR_COMMERCIAL_AT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_COMMERCIAL_AT</span></div>
-<div class="block">@</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_COMMERCIAL_AT">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_LEFT_SQ_BRACKET">
-<h3>CHAR_LEFT_SQ_BRACKET</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_LEFT_SQ_BRACKET</span></div>
-<div class="block">[</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_LEFT_SQ_BRACKET">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_RIGHT_SQ_BRACKET">
-<h3>CHAR_RIGHT_SQ_BRACKET</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_RIGHT_SQ_BRACKET</span></div>
-<div class="block">]</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_RIGHT_SQ_BRACKET">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_CIRCUMFLEX_ACCENT">
-<h3>CHAR_CIRCUMFLEX_ACCENT</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_CIRCUMFLEX_ACCENT</span></div>
-<div class="block">^</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_CIRCUMFLEX_ACCENT">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_LOW_LINE">
-<h3>CHAR_LOW_LINE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_LOW_LINE</span></div>
-<div class="block">_</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_LOW_LINE">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_LEFT_CURLY_BRACKET">
-<h3>CHAR_LEFT_CURLY_BRACKET</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_LEFT_CURLY_BRACKET</span></div>
-<div class="block">{
-</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_LEFT_CURLY_BRACKET">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_VERTICAL_LINE">
-<h3>CHAR_VERTICAL_LINE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_VERTICAL_LINE</span></div>
-<div class="block">|</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_VERTICAL_LINE">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_RIGHT_CURLY_BRACKET">
-<h3>CHAR_RIGHT_CURLY_BRACKET</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_RIGHT_CURLY_BRACKET</span></div>
-<div class="block">}</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_RIGHT_CURLY_BRACKET">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="CHAR_TILDE">
-<h3>CHAR_TILDE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">CHAR_TILDE</span></div>
-<div class="block">~</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../constant-values.html#io.sf.carte.uparser.TokenProducer.CHAR_TILDE">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-</ul>
-</section>
-</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -920,10 +230,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer.CharacterCheck)">
+<section class="detail" id="&lt;init&gt;(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer3.CharacterCheck)">
 <h3>TokenProducer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TokenProducer</span><wbr><span class="parameters">(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
- <a href="TokenProducer.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer.CharacterCheck</a>&nbsp;charCheck)</span></div>
+ <a href="TokenProducer3.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer3.CharacterCheck</a>&nbsp;charCheck)</span></div>
 <div class="block">Instantiate a <code>TokenProducer</code> object with the given handler and
  <code>CharacterCheck</code>.</div>
 <dl class="notes">
@@ -934,10 +244,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer.CharacterCheck,int)">
+<section class="detail" id="&lt;init&gt;(io.sf.carte.uparser.TokenHandler2,io.sf.carte.uparser.TokenProducer3.CharacterCheck,int)">
 <h3>TokenProducer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TokenProducer</span><wbr><span class="parameters">(<a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a>&nbsp;handler,
- <a href="TokenProducer.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer.CharacterCheck</a>&nbsp;charCheck,
+ <a href="TokenProducer3.CharacterCheck.html" title="interface in io.sf.carte.uparser">TokenProducer3.CharacterCheck</a>&nbsp;charCheck,
  int&nbsp;characterCountLimit)</span></div>
 <div class="block">Instantiate a <code>TokenProducer</code> object with the given handler and
  <code>CharacterCheck</code>.</div>
@@ -976,176 +286,6 @@ loadScripts(document, 'script');</script>
 <dd><code>handler</code> - the token handler.</dd>
 <dd><code>allowInWords</code> - the array of codepoints allowed in words.</dd>
 <dd><code>characterCountLimit</code> - the character count limit.</dd>
-</dl>
-</section>
-</li>
-</ul>
-</section>
-</li>
-<!-- ============ METHOD DETAIL ========== -->
-<li>
-<section class="method-details" id="method-detail">
-<h2>Method Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="setHandleAllSeparators(boolean)">
-<h3>setHandleAllSeparators</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHandleAllSeparators</span><wbr><span class="parameters">(boolean&nbsp;handleAllSeparators)</span></div>
-<div class="block">Set the handling of consecutive separators like whitespace or tabs.
- <p>
- Default is <code>true</code>.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>handleAllSeparators</code> - if set to <code>true</code>, all separator characters (including consecutive
-            ones) will trigger a <a href="TokenHandler2.html#separator(int,int)"><code>TokenHandler2.separator(int, int)</code></a> method call.
-            Otherwise only single separations between the other types of tokens will be
-            taken into account.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setAcceptNewlineEndingQuote(boolean)">
-<h3>setAcceptNewlineEndingQuote</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAcceptNewlineEndingQuote</span><wbr><span class="parameters">(boolean&nbsp;accept)</span></div>
-<div class="block">If set, quoted strings ending with an unescaped newline (instead of the closing quote)
- are processed through the relevant <code>quoted</code> method, albeit an error is
- reported in any case. Otherwise, only the error is reported.
- <p>
- It is set to <code>false</code> by default.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>accept</code> - true to process quoted strings that ends with an unescaped newline, false
-            otherwise.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setAcceptEofEndingQuoted(boolean)">
-<h3>setAcceptEofEndingQuoted</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAcceptEofEndingQuoted</span><wbr><span class="parameters">(boolean&nbsp;accept)</span></div>
-<div class="block">If set, quoted strings ending with an EOF (End Of File). are processed through the
- relevant <code>quoted</code> method, albeit an error is reported in any case.
- Otherwise, only the error is reported.
- <p>
- It is set to <code>false</code> by default.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>accept</code> - true to process quoted strings that ends with an EOF, <code>false</code> otherwise.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.lang.String)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parse</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;string)</span></div>
-<div class="block">Tokenize a string, without any comment handling.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>string</code> - the string to parse.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the string is <code>null</code>.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.lang.String,java.lang.String,java.lang.String)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parse</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;string,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentOpen,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentClose)</span></div>
-<div class="block">Tokenize a string, accounting for the given comment syntax.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>string</code> - the string to parse.</dd>
-<dd><code>commentOpen</code> - the token that opens a comment, for example <code>/*</code>.
-                     It is not allowed to repeat the same character at the
-                     beginning of the token. For example, <code>&lt;!--</code>
-                     is a valid token but <code>&lt;&lt;--</code> would not.</dd>
-<dd><code>commentClose</code> - the token closing a comment, for example
-                     <code>*&#x2f;</code></dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if any of the string arguments are <code>null</code>.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.io.Reader)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parse</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</span>
-           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Tokenize the contents of the given <code>Reader</code> without any comment
- handling.
- <p>
- A buffer with an initial default capacity of 256 will be used.
- </p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>reader</code> - the <code>Reader</code> whose contents are to be parsed.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem occurs with the <code>Reader</code>.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.io.Reader,int)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parse</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- int&nbsp;bufferCapacity)</span>
-           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Tokenize the contents of a <code>Reader</code> without any comment handling, using
- a buffer with the given initial capacity.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>reader</code> - the <code>Reader</code> whose contents are to be parsed.</dd>
-<dd><code>bufferCapacity</code> - the initial buffer capacity.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem occurs with the <code>Reader</code>.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parse(java.io.Reader,java.lang.String,java.lang.String)">
-<h3>parse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parse</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentOpen,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;commentClose)</span>
-           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Tokenize the given reader, with a single comment layout.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>reader</code> - the reader to parse.</dd>
-<dd><code>commentOpen</code> - the token that opens a comment. It is not allowed to repeat the same
-            character at the beginning of the token. For example, <code>&lt;!--</code>
-            is a valid token but <code>&lt;&lt;--</code> would not.</dd>
-<dd><code>commentClose</code> - the token that closes a comment.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem occurs.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if any of the string arguments are <code>null</code>.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="parseMultiComment(java.io.Reader,java.lang.String[],java.lang.String[])">
-<h3>parseMultiComment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parseMultiComment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;opening,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;closing)</span>
-                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Tokenize the given reader, with multiple comment layouts.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>reader</code> - the reader to parse.</dd>
-<dd><code>opening</code> - the array of tokens that open a comment. It is not allowed to
-                repeat the same character at the beginning of a token. For
-                example, <code>&lt;!--</code> is a valid token but
-                <code>&lt;&lt;--</code> would not.</dd>
-<dd><code>closing</code> - the array of tokens that close the comment opened with the
-                <code>opening</code> at the same index.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem was found parsing the
-                                  reader.</dd>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the opening and closing arrays do not
-                                  have the same length.</dd>
 </dl>
 </section>
 </li>

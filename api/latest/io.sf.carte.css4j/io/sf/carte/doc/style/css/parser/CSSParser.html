@@ -139,6 +139,11 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="col-first odd-row-color"><code>protected </code></div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.doc.style.css.parser.CSSParser)" class="member-name-link">CSSParser</a><wbr>(<a href="CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a>&nbsp;copyMe)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>&nbsp;</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.EnumSet)" class="member-name-link">CSSParser</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&gt;&nbsp;parserFlags)</code></div>
+<div class="col-last even-row-color">
+<div class="block">Instantiate a parser instance with the given flags.</div>
+</div>
 </div>
 </section>
 </li>
@@ -156,117 +161,129 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../MediaQueryFactory.html" title="interface in io.sf.carte.doc.style.css">MediaQueryFactory</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMediaQueryFactory()" class="member-name-link">getMediaQueryFactory</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseDeclarationRule(java.io.Reader)" class="member-name-link">parseDeclarationRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSupportsConditionFactory(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">createSupportsConditionFactory</a><wbr>(<a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new factory for <code>@supports</code> conditions.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../MediaQueryFactory.html" title="interface in io.sf.carte.doc.style.css">MediaQueryFactory</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMediaQueryFactory()" class="member-name-link">getMediaQueryFactory</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseDeclarationRule(java.io.Reader)" class="member-name-link">parseDeclarationRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse any simple (non-nesting) at-rule containing descriptors, using a
  generic <a href="CSSParser.DeclarationRuleHandler.html" title="interface in io.sf.carte.doc.style.css.parser"><code>CSSParser.DeclarationRuleHandler</code></a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseFontFeatureValuesBody(java.lang.String)" class="member-name-link">parseFontFeatureValuesBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseKeyFramesBody(java.lang.String)" class="member-name-link">parseKeyFramesBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseFontFeatureValuesBody(java.lang.String)" class="member-name-link">parseFontFeatureValuesBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseMediaQueryList(java.lang.String,io.sf.carte.doc.style.css.MediaQueryFactory,io.sf.carte.doc.style.css.MediaQueryHandler)" class="member-name-link">parseMediaQueryList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;media,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseKeyFramesBody(java.lang.String)" class="member-name-link">parseKeyFramesBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseMediaQueryList(java.lang.String,io.sf.carte.doc.style.css.MediaQueryFactory,io.sf.carte.doc.style.css.MediaQueryHandler)" class="member-name-link">parseMediaQueryList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;media,
  <a href="../MediaQueryFactory.html" title="interface in io.sf.carte.doc.style.css">MediaQueryFactory</a>&nbsp;queryFactory,
  <a href="../MediaQueryHandler.html" title="interface in io.sf.carte.doc.style.css">MediaQueryHandler</a>&nbsp;mqhandler)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a media query string into the given handler.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseMediaQueryList(java.lang.String,org.w3c.dom.Node)" class="member-name-link">parseMediaQueryList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;media,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseMediaQueryList(java.lang.String,org.w3c.dom.Node)" class="member-name-link">parseMediaQueryList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;media,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;owner)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a media query string.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePageRuleBody(java.lang.String)" class="member-name-link">parsePageRuleBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/PageSelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">PageSelectorList</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePageSelectorList(java.lang.String)" class="member-name-link">parsePageSelectorList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pageSelectorStr)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePageRuleBody(java.lang.String)" class="member-name-link">parsePageRuleBody</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;blockList)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePriority(java.io.Reader)" class="member-name-link">parsePriority</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/PageSelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">PageSelectorList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePageSelectorList(java.lang.String)" class="member-name-link">parsePageSelectorList</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pageSelectorStr)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePriority(java.io.Reader)" class="member-name-link">parsePriority</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS priority value (e.g. "!</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(java.io.Reader)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(java.io.Reader)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS property value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(java.lang.String,java.io.Reader)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePropertyValue(java.lang.String,java.io.Reader)" class="member-name-link">parsePropertyValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePseudoElement(java.lang.String)" class="member-name-link">parsePseudoElement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pseudoElement)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseRule</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parsePseudoElement(java.lang.String)" class="member-name-link">parsePseudoElement</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pseudoElement)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(java.io.Reader)" class="member-name-link">parseRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseRule</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(java.io.Reader)" class="member-name-link">parseRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a namespaceless CSS rule.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(java.io.Reader,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)" class="member-name-link">parseRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseRule(java.io.Reader,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)" class="member-name-link">parseRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader,
  <a href="../nsac/Parser.NamespaceMap.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser.NamespaceMap</a>&nbsp;nsmap)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS rule.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseSelectors</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.io.Reader)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseSelectors</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.io.Reader)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a comma separated list of selectors.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.lang.String)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;seltext)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.lang.String,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;selectorText,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.lang.String)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;seltext)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSelectors(java.lang.String,io.sf.carte.doc.style.css.nsac.Parser.NamespaceMap)" class="member-name-link">parseSelectors</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;selectorText,
  <a href="../nsac/Parser.NamespaceMap.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser.NamespaceMap</a>&nbsp;nsmap)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a comma separated list of selectors.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleDeclaration(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseStyleDeclaration</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleDeclaration(java.io.Reader)" class="member-name-link">parseStyleDeclaration</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleDeclaration(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseStyleDeclaration</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleDeclaration(java.io.Reader)" class="member-name-link">parseStyleDeclaration</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS style declaration (without '{' and '}').</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Parse a CSS style sheet.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(java.io.Reader)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(io.sf.carte.doc.style.css.nsac.InputSource)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="../nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a>&nbsp;source)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS style sheet.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(java.lang.String)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(java.io.Reader)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Parse a CSS style sheet.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseStyleSheet(java.lang.String)" class="member-name-link">parseStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse a CSS sheet from a URI.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">parseSupportsCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">parseSupportsCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
  <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">parseSupportsCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
+ <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule,
+ <a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 </div>
@@ -317,6 +334,17 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <h3>CSSParser</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CSSParser</span>()</div>
 <div class="block">Instantiate a parser instance with no flags.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.EnumSet)">
+<h3>CSSParser</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CSSParser</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/EnumSet.html" title="class or interface in java.util" class="external-link">EnumSet</a>&lt;<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&gt;&nbsp;parserFlags)</span></div>
+<div class="block">Instantiate a parser instance with the given flags.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>parserFlags</code> - the flags.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -742,16 +770,76 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>conditionText</code> - the condition text.</dd>
-<dd><code>rule</code> - the rule that would process the error. if <code>null</code>, a problem while
-            parsing shall result in an exception. Note that
-            <code>NOT_SUPPORTED_ERR</code> exceptions are always thrown instead of
-            being processed by the rule.</dd>
+<dd><code>rule</code> - the rule that would process the error. If
+                      <code>null</code>, a problem while parsing shall result
+                      in an exception. Note that
+                      <code>NOT_SUPPORTED_ERR</code> exceptions are always
+                      thrown instead of being processed by the rule. Please
+                      use
+                      <a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)"><code>parseSupportsCondition(String, CSSRule, AbstractCSSStyleSheet)</code></a>
+                      with a style sheet argument if you do not want to supply
+                      a rule, otherwise namespace-related errors may be
+                      produced.</dd>
 <dt>Returns:</dt>
-<dd>the <code>@supports</code> condition, or <code>null</code> if a rule
-         was specified to handle the errors, and an error was produced.</dd>
+<dd>the <code>@supports</code> condition, or <code>null</code>
+         if a rule was specified to handle the errors, and an error was
+         produced.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a></code> - if there is a syntax problem and there is no error handler.</dd>
-<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was reached.</dd>
+<dd><code><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a></code> - if there is a syntax problem and there is no error
+                            handler.</dd>
+<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was
+                            reached.</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list-long">
+<li><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)"><code>parseSupportsCondition(String, CSSRule, AbstractCSSStyleSheet)</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
+<h3>parseSupportsCondition</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">parseSupportsCondition</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
+ <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule,
+ <a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</span>
+                                        throws <span class="exceptions"><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
+<a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></span></div>
+<div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>conditionText</code> - the condition text.</dd>
+<dd><code>rule</code> - the rule that would process the error. if
+                         <code>null</code>, a problem while parsing shall
+                         result in an exception. Note that
+                         <code>NOT_SUPPORTED_ERR</code> exceptions are always
+                         thrown instead of being processed by the rule.</dd>
+<dd><code>parentStyleSheet</code> - the parent style sheet. It is necessary to provide
+                         information related to namespaces, as well as
+                         customizing the serialization.</dd>
+<dt>Returns:</dt>
+<dd>the <code>@supports</code> condition, or <code>null</code>
+         if a rule was specified to handle the errors, and an error was
+         produced.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a></code> - if there is a syntax problem and there is no error
+                            handler.</dd>
+<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was
+                            reached.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="createSupportsConditionFactory(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
+<h3>createSupportsConditionFactory</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></span>&nbsp;<span class="element-name">createSupportsConditionFactory</span><wbr><span class="parameters">(<a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</span></div>
+<div class="block">Create a new factory for <code>@supports</code> conditions.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>parentSheet</code> - the <code>@supports</code> rule's parent style sheet.</dd>
+<dt>Returns:</dt>
+<dd>the factory.</dd>
 </dl>
 </section>
 </li>

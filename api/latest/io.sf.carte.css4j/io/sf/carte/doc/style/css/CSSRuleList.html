@@ -115,11 +115,16 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toMinifiedString()" class="member-name-link">toMinifiedString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Gives a minified parsable representation of this rule list.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
  <a href="StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Write a serialization of this rule list to the given simple writer, according
+ to the given context.</div>
+</div>
 </div>
 </div>
 </div>
@@ -178,6 +183,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <section class="detail" id="toMinifiedString()">
 <h3>toMinifiedString</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toMinifiedString</span>()</div>
+<div class="block">Gives a minified parsable representation of this rule list.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the minified rule list.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -186,9 +196,14 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">writeCssText</span><wbr><span class="parameters">(<a href="../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
  <a href="StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</span>
            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Write a serialization of this rule list to the given simple writer, according
+ to the given context.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>wri</code> - the simple writer object.</dd>
+<dd><code>context</code> - the formatting context.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an error happened while writing.</dd>
 </dl>
 </section>
 </li>

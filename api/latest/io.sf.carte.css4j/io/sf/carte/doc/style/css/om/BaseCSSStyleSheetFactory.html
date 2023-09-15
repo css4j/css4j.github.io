@@ -287,7 +287,13 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the CSS style sheet defined by the end-user.</div>
+<div class="block">Sets the CSS style sheet defined by the end user.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.lang.String,java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the CSS style sheet defined by the end user.</div>
 </div>
 </div>
 </div>
@@ -460,19 +466,46 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setUserStyleSheet(java.io.Reader)">
+<section class="detail" id="setUserStyleSheet(java.lang.String,java.io.Reader)">
 <h3>setUserStyleSheet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUserStyleSheet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</span>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUserStyleSheet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</span>
                        throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Sets the CSS style sheet defined by the end-user.
+<div class="block">Sets the CSS style sheet defined by the end user.
  <p>
  The sheet in the supplied reader should contain user preferences, and will be
  appropriately merged with the other style sheets.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>re</code> - the reader with the user style sheet.</dd>
+<dd><code>url</code> - the URL of the style sheet. If <code>null</code>, the call is
+            equivalent to <a href="#setUserStyleSheet(java.io.Reader)"><code>setUserStyleSheet(Reader)</code></a>.</dd>
+<dd><code>re</code> - the reader with the user style sheet. If <code>null</code>, a
+            connection to the URL shall be opened. If both arguments are
+            <code>null</code>, the user style sheet shall be cleared.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a problem is found parsing the sheet.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if there is a problem opening the URL or reading the
+                      reader.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setUserStyleSheet(java.io.Reader)">
+<h3>setUserStyleSheet</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUserStyleSheet</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</span>
+                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a>,
+<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Sets the CSS style sheet defined by the end user.
+ <p>
+ The sheet in the supplied reader should contain user preferences, and will be
+ appropriately merged with the other style sheets.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>re</code> - the reader with the user style sheet. If <code>null</code>, the user
+           style sheet shall be cleared.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if a problem is found parsing the sheet.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if there is a problem retrieving the reader.</dd>
