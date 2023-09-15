@@ -886,6 +886,10 @@ process (notice the <code>COMMENTS_IGNORE</code> flag).</p>
 cssFactory.setUserStyleSheet(reader);
 reader.close();
 </code></pre>
+<p>or the URL variant:</p>
+<pre class="code"><code class="language-java">String url = "https://www.example.com/user.css";
+cssFactory.setUserStyleSheet(url, null);
+</code></pre>
 <p>Both <code>important</code> and normal declarations are supported in the <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#ORIGIN_USER">user</a> style sheet.</p>
 </div>
 <div class="tema" id="mediahandling">
@@ -1255,24 +1259,25 @@ shorthand.</td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-color-5/">Color 5</a></td><td class="yesno">Partial</td>
 <td class="obsrv">Supports full level 4 but only <code>color-mix()</code> from level 5 (this is aligned with web browser
 support at the time of writing).</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-fonts-4/">Fonts 4</a></td><td class="yesno"
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-conditional-4/">Conditional Rules 4</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-fonts-4/">Fonts 4</a></td><td class="yesno"
 >Partial</td><td class="obsrv">Has the <code>@font-face</code> and <code>@font-feature-values</code> rules,
 also decomposes the the <code>font</code> shorthand.</td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/mediaqueries-4/">Media Queries 4</a></td>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/mediaqueries-4/">Media Queries 4</a></td>
 <td class="yesno">Partial</td><td class="obsrv">Event handling with addListener/removeListener is not supported.
 Relies on <code>CSSCanvas</code> implementations to match/unmatch media features.</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/selectors-4/">Selectors 4</a></td><td class="yesno">Yes</td>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/selectors-4/">Selectors 4</a></td><td class="yesno">Yes</td>
 <td class="obsrv"></td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-lists-3/">Lists and Counters 3</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>list-style</code> shorthand. <em>Limited support by the simple box model.
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-lists-3/">Lists and Counters 3</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>list-style</code> shorthand. <em>Limited support by the simple box model.
 </em></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-multicol-1/">Multi-column Layout</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>columns</code> shorthand. <em>Not supported by the simple box model.
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-multicol-1/">Multi-column Layout</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>columns</code> shorthand. <em>Not supported by the simple box model.
 </em></td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-masking-1/">Masking</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>mask</code> shorthand. <em>Not supported by the simple box model.</em></td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv">Decomposes the <code>transition</code> shorthand.</td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values 4</a></td><td class="yesno">Yes</td><td class="obsrv">Advanced <code>attr()</code> from level 5 also has early support.</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"><code>var()</code> is supported in computed styles.</td></tr>
-<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv">Full support (also in computed styles).</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-masking-1/">Masking</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>mask</code> shorthand. <em>Not supported by the simple box model.</em></td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv">Decomposes the <code>transition</code> shorthand.</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values 4</a></td><td class="yesno">Yes</td><td class="obsrv">Advanced <code>attr()</code> from level 5 also has early support.</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"><code>var()</code> is supported in computed styles.</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv">Full support (also in computed styles).</td></tr>
+<tr class="oddrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td>
 <td class="yesno">Partial</td><td class="obsrv">Legacy gap properties (<code>grid-row-gap</code>,
 <code>grid-column-gap</code>, and <code>grid-gap</code>) are not supported, although the longhands
 can be used if declared explicitly). <em>Not supported by the simple box model.</em></td></tr>
