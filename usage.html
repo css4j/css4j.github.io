@@ -112,8 +112,8 @@ href="api/latest/io.sf.carte.xml.dtd/module-summary.html">io.sf.carte.xml.dtd</a
 If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
 <code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.pom"><code>.pom</code></a>
 or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
-<p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 3.6.1 is compatible with
-<code>css4j</code> 3.6.1 and also with 3.9.1. (css4j-dom4j 4.x is recommended for css4j 4.x compatibility)</p>
+<p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 4.0 is compatible with
+<code>css4j</code> 4.0.1 and also with 4.2.</p>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
 If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
@@ -215,6 +215,7 @@ import nu.validator.htmlparser.sax.HtmlParser;
 // and configure it
 CSSDOMImplementation impl = new CSSDOMImplementation();
 // Alternatively, impl = new CSSDOMImplementation(flags);
+
 // Now load default HTML user agent sheets
 impl.setDefaultHTMLUserAgentSheet();
 
@@ -231,6 +232,7 @@ builder.setXMLReader(parser);
 // Read the document to parse, and prepare source object
 Reader re = ... [reader for HTML document]
 InputSource source = new InputSource(re);
+
 // Parse. If the document is not HTML, you want to use DOMDocument instead
 HTMLDocument document = (HTMLDocument) builder.parse(source);
 re.close();
@@ -320,7 +322,7 @@ build file:</p>
 &lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
     &lt;artifactId&gt;xml-dtd&lt;/artifactId&gt;
-    &lt;version&gt;4.2&lt;/version&gt;
+    &lt;version&gt;4.2.1&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 <p>Again, please keep in mind adding css4j's Maven repository to your POM file:
