@@ -190,9 +190,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Sets the initial (default) value for the 'color' property on this device.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)" class="member-name-link">supports</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
- <a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a>&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#supports(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">supports</a><wbr>(<a href="nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectors)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Does this agent support all of the given selectors?</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)" class="member-name-link">supports</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;property,
+ <a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Does this medium support the given property-value pair?</div>
 </div>
 </div>
@@ -432,6 +437,19 @@ loadScripts(document, 'script');</script>
 <dd><code>envVarName</code> - the <code>env</code> variable name.</dd>
 <dt>Returns:</dt>
 <dd>the value, or <code>null</code> if that name has no value set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="supports(io.sf.carte.doc.style.css.nsac.SelectorList)">
+<h3>supports</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">supports</span><wbr><span class="parameters">(<a href="nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectors)</span></div>
+<div class="block">Does this agent support all of the given selectors?</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>selectors</code> - the selectors.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if supported.</dd>
 </dl>
 </section>
 </li>
