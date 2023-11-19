@@ -1329,8 +1329,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toMinifiedString()">
 <h3>toMinifiedString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toMinifiedString</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="AbstractStyleSheet.html#toMinifiedString()">AbstractStyleSheet</a></code></span></div>
-<div class="block">Returns a minified parsable representation of the rule list of this sheet.</div>
+<div class="block">Returns a minified parsable representation of the rule list of this sheet.
+ <p>
+ Equivalent to <code>getCssRules().toMinifiedString()</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AbstractStyleSheet.html#toMinifiedString()">toMinifiedString</a></code>&nbsp;in class&nbsp;<code><a href="AbstractStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractStyleSheet</a></code></dd>
