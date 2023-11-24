@@ -110,10 +110,11 @@ href="api/latest/io.sf.carte.xml.dtd/module-summary.html">io.sf.carte.xml.dtd</a
 </ul>
 <p>In general, you'll need to have at least <code>css4j</code>, <code>carte-util</code> and <code>tokenproducer</code> in your classpath/modulepath.
 If you use <a href="https://gradle.org/" target="_blank">Gradle</a> or <a href="https://maven.apache.org/" target="_blank">Apache Maven</a>, you may want to look at each module's
-<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.pom"><code>.pom</code></a>
-or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.0/css4j-dom4j-4.0.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
-<p>Recent <code>css4j-*</code> artifacts are compatible with <code>css4j</code> releases that have the same major version number, for example <code>css4j-dom4j</code> 4.0 is compatible with
-<code>css4j</code> 4.0.1 and also with 4.2.</p>
+<code>build.gradle</code> files (or even better, the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.2/css4j-dom4j-4.2.pom"><code>.pom</code></a>
+or the <a href="https://css4j.github.io/maven/io/sf/carte/css4j-dom4j/4.2/css4j-dom4j-4.2.module"><code>.module</code> files at the repository</a>) to check for the specific module dependencies.</p>
+<p>The latest <code>css4j-*</code> artifacts are generally compatible with <code>css4j</code> releases
+that have the same major version number and the same or larger minor version. For example
+<code>css4j-awt</code> 4.0 is compatible with <code>css4j</code> 4.0.1 and also with 4.2.2.</p>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
 If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
@@ -338,9 +339,10 @@ build file:</p>
 <h3 class="subtema" id="dom4j-depend-compat">Dependencies and compatibility</h3>
 <p>The <code>css4j-dom4j</code> artifact transitively implies the <code>css4j</code> core module, but since both artifacts have
 different release cycles you may want to add an explicit dependency for the core module, with the latest version.</p>
-<p>As explained in the <a href="#modules">modules section</a>, recent <code>css4j-dom4j</code> artifacts are
-compatible with <code>css4j</code> artifacts that have the same major version number, for example both
-<code>css4j-dom4j</code> 3.5.2 and 3.6.0 are compatible with <code>css4j</code> 3.9.1.</p>
+<p>As explained in the <a href="#modules">modules section</a>, the latest <code>css4j-dom4j</code>
+version is supposed to be compatible with <code>css4j</code> artifacts that have the same major
+version number and equal or greater minor version. Which in practice means that you should be always
+using the latest <code>css4j-dom4j</code> combined with the latest <code>css4j</code> version.</p>
 <p>If your project is modular you will need this:</p>
 <pre class="code"><code class="language-java">requires io.sf.carte.css4j.dom4j;
 requires io.sf.carte.xml.dtd; // Only if you use DefaultEntityResolver
@@ -1296,8 +1298,8 @@ can be used if declared explicitly). <em>Not supported by the simple box model.<
 </div>
 <div class="tema" id="jrereq">
 <h2>Java&trade; Runtime Environment requirements</h2>
-<p>The classes in the binary packages have been compiled with a Java compiler with 1.8 compiler compliance level,
-except for the <code>module-info</code> file which targets Java 11. If you are stuck with Java 7, you may want to use css4j 1.3.1.</p>
+<p>The classes in the binary packages have been compiled with a Java compiler with 1.8
+compiler compliance level, except for the <code>module-info</code> file which targets Java 11.</p>
 </div>
 </div>
 <div class="footnote"></div>
