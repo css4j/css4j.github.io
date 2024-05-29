@@ -87,8 +87,8 @@ class DupeConditionVisitor extends AttributeConditionVisitor {
 
 }
 </code></pre>
-<p>As you can see, for each visit it is checked whether the selector condition is a ID or class, and
-in that case checks for the name (for which you need to provide your own logic).</p>
+<p>As you can see, for each visit it is checked whether the selector condition is an ID or class,
+and in that case checks for the name (for which you need to provide your own logic).</p>
 <p>Your visitor based on the above code is now prepared to perform the task, but first you need to find the
 right CSS rules to apply it, for which we will use another visitor. You could use the <a class="codeitem"
 href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/AttrStyleRuleVisitor.html">AttrStyleRuleVisitor</a>
