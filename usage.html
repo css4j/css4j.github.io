@@ -1122,12 +1122,13 @@ class for an example of a formatting context implementation.</p>
 The convenience <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/RGBStyleFormattingFactory.html">RGBStyleFormattingFactory</a>
 serializes computed colors as RGB and may serve as a customization example.</p>
 <h3 class="subtema" id="string-value-formatting">String value formatting</h3>
-<p>There is also the possibility to customize the default serialization of string values, with the <a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
+<p>There is also the possibility to customize the default serialization of string values, with the <a
+class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)">CSSStyleSheetFactory.setFactoryFlag(byte)</a>
 method. You can set two flags that govern which quotation you prefer, or keep the default behaviour:</p>
 <ul><li><b>Default:</b> Try to keep the original quotation (single or double quotes), unless the alternative is more efficient.</li>
-<li><b><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
+<li><b><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>:</b>
 Use double quotes unless single quotes are more efficient (when the string contains more double quotes than single).</li>
-<li><b><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
+<li><b><a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a>:</b>
 Use single quotes unless double quotes are more efficient (when the string contains more single quotes than double).</li>
 </ul>
 </div>
@@ -1162,6 +1163,10 @@ public static String minifyCSS(String css) {
     return css;
 }
 </code></pre>
+<p>Since css4j 4.2, the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/Minify.html">Minify</a> convenience
+class does just that.
+</p>
 <h3 class="subtema" id="yuicompressor">Beware of YUI Compressor</h3>
 <p>For further minification, you could choose to apply a specialized minification utility to the output of
 <code>toMinifiedString()</code>, and <a href="https://github.com/yui/yuicompressor" target="_blank">YUI
