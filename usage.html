@@ -1167,6 +1167,8 @@ public static String minifyCSS(String css) {
 href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/Minify.html">Minify</a> convenience
 class does just that.
 </p>
+<p><em>Note: if you minify CSS that uses Internet Explorer hacks, first be sure that it is limited to
+only use the <a href="#legacycompat">legacy hacks that this library supports</a>.</em></p>
 <h3 class="subtema" id="yuicompressor">Beware of YUI Compressor</h3>
 <p>For further minification, you could choose to apply a specialized minification utility to the output of
 <code>toMinifiedString()</code>, and <a href="https://github.com/yui/yuicompressor" target="_blank">YUI

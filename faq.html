@@ -107,14 +107,15 @@ must be the same for which the style database was set.</p>
 <p>The <a href="usage.html#cascade">user agent sheet</a> depends on the document type and is not always loaded, while the <a href="api/3/io/sf/carte/doc/style/css/StyleDatabase.html">style database</a>
 is document-independent (but medium-specific).</p>
 </div>
-<div id="minifywarn">
-<h4>Are the minification methods recommended for production use?</h4>
-<p>This library's support for minification (<code>getMinifiedCssText()</code> and related methods) is not intended as a
-general-purpose minification solution, but could be useful as part of a wider CSS toolchain, perhaps with a specialized
-minifier at its end.</p>
-<p>If you decide to use the minification methods in 1.x be sure to use this library's internal parser, and not the other SAC parsers.
-And if you use any kind of Internet Explorer hack, please use a sheet factory with the proper NSAC parser flags set. Some IE hacks are
-supported, but others may give unexpected results so you should be very careful about that.</p>
+<div id="minify">
+<h4>Can this library be used as a general-purpose CSS minifier?</h4>
+<p>This library's support for minification (the <code><a
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/Minify.html">Minify</a></code>
+class, or methods like <code><a
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toMinifiedString()">toMinifiedString()</a></code>
+and the various <code>getMinifiedCssText()</code>) will not produce output of the smallest size,
+but should be significantly more reliable than alternatives like YUI Compressor.</p>
+<p>See also the part about <a href="usage.html#minification">minification in the Usage Guide</a>.</p>
 </div>
 <div id="mavencentral">
 <h4>Are this project's artifacts available on Maven Central?</h4>
