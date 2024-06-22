@@ -1,0 +1,252 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "xml-dtd",
+    "version": "4.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "strictly": "[3.4.0,)",
+            "requires": "[3.4.0,)",
+            "prefers": "3.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "carte-util",
+          "version": {
+            "strictly": "[3.4.0,)",
+            "requires": "[3.4.0,)",
+            "prefers": "3.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-4.3-javadoc.jar",
+          "url": "xml-dtd-4.3-javadoc.jar",
+          "size": 327203,
+          "sha512": "94a5906759464b095085e7b74bbd238ea3f85270b5100ed63c94dd81d4f99a0eded5ceac3362469a277005f4b976457e1e5efd8552406f7e1db635b923f2bace",
+          "sha256": "a6fb5649d6a8a224cb5760e1f966e11eca9a88516f70933a04ef9eac18de7a4b",
+          "sha1": "485df449580fc11355cd2e38d7bfa4ff0cae6500",
+          "md5": "25c1af4253a32601ede6cd4105a68230"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-4.3-sources.jar",
+          "url": "xml-dtd-4.3-sources.jar",
+          "size": 190900,
+          "sha512": "a56974a0ea5b340d4ed607b502536c1f75db8b96c65d826b55b7fcf19474b32ff40d834052f69671e05b1529b84d06be9dc8fd8ab1ba4e02ba42a52fd2ffab24",
+          "sha256": "c0e767c855eaadb21dcc76f430ead6739fc1f490596ad20b8133a58fb34cff45",
+          "sha1": "f44b5013e4351b8339f1ba9458eeccf901b3b540",
+          "md5": "c7451efbaf5943308c48f6963f2ee71d"
+        }
+      ]
+    },
+    {
+      "name": "dtdparseApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "xml-dtd-dtdparse",
+          "version": "4.3"
+        }
+      ]
+    },
+    {
+      "name": "dtdparseRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "tokenproducer",
+          "version": {
+            "requires": "[3.0,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "xml-dtd-dtdparse",
+          "version": "4.3"
+        }
+      ]
+    },
+    {
+      "name": "dtdeclApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "xml-dtd-dtdecl",
+          "version": "4.3"
+        }
+      ]
+    },
+    {
+      "name": "dtdeclRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-text",
+          "version": {
+            "requires": "[5.0.0,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "xml-dtd-4.3.jar",
+          "url": "xml-dtd-4.3.jar",
+          "size": 198088,
+          "sha512": "0079f3e7e16ed4460efc07dff3b37f0416654542bfc70357a87dcee62d2daa8a161d0d11416084a2fda2b50d9a94e854644ee3b14107ff65a478793d11b60112",
+          "sha256": "61219121571844f73da7895f38b87e3313204f72581c7fb0f684bb47b73c8097",
+          "sha1": "851f494a08022bb38a4f882d153a3aab25fdd6c3",
+          "md5": "e6a5880ef4b1912abcd71081010698f5"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "xml-dtd-dtdecl",
+          "version": "4.3"
+        }
+      ]
+    }
+  ]
+}
