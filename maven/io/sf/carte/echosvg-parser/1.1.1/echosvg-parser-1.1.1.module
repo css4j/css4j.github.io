@@ -1,0 +1,154 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-parser",
+    "version": "1.1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "[2.9,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-1.1.1.jar",
+          "url": "echosvg-parser-1.1.1.jar",
+          "size": 76451,
+          "sha512": "ab0921ccf8227db85b78428f5a36bb6135de5b0c4f6c0b39cf5584d991ac232cea0a80f73fe7a774c21bb34aaaf950e7432ad3f0b53702e4679ad1a9a3b44b10",
+          "sha256": "ee16e204697348dceeb52138aafd98ad1290d633f46ae319b8d6dfd26276d7ad",
+          "sha1": "2e3ed2e0de5f4d37adb731cf2ff07a22b6db9436",
+          "md5": "31b1ed2f7986762dd0ae63e52597683a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "[2.9,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-1.1.1.jar",
+          "url": "echosvg-parser-1.1.1.jar",
+          "size": 76451,
+          "sha512": "ab0921ccf8227db85b78428f5a36bb6135de5b0c4f6c0b39cf5584d991ac232cea0a80f73fe7a774c21bb34aaaf950e7432ad3f0b53702e4679ad1a9a3b44b10",
+          "sha256": "ee16e204697348dceeb52138aafd98ad1290d633f46ae319b8d6dfd26276d7ad",
+          "sha1": "2e3ed2e0de5f4d37adb731cf2ff07a22b6db9436",
+          "md5": "31b1ed2f7986762dd0ae63e52597683a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-parser-1.1.1-sources.jar",
+          "url": "echosvg-parser-1.1.1-sources.jar",
+          "size": 82630,
+          "sha512": "0616638066ee8bb2526804ed9a9c9b0883f008a2e712742336f43be044ee0c6866e01385a228eb6ce9f21862cf05e5397cbccfdb5cdc235defbf1d5debc1e859",
+          "sha256": "5c18e7c62070bf86cb544426963ac60bf9a26a2b951356e1ff2d56301bdd7dda",
+          "sha1": "b443371a2ef6501076d610ebe0dfd2ee643c5185",
+          "md5": "6d74017169be7b059c8f6d1aa74b7a3c"
+        }
+      ]
+    }
+  ]
+}

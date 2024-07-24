@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-i18n",
+    "version": "1.1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echosvg-i18n-1.1.1.jar",
+          "url": "echosvg-i18n-1.1.1.jar",
+          "size": 10188,
+          "sha512": "23aafb9d468ebbd6c24e2739bfe6d0e51766892a27296398e70b9736e17b946d695658dd783604329d580ad89ba80bc8b3c59b18c389ff30ac735565087318c0",
+          "sha256": "284c17a5f98c8462ecb9ba02ae761909183fc1e853656b7d672d9abbab5a21c3",
+          "sha1": "b525bdf3cbc6b7900252f61ccede193e0a7535fd",
+          "md5": "2cbc7f3ccb5e936010d7fa3214d8b0f5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-i18n-1.1.1.jar",
+          "url": "echosvg-i18n-1.1.1.jar",
+          "size": 10188,
+          "sha512": "23aafb9d468ebbd6c24e2739bfe6d0e51766892a27296398e70b9736e17b946d695658dd783604329d580ad89ba80bc8b3c59b18c389ff30ac735565087318c0",
+          "sha256": "284c17a5f98c8462ecb9ba02ae761909183fc1e853656b7d672d9abbab5a21c3",
+          "sha1": "b525bdf3cbc6b7900252f61ccede193e0a7535fd",
+          "md5": "2cbc7f3ccb5e936010d7fa3214d8b0f5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-i18n-1.1.1-sources.jar",
+          "url": "echosvg-i18n-1.1.1-sources.jar",
+          "size": 12492,
+          "sha512": "e31b2611aa12874459a31fa7ed1117c9098fda295cf92e41596823fe10eb8d4f36aa60b15de7d7189dc3b3e75e050a1ae138aa8e265fd2a7e1c57d98410097c5",
+          "sha256": "224254fc8f43ab83a9c9ea4724dda9bc2b787529f2eb081421d4482537b22266",
+          "sha1": "65289e971a1adb2c3148c7c79029f45a8cfcfa6a",
+          "md5": "0649a0c42b9bfc2743204b2364299973"
+        }
+      ]
+    }
+  ]
+}
