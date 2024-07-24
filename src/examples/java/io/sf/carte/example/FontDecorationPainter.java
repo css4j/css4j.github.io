@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2024, Carlos Amengual.
+ Copyright (c) 2024, contributors to EchoSVG project.
 
  Licensed under a BSD-style License. You can find the license here:
  https://css4j.github.io/LICENSE.txt
@@ -35,11 +35,11 @@ public class FontDecorationPainter {
 		g.setBackground(backgroundColor);
 
 		// Set default font
-		g.setFont(new Font("Arial", Font.BOLD, 12));
+		g.setFont(new Font("sans-serif", Font.BOLD, 12));
 
 		// Create a font with the desired attributes, including STRIKETHROUGH
 		Map<TextAttribute, Object> attributes = new HashMap<>();
-		attributes.put(TextAttribute.FAMILY, "Helvetica");
+		attributes.put(TextAttribute.FAMILY, "serif");
 		attributes.put(TextAttribute.WEIGHT, TextAttribute.WEIGHT_EXTRABOLD);
 		attributes.put(TextAttribute.SIZE, 20);
 		attributes.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);

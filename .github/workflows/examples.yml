@@ -8,6 +8,8 @@ name: Examples
 on:
   push:
     branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,3 +34,14 @@ jobs:
       # Check the build
       - name: Test the build
         run: ./gradlew test
+
+      # Upload test artifact
+      - name: Upload test output
+        uses: actions/upload-artifact@v4
+        if: ${{ failure() }}
+        with:
+          name: test-output
+          path: |
+            build/reports/tests/
+          retention-days: 15
+          overwrite: true
