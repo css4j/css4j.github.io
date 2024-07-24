@@ -151,7 +151,7 @@ public class EchoSVGTest {
 
 		trans.transcode(input, output);
 
-		assertTrue(ostream.size() > 1070, "Image had size of only " + ostream.size() + ".");
+		assertTrue(ostream.size() > 1000, "Image had size of only " + ostream.size() + ".");
 	}
 
 	private Reader loadDocumentFromClasspath(String filename) {

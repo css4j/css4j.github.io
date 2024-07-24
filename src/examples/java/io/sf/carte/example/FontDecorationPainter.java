@@ -15,9 +15,17 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.Transparency;
+import java.awt.color.ICC_ColorSpace;
+import java.awt.color.ICC_Profile;
 import java.awt.font.TextAttribute;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.awt.image.ComponentColorModel;
+import java.awt.image.DataBuffer;
+import java.awt.image.WritableRaster;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,7 +79,23 @@ public class FontDecorationPainter {
 
 	private static BufferedImage createImage() {
 		// Create an Image
-		BufferedImage image = new BufferedImage(100, 75, BufferedImage.TYPE_INT_ARGB);
+		// Load a profile
+		ICC_Profile prof;
+		try (InputStream iccStream = FontDecorationPainter.class.getResourceAsStream(
+				"/io/sf/carte/example/profiles/Display P3.icc")) {
+			prof = ICC_Profile.getInstance(iccStream);
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+		ICC_ColorSpace cs = new ICC_ColorSpace(prof);
+
+		// Create the image
+		int[] bits = { 16, 16, 16, 16 };
+		ComponentColorModel cm = new ComponentColorModel(cs, bits, true, false,
+				Transparency.TRANSLUCENT, DataBuffer.TYPE_USHORT);
+		WritableRaster raster = cm.createCompatibleWritableRaster(100, 75);
+		BufferedImage image = new BufferedImage(cm, raster, false, null);
+
 		Graphics2D ig = image.createGraphics();
 		ig.scale(.5, .5);
 		ig.setPaint(new Color(128, 0, 0));
