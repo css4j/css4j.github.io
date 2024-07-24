@@ -1,0 +1,154 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-parser",
+    "version": "1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "[2.9,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-1.1.jar",
+          "url": "echosvg-parser-1.1.jar",
+          "size": 75982,
+          "sha512": "9c707b7bedb72a84f7bff28f203b24064ff796d7587db8b3f400f81b9d5910eb4f47ba1cf1f7466a41bb443bcc5fb22b61723aa8a1b48a62749a77d62c2fffda",
+          "sha256": "6224b5e4440b6dcba4acbd27a5f61dfdbe86b50bb77069cd25d56356409fd34f",
+          "sha1": "74096868ccf3bf641ec75a06c070a4468531694e",
+          "md5": "f05febd6c82a48fc8c980785c9ee5f2b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "org.apache.xmlgraphics",
+          "module": "xmlgraphics-commons",
+          "version": {
+            "requires": "[2.9,)"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-1.1.jar",
+          "url": "echosvg-parser-1.1.jar",
+          "size": 75982,
+          "sha512": "9c707b7bedb72a84f7bff28f203b24064ff796d7587db8b3f400f81b9d5910eb4f47ba1cf1f7466a41bb443bcc5fb22b61723aa8a1b48a62749a77d62c2fffda",
+          "sha256": "6224b5e4440b6dcba4acbd27a5f61dfdbe86b50bb77069cd25d56356409fd34f",
+          "sha1": "74096868ccf3bf641ec75a06c070a4468531694e",
+          "md5": "f05febd6c82a48fc8c980785c9ee5f2b"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-parser-1.1-sources.jar",
+          "url": "echosvg-parser-1.1-sources.jar",
+          "size": 82630,
+          "sha512": "0616638066ee8bb2526804ed9a9c9b0883f008a2e712742336f43be044ee0c6866e01385a228eb6ce9f21862cf05e5397cbccfdb5cdc235defbf1d5debc1e859",
+          "sha256": "5c18e7c62070bf86cb544426963ac60bf9a26a2b951356e1ff2d56301bdd7dda",
+          "sha1": "b443371a2ef6501076d610ebe0dfd2ee643c5185",
+          "md5": "6d74017169be7b059c8f6d1aa74b7a3c"
+        }
+      ]
+    }
+  ]
+}
