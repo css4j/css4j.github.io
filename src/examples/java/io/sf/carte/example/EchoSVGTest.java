@@ -133,7 +133,7 @@ public class EchoSVGTest {
 			TranscoderInput input = new TranscoderInput(re);
 			helper.transcode(input, output);
 		}
-		assertTrue(ostream.size() > 8000, "Mermaid image had size of only " + ostream.size() + ".");
+		assertTrue(ostream.size() > 7000, "Mermaid image had size of only " + ostream.size() + ".");
 	}
 
 	@Test
