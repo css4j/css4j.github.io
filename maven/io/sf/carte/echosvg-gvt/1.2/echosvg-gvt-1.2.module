@@ -1,0 +1,98 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-gvt",
+    "version": "1.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-gvt-1.2.jar",
+          "url": "echosvg-gvt-1.2.jar",
+          "size": 195967,
+          "sha512": "9ec4462b775ba35da56437d7e2fbf1734c31bc70bb11c67a1f81622eecc01e77bbe70dc692bd9e97659823a96c9f1fa7124baa49456256e9ff300242f594a083",
+          "sha256": "3f647b85903aa8b03a37d8bb9ee30f58abcd267b31e9c950c8a5e01fde220098",
+          "sha1": "81ab73d26b94fc22d749031af285939052267943",
+          "md5": "b030d1fbe6eb3821af738122252e299e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-gvt-1.2.jar",
+          "url": "echosvg-gvt-1.2.jar",
+          "size": 195967,
+          "sha512": "9ec4462b775ba35da56437d7e2fbf1734c31bc70bb11c67a1f81622eecc01e77bbe70dc692bd9e97659823a96c9f1fa7124baa49456256e9ff300242f594a083",
+          "sha256": "3f647b85903aa8b03a37d8bb9ee30f58abcd267b31e9c950c8a5e01fde220098",
+          "sha1": "81ab73d26b94fc22d749031af285939052267943",
+          "md5": "b030d1fbe6eb3821af738122252e299e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-gvt-1.2-sources.jar",
+          "url": "echosvg-gvt-1.2-sources.jar",
+          "size": 200035,
+          "sha512": "6e7d4095b40edc8d254b4f20de02351f5be30507e8cd25e50f074fe7d325e5a5b613dea992d389899d303c13ba6aff6ab53adf69cbdfc78ded482112df2512db",
+          "sha256": "51bfae527e7c1f0f9cba1faea092987051ad7c5402a0d71b520e731ff1f21b13",
+          "sha1": "002a4ff13dd1d8b140b0893d6a628a38fe1b3531",
+          "md5": "91cc13e7a2a0c941fe7906ddf4c91ce0"
+        }
+      ]
+    }
+  ]
+}
