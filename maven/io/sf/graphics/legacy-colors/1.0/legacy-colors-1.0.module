@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.graphics",
+    "module": "legacy-colors",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "legacy-colors-1.0.jar",
+          "url": "legacy-colors-1.0.jar",
+          "size": 29092,
+          "sha512": "96f4f4b9cdf91a80d8fd1923d935c77291e1f85e278c8b9703c7e87355ded5725b72f354fcf2e082de9ce9678458ac32d14b5c1128a1ef207cbbaaa029b00e47",
+          "sha256": "8466d7c99a5a49459e03f27fec6c7e9bfcbe1888f350014c3b74707ebf93d22e",
+          "sha1": "b6a5d45fde06df6e26b8bbdb05345a48924e504c",
+          "md5": "a8f881433e89e7520a1077da4e11212c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "legacy-colors-1.0.jar",
+          "url": "legacy-colors-1.0.jar",
+          "size": 29092,
+          "sha512": "96f4f4b9cdf91a80d8fd1923d935c77291e1f85e278c8b9703c7e87355ded5725b72f354fcf2e082de9ce9678458ac32d14b5c1128a1ef207cbbaaa029b00e47",
+          "sha256": "8466d7c99a5a49459e03f27fec6c7e9bfcbe1888f350014c3b74707ebf93d22e",
+          "sha1": "b6a5d45fde06df6e26b8bbdb05345a48924e504c",
+          "md5": "a8f881433e89e7520a1077da4e11212c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "legacy-colors-1.0-sources.jar",
+          "url": "legacy-colors-1.0-sources.jar",
+          "size": 32495,
+          "sha512": "8e05b5c4a9e46b07a9851c1c50073a5174e88e37e0da1ee63594935244e091be7c3837a4a7d0d1555acd178260fde55327d9b39762d612e37ed65b70a9b7bf83",
+          "sha256": "16befa839d203c16addc797d22090fef9e32cb61d40070d6ddf33f41d4c09ddd",
+          "sha1": "03119cb071ba5d829edd06468af6b873189655cd",
+          "md5": "8c4822aad5c77d7ffdfab9487283de2c"
+        }
+      ]
+    }
+  ]
+}
