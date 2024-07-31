@@ -15,7 +15,7 @@ sourceSets {
 		}
 		resources {
 			srcDirs = ['src/examples/resources', 'imag']
-			includes = ['hdrbg.svg', '**/profiles/*']
+			includes = ['hdrbg.svg', 'io/sf/**']
 		}
 	}
 }

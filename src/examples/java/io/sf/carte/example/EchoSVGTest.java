@@ -42,6 +42,7 @@ import io.sf.carte.echosvg.transcoder.TranscoderException;
 import io.sf.carte.echosvg.transcoder.TranscoderInput;
 import io.sf.carte.echosvg.transcoder.TranscoderOutput;
 import io.sf.carte.echosvg.transcoder.image.PNGTranscoder;
+import io.sf.carte.echosvg.transcoder.util.CSSTranscodingHelper;
 
 /**
  * The purpose of this test is to verify that EchoSVG can be run with the given
@@ -118,6 +119,21 @@ public class EchoSVGTest {
 		ctx.setGraphicContextDefaults(defaults);
 
 		return new SVGGraphics2D(ctx, false);
+	}
+
+	@Test
+	public void testTranscodingHelper() throws Exception {
+		PNGTranscoder transcoder = new PNGTranscoder();
+		CSSTranscodingHelper helper = new CSSTranscodingHelper(transcoder);
+		ByteArrayOutputStream ostream = new ByteArrayOutputStream(700);
+		TranscoderOutput output = new TranscoderOutput(ostream);
+		ErrorHandler handler = new ExceptionErrorHandler();
+		transcoder.setErrorHandler(handler);
+		try (Reader re = loadDocumentFromClasspath("/io/sf/carte/example/mermaid/block.svg")) {
+			TranscoderInput input = new TranscoderInput(re);
+			helper.transcode(input, output);
+		}
+		assertTrue(ostream.size() > 8000, "Mermaid image had size of only " + ostream.size() + ".");
 	}
 
 	@Test
