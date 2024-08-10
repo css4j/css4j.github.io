@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.w3",
+    "module": "cssom-api",
+    "version": "0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "cssom-api-0.1.jar",
+          "url": "cssom-api-0.1.jar",
+          "size": 20524,
+          "sha512": "d9d702aca06a515fd44d2ceeb5d283f56947e7425a4985739dc340c9892f304ede5324a5133af55e9ba98213918fdb303a298dcf33dc6a1c818de2ce9f561ce8",
+          "sha256": "b7446eeb289da9cd90bc49dab7e41e84f12c9c6ca3238103c43cca36efa43013",
+          "sha1": "6bf69a87565b73e89d61603625e0e340ca0ca911",
+          "md5": "449058a799ec38da47b16497e2bf0e42"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "cssom-api-0.1.jar",
+          "url": "cssom-api-0.1.jar",
+          "size": 20524,
+          "sha512": "d9d702aca06a515fd44d2ceeb5d283f56947e7425a4985739dc340c9892f304ede5324a5133af55e9ba98213918fdb303a298dcf33dc6a1c818de2ce9f561ce8",
+          "sha256": "b7446eeb289da9cd90bc49dab7e41e84f12c9c6ca3238103c43cca36efa43013",
+          "sha1": "6bf69a87565b73e89d61603625e0e340ca0ca911",
+          "md5": "449058a799ec38da47b16497e2bf0e42"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "cssom-api-0.1-javadoc.jar",
+          "url": "cssom-api-0.1-javadoc.jar",
+          "size": 445017,
+          "sha512": "72d5c9fd66511b922bf12b0bffae674f244f4b364fa47fd23eea793461007971214488b63da5b9c1bd3450c78511aee6726b41e9d9d368902c6e1bf594df679a",
+          "sha256": "2ea794ce13aa3f1eb4c17fe47bf75c32a41dc80afc77ae876053cbd9230bf843",
+          "sha1": "71bbbefca00112c6b42427044959c9d845a3c9ce",
+          "md5": "0f4082ca79898619acf86aa42802644e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "cssom-api-0.1-sources.jar",
+          "url": "cssom-api-0.1-sources.jar",
+          "size": 29456,
+          "sha512": "12e3aa90774ca637e040bb0029968e2da1880344e9d794df3c11fa53d369ff26850bf729f355507f7639b857ea08c9b6a071f94b9549eb6667ba5913bdec7447",
+          "sha256": "2a4179b142622a2d122cd30c79b51bce777404ac660f38539e26f19447359bab",
+          "sha1": "ca2a75792c2ea66c9fb7256e99ed9c9feaed1de9",
+          "md5": "e4261b56a8601cf1620b6751ee041b72"
+        }
+      ]
+    }
+  ]
+}
