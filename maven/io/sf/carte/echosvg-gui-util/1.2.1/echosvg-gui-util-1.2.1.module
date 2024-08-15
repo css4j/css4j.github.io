@@ -1,0 +1,105 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-gui-util",
+    "version": "1.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "1.2.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-gui-util-1.2.1.jar",
+          "url": "echosvg-gui-util-1.2.1.jar",
+          "size": 175306,
+          "sha512": "341131fb040ea45a25878cf97b6c63f5ba4f857a1f620e7e9310ab60515ae9a09277c1a89a6ef6bde61edbb9c0ab627307b9d5a709c640da1b36f7e3bd0de55e",
+          "sha256": "6db2ac3e967a0cbdca6cca8b9deff87bf52b279d8420c864532c5b1615b009b2",
+          "sha1": "59bd5845f8a8209996369c3436da18fa03bae982",
+          "md5": "543c9d5693ee55bd2daecc937124d3c1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "1.2.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-gui-util-1.2.1.jar",
+          "url": "echosvg-gui-util-1.2.1.jar",
+          "size": 175306,
+          "sha512": "341131fb040ea45a25878cf97b6c63f5ba4f857a1f620e7e9310ab60515ae9a09277c1a89a6ef6bde61edbb9c0ab627307b9d5a709c640da1b36f7e3bd0de55e",
+          "sha256": "6db2ac3e967a0cbdca6cca8b9deff87bf52b279d8420c864532c5b1615b009b2",
+          "sha1": "59bd5845f8a8209996369c3436da18fa03bae982",
+          "md5": "543c9d5693ee55bd2daecc937124d3c1"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-gui-util-1.2.1-sources.jar",
+          "url": "echosvg-gui-util-1.2.1-sources.jar",
+          "size": 119987,
+          "sha512": "7e7c3547f400fed5e53a37c50ecbf502aa23c429186e6a1d648777ce6556248b9fbc700d40f42bc9e966d1cb66f9e1268a19b1d1d8d3f35345512bbf0c1c0b18",
+          "sha256": "cc908a69124e25b6094c191a563cb4ac85007b9adaad47145fa34a5f8ac0d1de",
+          "sha1": "0cc67ceedc9a33f128fb5c4824d51d470275f058",
+          "md5": "5da40080dda45fdd016230d3fdfdb38e"
+        }
+      ]
+    }
+  ]
+}

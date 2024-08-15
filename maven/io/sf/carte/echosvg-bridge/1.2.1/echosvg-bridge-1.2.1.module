@@ -1,0 +1,140 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-bridge",
+    "version": "1.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gvt",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.graphics",
+          "module": "legacy-colors",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-bridge-1.2.1.jar",
+          "url": "echosvg-bridge-1.2.1.jar",
+          "size": 717316,
+          "sha512": "b3437f581526265ee3a88d10c96b9765c81bc2840bc0dd8b84a63884b68f455b9cb5da687b05533f643856fcebb020e132454d24e0beb8575e1660818cab2c57",
+          "sha256": "b604feb32c72b84582ad7f32f7db66eed9fdcb4607a7b623da2cf90ea31c4e74",
+          "sha1": "2a518f23e6a009f2bdd614f4f154b23272d70341",
+          "md5": "30be9389956d0e526aee75179422e39f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gvt",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "io.sf.graphics",
+          "module": "legacy-colors",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-bridge-1.2.1.jar",
+          "url": "echosvg-bridge-1.2.1.jar",
+          "size": 717316,
+          "sha512": "b3437f581526265ee3a88d10c96b9765c81bc2840bc0dd8b84a63884b68f455b9cb5da687b05533f643856fcebb020e132454d24e0beb8575e1660818cab2c57",
+          "sha256": "b604feb32c72b84582ad7f32f7db66eed9fdcb4607a7b623da2cf90ea31c4e74",
+          "sha1": "2a518f23e6a009f2bdd614f4f154b23272d70341",
+          "md5": "30be9389956d0e526aee75179422e39f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-bridge-1.2.1-sources.jar",
+          "url": "echosvg-bridge-1.2.1-sources.jar",
+          "size": 490508,
+          "sha512": "c113dc6d0b73e12925aed65263df091ab62ff74dc99bbca0b1240a84638f3a9e6f66ee15e46c111e7bf15ea232f03eed64f93b2258248fdd95bd4b5c62b584f8",
+          "sha256": "307445573c2002ac51edf81d7f2225ae13da844e1cb58657d1c21dd8267b07ef",
+          "sha1": "f5303b7d30951321c05aa419645708beab0eaf06",
+          "md5": "75f30955b437b9f0d18d510588682dd7"
+        }
+      ]
+    }
+  ]
+}
