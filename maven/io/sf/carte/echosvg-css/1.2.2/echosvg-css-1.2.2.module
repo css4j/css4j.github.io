@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-css",
+    "version": "1.2.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "1.2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "4.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-css-1.2.2.jar",
+          "url": "echosvg-css-1.2.2.jar",
+          "size": 288383,
+          "sha512": "d758ffb3ec03067905836231d5711dc794af7dc99bec4e084b0a3e84de087fe8c019302c0eee2ffddec0ec97c5473aa735be623fafb5ccf51696f170c3a94efb",
+          "sha256": "e387905a4de14240f97b22218fb1659eea9cff7822682c0101dae20725ccdd6b",
+          "sha1": "4d2cb7ba53cb56a7f31d5e79e0888190f687f42c",
+          "md5": "d61f52a2ada0955eeb1dc4f863c412d0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "1.2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "4.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-css-1.2.2.jar",
+          "url": "echosvg-css-1.2.2.jar",
+          "size": 288383,
+          "sha512": "d758ffb3ec03067905836231d5711dc794af7dc99bec4e084b0a3e84de087fe8c019302c0eee2ffddec0ec97c5473aa735be623fafb5ccf51696f170c3a94efb",
+          "sha256": "e387905a4de14240f97b22218fb1659eea9cff7822682c0101dae20725ccdd6b",
+          "sha1": "4d2cb7ba53cb56a7f31d5e79e0888190f687f42c",
+          "md5": "d61f52a2ada0955eeb1dc4f863c412d0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-css-1.2.2-sources.jar",
+          "url": "echosvg-css-1.2.2-sources.jar",
+          "size": 208800,
+          "sha512": "5268ce403ed2c338699690ec8e56c0f318efd7cdc53a2a34059b4438ac7ee040c178411f8c32be1265e45a0b32abb226760a302e7394d77632fde3940e24f2d2",
+          "sha256": "a067bb6bd7f24b37b5d134b9828ed1190903f8f82dfadd57379c4d09eba73c41",
+          "sha1": "d218a1224b22d120f11614d1c7f1f2068ac04ca6",
+          "md5": "ae20215f30caf14320ad7e7fd5045350"
+        }
+      ]
+    }
+  ]
+}
