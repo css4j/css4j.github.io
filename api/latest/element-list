@@ -1,6 +1,7 @@
 module:io.sf.carte.css4j
 io.sf.carte.doc
 io.sf.carte.doc.agent
+io.sf.carte.doc.color
 io.sf.carte.doc.dom
 io.sf.carte.doc.geom
 io.sf.carte.doc.style.css

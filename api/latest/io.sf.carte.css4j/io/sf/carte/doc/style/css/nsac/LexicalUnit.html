@@ -148,7 +148,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDimensionUnitText()" class="member-name-link">getDimensionUnitText</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If this unit is a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>LexicalUnit.LexicalType.DIMENSION</code></a>, returns the string
+<div class="block">If this unit is a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>DIMENSION</code></a>, returns the string
  representation of the CSS unit returned by <a href="#getCssUnit()"><code>getCssUnit()</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
@@ -424,12 +424,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDimensionUnitText()">
 <h3>getDimensionUnitText</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDimensionUnitText</span>()</div>
-<div class="block">If this unit is a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>LexicalUnit.LexicalType.DIMENSION</code></a>, returns the string
+<div class="block">If this unit is a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>DIMENSION</code></a>, returns the string
  representation of the CSS unit returned by <a href="#getCssUnit()"><code>getCssUnit()</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the string representation of the CSS unit, or the empty string if
-         this lexical unit does not represent a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>LexicalUnit.LexicalType.DIMENSION</code></a>.</dd>
+         this lexical unit does not represent a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>DIMENSION</code></a>.</dd>
 </dl>
 </section>
 </li>
@@ -475,14 +475,25 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
+<li><a href="LexicalUnit.LexicalType.html#CALC"><code>LexicalUnit.LexicalType.CALC</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#FUNCTION"><code>LexicalUnit.LexicalType.FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#COUNTER_FUNCTION"><code>LexicalUnit.LexicalType.COUNTER_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#COUNTERS_FUNCTION"><code>LexicalUnit.LexicalType.COUNTERS_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#CUBIC_BEZIER_FUNCTION"><code>LexicalUnit.LexicalType.CUBIC_BEZIER_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#STEPS_FUNCTION"><code>LexicalUnit.LexicalType.STEPS_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RECT_FUNCTION"><code>LexicalUnit.LexicalType.RECT_FUNCTION</code></a></li>
-<li><a href="LexicalUnit.LexicalType.html#FUNCTION"><code>LexicalUnit.LexicalType.FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RGBCOLOR"><code>LexicalUnit.LexicalType.RGBCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#HSLCOLOR"><code>LexicalUnit.LexicalType.HSLCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#HWBCOLOR"><code>LexicalUnit.LexicalType.HWBCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#LABCOLOR"><code>LexicalUnit.LexicalType.LABCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#LCHCOLOR"><code>LexicalUnit.LexicalType.LCHCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#OKLABCOLOR"><code>LexicalUnit.LexicalType.OKLABCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#OKLCHCOLOR"><code>LexicalUnit.LexicalType.OKLCHCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#COLOR_FUNCTION"><code>LexicalUnit.LexicalType.COLOR_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#COLOR_MIX"><code>LexicalUnit.LexicalType.COLOR_MIX</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#ELEMENT_REFERENCE"><code>LexicalUnit.LexicalType.ELEMENT_REFERENCE</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#VAR"><code>LexicalUnit.LexicalType.VAR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#ATTR"><code>LexicalUnit.LexicalType.ATTR</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -506,14 +517,25 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
+<li><a href="LexicalUnit.LexicalType.html#CALC"><code>LexicalUnit.LexicalType.CALC</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#FUNCTION"><code>LexicalUnit.LexicalType.FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#COUNTER_FUNCTION"><code>LexicalUnit.LexicalType.COUNTER_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#COUNTERS_FUNCTION"><code>LexicalUnit.LexicalType.COUNTERS_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#CUBIC_BEZIER_FUNCTION"><code>LexicalUnit.LexicalType.CUBIC_BEZIER_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#STEPS_FUNCTION"><code>LexicalUnit.LexicalType.STEPS_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RECT_FUNCTION"><code>LexicalUnit.LexicalType.RECT_FUNCTION</code></a></li>
-<li><a href="LexicalUnit.LexicalType.html#FUNCTION"><code>LexicalUnit.LexicalType.FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RGBCOLOR"><code>LexicalUnit.LexicalType.RGBCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#HSLCOLOR"><code>LexicalUnit.LexicalType.HSLCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#HWBCOLOR"><code>LexicalUnit.LexicalType.HWBCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#LABCOLOR"><code>LexicalUnit.LexicalType.LABCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#LCHCOLOR"><code>LexicalUnit.LexicalType.LCHCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#OKLABCOLOR"><code>LexicalUnit.LexicalType.OKLABCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#OKLCHCOLOR"><code>LexicalUnit.LexicalType.OKLCHCOLOR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#COLOR_FUNCTION"><code>LexicalUnit.LexicalType.COLOR_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#COLOR_MIX"><code>LexicalUnit.LexicalType.COLOR_MIX</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#ELEMENT_REFERENCE"><code>LexicalUnit.LexicalType.ELEMENT_REFERENCE</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#VAR"><code>LexicalUnit.LexicalType.VAR</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#ATTR"><code>LexicalUnit.LexicalType.ATTR</code></a></li>
 </ul>
 </dd>
 </dl>
