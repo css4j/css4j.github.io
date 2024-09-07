@@ -42,10 +42,7 @@ repositories {
 			releasesOnly()
 		}
 		content {
-			includeGroup 'io.sf.graphics'
-			includeGroup 'io.sf.carte'
-			includeGroup 'io.sf.jclf'
-			includeGroup 'io.sf.w3'
+			includeGroupByRegex 'io\\.sf\\..*'
 			includeGroup 'xmlpull'
 			includeGroup 'xpp3'
 		}
