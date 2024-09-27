@@ -1,0 +1,112 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-svggen",
+    "version": "1.2.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-svggen-1.2.3.jar",
+          "url": "echosvg-svggen-1.2.3.jar",
+          "size": 235065,
+          "sha512": "1d54cfafa8e321f617bfe27e27d1c206e9bfd9c96b6b68eab0f1b9889eacf574787374c2338e8d56d40fe0cff45bd98c218abf0c0ffadc0ac0f40ba2d5a6ab05",
+          "sha256": "2fa6bf4120b10e8320e2882b7243a366d30a238dcc888f71c6a436279b50a524",
+          "sha1": "53bb086bb05aa29c4be3f6b02ad2c88a3c8c9aeb",
+          "md5": "f41ebfd523df36ec6fcd94beae193027"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.2.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-codec",
+          "version": {
+            "requires": "1.2.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-svggen-1.2.3.jar",
+          "url": "echosvg-svggen-1.2.3.jar",
+          "size": 235065,
+          "sha512": "1d54cfafa8e321f617bfe27e27d1c206e9bfd9c96b6b68eab0f1b9889eacf574787374c2338e8d56d40fe0cff45bd98c218abf0c0ffadc0ac0f40ba2d5a6ab05",
+          "sha256": "2fa6bf4120b10e8320e2882b7243a366d30a238dcc888f71c6a436279b50a524",
+          "sha1": "53bb086bb05aa29c4be3f6b02ad2c88a3c8c9aeb",
+          "md5": "f41ebfd523df36ec6fcd94beae193027"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-svggen-1.2.3-sources.jar",
+          "url": "echosvg-svggen-1.2.3-sources.jar",
+          "size": 243535,
+          "sha512": "d950faaadb23881b57281c175c9f8b3731afdcba6631360a63211391d46b84564dadacd1b643bd9a0f23aa8e044863476f0cae4f45ef4668997fc25cabfeff3e",
+          "sha256": "2a4add07687fb7f1e85c53056d436bd3533f13dad1853a4d5aadf87a20b66a52",
+          "sha1": "9c2e2786ac56d39d82183736c86a39da278d6ac8",
+          "md5": "291724497b9e65cc3223868f7797805d"
+        }
+      ]
+    }
+  ]
+}
