@@ -69,10 +69,11 @@ import io.sf.carte.doc.style.css.nsac.CombinatorSelector;
 import io.sf.carte.doc.style.css.nsac.Condition;
 import io.sf.carte.doc.style.css.nsac.Condition.ConditionType;
 import io.sf.carte.doc.style.css.nsac.ConditionalSelector;
+import io.sf.carte.doc.style.css.nsac.DeclarationCondition;
 import io.sf.carte.doc.style.css.nsac.ElementSelector;
 import io.sf.carte.doc.style.css.nsac.LexicalUnit;
-import io.sf.carte.doc.style.css.nsac.Parser;
 import io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType;
+import io.sf.carte.doc.style.css.nsac.Parser;
 import io.sf.carte.doc.style.css.nsac.Selector;
 import io.sf.carte.doc.style.css.nsac.Selector.SelectorType;
 import io.sf.carte.doc.style.css.nsac.SelectorList;
@@ -86,7 +87,6 @@ import io.sf.carte.doc.style.css.om.MediaFeature;
 import io.sf.carte.doc.style.css.om.StyleRule;
 import io.sf.carte.doc.style.css.om.StyleSheetList;
 import io.sf.carte.doc.style.css.om.SupportsRule;
-import io.sf.carte.doc.style.css.parser.DeclarationCondition;
 import io.sf.carte.doc.style.css.parser.SyntaxParser;
 import io.sf.carte.doc.style.css.property.LexicalValue;
 import io.sf.carte.doc.style.css.property.NumberValue;
@@ -747,13 +747,13 @@ public class Css4jTest {
 		assertEquals("display", predName);
 
 		// Now obtain the value
-		CSSValue value = dCond.getValue();
-		Type priType = value.getPrimitiveType();
-		// It is a Type.IDENT
-		assertEquals(Type.IDENT, priType);
+		LexicalUnit value = dCond.getValue();
+		LexicalUnit.LexicalType luType = value.getLexicalUnitType();
+		// It is a IDENT
+		assertEquals(LexicalUnit.LexicalType.IDENT, luType);
 
-		// IDENT is a TYPED value, so we can cast and get the string value
-		String condValue = ((CSSTypedValue) value).getStringValue();
+		// Get the string value
+		String condValue = value.getStringValue();
 		// It is "flex"
 		assertEquals("flex", condValue);
 	}
