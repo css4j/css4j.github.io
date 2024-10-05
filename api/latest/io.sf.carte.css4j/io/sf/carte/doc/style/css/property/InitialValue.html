@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
+<dd><code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code>, <code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">InitialValue</span>
@@ -159,7 +159,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="KeywordValue.html" title="class in io.sf.carte.doc.style.css.property">KeywordValue</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCSSValue()" class="member-name-link">getCSSValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the CSSValue associated to this item.</div>
+<div class="block">Gets the StyleValue associated to this item.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrimitiveType()" class="member-name-link">getPrimitiveType</a>()</code></div>
@@ -182,10 +182,13 @@ loadScripts(document, 'script');</script>
 <code><a href="KeywordValue.html#asSubproperty()">asSubproperty</a>, <a href="KeywordValue.html#clone()">clone</a>, <a href="KeywordValue.html#equals(java.lang.Object)">equals</a>, <a href="KeywordValue.html#getCssValueType()">getCssValueType</a>, <a href="KeywordValue.html#getNextLexicalUnit()">getNextLexicalUnit</a>, <a href="KeywordValue.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">handleSyntaxWarnings</a>, <a href="KeywordValue.html#hashCode()">hashCode</a>, <a href="KeywordValue.html#hasWarnings()">hasWarnings</a>, <a href="KeywordValue.html#setCssText(java.lang.String)">setCssText</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.StyleValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></h3>
-<code><a href="StyleValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="StyleValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="StyleValue.html#isSubproperty()">isSubproperty</a>, <a href="StyleValue.html#isSystemDefault()">isSystemDefault</a>, <a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="StyleValue.html#toString()">toString</a></code></div>
+<code><a href="StyleValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="StyleValue.html#isSubproperty()">isSubproperty</a>, <a href="StyleValue.html#isSystemDefault()">isSystemDefault</a>, <a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="StyleValue.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
+<code><a href="../CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSValue.html#isPrimitiveValue()">isPrimitiveValue</a></code></div>
 </section>
 </li>
 </ul>
@@ -266,12 +269,12 @@ loadScripts(document, 'script');</script>
 <h3>getCSSValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeywordValue.html" title="class in io.sf.carte.doc.style.css.property">KeywordValue</a></span>&nbsp;<span class="element-name">getCSSValue</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#getCSSValue()">ValueItem</a></code></span></div>
-<div class="block">Gets the CSSValue associated to this item.
+<div class="block">Gets the StyleValue associated to this item.
  <p>
  If there is an item there must be a value, so this method cannot return null.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the CSSValue associated to this item.</dd>
+<dd>the StyleValue associated to this item.</dd>
 </dl>
 </section>
 </li>

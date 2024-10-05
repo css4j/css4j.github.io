@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code>, <code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Enclosing class:</dt>
@@ -134,7 +134,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ValueList.html" title="class in io.sf.carte.doc.style.css.property">ValueList</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCSSValue()" class="member-name-link">getCSSValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the CSSValue associated to this item.</div>
+<div class="block">Gets the StyleValue associated to this item.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit</a>()</code></div>
@@ -187,14 +187,16 @@ loadScripts(document, 'script');</script>
 <h3>getCSSValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ValueList.html" title="class in io.sf.carte.doc.style.css.property">ValueList</a></span>&nbsp;<span class="element-name">getCSSValue</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#getCSSValue()">ValueItem</a></code></span></div>
-<div class="block">Gets the CSSValue associated to this item.
+<div class="block">Gets the StyleValue associated to this item.
  <p>
  If there is an item there must be a value, so this method cannot return null.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
+<dd><code><a href="../CSSValueItem.html#getCSSValue()">getCSSValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
+<dt>Specified by:</dt>
 <dd><code><a href="ValueItem.html#getCSSValue()">getCSSValue</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
 <dt>Returns:</dt>
-<dd>the CSSValue associated to this item.</dd>
+<dd>the StyleValue associated to this item.</dd>
 </dl>
 </section>
 </li>
@@ -202,14 +204,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getNextLexicalUnit()">
 <h3>getNextLexicalUnit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></span>&nbsp;<span class="element-name">getNextLexicalUnit</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#getNextLexicalUnit()">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#getNextLexicalUnit()">CSSValueItem</a></code></span></div>
 <div class="block">Get the next lexical unit after processing this item.
  <p>
  This method is useful as some primitive values (ratio) may take more than one
  unit.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#getNextLexicalUnit()">getNextLexicalUnit</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#getNextLexicalUnit()">getNextLexicalUnit</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Returns:</dt>
 <dd>the next lexical unit after this item was processed.</dd>
 </dl>
@@ -219,11 +221,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="hasWarnings()">
 <h3>hasWarnings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasWarnings</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#hasWarnings()">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#hasWarnings()">CSSValueItem</a></code></span></div>
 <div class="block">Has this item any warning to report ?</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#hasWarnings()">hasWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#hasWarnings()">hasWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if this item any warning to report.</dd>
 </dl>
@@ -233,11 +235,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">
 <h3>handleSyntaxWarnings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleSyntaxWarnings</span><wbr><span class="parameters">(<a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a>&nbsp;handler)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">CSSValueItem</a></code></span></div>
 <div class="block">Use the given error handler to handle warnings.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">handleSyntaxWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">handleSyntaxWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>handler</code> - the error handler.</dd>
 </dl>

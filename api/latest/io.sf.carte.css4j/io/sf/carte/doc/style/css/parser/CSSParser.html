@@ -176,7 +176,7 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSupportsConditionFactory(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">createSupportsConditionFactory</a><wbr>(<a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSupportsConditionFactory(io.sf.carte.doc.style.css.nsac.SheetContext)" class="member-name-link">createSupportsConditionFactory</a><wbr>(<a href="../nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a>&nbsp;parentSheet)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a new factory for <code>@supports</code> conditions.</div>
 </div>
@@ -297,9 +297,9 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">parseSupportsCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.SheetContext)" class="member-name-link">parseSupportsCondition</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
  <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule,
- <a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</code></div>
+ <a href="../nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a>&nbsp;parentStyleSheet)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 </div>
@@ -792,7 +792,7 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
                       <code>NOT_SUPPORTED_ERR</code> exceptions are always
                       thrown instead of being processed by the rule. Please
                       use
-                      <a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)"><code>parseSupportsCondition(String, CSSRule, AbstractCSSStyleSheet)</code></a>
+                      <a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.SheetContext)"><code>parseSupportsCondition(String, CSSRule, SheetContext)</code></a>
                       with a style sheet argument if you do not want to supply
                       a rule, otherwise namespace-related errors may be
                       produced.</dd>
@@ -808,31 +808,31 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
-<li><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)"><code>parseSupportsCondition(String, CSSRule, AbstractCSSStyleSheet)</code></a></li>
+<li><a href="#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.SheetContext)"><code>parseSupportsCondition(String, CSSRule, SheetContext)</code></a></li>
 </ul>
 </dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
+<section class="detail" id="parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.SheetContext)">
 <h3>parseSupportsCondition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a></span>&nbsp;<span class="element-name">parseSupportsCondition</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;conditionText,
  <a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule,
- <a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentStyleSheet)</span>
+ <a href="../nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a>&nbsp;parentStyleSheet)</span>
                                         throws <span class="exceptions"><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></span></div>
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>conditionText</code> - the condition text.</dd>
-<dd><code>rule</code> - the rule that would process the error. if
+<dd><code>rule</code> - the rule that would process the error. If
                          <code>null</code>, a problem while parsing shall
                          result in an exception. Note that
                          <code>NOT_SUPPORTED_ERR</code> exceptions are always
                          thrown instead of being processed by the rule.</dd>
-<dd><code>parentStyleSheet</code> - the parent style sheet. It is necessary to provide
-                         information related to namespaces, as well as
+<dd><code>parentStyleSheet</code> - the parent style sheet context. It is necessary to
+                         provide information related to namespaces, as well as
                          customizing the serialization.</dd>
 <dt>Returns:</dt>
 <dd>the <code>@supports</code> condition, or <code>null</code>
@@ -847,13 +847,13 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 </section>
 </li>
 <li>
-<section class="detail" id="createSupportsConditionFactory(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
+<section class="detail" id="createSupportsConditionFactory(io.sf.carte.doc.style.css.nsac.SheetContext)">
 <h3>createSupportsConditionFactory</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></span>&nbsp;<span class="element-name">createSupportsConditionFactory</span><wbr><span class="parameters">(<a href="../om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</span></div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type"><a href="../SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></span>&nbsp;<span class="element-name">createSupportsConditionFactory</span><wbr><span class="parameters">(<a href="../nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a>&nbsp;parentSheet)</span></div>
 <div class="block">Create a new factory for <code>@supports</code> conditions.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>parentSheet</code> - the <code>@supports</code> rule's parent style sheet.</dd>
+<dd><code>parentSheet</code> - the <code>@supports</code> rule's parent style sheet context.</dd>
 <dt>Returns:</dt>
 <dd>the factory.</dd>
 </dl>

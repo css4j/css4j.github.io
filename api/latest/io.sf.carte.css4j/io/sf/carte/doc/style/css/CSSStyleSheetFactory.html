@@ -107,6 +107,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final short</code></div>
+<div class="col-second even-row-color"><code><a href="#FLAG_STRING_DOUBLE_QUOTE" class="member-name-link">FLAG_STRING_DOUBLE_QUOTE</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Prefer double quotes in the serialization of strings.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final short</code></div>
+<div class="col-second odd-row-color"><code><a href="#FLAG_STRING_SINGLE_QUOTE" class="member-name-link">FLAG_STRING_SINGLE_QUOTE</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Prefer single quotes in the serialization of strings.</div>
+</div>
 <div class="col-first even-row-color"><code>static final byte</code></div>
 <div class="col-second even-row-color"><code><a href="#ORIGIN_AUTHOR" class="member-name-link">ORIGIN_AUTHOR</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
@@ -206,7 +216,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Sets a default HTML default style sheet as the user agent style sheet.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFactoryFlag(byte)" class="member-name-link">setFactoryFlag</a><wbr>(byte&nbsp;flag)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFactoryFlag(short)" class="member-name-link">setFactoryFlag</a><wbr>(short&nbsp;flag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a configuration flag.</div>
 </div>
@@ -297,6 +307,36 @@ loadScripts(document, 'script');</script>
 <dd>
 <ul class="tag-list">
 <li><a href="../../../../../../../constant-values.html#io.sf.carte.doc.style.css.CSSStyleSheetFactory.ORIGIN_USER_AGENT">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="FLAG_STRING_SINGLE_QUOTE">
+<h3>FLAG_STRING_SINGLE_QUOTE</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">short</span>&nbsp;<span class="element-name">FLAG_STRING_SINGLE_QUOTE</span></div>
+<div class="block">Prefer single quotes in the serialization of strings.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../../constant-values.html#io.sf.carte.doc.style.css.CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="FLAG_STRING_DOUBLE_QUOTE">
+<h3>FLAG_STRING_DOUBLE_QUOTE</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">short</span>&nbsp;<span class="element-name">FLAG_STRING_DOUBLE_QUOTE</span></div>
+<div class="block">Prefer double quotes in the serialization of strings.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="../../../../../../../constant-values.html#io.sf.carte.doc.style.css.CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -408,9 +448,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setFactoryFlag(byte)">
+<section class="detail" id="setFactoryFlag(short)">
 <h3>setFactoryFlag</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFactoryFlag</span><wbr><span class="parameters">(byte&nbsp;flag)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setFactoryFlag</span><wbr><span class="parameters">(short&nbsp;flag)</span></div>
 <div class="block">Set a configuration flag. Do not confuse with NSAC flags, which must be set
  at this object's creation time (see the documentation for implementation's
  constructors).

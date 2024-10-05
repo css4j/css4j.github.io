@@ -142,7 +142,7 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">StringValue</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>&nbsp;</code></div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(byte)" class="member-name-link">StringValue</a><wbr>(byte&nbsp;flags)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(short)" class="member-name-link">StringValue</a><wbr>(short&nbsp;flags)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">A string value with a flag specifying the quote behaviour.</div>
 </div>
@@ -229,13 +229,13 @@ loadScripts(document, 'script');</script>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSPrimitiveValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSPrimitiveValue.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a></h3>
-<code><a href="../CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="../CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="../CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
+<code><a href="../CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="../CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="../CSSPrimitiveValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="../CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSTypedValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></h3>
 <code><a href="../CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
-<code><a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a></code></div>
+<code><a href="../CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a></code></div>
 </section>
 </li>
 </ul>
@@ -254,15 +254,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(byte)">
+<section class="detail" id="&lt;init&gt;(short)">
 <h3>StringValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StringValue</span><wbr><span class="parameters">(byte&nbsp;flags)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StringValue</span><wbr><span class="parameters">(short&nbsp;flags)</span></div>
 <div class="block">A string value with a flag specifying the quote behaviour.
  <p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>flags</code> - See
-              <a href="../CSSStyleSheetFactory.html#setFactoryFlag(byte)"><code>CSSStyleSheetFactory.setFactoryFlag(byte)</code></a></dd>
+              <a href="../CSSStyleSheetFactory.html#setFactoryFlag(short)"><code>CSSStyleSheetFactory.setFactoryFlag(short)</code></a></dd>
 </dl>
 </section>
 </li>
@@ -439,6 +439,8 @@ loadScripts(document, 'script');</script>
  that will be disabled in the clone object.
  </p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSTypedValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../CSSValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
 <dt>Specified by:</dt>

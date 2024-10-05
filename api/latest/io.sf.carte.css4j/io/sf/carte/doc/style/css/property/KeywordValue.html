@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
+<dd><code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code>, <code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
@@ -198,13 +198,13 @@ implements <a href="ValueItem.html" title="interface in io.sf.carte.doc.style.cs
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.StyleValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></h3>
-<code><a href="StyleValue.html#getCssText()">getCssText</a>, <a href="StyleValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="StyleValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="StyleValue.html#isSubproperty()">isSubproperty</a>, <a href="StyleValue.html#isSystemDefault()">isSystemDefault</a>, <a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="StyleValue.html#toString()">toString</a></code></div>
+<code><a href="StyleValue.html#getCssText()">getCssText</a>, <a href="StyleValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="StyleValue.html#isSubproperty()">isSubproperty</a>, <a href="StyleValue.html#isSystemDefault()">isSystemDefault</a>, <a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="StyleValue.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
-<code><a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
+<code><a href="../CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.ValueItem">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.property.<a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></h3>
 <code><a href="ValueItem.html#getCSSValue()">getCSSValue</a></code></div>
@@ -252,14 +252,14 @@ implements <a href="ValueItem.html" title="interface in io.sf.carte.doc.style.cs
 <section class="detail" id="getNextLexicalUnit()">
 <h3>getNextLexicalUnit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></span>&nbsp;<span class="element-name">getNextLexicalUnit</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#getNextLexicalUnit()">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#getNextLexicalUnit()">CSSValueItem</a></code></span></div>
 <div class="block">Get the next lexical unit after processing this item.
  <p>
  This method is useful as some primitive values (ratio) may take more than one
  unit.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#getNextLexicalUnit()">getNextLexicalUnit</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#getNextLexicalUnit()">getNextLexicalUnit</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Returns:</dt>
 <dd>the next lexical unit after this item was processed.</dd>
 </dl>
@@ -269,11 +269,11 @@ implements <a href="ValueItem.html" title="interface in io.sf.carte.doc.style.cs
 <section class="detail" id="hasWarnings()">
 <h3>hasWarnings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasWarnings</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#hasWarnings()">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#hasWarnings()">CSSValueItem</a></code></span></div>
 <div class="block">Has this item any warning to report ?</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#hasWarnings()">hasWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#hasWarnings()">hasWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if this item any warning to report.</dd>
 </dl>
@@ -283,11 +283,11 @@ implements <a href="ValueItem.html" title="interface in io.sf.carte.doc.style.cs
 <section class="detail" id="handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">
 <h3>handleSyntaxWarnings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">handleSyntaxWarnings</span><wbr><span class="parameters">(<a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a>&nbsp;handler)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="ValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">ValueItem</a></code></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">CSSValueItem</a></code></span></div>
 <div class="block">Use the given error handler to handle warnings.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="ValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">handleSyntaxWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></code></dd>
+<dd><code><a href="../CSSValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">handleSyntaxWarnings</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>handler</code> - the error handler.</dd>
 </dl>

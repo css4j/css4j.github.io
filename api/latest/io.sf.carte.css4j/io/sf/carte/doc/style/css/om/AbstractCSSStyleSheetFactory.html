@@ -126,14 +126,22 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final byte</code></div>
 <div class="col-second even-row-color"><code><a href="#STRING_DOUBLE_QUOTE" class="member-name-link">STRING_DOUBLE_QUOTE</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE</code></a></div>
+</div>
+</div>
 <div class="col-first odd-row-color"><code>static final byte</code></div>
 <div class="col-second odd-row-color"><code><a href="#STRING_SINGLE_QUOTE" class="member-name-link">STRING_SINGLE_QUOTE</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE</code></a></div>
+</div>
+</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.CSSStyleSheetFactory">Fields inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></h3>
-<code><a href="../CSSStyleSheetFactory.html#ORIGIN_AUTHOR">ORIGIN_AUTHOR</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER">ORIGIN_USER</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_AGENT">ORIGIN_USER_AGENT</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_IMPORTANT">ORIGIN_USER_IMPORTANT</a></code></div>
+<code><a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE">FLAG_STRING_DOUBLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE">FLAG_STRING_SINGLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_AUTHOR">ORIGIN_AUTHOR</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER">ORIGIN_USER</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_AGENT">ORIGIN_USER_AGENT</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_IMPORTANT">ORIGIN_USER_IMPORTANT</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -234,9 +242,14 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Check for compat value flags.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDefaultHTMLUserAgentSheet()" class="member-name-link">setDefaultHTMLUserAgentSheet</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag</a><wbr>(short&nbsp;flag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Check whether the given factory flag is set.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDefaultHTMLUserAgentSheet()" class="member-name-link">setDefaultHTMLUserAgentSheet</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Sets a default HTML default style sheet as the user agent style sheet.</div>
 </div>
 </div>
@@ -247,7 +260,7 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSStyleSheetFactory">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></h3>
-<code><a href="../CSSStyleSheetFactory.html#createImmutableMediaQueryList(java.lang.String,org.w3c.dom.Node)">createImmutableMediaQueryList</a>, <a href="../CSSStyleSheetFactory.html#createInlineStyleErrorHandler(io.sf.carte.doc.style.css.CSSElement)">createInlineStyleErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#createMediaQueryList(java.lang.String,org.w3c.dom.Node)">createMediaQueryList</a>, <a href="../CSSStyleSheetFactory.html#createPropertyDefinition(java.lang.String,io.sf.carte.doc.style.css.CSSValueSyntax,boolean,io.sf.carte.doc.style.css.CSSLexicalValue)">createPropertyDefinition</a>, <a href="../CSSStyleSheetFactory.html#createSheetErrorHandler(io.sf.carte.doc.style.css.CSSStyleSheet)">createSheetErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#createStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.CSSDeclarationRule)">createStyleDeclarationErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#getDeviceFactory()">getDeviceFactory</a>, <a href="../CSSStyleSheetFactory.html#getStyleFormattingFactory()">getStyleFormattingFactory</a>, <a href="../CSSStyleSheetFactory.html#getUserAgentStyleSheet(io.sf.carte.doc.style.css.CSSDocument.ComplianceMode)">getUserAgentStyleSheet</a>, <a href="../CSSStyleSheetFactory.html#setFactoryFlag(byte)">setFactoryFlag</a>, <a href="../CSSStyleSheetFactory.html#setLenientSystemValues(boolean)">setLenientSystemValues</a>, <a href="../CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">setStyleFormattingFactory</a>, <a href="../CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>, <a href="../CSSStyleSheetFactory.html#setUserStyleSheet(java.lang.String,java.io.Reader)">setUserStyleSheet</a></code></div>
+<code><a href="../CSSStyleSheetFactory.html#createImmutableMediaQueryList(java.lang.String,org.w3c.dom.Node)">createImmutableMediaQueryList</a>, <a href="../CSSStyleSheetFactory.html#createInlineStyleErrorHandler(io.sf.carte.doc.style.css.CSSElement)">createInlineStyleErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#createMediaQueryList(java.lang.String,org.w3c.dom.Node)">createMediaQueryList</a>, <a href="../CSSStyleSheetFactory.html#createPropertyDefinition(java.lang.String,io.sf.carte.doc.style.css.CSSValueSyntax,boolean,io.sf.carte.doc.style.css.CSSLexicalValue)">createPropertyDefinition</a>, <a href="../CSSStyleSheetFactory.html#createSheetErrorHandler(io.sf.carte.doc.style.css.CSSStyleSheet)">createSheetErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#createStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.CSSDeclarationRule)">createStyleDeclarationErrorHandler</a>, <a href="../CSSStyleSheetFactory.html#getDeviceFactory()">getDeviceFactory</a>, <a href="../CSSStyleSheetFactory.html#getStyleFormattingFactory()">getStyleFormattingFactory</a>, <a href="../CSSStyleSheetFactory.html#getUserAgentStyleSheet(io.sf.carte.doc.style.css.CSSDocument.ComplianceMode)">getUserAgentStyleSheet</a>, <a href="../CSSStyleSheetFactory.html#setFactoryFlag(short)">setFactoryFlag</a>, <a href="../CSSStyleSheetFactory.html#setLenientSystemValues(boolean)">setLenientSystemValues</a>, <a href="../CSSStyleSheetFactory.html#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)">setStyleFormattingFactory</a>, <a href="../CSSStyleSheetFactory.html#setUserStyleSheet(java.io.Reader)">setUserStyleSheet</a>, <a href="../CSSStyleSheetFactory.html#setUserStyleSheet(java.lang.String,java.io.Reader)">setUserStyleSheet</a></code></div>
 </section>
 </li>
 </ul>
@@ -262,7 +275,12 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <li>
 <section class="detail" id="STRING_SINGLE_QUOTE">
 <h3>STRING_SINGLE_QUOTE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_SINGLE_QUOTE</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
+</span><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_SINGLE_QUOTE</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE</code></a></div>
+</div>
+<div class="block">Prefer single quotes in the serialization of strings.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -276,7 +294,12 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <li>
 <section class="detail" id="STRING_DOUBLE_QUOTE">
 <h3>STRING_DOUBLE_QUOTE</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_DOUBLE_QUOTE</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
+</span><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_DOUBLE_QUOTE</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE</code></a></div>
+</div>
+<div class="block">Prefer double quotes in the serialization of strings.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -446,6 +469,19 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if the factory has compat value flags set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasFactoryFlag(short)">
+<h3>hasFactoryFlag</h3>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasFactoryFlag</span><wbr><span class="parameters">(short&nbsp;flag)</span></div>
+<div class="block">Check whether the given factory flag is set.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>flag</code> - the flag.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the flag is set.</dd>
 </dl>
 </section>
 </li>

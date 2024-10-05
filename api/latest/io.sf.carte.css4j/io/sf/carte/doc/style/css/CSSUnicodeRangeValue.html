@@ -154,13 +154,13 @@ extends <a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.c
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSPrimitiveValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="CSSPrimitiveValue.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a></h3>
-<code><a href="CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
+<code><a href="CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="CSSPrimitiveValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSTypedValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></h3>
 <code><a href="CSSTypedValue.html#getFloatValue(short)">getFloatValue</a>, <a href="CSSTypedValue.html#getStringValue()">getStringValue</a>, <a href="CSSTypedValue.html#isCalculatedNumber()">isCalculatedNumber</a>, <a href="CSSTypedValue.html#isNumberZero()">isNumberZero</a>, <a href="CSSTypedValue.html#setFloatValue(short,float)">setFloatValue</a>, <a href="CSSTypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">setStringValue</a>, <a href="CSSTypedValue.html#toRGBColor()">toRGBColor</a>, <a href="CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
-<code><a href="CSSValue.html#getCssText()">getCssText</a>, <a href="CSSValue.html#getCssValueType()">getCssValueType</a>, <a href="CSSValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="CSSValue.html#setCssText(java.lang.String)">setCssText</a>, <a href="CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
+<code><a href="CSSValue.html#getCssText()">getCssText</a>, <a href="CSSValue.html#getCssValueType()">getCssValueType</a>, <a href="CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="CSSValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="CSSValue.html#setCssText(java.lang.String)">setCssText</a>, <a href="CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
 </section>
 </li>
 </ul>
@@ -203,6 +203,8 @@ extends <a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.c
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="CSSValue.html#clone()">CSSValue</a></code></span></div>
 <div class="block">Creates and returns a copy of this value.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CSSTypedValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="CSSValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
 <dt>Returns:</dt>

@@ -90,11 +90,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/stylesheets/MediaList.html" title="class or interface in org.w3c.dom.stylesheets" class="external-link">MediaList</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html" title="class or interface in org.w3c.dom.events" class="external-link">EventTarget</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/stylesheets/MediaList.html" title="class or interface in org.w3c.dom.stylesheets" class="external-link">MediaList</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MediaQueryList</span><span class="extends-implements">
-extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/stylesheets/MediaList.html" title="class or interface in org.w3c.dom.stylesheets" class="external-link">MediaList</a></span></div>
+extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/stylesheets/MediaList.html" title="class or interface in org.w3c.dom.stylesheets" class="external-link">MediaList</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html" title="class or interface in org.w3c.dom.events" class="external-link">EventTarget</a></span></div>
 <div class="block">Based on W3C's MediaQueryList interface.</div>
 </section>
 <section class="summary">
@@ -104,18 +104,28 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">addListener</a><wbr>(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Appends a listener to the list of media query list listeners, unless it is
- already in that list.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" class="member-name-link">addEventListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventListener.html" title="class or interface in org.w3c.dom.events" class="external-link">EventListener</a>&nbsp;listener,
+ boolean&nbsp;useCapture)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#addListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">addListener</a><wbr>(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>addEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
 </div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#dispatchEvent(org.w3c.dom.events.Event)" class="member-name-link">dispatchEvent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/Event.html" title="class or interface in org.w3c.dom.events" class="external-link">Event</a>&nbsp;evt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExceptions()" class="member-name-link">getExceptions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -163,10 +173,18 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Does the associated media query list match the state of the rendered Document?</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#removeListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">removeListener</a><wbr>(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Removes a listener from the list of media query list listeners.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" class="member-name-link">removeEventListener</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventListener.html" title="class or interface in org.w3c.dom.events" class="external-link">EventListener</a>&nbsp;listener,
+ boolean&nbsp;useCapture)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#removeListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">removeListener</a><wbr>(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>removeEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
+</div>
 </div>
 </div>
 </div>
@@ -307,7 +325,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <li>
 <section class="detail" id="addListener(io.sf.carte.doc.style.css.MediaQueryListListener)">
 <h3>addListener</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addListener</span><wbr><span class="parameters">(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addListener</span><wbr><span class="parameters">(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>addEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
+</div>
 <div class="block">Appends a listener to the list of media query list listeners, unless it is
  already in that list.</div>
 <dl class="notes">
@@ -319,11 +342,53 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/
 <li>
 <section class="detail" id="removeListener(io.sf.carte.doc.style.css.MediaQueryListListener)">
 <h3>removeListener</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">removeListener</span><wbr><span class="parameters">(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeListener</span><wbr><span class="parameters">(<a href="MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a>&nbsp;listener)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>removeEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
+</div>
 <div class="block">Removes a listener from the list of media query list listeners.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>listener</code> - the listener to be removed.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)">
+<h3>addEventListener</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEventListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventListener.html" title="class or interface in org.w3c.dom.events" class="external-link">EventListener</a>&nbsp;listener,
+ boolean&nbsp;useCapture)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" title="class or interface in org.w3c.dom.events" class="external-link">addEventListener</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html" title="class or interface in org.w3c.dom.events" class="external-link">EventTarget</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)">
+<h3>removeEventListener</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeEventListener</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventListener.html" title="class or interface in org.w3c.dom.events" class="external-link">EventListener</a>&nbsp;listener,
+ boolean&nbsp;useCapture)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" title="class or interface in org.w3c.dom.events" class="external-link">removeEventListener</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html" title="class or interface in org.w3c.dom.events" class="external-link">EventTarget</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="dispatchEvent(org.w3c.dom.events.Event)">
+<h3>dispatchEvent</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">dispatchEvent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/Event.html" title="class or interface in org.w3c.dom.events" class="external-link">Event</a>&nbsp;evt)</span>
+                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventException.html" title="class or interface in org.w3c.dom.events" class="external-link">EventException</a></span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html#dispatchEvent(org.w3c.dom.events.Event)" title="class or interface in org.w3c.dom.events" class="external-link">dispatchEvent</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventTarget.html" title="class or interface in org.w3c.dom.events" class="external-link">EventTarget</a></code></dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/events/EventException.html" title="class or interface in org.w3c.dom.events" class="external-link">EventException</a></code></dd>
 </dl>
 </section>
 </li>

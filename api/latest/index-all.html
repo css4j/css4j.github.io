@@ -64,7 +64,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#absoluteProxyValue(io.sf.carte.doc.style.css.CSSPrimitiveValue)" class="member-name-link">absoluteProxyValue(CSSPrimitiveValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#absoluteTypedValue(io.sf.carte.doc.style.css.property.TypedValue)" class="member-name-link">absoluteTypedValue(TypedValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#absoluteTypedValue(io.sf.carte.doc.style.css.CSSTypedValue)" class="member-name-link">absoluteTypedValue(CSSTypedValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#absoluteValue(io.sf.carte.doc.style.css.CSSPrimitiveValue)" class="member-name-link">absoluteValue(CSSPrimitiveValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
 <dd>
@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Abstract base class useful for CSSCanvas implementations.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html#%3Cinit%3E(io.sf.carte.doc.style.css.CSSDocument)" class="member-name-link">AbstractCSSCanvas(CSSDocument)</a> - Constructor for class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSCanvas</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html#%3Cinit%3E()" class="member-name-link">AbstractCSSCanvas()</a> - Constructor for class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSCanvas</a></dt>
 <dd>
 <div class="block">Construct a canvas to display the given document.</div>
 </dd>
@@ -237,6 +237,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Adds a download listener for asynchronous retrieval of resources 
  (embedded images, etc.)</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" class="member-name-link">addEventListener(String, EventListener, boolean)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html#addHostToWhiteList(java.lang.String)" class="member-name-link">addHostToWhiteList(String)</a> - Method in class io.sf.carte.doc.xml.dtd.<a href="io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html" title="class in io.sf.carte.doc.xml.dtd">DefaultEntityResolver</a></dt>
 <dd>
 <div class="block">Add the given host to a whitelist for remote DTD fetching.</div>
@@ -245,8 +247,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#addListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">addListener(MediaQueryListListener)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></dt>
 <dd>
-<div class="block">Appends a listener to the list of media query list listeners, unless it is
- already in that list.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#addEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>MediaQueryList.addEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
+</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html#addLocalRule(io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">addLocalRule(CSSRule)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheet</a></dt>
 <dd>
@@ -507,7 +511,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Attr value.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html#%3Cinit%3E(byte)" class="member-name-link">AttrValue(byte)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html" title="class in io.sf.carte.doc.style.css.property">AttrValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html#%3Cinit%3E(short)" class="member-name-link">AttrValue(short)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html" title="class in io.sf.carte.doc.style.css.property">AttrValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html#%3Cinit%3E(io.sf.carte.doc.style.css.property.AttrValue)" class="member-name-link">AttrValue(AttrValue)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/AttrValue.html" title="class in io.sf.carte.doc.style.css.property">AttrValue</a></dt>
 <dd>&nbsp;</dd>
@@ -937,6 +941,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Clone this style sheet.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSTypedValue.html#clone()" class="member-name-link">clone()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSUnicodeRangeValue.html#clone()" class="member-name-link">clone()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSUnicodeRangeValue.html" title="interface in io.sf.carte.doc.style.css">CSSUnicodeRangeValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html#clone()" class="member-name-link">clone()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></dt>
@@ -1038,6 +1044,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates and returns a copy of this object.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#clone()" class="member-name-link">clone()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#clone()" class="member-name-link">clone()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageValue.html#clone()" class="member-name-link">clone()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageValue.html" title="class in io.sf.carte.doc.style.css.property">PercentageValue</a></dt>
@@ -1340,17 +1348,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Compute the approximate width of the given text, in the given unit type.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSExpressionValue.html#computeUnitType()" class="member-name-link">computeUnitType()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSExpressionValue.html" title="interface in io.sf.carte.doc.style.css">CSSExpressionValue</a></dt>
-<dd>
-<div class="block">Performs a dimensional analysis of this expression and computes the unit type
- of the result.</div>
-</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.html#computeUnitType()" class="member-name-link">computeUnitType()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathFunctionValue</a></dt>
 <dd>
 <div class="block">Performs a dimensional analysis of this function and computes the unit type
  of the result.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html#computeUnitType()" class="member-name-link">computeUnitType()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathValue</a></dt>
+<dd>
+<div class="block">Performs a dimensional analysis of this expression and computes the unit type
+ of the result.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html#computeUnitType()" class="member-name-link">computeUnitType()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a></dt>
+<dd>
+<div class="block">Perform a dimensional analysis of this expression and compute the unit type
+ of the result.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#computeUnitType()" class="member-name-link">computeUnitType()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
 <dd>
 <div class="block">Perform a dimensional analysis of this expression and compute the unit type
  of the result.</div>
@@ -1541,11 +1554,17 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create a media query list for all media.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createAllMedia()" class="member-name-link">createAllMedia()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/MediaFactory.html#createAllMedia()" class="member-name-link">createAllMedia()</a> - Static method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/MediaFactory.html" title="class in io.sf.carte.doc.style.css.om">MediaFactory</a></dt>
 <dd>
 <div class="block">Create a media query list for all media.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html#createAndCondition()" class="member-name-link">createAndCondition()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></dt>
+<dd>
+<div class="block">Create a boolean condition of the <code>and</code> type.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createAndCondition()" class="member-name-link">createAndCondition()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
 <dd>
 <div class="block">Create a boolean condition of the <code>and</code> type.</div>
 </dd>
@@ -1616,8 +1635,20 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#createCSSNumberValue(short,float)" class="member-name-link">createCSSNumberValue(short, float)</a> - Static method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueFactory.html#createCSSPrimitiveValue(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">createCSSPrimitiveValue(LexicalUnit)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueFactory.html" title="interface in io.sf.carte.doc.style.css">CSSValueFactory</a></dt>
+<dd>
+<div class="block">Creates a primitive value according to the given lexical value.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#createCSSPrimitiveValue(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">createCSSPrimitiveValue(LexicalUnit)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
+<dd>
+<div class="block">Creates a primitive value according to the given lexical value.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheet.html#createCSSStyleSheet(java.lang.String,org.w3c.dom.Node,io.sf.carte.doc.style.css.MediaQueryList,io.sf.carte.doc.style.css.om.AbstractCSSRule,byte)" class="member-name-link">createCSSStyleSheet(String, Node, MediaQueryList, AbstractCSSRule, byte)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">DOMCSSStyleSheet</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueFactory.html#createCSSValue(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">createCSSValue(LexicalUnit)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueFactory.html" title="interface in io.sf.carte.doc.style.css">CSSValueFactory</a></dt>
+<dd>
+<div class="block">Create an object-model value.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#createCSSValue(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">createCSSValue(LexicalUnit)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
 <dd>
 <div class="block">Creates a CSSValue according to the given lexical value.</div>
@@ -1709,6 +1740,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocument.html#createErrorHandler()" class="member-name-link">createErrorHandler()</a> - Method in class io.sf.carte.doc.dom4j.<a href="io.sf.carte.css4j.dom4j/io/sf/carte/doc/dom4j/XHTMLDocument.html" title="class in io.sf.carte.doc.dom4j">XHTMLDocument</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#createExpression(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">createExpression(LexicalUnit)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
+<dd>
+<div class="block">Create an expression from the given lexical unit.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#createFalseCondition(java.lang.String)" class="member-name-link">createFalseCondition(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/SupportsConditionFactory.html#createFalseCondition(java.lang.String)" class="member-name-link">createFalseCondition(String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/SupportsConditionFactory.html" title="interface in io.sf.carte.doc.style.css">SupportsConditionFactory</a></dt>
@@ -1798,6 +1833,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create a handler attached to a new media query list.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createMediaQueryHandler(org.w3c.dom.Node)" class="member-name-link">createMediaQueryHandler(Node)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#createMediaQueryList(java.lang.String,org.w3c.dom.Node)" class="member-name-link">createMediaQueryList(String, Node)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></dt>
 <dd>
 <div class="block">Parses <code>mediaQueryString</code> and creates a new media query list.</div>
@@ -1818,6 +1855,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create a predicate that contains a media type.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createMediaTypePredicate(java.lang.String)" class="member-name-link">createMediaTypePredicate(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html#createNamespaceRule(java.lang.String,java.lang.String)" class="member-name-link">createNamespaceRule(String, String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a></dt>
 <dd>
 <div class="block">Create a CSS namespace rule compatible with this implementation.</div>
@@ -1833,14 +1872,31 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create a boolean condition of the <code>not</code> type.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createNotCondition()" class="member-name-link">createNotCondition()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a boolean condition of the <code>not</code> type.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#createNotCondition()" class="member-name-link">createNotCondition()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
 <dd>
 <div class="block">Create a boolean condition of the <code>not</code> type.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createNumberValue(short,float,boolean)" class="member-name-link">createNumberValue(short, float, boolean)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a <code>CSSNumberValue</code> in the desired implementation.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#createNumberValue(short,float,boolean)" class="member-name-link">createNumberValue(short, float, boolean)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
+<dd>
+<div class="block">Create a <code>CSSNumberValue</code> in the desired implementation.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html#createOrCondition()" class="member-name-link">createOrCondition()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></dt>
 <dd>
 <div class="block">Create a boolean condition of the given type (<code>and</code>, <code>or</code>,
  <code>not</code>).</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createOrCondition()" class="member-name-link">createOrCondition()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a boolean condition of the given type (<code>and</code>,
+ <code>or</code>, <code>not</code>).</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#createOrCondition()" class="member-name-link">createOrCondition()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
 <dd>
@@ -1855,6 +1911,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html#createPageRule()" class="member-name-link">createPageRule()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheet</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createParser()" class="member-name-link">createParser()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a <code>Parser</code> compatible with this media query factory.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html#createPredicate(java.lang.String)" class="member-name-link">createPredicate(String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/BooleanConditionFactory.html" title="interface in io.sf.carte.doc.style.css">BooleanConditionFactory</a></dt>
 <dd>
 <div class="block">Create a predicate (operand) condition.</div>
@@ -1862,6 +1922,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryFactory.html#createPredicate(java.lang.String)" class="member-name-link">createPredicate(String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryFactory.html" title="interface in io.sf.carte.doc.style.css">MediaQueryFactory</a></dt>
 <dd>
 <div class="block">Create a media feature predicate.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#createPredicate(java.lang.String)" class="member-name-link">createPredicate(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a media-feature operand condition.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#createPredicate(java.lang.String)" class="member-name-link">createPredicate(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
 <dd>
@@ -2008,7 +2072,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a stand-alone author style sheet.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#createSupportsConditionFactory(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">createSupportsConditionFactory(AbstractCSSStyleSheet)</a> - Method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#createSupportsConditionFactory(io.sf.carte.doc.style.css.nsac.SheetContext)" class="member-name-link">createSupportsConditionFactory(SheetContext)</a> - Method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a></dt>
 <dd>
 <div class="block">Create a new factory for <code>@supports</code> conditions.</div>
 </dd>
@@ -2433,6 +2497,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Enumeration of mathematical functions.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSMathValue</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">Values involving mathematical computations.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMediaException.html" class="type-name-link" title="class in io.sf.carte.doc.style.css">CSSMediaException</a> - Exception Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">CSS media Exception.</div>
@@ -2484,6 +2552,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNode.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSNode</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">A node that is related to a CSSDocument.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNumberValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSNumberValue</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">A value that is a number with an optional unit.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSOMParser.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.om">CSSOMParser</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/package-summary.html">io.sf.carte.doc.style.css.om</a></dt>
 <dd>
@@ -2538,6 +2610,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">A CSS primitive value.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValueItem.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValueItem</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">This interface provides information about the processing of one (or more) CSS
+ lexical unit(s) in order to produce a <code>CSSPrimitiveValue</code>, that
+ can be recovered with <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValueItem.html#getCSSValue()"><code>CSSPrimitiveValueItem.getCSSValue()</code></a>.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPropertyDefinition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSPropertyDefinition</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
@@ -2687,10 +2765,26 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">The type of value.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueFactory.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSValueFactory</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">Factory of CSS values.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">This interface provides information about the processing of one (or more) CSS
+ lexical unit(s) in order to produce a <code>CSSValue</code>, that can be
+ recovered with <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html#getCSSValue()"><code>CSSValueItem.getCSSValue()</code></a>.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueList.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSValueList&lt;E&gt;</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">Based on W3C's <code>CSSValueList</code> interface.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/package-summary.html">io.sf.carte.doc.style.css.om</a></dt>
+<dd>
+<div class="block">Contains methods related to media query conditions.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#%3Cinit%3E()" class="member-name-link">CSSValueMediaQueryFactory()</a> - Constructor for class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueSyntax.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">Represents a CSS value syntax component.</div>
@@ -2734,7 +2828,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/color/Illuminant.html#D65" class="member-name-link">D65</a> - Enum constant in enum class io.sf.carte.doc.color.<a href="io.sf.carte.css4j/io/sf/carte/doc/color/Illuminant.html" title="enum class in io.sf.carte.doc.color">Illuminant</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/DeclarationCondition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.parser">DeclarationCondition</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/package-summary.html">io.sf.carte.doc.style.css.parser</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/DeclarationCondition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.nsac">DeclarationCondition</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/package-summary.html">io.sf.carte.doc.style.css.nsac</a></dt>
 <dd>
 <div class="block">A condition that declares a property name with an object model value.</div>
 </dd>
@@ -2929,6 +3023,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Disable the handling of comments of the given type.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#dispatchEvent(org.w3c.dom.events.Event)" class="member-name-link">dispatchEvent(Event)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/ColorSpace.html#display_p3" class="member-name-link">display_p3</a> - Static variable in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/ColorSpace.html" title="interface in io.sf.carte.doc.style.css">ColorSpace</a></dt>
 <dd>
 <div class="block">Display P3</div>
@@ -3578,6 +3674,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LexicalValue.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LexicalValue.html" title="class in io.sf.carte.doc.style.css.property">LexicalValue</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></dt>
@@ -3718,11 +3816,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/ParseHelper.html#escapeString(java.lang.String,char,boolean)" class="member-name-link">escapeString(String, char, boolean)</a> - Static method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/ParseHelper.html" title="class in io.sf.carte.doc.style.css.parser">ParseHelper</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#evaluateExpression(io.sf.carte.doc.style.css.property.ExpressionValue)" class="member-name-link">evaluateExpression(ExpressionValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#evaluateExpression(io.sf.carte.doc.style.css.CSSExpressionValue)" class="member-name-link">evaluateExpression(CSSExpressionValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
 <dd>
 <div class="block">Evaluate the given expression.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageEvaluator.html#evaluateExpression(io.sf.carte.doc.style.css.property.ExpressionValue)" class="member-name-link">evaluateExpression(ExpressionValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageEvaluator.html" title="class in io.sf.carte.doc.style.css.property">PercentageEvaluator</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageEvaluator.html#evaluateExpression(io.sf.carte.doc.style.css.CSSExpressionValue)" class="member-name-link">evaluateExpression(CSSExpressionValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PercentageEvaluator.html" title="class in io.sf.carte.doc.style.css.property">PercentageEvaluator</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html#evaluateFunction(io.sf.carte.doc.style.css.CSSMathFunctionValue)" class="member-name-link">evaluateFunction(CSSMathFunctionValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/Evaluator.html" title="class in io.sf.carte.doc.style.css.property">Evaluator</a></dt>
 <dd>
@@ -3757,6 +3855,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.Type.html#EXPRESSION" class="member-name-link">EXPRESSION</a> - Enum constant in enum class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></dt>
 <dd>
 <div class="block">An expression with algebraic syntax (i.e.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/package-summary.html">io.sf.carte.doc.style.css.property</a></dt>
+<dd>
+<div class="block">Expressions factory.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#%3Cinit%3E(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">ExpressionFactory(LexicalUnit)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
+<dd>
+<div class="block">Creates an expression factory.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/package-summary.html">io.sf.carte.doc.style.css.property</a></dt>
 <dd>
@@ -3865,6 +3971,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Moves the TreeWalker to the first visible child of the current node, and
  returns the new node.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE" class="member-name-link">FLAG_STRING_DOUBLE_QUOTE</a> - Static variable in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></dt>
+<dd>
+<div class="block">Prefer double quotes in the serialization of strings.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE" class="member-name-link">FLAG_STRING_SINGLE_QUOTE</a> - Static variable in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></dt>
+<dd>
+<div class="block">Prefer single quotes in the serialization of strings.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueSyntax.Category.html#flex" class="member-name-link">flex</a> - Enum constant in enum class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueSyntax.Category.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Category</a></dt>
 <dd>
 <div class="block">Matches a flexible length.</div>
@@ -3948,6 +4062,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/agent/UserAgent.html#getAgentControl()" class="member-name-link">getAgentControl()</a> - Method in interface io.sf.carte.doc.agent.<a href="io.sf.carte.css4j/io/sf/carte/doc/agent/UserAgent.html" title="interface in io.sf.carte.doc.agent">UserAgent</a></dt>
 <dd>
 <div class="block">Get the control object for this user agent.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#getAllMediaInstance()" class="member-name-link">getAllMediaInstance()</a> - Static method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Gets an unmodifiable media list for all media.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColor.html#getAlpha()" class="member-name-link">getAlpha()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSColor.html" title="interface in io.sf.carte.doc.style.css">CSSColor</a></dt>
 <dd>
@@ -4765,6 +4883,14 @@ loadScripts(document, 'script');</script>
 <div class="block">An integer indicating the type of CSS unit that this lexical value
  represents.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValueItem.html#getCSSValue()" class="member-name-link">getCSSValue()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValueItem</a></dt>
+<dd>
+<div class="block">Gets the CSSValue associated to this item.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html#getCSSValue()" class="member-name-link">getCSSValue()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></dt>
+<dd>
+<div class="block">Gets the CSSValue associated to this item.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InheritValue.html#getCSSValue()" class="member-name-link">getCSSValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InheritValue.html" title="class in io.sf.carte.doc.style.css.property">InheritValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InitialValue.html#getCSSValue()" class="member-name-link">getCSSValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InitialValue.html" title="class in io.sf.carte.doc.style.css.property">InitialValue</a></dt>
@@ -4777,13 +4903,17 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#getCSSValue()" class="member-name-link">getCSSValue()</a> - Method in interface io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></dt>
 <dd>
-<div class="block">Gets the CSSValue associated to this item.</div>
+<div class="block">Gets the StyleValue associated to this item.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html#getCSSValue(java.lang.String)" class="member-name-link">getCSSValue(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleDeclaration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/ComputedCSSStyle.html#getCSSValue(java.lang.String)" class="member-name-link">getCSSValue(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/ComputedCSSStyle.html" title="class in io.sf.carte.doc.style.css.om">ComputedCSSStyle</a></dt>
 <dd>
 <div class="block">Gets the absolute, primitive "computed" value for the given property.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#getCSSValueFactory()" class="member-name-link">getCSSValueFactory()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
+<dd>
+<div class="block">Get a value factory.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSShorthandValue.html#getCssValueType()" class="member-name-link">getCssValueType()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSShorthandValue.html" title="interface in io.sf.carte.doc.style.css">CSSShorthandValue</a></dt>
 <dd>&nbsp;</dd>
@@ -4911,8 +5041,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Gets the document to which this canvas applies.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html#getDocument()" class="member-name-link">getDocument()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSCanvas</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html#getDocumentElement()" class="member-name-link">getDocumentElement()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html" title="class in io.sf.carte.doc.dom">DOMDocument</a></dt>
 <dd>
 <div class="block">Get the child node which is the document element of this document.</div>
@@ -5224,7 +5352,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">If this is a number, get its float value in the requested unit.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CalcValue.html#getFloatValue(short)" class="member-name-link">getFloatValue(short)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CalcValue.html" title="class in io.sf.carte.doc.style.css.property">CalcValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html#getFloatValue(short)" class="member-name-link">getFloatValue(short)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#getFloatValue(short)" class="member-name-link">getFloatValue(short)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>
@@ -5278,6 +5406,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Get the function type.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#getFunction()" class="member-name-link">getFunction()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSFunctionValue.html#getFunctionName()" class="member-name-link">getFunctionName()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSFunctionValue</a></dt>
 <dd>
 <div class="block">Get the function name.</div>
@@ -5811,6 +5941,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">A minified parsable textual representation of the declaration.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html#getMinifiedCssText()" class="member-name-link">getMinifiedCssText()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></dt>
+<dd>
+<div class="block">Gives a minified version of the css text of the property.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSRule.html#getMinifiedCssText()" class="member-name-link">getMinifiedCssText()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></dt>
 <dd>
 <div class="block">A minified parsable textual representation of the rule.</div>
@@ -6016,6 +6150,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html#getNamedItem(java.lang.String)" class="member-name-link">getNamedItem(String)</a> - Method in interface io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html" title="interface in io.sf.carte.doc.dom">ExtendedNamedNodeMap</a></dt>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html#getNamedItemNS(java.lang.String,java.lang.String)" class="member-name-link">getNamedItemNS(String, String)</a> - Method in interface io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html" title="interface in io.sf.carte.doc.dom">ExtendedNamedNodeMap</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html#getNamespacePrefix(java.lang.String)" class="member-name-link">getNamespacePrefix(String)</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a></dt>
+<dd>
+<div class="block">Get the namespace prefix corresponding to the given URI.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#getNamespacePrefix(java.lang.String)" class="member-name-link">getNamespacePrefix(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
 <dd>
 <div class="block">Gets the namespace prefix associated to the given URI.</div>
@@ -6095,18 +6233,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Gets the first following sibling that is an element.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></dt>
+<dd>
+<div class="block">Get the next lexical unit after processing this item.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LexicalUnit.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></dt>
 <dd>
 <div class="block">The next lexical unit.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
+<dd>
+<div class="block">Gives the next lexical unit.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/KeywordValue.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/KeywordValue.html" title="class in io.sf.carte.doc.style.css.property">KeywordValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory.ListValueItem</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit()</a> - Method in interface io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></dt>
-<dd>
-<div class="block">Get the next lexical unit after processing this item.</div>
-</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html#getNextSibling()" class="member-name-link">getNextSibling()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMDocument.html" title="class in io.sf.carte.doc.dom">DOMDocument</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html#getNextSibling()" class="member-name-link">getNextSibling()</a> - Method in class io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/DOMElement.html" title="class in io.sf.carte.doc.dom">DOMElement</a></dt>
@@ -7727,13 +7869,13 @@ loadScripts(document, 'script');</script>
 <div class="block">If this attribute is a class attribute, you'll get the class name without the
  '.'.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/DeclarationCondition.html#getValue()" class="member-name-link">getValue()</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/DeclarationCondition.html" title="interface in io.sf.carte.doc.style.css.nsac">DeclarationCondition</a></dt>
+<dd>
+<div class="block">Get the value.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/MediaFeature.html#getValue()" class="member-name-link">getValue()</a> - Method in interface io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/MediaFeature.html" title="interface in io.sf.carte.doc.style.css.om">MediaFeature</a></dt>
 <dd>
 <div class="block">Get the value to be tested on the feature.</div>
-</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/DeclarationCondition.html#getValue()" class="member-name-link">getValue()</a> - Method in interface io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/DeclarationCondition.html" title="interface in io.sf.carte.doc.style.css.parser">DeclarationCondition</a></dt>
-<dd>
-<div class="block">Get the value.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InheritValue.html#getValue()" class="member-name-link">getValue()</a> - Static method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/InheritValue.html" title="class in io.sf.carte.doc.style.css.property">InheritValue</a></dt>
 <dd>&nbsp;</dd>
@@ -7756,6 +7898,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PropertyDatabase.html#getValueFactory()" class="member-name-link">getValueFactory()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PropertyDatabase.html" title="class in io.sf.carte.doc.style.css.property">PropertyDatabase</a></dt>
 <dd>
 <div class="block">Get a value factory configured with defaults.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html#getValueFactory(java.lang.String)" class="member-name-link">getValueFactory(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/CSSValueMediaQueryFactory.html" title="class in io.sf.carte.doc.style.css.om">CSSValueMediaQueryFactory</a></dt>
+<dd>
+<div class="block">Create a <code>CSSValueFactory</code> with the desired OM value implementation.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CSSPropertyValueException.html#getValueText()" class="member-name-link">getValueText()</a> - Method in exception class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CSSPropertyValueException.html" title="class in io.sf.carte.doc.style.css.property">CSSPropertyValueException</a></dt>
 <dd>
@@ -7925,14 +8071,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Handle a SAC warning.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)" class="member-name-link">handleSyntaxWarnings(StyleDeclarationErrorHandler)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></dt>
+<dd>
+<div class="block">Use the given error handler to handle warnings.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/KeywordValue.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)" class="member-name-link">handleSyntaxWarnings(StyleDeclarationErrorHandler)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/KeywordValue.html" title="class in io.sf.carte.doc.style.css.property">KeywordValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)" class="member-name-link">handleSyntaxWarnings(StyleDeclarationErrorHandler)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory.ListValueItem</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#handleSyntaxWarnings(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)" class="member-name-link">handleSyntaxWarnings(StyleDeclarationErrorHandler)</a> - Method in interface io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></dt>
-<dd>
-<div class="block">Use the given error handler to handle warnings.</div>
-</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/PositionalCondition.html#hasArgument()" class="member-name-link">hasArgument()</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/PositionalCondition.html" title="interface in io.sf.carte.doc.style.css.nsac">PositionalCondition</a></dt>
 <dd>
 <div class="block">The selector was specified with an argument ?</div>
@@ -8008,6 +8154,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/LogErrorHandler.html#hasComputedStyleWarnings(io.sf.carte.doc.style.css.CSSElement)" class="member-name-link">hasComputedStyleWarnings(CSSElement)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/LogErrorHandler.html" title="class in io.sf.carte.doc.style.css.om">LogErrorHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html#hasDefaultNamespace()" class="member-name-link">hasDefaultNamespace()</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a></dt>
+<dd>
+<div class="block">Has the style sheet a default namespace?</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#hasDefaultNamespace()" class="member-name-link">hasDefaultNamespace()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
 <dd>
 <div class="block">Has this style sheet defined a default namespace ?</div>
@@ -8042,7 +8192,19 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleSheetList.html#hasErrorsOrWarnings()" class="member-name-link">hasErrorsOrWarnings()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/StyleSheetList.html" title="class in io.sf.carte.doc.style.css.om">StyleSheetList</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#hasFactoryFlag(byte)" class="member-name-link">hasFactoryFlag(byte)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag(short)</a> - Method in interface io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a></dt>
+<dd>
+<div class="block">Check whether the given factory flag is set.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag(short)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag(short)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></dt>
+<dd>
+<div class="block">Check whether the given factory flag is set.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag(short)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheetFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag(short)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
 <dd>
 <div class="block">Check whether the factory has the given flag set.</div>
 </dd>
@@ -8115,6 +8277,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LCHColorValue.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LCHColorValue.html" title="class in io.sf.carte.doc.style.css.property">LCHColorValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LexicalValue.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LexicalValue.html" title="class in io.sf.carte.doc.style.css.property">LexicalValue</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>&nbsp;</dd>
@@ -8270,6 +8434,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Has any of the linked or embedded style sheets any error or warning ?</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html#hasWarnings()" class="member-name-link">hasWarnings()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueItem.html" title="interface in io.sf.carte.doc.style.css">CSSValueItem</a></dt>
+<dd>
+<div class="block">Has this item any warning to report ?</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/ErrorHandler.html#hasWarnings()" class="member-name-link">hasWarnings()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/ErrorHandler.html" title="interface in io.sf.carte.doc.style.css">ErrorHandler</a></dt>
 <dd>
 <div class="block">Check whether this handler has processed any warnings.</div>
@@ -8284,10 +8452,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html#hasWarnings()" class="member-name-link">hasWarnings()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory.ListValueItem</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#hasWarnings()" class="member-name-link">hasWarnings()</a> - Method in interface io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a></dt>
-<dd>
-<div class="block">Has this item any warning to report ?</div>
-</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDeclarationErrorHandler.html#hasWarnings()" class="member-name-link">hasWarnings()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a></dt>
 <dd>
 <div class="block">Have value warnings been reported to this error handler?</div>
@@ -8549,10 +8713,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/LogErrorHandler.html#inlineStyleError(io.sf.carte.doc.style.css.CSSElement,java.lang.Exception,java.lang.String)" class="member-name-link">inlineStyleError(CSSElement, Exception, String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/LogErrorHandler.html" title="class in io.sf.carte.doc.style.css.om">LogErrorHandler</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/SheetErrorHandler.html#inlineStyleError(org.w3c.dom.DOMException,org.w3c.dom.Element,java.lang.String)" class="member-name-link">inlineStyleError(DOMException, Element, String)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/SheetErrorHandler.html" title="interface in io.sf.carte.doc.style.css">SheetErrorHandler</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
-</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/InlineStyleFormattingContext.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.om">InlineStyleFormattingContext</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/package-summary.html">io.sf.carte.doc.style.css.om</a></dt>
 <dd>
 <div class="block">A formatting context for inline styles.</div>
@@ -8825,6 +8985,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/TypedValue.html#isCalculatedNumber()" class="member-name-link">isCalculatedNumber()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#isCalcValue()" class="member-name-link">isCalcValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
+<dd>
+<div class="block">Check whether this is the expression in a <code>calc()</code> value or a
+ sub-expression in some mathematical function.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractSelectorMatcher.html#isChecked()" class="member-name-link">isChecked()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractSelectorMatcher.html" title="class in io.sf.carte.doc.style.css.om">AbstractSelectorMatcher</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ColorIdentifiers.html#isColorIdentifier(java.lang.String)" class="member-name-link">isColorIdentifier(String)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ColorIdentifiers.html" title="class in io.sf.carte.doc.style.css.property">ColorIdentifiers</a></dt>
@@ -8895,6 +9060,14 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html#isEquivalent(io.sf.carte.doc.style.css.property.URIValue)" class="member-name-link">isEquivalent(URIValue)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html" title="class in io.sf.carte.doc.style.css.property">URIValue</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html#isExpectingInteger()" class="member-name-link">isExpectingInteger()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathValue</a></dt>
+<dd>
+<div class="block">Whether this value expects an integer result that must be rounded.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html#isExpectingInteger()" class="member-name-link">isExpectingInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#isExpectingInteger()" class="member-name-link">isExpectingInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ProxyValue.html#isExpectingInteger()" class="member-name-link">isExpectingInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ProxyValue.html" title="class in io.sf.carte.doc.style.css.property">ProxyValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractSelectorMatcher.html#isFirstChild()" class="member-name-link">isFirstChild()</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractSelectorMatcher.html" title="class in io.sf.carte.doc.style.css.om">AbstractSelectorMatcher</a></dt>
@@ -8955,9 +9128,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Does this property inherit value by default?</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CalcValue.html#isInvalidOperand(io.sf.carte.doc.style.css.property.PrimitiveValue,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType)" class="member-name-link">isInvalidOperand(PrimitiveValue, LexicalUnit.LexicalType, LexicalUnit.LexicalType)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/CalcValue.html" title="class in io.sf.carte.doc.style.css.property">CalcValue</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html#isInvalidOperand(io.sf.carte.doc.style.css.property.PrimitiveValue,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType)" class="member-name-link">isInvalidOperand(PrimitiveValue, LexicalUnit.LexicalType, LexicalUnit.LexicalType)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html#isInvalidOperand(io.sf.carte.doc.style.css.CSSPrimitiveValue,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType,io.sf.carte.doc.style.css.nsac.LexicalUnit.LexicalType)" class="member-name-link">isInvalidOperand(CSSPrimitiveValue, LexicalUnit.LexicalType, LexicalUnit.LexicalType)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html#isInvalidPath(java.lang.String)" class="member-name-link">isInvalidPath(String)</a> - Method in class io.sf.carte.doc.xml.dtd.<a href="io.sf.carte.xml.dtd/io/sf/carte/doc/xml/dtd/DefaultEntityResolver.html" title="class in io.sf.carte.doc.xml.dtd">DefaultEntityResolver</a></dt>
 <dd>
@@ -9081,14 +9252,20 @@ loadScripts(document, 'script');</script>
 <div class="block">Was the previous codepoint added to the current word sequence as a
  CharacterCheck-accepted character ?</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html#isPrimitiveValue()" class="member-name-link">isPrimitiveValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html#isPrimitiveValue()" class="member-name-link">isPrimitiveValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValue.html#isPrimitiveValue()" class="member-name-link">isPrimitiveValue()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPrimitiveValue.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a></dt>
 <dd>
 <div class="block">Check whether this value is primitive, that is, either a
  <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.CssType.html#TYPED"><code>TYPED</code></a> or
  <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.CssType.html#PROXY"><code>PROXY</code></a> value.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html#isPrimitiveValue()" class="member-name-link">isPrimitiveValue()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></dt>
+<dd>
+<div class="block">Check whether this value is primitive, that is, either a
+ <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.CssType.html#TYPED"><code>TYPED</code></a> or
+ <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValue.CssType.html#PROXY"><code>PROXY</code></a> value.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html#isPrimitiveValue()" class="member-name-link">isPrimitiveValue()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/UnknownValue.html#isPriorityCompat()" class="member-name-link">isPriorityCompat()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/UnknownValue.html" title="class in io.sf.carte.doc.style.css.property">UnknownValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/AbstractMediaQuery.html#isRangeFeature(java.lang.String)" class="member-name-link">isRangeFeature(String)</a> - Static method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/AbstractMediaQuery.html" title="class in io.sf.carte.doc.style.css.parser">AbstractMediaQuery</a></dt>
@@ -9820,6 +9997,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LinkedCSSValueList.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches(CSSValueSyntax)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/LinkedCSSValueList.html" title="class in io.sf.carte.doc.style.css.property">LinkedCSSValueList</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches(CSSValueSyntax)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches(CSSValueSyntax)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></dt>
 <dd>
 <div class="block">Verify if this value matches the given grammar.</div>
@@ -9903,6 +10082,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Mathematical function (as defined by CSS Values and Units).</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/package-summary.html">io.sf.carte.doc.style.css.property</a></dt>
+<dd>
+<div class="block">Implementation of a mathematical function value.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.MathFunction.html#MAX" class="member-name-link">MAX</a> - Enum constant in enum class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.MathFunction.html" title="enum class in io.sf.carte.doc.style.css">CSSMathFunctionValue.MathFunction</a></dt>
 <dd>
 <div class="block"><code>max()</code></div>
@@ -9967,7 +10150,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryListListener.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
-<div class="block">Listen to changes in media queries.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryPredicate.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
@@ -10198,7 +10381,9 @@ loadScripts(document, 'script');</script>
  <code>oklch(58.9% 44.4 97.21deg / 0.6)</code></div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryListListener.html#onChange(io.sf.carte.doc.style.css.MediaQueryList)" class="member-name-link">onChange(MediaQueryList)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryListListener.html" title="interface in io.sf.carte.doc.style.css">MediaQueryListListener</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Condition.ConditionType.html#ONE_OF_ATTRIBUTE" class="member-name-link">ONE_OF_ATTRIBUTE</a> - Enum constant in enum class io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Condition.ConditionType.html" title="enum class in io.sf.carte.doc.style.css.nsac">Condition.ConditionType</a></dt>
 <dd>
 <div class="block">This condition checks for a value in a list of space-separated values in an
@@ -10651,7 +10836,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">parseSupportsCondition(String, CSSRule, AbstractCSSStyleSheet)</a> - Method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html#parseSupportsCondition(java.lang.String,io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.SheetContext)" class="member-name-link">parseSupportsCondition(String, CSSRule, SheetContext)</a> - Method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/CSSParser.html" title="class in io.sf.carte.doc.style.css.parser">CSSParser</a></dt>
 <dd>
 <div class="block">Parse the condition text of a <code>@supports</code> rule.</div>
 </dd>
@@ -11104,9 +11289,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Takes a string and returns a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link"><code>StringBuilder</code></a> with the CSS comments
  preceding the given index removed.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)" class="member-name-link">removeEventListener(String, EventListener, boolean)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#removeListener(io.sf.carte.doc.style.css.MediaQueryListListener)" class="member-name-link">removeListener(MediaQueryListListener)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html" title="interface in io.sf.carte.doc.style.css">MediaQueryList</a></dt>
 <dd>
-<div class="block">Removes a listener from the list of media query list listeners.</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/MediaQueryList.html#removeEventListener(java.lang.String,org.w3c.dom.events.EventListener,boolean)"><code>MediaQueryList.removeEventListener(String, EventListener, boolean)</code></a>
+             instead.</div>
+</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html#removeNamedItem(java.lang.String)" class="member-name-link">removeNamedItem(String)</a> - Method in interface io.sf.carte.doc.dom.<a href="io.sf.carte.css4j/io/sf/carte/doc/dom/ExtendedNamedNodeMap.html" title="interface in io.sf.carte.doc.dom">ExtendedNamedNodeMap</a></dt>
 <dd>&nbsp;</dd>
@@ -11362,6 +11552,12 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Called when the <code>]</code> codepoint is found.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNumberValue.html#roundToInteger()" class="member-name-link">roundToInteger()</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNumberValue.html" title="interface in io.sf.carte.doc.style.css">CSSNumberValue</a></dt>
+<dd>
+<div class="block">Round this value to the nearest integer.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#roundToInteger()" class="member-name-link">roundToInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/DirectionalityHelper.Directionality.html#RTL" class="member-name-link">RTL</a> - Enum constant in enum class io.sf.carte.doc.<a href="io.sf.carte.css4j/io/sf/carte/doc/DirectionalityHelper.Directionality.html" title="enum class in io.sf.carte.doc">DirectionalityHelper.Directionality</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DefaultSheetErrorHandler.html#ruleParseError(io.sf.carte.doc.style.css.CSSRule,io.sf.carte.doc.style.css.nsac.CSSParseException)" class="member-name-link">ruleParseError(CSSRule, CSSParseException)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DefaultSheetErrorHandler.html" title="class in io.sf.carte.doc.style.css.om">DefaultSheetErrorHandler</a></dt>
@@ -11638,6 +11834,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Set the byte stream for this input source.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNumberValue.html#setCalculatedNumber(boolean)" class="member-name-link">setCalculatedNumber(boolean)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSNumberValue.html" title="interface in io.sf.carte.doc.style.css">CSSNumberValue</a></dt>
+<dd>
+<div class="block">Sets whether this number is the result of a calculation.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#setCalculatedNumber(boolean)" class="member-name-link">setCalculatedNumber(boolean)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
+<dd>
+<div class="block">Sets whether this number is the result of a calculation.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html#setCaptionSide(java.lang.String)" class="member-name-link">setCaptionSide(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleDeclaration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/InputSource.html#setCharacterStream(java.io.Reader)" class="member-name-link">setCharacterStream(Reader)</a> - Method in class io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/InputSource.html" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a></dt>
@@ -11860,8 +12064,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html#setDisplay(java.lang.String)" class="member-name-link">setDisplay(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleDeclaration.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleDeclaration</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html#setDocument(io.sf.carte.doc.style.css.CSSDocument)" class="member-name-link">setDocument(CSSDocument)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSCanvas</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.WrapperUserAgent.html#setDocumentBuilder(javax.xml.parsers.DocumentBuilder)" class="member-name-link">setDocumentBuilder(DocumentBuilder)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/DOMCSSStyleSheetFactory.WrapperUserAgent.html" title="class in io.sf.carte.doc.style.css.om">DOMCSSStyleSheetFactory.WrapperUserAgent</a></dt>
 <dd>
 <div class="block">Sets a <code>DocumentBuilder</code> to be used when fetching a
@@ -11944,6 +12146,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html#setExpectInteger()" class="member-name-link">setExpectInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionValue.html" title="class in io.sf.carte.doc.style.css.property">ExpressionValue</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html#setExpectInteger()" class="member-name-link">setExpectInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html#setExpectInteger()" class="member-name-link">setExpectInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/NumberValue.html" title="class in io.sf.carte.doc.style.css.property">NumberValue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html#setExpectInteger()" class="member-name-link">setExpectInteger()</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></dt>
@@ -11958,11 +12162,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Enable/disable the external handling of locations.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(byte)" class="member-name-link">setFactoryFlag(byte)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#setFactoryFlag(short)" class="member-name-link">setFactoryFlag(short)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></dt>
 <dd>
 <div class="block">Set a configuration flag.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#setFactoryFlag(byte)" class="member-name-link">setFactoryFlag(byte)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheetFactory</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html#setFactoryFlag(short)" class="member-name-link">setFactoryFlag(short)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/BaseCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSStyleSheetFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/VarValue.html#setFallback(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">setFallback(LexicalUnit)</a> - Method in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/VarValue.html" title="class in io.sf.carte.doc.style.css.property">VarValue</a></dt>
 <dd>
@@ -12761,6 +12965,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a shallow copy of this lexical unit, ignoring the next ones, and
  unlinked to any previous lexical unit.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/SheetContext.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.nsac">SheetContext</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/package-summary.html">io.sf.carte.doc.style.css.nsac</a></dt>
+<dd>
+<div class="block">Provides a style sheet context, useful for selector serialization.</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/SheetErrorHandler.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">SheetErrorHandler</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
 <dd>
 <div class="block">Handle CSS errors at the style sheet level.</div>
@@ -13047,9 +13255,17 @@ loadScripts(document, 'script');</script>
 <div class="block">A string.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE" class="member-name-link">STRING_DOUBLE_QUOTE</a> - Static variable in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE</code></a></div>
+</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE" class="member-name-link">STRING_SINGLE_QUOTE</a> - Static variable in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE</code></a></div>
+</div>
+</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/StringList.html" class="type-name-link" title="interface in io.sf.carte.doc">StringList</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/package-summary.html">io.sf.carte.doc</a></dt>
 <dd>
 <div class="block">Combines <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link"><code>List</code></a> and <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMStringList.html" title="class or interface in org.w3c.dom" class="external-link"><code>DOMStringList</code></a>.</div>
@@ -13060,7 +13276,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html#%3Cinit%3E()" class="member-name-link">StringValue()</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html" title="class in io.sf.carte.doc.style.css.property">StringValue</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html#%3Cinit%3E(byte)" class="member-name-link">StringValue(byte)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html" title="class in io.sf.carte.doc.style.css.property">StringValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html#%3Cinit%3E(short)" class="member-name-link">StringValue(short)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/StringValue.html" title="class in io.sf.carte.doc.style.css.property">StringValue</a></dt>
 <dd>
 <div class="block">A string value with a flag specifying the quote behaviour.</div>
 </dd>
@@ -13164,6 +13380,12 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html#supports(java.lang.String,io.sf.carte.doc.style.css.CSSValue)" class="member-name-link">supports(String, CSSValue)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html" title="interface in io.sf.carte.doc.style.css">StyleDatabase</a></dt>
 <dd>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html#supports(java.lang.String,io.sf.carte.doc.style.css.nsac.LexicalUnit)"><code>StyleDatabase.supports(String, LexicalUnit)</code></a>.</div>
+</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html#supports(java.lang.String,io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">supports(String, LexicalUnit)</a> - Method in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/StyleDatabase.html" title="interface in io.sf.carte.doc.style.css">StyleDatabase</a></dt>
+<dd>
 <div class="block">Does this medium support the given property-value pair?</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRule.html#SUPPORTS_RULE" class="member-name-link">SUPPORTS_RULE</a> - Static variable in interface io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></dt>
@@ -13179,10 +13401,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Contains factory methods related to <code>@supports</code> conditions.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#%3Cinit%3E(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">SupportsConditionFactory(AbstractCSSStyleSheet)</a> - Constructor for class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html#%3Cinit%3E(io.sf.carte.doc.style.css.nsac.SheetContext)" class="member-name-link">SupportsConditionFactory(SheetContext)</a> - Constructor for class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/SupportsConditionFactory.html" title="class in io.sf.carte.doc.style.css.om">SupportsConditionFactory</a></dt>
 <dd>
 <div class="block">Construct a new condition factory for rules belonging to the given style
- sheet.</div>
+ sheet context.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html#supportsGamut(java.lang.String)" class="member-name-link">supportsGamut(String)</a> - Method in class io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractCSSCanvas.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSCanvas</a></dt>
 <dd>
@@ -13623,10 +13845,16 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/UnicodeWildcardValue.html#%3Cinit%3E(io.sf.carte.doc.style.css.property.UnicodeWildcardValue)" class="member-name-link">UnicodeWildcardValue(UnicodeWildcardValue)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/UnicodeWildcardValue.html" title="class in io.sf.carte.doc.style.css.property">UnicodeWildcardValue</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/ParseHelper.html#unitFromString(java.lang.String)" class="member-name-link">unitFromString(String)</a> - Static method in class io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/ParseHelper.html" title="class in io.sf.carte.doc.style.css.parser">ParseHelper</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/UnitStringToId.html#unitFromString(java.lang.String)" class="member-name-link">unitFromString(String)</a> - Static method in class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/UnitStringToId.html" title="class in io.sf.carte.doc.style.css">UnitStringToId</a></dt>
 <dd>
 <div class="block">Retrieves the CSS unit associated to the given unit string.</div>
 </dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/UnitStringToId.html" class="type-name-link" title="class in io.sf.carte.doc.style.css">UnitStringToId</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/package-summary.html">io.sf.carte.doc.style.css</a></dt>
+<dd>
+<div class="block">Obtain the numeric unit from the unit string.</div>
+</dd>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/UnitStringToId.html#%3Cinit%3E()" class="member-name-link">UnitStringToId()</a> - Constructor for class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/UnitStringToId.html" title="class in io.sf.carte.doc.style.css">UnitStringToId</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueSyntax.Category.html#universal" class="member-name-link">universal</a> - Enum constant in enum class io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSValueSyntax.Category.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Category</a></dt>
 <dd>
 <div class="block">The universal syntax.</div>
@@ -13736,7 +13964,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">URI primitive value.</div>
 </dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html#%3Cinit%3E(byte)" class="member-name-link">URIValue(byte)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html" title="class in io.sf.carte.doc.style.css.property">URIValue</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html#%3Cinit%3E(short)" class="member-name-link">URIValue(short)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/URIValue.html" title="class in io.sf.carte.doc.style.css.property">URIValue</a></dt>
 <dd>
 <div class="block">A URI value with a flag specifying the quote behaviour.</div>
 </dd>
@@ -13776,7 +14004,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#%3Cinit%3E()" class="member-name-link">ValueFactory()</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#%3Cinit%3E(byte)" class="member-name-link">ValueFactory(byte)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
+<dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html#%3Cinit%3E(short)" class="member-name-link">ValueFactory(short)</a> - Constructor for class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.html" title="class in io.sf.carte.doc.style.css.property">ValueFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueFactory.ListValueItem.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">ValueFactory.ListValueItem</a> - Class in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/package-summary.html">io.sf.carte.doc.style.css.property</a></dt>
 <dd>
@@ -13785,8 +14013,9 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.property">ValueItem</a> - Interface in <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/package-summary.html">io.sf.carte.doc.style.css.property</a></dt>
 <dd>
-<div class="block">This interface provides information about the processing of one (or more) CSS lexical
- unit(s) in order to produce a <code>CSSValue</code>, that can be recovered with <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#getCSSValue()"><code>ValueItem.getCSSValue()</code></a>.</div>
+<div class="block">This interface provides information about the processing of one (or more) CSS
+ lexical unit(s) in order to produce a <code>StyleValue</code>, that can be
+ recovered with <a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueItem.html#getCSSValue()"><code>ValueItem.getCSSValue()</code></a>.</div>
 </dd>
 <dt><a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueList.html#valueList" class="member-name-link">valueList</a> - Variable in class io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ValueList.html" title="class in io.sf.carte.doc.style.css.property">ValueList</a></dt>
 <dd>&nbsp;</dd>
