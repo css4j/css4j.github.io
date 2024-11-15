@@ -36,7 +36,7 @@ dependencies {
 	testImplementation 'io.sf.jclf:jclf-linear3:latest.release'
 	testImplementation 'io.sf.carte:xml-dtd:latest.release'
 	testImplementation 'io.sf.carte:css4j-dom4j:latest.release'
-	testImplementation 'io.sf.carte:css4j:latest.release'
+	testImplementation 'io.sf.carte:css4j:4.4'
 	testImplementation 'io.sf.carte:echosvg-transcoder:latest.release'
 	testImplementation 'nu.validator:htmlparser:1.4.16'
 	testImplementation 'org.junit.jupiter:junit-jupiter:latest.release'
