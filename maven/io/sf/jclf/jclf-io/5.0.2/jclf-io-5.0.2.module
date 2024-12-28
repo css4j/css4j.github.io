@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.jclf",
+    "module": "jclf-io",
+    "version": "5.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-core",
+          "version": {
+            "requires": "5.0.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jclf-io-5.0.2.jar",
+          "url": "jclf-io-5.0.2.jar",
+          "size": 49355,
+          "sha512": "5227ded08c79edbd13a4e468e384114bb73cfbbaef98ba64980d4e0691a2f78a68834767ccf704d2f10778b8b557082e25095baa668208c84fbae07c8da8c3c7",
+          "sha256": "74c3fbd0a9abdc345d8451fea272cf2d37bd4a6937d60d6182b34382c15d4f53",
+          "sha1": "2c91ff5aa4967b20d7ae6853c979c4a84cfc9815",
+          "md5": "ad1e835f01aec16e84101b8204976102"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-core",
+          "version": {
+            "requires": "5.0.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jclf-io-5.0.2.jar",
+          "url": "jclf-io-5.0.2.jar",
+          "size": 49355,
+          "sha512": "5227ded08c79edbd13a4e468e384114bb73cfbbaef98ba64980d4e0691a2f78a68834767ccf704d2f10778b8b557082e25095baa668208c84fbae07c8da8c3c7",
+          "sha256": "74c3fbd0a9abdc345d8451fea272cf2d37bd4a6937d60d6182b34382c15d4f53",
+          "sha1": "2c91ff5aa4967b20d7ae6853c979c4a84cfc9815",
+          "md5": "ad1e835f01aec16e84101b8204976102"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jclf-io-5.0.2-javadoc.jar",
+          "url": "jclf-io-5.0.2-javadoc.jar",
+          "size": 150392,
+          "sha512": "aface93af40502a7d98532ad8a4fb4428662190800a599a8d54ef2fff06e4a93148c16229f8da53a047473048408cda647e37c3438e48efb19ccb350246993f5",
+          "sha256": "a1e45a4eac04b8e8133a26cabbbb79dacc077f9bd692461e35df2c609fe35581",
+          "sha1": "3dbb767c7f49d878dfc2c3a9c571537314943af9",
+          "md5": "42f86cb0d544b75f345c1ca70ffad839"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jclf-io-5.0.2-sources.jar",
+          "url": "jclf-io-5.0.2-sources.jar",
+          "size": 36948,
+          "sha512": "798f1601510325567a177ae4952e8459198a1a5e39e50d04dc93ddadf81981efbb84e18346fd3287b026d2e034837202af26ba7624c95393c20aa6e6ce344838",
+          "sha256": "3adf953b1b9d309ccb038c0a86599faed541eaa7d31b6cc40595ab54077e74e0",
+          "sha1": "1272b8c43c055cab0e8a9f69c7250af5d24ea17f",
+          "md5": "5b5a92f08ce4a8e893849aae8653fffb"
+        }
+      ]
+    }
+  ]
+}
