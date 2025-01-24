@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../../../../script-dir/jquery-ui.min.css" title="Style">
 <script type="text/javascript" src="../../../../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -116,7 +116,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -196,36 +196,41 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns a sequence of units inside the sub-expression or unicode range.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insertNextLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">insertNextLexicalUnit</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;nextUnit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getSyntax()" class="member-name-link">getSyntax</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Get the syntax specified by this unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insertNextLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">insertNextLexicalUnit</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;nextUnit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Insert the given unit as the next lexical unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isParameter()" class="member-name-link">isParameter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isParameter()" class="member-name-link">isParameter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Check if this lexical unit is a parameter that was made available through its
  parent's <a href="#getParameters()"><code>getParameters()</code></a> method.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Verify whether this value matches the given grammar.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove()" class="member-name-link">remove</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove()" class="member-name-link">remove</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Remove this unit from the chain of lexical units and replace it by the next
  one, if any.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replaceBy(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">replaceBy</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;replacementUnit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replaceBy(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">replaceBy</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;replacementUnit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Replace this unit in the chain of lexical units.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shallowClone()" class="member-name-link">shallowClone</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shallowClone()" class="member-name-link">shallowClone</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Creates a shallow copy of this lexical unit, ignoring the next ones, and
  unlinked to any previous lexical unit.</div>
 </div>
@@ -343,7 +348,11 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>replacementUnit</code> - the lexical unit that replaces this one. If
-                        <code>null</code>, this unit is replaced by the next one.</dd>
+                        <code>null</code>, this unit is replaced by the next one.
+                        If <a href="LexicalUnit.LexicalType.html#EMPTY"><code>EMPTY</code></a>, this unit is
+                        replaced by the next non-empty unit in the parameter's
+                        lexical chain or, if there is none, by the next unit
+                        in this chain (same as if parameter was <code>null</code>).</dd>
 <dt>Returns:</dt>
 <dd>the number of units that replace this one (<em>i.e.</em> the
          argument, or <code>0</code> if the argument is <code>null</code>).</dd>
@@ -509,6 +518,11 @@ loadScripts(document, 'script');</script>
  </p>
  <p>
  May return <code>null</code> if type is <code>FUNCTION</code>.
+ </p>
+ <p>
+ Since version 5, also returns the sub-values if this is an expression or a
+ unicode range. Therefore, can be used as a more streamlined version of
+ <a href="#getSubValues()"><code>getSubValues()</code></a>.
  </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -524,6 +538,7 @@ loadScripts(document, 'script');</script>
 <li><a href="LexicalUnit.LexicalType.html#CUBIC_BEZIER_FUNCTION"><code>LexicalUnit.LexicalType.CUBIC_BEZIER_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#STEPS_FUNCTION"><code>LexicalUnit.LexicalType.STEPS_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RECT_FUNCTION"><code>LexicalUnit.LexicalType.RECT_FUNCTION</code></a></li>
+<li><a href="LexicalUnit.LexicalType.html#TYPE_FUNCTION"><code>LexicalUnit.LexicalType.TYPE_FUNCTION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#RGBCOLOR"><code>LexicalUnit.LexicalType.RGBCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#HSLCOLOR"><code>LexicalUnit.LexicalType.HSLCOLOR</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#HWBCOLOR"><code>LexicalUnit.LexicalType.HWBCOLOR</code></a></li>
@@ -567,6 +582,26 @@ loadScripts(document, 'script');</script>
 <ul class="tag-list-long">
 <li><a href="LexicalUnit.LexicalType.html#SUB_EXPRESSION"><code>LexicalUnit.LexicalType.SUB_EXPRESSION</code></a></li>
 <li><a href="LexicalUnit.LexicalType.html#UNICODE_RANGE"><code>LexicalUnit.LexicalType.UNICODE_RANGE</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSyntax()">
+<h3>getSyntax</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a></span>&nbsp;<span class="element-name">getSyntax</span>()
+                          throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></span></div>
+<div class="block">Get the syntax specified by this unit.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the CSS syntax.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if this is not a syntax unit.</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list">
+<li><a href="LexicalUnit.LexicalType.html#SYNTAX"><code>LexicalUnit.LexicalType.SYNTAX</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -623,7 +658,7 @@ loadScripts(document, 'script');</script>
  </tr>
  </thead><tbody>
  <tr style="text-align:center;">
- <td style="border:1px solid;padding:6pt" rowspan="7"><code>attr(data-width length, 8%)</code></td>
+ <td style="border:1px solid;padding:6pt" rowspan="7"><code>attr(data-width type(&lt;length&gt;), 8%)</code></td>
  <td style="border:1px
  solid;padding:4pt"><code>&lt;percentage&gt; | &lt;length&gt;</code></td>
  <td><code>TRUE</code></td>
