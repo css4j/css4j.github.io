@@ -689,27 +689,41 @@ Match match1 = color.matches(syntaxColor);
 
 // Check the primitive type
 CSSValue.Type primiType1 = color.getPrimitiveType();
-// It is a var() function (CSSValue.Type.VAR)
+// It is a LEXICAL value (var() or attr())
 
 // Obtain the custom property name
-VarValue varValue = (VarValue) color;
-String customPropertyName = varValue.getName();
+LexicalValue varValue = (LexicalValue) color;
+LexicalUnit lexUnit = varValue.getLexicalUnit();
+// It is a VAR (var() function)
+
+// Obtain function parameters
+LexicalUnit param = lexUnit.getParameters();
+// Let's see its unit type
+LexicalType luType = param.getLexicalUnitType();
+// It is IDENT (identifier)
+String customPropertyName = param.getStringValue();
 // Name is --myColor
 
-// In this case we have a fallback value (otherwise next line returns null)
-LexicalUnit lexUnit = varValue.getFallback();
+// Continue with the lexical chain
+param = param.getNextLexicalUnit();
 // Let's see its unit type
-LexicalType luType = lexUnit.getLexicalUnitType();
-// It is a LexicalType.RGBCOLOR
+luType = param.getLexicalUnitType();
+// It is OPERATOR_COMMA
 
+// In this case we have a fallback value (otherwise next line returns null)
+param = param.getNextLexicalUnit();
+// Let's see its unit type
+luType = param.getLexicalUnitType();
+// It is a RGBCOLOR
+assertEquals(LexicalType.RGBCOLOR, luType);
 // And the color is...
-String strColor = lexUnit.getCssText();
+String strColor = param.getCssText();
 // Is '#46f'
 
 // Access the individual color components.
 // RGB colors are accessed as a rgb() function, so we retrieve
 // the function parameters as a doubly-linked list:
-LexicalUnit firstComponent = lexUnit.getParameters();
+LexicalUnit firstComponent = param.getParameters();
 
 // Let's see the lexical type to see how we access the value
 LexicalType firstLexUnitType = firstComponent.getLexicalUnitType();

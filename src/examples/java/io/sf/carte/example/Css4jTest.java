@@ -91,7 +91,6 @@ import io.sf.carte.doc.style.css.parser.SyntaxParser;
 import io.sf.carte.doc.style.css.property.LexicalValue;
 import io.sf.carte.doc.style.css.property.NumberValue;
 import io.sf.carte.doc.style.css.property.StyleValue;
-import io.sf.carte.doc.style.css.property.VarValue;
 import nu.validator.htmlparser.common.XmlViolationPolicy;
 import nu.validator.htmlparser.sax.HtmlParser;
 
@@ -304,29 +303,48 @@ public class Css4jTest {
 
 		// Check the primitive type
 		CSSValue.Type primiType1 = color.getPrimitiveType();
-		// It is a var()
-		assertEquals(CSSValue.Type.VAR, primiType1);
+		// It is a LEXICAL value (var() or attr())
+		assertEquals(CSSValue.Type.LEXICAL, primiType1);
+
 		// Obtain the custom property name
-		VarValue varValue = (VarValue) color;
-		String customPropertyName = varValue.getName();
+		LexicalValue varValue = (LexicalValue) color;
+		LexicalUnit lexUnit = varValue.getLexicalUnit();
+		// It is a var()
+		assertEquals(LexicalType.VAR, lexUnit.getLexicalUnitType());
+
+		// Obtain function parameters
+		LexicalUnit param = lexUnit.getParameters();
+		// Let's see its unit type
+		LexicalType luType = param.getLexicalUnitType();
+		// It is IDENT (identifier)
+		assertEquals(LexicalType.IDENT, param.getLexicalUnitType());
+		String customPropertyName = param.getStringValue();
 		// Name is --myColor
 		assertEquals("--myColor", customPropertyName);
 
-		// In this case we have a fallback value (otherwise next line returns null)
-		LexicalUnit lexUnit = varValue.getFallback();
+		// Continue with the lexical chain
+		param = param.getNextLexicalUnit();
 		// Let's see its unit type
-		LexicalType luType = lexUnit.getLexicalUnitType();
+		luType = param.getLexicalUnitType();
+		// It is OPERATOR_COMMA
+		assertEquals(LexicalType.OPERATOR_COMMA, param.getLexicalUnitType());
+
+		// In this case we have a fallback value (otherwise next line returns null)
+		param = param.getNextLexicalUnit();
+		// Let's see its unit type
+		luType = param.getLexicalUnitType();
 		// It is a RGBCOLOR
 		assertEquals(LexicalType.RGBCOLOR, luType);
 		// And the color is...
-		String strColor = lexUnit.getCssText();
+		String strColor = param.getCssText();
 		// Is '#46f'
 		assertEquals("#46f", strColor);
 
 		// Access the color components:
 		// RGB colors are accessed as a rgb() function, so we retrieve
-		// the function parameters:
-		LexicalUnit firstComponent = lexUnit.getParameters();
+		// the function parameters as a doubly-linked list:
+		LexicalUnit firstComponent = param.getParameters();
+
 		// Let's see the lexical type to see how we access the value
 		LexicalType firstLexUnitType = firstComponent.getLexicalUnitType();
 		// It is a LexicalType.INTEGER (RGB components could be PERCENTAGE as well)
