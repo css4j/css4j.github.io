@@ -1,0 +1,154 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-parser",
+    "version": "2.0-pre1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "5.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-2.0-pre1.jar",
+          "url": "echosvg-parser-2.0-pre1.jar",
+          "size": 86961,
+          "sha512": "0ee185361be521ff19d6bd5f652ec18450e11956e73a7c6d0ed31b3e4929cf59e22d70e5db627db9e6622e88ac7b04ee7dc5af91346929c280235d6aefa587e2",
+          "sha256": "2273310373937ac96981a65f6cf252cc653e6a1f87a1df1d6b23b4f9451bf8f3",
+          "sha1": "3d5ede52afe17b8c477cb006afd08757813325f6",
+          "md5": "49e023a545ddbeef24f841c06e4a4794"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "5.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-parser-2.0-pre1.jar",
+          "url": "echosvg-parser-2.0-pre1.jar",
+          "size": 86961,
+          "sha512": "0ee185361be521ff19d6bd5f652ec18450e11956e73a7c6d0ed31b3e4929cf59e22d70e5db627db9e6622e88ac7b04ee7dc5af91346929c280235d6aefa587e2",
+          "sha256": "2273310373937ac96981a65f6cf252cc653e6a1f87a1df1d6b23b4f9451bf8f3",
+          "sha1": "3d5ede52afe17b8c477cb006afd08757813325f6",
+          "md5": "49e023a545ddbeef24f841c06e4a4794"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-parser-2.0-pre1-sources.jar",
+          "url": "echosvg-parser-2.0-pre1-sources.jar",
+          "size": 86999,
+          "sha512": "7f04b1cab4961f30f79bb4c01fe8fa822e063bce3fe26eedda4043478342a64923464a3f435ece866b65062bbc6edf242c357c13a2a8d2a845ff9d052f8c7d01",
+          "sha256": "df86fb4a1f4622c2859d83062290e4c5fcffdd2275fde3019a05adbbcc2f4b01",
+          "sha1": "0c3c4c4fa0e7e581eb8d6d2e35df02f45e9bf217",
+          "md5": "dbf0e6b90c0f9fbf0f11a228edf29c1d"
+        }
+      ]
+    }
+  ]
+}

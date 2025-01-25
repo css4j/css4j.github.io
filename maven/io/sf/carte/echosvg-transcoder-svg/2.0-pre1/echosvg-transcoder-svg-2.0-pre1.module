@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-transcoder-svg",
+    "version": "2.0-pre1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.0-pre1.jar",
+          "url": "echosvg-transcoder-svg-2.0-pre1.jar",
+          "size": 66809,
+          "sha512": "ab031a6e4401e8349bd533e3cb8d771636a2c7fbf0fb56d5d3af01ecdf30151f88d934a24879719d23899c6bf98efd1bcd9f05faecfc801448d865c6956bcbbc",
+          "sha256": "6a35bf8907f212eef5785f292e23eaf89fc5528d4fbc8b3e5197aa124dea0bea",
+          "sha1": "f4a7b5e44d1fabf8046aa19ff19eebed9c6b2ea2",
+          "md5": "093916884b960d3a82a72ac2f5ae9811"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-codec",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j-awt",
+          "version": {
+            "requires": "5.0"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "2.0-pre1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.0-pre1.jar",
+          "url": "echosvg-transcoder-svg-2.0-pre1.jar",
+          "size": 66809,
+          "sha512": "ab031a6e4401e8349bd533e3cb8d771636a2c7fbf0fb56d5d3af01ecdf30151f88d934a24879719d23899c6bf98efd1bcd9f05faecfc801448d865c6956bcbbc",
+          "sha256": "6a35bf8907f212eef5785f292e23eaf89fc5528d4fbc8b3e5197aa124dea0bea",
+          "sha1": "f4a7b5e44d1fabf8046aa19ff19eebed9c6b2ea2",
+          "md5": "093916884b960d3a82a72ac2f5ae9811"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.0-pre1-sources.jar",
+          "url": "echosvg-transcoder-svg-2.0-pre1-sources.jar",
+          "size": 52965,
+          "sha512": "93340ac00b912b537079034832a6175ac3cc795ef44eeb2294a17af7a20c21d4026d89e75f620c83a2ed720346acf8036478bc891614ac398b2072190310d207",
+          "sha256": "707d2bb4fdd927f32932bf9dbc5d664c8e40275b56a030a5e5593044ad8cace1",
+          "sha1": "ece328a8202370e8acac5762e0bcf1156c635fa1",
+          "md5": "2455d00127eebf1c54c39408c111ff69"
+        }
+      ]
+    }
+  ]
+}
