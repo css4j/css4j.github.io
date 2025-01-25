@@ -1,0 +1,112 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-extension",
+    "version": "1.2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "1.2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-extension-1.2.4.jar",
+          "url": "echosvg-extension-1.2.4.jar",
+          "size": 73137,
+          "sha512": "51ed27993e67c5a18f3ead219c636adc1d39b2f70f5496b96300cf4eb79524f3bfae6f213b6407b07e3e04cf28a35b0c5b54f149f3b975f6fdc91dbad4d3ad1e",
+          "sha256": "dbfc7b11136aa73533e6aa7eb115925bcb599043bbb6329132a5f34772d050f9",
+          "sha1": "f29756146a9e01b727a9549173630b866ca518e9",
+          "md5": "f10a2b931169647dec310a079b00eb5f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-awt-util",
+          "version": {
+            "requires": "1.2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "1.2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-extension-1.2.4.jar",
+          "url": "echosvg-extension-1.2.4.jar",
+          "size": 73137,
+          "sha512": "51ed27993e67c5a18f3ead219c636adc1d39b2f70f5496b96300cf4eb79524f3bfae6f213b6407b07e3e04cf28a35b0c5b54f149f3b975f6fdc91dbad4d3ad1e",
+          "sha256": "dbfc7b11136aa73533e6aa7eb115925bcb599043bbb6329132a5f34772d050f9",
+          "sha1": "f29756146a9e01b727a9549173630b866ca518e9",
+          "md5": "f10a2b931169647dec310a079b00eb5f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-extension-1.2.4-sources.jar",
+          "url": "echosvg-extension-1.2.4-sources.jar",
+          "size": 67558,
+          "sha512": "d7e8d8b66dc2f8248f89125aef9c7eef3d3f1814680ba35d3532e5e2f2c8a6300436592dbe6dfe7ffb9ae68e9691583f12387fe8c55e43836ff9fb66ede821d8",
+          "sha256": "0994a68b465be39719c680fd821dac53937d737f153f90652a6caab884193603",
+          "sha1": "f7506465f3d887c71c710b862900105273a24bf8",
+          "md5": "2722ccc3a2220afcb63ae962c1bdd95f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-swing",
+    "version": "1.2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "1.2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gui-util",
+          "version": {
+            "requires": "1.2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-swing-1.2.4.jar",
+          "url": "echosvg-swing-1.2.4.jar",
+          "size": 196874,
+          "sha512": "43aba156ea013c9f649559a42cf80c4abf145bbbef51430297238afd00057a5fe56b19435eaf2d89f2a05ae4fc5a968f9a49c04947c68c3fade9c26f78dd7f2e",
+          "sha256": "6768754630dfe91baacafa9c136a9f6cd5083c4792d127e012d1d06a05724434",
+          "sha1": "8c9bab173ce102057aa768da127ef4767f923360",
+          "md5": "d696edd2b08ac5eced6893185c542b84"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "1.2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gui-util",
+          "version": {
+            "requires": "1.2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-swing-1.2.4.jar",
+          "url": "echosvg-swing-1.2.4.jar",
+          "size": 196874,
+          "sha512": "43aba156ea013c9f649559a42cf80c4abf145bbbef51430297238afd00057a5fe56b19435eaf2d89f2a05ae4fc5a968f9a49c04947c68c3fade9c26f78dd7f2e",
+          "sha256": "6768754630dfe91baacafa9c136a9f6cd5083c4792d127e012d1d06a05724434",
+          "sha1": "8c9bab173ce102057aa768da127ef4767f923360",
+          "md5": "d696edd2b08ac5eced6893185c542b84"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-swing-1.2.4-sources.jar",
+          "url": "echosvg-swing-1.2.4-sources.jar",
+          "size": 100778,
+          "sha512": "c7e3c24ca207005440e72235a125eac7e4c93c483536d3ce4a71efb97928c4c3e65058bb5cf8cc47bc9a54524bec6b6fa172e4c3d3d06bad502355e7330b4c23",
+          "sha256": "e07eeda19aac44c8569d0c40108682f4092972873b8b239aaa4fa2503ecedc76",
+          "sha1": "af57d1c1da1e72b4dee63e03149bd4b1a234f38f",
+          "md5": "d6f903fafca3f31dba98bb0aef762195"
+        }
+      ]
+    }
+  ]
+}
