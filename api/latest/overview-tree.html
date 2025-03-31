@@ -335,6 +335,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/ExpressionFactory.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">ExpressionFactory</a></li>
 <li class="circle">io.sf.carte.doc.color.<a href="io.sf.carte.css4j/io/sf/carte/doc/color/Illuminants.html" class="type-name-link" title="class in io.sf.carte.doc.color">Illuminants</a></li>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/InputSource.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.nsac">InputSource</a></li>
+<li class="circle">io.sf.carte.doc.style.css.parser.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/parser/LexicalHelper.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.parser">LexicalHelper</a></li>
 <li class="circle">io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/LogErrorHandler.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.om">LogErrorHandler</a></li>
 <li class="circle">io.sf.carte.doc.agent.<a href="io.sf.carte.css4j/io/sf/carte/doc/agent/LogUserAgentErrorHandler.html" class="type-name-link" title="class in io.sf.carte.doc.agent">LogUserAgentErrorHandler</a> (implements io.sf.carte.doc.agent.<a href="io.sf.carte.css4j/io/sf/carte/doc/agent/UserAgentErrorHandler.html" title="interface in io.sf.carte.doc.agent">UserAgentErrorHandler</a>)</li>
 <li class="circle">io.sf.carte.doc.style.css.om.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/om/MediaFactory.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.om">MediaFactory</a></li>
@@ -389,6 +390,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/GradientValue.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">GradientValue</a> (implements io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSGradientValue.html" title="interface in io.sf.carte.doc.style.css">CSSGradientValue</a>)</li>
 <li class="circle">io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/MathFunctionValue.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">MathFunctionValue</a> (implements io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathFunctionValue</a>)</li>
+<li class="circle">io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/TransformFunction.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">TransformFunction</a> (implements io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSTransformFunction.html" title="interface in io.sf.carte.doc.style.css">CSSTransformFunction</a>)</li>
 </ul>
 </li>
 <li class="circle">io.sf.carte.doc.style.css.property.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/property/IdentifierValue.html" class="type-name-link" title="class in io.sf.carte.doc.style.css.property">IdentifierValue</a></li>
@@ -559,6 +561,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSGradientValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSGradientValue</a></li>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathFunctionValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSMathFunctionValue</a> (also extends io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html" title="interface in io.sf.carte.doc.style.css">CSSMathValue</a>)</li>
+<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSTransformFunction.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSTransformFunction</a></li>
 </ul>
 </li>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSMathValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSMathValue</a>
@@ -592,6 +595,32 @@ loadScripts(document, 'script');</script>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/LangCondition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.nsac">LangCondition</a></li>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/PositionalCondition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.nsac">PositionalCondition</a></li>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/PseudoCondition.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.nsac">PseudoCondition</a></li>
+</ul>
+</li>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ContentHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;E&gt;
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler3.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;E&gt; (also extends io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;E&gt;, io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;E&gt;)
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler2.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler2</a>
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ControlHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;E&gt;
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler3.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;E&gt; (also extends io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;E&gt;, io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;E&gt;)
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler2.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler2</a>
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="circle">io.sf.carte.doc.agent.<a href="io.sf.carte.css4j/io/sf/carte/doc/agent/Cookie.html" class="type-name-link" title="interface in io.sf.carte.doc.agent">Cookie</a></li>
@@ -634,7 +663,6 @@ loadScripts(document, 'script');</script>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPropertyRule.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSPropertyRule</a> (also extends io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>)</li>
 </ul>
 </li>
-<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRectValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSRectValue</a></li>
 <li class="circle">org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" class="type-name-link external-link" title="class or interface in org.w3c.dom.css">CSSRule</a>
 <ul>
 <li class="circle">org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSMediaRule.html" class="type-name-link external-link" title="class or interface in org.w3c.dom.css">CSSMediaRule</a>
@@ -675,6 +703,12 @@ loadScripts(document, 'script');</script>
 <li class="circle">org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRuleList.html" class="type-name-link external-link" title="class or interface in org.w3c.dom.css">CSSRuleList</a>
 <ul>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRuleList.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSRuleList</a>&lt;T&gt; (also extends java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;T&gt;)</li>
+</ul>
+</li>
+<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSShapeValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSShapeValue</a>
+<ul>
+<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSPathValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSPathValue</a></li>
+<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSRectValue.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSRectValue</a></li>
 </ul>
 </li>
 <li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSStyleDeclaration.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css">CSSStyleDeclaration</a>
@@ -875,11 +909,15 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenControl.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenControl</a></li>
-<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler3.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;E&gt;
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenErrorHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;E&gt;
+<ul>
+<li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler3.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;E&gt; (also extends io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;E&gt;, io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;E&gt;)
 <ul>
 <li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler2.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler2</a>
 <ul>
 <li class="circle">io.sf.carte.uparser.<a href="io.sf.carte.tokenproducer/io/sf/carte/uparser/TokenHandler.html" class="type-name-link" title="interface in io.sf.carte.uparser">TokenHandler</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -930,6 +968,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/PageSelector.Type.html" class="type-name-link" title="enum class in io.sf.carte.doc.style.css.nsac">PageSelector.Type</a></li>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Parser.Flag.html" class="type-name-link" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a></li>
 <li class="circle">io.sf.carte.doc.style.css.nsac.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/Selector.SelectorType.html" class="type-name-link" title="enum class in io.sf.carte.doc.style.css.nsac">Selector.SelectorType</a></li>
+<li class="circle">io.sf.carte.doc.style.css.<a href="io.sf.carte.css4j/io/sf/carte/doc/style/css/TransformFunctions.html" class="type-name-link" title="enum class in io.sf.carte.doc.style.css">TransformFunctions</a></li>
 </ul>
 </li>
 </ul>

@@ -117,7 +117,9 @@ implements <a href="../../../../../../../io.sf.carte.css4j/io/sf/carte/doc/agent
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#domainFromHostname(java.lang.String)" class="member-name-link">domainFromHostname</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Obtain the domain from the host name.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DefaultOriginPolicy.html" title="class in io.sf.carte.doc.agent.net">DefaultOriginPolicy</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInstance()" class="member-name-link">getInstance</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
@@ -161,9 +163,15 @@ implements <a href="../../../../../../../io.sf.carte.css4j/io/sf/carte/doc/agent
 <section class="detail" id="domainFromHostname(java.lang.String)">
 <h3>domainFromHostname</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">domainFromHostname</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../../../../../../../io.sf.carte.css4j/io/sf/carte/doc/agent/OriginPolicy.html#domainFromHostname(java.lang.String)">OriginPolicy</a></code></span></div>
+<div class="block">Obtain the domain from the host name.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../../../io.sf.carte.css4j/io/sf/carte/doc/agent/OriginPolicy.html#domainFromHostname(java.lang.String)">domainFromHostname</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../io.sf.carte.css4j/io/sf/carte/doc/agent/OriginPolicy.html" title="interface in io.sf.carte.doc.agent">OriginPolicy</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>host</code> - the lower case host name.</dd>
+<dt>Returns:</dt>
+<dd>the domain.</dd>
 </dl>
 </section>
 </li>

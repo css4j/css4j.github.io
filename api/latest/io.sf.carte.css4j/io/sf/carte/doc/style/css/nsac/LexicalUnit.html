@@ -90,7 +90,20 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LexicalUnit</span></div>
-<div class="block">Based on SAC's <code>LexicalUnit</code> interface by Philippe Le Hegaret.</div>
+<div class="block">A CSS lexical unit.
+ <p>
+ This lexical unit may be followed by a number of subsequent units, accessible
+ via the <a href="#getNextLexicalUnit()"><code>getNextLexicalUnit()</code></a> method. May also be preceded by other
+ units that can be accessed by the <a href="#getPreviousLexicalUnit()"><code>getPreviousLexicalUnit()</code></a>.
+ </p>
+ <p>
+ It is recommended that implementations of this interface override the
+ <code>equals()</code> and <code>hashCode()</code> methods, but in doing that do not
+ take into account subsequent lexical units in the chain.
+ </p>
+ <p>
+ Based on SAC's <code>LexicalUnit</code> interface by Philippe Le Hegaret.
+ </p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -134,48 +147,58 @@ loadScripts(document, 'script');</script>
 <div class="block">Replace this unit in the chain of lexical units (by the unit or sequence of
  units in the argument) and return the count of replacement units.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCssText()" class="member-name-link">getCssText</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getContextIndex()" class="member-name-link">getContextIndex</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Gives the index of this unit in its processing context.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCssText()" class="member-name-link">getCssText</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Get a parsable representation of this unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>short</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCssUnit()" class="member-name-link">getCssUnit</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>short</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCssUnit()" class="member-name-link">getCssUnit</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">An integer indicating the type of CSS unit that this lexical value
  represents.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDimensionUnitText()" class="member-name-link">getDimensionUnitText</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDimensionUnitText()" class="member-name-link">getDimensionUnitText</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If this unit is a <a href="LexicalUnit.LexicalType.html#DIMENSION"><code>DIMENSION</code></a>, returns the string
  representation of the CSS unit returned by <a href="#getCssUnit()"><code>getCssUnit()</code></a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFloatValue()" class="member-name-link">getFloatValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFloatValue()" class="member-name-link">getFloatValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the float value represented by this unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFunctionName()" class="member-name-link">getFunctionName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFunctionName()" class="member-name-link">getFunctionName</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the name of the function.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIntegerValue()" class="member-name-link">getIntegerValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIntegerValue()" class="member-name-link">getIntegerValue</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Returns the integer value represented by this unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.LexicalType.html" title="enum class in io.sf.carte.doc.style.css.nsac">LexicalUnit.LexicalType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLexicalUnitType()" class="member-name-link">getLexicalUnitType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.LexicalType.html" title="enum class in io.sf.carte.doc.style.css.nsac">LexicalUnit.LexicalType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLexicalUnitType()" class="member-name-link">getLexicalUnitType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gives the type of <code>LexicalUnit</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../CSSMathFunctionValue.MathFunction.html" title="enum class in io.sf.carte.doc.style.css">CSSMathFunctionValue.MathFunction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getMathFunction()" class="member-name-link">getMathFunction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Gives the ID of this unit as a mathematical function, according to
+ <a href="../CSSMathFunctionValue.MathFunction.html" title="enum class in io.sf.carte.doc.style.css"><code>CSSMathFunctionValue.MathFunction</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getMathFunctionIndex()" class="member-name-link">getMathFunctionIndex</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
-<div class="block">Gives the index of this unit as a mathematical function, according to
- <a href="../MathFunctions.html" title="interface in io.sf.carte.doc.style.css"><code>MathFunctions</code></a> .</div>
+<div class="block">Gives the index of this unit as a mathematical function.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNextLexicalUnit()" class="member-name-link">getNextLexicalUnit</a>()</code></div>
@@ -207,38 +230,50 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Get the syntax specified by this unit.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insertNextLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">insertNextLexicalUnit</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;nextUnit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="../TransformFunctions.html" title="enum class in io.sf.carte.doc.style.css">TransformFunctions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getTransformFunction()" class="member-name-link">getTransformFunction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Gives the ID of this unit as a transform function, according to
+ <a href="../TransformFunctions.html" title="enum class in io.sf.carte.doc.style.css"><code>TransformFunctions</code></a>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#insertNextLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">insertNextLexicalUnit</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;nextUnit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Insert the given unit as the next lexical unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isParameter()" class="member-name-link">isParameter</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#isParameter()" class="member-name-link">isParameter</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Check if this lexical unit is a parameter that was made available through its
  parent's <a href="#getParameters()"><code>getParameters()</code></a> method.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Verify whether this value matches the given grammar.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove()" class="member-name-link">remove</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#remove()" class="member-name-link">remove</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Remove this unit from the chain of lexical units and replace it by the next
  one, if any.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replaceBy(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">replaceBy</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;replacementUnit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#replaceBy(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">replaceBy</a><wbr>(<a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;replacementUnit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Replace this unit in the chain of lexical units.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shallowClone()" class="member-name-link">shallowClone</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shallowClone()" class="member-name-link">shallowClone</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Creates a shallow copy of this lexical unit, ignoring the next ones, and
  unlinked to any previous lexical unit.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#shallowMatch(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">shallowMatch</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Verify whether this lexical unit matches the given grammar, ignoring further
+ units in the lexical chain.</div>
 </div>
 </div>
 </div>
@@ -516,19 +551,76 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getMathFunctionIndex()">
-<h3>getMathFunctionIndex</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMathFunctionIndex</span>()</div>
-<div class="block">Gives the index of this unit as a mathematical function, according to
- <a href="../MathFunctions.html" title="interface in io.sf.carte.doc.style.css"><code>MathFunctions</code></a> .</div>
+<section class="detail" id="getMathFunction()">
+<h3>getMathFunction</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../CSSMathFunctionValue.MathFunction.html" title="enum class in io.sf.carte.doc.style.css">CSSMathFunctionValue.MathFunction</a></span>&nbsp;<span class="element-name">getMathFunction</span>()</div>
+<div class="block">Gives the ID of this unit as a mathematical function, according to
+ <a href="../CSSMathFunctionValue.MathFunction.html" title="enum class in io.sf.carte.doc.style.css"><code>CSSMathFunctionValue.MathFunction</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the function index, or <code>-1</code> if this lexical unit is not a
+<dd>the function enum, or <code>null</code> if this lexical unit is not a
          mathematical function (<code>MATH_FUNCTION</code>).</dd>
 <dt>See Also:</dt>
 <dd>
 <ul class="tag-list-long">
 <li><a href="LexicalUnit.LexicalType.html#MATH_FUNCTION"><code>LexicalUnit.LexicalType.MATH_FUNCTION</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMathFunctionIndex()">
+<h3>getMathFunctionIndex</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getMathFunctionIndex</span>()</div>
+<div class="block">Gives the index of this unit as a mathematical function.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the zero-based function index, or <code>-1</code> if this lexical unit is
+         not a mathematical function (<code>MATH_FUNCTION</code>).</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="LexicalUnit.LexicalType.html#MATH_FUNCTION"><code>LexicalUnit.LexicalType.MATH_FUNCTION</code></a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getContextIndex()">
+<h3>getContextIndex</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getContextIndex</span>()</div>
+<div class="block">Gives the index of this unit in its processing context.
+ <p>
+ This helps to speed processing in some contexts, like math or transform
+ functions.
+ </p>
+ <p>
+ For example, if this unit represents a <a href="LexicalUnit.LexicalType.html#MATH_FUNCTION"><code>MATH_FUNCTION</code></a>, this method would return the same result as
+ <a href="#getMathFunctionIndex()"><code>getMathFunctionIndex()</code></a>.
+ </p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the zero-based function index, or <code>-1</code> if this lexical unit
+         does not belong to any processing context.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTransformFunction()">
+<h3>getTransformFunction</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../TransformFunctions.html" title="enum class in io.sf.carte.doc.style.css">TransformFunctions</a></span>&nbsp;<span class="element-name">getTransformFunction</span>()</div>
+<div class="block">Gives the ID of this unit as a transform function, according to
+ <a href="../TransformFunctions.html" title="enum class in io.sf.carte.doc.style.css"><code>TransformFunctions</code></a>.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the function enum, or <code>null</code> if this lexical unit is not a
+         transform function (<code>TRANSFORM_FUNCTION</code>).</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="tag-list-long">
+<li><a href="LexicalUnit.LexicalType.html#TRANSFORM_FUNCTION"><code>LexicalUnit.LexicalType.TRANSFORM_FUNCTION</code></a></li>
 </ul>
 </dd>
 </dl>
@@ -673,6 +765,10 @@ loadScripts(document, 'script');</script>
  than a <code>FALSE</code>.
  </p>
  <p>
+ This method takes into account the next units in the lexical chain, if you do
+ not want that please use <a href="#shallowMatch(io.sf.carte.doc.style.css.CSSValueSyntax)"><code>shallowMatch(CSSValueSyntax)</code></a> instead.
+ </p>
+ <p>
  Here are some examples of matching:
  </p>
  <table style="border:1px solid;border-collapse:collapse;">
@@ -744,7 +840,31 @@ loadScripts(document, 'script');</script>
  commas and start and end with one.</li>
  </ol>
  <p>
- See also: <a href="../parser/SyntaxParser.html" title="class in io.sf.carte.doc.style.css.parser"><code>SyntaxParser</code></a>.
+ See also: <a href="../parser/SyntaxParser.html" title="class in io.sf.carte.doc.style.css.parser"><code>SyntaxParser</code></a>,
+ <a href="#shallowMatch(io.sf.carte.doc.style.css.CSSValueSyntax)"><code>shallowMatch(CSSValueSyntax)</code></a>.
+ </p>
+ <br/></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>syntax</code> - the syntax.</dd>
+<dt>Returns:</dt>
+<dd>the matching for the syntax.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="shallowMatch(io.sf.carte.doc.style.css.CSSValueSyntax)">
+<h3>shallowMatch</h3>
+<div class="member-signature"><span class="return-type"><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></span>&nbsp;<span class="element-name">shallowMatch</span><wbr><span class="parameters">(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</span></div>
+<div class="block">Verify whether this lexical unit matches the given grammar, ignoring further
+ units in the lexical chain.
+ <p>
+ This method is intended for use during shorthand decompositions, gradient
+ processing, etc.
+ </p>
+ <p>
+ See also: <a href="../parser/SyntaxParser.html" title="class in io.sf.carte.doc.style.css.parser"><code>SyntaxParser</code></a>,
+ <a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)"><code>matches(CSSValueSyntax)</code></a>.
  </p>
  <br/></div>
 <dl class="notes">

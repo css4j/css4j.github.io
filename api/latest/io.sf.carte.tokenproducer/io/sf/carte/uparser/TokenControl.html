@@ -99,7 +99,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -125,23 +125,56 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Enable the handling of comments of the given type.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTokenHandler()" class="member-name-link">getTokenHandler</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getContentHandler()" class="member-name-link">getContentHandler</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Get the current <code>TokenHandler</code>.</div>
+<div class="block">Get the current content handler.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptEofEndingQuoted(boolean)" class="member-name-link">setAcceptEofEndingQuoted</a><wbr>(boolean&nbsp;accept)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getControlHandler()" class="member-name-link">getControlHandler</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the current control handler.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getErrorHandler()" class="member-name-link">getErrorHandler</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the current error handler.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default <a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#getTokenHandler()" class="member-name-link">getTokenHandler</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">See <a href="#getContentHandler()"><code>getContentHandler()</code></a>, <a href="#getControlHandler()"><code>getControlHandler()</code></a>,
+             <a href="#getErrorHandler()"><code>getErrorHandler()</code></a></div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptEofEndingQuoted(boolean)" class="member-name-link">setAcceptEofEndingQuoted</a><wbr>(boolean&nbsp;accept)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If set, quoted strings ending with an EOF (End Of File). are processed through the
  relevant <code>quoted</code> method, albeit an error is reported in any case.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptNewlineEndingQuote(boolean)" class="member-name-link">setAcceptNewlineEndingQuote</a><wbr>(boolean&nbsp;accept)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptNewlineEndingQuote(boolean)" class="member-name-link">setAcceptNewlineEndingQuote</a><wbr>(boolean&nbsp;accept)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If set, quoted strings ending with an unescaped newline (instead of the closing quote)
  are processed through the relevant <code>quoted</code> method, albeit an error is
  reported in any case.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setContentHandler(io.sf.carte.uparser.ContentHandler)" class="member-name-link">setContentHandler</a><wbr>(<a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Set a new <code>ContentHandler</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setControlHandler(io.sf.carte.uparser.ControlHandler)" class="member-name-link">setControlHandler</a><wbr>(<a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Set a new <code>ControlHandler</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setErrorHandler(io.sf.carte.uparser.TokenErrorHandler)" class="member-name-link">setErrorHandler</a><wbr>(<a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Set a new <code>TokenErrorHandler</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalLocationHandling(boolean)" class="member-name-link">setExternalLocationHandling</a><wbr>(boolean&nbsp;enable)</code></div>
@@ -162,7 +195,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTokenHandler(io.sf.carte.uparser.TokenHandler3)" class="member-name-link">setTokenHandler</a><wbr>(<a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;&nbsp;handler)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set a new <code>TokenHandler</code>.</div>
+<div class="block">Set all the handlers with a new <code>TokenHandler3</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#skipNextCodepoint()" class="member-name-link">skipNextCodepoint</a>()</code></div>
@@ -238,10 +271,87 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getContentHandler()">
+<h3>getContentHandler</h3>
+<div class="member-signature"><span class="return-type"><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getContentHandler</span>()</div>
+<div class="block">Get the current content handler.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the <code>ContentHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setContentHandler(io.sf.carte.uparser.ContentHandler)">
+<h3>setContentHandler</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setContentHandler</span><wbr><span class="parameters">(<a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;?&gt;&nbsp;handler)</span></div>
+<div class="block">Set a new <code>ContentHandler</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>handler</code> - the new <code>ContentHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getControlHandler()">
+<h3>getControlHandler</h3>
+<div class="member-signature"><span class="return-type"><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getControlHandler</span>()</div>
+<div class="block">Get the current control handler.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the <code>ControlHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setControlHandler(io.sf.carte.uparser.ControlHandler)">
+<h3>setControlHandler</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setControlHandler</span><wbr><span class="parameters">(<a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;?&gt;&nbsp;handler)</span></div>
+<div class="block">Set a new <code>ControlHandler</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>handler</code> - the new <code>ControlHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getErrorHandler()">
+<h3>getErrorHandler</h3>
+<div class="member-signature"><span class="return-type"><a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getErrorHandler</span>()</div>
+<div class="block">Get the current error handler.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the <code>TokenErrorHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setErrorHandler(io.sf.carte.uparser.TokenErrorHandler)">
+<h3>setErrorHandler</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setErrorHandler</span><wbr><span class="parameters">(<a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;?&gt;&nbsp;handler)</span></div>
+<div class="block">Set a new <code>TokenErrorHandler</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>handler</code> - the new <code>TokenErrorHandler</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getTokenHandler()">
 <h3>getTokenHandler</h3>
-<div class="member-signature"><span class="return-type"><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getTokenHandler</span>()</div>
-<div class="block">Get the current <code>TokenHandler</code>.</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getTokenHandler</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">See <a href="#getContentHandler()"><code>getContentHandler()</code></a>, <a href="#getControlHandler()"><code>getControlHandler()</code></a>,
+             <a href="#getErrorHandler()"><code>getErrorHandler()</code></a></div>
+</div>
+<div class="block">Get the current content handler, assuming that it implements the
+ <code>TokenHandler3</code> interface.
+ <p>
+ This method is present only for backwards compatibility. Please avoid it, as
+ the content handler may or may not implement the legacy <code>TokenHandler3</code>
+ interface.
+ </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the <code>TokenHandler</code>.</dd>
@@ -252,10 +362,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTokenHandler(io.sf.carte.uparser.TokenHandler3)">
 <h3>setTokenHandler</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTokenHandler</span><wbr><span class="parameters">(<a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;&nbsp;handler)</span></div>
-<div class="block">Set a new <code>TokenHandler</code>.</div>
+<div class="block">Set all the handlers with a new <code>TokenHandler3</code>.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>handler</code> - the new <code>TokenHandler</code>.</dd>
+<dd><code>handler</code> - the new <code>TokenHandler3</code>.</dd>
 </dl>
 </section>
 </li>

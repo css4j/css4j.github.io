@@ -154,9 +154,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Enables a style sheet set.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBaseURL()" class="member-name-link">getBaseURL</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getBaseURL()" class="member-name-link">getBaseURL</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets the Base URL of this Document.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CSSCanvas.html" title="interface in io.sf.carte.doc.style.css">CSSCanvas</a></code></div>
@@ -233,9 +233,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">This document's current target medium name (e.g.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getURL(java.lang.String)" class="member-name-link">getURL</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getURL(java.lang.String)" class="member-name-link">getURL</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Gets an URL for the given URI, taking into account the Base URL if
  appropriate.</div>
 </div>
@@ -607,7 +607,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <li>
 <section class="detail" id="getBaseURL()">
 <h3>getBaseURL</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getBaseURL</span>()</div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getBaseURL</span>()</div>
 <div class="block">Gets the Base URL of this Document.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -618,8 +618,8 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <li>
 <section class="detail" id="getURL(java.lang.String)">
 <h3>getURL</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getURL</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</span>
-    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/MalformedURLException.html" title="class or interface in java.net" class="external-link">MalformedURLException</a></span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></span>&nbsp;<span class="element-name">getURL</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</span>
+            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/MalformedURLException.html" title="class or interface in java.net" class="external-link">MalformedURLException</a></span></div>
 <div class="block">Gets an URL for the given URI, taking into account the Base URL if
  appropriate.</div>
 <dl class="notes">
@@ -628,7 +628,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org
 <dt>Returns:</dt>
 <dd>the absolute URL.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/MalformedURLException.html" title="class or interface in java.net" class="external-link">MalformedURLException</a></code> - if the uri was wrong.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/MalformedURLException.html" title="class or interface in java.net" class="external-link">MalformedURLException</a></code> - if the uri cannot be converted to URL.</dd>
 </dl>
 </section>
 </li>

@@ -205,13 +205,16 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createExpression(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>createExpression</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CSSExpression.html" title="interface in io.sf.carte.doc.style.css">CSSExpression</a></span>&nbsp;<span class="element-name">createExpression</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;calcParams)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CSSExpression.html" title="interface in io.sf.carte.doc.style.css">CSSExpression</a></span>&nbsp;<span class="element-name">createExpression</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;calcParams)</span>
+                               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
 <div class="block">Create an expression from the given lexical unit.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>calcParams</code> - the lexical unit(s) of the operands.</dd>
 <dt>Returns:</dt>
 <dd>the expression.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - if an error was found.</dd>
 </dl>
 </section>
 </li>

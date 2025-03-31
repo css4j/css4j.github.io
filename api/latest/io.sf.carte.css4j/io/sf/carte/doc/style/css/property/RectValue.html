@@ -99,7 +99,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../CSSPrimitiveValue.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a></code>, <code><a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.style.css">CSSRectValue</a></code>, <code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code>, <code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
+<dd><code><a href="../CSSPrimitiveValue.html" title="interface in io.sf.carte.doc.style.css">CSSPrimitiveValue</a></code>, <code><a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.style.css">CSSRectValue</a></code>, <code><a href="../CSSShapeValue.html" title="interface in io.sf.carte.doc.style.css">CSSShapeValue</a></code>, <code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code>, <code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Cloneable.html" title="class or interface in java.lang" class="external-link">Cloneable</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">RectValue</span>
@@ -160,7 +160,7 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBottom()" class="member-name-link">getBottom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The bottom of the rectangle.</div>
@@ -180,7 +180,7 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get a string representation of the current value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeft()" class="member-name-link">getLeft</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The left of the rectangle.</div>
@@ -190,12 +190,12 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gives a minified version of the css text of the property.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRight()" class="member-name-link">getRight</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The right of the rectangle.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTop()" class="member-name-link">getTop</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The top of the rectangle.</div>
@@ -204,7 +204,7 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBottom(io.sf.carte.doc.style.css.property.PrimitiveValue)" class="member-name-link">setBottom</a><wbr>(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;bottom)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setBottom(io.sf.carte.doc.style.css.property.TypedValue)" class="member-name-link">setBottom</a><wbr>(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;bottom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)" class="member-name-link">setComponent</a><wbr>(int&nbsp;index,
@@ -213,13 +213,13 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <div class="block">If this value has components, set the component at <code>index</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeft(io.sf.carte.doc.style.css.property.PrimitiveValue)" class="member-name-link">setLeft</a><wbr>(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;left)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLeft(io.sf.carte.doc.style.css.property.TypedValue)" class="member-name-link">setLeft</a><wbr>(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;left)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRight(io.sf.carte.doc.style.css.property.PrimitiveValue)" class="member-name-link">setRight</a><wbr>(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;right)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRight(io.sf.carte.doc.style.css.property.TypedValue)" class="member-name-link">setRight</a><wbr>(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;right)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTop(io.sf.carte.doc.style.css.property.PrimitiveValue)" class="member-name-link">setTop</a><wbr>(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;top)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTop(io.sf.carte.doc.style.css.property.TypedValue)" class="member-name-link">setTop</a><wbr>(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;top)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri)</code></div>
@@ -276,15 +276,15 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="setTop(io.sf.carte.doc.style.css.property.PrimitiveValue)">
+<section class="detail" id="setTop(io.sf.carte.doc.style.css.property.TypedValue)">
 <h3>setTop</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTop</span><wbr><span class="parameters">(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;top)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTop</span><wbr><span class="parameters">(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;top)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTop()">
 <h3>getTop</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></span>&nbsp;<span class="element-name">getTop</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></span>&nbsp;<span class="element-name">getTop</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRectValue.html#getTop()">CSSRectValue</a></code></span></div>
 <div class="block">The top of the rectangle.</div>
 <dl class="notes">
@@ -296,15 +296,15 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 </section>
 </li>
 <li>
-<section class="detail" id="setRight(io.sf.carte.doc.style.css.property.PrimitiveValue)">
+<section class="detail" id="setRight(io.sf.carte.doc.style.css.property.TypedValue)">
 <h3>setRight</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRight</span><wbr><span class="parameters">(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;right)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRight</span><wbr><span class="parameters">(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;right)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRight()">
 <h3>getRight</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></span>&nbsp;<span class="element-name">getRight</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></span>&nbsp;<span class="element-name">getRight</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRectValue.html#getRight()">CSSRectValue</a></code></span></div>
 <div class="block">The right of the rectangle.</div>
 <dl class="notes">
@@ -316,15 +316,15 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 </section>
 </li>
 <li>
-<section class="detail" id="setBottom(io.sf.carte.doc.style.css.property.PrimitiveValue)">
+<section class="detail" id="setBottom(io.sf.carte.doc.style.css.property.TypedValue)">
 <h3>setBottom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBottom</span><wbr><span class="parameters">(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;bottom)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBottom</span><wbr><span class="parameters">(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;bottom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBottom()">
 <h3>getBottom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></span>&nbsp;<span class="element-name">getBottom</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></span>&nbsp;<span class="element-name">getBottom</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRectValue.html#getBottom()">CSSRectValue</a></code></span></div>
 <div class="block">The bottom of the rectangle.</div>
 <dl class="notes">
@@ -336,15 +336,15 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 </section>
 </li>
 <li>
-<section class="detail" id="setLeft(io.sf.carte.doc.style.css.property.PrimitiveValue)">
+<section class="detail" id="setLeft(io.sf.carte.doc.style.css.property.TypedValue)">
 <h3>setLeft</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeft</span><wbr><span class="parameters">(<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a>&nbsp;left)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLeft</span><wbr><span class="parameters">(<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a>&nbsp;left)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLeft()">
 <h3>getLeft</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></span>&nbsp;<span class="element-name">getLeft</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></span>&nbsp;<span class="element-name">getLeft</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRectValue.html#getLeft()">CSSRectValue</a></code></span></div>
 <div class="block">The left of the rectangle.</div>
 <dl class="notes">
@@ -415,22 +415,6 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <dd><code><a href="TypedValue.html#getComponentCount()">getComponentCount</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
 <dt>Returns:</dt>
 <dd>the number of components, <code>0</code> if none.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCssText()">
-<h3>getCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCssText</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="StyleValue.html#getCssText()">StyleValue</a></code></span></div>
-<div class="block">Get a string representation of the current value.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#getCssText()">getCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="StyleValue.html#getCssText()">getCssText</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the css text representing the value of this property.</dd>
 </dl>
 </section>
 </li>
@@ -507,10 +491,24 @@ implements <a href="../CSSRectValue.html" title="interface in io.sf.carte.doc.st
 <dd><code><a href="../CSSTypedValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../CSSValue.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="TypedValue.html#clone()">clone</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
 <dt>Returns:</dt>
 <dd>a copy of this object.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCssText()">
+<h3>getCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCssText</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="StyleValue.html#getCssText()">StyleValue</a></code></span></div>
+<div class="block">Get a string representation of the current value.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSValue.html#getCssText()">getCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="StyleValue.html#getCssText()">getCssText</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
+<dt>Returns:</dt>
+<dd>the css text representing the value of this property.</dd>
 </dl>
 </section>
 </li>

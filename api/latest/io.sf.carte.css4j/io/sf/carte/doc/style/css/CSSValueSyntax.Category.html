@@ -129,17 +129,25 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Matches any angle.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#color" class="member-name-link">color</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#basicShape" class="member-name-link">basicShape</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Matches a basic shape (<code>rect()</code>, <code>path()</code>, etc.)</div>
+</div>
+<div class="col-first even-row-color"><code><a href="#color" class="member-name-link">color</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Matches any color.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#counter" class="member-name-link">counter</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#counter" class="member-name-link">counter</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Matches any counter (<code>&lt;counter()&gt; | &lt;counters()&gt;</code> ).</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#customIdent" class="member-name-link">customIdent</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#customIdent" class="member-name-link">customIdent</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Matches any valid custom identifier.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#easingFunction" class="member-name-link">easingFunction</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Matches any easing function, like <code>linear()</code> or <code>cubic-bezier()</code>.</div>
 </div>
 <div class="col-first even-row-color"><code><a href="#flex" class="member-name-link">flex</a></code></div>
 <div class="col-last even-row-color">
@@ -409,6 +417,20 @@ the order they are declared.</div>
 </section>
 </li>
 <li>
+<section class="detail" id="easingFunction">
+<h3>easingFunction</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CSSValueSyntax.Category.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Category</a></span>&nbsp;<span class="element-name">easingFunction</span></div>
+<div class="block">Matches any easing function, like <code>linear()</code> or <code>cubic-bezier()</code>.
+ <p>
+ <code>&lt;easing-function&gt;</code>
+ </p>
+ <p>
+ See <a href="https://www.w3.org/TR/css-easing-1/#easing-functions">CSS Easing
+ Functions Level 1</a>.
+ </p></div>
+</section>
+</li>
+<li>
 <section class="detail" id="transformFunction">
 <h3>transformFunction</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CSSValueSyntax.Category.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Category</a></span>&nbsp;<span class="element-name">transformFunction</span></div>
@@ -450,6 +472,16 @@ the order they are declared.</div>
 <div class="block">Matches any counter (<code>&lt;counter()&gt; | &lt;counters()&gt;</code> ).
  <p>
  <code>&lt;counter&gt;</code>
+ </p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="basicShape">
+<h3>basicShape</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="CSSValueSyntax.Category.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Category</a></span>&nbsp;<span class="element-name">basicShape</span></div>
+<div class="block">Matches a basic shape (<code>rect()</code>, <code>path()</code>, etc.)
+ <p>
+ <code>&lt;basic-shape&gt;</code>
  </p></div>
 </section>
 </li>

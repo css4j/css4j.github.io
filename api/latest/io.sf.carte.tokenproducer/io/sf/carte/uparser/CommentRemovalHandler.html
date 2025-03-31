@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code>, <code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code>, <code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CommentRemovalHandler</span>
@@ -317,9 +317,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
  object that can be used to fine-control the parsing.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#tokenStart(io.sf.carte.uparser.TokenControl)">tokenStart</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ControlHandler.html#tokenStart(io.sf.carte.uparser.TokenControl)">tokenStart</a></code>&nbsp;in interface&nbsp;<code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#tokenStart(io.sf.carte.uparser.TokenControl)">tokenStart</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#tokenStart(io.sf.carte.uparser.TokenControl)">tokenStart</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>control</code> - the <code>TokenControl</code> object in charge of parsing.</dd>
 </dl>
@@ -334,9 +334,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A word was found by the parser (includes connector punctuation).</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#word(int,java.lang.CharSequence)">word</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#word(int,java.lang.CharSequence)">word</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#word(int,java.lang.CharSequence)">word</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#word(int,java.lang.CharSequence)">word</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the word was found.</dd>
 <dd><code>word</code> - the word.</dd>
@@ -352,9 +352,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A separator (Zs, Zl and Zp unicode categories) was found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#separator(int,int)">separator</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#separator(int,int)">separator</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#separator(int,int)">separator</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#separator(int,int)">separator</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the separator was found.</dd>
 <dd><code>codePoint</code> - the codepoint of the found separator.</dd>
@@ -371,9 +371,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A quoted string was found by the parser.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#quoted(int,java.lang.CharSequence,int)">quoted</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#quoted(int,java.lang.CharSequence,int)">quoted</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#quoted(int,java.lang.CharSequence,int)">quoted</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#quoted(int,java.lang.CharSequence,int)">quoted</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the quoted string was found.</dd>
 <dd><code>quoted</code> - the quoted sequence of characters, without the quotes.</dd>
@@ -391,9 +391,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A quoted string was found by the parser, and contains control characters.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#quotedWithControl(int,java.lang.CharSequence,int)">quotedWithControl</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#quotedWithControl(int,java.lang.CharSequence,int)">quotedWithControl</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#quotedWithControl(int,java.lang.CharSequence,int)">quotedWithControl</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#quotedWithControl(int,java.lang.CharSequence,int)">quotedWithControl</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the quoted string was found.</dd>
 <dd><code>quoted</code> - the quoted sequence of characters, without the quotes.</dd>
@@ -410,9 +410,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">An unescaped FF/LF/CR control was found while assembling a quoted string.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#quotedNewlineChar(int,int)">quotedNewlineChar</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ControlHandler.html#quotedNewlineChar(int,int)">quotedNewlineChar</a></code>&nbsp;in interface&nbsp;<code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#quotedNewlineChar(int,int)">quotedNewlineChar</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#quotedNewlineChar(int,int)">quotedNewlineChar</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the control was found.</dd>
 <dd><code>codePoint</code> - the FF/LF/CR codepoint.</dd>
@@ -427,9 +427,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>(</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#leftParenthesis(int)">leftParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#leftParenthesis(int)">leftParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#leftParenthesis(int)">leftParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#leftParenthesis(int)">leftParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -443,9 +443,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>[</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#leftSquareBracket(int)">leftSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#leftSquareBracket(int)">leftSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#leftSquareBracket(int)">leftSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#leftSquareBracket(int)">leftSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -459,9 +459,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>{</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#leftCurlyBracket(int)">leftCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#leftCurlyBracket(int)">leftCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#leftCurlyBracket(int)">leftCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#leftCurlyBracket(int)">leftCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -475,9 +475,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>)</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#rightParenthesis(int)">rightParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#rightParenthesis(int)">rightParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#rightParenthesis(int)">rightParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#rightParenthesis(int)">rightParenthesis</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -491,9 +491,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>]</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#rightSquareBracket(int)">rightSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#rightSquareBracket(int)">rightSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#rightSquareBracket(int)">rightSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#rightSquareBracket(int)">rightSquareBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -507,9 +507,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">Called when the <code>}</code> codepoint is found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#rightCurlyBracket(int)">rightCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#rightCurlyBracket(int)">rightCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#rightCurlyBracket(int)">rightCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#rightCurlyBracket(int)">rightCurlyBracket</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the codepoint was found.</dd>
 </dl>
@@ -529,9 +529,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
  method.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#character(int,int)">character</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#character(int,int)">character</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#character(int,int)">character</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#character(int,int)">character</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the punctuation was found.</dd>
 <dd><code>codePoint</code> - the codepoint of the found punctuation.</dd>
@@ -547,9 +547,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A codepoint preceded with a backslash was found outside of quoted text.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#escaped(int,int)">escaped</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#escaped(int,int)">escaped</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#escaped(int,int)">escaped</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#escaped(int,int)">escaped</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the escaped codepoint was found.</dd>
 <dd><code>codePoint</code> - the escaped codepoint.</dd>
@@ -565,9 +565,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A control character codepoint was found.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#control(int,int)">control</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ControlHandler.html#control(int,int)">control</a></code>&nbsp;in interface&nbsp;<code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#control(int,int)">control</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#control(int,int)">control</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the control codepoint was found.</dd>
 <dd><code>codePoint</code> - the control codepoint.</dd>
@@ -584,9 +584,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">A commented string was found by the parser.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#commented(int,int,java.lang.String)">commented</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#commented(int,int,java.lang.String)">commented</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#commented(int,int,java.lang.String)">commented</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#commented(int,int,java.lang.String)">commented</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the commented string was found.</dd>
 <dd><code>commentType</code> - the type of comment.</dd>
@@ -602,9 +602,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="block">The stream that was being parsed reached its end.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#endOfStream(int)">endOfStream</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="ContentHandler.html#endOfStream(int)">endOfStream</a></code>&nbsp;in interface&nbsp;<code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#endOfStream(int)">endOfStream</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#endOfStream(int)">endOfStream</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>len</code> - the length of the processed stream.</dd>
 </dl>
@@ -623,9 +623,9 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
  character at the end of the stream or an unmatched quote.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler2.html#error(int,byte,java.lang.CharSequence)">error</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
+<dd><code><a href="TokenErrorHandler.html#error(int,byte,java.lang.CharSequence)">error</a></code>&nbsp;in interface&nbsp;<code><a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 <dt>Specified by:</dt>
-<dd><code><a href="TokenHandler3.html#error(int,byte,java.lang.CharSequence)">error</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
+<dd><code><a href="TokenHandler2.html#error(int,byte,java.lang.CharSequence)">error</a></code>&nbsp;in interface&nbsp;<code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>index</code> - the index at which the error was found.</dd>
 <dd><code>errCode</code> - the error code.</dd>

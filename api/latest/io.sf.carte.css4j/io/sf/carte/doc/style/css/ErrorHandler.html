@@ -111,7 +111,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -179,57 +179,70 @@ loadScripts(document, 'script');</script>
 <div class="block">Check whether this handler has processed any media-related warnings.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPolicyErrors()" class="member-name-link">hasPolicyErrors</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasNodeErrors()" class="member-name-link">hasNodeErrors</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Check whether this handler has processed any policy errors.</div>
+<div class="block">Check whether this handler has processed any Node errors.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasWarnings()" class="member-name-link">hasWarnings</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPolicyErrors()" class="member-name-link">hasPolicyErrors</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Check whether this handler has processed any policy errors.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasWarnings()" class="member-name-link">hasWarnings</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Check whether this handler has processed any warnings.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#inlineStyleError(io.sf.carte.doc.style.css.CSSElement,java.lang.Exception,java.lang.String)" class="member-name-link">inlineStyleError</a><wbr>(<a href="CSSElement.html" title="interface in io.sf.carte.doc.style.css">CSSElement</a>&nbsp;owner,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#inlineStyleError(io.sf.carte.doc.style.css.CSSElement,java.lang.Exception,java.lang.String)" class="member-name-link">inlineStyleError</a><wbr>(<a href="CSSElement.html" title="interface in io.sf.carte.doc.style.css">CSSElement</a>&nbsp;owner,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&nbsp;exception,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;inlineStyle)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Report a problem with setting an inline style, that caused an exception to be
  thrown by lower-level parsing (NSAC).</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#ioError(java.lang.String,java.io.IOException)" class="member-name-link">ioError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#ioError(java.lang.String,java.io.IOException)" class="member-name-link">ioError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a>&nbsp;exception)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">A I/O error was found when retrieving a resource while processing an
  attribute (usually <code>href</code>) or a rule, generally an @import
  or @font-face rule.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#linkedSheetError(java.lang.Exception,io.sf.carte.doc.style.css.CSSStyleSheet)" class="member-name-link">linkedSheetError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&nbsp;exception,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#linkedSheetError(java.lang.Exception,io.sf.carte.doc.style.css.CSSStyleSheet)" class="member-name-link">linkedSheetError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&nbsp;exception,
  <a href="CSSStyleSheet.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheet</a>&lt;? extends <a href="CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&gt;&nbsp;sheet)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Report an error associated to a <code>LinkStyle</code> style sheet (i.e.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#linkedStyleError(org.w3c.dom.Node,java.lang.String)" class="member-name-link">linkedStyleError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#linkedStyleError(org.w3c.dom.Node,java.lang.String)" class="member-name-link">linkedStyleError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Report an error related to linked style, where it was not possible to create
  the style sheet linked from <code>node</code> due to an issue with the given
  node or other node in the document (as opposed to an issue with the linked
  style sheet itself).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#mediaQueryError(org.w3c.dom.Node,io.sf.carte.doc.style.css.CSSMediaException)" class="member-name-link">mediaQueryError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
- <a href="CSSMediaException.html" title="class in io.sf.carte.doc.style.css">CSSMediaException</a>&nbsp;exception)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Report a media query error.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#mediaQueryWarning(org.w3c.dom.Node,io.sf.carte.doc.style.css.CSSMediaException)" class="member-name-link">mediaQueryWarning</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#mediaQueryError(org.w3c.dom.Node,io.sf.carte.doc.style.css.CSSMediaException)" class="member-name-link">mediaQueryError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
  <a href="CSSMediaException.html" title="class in io.sf.carte.doc.style.css">CSSMediaException</a>&nbsp;exception)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Report a media query error.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#mediaQueryWarning(org.w3c.dom.Node,io.sf.carte.doc.style.css.CSSMediaException)" class="member-name-link">mediaQueryWarning</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;ownerNode,
+ <a href="CSSMediaException.html" title="class in io.sf.carte.doc.style.css">CSSMediaException</a>&nbsp;exception)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Report a media query warning.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#nodeError(org.w3c.dom.Node,java.lang.String,java.lang.Throwable)" class="member-name-link">nodeError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;t)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">A generic error was found when processing a Node, one that is not directly
+ associated to a style sheet or declaration.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#policyError(org.w3c.dom.Node,java.lang.String)" class="member-name-link">policyError</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
@@ -292,7 +305,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Check whether this handler has processed computed style errors.
  <p>
  Presentational hint errors are included in this category, as they are found
- during style computation.</div>
+ during style computation.
+ </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if this handler processed computed style errors.</dd>
@@ -307,7 +321,8 @@ loadScripts(document, 'script');</script>
  element.
  <p>
  Presentational hint errors are included in this category, as they are found
- during style computation.</div>
+ during style computation.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>element</code> - the element.</dd>
@@ -328,6 +343,17 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasNodeErrors()">
+<h3>hasNodeErrors</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasNodeErrors</span>()</div>
+<div class="block">Check whether this handler has processed any Node errors.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if this handler processed any Node errors.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasIOErrors()">
 <h3>hasIOErrors</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasIOErrors</span>()</div>
@@ -344,7 +370,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasErrors</span>()</div>
 <div class="block">Check whether this handler has processed any non-transient error.
  <p>
- I/O errors are not taken into account by this method.</div>
+ I/O errors are not taken into account by this method.
+ </p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if this handler processed any non-transient errors.</dd>
@@ -487,6 +514,27 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>uri</code> - the uri for the resource.</dd>
 <dd><code>exception</code> - the exception describing the problem.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="nodeError(org.w3c.dom.Node,java.lang.String,java.lang.Throwable)">
+<h3>nodeError</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">nodeError</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&nbsp;t)</span></div>
+<div class="block">A generic error was found when processing a Node, one that is not directly
+ associated to a style sheet or declaration.
+ <p>
+ It may be called while processing the URI of a document or a resource,
+ generally the <code>href</code> attribute.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>node</code> - the node.</dd>
+<dd><code>message</code> - the error message. May be <code>null</code> if an exception is
+                provided.</dd>
+<dd><code>t</code> - the exception, or <code>null</code> if there is a message.</dd>
 </dl>
 </section>
 </li>

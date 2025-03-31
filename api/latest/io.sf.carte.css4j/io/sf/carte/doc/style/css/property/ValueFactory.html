@@ -141,7 +141,7 @@ implements <a href="../CSSValueFactory.html" title="interface in io.sf.carte.doc
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -190,36 +190,61 @@ implements <a href="../CSSValueFactory.html" title="interface in io.sf.carte.doc
 <div class="block">Check whether the factory has the given flag set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isAngleSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isAngleSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isAngleOrPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isAngleOrPercentageSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC unit type is an angle unit.</div>
+<div class="block">Tests whether the given NSAC unit type is an angle or percentage unit (or
+ zero, which is to be interpreted as length 0).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isPlainNumberOrPercentSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isPlainNumberOrPercentSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isColorSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isColorSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC unit type is a plain number (real or integer) or a percentage.</div>
+<div class="block">Test whether the value represents a color.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isPositiveSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isPositiveSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isLengthOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isLengthOrNumberSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC value could represent a size greater than zero
- (e.g. font size).</div>
+<div class="block">Tests whether the given NSAC unit type is a non-negative <code>&lt;length&gt;</code> or
+ <code>&lt;number&gt;</code> unit (or a unknown unit).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isResolutionSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isResolutionSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isLengthPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isLengthPercentageSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the value represents a length or a percentage.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isLengthSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isLengthSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test whether the value represents a non-negative length.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isPercentageOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isPercentageOrNumberSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Tests whether the given NSAC unit type is a non-negative number (real or
+ integer) or a percentage.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isPositiveSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isPositiveSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Tests whether the given NSAC value represents a length (including unknown
+ units) or percentage greater or equal to zero (e.g.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isResolutionSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isResolutionSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Tests whether the unit type of the given NSAC lexical unit is a resolution unit.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isSizeOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeOrNumberSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isSizeOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeOrNumberSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the given NSAC unit type is a size or numeric unit (or a
- unknown unit).</div>
+<div class="block">Tests whether the given NSAC unit type is a non-negative
+ <code>&lt;length-percentage&gt;</code> or <code>&lt;number&gt;</code> unit (or a unknown unit).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Tests whether the unit type of the given NSAC lexical unit can apply to size (e.g.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4 method-summary-table-tab6"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#isSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isSizeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#isLengthPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)"><code>isLengthPercentageSACUnit(LexicalUnit)</code></a> instead.</div>
+</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isTimeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">isTimeSACUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</code></div>
@@ -309,97 +334,198 @@ implements <a href="../CSSValueFactory.html" title="interface in io.sf.carte.doc
 <li>
 <section class="detail" id="isSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isSizeSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSizeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the unit type of the given NSAC lexical unit can apply to size (e.g.
- block size).</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSizeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Use <a href="#isLengthPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)"><code>isLengthPercentageSACUnit(LexicalUnit)</code></a> instead.</div>
+</div>
+<div class="block">Tests whether the unit type of the given NSAC lexical unit can apply to size
+ (e.g. block size).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unit</code> - the NSAC lexical unit.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if it is a size type (including percentage and unknown dimension), false
-         otherwise.</dd>
+<dd><code>true</code> if it is a size type, false otherwise.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="isResolutionSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
-<h3>isResolutionSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResolutionSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the unit type of the given NSAC lexical unit is a resolution unit.</div>
+<section class="detail" id="isLengthSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isLengthSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLengthSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                               throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Test whether the value represents a non-negative length.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>unit</code> - the NSAC lexical unit value.</dd>
+<dd><code>lunit</code> - the lexical unit to test.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if it is a resolution type, <code>false</code> otherwise.</dd>
+<dd><code>true</code> if the value is a length in the [0-&#x221E;]
+         interval.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isLengthPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isLengthPercentageSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLengthPercentageSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                                         throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Test whether the value represents a length or a percentage.
+ <p>
+ The value can be positive or negative.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lunit</code> - the lexical unit to test.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the value is a length or a percentage.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isPositiveSizeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isPositiveSizeSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPositiveSizeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC value could represent a size greater than zero
- (e.g. font size).</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPositiveSizeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                                     throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Tests whether the given NSAC value represents a length (including unknown
+ units) or percentage greater or equal to zero (e.g. <code>font-size</code> or
+ <code>column-width</code>).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>unit</code> - the lexical value.</dd>
+<dd><code>lunit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if it is a size type (including percentage and
-         unknown dimension), false otherwise.</dd>
+<dd><code>true</code> if it is a non-negative <code>&lt;length-percentage&gt;</code>
+         type, <code>false</code> otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isLengthOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isLengthOrNumberSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isLengthOrNumberSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                                       throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Tests whether the given NSAC unit type is a non-negative <code>&lt;length&gt;</code> or
+ <code>&lt;number&gt;</code> unit (or a unknown unit).</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lunit</code> - the lexical value.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if it is a size or numeric type (including
+         percentage) in the [0-&#x221E;] interval, <code>false</code>
+         otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isSizeOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isSizeOrNumberSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSizeOrNumberSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC unit type is a size or numeric unit (or a
- unknown unit).</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isSizeOrNumberSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                                     throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Tests whether the given NSAC unit type is a non-negative
+ <code>&lt;length-percentage&gt;</code> or <code>&lt;number&gt;</code> unit (or a unknown unit).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>unit</code> - the lexical value.</dd>
+<dd><code>lunit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if it is a size or numeric type (including
-         percentage), false otherwise.</dd>
+         percentage) in the [0-&#x221E;] interval, <code>false</code>
+         otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="isPlainNumberOrPercentSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
-<h3>isPlainNumberOrPercentSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPlainNumberOrPercentSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC unit type is a plain number (real or integer) or a percentage.</div>
+<section class="detail" id="isPercentageOrNumberSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isPercentageOrNumberSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isPercentageOrNumberSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span></div>
+<div class="block">Tests whether the given NSAC unit type is a non-negative number (real or
+ integer) or a percentage.
+ <p>
+ Useful to check for <code>border-image-slice</code>.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>unit</code> - the lexical value.</dd>
+<dd><code>lunit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if is a plain number or a percentage, <code>false</code> otherwise.</dd>
+<dd><code>true</code> if is a number or a percentage in the [0-&#x221E;]
+         interval, <code>false</code> otherwise.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="isAngleSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
-<h3>isAngleSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isAngleSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
-<div class="block">Tests whether the given NSAC unit type is an angle unit.</div>
+<section class="detail" id="isResolutionSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isResolutionSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isResolutionSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                                   throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Tests whether the unit type of the given NSAC lexical unit is a resolution unit.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lunit</code> - the NSAC lexical unit value.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if it is a resolution type, <code>false</code> otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isAngleOrPercentageSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isAngleOrPercentageSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isAngleOrPercentageSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span>
+                                          throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Tests whether the given NSAC unit type is an angle or percentage unit (or
+ zero, which is to be interpreted as length 0).
+ <p>
+ This is useful for checking color stops in gradients.
+ </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if is an angle type, <code>false</code> otherwise.</dd>
+<dd><code>true</code> if is an angle or percentage type,
+         <code>false</code> otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isTimeSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
 <h3>isTimeSACUnit</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isTimeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isTimeSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;unit)</span>
+                             throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
 <div class="block">Tests whether the given NSAC unit type is a time unit.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>unit</code> - the lexical value.</dd>
 <dt>Returns:</dt>
 <dd><code>true</code> if is a time type, <code>false</code> otherwise.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isColorSACUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
+<h3>isColorSACUnit</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isColorSACUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lunit)</span>
+                              throws <span class="exceptions"><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></span></div>
+<div class="block">Test whether the value represents a color.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>lunit</code> - the lexical unit to test.</dd>
+<dt>Returns:</dt>
+<dd>true if the value is a color.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="CSSLexicalProcessingException.html" title="class in io.sf.carte.doc.style.css.property">CSSLexicalProcessingException</a></code> - if a <code>PROXY</code> value was found.</dd>
 </dl>
 </section>
 </li>
