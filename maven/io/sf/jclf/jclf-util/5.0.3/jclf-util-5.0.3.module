@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.jclf",
+    "module": "jclf-util",
+    "version": "5.0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.13"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-io",
+          "version": {
+            "requires": "5.0.3"
+          }
+        },
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-text",
+          "version": {
+            "requires": "5.0.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jclf-util-5.0.3.jar",
+          "url": "jclf-util-5.0.3.jar",
+          "size": 44791,
+          "sha512": "1dd78cba198c214cda21f38f362cb904b55c73caa5f3b942960081cee5e4e73a0a8c01dc166f889427a0dd1b96456e5ea148920bdc3b4cda7fec1ded27bf200d",
+          "sha256": "9e90ca39372ab8b692e9c61878d5de5d995d3a99c2d5a640effeef04d37cb9c6",
+          "sha1": "a196101a94017f01551136a5f269c2f16a06f319",
+          "md5": "ba59c044e92f3dc845030e3b8c593244"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-io",
+          "version": {
+            "requires": "5.0.3"
+          }
+        },
+        {
+          "group": "io.sf.jclf",
+          "module": "jclf-text",
+          "version": {
+            "requires": "5.0.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jclf-util-5.0.3.jar",
+          "url": "jclf-util-5.0.3.jar",
+          "size": 44791,
+          "sha512": "1dd78cba198c214cda21f38f362cb904b55c73caa5f3b942960081cee5e4e73a0a8c01dc166f889427a0dd1b96456e5ea148920bdc3b4cda7fec1ded27bf200d",
+          "sha256": "9e90ca39372ab8b692e9c61878d5de5d995d3a99c2d5a640effeef04d37cb9c6",
+          "sha1": "a196101a94017f01551136a5f269c2f16a06f319",
+          "md5": "ba59c044e92f3dc845030e3b8c593244"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jclf-util-5.0.3-javadoc.jar",
+          "url": "jclf-util-5.0.3-javadoc.jar",
+          "size": 176074,
+          "sha512": "0b91c586d1112d9a2e7895a3b6f15c5615f82219077f39f7c87f13435abcd68aa93099935c7dafd5f50bfee7b82edf447af83bb9a44bfb402d61cc24ddcf76ed",
+          "sha256": "9a89e0fe725bf72fd94b7de1b9d7958b19d708e95bdda5e712d8653f6fcd75c9",
+          "sha1": "578ab6ed68f781563b62720885d12795112d32bc",
+          "md5": "8c68040cec86b6e2150d61af4fcd03e6"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jclf-util-5.0.3-sources.jar",
+          "url": "jclf-util-5.0.3-sources.jar",
+          "size": 31934,
+          "sha512": "a686f2e4888c13fc167d579cb793287ebf9a889879c77eca2ebbc163360aed30ab9d0d99a1154bdcf8e8a43becae3ea88baf8e6145fb8948c412555b2a0867d9",
+          "sha256": "710280a5a2a4af033d3542cf1a12487ad9b124ac05e32dc07782282b9e2505db",
+          "sha1": "f12d95e4dbe6e4c9d773d42d01360e264e349799",
+          "md5": "f7bad1230c62608704517ee7f20c6978"
+        }
+      ]
+    }
+  ]
+}
