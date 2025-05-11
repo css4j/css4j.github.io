@@ -1,0 +1,105 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-awt-util",
+    "version": "2.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-awt-util-2.0.1.jar",
+          "url": "echosvg-awt-util-2.0.1.jar",
+          "size": 423556,
+          "sha512": "2143de505c6394dd65e1153da53eb5000809ca7e3882bf808723bfc480f788d88edb71ee305253dbc7f4b7e03cf8cf0af8e61cac55cd77bb0c96a2c2f378da75",
+          "sha256": "dde3abfd00ae9b3733625ea30635a140de46a51851eed66fbba81cfc93643726",
+          "sha1": "f184aee93de5e2e0be95b5fba3dbd809b31c0d2c",
+          "md5": "cbf9ff723594f5e1fd7a55a5bd76a3dc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.0.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-awt-util-2.0.1.jar",
+          "url": "echosvg-awt-util-2.0.1.jar",
+          "size": 423556,
+          "sha512": "2143de505c6394dd65e1153da53eb5000809ca7e3882bf808723bfc480f788d88edb71ee305253dbc7f4b7e03cf8cf0af8e61cac55cd77bb0c96a2c2f378da75",
+          "sha256": "dde3abfd00ae9b3733625ea30635a140de46a51851eed66fbba81cfc93643726",
+          "sha1": "f184aee93de5e2e0be95b5fba3dbd809b31c0d2c",
+          "md5": "cbf9ff723594f5e1fd7a55a5bd76a3dc"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-awt-util-2.0.1-sources.jar",
+          "url": "echosvg-awt-util-2.0.1-sources.jar",
+          "size": 393191,
+          "sha512": "46e2b823ade2ba71da7940e72509e675dd34ea36bc37bb8810eb326e7df6ee97f64d59402ebf72f2c9b467a6fc720348617afe0109c3386a8fbe6e3299b4b90c",
+          "sha256": "186dc62b2fb151a0dbcece073122194a83ad1c52ccf5c9714523e1e35efe1e52",
+          "sha1": "845e683d6fa96ad1d5cca97c6d6e01f46fcc5d3c",
+          "md5": "828e15b8fcd54cd4be0fb0d5464dbb63"
+        }
+      ]
+    }
+  ]
+}
