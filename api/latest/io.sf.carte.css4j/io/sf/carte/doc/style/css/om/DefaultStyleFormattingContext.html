@@ -148,9 +148,10 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
  the general serialization flow does not give the desired results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endCurrentContext(org.w3c.dom.css.CSSRule)" class="member-name-link">endCurrentContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endCurrentContext(io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">endCurrentContext</a><wbr>(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Notify this context that the style was serialized for the given rule.</div>
+<div class="block">Notify this context that the contents of the given rule, either a declaration
+ or a rule list, were serialized.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#endInlinePropertyDeclaration(io.sf.carte.util.SimpleWriter)" class="member-name-link">endInlinePropertyDeclaration</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri)</code></div>
@@ -180,7 +181,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 <div class="block">End a style declaration.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParentContext(org.w3c.dom.css.CSSRule)" class="member-name-link">setParentContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParentContext(io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">setParentContext</a><wbr>(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the parent of the rule being serialized, if any, providing additional
  context for the serialization.</div>
@@ -197,7 +198,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 <div class="block">Start a style declaration (of either properties or descriptors).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateContext(org.w3c.dom.css.CSSRule)" class="member-name-link">updateContext</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateContext(io.sf.carte.doc.style.css.CSSRule)" class="member-name-link">updateContext</a><wbr>(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Update this context for the given rule.</div>
 </div>
@@ -301,17 +302,19 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 </section>
 </li>
 <li>
-<section class="detail" id="endCurrentContext(org.w3c.dom.css.CSSRule)">
+<section class="detail" id="endCurrentContext(io.sf.carte.doc.style.css.CSSRule)">
 <h3>endCurrentContext</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">endCurrentContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#endCurrentContext(org.w3c.dom.css.CSSRule)">StyleFormattingContext</a></code></span></div>
-<div class="block">Notify this context that the style was serialized for the given rule.
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">endCurrentContext</span><wbr><span class="parameters">(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#endCurrentContext(io.sf.carte.doc.style.css.CSSRule)">StyleFormattingContext</a></code></span></div>
+<div class="block">Notify this context that the contents of the given rule, either a declaration
+ or a rule list, were serialized.
  <p>
- It is called before <a href="../StyleFormattingContext.html#endStyleDeclaration(io.sf.carte.util.SimpleWriter)"><code>StyleFormattingContext.endStyleDeclaration(SimpleWriter)</code></a>.
+ It is generally called before <a href="../StyleFormattingContext.html#endStyleDeclaration(io.sf.carte.util.SimpleWriter)"><code>StyleFormattingContext.endStyleDeclaration(SimpleWriter)</code></a> and
+ <a href="../StyleFormattingContext.html#endRuleList(io.sf.carte.util.SimpleWriter)"><code>StyleFormattingContext.endRuleList(SimpleWriter)</code></a>.
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../StyleFormattingContext.html#endCurrentContext(org.w3c.dom.css.CSSRule)">endCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
+<dd><code><a href="../StyleFormattingContext.html#endCurrentContext(io.sf.carte.doc.style.css.CSSRule)">endCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>rule</code> - the rule being serialized.</dd>
 </dl>
@@ -416,7 +419,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#endStyleDeclaration(io.sf.carte.util.SimpleWriter)">StyleFormattingContext</a></code></span></div>
 <div class="block">End a style declaration.
  <p>
- Called after <a href="../StyleFormattingContext.html#endCurrentContext(org.w3c.dom.css.CSSRule)"><code>StyleFormattingContext.endCurrentContext(CSSRule)</code></a> and before
+ Called after <a href="../StyleFormattingContext.html#endCurrentContext(io.sf.carte.doc.style.css.CSSRule)"><code>StyleFormattingContext.endCurrentContext(CSSRule)</code></a> and before
  <a href="../StyleFormattingContext.html#writeRightCurlyBracket(io.sf.carte.util.SimpleWriter)"><code>StyleFormattingContext.writeRightCurlyBracket(SimpleWriter)</code></a>.
  </p></div>
 <dl class="notes">
@@ -431,10 +434,10 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 </section>
 </li>
 <li>
-<section class="detail" id="setParentContext(org.w3c.dom.css.CSSRule)">
+<section class="detail" id="setParentContext(io.sf.carte.doc.style.css.CSSRule)">
 <h3>setParentContext</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setParentContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#setParentContext(org.w3c.dom.css.CSSRule)">StyleFormattingContext</a></code></span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setParentContext</span><wbr><span class="parameters">(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#setParentContext(io.sf.carte.doc.style.css.CSSRule)">StyleFormattingContext</a></code></span></div>
 <div class="block">Sets the parent of the rule being serialized, if any, providing additional
  context for the serialization.
  <p>
@@ -444,7 +447,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../StyleFormattingContext.html#setParentContext(org.w3c.dom.css.CSSRule)">setParentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
+<dd><code><a href="../StyleFormattingContext.html#setParentContext(io.sf.carte.doc.style.css.CSSRule)">setParentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>rule</code> - the parent rule. May be <code>null</code>.</dd>
 </dl>
@@ -498,10 +501,10 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 </section>
 </li>
 <li>
-<section class="detail" id="updateContext(org.w3c.dom.css.CSSRule)">
+<section class="detail" id="updateContext(io.sf.carte.doc.style.css.CSSRule)">
 <h3>updateContext</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateContext</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a>&nbsp;rule)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#updateContext(org.w3c.dom.css.CSSRule)">StyleFormattingContext</a></code></span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">updateContext</span><wbr><span class="parameters">(<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a>&nbsp;rule)</span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#updateContext(io.sf.carte.doc.style.css.CSSRule)">StyleFormattingContext</a></code></span></div>
 <div class="block">Update this context for the given rule.
  <p>
  For style rules, it is called after serializing the selector list and before
@@ -513,7 +516,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
  </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../StyleFormattingContext.html#updateContext(org.w3c.dom.css.CSSRule)">updateContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
+<dd><code><a href="../StyleFormattingContext.html#updateContext(io.sf.carte.doc.style.css.CSSRule)">updateContext</a></code>&nbsp;in interface&nbsp;<code><a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>rule</code> - the rule being serialized.</dd>
 </dl>
@@ -594,7 +597,7 @@ implements <a href="../StyleFormattingContext.html" title="interface in io.sf.ca
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../StyleFormattingContext.html#writeLeftCurlyBracket(io.sf.carte.util.SimpleWriter)">StyleFormattingContext</a></code></span></div>
 <div class="block">Serialize a left curly bracket to a <code>SimpleWriter</code>.
  <p>
- Called after <a href="../StyleFormattingContext.html#updateContext(org.w3c.dom.css.CSSRule)"><code>StyleFormattingContext.updateContext(CSSRule)</code></a> and before
+ Called after <a href="../StyleFormattingContext.html#updateContext(io.sf.carte.doc.style.css.CSSRule)"><code>StyleFormattingContext.updateContext(CSSRule)</code></a> and before
  <a href="../StyleFormattingContext.html#startStyleDeclaration(io.sf.carte.util.SimpleWriter)"><code>StyleFormattingContext.startStyleDeclaration(SimpleWriter)</code></a>.
  </p></div>
 <dl class="notes">

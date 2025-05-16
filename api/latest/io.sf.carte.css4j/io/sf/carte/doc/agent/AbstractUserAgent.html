@@ -103,8 +103,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AbstractUserAgent</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="UserAgent.html" title="interface in io.sf.carte.doc.agent">UserAgent</a>, <a href="UserAgent.AgentControl.html" title="interface in io.sf.carte.doc.agent">UserAgent.AgentControl</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></span></div>
-<div class="block">Abstract base class for User Agents, with cookie handling.
- <p></div>
+<div class="block">Abstract base class for User Agents.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -173,16 +172,6 @@ implements <a href="UserAgent.html" title="interface in io.sf.carte.doc.agent">U
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;realm)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets the authentication credentials for the given URL.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="CookieConfig.html" title="interface in io.sf.carte.doc.agent">CookieConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCookieConfig()" class="member-name-link">getCookieConfig</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a><wbr>&lt;<a href="Cookie.html" title="interface in io.sf.carte.doc.agent">Cookie</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getCookies(java.lang.String)" class="member-name-link">getCookies</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="UserAgentErrorHandler.html" title="interface in io.sf.carte.doc.agent">UserAgentErrorHandler</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getErrorHandler()" class="member-name-link">getErrorHandler</a>()</code></div>
@@ -298,29 +287,6 @@ implements <a href="UserAgent.html" title="interface in io.sf.carte.doc.agent">U
 <dd>the control object for this user agent, or null if this agent has
          no control.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCookieConfig()">
-<h3>getCookieConfig</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CookieConfig.html" title="interface in io.sf.carte.doc.agent">CookieConfig</a></span>&nbsp;<span class="element-name">getCookieConfig</span>()</div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
-<div class="block">Gets the global, useragent-wide default cookie config.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="UserAgent.AgentControl.html#getCookieConfig()">getCookieConfig</a></code>&nbsp;in interface&nbsp;<code><a href="UserAgent.AgentControl.html" title="interface in io.sf.carte.doc.agent">UserAgent.AgentControl</a></code></dd>
-<dt>Returns:</dt>
-<dd>null</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCookies(java.lang.String)">
-<h3>getCookies</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="Cookie.html" title="interface in io.sf.carte.doc.agent">Cookie</a>&gt;</span>&nbsp;<span class="element-name">getCookies</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;host)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 <li>

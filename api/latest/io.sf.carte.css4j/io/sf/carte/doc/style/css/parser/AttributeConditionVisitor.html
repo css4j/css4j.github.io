@@ -88,7 +88,9 @@ loadScripts(document, 'script');</script>
 <h1 title="Class AttributeConditionVisitor" class="title">Class AttributeConditionVisitor</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance"><a href="ConditionVisitor.html" title="class in io.sf.carte.doc.style.css.parser">io.sf.carte.doc.style.css.parser.ConditionVisitor</a>
 <div class="inheritance">io.sf.carte.doc.style.css.parser.AttributeConditionVisitor</div>
+</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -97,7 +99,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">AttributeConditionVisitor</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+<span class="extends-implements">extends <a href="ConditionVisitor.html" title="class in io.sf.carte.doc.style.css.parser">ConditionVisitor</a>
 implements <a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/Visitor.html" title="interface in io.sf.carte.util">Visitor</a>&lt;<a href="../nsac/AttributeCondition.html" title="interface in io.sf.carte.doc.style.css.nsac">AttributeCondition</a>&gt;</span></div>
 <div class="block">Subclasses can be used to visit a selector (or a selector list) and replace
  the namespaceURI, localName or value of the contained
@@ -155,19 +157,17 @@ implements <a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/Vi
 <div class="block">Visit an attribute condition, which can be used to modify its namespaceURI,
  localName or value.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visit(io.sf.carte.doc.style.css.nsac.Selector)" class="member-name-link">visit</a><wbr>(<a href="../nsac/Selector.html" title="interface in io.sf.carte.doc.style.css.nsac">Selector</a>&nbsp;selector)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visit(io.sf.carte.doc.style.css.nsac.Condition)" class="member-name-link">visit</a><wbr>(<a href="../nsac/Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a>&nbsp;condition)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Visit a selector.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#visit(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">visit</a><wbr>(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;list)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Visit a list of selectors.</div>
+<div class="block">Visit a condition.</div>
 </div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.parser.ConditionVisitor">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.parser.<a href="ConditionVisitor.html" title="class in io.sf.carte.doc.style.css.parser">ConditionVisitor</a></h3>
+<code><a href="ConditionVisitor.html#visit(io.sf.carte.doc.style.css.nsac.Selector)">visit</a>, <a href="ConditionVisitor.html#visit(io.sf.carte.doc.style.css.nsac.SelectorList)">visit</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -197,24 +197,15 @@ implements <a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/Vi
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="visit(io.sf.carte.doc.style.css.nsac.SelectorList)">
+<section class="detail" id="visit(io.sf.carte.doc.style.css.nsac.Condition)">
 <h3>visit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">visit</span><wbr><span class="parameters">(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;list)</span></div>
-<div class="block">Visit a list of selectors.</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">visit</span><wbr><span class="parameters">(<a href="../nsac/Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a>&nbsp;condition)</span></div>
+<div class="block">Visit a condition.</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="ConditionVisitor.html#visit(io.sf.carte.doc.style.css.nsac.Condition)">visit</a></code>&nbsp;in class&nbsp;<code><a href="ConditionVisitor.html" title="class in io.sf.carte.doc.style.css.parser">ConditionVisitor</a></code></dd>
 <dt>Parameters:</dt>
-<dd><code>list</code> - the list of selectors.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="visit(io.sf.carte.doc.style.css.nsac.Selector)">
-<h3>visit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">visit</span><wbr><span class="parameters">(<a href="../nsac/Selector.html" title="interface in io.sf.carte.doc.style.css.nsac">Selector</a>&nbsp;selector)</span></div>
-<div class="block">Visit a selector.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>selector</code> - the selector.</dd>
+<dd><code>condition</code> - the condition.</dd>
 </dl>
 </section>
 </li>

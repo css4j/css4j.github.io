@@ -121,9 +121,6 @@ loadScripts(document, 'script');</script>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
 <div class="inherited-list">
-<h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory">Fields inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></h3>
-<code><a href="AbstractCSSStyleSheetFactory.html#STRING_DOUBLE_QUOTE">STRING_DOUBLE_QUOTE</a>, <a href="AbstractCSSStyleSheetFactory.html#STRING_SINGLE_QUOTE">STRING_SINGLE_QUOTE</a></code></div>
-<div class="inherited-list">
 <h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.CSSStyleSheetFactory">Fields inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></h3>
 <code><a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE">FLAG_STRING_DOUBLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE">FLAG_STRING_SINGLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_AUTHOR">ORIGIN_AUTHOR</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER">ORIGIN_USER</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_AGENT">ORIGIN_USER_AGENT</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_IMPORTANT">ORIGIN_USER_IMPORTANT</a></code></div>
 </section>
@@ -161,7 +158,7 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createDefaultStyleFormattingFactory()" class="member-name-link">createDefaultStyleFormattingFactory</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract <a href="BaseDocumentCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseDocumentCSSStyleSheet</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createDocumentStyleSheet(byte)" class="member-name-link">createDocumentStyleSheet</a><wbr>(byte&nbsp;origin)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#createDocumentStyleSheet(int)" class="member-name-link">createDocumentStyleSheet</a><wbr>(int&nbsp;origin)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Creates a Document CSS style sheet for all media.</div>
 </div>
@@ -258,7 +255,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasCompatValueFlags()" class="member-name-link">hasCompatValueFlags</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Check for compat value flags.</div>
+<div class="block">Check for Internet Explorer legacy compatibility value flags.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag</a><wbr>(short&nbsp;flag)</code></div>
@@ -290,29 +287,39 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set a configuration flag.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLenientSystemValues(boolean)" class="member-name-link">setLenientSystemValues</a><wbr>(boolean&nbsp;lenient)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)" class="member-name-link">setFlag</a><wbr>(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the given parser flag.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLenientSystemValues(boolean)" class="member-name-link">setLenientSystemValues</a><wbr>(boolean&nbsp;lenient)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
  The style sheet factories provide system default values, and its behaviour depends on a
  <code>lenientSystemValues</code> flag.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)" class="member-name-link">setStyleFormattingFactory</a><wbr>(<a href="../StyleFormattingFactory.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingFactory</a>&nbsp;factory)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStyleFormattingFactory(io.sf.carte.doc.style.css.StyleFormattingFactory)" class="member-name-link">setStyleFormattingFactory</a><wbr>(<a href="../StyleFormattingFactory.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingFactory</a>&nbsp;factory)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Set a style formatting factory to format style serializations made with sheets created
  by this sheet factory.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the CSS style sheet defined by the end user.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.lang.String,java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the CSS style sheet defined by the end user.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUserStyleSheet(java.lang.String,java.io.Reader)" class="member-name-link">setUserStyleSheet</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;re)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#unsetFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)" class="member-name-link">unsetFlag</a><wbr>(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the CSS style sheet defined by the end user.</div>
+<div class="block">Unset the given parser flag.</div>
 </div>
 </div>
 </div>
@@ -364,9 +371,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="createDocumentStyleSheet(byte)">
+<section class="detail" id="createDocumentStyleSheet(int)">
 <h3>createDocumentStyleSheet</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="BaseDocumentCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseDocumentCSSStyleSheet</a></span>&nbsp;<span class="element-name">createDocumentStyleSheet</span><wbr><span class="parameters">(byte&nbsp;origin)</span></div>
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="BaseDocumentCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">BaseDocumentCSSStyleSheet</a></span>&nbsp;<span class="element-name">createDocumentStyleSheet</span><wbr><span class="parameters">(int&nbsp;origin)</span></div>
 <div class="block">Creates a Document CSS style sheet for all media.
  <p></div>
 <dl class="notes">
@@ -703,16 +710,49 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">
+<h3>setFlag</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">setFlag</span><wbr><span class="parameters">(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</span></div>
+<div class="block">Set the given parser flag.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractCSSStyleSheetFactory.html#setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">setFlag</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>flag</code> - the flag.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the flag was newly set, <code>false</code> if the flag was
+         already set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="unsetFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">
+<h3>unsetFlag</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">unsetFlag</span><wbr><span class="parameters">(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</span></div>
+<div class="block">Unset the given parser flag.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractCSSStyleSheetFactory.html#unsetFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">unsetFlag</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>flag</code> - the flag.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the flag was unset, <code>false</code> if the flag was not
+         set.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasCompatValueFlags()">
 <h3>hasCompatValueFlags</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCompatValueFlags</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="AbstractCSSStyleSheetFactory.html#hasCompatValueFlags()">AbstractCSSStyleSheetFactory</a></code></span></div>
-<div class="block">Check for compat value flags.</div>
+<div class="block">Check for Internet Explorer legacy compatibility value flags.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="AbstractCSSStyleSheetFactory.html#hasCompatValueFlags()">hasCompatValueFlags</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSStyleSheetFactory.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheetFactory</a></code></dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the factory has compat value flags set.</dd>
+<dd><code>true</code> if the factory has any compatibility value flags
+         set (note: <code>STARHACK</code> is not considered a value flag).</dd>
 </dl>
 </section>
 </li>

@@ -89,21 +89,19 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance"><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">io.sf.carte.doc.style.css.om.AbstractCSSRule</a>
-<div class="inheritance"><a href="BaseCSSDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">io.sf.carte.doc.style.css.om.BaseCSSDeclarationRule</a>
-<div class="inheritance"><a href="CSSStyleDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">io.sf.carte.doc.style.css.om.CSSStyleDeclarationRule</a>
+<div class="inheritance"><a href="GroupingRule.html" title="class in io.sf.carte.doc.style.css.om">io.sf.carte.doc.style.css.om.GroupingRule</a>
 <div class="inheritance">io.sf.carte.doc.style.css.om.StyleRule</div>
-</div>
 </div>
 </div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a></code>, <code><a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></code>, <code><a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></code></dd>
+<dd><code><a href="../CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a></code>, <code><a href="../CSSGroupingRule.html" title="interface in io.sf.carte.doc.style.css">CSSGroupingRule</a></code>, <code><a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></code>, <code><a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">StyleRule</span>
-<span class="extends-implements">extends <a href="CSSStyleDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">CSSStyleDeclarationRule</a>
+<span class="extends-implements">extends <a href="GroupingRule.html" title="class in io.sf.carte.doc.style.css.om">GroupingRule</a>
 implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></span></div>
 <div class="block">CSS style rule.</div>
 <dl class="notes">
@@ -123,7 +121,7 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.CSSRule">Fields inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></h3>
-<code><a href="../CSSRule.html#COUNTER_STYLE_RULE">COUNTER_STYLE_RULE</a>, <a href="../CSSRule.html#CUSTOM_MEDIA_RULE">CUSTOM_MEDIA_RULE</a>, <a href="../CSSRule.html#DOCUMENT_RULE">DOCUMENT_RULE</a>, <a href="../CSSRule.html#FONT_FACE_RULE">FONT_FACE_RULE</a>, <a href="../CSSRule.html#FONT_FEATURE_VALUES_RULE">FONT_FEATURE_VALUES_RULE</a>, <a href="../CSSRule.html#IMPORT_RULE">IMPORT_RULE</a>, <a href="../CSSRule.html#KEYFRAME_RULE">KEYFRAME_RULE</a>, <a href="../CSSRule.html#KEYFRAMES_RULE">KEYFRAMES_RULE</a>, <a href="../CSSRule.html#MARGIN_RULE">MARGIN_RULE</a>, <a href="../CSSRule.html#MEDIA_RULE">MEDIA_RULE</a>, <a href="../CSSRule.html#NAMESPACE_RULE">NAMESPACE_RULE</a>, <a href="../CSSRule.html#PAGE_RULE">PAGE_RULE</a>, <a href="../CSSRule.html#PROPERTY_RULE">PROPERTY_RULE</a>, <a href="../CSSRule.html#REGION_STYLE_RULE">REGION_STYLE_RULE</a>, <a href="../CSSRule.html#STYLE_RULE">STYLE_RULE</a>, <a href="../CSSRule.html#SUPPORTS_RULE">SUPPORTS_RULE</a>, <a href="../CSSRule.html#UNKNOWN_RULE">UNKNOWN_RULE</a>, <a href="../CSSRule.html#VIEWPORT_RULE">VIEWPORT_RULE</a></code></div>
+<code><a href="../CSSRule.html#COUNTER_STYLE_RULE">COUNTER_STYLE_RULE</a>, <a href="../CSSRule.html#CUSTOM_MEDIA_RULE">CUSTOM_MEDIA_RULE</a>, <a href="../CSSRule.html#DOCUMENT_RULE">DOCUMENT_RULE</a>, <a href="../CSSRule.html#FONT_FACE_RULE">FONT_FACE_RULE</a>, <a href="../CSSRule.html#FONT_FEATURE_VALUES_RULE">FONT_FEATURE_VALUES_RULE</a>, <a href="../CSSRule.html#IMPORT_RULE">IMPORT_RULE</a>, <a href="../CSSRule.html#KEYFRAME_RULE">KEYFRAME_RULE</a>, <a href="../CSSRule.html#KEYFRAMES_RULE">KEYFRAMES_RULE</a>, <a href="../CSSRule.html#MARGIN_RULE">MARGIN_RULE</a>, <a href="../CSSRule.html#MEDIA_RULE">MEDIA_RULE</a>, <a href="../CSSRule.html#NAMESPACE_RULE">NAMESPACE_RULE</a>, <a href="../CSSRule.html#NESTED_DECLARATIONS">NESTED_DECLARATIONS</a>, <a href="../CSSRule.html#PAGE_RULE">PAGE_RULE</a>, <a href="../CSSRule.html#PROPERTY_RULE">PROPERTY_RULE</a>, <a href="../CSSRule.html#REGION_STYLE_RULE">REGION_STYLE_RULE</a>, <a href="../CSSRule.html#STYLE_RULE">STYLE_RULE</a>, <a href="../CSSRule.html#SUPPORTS_RULE">SUPPORTS_RULE</a>, <a href="../CSSRule.html#UNKNOWN_RULE">UNKNOWN_RULE</a>, <a href="../CSSRule.html#VIEWPORT_RULE">VIEWPORT_RULE</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-org.w3c.dom.css.CSSRule">Fields inherited from interface&nbsp;org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#CHARSET_RULE" title="class or interface in org.w3c.dom.css" class="external-link">CHARSET_RULE</a></code></div>
@@ -137,13 +135,9 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">StyleRule</a>()</code></div>
-<div class="col-last even-row-color">
-<div class="block">Constructor used for stand-alone style rules.</div>
-</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet,byte)" class="member-name-link">StyleRule</a><wbr>(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet,
- byte&nbsp;origin)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet,int)" class="member-name-link">StyleRule</a><wbr>(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet,
+ int&nbsp;origin)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -158,20 +152,36 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSACParser()" class="member-name-link">createSACParser</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enablePrecedingComments()" class="member-name-link">enablePrecedingComments</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StyleRule.html" title="class in io.sf.carte.doc.style.css.om">StyleRule</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)" class="member-name-link">clone</a><wbr>(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Obtain a clone of this rule whose parent sheet is <code>parentSheet</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createSACParser()" class="member-name-link">createSACParser</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enablePrecedingComments()" class="member-name-link">enablePrecedingComments</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">If this rule does not contain a preceding comment list, create one.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enableTrailingComments()" class="member-name-link">enableTrailingComments</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#enableTrailingComments()" class="member-name-link">enableTrailingComments</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">If this rule does not contain a trailing comment list, create one.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>byte</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCssText()" class="member-name-link">getCssText</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMinifiedCssText()" class="member-name-link">getMinifiedCssText</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A minified parsable textual representation of the rule.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrigin()" class="member-name-link">getOrigin</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the origin of this rule (user agent sheet, author, user).</div>
@@ -196,60 +206,89 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The selectors of this style rule.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStyleFormattingContext()" class="member-name-link">getStyleFormattingContext</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrailingComments()" class="member-name-link">getTrailingComments</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSelectorText()" class="member-name-link">getSelectorText</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get a parsable serialization of the selector(s).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AbstractCSSStyleDeclaration.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleDeclaration</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStyle()" class="member-name-link">getStyle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the style that is declared by this rule.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStyleDeclarationErrorHandler()" class="member-name-link">getStyleDeclarationErrorHandler</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Gets the error handler.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStyleFormattingContext()" class="member-name-link">getStyleFormattingContext</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrailingComments()" class="member-name-link">getTrailingComments</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get a list of the comments that immediately follow this rule, if any.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getURL(java.lang.String)" class="member-name-link">getURL</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>short</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getURL(java.lang.String)" class="member-name-link">getURL</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uri)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Gets an URL for the given URI, taking into account the parent CSS Base URL if
  appropriate.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParentRule(io.sf.carte.doc.style.css.om.AbstractCSSRule)" class="member-name-link">setParentRule</a><wbr>(<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a>&nbsp;parent)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the parent CSS rule, in case this rule is contained by another.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSelectorText(java.lang.String)" class="member-name-link">setSelectorText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;selectorText)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSelectorList(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">setSelectorList</a><wbr>(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectorList)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the selectors of this style rule.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSelectorText(java.lang.String)" class="member-name-link">setSelectorText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;selectorText)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Parse the given string and set the selector list according to it.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)" class="member-name-link">setStyleDeclarationErrorHandler</a><wbr>(<a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a>&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the style declaration error handler.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
+ <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Write a serialization of this rule to the given simple writer, according to the given
+ context.</div>
+</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.CSSStyleDeclarationRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="CSSStyleDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">CSSStyleDeclarationRule</a></h3>
-<code><a href="CSSStyleDeclarationRule.html#clone(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">clone</a>, <a href="CSSStyleDeclarationRule.html#equals(java.lang.Object)">equals</a>, <a href="CSSStyleDeclarationRule.html#getCssText()">getCssText</a>, <a href="CSSStyleDeclarationRule.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="CSSStyleDeclarationRule.html#getSelectorText()">getSelectorText</a>, <a href="CSSStyleDeclarationRule.html#hashCode()">hashCode</a>, <a href="CSSStyleDeclarationRule.html#setCssText(java.lang.String)">setCssText</a>, <a href="CSSStyleDeclarationRule.html#setSelectorList(io.sf.carte.doc.style.css.nsac.SelectorList)">setSelectorList</a>, <a href="CSSStyleDeclarationRule.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">writeCssText</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.BaseCSSDeclarationRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="BaseCSSDeclarationRule.html" title="class in io.sf.carte.doc.style.css.om">BaseCSSDeclarationRule</a></h3>
-<code><a href="BaseCSSDeclarationRule.html#getStyle()">getStyle</a>, <a href="BaseCSSDeclarationRule.html#getStyleDeclarationErrorHandler()">getStyleDeclarationErrorHandler</a>, <a href="BaseCSSDeclarationRule.html#setStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">setStyleDeclarationErrorHandler</a></code></div>
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.GroupingRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="GroupingRule.html" title="class in io.sf.carte.doc.style.css.om">GroupingRule</a></h3>
+<code><a href="GroupingRule.html#addRule(io.sf.carte.doc.style.css.om.AbstractCSSRule)">addRule</a>, <a href="GroupingRule.html#deleteRule(int)">deleteRule</a>, <a href="GroupingRule.html#getCssRules()">getCssRules</a>, <a href="GroupingRule.html#insertRule(java.lang.String,int)">insertRule</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.om.AbstractCSSRule">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.om.<a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></h3>
-<code><a href="AbstractCSSRule.html#toString()">toString</a></code></div>
+<code><a href="AbstractCSSRule.html#clone()">clone</a>, <a href="AbstractCSSRule.html#setCssText(java.lang.String)">setCssText</a>, <a href="AbstractCSSRule.html#toString()">toString</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSDeclarationRule">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a></h3>
-<code><a href="../CSSDeclarationRule.html#getStyle()">getStyle</a>, <a href="../CSSDeclarationRule.html#getStyleDeclarationErrorHandler()">getStyleDeclarationErrorHandler</a></code></div>
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSGroupingRule">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSGroupingRule.html" title="interface in io.sf.carte.doc.style.css">CSSGroupingRule</a></h3>
+<code><a href="../CSSGroupingRule.html#deleteRule(int)">deleteRule</a>, <a href="../CSSGroupingRule.html#getCssRules()">getCssRules</a>, <a href="../CSSGroupingRule.html#insertRule(java.lang.String,int)">insertRule</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSRule">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></h3>
-<code><a href="../CSSRule.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSRule.html#getParentRule()">getParentRule</a>, <a href="../CSSRule.html#getParentStyleSheet()">getParentStyleSheet</a>, <a href="../CSSRule.html#getPrecedingComments()">getPrecedingComments</a>, <a href="../CSSRule.html#getTrailingComments()">getTrailingComments</a>, <a href="../CSSRule.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">writeCssText</a></code></div>
+<code><a href="../CSSRule.html#getParentRule()">getParentRule</a>, <a href="../CSSRule.html#getParentStyleSheet()">getParentStyleSheet</a>, <a href="../CSSRule.html#getPrecedingComments()">getPrecedingComments</a>, <a href="../CSSRule.html#getTrailingComments()">getTrailingComments</a>, <a href="../CSSRule.html#setCssText(java.lang.String)">setCssText</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.w3c.dom.css.CSSRule">Methods inherited from interface&nbsp;org.w3c.dom.css.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></h3>
-<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getCssText()" title="class or interface in org.w3c.dom.css" class="external-link">getCssText</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getType()" title="class or interface in org.w3c.dom.css" class="external-link">getType</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#setCssText(java.lang.String)" title="class or interface in org.w3c.dom.css" class="external-link">setCssText</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSStyleRule">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></h3>
-<code><a href="../CSSStyleRule.html#getSelectorText()">getSelectorText</a>, <a href="../CSSStyleRule.html#setSelectorList(io.sf.carte.doc.style.css.nsac.SelectorList)">setSelectorList</a></code></div>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getType()" title="class or interface in org.w3c.dom.css" class="external-link">getType</a></code></div>
 </section>
 </li>
 </ul>
@@ -262,20 +301,10 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet,byte)">
+<section class="detail" id="&lt;init&gt;(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet,int)">
 <h3>StyleRule</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StyleRule</span><wbr><span class="parameters">(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet,
- byte&nbsp;origin)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;()">
-<h3>StyleRule</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">StyleRule</span>()</div>
-<div class="block">Constructor used for stand-alone style rules.
- <p>
- Useful for testing.
- </p></div>
+ int&nbsp;origin)</span></div>
 </section>
 </li>
 </ul>
@@ -286,6 +315,47 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getStyle()">
+<h3>getStyle</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AbstractCSSStyleDeclaration.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleDeclaration</a></span>&nbsp;<span class="element-name">getStyle</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSDeclarationRule.html#getStyle()">CSSDeclarationRule</a></code></span></div>
+<div class="block">Get the style that is declared by this rule.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSDeclarationRule.html#getStyle()">getStyle</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a></code></dd>
+<dt>Returns:</dt>
+<dd>the style declaration.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStyleDeclarationErrorHandler()">
+<h3>getStyleDeclarationErrorHandler</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a></span>&nbsp;<span class="element-name">getStyleDeclarationErrorHandler</span>()</div>
+<div class="block">Gets the error handler.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSDeclarationRule.html#getStyleDeclarationErrorHandler()">getStyleDeclarationErrorHandler</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSDeclarationRule.html" title="interface in io.sf.carte.doc.style.css">CSSDeclarationRule</a></code></dd>
+<dt>Returns:</dt>
+<dd>the error handler.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStyleDeclarationErrorHandler(io.sf.carte.doc.style.css.StyleDeclarationErrorHandler)">
+<h3>setStyleDeclarationErrorHandler</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStyleDeclarationErrorHandler</span><wbr><span class="parameters">(<a href="../StyleDeclarationErrorHandler.html" title="interface in io.sf.carte.doc.style.css">StyleDeclarationErrorHandler</a>&nbsp;handler)</span></div>
+<div class="block">Sets the style declaration error handler.
+ <p>
+ If no handler is set, the one from the parent style sheet's factory will be used.
+ </p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>handler</code> - the error handler.</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="setSelectorText(java.lang.String)">
 <h3>setSelectorText</h3>
@@ -305,6 +375,36 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 </section>
 </li>
 <li>
+<section class="detail" id="getSelectorText()">
+<h3>getSelectorText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSelectorText</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSStyleRule.html#getSelectorText()">CSSStyleRule</a></code></span></div>
+<div class="block">Get a parsable serialization of the selector(s).</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSStyleRule.html#getSelectorText()">getSelectorText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></code></dd>
+<dt>Returns:</dt>
+<dd>a parsable serialization of the selector list.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSelectorList(io.sf.carte.doc.style.css.nsac.SelectorList)">
+<h3>setSelectorList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSelectorList</span><wbr><span class="parameters">(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;selectorList)</span></div>
+<div class="block">Set the selectors of this style rule.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSStyleRule.html#setSelectorList(io.sf.carte.doc.style.css.nsac.SelectorList)">setSelectorList</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>selectorList</code> - the selector list.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>selectorList</code> is null.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if <code>selectorList</code> is empty.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getSelectorList()">
 <h3>getSelectorList</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></span>&nbsp;<span class="element-name">getSelectorList</span>()</div>
@@ -315,6 +415,94 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <dd><code><a href="../CSSStyleRule.html#getSelectorList()">getSelectorList</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.style.css">CSSStyleRule</a></code></dd>
 <dt>Returns:</dt>
 <dd>the selector list.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCssText()">
+<h3>getCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCssText</span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html#getCssText()" title="class or interface in org.w3c.dom.css" class="external-link">getCssText</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/jdk.xml.dom/org/w3c/dom/css/CSSRule.html" title="class or interface in org.w3c.dom.css" class="external-link">CSSRule</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractCSSRule.html#getCssText()">getCssText</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">
+<h3>writeCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeCssText</span><wbr><span class="parameters">(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri,
+ <a href="../StyleFormattingContext.html" title="interface in io.sf.carte.doc.style.css">StyleFormattingContext</a>&nbsp;context)</span>
+                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSRule.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">CSSRule</a></code></span></div>
+<div class="block">Write a serialization of this rule to the given simple writer, according to the given
+ context.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSRule.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">writeCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractCSSRule.html#writeCssText(io.sf.carte.util.SimpleWriter,io.sf.carte.doc.style.css.StyleFormattingContext)">writeCssText</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>wri</code> - the simple writer object.</dd>
+<dd><code>context</code> - the formatting context.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an error happened while writing.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMinifiedCssText()">
+<h3>getMinifiedCssText</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMinifiedCssText</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="AbstractCSSRule.html#getMinifiedCssText()">AbstractCSSRule</a></code></span></div>
+<div class="block">A minified parsable textual representation of the rule. This reflects
+ the current state of the rule and not its initial value.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSRule.html#getMinifiedCssText()">getMinifiedCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSRule.html" title="interface in io.sf.carte.doc.style.css">CSSRule</a></code></dd>
+<dt>Returns:</dt>
+<dd>the minified textual representation of the rule.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hashCode()">
+<h3>hashCode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">hashCode</span>()</div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="GroupingRule.html#hashCode()">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="GroupingRule.html" title="class in io.sf.carte.doc.style.css.om">GroupingRule</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="equals(java.lang.Object)">
+<h3>equals</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</span></div>
+<dl class="notes">
+<dt>Overrides:</dt>
+<dd><code><a href="GroupingRule.html#equals(java.lang.Object)">equals</a></code>&nbsp;in class&nbsp;<code><a href="GroupingRule.html" title="class in io.sf.carte.doc.style.css.om">GroupingRule</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clone(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">
+<h3>clone</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StyleRule.html" title="class in io.sf.carte.doc.style.css.om">StyleRule</a></span>&nbsp;<span class="element-name">clone</span><wbr><span class="parameters">(<a href="AbstractCSSStyleSheet.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSStyleSheet</a>&nbsp;parentSheet)</span>
+                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="AbstractCSSRule.html#clone(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">AbstractCSSRule</a></code></span></div>
+<div class="block">Obtain a clone of this rule whose parent sheet is <code>parentSheet</code>.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AbstractCSSRule.html#clone(io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet)">clone</a></code>&nbsp;in class&nbsp;<code><a href="AbstractCSSRule.html" title="class in io.sf.carte.doc.style.css.om">AbstractCSSRule</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>parentSheet</code> - the parent sheet for the new rule.</dd>
+<dt>Returns:</dt>
+<dd>a clone of this rule with the given parent sheet.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code></dd>
 </dl>
 </section>
 </li>
@@ -394,7 +582,7 @@ implements <a href="../CSSStyleRule.html" title="interface in io.sf.carte.doc.st
 <li>
 <section class="detail" id="getOrigin()">
 <h3>getOrigin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">getOrigin</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getOrigin</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="AbstractCSSRule.html#getOrigin()">AbstractCSSRule</a></code></span></div>
 <div class="block">Get the origin of this rule (user agent sheet, author, user).</div>
 <dl class="notes">

@@ -140,6 +140,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">Replace the selector at <code>index</code> with the given selector.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#replaceNested(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">replaceNested</a><wbr>(<a href="SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;base)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Replace the nested selectors in this selector list, absolutizing it respect
+ to the supplied base.</div>
+</div>
 </div>
 </div>
 </div>
@@ -235,6 +241,20 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
                               NO_MODIFICATION_ALLOWED_ERR if replacing
                               selectors is not allowed.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if <code>selector</code> is <code>null</code>.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replaceNested(io.sf.carte.doc.style.css.nsac.SelectorList)">
+<h3>replaceNested</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a></span>&nbsp;<span class="element-name">replaceNested</span><wbr><span class="parameters">(<a href="SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;base)</span></div>
+<div class="block">Replace the nested selectors in this selector list, absolutizing it respect
+ to the supplied base.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>base</code> - the absolute selector list base.</dd>
+<dt>Returns:</dt>
+<dd>the absolute selector list.</dd>
 </dl>
 </section>
 </li>

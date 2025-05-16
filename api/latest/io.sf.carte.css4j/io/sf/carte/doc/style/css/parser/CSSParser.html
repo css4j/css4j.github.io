@@ -186,7 +186,7 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseDeclarationRule(java.io.Reader)" class="member-name-link">parseDeclarationRule</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Parse any simple (non-nesting) at-rule containing descriptors, using a
+<div class="block">Parse any simple (non-nesting) block at-rule containing descriptors, using a
  generic <a href="CSSParser.DeclarationRuleHandler.html" title="interface in io.sf.carte.doc.style.css.parser"><code>CSSParser.DeclarationRuleHandler</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
@@ -437,10 +437,7 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <section class="detail" id="setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">
 <h3>setFlag</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFlag</span><wbr><span class="parameters">(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</span></div>
-<div class="block">Set a parser flag.
- <p>
- Currently only <code>STARHACK</code> is supported, and it only applies to the parsing
- of full sheets.</div>
+<div class="block">Set a parser flag.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../nsac/Parser.html#setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">setFlag</a></code>&nbsp;in interface&nbsp;<code><a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.style.css.nsac">Parser</a></code></dd>
@@ -634,7 +631,7 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parseDeclarationRule</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;reader)</span>
                           throws <span class="exceptions"><a href="../nsac/CSSParseException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSParseException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Parse any simple (non-nesting) at-rule containing descriptors, using a
+<div class="block">Parse any simple (non-nesting) block at-rule containing descriptors, using a
  generic <a href="CSSParser.DeclarationRuleHandler.html" title="interface in io.sf.carte.doc.style.css.parser"><code>CSSParser.DeclarationRuleHandler</code></a>.
  <p>
  In general it is recommended to use <a href="#parseRule(java.io.Reader)"><code>parseRule(Reader)</code></a> to parse
@@ -875,7 +872,8 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <dd><code>queryFactory</code> - the query factory.</dd>
 <dd><code>mqhandler</code> - the media query list handler.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was reached.</dd>
+<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was
+                            reached.</dd>
 </dl>
 </section>
 </li>
@@ -892,11 +890,12 @@ implements <a href="../nsac/Parser.html" title="interface in io.sf.carte.doc.sty
 <dt>Parameters:</dt>
 <dd><code>media</code> - the media query text.</dd>
 <dd><code>owner</code> - the node that owns the responsibility to handle the errors in
-            the query list.</dd>
+              the query list.</dd>
 <dt>Returns:</dt>
 <dd>the media query list.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was reached.</dd>
+<dd><code><a href="../nsac/CSSBudgetException.html" title="class in io.sf.carte.doc.style.css.nsac">CSSBudgetException</a></code> - if a hard-coded limit in nested expressions was
+                            reached.</dd>
 </dl>
 </section>
 </li>

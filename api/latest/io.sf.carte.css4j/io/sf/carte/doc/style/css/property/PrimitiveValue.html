@@ -163,10 +163,20 @@ implements <a href="../CSSPrimitiveValue.html" title="interface in io.sf.carte.d
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrimitiveType()" class="member-name-link">getPrimitiveType</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrecedingComments()" class="member-name-link">getPrecedingComments</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the list of preceding comments.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPrimitiveType()" class="member-name-link">getPrimitiveType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the primitive type.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTrailingComments()" class="member-name-link">getTrailingComments</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the list of trailing comments.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
@@ -315,6 +325,34 @@ implements <a href="../CSSPrimitiveValue.html" title="interface in io.sf.carte.d
 <dt>Returns:</dt>
 <dd><code>true</code> if this a subproperty that has been set by a shorthand,
          <code>false</code> otherwise.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPrecedingComments()">
+<h3>getPrecedingComments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></span>&nbsp;<span class="element-name">getPrecedingComments</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValue.html#getPrecedingComments()">CSSValue</a></code></span></div>
+<div class="block">Get the list of preceding comments.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSValue.html#getPrecedingComments()">getPrecedingComments</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
+<dt>Returns:</dt>
+<dd>the list of preceding comments, or <code>null</code> if none.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTrailingComments()">
+<h3>getTrailingComments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../StringList.html" title="interface in io.sf.carte.doc">StringList</a></span>&nbsp;<span class="element-name">getTrailingComments</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValue.html#getTrailingComments()">CSSValue</a></code></span></div>
+<div class="block">Get the list of trailing comments.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../CSSValue.html#getTrailingComments()">getTrailingComments</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
+<dt>Returns:</dt>
+<dd>the list of trailing comments, or <code>null</code> if none.</dd>
 </dl>
 </section>
 </li>

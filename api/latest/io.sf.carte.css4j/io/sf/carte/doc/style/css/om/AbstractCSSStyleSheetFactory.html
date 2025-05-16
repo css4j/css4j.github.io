@@ -48,7 +48,7 @@ loadScripts(document, 'script');</script>
 <li>
 <p>Detail:</p>
 <ul>
-<li><a href="#field-detail">Field</a></li>
+<li>Field</li>
 <li><a href="#constructor-detail">Constr</a></li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -66,7 +66,7 @@ loadScripts(document, 'script');</script>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -119,26 +119,6 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <li>
 <section class="field-summary" id="field-summary">
 <h2>Field Summary</h2>
-<div class="caption"><span>Fields</span></div>
-<div class="summary-table three-column-summary">
-<div class="table-header col-first">Modifier and Type</div>
-<div class="table-header col-second">Field</div>
-<div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final byte</code></div>
-<div class="col-second even-row-color"><code><a href="#STRING_DOUBLE_QUOTE" class="member-name-link">STRING_DOUBLE_QUOTE</a></code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
-<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE</code></a></div>
-</div>
-</div>
-<div class="col-first odd-row-color"><code>static final byte</code></div>
-<div class="col-second odd-row-color"><code><a href="#STRING_SINGLE_QUOTE" class="member-name-link">STRING_SINGLE_QUOTE</a></code></div>
-<div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
-<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE</code></a></div>
-</div>
-</div>
-</div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-io.sf.carte.doc.style.css.CSSStyleSheetFactory">Fields inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSStyleSheetFactory.html" title="interface in io.sf.carte.doc.style.css">CSSStyleSheetFactory</a></h3>
 <code><a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE">FLAG_STRING_DOUBLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE">FLAG_STRING_SINGLE_QUOTE</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_AUTHOR">ORIGIN_AUTHOR</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER">ORIGIN_USER</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_AGENT">ORIGIN_USER_AGENT</a>, <a href="../CSSStyleSheetFactory.html#ORIGIN_USER_IMPORTANT">ORIGIN_USER_IMPORTANT</a></code></div>
@@ -240,7 +220,7 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasCompatValueFlags()" class="member-name-link">hasCompatValueFlags</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Check for compat value flags.</div>
+<div class="block">Check for Internet Explorer legacy compatibility value flags.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasFactoryFlag(short)" class="member-name-link">hasFactoryFlag</a><wbr>(short&nbsp;flag)</code></div>
@@ -251,6 +231,16 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDefaultHTMLUserAgentSheet()" class="member-name-link">setDefaultHTMLUserAgentSheet</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Sets a default HTML default style sheet as the user agent style sheet.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)" class="member-name-link">setFlag</a><wbr>(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Set the given parser flag.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#unsetFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)" class="member-name-link">unsetFlag</a><wbr>(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Unset the given parser flag.</div>
 </div>
 </div>
 </div>
@@ -267,52 +257,6 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 </section>
 <section class="details">
 <ul class="details-list">
-<!-- ============ FIELD DETAIL =========== -->
-<li>
-<section class="field-details" id="field-detail">
-<h2>Field Details</h2>
-<ul class="member-list">
-<li>
-<section class="detail" id="STRING_SINGLE_QUOTE">
-<h3>STRING_SINGLE_QUOTE</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
-</span><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_SINGLE_QUOTE</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
-<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_SINGLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_SINGLE_QUOTE</code></a></div>
-</div>
-<div class="block">Prefer single quotes in the serialization of strings.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../../../../../constant-values.html#io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory.STRING_SINGLE_QUOTE">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="STRING_DOUBLE_QUOTE">
-<h3>STRING_DOUBLE_QUOTE</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
-</span><span class="modifiers">public static final</span>&nbsp;<span class="return-type">byte</span>&nbsp;<span class="element-name">STRING_DOUBLE_QUOTE</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
-<div class="deprecation-comment">Use <a href="../CSSStyleSheetFactory.html#FLAG_STRING_DOUBLE_QUOTE"><code>CSSStyleSheetFactory.FLAG_STRING_DOUBLE_QUOTE</code></a></div>
-</div>
-<div class="block">Prefer double quotes in the serialization of strings.</div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="tag-list">
-<li><a href="../../../../../../../../constant-values.html#io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory.STRING_DOUBLE_QUOTE">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-</ul>
-</section>
-</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -462,13 +406,42 @@ implements <a href="../CSSStyleSheetFactory.html" title="interface in io.sf.cart
 </section>
 </li>
 <li>
+<section class="detail" id="setFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">
+<h3>setFlag</h3>
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">setFlag</span><wbr><span class="parameters">(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</span></div>
+<div class="block">Set the given parser flag.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>flag</code> - the flag.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the flag was newly set, <code>false</code> if the flag was
+         already set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="unsetFlag(io.sf.carte.doc.style.css.nsac.Parser.Flag)">
+<h3>unsetFlag</h3>
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">unsetFlag</span><wbr><span class="parameters">(<a href="../nsac/Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a>&nbsp;flag)</span></div>
+<div class="block">Unset the given parser flag.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>flag</code> - the flag.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the flag was unset, <code>false</code> if the flag was not
+         set.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="hasCompatValueFlags()">
 <h3>hasCompatValueFlags</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasCompatValueFlags</span>()</div>
-<div class="block">Check for compat value flags.</div>
+<div class="block">Check for Internet Explorer legacy compatibility value flags.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the factory has compat value flags set.</dd>
+<dd><code>true</code> if the factory has any compatibility value flags
+         set (note: <code>STARHACK</code> is not considered a value flag).</dd>
 </dl>
 </section>
 </li>

@@ -225,9 +225,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Check whether this handler has processed any non-transient error.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasInlineErrors()" class="member-name-link">hasInlineErrors</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Check whether this handler has processed inline style errors.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasInlineWarnings()" class="member-name-link">hasInlineWarnings</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -390,6 +392,20 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasInlineErrors()">
+<h3>hasInlineErrors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasInlineErrors</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../ErrorHandler.html#hasInlineErrors()">ErrorHandler</a></code></span></div>
+<div class="block">Check whether this handler has processed inline style errors.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../ErrorHandler.html#hasInlineErrors()">hasInlineErrors</a></code>&nbsp;in interface&nbsp;<code><a href="../ErrorHandler.html" title="interface in io.sf.carte.doc.style.css">ErrorHandler</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if this handler processed inline style errors.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="linkedStyleError(org.w3c.dom.Node,java.lang.String)">
 <h3>linkedStyleError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">linkedStyleError</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/Node.html" title="class or interface in org.w3c.dom" class="external-link">Node</a>&nbsp;node,
@@ -509,12 +525,6 @@ loadScripts(document, 'script');</script>
 <dd>the owners of the inline styles with error handlers, or <code>null</code> if
          this handler has not processed any inline style.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="hasInlineErrors()">
-<h3>hasInlineErrors</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasInlineErrors</span>()</div>
 </section>
 </li>
 <li>
