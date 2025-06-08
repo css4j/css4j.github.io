@@ -120,9 +120,11 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <section class="constructor-summary" id="constructor-summary">
 <h2>Constructor Summary</h2>
 <div class="caption"><span>Constructors</span></div>
-<div class="summary-table two-column-summary">
-<div class="table-header col-first">Constructor</div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier</div>
+<div class="table-header col-second">Constructor</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>protected </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">AbstractSelectorMatcher</a>()</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -148,8 +150,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttributeValue(java.lang.String)" class="member-name-link">getAttributeValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attrName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Gets the value of the given attribute in the element associated to this selector
- matcher.</div>
+<div class="block">Gets the value of the given attribute in the element associated to this
+ selector matcher.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getClassAttribute(io.sf.carte.doc.style.css.CSSDocument.ComplianceMode)" class="member-name-link">getClassAttribute</a><wbr>(<a href="../CSSDocument.ComplianceMode.html" title="enum class in io.sf.carte.doc.style.css">CSSDocument.ComplianceMode</a>&nbsp;mode)</code></div>
@@ -200,8 +202,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasAttribute(java.lang.String)" class="member-name-link">hasAttribute</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attrName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Checks if is defined the given attribute in the element associated to this selector
- matcher.</div>
+<div class="block">Checks if is defined the given attribute in the element associated to this
+ selector matcher.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#indexOf(io.sf.carte.doc.style.css.nsac.SelectorList)" class="member-name-link">indexOf</a><wbr>(<a href="../nsac/SelectorList.html" title="interface in io.sf.carte.doc.style.css.nsac">SelectorList</a>&nbsp;list)</code></div>
@@ -362,7 +364,7 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AbstractSelectorMatcher</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AbstractSelectorMatcher</span>()</div>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">AbstractSelectorMatcher</span>()</div>
 </section>
 </li>
 </ul>
@@ -463,7 +465,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <dt>Parameters:</dt>
 <dd><code>selector</code> - the selector to be tested.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the given selector matches this object, <code>false</code> otherwise.</dd>
+<dd><code>true</code> if the given selector matches this object,
+         <code>false</code> otherwise.</dd>
 </dl>
 </section>
 </li>
@@ -528,7 +531,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the only child?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is the only child, <code>false</code> if not.</dd>
+<dd><code>true</code> if the element in this matcher is the only child,
+         <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>
@@ -539,8 +543,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the only child of its type (tag name)?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is the only child of its type, <code>false</code> if
-         not.</dd>
+<dd><code>true</code> if the element in this matcher is the only child of
+         its type, <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>
@@ -625,14 +629,15 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <section class="detail" id="getAttributeValue(java.lang.String)">
 <h3>getAttributeValue</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAttributeValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attrName)</span></div>
-<div class="block">Gets the value of the given attribute in the element associated to this selector
- matcher.</div>
+<div class="block">Gets the value of the given attribute in the element associated to this
+ selector matcher.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attrName</code> - the attribute name.</dd>
 <dt>Returns:</dt>
-<dd>the attribute value, or the empty string if the attribute is defined but has
-         no value, also if the attribute is not defined. Never returns null.</dd>
+<dd>the attribute value, or the empty string if the attribute is defined
+         but has no value, also if the attribute is not defined. Never returns
+         null.</dd>
 </dl>
 </section>
 </li>
@@ -640,13 +645,14 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <section class="detail" id="hasAttribute(java.lang.String)">
 <h3>hasAttribute</h3>
 <div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasAttribute</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attrName)</span></div>
-<div class="block">Checks if is defined the given attribute in the element associated to this selector
- matcher.</div>
+<div class="block">Checks if is defined the given attribute in the element associated to this
+ selector matcher.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attrName</code> - the attribute name.</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if the attribute is defined, <code>false</code> if not.</dd>
+<dd><code>true</code> if the attribute is defined, <code>false</code> if
+         not.</dd>
 </dl>
 </section>
 </li>
@@ -657,7 +663,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">Gets the 'id' attribute of the element associated to this selector matcher.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the 'id' attribute value, or the empty string if the element has no 'id'.</dd>
+<dd>the 'id' attribute value, or the empty string if the element has no
+         'id'.</dd>
 </dl>
 </section>
 </li>
@@ -668,7 +675,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">Gets the language of the element associated to this selector matcher.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the language, or the empty String if the element has no language defined.</dd>
+<dd>the language, or the empty String if the element has no language
+         defined.</dd>
 </dl>
 </section>
 </li>
@@ -690,7 +698,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the first child?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is a first child, <code>false</code> if not.</dd>
+<dd><code>true</code> if the element in this matcher is a first child,
+         <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>
@@ -701,7 +710,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the last child?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is the last child, <code>false</code> if not.</dd>
+<dd><code>true</code> if the element in this matcher is the last child,
+         <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>
@@ -712,8 +722,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the first child of its type (tag name)?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is a first child of its type, <code>false</code> if
-         not.</dd>
+<dd><code>true</code> if the element in this matcher is a first child of
+         its type, <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>
@@ -724,8 +734,8 @@ implements <a href="../SelectorMatcher.html" title="interface in io.sf.carte.doc
 <div class="block">The element in this matcher is the last child of its type (tag name)?</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd><code>true</code> if the element in this matcher is the last child of its type, <code>false</code> if
-         not.</dd>
+<dd><code>true</code> if the element in this matcher is the last child of
+         its type, <code>false</code> if not.</dd>
 </dl>
 </section>
 </li>

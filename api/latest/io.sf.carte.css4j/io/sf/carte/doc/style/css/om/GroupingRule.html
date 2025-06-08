@@ -304,12 +304,16 @@ implements <a href="../CSSGroupingRule.html" title="interface in io.sf.carte.doc
 <h3>getCssRules</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CSSRuleArrayList.html" title="class in io.sf.carte.doc.style.css.om">CSSRuleArrayList</a></span>&nbsp;<span class="element-name">getCssRules</span>()</div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSGroupingRule.html#getCssRules()">CSSGroupingRule</a></code></span></div>
-<div class="block">Get the list of CSS rules nested inside the grouping rule.</div>
+<div class="block">Get the list of CSS rules nested inside the grouping rule.
+ <p>
+ Only in the case of style rules, may return <code>null</code>.
+ </p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CSSGroupingRule.html#getCssRules()">getCssRules</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSGroupingRule.html" title="interface in io.sf.carte.doc.style.css">CSSGroupingRule</a></code></dd>
 <dt>Returns:</dt>
-<dd>a CSSRuleList object for the list of CSS rules nested inside the grouping rule.</dd>
+<dd>a CSSRuleList object for the list of CSS rules nested inside the
+         grouping rule.</dd>
 </dl>
 </section>
 </li>

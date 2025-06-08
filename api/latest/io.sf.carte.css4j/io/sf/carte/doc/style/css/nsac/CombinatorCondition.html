@@ -97,7 +97,7 @@ loadScripts(document, 'script');</script>
 extends <a href="Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></span></div>
 <div class="block">Based on SAC's <code>CombinatorCondition</code> interface by Philippe Le Hegaret.
  <p>
- Represents two chained conditions in a compound selector.
+ Represents two or more chained conditions in a compound selector.
  </p></div>
 </section>
 <section class="summary">
@@ -123,9 +123,19 @@ extends <a href="Condition.html" title="interface in io.sf.carte.doc.style.css.n
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstCondition()" class="member-name-link">getFirstCondition</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCondition(int)" class="member-name-link">getCondition</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the condition at index <code>index</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFirstCondition()" class="member-name-link">getFirstCondition</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The first condition.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLength()" class="member-name-link">getLength</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get the number of conditions in this combinator.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSecondCondition()" class="member-name-link">getSecondCondition</a>()</code></div>
@@ -168,6 +178,33 @@ extends <a href="Condition.html" title="interface in io.sf.carte.doc.style.css.n
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the second condition.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCondition(int)">
+<h3>getCondition</h3>
+<div class="member-signature"><span class="return-type"><a href="Condition.html" title="interface in io.sf.carte.doc.style.css.nsac">Condition</a></span>&nbsp;<span class="element-name">getCondition</span><wbr><span class="parameters">(int&nbsp;index)</span>
+                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html" title="class or interface in java.lang" class="external-link">ArrayIndexOutOfBoundsException</a></span></div>
+<div class="block">Get the condition at index <code>index</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - the index. A value of <code>0</code> retrieves the first condition.</dd>
+<dt>Returns:</dt>
+<dd>the condition.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/ArrayIndexOutOfBoundsException.html" title="class or interface in java.lang" class="external-link">ArrayIndexOutOfBoundsException</a></code> - if the index is invalid.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLength()">
+<h3>getLength</h3>
+<div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getLength</span>()</div>
+<div class="block">Get the number of conditions in this combinator.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the number of conditions (always two at least).</dd>
 </dl>
 </section>
 </li>
