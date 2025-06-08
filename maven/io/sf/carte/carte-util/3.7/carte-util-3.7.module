@@ -1,0 +1,100 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "carte-util",
+    "version": "3.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "carte-util-3.7.jar",
+          "url": "carte-util-3.7.jar",
+          "size": 8022,
+          "sha512": "a9ad6992a0f081a79bd555151ffd586bc399a46b72a970ba17b870d9332001c2d530e38e140e4bb1cb16455ebcb31a6a9f6e9c8e5114fb2cb5374a37c09ee2c7",
+          "sha256": "7253637cb7f9243d6ddcfbc287f4c08b3cbcbed6bbcd36a34275bbecc3bf52be",
+          "sha1": "651f6198ee50d23ad7c1348f459d6b443ca7dc9a",
+          "md5": "e56c51df7e05fbac125160d2f60e5ff9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "carte-util-3.7.jar",
+          "url": "carte-util-3.7.jar",
+          "size": 8022,
+          "sha512": "a9ad6992a0f081a79bd555151ffd586bc399a46b72a970ba17b870d9332001c2d530e38e140e4bb1cb16455ebcb31a6a9f6e9c8e5114fb2cb5374a37c09ee2c7",
+          "sha256": "7253637cb7f9243d6ddcfbc287f4c08b3cbcbed6bbcd36a34275bbecc3bf52be",
+          "sha1": "651f6198ee50d23ad7c1348f459d6b443ca7dc9a",
+          "md5": "e56c51df7e05fbac125160d2f60e5ff9"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "carte-util-3.7-javadoc.jar",
+          "url": "carte-util-3.7-javadoc.jar",
+          "size": 328163,
+          "sha512": "9a3c1c58580651159bfc641637ca5d6b10b9ee916480a28d5d831d9e02f305d9c348a63514a4278a8a638d49710c29967e9eb98dd7b5af369f59d6622966eab6",
+          "sha256": "db9ee875f6c4dac31672a8e3e929ad3e56a193505079541c9b0ca0c1c23a0d03",
+          "sha1": "3bf76868c8556d673c15f4089d29216c9b064111",
+          "md5": "1f8364aa18112c49555b5a734f7ba9d5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "carte-util-3.7-sources.jar",
+          "url": "carte-util-3.7-sources.jar",
+          "size": 8498,
+          "sha512": "9c1472f692718682d854ac4683d86cbd2d1400d292dc67f7e52a6fcd33710bbfd5a3b311843ad7026cface0f13c78635e4ca7f83bfa6f4d911cd30f7b582b3cd",
+          "sha256": "ed58bb20205462c17328a59883f5c41edd92544958bac4b0318bf10f3c189ea4",
+          "sha1": "28ea0cf1ea25d11f0f7f911d73cc72342670e0b5",
+          "md5": "76c4d352a21b62971701bdc5db5a5f4c"
+        }
+      ]
+    }
+  ]
+}
