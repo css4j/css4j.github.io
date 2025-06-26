@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Copyright © 2017-2022 C. Amengual
+# Copyright © 2017-2025 C. Amengual
 #
 # This script generates the aggregated Javascript and CSS files used in this
 # website. Some small CSS files are located in $CSSSRCDIR, but the main style
@@ -10,8 +10,11 @@
 # variables ending with "VER" are versioning suffixes.
 #
 #
+
 # YUI compressor location
 YUICOMP=${HOME}/java/lib/yuicompressor-2.4.8.jar
+# CSS4J minifier location
+CSS4J=${HOME}/java/lib/css4j-6.1-alldeps.jar
 # Root of website
 SITEDIR=${HOME}/www/css4j.github.io
 # Source directories for JS and CSS
@@ -19,14 +22,14 @@ SRCDIR=${SITEDIR}/src
 CSSSRCDIR=${SITEDIR}/src
 # Contributed CSS and scripts
 CONTRIBDIR=${SRCDIR}/contrib
-PRISM=${CONTRIBDIR}/prism-markup-css-clike-groovy-java
-PRISM_USAGE=${CONTRIBDIR}/prism-markup-css-clike-groovy-java
+PRISM=${CONTRIBDIR}/prism-markup-css-clike-gradle-java
+PRISM_USAGE=${CONTRIBDIR}/prism-markup-css-clike-gradle-java-shell
 # Working directory
 WORKDIR=$TMP/css4j.github
 # Versioning
 FAQJSVER=a
-USAGEJSVER=d
-USAGECSSVER=e
+USAGEJSVER=e
+USAGECSSVER=f
 BASEJSVER=a
 BASECSSVER=c
 # Create working directory, if does not exist
@@ -54,10 +57,10 @@ cat ${SITEDIR}/common.css ${SITEDIR}/normal.css > ${WORKDIR}/basic-a.css
 cat ${WORKDIR}/basic-a.css ${CSSSRCDIR}/faq.css > ${WORKDIR}/faq-a.css
 cat ${PRISM}.css ${WORKDIR}/basic-a.css ${CSSSRCDIR}/code.css > ${WORKDIR}/code-a.css
 cat ${PRISM_USAGE}.css ${SITEDIR}/common.css ${SITEDIR}/normal.css ${CSSSRCDIR}/usage.css > ${WORKDIR}/usage-a.css
-java -jar $YUICOMP ${WORKDIR}/basic-a.css --charset utf-8 > ${SITEDIR}/basic-${BASECSSVER}.css
-java -jar $YUICOMP ${WORKDIR}/code-a.css --charset utf-8 > ${SITEDIR}/code-${BASECSSVER}.css
-java -jar $YUICOMP ${WORKDIR}/faq-a.css --charset utf-8 > ${SITEDIR}/faq-${BASECSSVER}.css
-java -jar $YUICOMP ${WORKDIR}/usage-a.css --charset utf-8 > ${SITEDIR}/usage-${USAGECSSVER}.css
+java -jar $CSS4J ${WORKDIR}/basic-a.css --charset utf-8 > ${SITEDIR}/basic-${BASECSSVER}.css
+java -jar $CSS4J ${WORKDIR}/code-a.css --charset utf-8 > ${SITEDIR}/code-${BASECSSVER}.css
+java -jar $CSS4J ${WORKDIR}/faq-a.css --charset utf-8 > ${SITEDIR}/faq-${BASECSSVER}.css
+java -jar $CSS4J ${WORKDIR}/usage-a.css --charset utf-8 > ${SITEDIR}/usage-${USAGECSSVER}.css
 # Remove work directory
 if [ -r $WORKDIR ]
 then rm -r $WORKDIR

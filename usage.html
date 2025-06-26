@@ -4,9 +4,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="Carlos Amengual">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="usage-e.css" rel="stylesheet" type="text/css" />
+<link href="usage-f.css" rel="stylesheet" type="text/css" />
 <title>CSS4J Quick Start User Guide</title>
-<script src="js/usage-d.js" charset="utf-8"></script>
+<script src="js/usage-e.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="layout">
@@ -125,7 +125,7 @@ that have the same major version number and the same or larger minor version. Fo
 If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
 your build file:
 </p>
-<pre class="code"><code class="language-groovy">repositories {
+<pre class="code"><code class="language-gradle">repositories {
     maven {
         url "https://css4j.github.io/maven/"
         mavenContent {
@@ -146,7 +146,7 @@ please use this repository <b>only</b> for the artifact groups listed in the <co
 <p>
 Then, in your <code>build.gradle</code> file:
 </p>
-<pre class="code"><code class="language-groovy">dependencies {
+<pre class="code"><code class="language-gradle">dependencies {
     implementation "io.sf.carte:css4j:${css4jVersion}"
 }
 </code></pre>
@@ -294,13 +294,13 @@ but you do not need the latter unless you plan to use the DOM4J agent.</p>
 <h3 class="subtema" id="dom4j-gradle">Gradle setup</h3>
 <p>For example, to set up css4j-dom4j (and the generally useful xml-dtd) with Gradle, put the following in your
 build file:</p>
-<pre class="code"><code class="language-groovy">dependencies {
+<pre class="code"><code class="language-gradle">dependencies {
     implementation "io.sf.carte:css4j-dom4j:${css4jDom4jVersion}"
     implementation "io.sf.carte:xml-dtd:4.3"
 }
 </code></pre>
 <p>But please remember that you have to set up css4j's repository, if you haven't already:</p>
-<pre class="code"><code class="language-groovy">repositories {
+<pre class="code"><code class="language-gradle">repositories {
     maven {
         url "https://css4j.github.io/maven/"
         mavenContent {
@@ -1191,51 +1191,131 @@ Use single quotes unless double quotes are more efficient (when the string conta
 </div>
 <div class="tema" id="minification">
 <h2>Minification</h2>
-<p>The library provides methods for minified serialization at different levels (values, declarations, rules, lists, etc)
-but one generally wants to work at the style sheet level, in which case a generic CSS minification method could
-look like the following:</p>
-<pre class="code"><code class="language-java">import io.sf.carte.doc.dom.CSSDOMImplementation;
-import io.sf.carte.doc.style.css.CSSStyleSheet;
-import io.sf.carte.doc.style.css.nsac.Parser;
-import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheet;
-import io.sf.carte.doc.style.css.om.AbstractCSSStyleSheetFactory;
-
-public static String minifyCSS(String css) {
-    // Instantiate any style sheet factory, with parser flags allowing IE hacks
-    AbstractCSSStyleSheetFactory cssFactory = new CSSDOMImplementation(
-        EnumSet.allOf(Parser.Flag.class));
-    // Create an empty style sheet
-    AbstractCSSStyleSheet sheet = cssFactory.createStyleSheet(null, null);
-    // Parse and check for return value
-    try {
-        if (sheet.parseStyleSheet(new StringReader(css),
-                CSSStyleSheet.COMMENTS_IGNORE)) {
-            // Parsed without errors
-            return sheet.toMinifiedString();
-        }
-    } catch (IOException e) {
-        // Cannot happen with StringReader
-    }
-    // Error detected, return the source
-    return css;
-}
-</code></pre>
-<p>Since css4j 4.2, the <a class="codeitem"
-href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/Minify.html">Minify</a> convenience
-class does just that.
+<p>The library provides methods for minified serialization at different levels (values, declarations,
+rules, lists, sheets, etc), however if you are looking for a generic CSS minification you should use
+the <a class="codeitem"
+href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/util/Minify.html">Minify</a> class
+(which can be run from the command line).
 </p>
+<p>Some features of the minifier:</p>
+<ul>
+<li>Drops unnecessary whitespace and comments (except <a href="#minify-comments">'special' comments</a>).</li>
+<li>Minifies values by looking for shorter equivalent forms.</li>
+<li>Filters unnecessary shorthand components.</li>
+<li>Removes duplicate selectors in a list of selectors.</li>
+<li>Erases empty rules, but taking into account 'special' comments and CSS nesting.</li>
+<li>Deletes redundant parentheses in media queries and <code>@supports</code> conditions.</li>
+<li>Supports modern CSS like nested rules, relative colors, the <code>if()</code> function, etc.</li>
+<li>If an unexpected syntax is found, defaults to a shallow minification that still removes whitespace
+and comments.</li>
+</ul>
+<p>As hinted above, the generic minifier first uses the low-level NSAC parser to minify.
+If an invalid or unsupported syntax is detected, it falls back to a simpler minifier.
+To avoid falling back to the shallow minifier due to new CSS syntax, it is recommended to use
+a recent version of the library.</p>
 <p><em>Note: if you minify CSS that uses Internet Explorer hacks, first be sure that it is limited to
 only use the <a href="#legacycompat">legacy hacks that this library supports</a>.</em></p>
-<h3 class="subtema" id="yuicompressor">Beware of YUI Compressor</h3>
-<p>For further minification, you could choose to apply a specialized minification utility to the output of
-<code>toMinifiedString()</code>, and <a href="https://github.com/yui/yuicompressor" target="_blank">YUI
-Compressor</a> was a popular choice. But
+<h3 class="subtema" id="minify-command-line">Minifying from the command line</h3>
+<p>To run the minifier from the command line, you may want to use the uber jar which is part of the
+standard release files (filename <code>css4j-&lt;version&gt;-alldeps.jar</code>):</p>
+<pre class="code"><code class="language-shell">java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --charset ISO-8859-1 &gt; minified.css
+</code></pre>
+<p>where the item that follows <code>--charset</code> is the encoding of the input file. If
+the encoding is <code>UTF-8</code>, <code>--charset</code> can be omitted.</p>
+<p>The minifier exits with a status code of <code>0</code> if ran successfully, <code>2</code> if the
+arguments were incorrect and <code>1</code> if the shallow, less efficient minifier was used.
+<p>
+<h3 class="subtema" id="minify-comments">Comments</h3>
+<p>Comments are obviously dropped in a minification, but sometimes you may want to keep some.
+In that case, the comment must start with a specific character (<code>!</code> by default):</p>
+<pre class="code"><code class="language-css">/*! Copyright 2025 */
+</code></pre>
+<p>The default behaviour with <code>!</code> is compatible with YUI compressor, but you can
+set any other character via <code>--preserve-comment-char</code>:</p>
+<pre class="code"><code class="language-shell">java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --preserve-comment-char "*" &gt; minified.css
+</code></pre>
+<p>If you run the minifier from a Java class, look at the <code>getPreserveCommentChar()</code>
+method in <code>Minify.ShallowConfig</code>.</p>
+<h3 class="subtema" id="shorthand-opti">Shorthand property optimisation</h3>
+<p>In addition to the normal minification of values, the minifier attempts to optimise shorthand
+properties by default. For example, the following declarations:</p>
+<pre class="code"><code class="language-css">div, *.cls {
+
+ /* Verbose longhand properties */
+  color: rgba(255,255,0,255);
+  background-color: rgb(from lime r calc(g - 127) b);
+
+ /* Shorthands with inefficient values */
+  border-radius: initial; /* Some compressors would remove this but that's wrong */
+  margin: 2px 2px 2px 2px;
+  background: url('bkg.png') left top round space padding-box border-box local;
+
+}
+</code></pre>
+<p>are converted to</p>
+<pre class="code"><code class="language-css">div,.cls{color:#ff0;background-color:green;border-radius:0;margin:2px;background:url(bkg.png) round space local}
+</code></pre>
+<p>The optimisations on shorthands can be disabled via the <code class="codeitem">Minify.Config</code>
+parameter, or using the <code>--disable-shorthand</code> command line option:</p>
+<pre class="code"><code class="language-shell">java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --disable-shorthand margin,padding &gt; minified.css
+</code></pre>
+<p>To completely disable the shorthand optimisations, the following two runs are equivalent:</p>
+<pre class="code"><code class="language-shell">java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --disable-shorthand all &gt; minified.css
+java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --disable-shorthand &gt; minified.css
+</code></pre>
+<h3 class="subtema" id="minify-validation">Value validation</h3>
+<p>Value validation may be turned on via <code>--validate</code>:</p>
+<pre class="code"><code class="language-shell">java -jar path/to/css4j-&lt;version&gt;-alldeps.jar verbose.css --validate &gt; minified.css
+</code></pre>
+<p>and then the parser will perform a basic validation of the values, which has a few subtle side
+effects apart from the syntax checks. For example, if validation is enabled the minification shall
+preserve comments corresponding to empty <code>var()</code> fallbacks, like:
+</p>
+<pre class="code"><code class="language-css">div{content:var(--the-content,/* Empty fallback */)}
+</code></pre>
+<p>Preserving the comments on empty values is a recommended practice and may help some old CSS engines,
+although also slightly increases the size of the minified style sheet.</p>
+<p>Validation may also result in some out-of-range color components being corrected.</p>
+<h3 class="subtema" id="mini-customize-values">Customize value and selector serialization</h3>
+<p>If you use <code>Minify</code> from a Java class, the <code>Minify.Config</code> object gives
+you the final word in the serialization of selectors and  values, via the <code>serializeSelectors()</code>
+and  <code>serializeValue()</code> methods.</p>
+<p>For example:</p>
+<pre class="code"><code class="language-java">class MiniConfig implements Minify.Config {
+
+    private SheetContext sheetContext = new MySheetContext();
+
+    @Override
+    public void serializeSelectors(SelectorList selectors, StringBuilder buffer) {
+        // MySerializer would be a customized serialization class that you wrote
+        buffer.append(MySerializer.selectorListToString(selectors, sheetContext));
+    }
+
+    @Override
+    public void serializeValue(String property, String value, StringBuilder buffer) {
+        if ("color".equals(property)) {
+            value = "#000";
+        }
+        buffer.append(value);
+    }
+
+}
+</code></pre>
+<h3 class="subtema" id="yuicompressor">Css4j vs. YUI Compressor</h3>
+<p><a href="https://github.com/yui/yuicompressor" target="_blank">YUI Compressor</a> used to be
+a popular choice for minification but
 <a href="https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui" target="_blank">that
-library is not maintained anymore</a> and the latest release was done in 2013: if you decide to apply the
-YUI Compressor anyway, beware that it will break <code>calc()</code> expressions and other stuff.</p>
-<p>Although there are a few post-2.4.8 updates that were applied to the Compressor's <code>master</code>
-branch on its <a href="https://github.com/yui/yuicompressor" target="_blank">Github repository</a>, that
-code is completely broken: it does not compile and at least one of the new regular expressions is wrong.</p>
+library is not maintained anymore</a> and the latest release was done in 2013. It does not support modern CSS
+and for example will break <code>calc()</code> expressions. Other compressors have similar issues
+with post-2012 CSS, which led to the development of this minifier.</p>
+<p>The css4j <code>Minify</code> class generally produces CSS that is a bit smaller than YUI's (in
+real-world tests YUI was less than 1% larger, often below 0.5%). This happens despite
+<code>Minify</code> being less aggressive than YUI: for example, YUI would convert
+<code>border-top:none</code> into <code>border-top:0</code>, which in a simple style sheet does
+what is intended. However if the <code>border-style</code> property is later modified, the styles
+could break.</p>
+<p>If you are using YUI Compressor or other minifiers, you may want to give <code>Minify</code>
+a try.</p>
 </div>
 <div class="tema" id="sheetcomments">
 <h2>Accessing style sheet comments</h2>
