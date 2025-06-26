@@ -126,26 +126,30 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="#IEPRIO" class="member-name-link">IEPRIO</a></code></div>
+<div class="col-first even-row-color"><code><a href="#DISABLE_VALUE_VALIDATION" class="member-name-link">DISABLE_VALUE_VALIDATION</a></code></div>
 <div class="col-last even-row-color">
+<div class="block">Disable function value validation.</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#IEPRIO" class="member-name-link">IEPRIO</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Allows values ending with the '!</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#IEPRIOCHAR" class="member-name-link">IEPRIOCHAR</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#IEPRIOCHAR" class="member-name-link">IEPRIOCHAR</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Accepts values with an '!</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#IEVALUES" class="member-name-link">IEVALUES</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#IEVALUES" class="member-name-link">IEVALUES</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Accepts values with some IE hacks, producing
  <a href="LexicalUnit.LexicalType.html#COMPAT_IDENT"><code>COMPAT_IDENT</code></a> values.</div>
 </div>
-<div class="col-first odd-row-color"><code><a href="#STARHACK" class="member-name-link">STARHACK</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code><a href="#STARHACK" class="member-name-link">STARHACK</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Handles asterisk-prefixed properties as normal, compliant CSS properties but
  reports a SAC warning.</div>
 </div>
-<div class="col-first even-row-color"><code><a href="#VALUE_COMMENTS_IGNORE" class="member-name-link">VALUE_COMMENTS_IGNORE</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code><a href="#VALUE_COMMENTS_IGNORE" class="member-name-link">VALUE_COMMENTS_IGNORE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">Ignore comments in values.</div>
 </div>
 </div>
@@ -198,6 +202,16 @@ the order they are declared.</div>
 <h3>VALUE_COMMENTS_IGNORE</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a></span>&nbsp;<span class="element-name">VALUE_COMMENTS_IGNORE</span></div>
 <div class="block">Ignore comments in values.
+ <p>
+ Gives slightly better performance in value parsing.
+ </p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="DISABLE_VALUE_VALIDATION">
+<h3>DISABLE_VALUE_VALIDATION</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Parser.Flag.html" title="enum class in io.sf.carte.doc.style.css.nsac">Parser.Flag</a></span>&nbsp;<span class="element-name">DISABLE_VALUE_VALIDATION</span></div>
+<div class="block">Disable function value validation.
  <p>
  Gives slightly better performance in value parsing.
  </p></div>

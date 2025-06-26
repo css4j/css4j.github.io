@@ -188,8 +188,8 @@ implements <a href="../MediaQuery.html" title="interface in io.sf.carte.doc.styl
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Determine whether the two conditions match.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matches(io.sf.carte.doc.style.css.parser.AbstractMediaQuery)" class="member-name-link">matches</a><wbr>(<a href="AbstractMediaQuery.html" title="class in io.sf.carte.doc.style.css.parser">AbstractMediaQuery</a>&nbsp;other)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matches(io.sf.carte.doc.style.css.MediaQuery)" class="member-name-link">matches</a><wbr>(<a href="../MediaQuery.html" title="interface in io.sf.carte.doc.style.css">MediaQuery</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Check whether the given query is partially or totally contained by this one.</div>
 </div>
@@ -198,7 +198,7 @@ implements <a href="../MediaQuery.html" title="interface in io.sf.carte.doc.styl
  <a href="../CSSCanvas.html" title="interface in io.sf.carte.doc.style.css">CSSCanvas</a>&nbsp;canvas)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>protected abstract boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matchesPredicate(io.sf.carte.doc.style.css.BooleanCondition,io.sf.carte.doc.style.css.CSSCanvas)" class="member-name-link">matchesPredicate</a><wbr>(<a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a>&nbsp;condition,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#matchesPredicate(io.sf.carte.doc.style.css.MediaQueryPredicate,io.sf.carte.doc.style.css.CSSCanvas)" class="member-name-link">matchesPredicate</a><wbr>(<a href="../MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a>&nbsp;condition,
  <a href="../CSSCanvas.html" title="interface in io.sf.carte.doc.style.css">CSSCanvas</a>&nbsp;canvas)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
@@ -359,9 +359,9 @@ implements <a href="../MediaQuery.html" title="interface in io.sf.carte.doc.styl
 </section>
 </li>
 <li>
-<section class="detail" id="matches(io.sf.carte.doc.style.css.parser.AbstractMediaQuery)">
+<section class="detail" id="matches(io.sf.carte.doc.style.css.MediaQuery)">
 <h3>matches</h3>
-<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">matches</span><wbr><span class="parameters">(<a href="AbstractMediaQuery.html" title="class in io.sf.carte.doc.style.css.parser">AbstractMediaQuery</a>&nbsp;other)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">matches</span><wbr><span class="parameters">(<a href="../MediaQuery.html" title="interface in io.sf.carte.doc.style.css">MediaQuery</a>&nbsp;other)</span></div>
 <div class="block">Check whether the given query is partially or totally contained by this one.
  <p>
  If query A matches B, then if a medium matches B it will also match A. The
@@ -404,9 +404,9 @@ implements <a href="../MediaQuery.html" title="interface in io.sf.carte.doc.styl
 </section>
 </li>
 <li>
-<section class="detail" id="matchesPredicate(io.sf.carte.doc.style.css.BooleanCondition,io.sf.carte.doc.style.css.CSSCanvas)">
+<section class="detail" id="matchesPredicate(io.sf.carte.doc.style.css.MediaQueryPredicate,io.sf.carte.doc.style.css.CSSCanvas)">
 <h3>matchesPredicate</h3>
-<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">matchesPredicate</span><wbr><span class="parameters">(<a href="../BooleanCondition.html" title="interface in io.sf.carte.doc.style.css">BooleanCondition</a>&nbsp;condition,
+<div class="member-signature"><span class="modifiers">protected abstract</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">matchesPredicate</span><wbr><span class="parameters">(<a href="../MediaQueryPredicate.html" title="interface in io.sf.carte.doc.style.css">MediaQueryPredicate</a>&nbsp;condition,
  <a href="../CSSCanvas.html" title="interface in io.sf.carte.doc.style.css">CSSCanvas</a>&nbsp;canvas)</span></div>
 </section>
 </li>

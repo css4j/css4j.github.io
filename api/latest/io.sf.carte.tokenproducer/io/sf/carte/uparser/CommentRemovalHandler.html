@@ -95,6 +95,10 @@ loadScripts(document, 'script');</script>
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code>, <code><a href="TokenHandler2.html" title="interface in io.sf.carte.uparser">TokenHandler2</a></code>, <code><a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a>&gt;</code></dd>
 </dl>
+<dl class="notes">
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="MinificationHandler.html" title="class in io.sf.carte.uparser">MinificationHandler</a></code></dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">CommentRemovalHandler</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
@@ -131,6 +135,10 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int)" class="member-name-link">CommentRemovalHandler</a><wbr>(int&nbsp;bufSize)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Construct the handler with the given initial buffer size.</div>
+</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.StringBuilder)" class="member-name-link">CommentRemovalHandler</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">Construct the handler with the given buffer.</div>
 </div>
 </div>
 </section>
@@ -190,61 +198,71 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the buffer.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftCurlyBracket(int)" class="member-name-link">leftCurlyBracket</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousCodepoint()" class="member-name-link">getPreviousCodepoint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the codepoint that was last processed.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftCurlyBracket(int)" class="member-name-link">leftCurlyBracket</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>{</code> codepoint is found.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftParenthesis(int)" class="member-name-link">leftParenthesis</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftParenthesis(int)" class="member-name-link">leftParenthesis</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>(</code> codepoint is found.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftSquareBracket(int)" class="member-name-link">leftSquareBracket</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#leftSquareBracket(int)" class="member-name-link">leftSquareBracket</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>[</code> codepoint is found.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quoted(int,java.lang.CharSequence,int)" class="member-name-link">quoted</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quoted(int,java.lang.CharSequence,int)" class="member-name-link">quoted</a><wbr>(int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;quoted,
  int&nbsp;quoteCp)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">A quoted string was found by the parser.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quotedNewlineChar(int,int)" class="member-name-link">quotedNewlineChar</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quotedNewlineChar(int,int)" class="member-name-link">quotedNewlineChar</a><wbr>(int&nbsp;index,
  int&nbsp;codePoint)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">An unescaped FF/LF/CR control was found while assembling a quoted string.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quotedWithControl(int,java.lang.CharSequence,int)" class="member-name-link">quotedWithControl</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quotedWithControl(int,java.lang.CharSequence,int)" class="member-name-link">quotedWithControl</a><wbr>(int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/CharSequence.html" title="class or interface in java.lang" class="external-link">CharSequence</a>&nbsp;quoted,
  int&nbsp;quoteCp)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">A quoted string was found by the parser, and contains control characters.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightCurlyBracket(int)" class="member-name-link">rightCurlyBracket</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightCurlyBracket(int)" class="member-name-link">rightCurlyBracket</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>}</code> codepoint is found.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightParenthesis(int)" class="member-name-link">rightParenthesis</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightParenthesis(int)" class="member-name-link">rightParenthesis</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>)</code> codepoint is found.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightSquareBracket(int)" class="member-name-link">rightSquareBracket</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rightSquareBracket(int)" class="member-name-link">rightSquareBracket</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Called when the <code>]</code> codepoint is found.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#separator(int,int)" class="member-name-link">separator</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#separator(int,int)" class="member-name-link">separator</a><wbr>(int&nbsp;index,
  int&nbsp;codePoint)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">A separator (Zs, Zl and Zp unicode categories) was found.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPreviousCodepoint(int)" class="member-name-link">setPreviousCodepoint</a><wbr>(int&nbsp;codePoint)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set the codepoint that was last processed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tokenStart(io.sf.carte.uparser.TokenControl)" class="member-name-link">tokenStart</a><wbr>(<a href="TokenControl.html" title="interface in io.sf.carte.uparser">TokenControl</a>&nbsp;control)</code></div>
@@ -289,6 +307,17 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.lang.StringBuilder)">
+<h3>CommentRemovalHandler</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CommentRemovalHandler</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</span></div>
+<div class="block">Construct the handler with the given buffer.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>buffer</code> - the buffer.</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -305,6 +334,32 @@ implements <a href="TokenHandler2.html" title="interface in io.sf.carte.uparser"
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the buffer.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPreviousCodepoint()">
+<h3>getPreviousCodepoint</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPreviousCodepoint</span>()</div>
+<div class="block">Get the codepoint that was last processed.
+ <p>
+ If a character sequence was last processed it returns <code>65</code>, and
+ <code>32</code> for a separator or a control character.
+ </p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the codepoint;</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setPreviousCodepoint(int)">
+<h3>setPreviousCodepoint</h3>
+<div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousCodepoint</span><wbr><span class="parameters">(int&nbsp;codePoint)</span></div>
+<div class="block">Set the codepoint that was last processed.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>codePoint</code> - the codepoint.</dd>
 </dl>
 </section>
 </li>

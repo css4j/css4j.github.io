@@ -39,7 +39,7 @@ loadScripts(document, 'script');</script>
 <li>
 <p>Summary:</p>
 <ul>
-<li>Nested</li>
+<li><a href="#nested-class-summary">Nested</a></li>
 <li>Field</li>
 <li><a href="#constructor-summary">Constr</a></li>
 <li><a href="#method-summary">Method</a></li>
@@ -59,7 +59,7 @@ loadScripts(document, 'script');</script>
 <div id="navbar-sub-list">
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
@@ -94,10 +94,37 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Minify</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Minify a CSS style sheet.</div>
+<div class="block">Minify a CSS style sheet.
+ <p>
+ The regular minification methods first attempt a full minification by using
+ the CSS parser, but in case that an unrecognized syntax is found, a safe,
+ shallow minified serialization is used (with no CSS parsing involved).
+ </p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<li>
+<section class="nested-class-summary" id="nested-class-summary">
+<h2>Nested Class Summary</h2>
+<div class="caption"><span>Nested Classes</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="Minify.Config.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Configuration of normal minification.</div>
+</div>
+<div class="col-first odd-row-color"><code>static interface&nbsp;</code></div>
+<div class="col-second odd-row-color"><code><a href="Minify.ShallowConfig.html" class="type-name-link" title="interface in io.sf.carte.doc.style.css.util">Minify.ShallowConfig</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">Configuration common to shallow and normal minification.</div>
+</div>
+</div>
+</section>
+</li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <li>
 <section class="constructor-summary" id="constructor-summary">
@@ -134,9 +161,54 @@ loadScripts(document, 'script');</script>
 <div class="block">Minifies a CSS style sheet.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#minifyCSS(java.lang.String,io.sf.carte.doc.style.css.util.Minify.Config,java.io.PrintStream)" class="member-name-link">minifyCSS</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;css,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Minifies a CSS style sheet and prints parsing errors to a stream.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#minifyCSS(java.net.URL,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder,java.io.PrintStream)" class="member-name-link">minifyCSS</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a>&nbsp;url,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Minifies a CSS style sheet.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#minifyCSS(java.nio.file.Path)" class="member-name-link">minifyCSS</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;cssPath)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Minifies a CSS style sheet.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#minifyCSS(java.nio.file.Path,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder)" class="member-name-link">minifyCSS</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;cssPath,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Minifies a CSS style sheet.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#minifyCSS(java.nio.file.Path,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder,java.io.PrintStream)" class="member-name-link">minifyCSS</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;cssPath,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Minifies a CSS style sheet.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shallowMinify(java.io.Reader,io.sf.carte.doc.style.css.util.Minify.ShallowConfig,java.lang.StringBuilder)" class="member-name-link">shallowMinify</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;cssReader,
+ <a href="Minify.ShallowConfig.html" title="interface in io.sf.carte.doc.style.css.util">Minify.ShallowConfig</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Perform a safe, shallow minification that does not attempt to minify values
+ nor media features.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#shallowMinify(java.io.Reader,java.lang.StringBuilder)" class="member-name-link">shallowMinify</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;cssReader,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Perform a safe, shallow minification that does not attempt to minify values
+ nor media features.</div>
 </div>
 </div>
 </div>
@@ -174,16 +246,33 @@ loadScripts(document, 'script');</script>
 <h3>main</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">main</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;args)</span>
                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URISyntaxException.html" title="class or interface in java.net" class="external-link">URISyntaxException</a>,
+<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a>,
 <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
 <div class="block">Prints to standard output a minification of the CSS style sheet located at
  the supplied URI.
  <p>
- If the given sheet contains error(s) and therefore cannot be reliably
- minified, the original source sheet is printed.
+ The argument array must contain the style sheet path or URI, and any
+ additional configuration:
+ </p>
+ <ul>
+ <li><code>--charset</code>, followed by a valid character set name.</li>
+ <li><code>--disable-shorthand</code>. If followed by a comma-separated list
+ of shorthand names, it disables the advanced minification for those
+ shorthands. If alone, all advanced shorthand minification is disabled (same
+ as <code>--disable-shorthand all</code>).</li>
+ </ul>
+ <p>
+ If the configuration options are invalid, exits with a status code of
+ <code>2</code>.
+ </p>
+ <p>
+ If the given sheet contains error(s), a shallower minification is performed
+ and the process exits with a status of <code>1</code>.
  </p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>args</code> - the URI to a style sheet.</dd>
+<dd><code>args</code> - the arguments, including at least the URI or path to a style
+             sheet.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URISyntaxException.html" title="class or interface in java.net" class="external-link">URISyntaxException</a></code> - if the URI has wrong syntax.</dd>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the URI is otherwise incorrect.</dd>
@@ -200,8 +289,25 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>css</code> - the serialized style sheet.</dd>
 <dt>Returns:</dt>
-<dd>the minified serialization, or the original one if an error was
-         detected.</dd>
+<dd>the minified serialization.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="minifyCSS(java.lang.String,io.sf.carte.doc.style.css.util.Minify.Config,java.io.PrintStream)">
+<h3>minifyCSS</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">minifyCSS</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;css,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</span></div>
+<div class="block">Minifies a CSS style sheet and prints parsing errors to a stream.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>css</code> - the serialized style sheet.</dd>
+<dd><code>config</code> - the minification configuration, or <code>null</code> if defaults
+               should be used.</dd>
+<dd><code>err</code> - the error reporting stream, or <code>null</code> if no stream.</dd>
+<dt>Returns:</dt>
+<dd>the minified serialization.</dd>
 </dl>
 </section>
 </li>
@@ -213,12 +319,119 @@ loadScripts(document, 'script');</script>
 <div class="block">Minifies a CSS style sheet.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>cssPath</code> - the path to style sheet.</dd>
+<dd><code>cssPath</code> - the path to a <code>utf-8</code>-encoded style sheet.</dd>
 <dt>Returns:</dt>
-<dd>the minified serialization, or the original file if an error was
-         found.</dd>
+<dd>the minified serialization.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="minifyCSS(java.nio.file.Path,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder)">
+<h3>minifyCSS</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">minifyCSS</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;cssPath,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</span>
+                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Minifies a CSS style sheet.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cssPath</code> - the path to the style sheet.</dd>
+<dd><code>config</code> - the minification configuration, or <code>null</code> if defaults
+                should be used.</dd>
+<dd><code>buffer</code> - the buffer to write the minified serialization, or the
+                original file if an error is found.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the style sheet was fully minified, <code>false</code> if
+         an error was found and the minification was shallow.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="minifyCSS(java.nio.file.Path,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder,java.io.PrintStream)">
+<h3>minifyCSS</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">minifyCSS</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/nio/file/Path.html" title="class or interface in java.nio.file" class="external-link">Path</a>&nbsp;cssPath,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</span>
+                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Minifies a CSS style sheet.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cssPath</code> - the path to the style sheet.</dd>
+<dd><code>config</code> - the minification configuration, or <code>null</code> if defaults
+                should be used.</dd>
+<dd><code>buffer</code> - the buffer to write the minified serialization.</dd>
+<dd><code>err</code> - the error reporting stream, or <code>null</code> if no stream.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the style sheet was fully minified, <code>false</code> if
+         a syntax error was found and the minification was shallow.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="minifyCSS(java.net.URL,io.sf.carte.doc.style.css.util.Minify.Config,java.lang.StringBuilder,java.io.PrintStream)">
+<h3>minifyCSS</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">minifyCSS</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html" title="class or interface in java.net" class="external-link">URL</a>&nbsp;url,
+ <a href="Minify.Config.html" title="interface in io.sf.carte.doc.style.css.util">Minify.Config</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;err)</span>
+                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Minifies a CSS style sheet.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>url</code> - the url to the style sheet.</dd>
+<dd><code>config</code> - the minification configuration, or <code>null</code> if defaults
+               should be used.</dd>
+<dd><code>buffer</code> - the buffer to write the minified serialization.</dd>
+<dd><code>err</code> - the error reporting stream, or <code>null</code> if no stream.</dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if the style sheet was fully minified, <code>false</code> if
+         a syntax error was found and the minification was shallow.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="shallowMinify(java.io.Reader,java.lang.StringBuilder)">
+<h3>shallowMinify</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">shallowMinify</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;cssReader,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</span>
+                          throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Perform a safe, shallow minification that does not attempt to minify values
+ nor media features.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cssReader</code> - the <code>Reader</code> with the style sheet.</dd>
+<dd><code>buffer</code> - the output buffer.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O error happened reading the style sheet.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="shallowMinify(java.io.Reader,io.sf.carte.doc.style.css.util.Minify.ShallowConfig,java.lang.StringBuilder)">
+<h3>shallowMinify</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">shallowMinify</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html" title="class or interface in java.io" class="external-link">Reader</a>&nbsp;cssReader,
+ <a href="Minify.ShallowConfig.html" title="interface in io.sf.carte.doc.style.css.util">Minify.ShallowConfig</a>&nbsp;config,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&nbsp;buffer)</span>
+                          throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Perform a safe, shallow minification that does not attempt to minify values
+ nor media features.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cssReader</code> - the <code>Reader</code> with the style sheet.</dd>
+<dd><code>config</code> - the minification configuration, or <code>null</code> if defaults
+                  should be used.</dd>
+<dd><code>buffer</code> - the output buffer.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O error happened reading the style sheet.</dd>
 </dl>
 </section>
 </li>

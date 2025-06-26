@@ -148,58 +148,73 @@ loadScripts(document, 'script');</script>
              <a href="#getErrorHandler()"><code>getErrorHandler()</code></a></div>
 </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptEofEndingQuoted(boolean)" class="member-name-link">setAcceptEofEndingQuoted</a><wbr>(boolean&nbsp;accept)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#markStream(int)" class="member-name-link">markStream</a><wbr>(int&nbsp;readAheadLimit)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Calls <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html#mark(int)" title="class or interface in java.io" class="external-link"><code>mark(int)</code></a> on the stream reader.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#markStreamSupported()" class="member-name-link">markStreamSupported</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Tells whether the associated stream supports the <code>mark()</code> operation.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#resetStream()" class="member-name-link">resetStream</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Calls <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html#reset()" title="class or interface in java.io" class="external-link"><code>reset()</code></a> on the stream reader.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptEofEndingQuoted(boolean)" class="member-name-link">setAcceptEofEndingQuoted</a><wbr>(boolean&nbsp;accept)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If set, quoted strings ending with an EOF (End Of File). are processed through the
  relevant <code>quoted</code> method, albeit an error is reported in any case.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptNewlineEndingQuote(boolean)" class="member-name-link">setAcceptNewlineEndingQuote</a><wbr>(boolean&nbsp;accept)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAcceptNewlineEndingQuote(boolean)" class="member-name-link">setAcceptNewlineEndingQuote</a><wbr>(boolean&nbsp;accept)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If set, quoted strings ending with an unescaped newline (instead of the closing quote)
  are processed through the relevant <code>quoted</code> method, albeit an error is
  reported in any case.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setContentHandler(io.sf.carte.uparser.ContentHandler)" class="member-name-link">setContentHandler</a><wbr>(<a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setContentHandler(io.sf.carte.uparser.ContentHandler)" class="member-name-link">setContentHandler</a><wbr>(<a href="ContentHandler.html" title="interface in io.sf.carte.uparser">ContentHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a new <code>ContentHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setControlHandler(io.sf.carte.uparser.ControlHandler)" class="member-name-link">setControlHandler</a><wbr>(<a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setControlHandler(io.sf.carte.uparser.ControlHandler)" class="member-name-link">setControlHandler</a><wbr>(<a href="ControlHandler.html" title="interface in io.sf.carte.uparser">ControlHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a new <code>ControlHandler</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setErrorHandler(io.sf.carte.uparser.TokenErrorHandler)" class="member-name-link">setErrorHandler</a><wbr>(<a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setErrorHandler(io.sf.carte.uparser.TokenErrorHandler)" class="member-name-link">setErrorHandler</a><wbr>(<a href="TokenErrorHandler.html" title="interface in io.sf.carte.uparser">TokenErrorHandler</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set a new <code>TokenErrorHandler</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalLocationHandling(boolean)" class="member-name-link">setExternalLocationHandling</a><wbr>(boolean&nbsp;enable)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalLocationHandling(boolean)" class="member-name-link">setExternalLocationHandling</a><wbr>(boolean&nbsp;enable)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Enable/disable the external handling of locations.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLocationTo(io.sf.carte.uparser.LocatorAccess)" class="member-name-link">setLocationTo</a><wbr>(<a href="LocatorAccess.html" title="interface in io.sf.carte.uparser">LocatorAccess</a>&nbsp;locator)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLocationTo(io.sf.carte.uparser.LocatorAccess)" class="member-name-link">setLocationTo</a><wbr>(<a href="LocatorAccess.html" title="interface in io.sf.carte.uparser">LocatorAccess</a>&nbsp;locator)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set the current parsing location to the given locator.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLocationTo(io.sf.carte.uparser.LocatorAccess,int)" class="member-name-link">setLocationTo</a><wbr>(<a href="LocatorAccess.html" title="interface in io.sf.carte.uparser">LocatorAccess</a>&nbsp;locator,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLocationTo(io.sf.carte.uparser.LocatorAccess,int)" class="member-name-link">setLocationTo</a><wbr>(<a href="LocatorAccess.html" title="interface in io.sf.carte.uparser">LocatorAccess</a>&nbsp;locator,
  int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set the parsing location given by <code>index</code> to the given locator.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTokenHandler(io.sf.carte.uparser.TokenHandler3)" class="member-name-link">setTokenHandler</a><wbr>(<a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;&nbsp;handler)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTokenHandler(io.sf.carte.uparser.TokenHandler3)" class="member-name-link">setTokenHandler</a><wbr>(<a href="TokenHandler3.html" title="interface in io.sf.carte.uparser">TokenHandler3</a>&lt;?&gt;&nbsp;handler)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Set all the handlers with a new <code>TokenHandler3</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#skipNextCodepoint()" class="member-name-link">skipNextCodepoint</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#skipNextCodepoint()" class="member-name-link">skipNextCodepoint</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Gives the next code point in the stream, bypassing the general processing for
  that one.</div>
 </div>
@@ -267,6 +282,50 @@ loadScripts(document, 'script');</script>
 <dd>the next code point, or -1 if the end of the stream was reached.</dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an I/O problem occurs.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="markStreamSupported()">
+<h3>markStreamSupported</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">markStreamSupported</span>()</div>
+<div class="block">Tells whether the associated stream supports the <code>mark()</code> operation.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if the associated stream supports the <code>mark()</code>
+         operation.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="markStream(int)">
+<h3>markStream</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">markStream</span><wbr><span class="parameters">(int&nbsp;readAheadLimit)</span>
+                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Calls <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html#mark(int)" title="class or interface in java.io" class="external-link"><code>mark(int)</code></a> on the stream reader.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>readAheadLimit</code> - Limit on the number of characters that may be read
+                       while still preserving the mark. After reading this
+                       many characters, attempting to reset the stream may
+                       fail.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if the stream does not support mark(), or if some other
+                     I/O error occurs.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resetStream()">
+<h3>resetStream</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resetStream</span>()
+                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Calls <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html#reset()" title="class or interface in java.io" class="external-link"><code>reset()</code></a> on the stream reader.</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if the stream has not been marked, or if the mark has
+                     been invalidated, or if the stream does not support
+                     reset(), or if some other I/O error occurs.</dd>
 </dl>
 </section>
 </li>

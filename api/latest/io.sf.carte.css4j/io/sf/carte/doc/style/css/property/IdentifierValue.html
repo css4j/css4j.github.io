@@ -212,7 +212,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.TypedValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></h3>
-<code><a href="TypedValue.html#getComponent(int)">getComponent</a>, <a href="TypedValue.html#getComponentCount()">getComponentCount</a>, <a href="TypedValue.html#getCssValueType()">getCssValueType</a>, <a href="TypedValue.html#getFloatValue(short)">getFloatValue</a>, <a href="TypedValue.html#isCalculatedNumber()">isCalculatedNumber</a>, <a href="TypedValue.html#isNumberZero()">isNumberZero</a>, <a href="TypedValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">setComponent</a>, <a href="TypedValue.html#setFloatValue(short,float)">setFloatValue</a></code></div>
+<code><a href="TypedValue.html#getComponent(int)">getComponent</a>, <a href="TypedValue.html#getComponentCount()">getComponentCount</a>, <a href="TypedValue.html#getCssValueType()">getCssValueType</a>, <a href="TypedValue.html#getFloatValue(short)">getFloatValue</a>, <a href="TypedValue.html#isNumberZero()">isNumberZero</a>, <a href="TypedValue.html#setComponent(int,io.sf.carte.doc.style.css.property.StyleValue)">setComponent</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.PrimitiveValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></h3>
 <code><a href="PrimitiveValue.html#getPrecedingComments()">getPrecedingComments</a>, <a href="PrimitiveValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="PrimitiveValue.html#getTrailingComments()">getTrailingComments</a>, <a href="PrimitiveValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="PrimitiveValue.html#isSubproperty()">isSubproperty</a>, <a href="PrimitiveValue.html#setExpectInteger()">setExpectInteger</a>, <a href="PrimitiveValue.html#setSubproperty(boolean)">setSubproperty</a></code></div>
@@ -227,7 +227,7 @@ loadScripts(document, 'script');</script>
 <code><a href="../CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="../CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="../CSSPrimitiveValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="../CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSTypedValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></h3>
-<code><a href="../CSSTypedValue.html#getFloatValue()">getFloatValue</a>, <a href="../CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
+<code><a href="../CSSTypedValue.html#getFloatValue()">getFloatValue</a>, <a href="../CSSTypedValue.html#isCalculatedNumber()">isCalculatedNumber</a>, <a href="../CSSTypedValue.html#setFloatValue(short,float)">setFloatValue</a>, <a href="../CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
 <code><a href="../CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSValue.html#getPrecedingComments()">getPrecedingComments</a>, <a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#getTrailingComments()">getTrailingComments</a>, <a href="../CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a></code></div>
@@ -335,10 +335,6 @@ loadScripts(document, 'script');</script>
  references, etc. For functions, it returns the function name.
  </p></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#getStringValue()">getStringValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="TypedValue.html#getStringValue()">getStringValue</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
 <dt>Returns:</dt>
 <dd>the string value.</dd>
 </dl>
@@ -358,10 +354,6 @@ loadScripts(document, 'script');</script>
  unicode wildcard, it must not have the preceding <code>U+</code>.
  </p></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">setStringValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="TypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">setStringValue</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>stringType</code> - the type of value.</dd>
 <dd><code>stringValue</code> - the string value.</dd>
@@ -385,10 +377,6 @@ loadScripts(document, 'script');</script>
  If the color does not map into the sRGB gamut, it is clamped.
  </p></div>
 <dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#toRGBColor()">toRGBColor</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="TypedValue.html#toRGBColor()">toRGBColor</a></code>&nbsp;in class&nbsp;<code><a href="TypedValue.html" title="class in io.sf.carte.doc.style.css.property">TypedValue</a></code></dd>
 <dt>Returns:</dt>
 <dd>the RGBA color.</dd>
 <dt>Throws:</dt>

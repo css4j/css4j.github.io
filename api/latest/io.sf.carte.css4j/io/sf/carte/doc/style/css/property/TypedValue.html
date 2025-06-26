@@ -182,17 +182,6 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">If this is a number, get its float value in the requested unit.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStringValue()" class="member-name-link">getStringValue</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If this value represents a string value, get it.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isCalculatedNumber()" class="member-name-link">isCalculatedNumber</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Test whether this is a numeric value that was the result of a
- <code>calc()</code> expression.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNumberZero()" class="member-name-link">isNumberZero</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -203,24 +192,6 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
  <a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a>&nbsp;component)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">If this value has components, set the component at <code>index</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFloatValue(short,float)" class="member-name-link">setFloatValue</a><wbr>(short&nbsp;unitType,
- float&nbsp;floatValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If this value is numeric, set a float value with the given unit.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)" class="member-name-link">setStringValue</a><wbr>(<a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a>&nbsp;stringType,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stringValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If this value is a string, identifier, URI, unicode wildcard or element
- reference, set its value.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../RGBAColor.html" title="interface in io.sf.carte.doc.style.css">RGBAColor</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toRGBColor()" class="member-name-link">toRGBColor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">If this value represents a color, get it or transform to a RGB color.</div>
 </div>
 </div>
 </div>
@@ -239,7 +210,7 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
 <code><a href="../CSSPrimitiveValue.html#getUnitType()">getUnitType</a>, <a href="../CSSPrimitiveValue.html#isNegativeNumber()">isNegativeNumber</a>, <a href="../CSSPrimitiveValue.html#isPrimitiveValue()">isPrimitiveValue</a>, <a href="../CSSPrimitiveValue.html#setExpectInteger()">setExpectInteger</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSTypedValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></h3>
-<code><a href="../CSSTypedValue.html#getFloatValue()">getFloatValue</a>, <a href="../CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
+<code><a href="../CSSTypedValue.html#getFloatValue()">getFloatValue</a>, <a href="../CSSTypedValue.html#getStringValue()">getStringValue</a>, <a href="../CSSTypedValue.html#isCalculatedNumber()">isCalculatedNumber</a>, <a href="../CSSTypedValue.html#setFloatValue(short,float)">setFloatValue</a>, <a href="../CSSTypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">setStringValue</a>, <a href="../CSSTypedValue.html#toRGBColor()">toRGBColor</a>, <a href="../CSSTypedValue.html#toRGBColorValue()">toRGBColorValue</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.CSSValue">Methods inherited from interface&nbsp;io.sf.carte.doc.style.css.<a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></h3>
 <code><a href="../CSSValue.html#getCssText()">getCssText</a>, <a href="../CSSValue.html#getMinifiedCssText()">getMinifiedCssText</a>, <a href="../CSSValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="../CSSValue.html#getPrecedingComments()">getPrecedingComments</a>, <a href="../CSSValue.html#getPrimitiveType()">getPrimitiveType</a>, <a href="../CSSValue.html#getTrailingComments()">getTrailingComments</a>, <a href="../CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="../CSSValue.html#setCssText(java.lang.String)">setCssText</a>, <a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
@@ -289,28 +260,6 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
 </section>
 </li>
 <li>
-<section class="detail" id="setFloatValue(short,float)">
-<h3>setFloatValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFloatValue</span><wbr><span class="parameters">(short&nbsp;unitType,
- float&nbsp;floatValue)</span>
-                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSTypedValue.html#setFloatValue(short,float)">CSSTypedValue</a></code></span></div>
-<div class="block">If this value is numeric, set a float value with the given unit.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#setFloatValue(short,float)">setFloatValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>unitType</code> - the unit type according to <a href="../CSSUnit.html" title="interface in io.sf.carte.doc.style.css"><code>CSSUnit</code></a>.</dd>
-<dd><code>floatValue</code> - the float value.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - INVALID_ACCESS_ERR if the unit is not a <a href="../CSSUnit.html" title="interface in io.sf.carte.doc.style.css"><code>CSSUnit</code></a>
-                      one, or this value is not a number. <br/>
-                      NO_MODIFICATION_ALLOWED_ERR if this value is
-                      unmodifiable.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getFloatValue(short)">
 <h3>getFloatValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFloatValue</span><wbr><span class="parameters">(short&nbsp;unitType)</span>
@@ -329,96 +278,6 @@ implements <a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.s
                       or it could not be transformed to the desired unit (for
                       example a relative value converted to an absolute one,
                       for which a context is needed).</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">
-<h3>setStringValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStringValue</span><wbr><span class="parameters">(<a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a>&nbsp;stringType,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stringValue)</span>
-                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSTypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">CSSTypedValue</a></code></span></div>
-<div class="block">If this value is a string, identifier, URI, unicode wildcard or element
- reference, set its value.
- <p>
- The string value has to be supplied unescaped and unquoted. If it is a
- unicode wildcard, it must not have the preceding <code>U+</code>.
- </p></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#setStringValue(io.sf.carte.doc.style.css.CSSValue.Type,java.lang.String)">setStringValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>stringType</code> - the type of value.</dd>
-<dd><code>stringValue</code> - the string value.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - INVALID_ACCESS_ERR if the requested type of value is
-                      different to this one, or this value does not accept
-                      strings. <br/>
-                      NO_MODIFICATION_ALLOWED_ERR if this value is
-                      unmodifiable.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getStringValue()">
-<h3>getStringValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getStringValue</span>()
-                      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSTypedValue.html#getStringValue()">CSSTypedValue</a></code></span></div>
-<div class="block">If this value represents a string value, get it.
- <p>
- This method is useful for values like strings, identifiers, URIs, element
- references, etc. For functions, it returns the function name.
- </p></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#getStringValue()">getStringValue</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the string value.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - INVALID_ACCESS_ERR if this value is not a string.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="toRGBColor()">
-<h3>toRGBColor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../RGBAColor.html" title="interface in io.sf.carte.doc.style.css">RGBAColor</a></span>&nbsp;<span class="element-name">toRGBColor</span>()
-                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSTypedValue.html#toRGBColor()">CSSTypedValue</a></code></span></div>
-<div class="block">If this value represents a color, get it or transform to a RGB color.
- <p>
- If the color does not map into the sRGB gamut, it is clamped.
- </p></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#toRGBColor()">toRGBColor</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the RGBA color.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - INVALID_ACCESS_ERR: if this value can't return a RGB
-                         color value (either is not a <code>COLOR</code> or not
-                         a typed value).<br/>
-                         NOT_SUPPORTED_ERR: if the conversion needs device
-                         color space information to be performed accurately.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="isCalculatedNumber()">
-<h3>isCalculatedNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isCalculatedNumber</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSTypedValue.html#isCalculatedNumber()">CSSTypedValue</a></code></span></div>
-<div class="block">Test whether this is a numeric value that was the result of a
- <code>calc()</code> expression.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSTypedValue.html#isCalculatedNumber()">isCalculatedNumber</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSTypedValue.html" title="interface in io.sf.carte.doc.style.css">CSSTypedValue</a></code></dd>
-<dt>Returns:</dt>
-<dd><code>true</code> if this is a numeric value, and it was produced as
-         the output of a calculation (instead of declared as a plain, constant
-         numeric value).</dd>
 </dl>
 </section>
 </li>
