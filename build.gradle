@@ -39,7 +39,7 @@ dependencies {
 	testImplementation 'io.sf.carte:css4j:6.0'
 	testImplementation 'io.sf.carte:echosvg-transcoder:2.1'
 	testImplementation 'nu.validator:htmlparser:1.4.16'
-	testImplementation 'org.junit.jupiter:junit-jupiter:latest.release'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.13.3'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
