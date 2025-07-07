@@ -1,0 +1,140 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-transcoder",
+    "version": "2.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-svg",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-svg2svg",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-tosvg",
+          "version": {
+            "requires": "2.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-2.2.jar",
+          "url": "echosvg-transcoder-2.2.jar",
+          "size": 5453,
+          "sha512": "6cc602a27b6e50fff14fb3e8a68ab283de5e368ba0814421de4bef62148dcb95725f136cdf8a49d542c79d3272d86722ec506a131c5682d4275c28592cf0c0cc",
+          "sha256": "d2ea46e576c5012b6d88a4de5feffdc5af49806b48b10fcaf7ae2baa9dd79ea6",
+          "sha1": "6822cb0edce4706da6b316c68482666ae7618d0a",
+          "md5": "d4b3ac0c10c2235de1eb2b7ae8f9a546"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-svg",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-svg2svg",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-tosvg",
+          "version": {
+            "requires": "2.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-2.2.jar",
+          "url": "echosvg-transcoder-2.2.jar",
+          "size": 5453,
+          "sha512": "6cc602a27b6e50fff14fb3e8a68ab283de5e368ba0814421de4bef62148dcb95725f136cdf8a49d542c79d3272d86722ec506a131c5682d4275c28592cf0c0cc",
+          "sha256": "d2ea46e576c5012b6d88a4de5feffdc5af49806b48b10fcaf7ae2baa9dd79ea6",
+          "sha1": "6822cb0edce4706da6b316c68482666ae7618d0a",
+          "md5": "d4b3ac0c10c2235de1eb2b7ae8f9a546"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-transcoder-2.2-sources.jar",
+          "url": "echosvg-transcoder-2.2-sources.jar",
+          "size": 5721,
+          "sha512": "9cfb864935863280b3e38b10204a8dc8bc479a83c728b0e9ec3a7cefd91d0c55dcec8f1af7d9e974988939234f0925403aa92132a647248ba9b6960635299ce9",
+          "sha256": "0c5c63b95424d72ace3e63c1b02c4974872e74849f19162e757b705794b8cc21",
+          "sha1": "1a03d701f47a9ce4f71347cb757175b208b7f580",
+          "md5": "a0fbe9dc2abb7492b90ee6da566042df"
+        }
+      ]
+    }
+  ]
+}

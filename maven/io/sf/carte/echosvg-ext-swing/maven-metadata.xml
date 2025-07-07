@@ -3,13 +3,14 @@
   <groupId>io.sf.carte</groupId>
   <artifactId>echosvg-ext-swing</artifactId>
   <versioning>
-    <latest>2.1</latest>
-    <release>2.1</release>
+    <latest>2.2</latest>
+    <release>2.2</release>
     <versions>
       <version>2.0</version>
       <version>2.0.1</version>
       <version>2.1</version>
+      <version>2.2</version>
     </versions>
-    <lastUpdated>20250524131355</lastUpdated>
+    <lastUpdated>20250707103708</lastUpdated>
   </versioning>
 </metadata>
