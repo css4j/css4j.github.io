@@ -23,7 +23,7 @@ jobs:
 
     steps:
       # Check-out the repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup JDK 8
         uses: actions/setup-java@v4
