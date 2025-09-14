@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <title>CSS4J Project</title>
-<link href="basic-c.css" rel="stylesheet" type="text/css" />
+<link href="code-c.css" rel="stylesheet" type="text/css" />
+<script src="js/code-a.js" type="text/javascript" charset="utf-8"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="https://css4j.github.io/favicon.png" type="image/png" />
@@ -78,12 +79,26 @@ a different one (see <code>NOTICE.txt</code> in the distribution).</p>
 <li><a href="https://github.com/css4j/css4j-dom4j/releases"><code>css4j-dom4j</code> releases</a>.</li>
 </ul>
 </div>
+<div class="subtema" id="cosign">
+<h3>Verify your download with <code>cosign</code></h3>
+<p>In addition to the given digest files, you can use <a href="https://docs.sigstore.dev/cosign/"><code
+>cosign</code></a> to verify the Zip distribution that you downloaded. This utility should be available
+from your usual package manager, for example on Windows you may use <a href="https://scoop.sh/"><code
+>scoop</code></a> to install it:</p>
+<pre class="code"><code class="language-shell">scoop install cosign
+</code></pre>
+<p>Once you have <code>cosign</code>, obtain the <a href=
+"https://github.com/css4j/css4j/releases/download/v6.1/css4j-6.1-zip-cosign.bundle"><code>cosign</code>
+bundle file corresponding to the Zip distribution</a> and then execute:
+</p>
+<pre class="code"><code class="language-shell">cosign verify-blob css4j-6.1.zip --bundle css4j-6.1-zip-cosign.bundle --certificate-identity-regexp=ca.+@gmail.com --certificate-oidc-issuer=https://github.com/login/oauth
+</code></pre>
+</div>
 </div>
 <div class="tema">
 <h2>EchoSVG</h2>
-<p>EchoSVG is a SVG implementation (fork of Batik) that uses the css4j <a
-href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/nsac/package-summary.html">NSAC</a>
-parser.</p>
+<p>EchoSVG is an SVG implementation (fork of Batik) that internally uses css4j to provide advanced
+CSS capabilities.</p>
 <ul>
 <li><a href="https://github.com/css4j/echosvg/releases">EchoSVG releases</a>.</li>
 <li><a href="https://github.com/css4j/echosvg/wiki">EchoSVG Wiki</a>.</li>
