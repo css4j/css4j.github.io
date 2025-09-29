@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "svgom-api",
+    "version": "1.1.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "smil-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "cssom-api",
+          "version": {
+            "requires": "0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "svgom-api-1.1.4.jar",
+          "url": "svgom-api-1.1.4.jar",
+          "size": 68140,
+          "sha512": "8287c59b435927092faf7e0853aa54fe5083bce52aff941d1b5be24a4d44c365770e31cdc9416ab13a2af9e1ae3f6be5c266be8d788644da43d7b16adab4d101",
+          "sha256": "b91ec6d06fcd027c9c76bc67b44a230b211c542486df0a02d1679e7e3a84b287",
+          "sha1": "967c096b5650f4d48caa94ad008f128ba792a6dd",
+          "md5": "e856d7101a13b2c91039075fcc78daa0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "smil-api",
+          "version": {
+            "requires": "1.0.1"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "cssom-api",
+          "version": {
+            "requires": "0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "svgom-api-1.1.4.jar",
+          "url": "svgom-api-1.1.4.jar",
+          "size": 68140,
+          "sha512": "8287c59b435927092faf7e0853aa54fe5083bce52aff941d1b5be24a4d44c365770e31cdc9416ab13a2af9e1ae3f6be5c266be8d788644da43d7b16adab4d101",
+          "sha256": "b91ec6d06fcd027c9c76bc67b44a230b211c542486df0a02d1679e7e3a84b287",
+          "sha1": "967c096b5650f4d48caa94ad008f128ba792a6dd",
+          "md5": "e856d7101a13b2c91039075fcc78daa0"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "svgom-api-1.1.4-javadoc.jar",
+          "url": "svgom-api-1.1.4-javadoc.jar",
+          "size": 652025,
+          "sha512": "662410f2c496bffc50cc3a8eb2a317d0bc3d97d40c4c4c0b66eff03d7e494dc6aa721737264646446e0f441ea6c6836677d279561ce2e038d9faea7b15464ffa",
+          "sha256": "13ca4c3ad01e30c49e47e3ddf619b1908fb3c2c396074e20f7c619335a500934",
+          "sha1": "5be6247c110b0fded0e4c988f0c1071f31ce7834",
+          "md5": "13d849d0e2c19754afabee31e30a2017"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "svgom-api-1.1.4-sources.jar",
+          "url": "svgom-api-1.1.4-sources.jar",
+          "size": 114859,
+          "sha512": "9dfcf1980e29998e0c5be45e95159572239b7ddbd820d5311a99e3cbb1fdcd2dbf6079923770be8b2293721efe9e3f7f122f400ff8ef252a82d3085c83e2044c",
+          "sha256": "0371ea39e622560e0a6b0219a7515b91277f78b42a8e528c0d1934ffc77c4343",
+          "sha1": "f60ee6167b319bccdd00f5cb7fb49ecdd5e21f76",
+          "md5": "2e336dbb03ad2db3fb5bba3b82731a2e"
+        }
+      ]
+    }
+  ]
+}
