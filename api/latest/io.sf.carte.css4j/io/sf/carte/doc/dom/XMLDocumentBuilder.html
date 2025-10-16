@@ -138,9 +138,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/javax/xml/validation/Schema.html" title="class or interface in javax.xml.validation" class="external-link">Schema</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSchema()" class="member-name-link">getSchema</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html" title="class or interface in org.xml.sax" class="external-link">XMLReader</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXMLReader()" class="member-name-link">getXMLReader</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the <code>XMLReader</code> to be used when parsing.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNamespaceAware()" class="member-name-link">isNamespaceAware</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNamespaceAware()" class="member-name-link">isNamespaceAware</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isStrictErrorChecking()" class="member-name-link">isStrictErrorChecking</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValidating()" class="member-name-link">isValidating</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"></div>
@@ -384,6 +392,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="isStrictErrorChecking()">
+<h3>isStrictErrorChecking</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isStrictErrorChecking</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the value of the <code>strictErrorChecking</code> flag.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setStrictErrorChecking(boolean)">
 <h3>setStrictErrorChecking</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStrictErrorChecking</span><wbr><span class="parameters">(boolean&nbsp;strictErrorChecking)</span></div>
@@ -412,6 +430,18 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>xmlReader</code> - the XMLReader.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getXMLReader()">
+<h3>getXMLReader</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html" title="class or interface in org.xml.sax" class="external-link">XMLReader</a></span>&nbsp;<span class="element-name">getXMLReader</span>()</div>
+<div class="block">Get the <code>XMLReader</code> to be used when parsing.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the XML reader, or <code>null</code> if none was set and a default reader
+         shall be created.</dd>
 </dl>
 </section>
 </li>
