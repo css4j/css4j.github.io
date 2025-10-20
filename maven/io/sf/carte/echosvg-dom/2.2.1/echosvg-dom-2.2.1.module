@@ -1,0 +1,140 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-dom",
+    "version": "2.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "2.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "2.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "2.2.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-2.2.1.jar",
+          "url": "echosvg-dom-2.2.1.jar",
+          "size": 202080,
+          "sha512": "158804851699cedc77d93116af185b402403f57a958437d60e34eeadf314b148424f327377d0ac15ad01657674216fb8dfe8370ff1c2693579923b82d032ed4c",
+          "sha256": "f04e6875a78dca1b2c9d7d2327004e31861ae9a768315503fa528a1c8b57b232",
+          "sha1": "61bc933926d1bcf4fb04c201aac7af48702f5b48",
+          "md5": "a1ca1381533755a223be00094859861a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "2.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "2.2.1"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "2.2.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-2.2.1.jar",
+          "url": "echosvg-dom-2.2.1.jar",
+          "size": 202080,
+          "sha512": "158804851699cedc77d93116af185b402403f57a958437d60e34eeadf314b148424f327377d0ac15ad01657674216fb8dfe8370ff1c2693579923b82d032ed4c",
+          "sha256": "f04e6875a78dca1b2c9d7d2327004e31861ae9a768315503fa528a1c8b57b232",
+          "sha1": "61bc933926d1bcf4fb04c201aac7af48702f5b48",
+          "md5": "a1ca1381533755a223be00094859861a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-dom-2.2.1-sources.jar",
+          "url": "echosvg-dom-2.2.1-sources.jar",
+          "size": 172488,
+          "sha512": "09c3da62103588fd09fcbe9bcd6f8db42f8f3a880af01faeab323b569a700e208dfc21d0aa39a6a3a95c84cab5d73f4257f947bb4a136737f8526655156701ef",
+          "sha256": "c0f176eab90821fb2e09cf87294340ba771f85958c20ce098e05e12a5455b785",
+          "sha1": "f70b730cb09aebded7df3b8876663b4b7822e0f7",
+          "md5": "1f7c615bb7310a66194afbf332dd0509"
+        }
+      ]
+    }
+  ]
+}
