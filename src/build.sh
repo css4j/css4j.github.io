@@ -11,10 +11,10 @@
 #
 #
 
-# YUI compressor location
-YUICOMP=${HOME}/java/lib/yuicompressor-2.4.8.jar
+# Google Closure compiler location
+CLOSURE_COMP=${HOME}/java/lib/closure-compiler.jar
 # CSS4J minifier location
-CSS4J=${HOME}/java/lib/css4j-6.1-alldeps.jar
+CSS4J=${HOME}/java/lib/css4j-6.1.1-alldeps.jar
 # Root of website
 SITEDIR=${HOME}/www/css4j.github.io
 # Source directories for JS and CSS
@@ -32,24 +32,28 @@ USAGEJSVER=e
 USAGECSSVER=f
 BASEJSVER=a
 BASECSSVER=c
+
 # Create working directory, if does not exist
 if [ ! -d $WORKDIR ]
 then mkdir $WORKDIR
 fi
-#if [ ! -r $TMP/yui-dom-event.js ]
-#then /usr/bin/wget -q -O $TMP/yui-dom-event.js http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js
-#fi
-#if [ ! -r $TMP/yui-dom-event-connection.js ]
-#then /usr/bin/wget -q -O $TMP/yui-dom-event-connection.js "http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/connection/connection-min.js"
-#fi
-#if [ ! -r $TMP/yui-dom-event.js ] || [ ! -r $TMP/yui-dom-event-connection.js ]
-#then echo "YUI not found. Exiting."
-#     exit
-#fi
+
+# Check for minifiers
+if [ ! -r ${CLOSURE_COMP} ]
+then wget -q -O ${CLOSURE_COMP} https://repo1.maven.org/maven2/com/google/javascript/closure-compiler/v20250820/closure-compiler-v20250820.jar
+fi
+if [ ! -r ${CSS4J} ]
+then wget -q -O ${CSS4J} https://github.com/css4j/css4j/releases/download/v6.1.1/css4j-6.1.1-alldeps.jar
+fi
+if [ ! -r ${CLOSURE_COMP} ] || [ ! -r ${CSS4J} ]
+then echo "Either closure compiler or css4j weren't found. Exiting."
+     exit
+fi
+
 cat $SRCDIR/copyright-src.js $SRCDIR/framebreak-src.js $SRCDIR/faq-src.js > ${WORKDIR}/faq-a.js
 cat $SRCDIR/framebreak-src.js $SRCDIR/indexbuilder-src.js > ${WORKDIR}/indexbuilder-a.js
-java -jar $YUICOMP --charset utf-8 ${WORKDIR}/faq-a.js > ${SITEDIR}/js/faq-${FAQJSVER}.js
-java -jar $YUICOMP --charset utf-8 ${WORKDIR}/indexbuilder-a.js > ${SITEDIR}/js/indexbuilder-compr.js
+java -jar $CLOSURE_COMP --js ${WORKDIR}/faq-a.js --js_output_file ${SITEDIR}/js/faq-${FAQJSVER}.js
+java -jar $CLOSURE_COMP --js ${WORKDIR}/indexbuilder-a.js --js_output_file ${SITEDIR}/js/indexbuilder-compr.js
 cat $SRCDIR/copyright-prism-src.js ${PRISM}.js > ${SITEDIR}/js/code-${BASEJSVER}.js
 cat $SRCDIR/copyright-prism-src.js ${SITEDIR}/js/indexbuilder-compr.js ${PRISM_USAGE}.js > ${SITEDIR}/js/usage-${USAGEJSVER}.js
 # CSS
