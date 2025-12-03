@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.sf.carte</groupId>
+  <artifactId>css4j</artifactId>
+  <version>6.2</version>
+  <description>css4j core module</description>
+  <url>https://css4j.github.io/</url>
+  <licenses>
+    <license>
+      <name>BSD 3-clause license</name>
+      <url>https://css4j.github.io/LICENSE.txt</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:https://github.com/css4j/css4j.git</connection>
+    <developerConnection>scm:git:git://git@github.com:css4j/css4j.git</developerConnection>
+    <url>https://github.com/css4j/css4j</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>io.sf.carte</groupId>
+      <artifactId>carte-util</artifactId>
+      <version>3.7</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.carte</groupId>
+      <artifactId>tokenproducer</artifactId>
+      <version>3.3</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.jclf</groupId>
+      <artifactId>jclf-text</artifactId>
+      <version>5.0.3</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.jclf</groupId>
+      <artifactId>jclf-linear3</artifactId>
+      <version>[1.0.0,)</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.carte</groupId>
+      <artifactId>xml-dtd</artifactId>
+      <version>4.3</version>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>[1.7.28,)</version>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+</project>
