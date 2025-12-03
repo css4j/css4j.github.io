@@ -91,7 +91,9 @@ loadScripts(document, 'script');</script>
 <div class="inheritance"><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">io.sf.carte.doc.style.css.property.StyleValue</a>
 <div class="inheritance"><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">io.sf.carte.doc.style.css.property.PrimitiveValue</a>
 <div class="inheritance"><a href="ProxyValue.html" title="class in io.sf.carte.doc.style.css.property">io.sf.carte.doc.style.css.property.ProxyValue</a>
+<div class="inheritance"><a href="AbstractLexicalValue.html" title="class in io.sf.carte.doc.style.css.property">io.sf.carte.doc.style.css.property.AbstractLexicalValue</a>
 <div class="inheritance">io.sf.carte.doc.style.css.property.LexicalValue</div>
+</div>
 </div>
 </div>
 </div>
@@ -103,9 +105,9 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">LexicalValue</span>
-<span class="extends-implements">extends <a href="ProxyValue.html" title="class in io.sf.carte.doc.style.css.property">ProxyValue</a>
-implements <a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc.style.css">CSSLexicalValue</a></span></div>
-<div class="block">A value that contains a <code>var</code> value as part of its declaration.</div>
+<span class="extends-implements">extends <a href="AbstractLexicalValue.html" title="class in io.sf.carte.doc.style.css.property">AbstractLexicalValue</a></span></div>
+<div class="block">A value that contains a <code>var</code> or <code>attr()</code> value as part of its
+ declaration.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -149,7 +151,7 @@ implements <a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -160,61 +162,12 @@ implements <a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Creates and returns a copy of this object.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCssText()" class="member-name-link">getCssText</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get a string representation of the current value.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFinalType()" class="member-name-link">getFinalType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the expected final type after <code>var</code> substitution.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLexicalUnit()" class="member-name-link">getLexicalUnit</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the first lexical unit of this lexical-level value.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMinifiedCssText(java.lang.String)" class="member-name-link">getMinifiedCssText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gives a minified version of the css text of the property.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matches(io.sf.carte.doc.style.css.CSSValueSyntax)" class="member-name-link">matches</a><wbr>(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Verify if this value matches the given grammar.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">serializeMinifiedSequence</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit,java.lang.String,boolean)" class="member-name-link">serializeMinifiedSequence</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
- boolean&nbsp;keepZeroUnit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCssText(java.lang.String)" class="member-name-link">setCssText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Attempts to change this value to match the supplied css text.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)" class="member-name-link">setLexicalUnit</a><wbr>(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeCssText(io.sf.carte.util.SimpleWriter)" class="member-name-link">writeCssText</a><wbr>(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Serialize this value to a <a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util"><code>SimpleWriter</code></a>.</div>
 </div>
 </div>
 </div>
-</div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.AbstractLexicalValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="AbstractLexicalValue.html" title="class in io.sf.carte.doc.style.css.property">AbstractLexicalValue</a></h3>
+<code><a href="AbstractLexicalValue.html#equals(java.lang.Object)">equals</a>, <a href="AbstractLexicalValue.html#getCssText()">getCssText</a>, <a href="AbstractLexicalValue.html#getFinalType()">getFinalType</a>, <a href="AbstractLexicalValue.html#getLexicalUnit()">getLexicalUnit</a>, <a href="AbstractLexicalValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a>, <a href="AbstractLexicalValue.html#hashCode()">hashCode</a>, <a href="AbstractLexicalValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a>, <a href="AbstractLexicalValue.html#serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit)">serializeMinifiedSequence</a>, <a href="AbstractLexicalValue.html#serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit,java.lang.String,boolean)">serializeMinifiedSequence</a>, <a href="AbstractLexicalValue.html#setCssText(java.lang.String)">setCssText</a>, <a href="AbstractLexicalValue.html#setLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">setLexicalUnit</a>, <a href="AbstractLexicalValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-io.sf.carte.doc.style.css.property.ProxyValue">Methods inherited from class&nbsp;io.sf.carte.doc.style.css.property.<a href="ProxyValue.html" title="class in io.sf.carte.doc.style.css.property">ProxyValue</a></h3>
 <code><a href="ProxyValue.html#getCssValueType()">getCssValueType</a>, <a href="ProxyValue.html#isExpectingInteger()">isExpectingInteger</a>, <a href="ProxyValue.html#setExpectInteger()">setExpectInteger</a></code></div>
@@ -264,175 +217,6 @@ implements <a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
-<li>
-<section class="detail" id="getLexicalUnit()">
-<h3>getLexicalUnit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a></span>&nbsp;<span class="element-name">getLexicalUnit</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSLexicalValue.html#getLexicalUnit()">CSSLexicalValue</a></code></span></div>
-<div class="block">Get the first lexical unit of this lexical-level value.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSLexicalValue.html#getLexicalUnit()">getLexicalUnit</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc.style.css">CSSLexicalValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the first lexical unit.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setLexicalUnit(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
-<h3>setLexicalUnit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLexicalUnit</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getFinalType()">
-<h3>getFinalType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CSSValue.Type.html" title="enum class in io.sf.carte.doc.style.css">CSSValue.Type</a></span>&nbsp;<span class="element-name">getFinalType</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSLexicalValue.html#getFinalType()">CSSLexicalValue</a></code></span></div>
-<div class="block">Get the expected final type after <code>var</code> substitution.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSLexicalValue.html#getFinalType()">getFinalType</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSLexicalValue.html" title="interface in io.sf.carte.doc.style.css">CSSLexicalValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the expected final primitive type, <code>UNKNOWN</code> if the final value
-         is either a list or could not be determined.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="matches(io.sf.carte.doc.style.css.CSSValueSyntax)">
-<h3>matches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../CSSValueSyntax.Match.html" title="enum class in io.sf.carte.doc.style.css">CSSValueSyntax.Match</a></span>&nbsp;<span class="element-name">matches</span><wbr><span class="parameters">(<a href="../CSSValueSyntax.html" title="interface in io.sf.carte.doc.style.css">CSSValueSyntax</a>&nbsp;syntax)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">StyleValue</a></code></span></div>
-<div class="block">Verify if this value matches the given grammar.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="StyleValue.html#matches(io.sf.carte.doc.style.css.CSSValueSyntax)">matches</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>syntax</code> - the syntax.</dd>
-<dt>Returns:</dt>
-<dd>the matching for the syntax.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCssText(java.lang.String)">
-<h3>setCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCssText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cssText)</span>
-                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="StyleValue.html#setCssText(java.lang.String)">StyleValue</a></code></span></div>
-<div class="block">Attempts to change this value to match the supplied css text.
- <p>
- In css4j, it is not recommended to set property values using this method.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#setCssText(java.lang.String)">setCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="StyleValue.html#setCssText(java.lang.String)">setCssText</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>cssText</code> - the text value.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/w3c/dom/DOMException.html" title="class or interface in org.w3c.dom" class="external-link">DOMException</a></code> - SYNTAX_ERR: Raised if the specified CSS string value has a
-                syntax error (according to the attached property) or is
-                unparsable. <br>
-                                INVALID_MODIFICATION_ERR: Raised if the specified CSS
-                string value represents a different type of values than
-                the values allowed by the CSS property. <br>
-                NO_MODIFICATION_ALLOWED_ERR: Raised if this value is
-                read-only.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCssText()">
-<h3>getCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCssText</span>()</div>
-<div class="block"><span class="description-from-type-label">Description copied from class:&nbsp;<code><a href="StyleValue.html#getCssText()">StyleValue</a></code></span></div>
-<div class="block">Get a string representation of the current value.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#getCssText()">getCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Specified by:</dt>
-<dd><code><a href="StyleValue.html#getCssText()">getCssText</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
-<dt>Returns:</dt>
-<dd>the css text representing the value of this property.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="writeCssText(io.sf.carte.util.SimpleWriter)">
-<h3>writeCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeCssText</span><wbr><span class="parameters">(<a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util">SimpleWriter</a>&nbsp;wri)</span>
-                  throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">CSSValue</a></code></span></div>
-<div class="block">Serialize this value to a <a href="../../../../../../../../io.sf.carte.util/io/sf/carte/util/SimpleWriter.html" title="interface in io.sf.carte.util"><code>SimpleWriter</code></a>.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#writeCssText(io.sf.carte.util.SimpleWriter)">writeCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>wri</code> - the SimpleWriter.</dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if an error happened while writing.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMinifiedCssText(java.lang.String)">
-<h3>getMinifiedCssText</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMinifiedCssText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName)</span></div>
-<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="../CSSValue.html#getMinifiedCssText(java.lang.String)">CSSValue</a></code></span></div>
-<div class="block">Gives a minified version of the css text of the property.
- <p>
- It may be customized for the given property name.
- </p></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../CSSValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a></code>&nbsp;in interface&nbsp;<code><a href="../CSSValue.html" title="interface in io.sf.carte.doc.style.css">CSSValue</a></code></dd>
-<dt>Overrides:</dt>
-<dd><code><a href="StyleValue.html#getMinifiedCssText(java.lang.String)">getMinifiedCssText</a></code>&nbsp;in class&nbsp;<code><a href="StyleValue.html" title="class in io.sf.carte.doc.style.css.property">StyleValue</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>propertyName</code> - the property name.</dd>
-<dt>Returns:</dt>
-<dd>the minified css text.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit)">
-<h3>serializeMinifiedSequence</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">serializeMinifiedSequence</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="serializeMinifiedSequence(io.sf.carte.doc.style.css.nsac.LexicalUnit,java.lang.String,boolean)">
-<h3>serializeMinifiedSequence</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">serializeMinifiedSequence</span><wbr><span class="parameters">(<a href="../nsac/LexicalUnit.html" title="interface in io.sf.carte.doc.style.css.nsac">LexicalUnit</a>&nbsp;lexicalUnit,
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;propertyName,
- boolean&nbsp;keepZeroUnit)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="equals(java.lang.Object)">
-<h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="PrimitiveValue.html#equals(java.lang.Object)">equals</a></code>&nbsp;in class&nbsp;<code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="hashCode()">
-<h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">hashCode</span>()</div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="PrimitiveValue.html#hashCode()">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="PrimitiveValue.html" title="class in io.sf.carte.doc.style.css.property">PrimitiveValue</a></code></dd>
-</dl>
-</section>
-</li>
 <li>
 <section class="detail" id="clone()">
 <h3>clone</h3>
