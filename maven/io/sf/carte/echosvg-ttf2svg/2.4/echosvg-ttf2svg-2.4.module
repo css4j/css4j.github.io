@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-ttf2svg",
+    "version": "2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echosvg-ttf2svg-2.4.jar",
+          "url": "echosvg-ttf2svg-2.4.jar",
+          "size": 6619,
+          "sha512": "aaf147f6d0265668625238b6b1fe15eea8b4d0c8d4866cb3a4c20376e78d2e997cc18c82eb60b1b4fb121650bd517fc5329e2ce004e08802a5a6a44e447ada0e",
+          "sha256": "6ef2fbb1eef28f6c3d8e86c7f937fe5f0386960938016be44543889290455a1b",
+          "sha1": "829598e7add06efcff61ebd6804de40f8439ab48",
+          "md5": "4e75b22e15228b9777fbf8533b88c8e1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-svggen",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-ttf2svg-2.4.jar",
+          "url": "echosvg-ttf2svg-2.4.jar",
+          "size": 6619,
+          "sha512": "aaf147f6d0265668625238b6b1fe15eea8b4d0c8d4866cb3a4c20376e78d2e997cc18c82eb60b1b4fb121650bd517fc5329e2ce004e08802a5a6a44e447ada0e",
+          "sha256": "6ef2fbb1eef28f6c3d8e86c7f937fe5f0386960938016be44543889290455a1b",
+          "sha1": "829598e7add06efcff61ebd6804de40f8439ab48",
+          "md5": "4e75b22e15228b9777fbf8533b88c8e1"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-ttf2svg-2.4-sources.jar",
+          "url": "echosvg-ttf2svg-2.4-sources.jar",
+          "size": 7250,
+          "sha512": "c94f74a0325426f511c39e5a840cc984ce8297e204ab55ce3191a1343df15fcce76ff3bab28781fc0cb564ae500629dd54a0fba77ca92b79e870a8befcbbb517",
+          "sha256": "0fc9e85280f1f70595407877b228f98083ba7d1afdd0be8f4fe4e5aab3967609",
+          "sha1": "4ac77bb959b22ae55d07a1838d15f275c39139f1",
+          "md5": "410f6d68913b652721c1fff3225560ec"
+        }
+      ]
+    }
+  ]
+}

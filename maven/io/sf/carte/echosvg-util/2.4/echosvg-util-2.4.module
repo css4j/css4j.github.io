@@ -1,0 +1,179 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-util",
+    "version": "2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-constants",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-util-2.4.jar",
+          "url": "echosvg-util-2.4.jar",
+          "size": 120957,
+          "sha512": "6ea866085c3c652c42dc7001d2ea994e096a44de64d50a1ee482937914ca620b4965c954087914d2cd99233eda7d0b27d11f0b6b2dbff0e40fb94c3d061a9a99",
+          "sha256": "1bd7dd53bcbfa51ae76fdac5e5acb814c3ba1562984321a13ec96fdce97faa48",
+          "sha1": "24446b28707f2f1fed1a00ee3e0ec88ffe9455d0",
+          "md5": "f5213a55fd0545b60cf2120afd208633"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-constants",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-util-2.4.jar",
+          "url": "echosvg-util-2.4.jar",
+          "size": 120957,
+          "sha512": "6ea866085c3c652c42dc7001d2ea994e096a44de64d50a1ee482937914ca620b4965c954087914d2cd99233eda7d0b27d11f0b6b2dbff0e40fb94c3d061a9a99",
+          "sha256": "1bd7dd53bcbfa51ae76fdac5e5acb814c3ba1562984321a13ec96fdce97faa48",
+          "sha1": "24446b28707f2f1fed1a00ee3e0ec88ffe9455d0",
+          "md5": "f5213a55fd0545b60cf2120afd208633"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-util-2.4-sources.jar",
+          "url": "echosvg-util-2.4-sources.jar",
+          "size": 105510,
+          "sha512": "24d47a413c4e744caf889dc8291dc5029b3cf5ee411169d87d7308103a3945e25da52bbfea6b6c339650595bbf1614231e4877e487eec52e7cdba2593adf868e",
+          "sha256": "f94abce7cfb5f30edb2e1833ce9ca797d9b202b1cc2a529080d7c0c552e5f604",
+          "sha1": "c21709d7be5621839dbbdc1639774b4ff0da5ece",
+          "md5": "2b1b9ad651f279ed25de046816e68709"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-util-2.4-test-fixtures.jar",
+          "url": "echosvg-util-2.4-test-fixtures.jar",
+          "size": 7841,
+          "sha512": "5ddbdcba44894d5717a280a3830e9c131d8e5fc95a215944b4a6ae9ee302b5ea393e6141eef8ce702f18d289f9db522357164f4c4fbcba940b362d8b4c8573fa",
+          "sha256": "9e93296e3f4cfc56d7b19bedb926ccf08dca690fab2c3541a2ceaa67cda1d8fe",
+          "sha1": "e6e5dbcdf82df8c1aaa55ab264ecc1e8a5c8de67",
+          "md5": "f9e265dd97256be9ddcfe2f83a294b29"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "echosvg-util-test-fixtures",
+          "version": "2.4"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-util-2.4-test-fixtures.jar",
+          "url": "echosvg-util-2.4-test-fixtures.jar",
+          "size": 7841,
+          "sha512": "5ddbdcba44894d5717a280a3830e9c131d8e5fc95a215944b4a6ae9ee302b5ea393e6141eef8ce702f18d289f9db522357164f4c4fbcba940b362d8b4c8573fa",
+          "sha256": "9e93296e3f4cfc56d7b19bedb926ccf08dca690fab2c3541a2ceaa67cda1d8fe",
+          "sha1": "e6e5dbcdf82df8c1aaa55ab264ecc1e8a5c8de67",
+          "md5": "f9e265dd97256be9ddcfe2f83a294b29"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "io.sf.carte",
+          "name": "echosvg-util-test-fixtures",
+          "version": "2.4"
+        }
+      ]
+    }
+  ]
+}

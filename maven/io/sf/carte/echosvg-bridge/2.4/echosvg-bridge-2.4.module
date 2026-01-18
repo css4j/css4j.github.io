@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-bridge",
+    "version": "2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gvt",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-bridge-2.4.jar",
+          "url": "echosvg-bridge-2.4.jar",
+          "size": 738165,
+          "sha512": "0b39c6318877950a6a85cb61a9ef779604bb1db057ba243cfdd5be47e063d45cf80d41e56fbd212160206ee0e766e2739519da7faedc68b4c4ba6d51d5dabbec",
+          "sha256": "c0d4521715ccad7a4f2d6f4b1f1d098b34c97572d6cdf66555f219e3a3fefbd1",
+          "sha1": "50a87da70f60562a46dc10398924c927a2379f56",
+          "md5": "1fc1bd4fa7aa7e769bdfbec2bf4f5a0a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-anim",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-gvt",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-script",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-bridge-2.4.jar",
+          "url": "echosvg-bridge-2.4.jar",
+          "size": 738165,
+          "sha512": "0b39c6318877950a6a85cb61a9ef779604bb1db057ba243cfdd5be47e063d45cf80d41e56fbd212160206ee0e766e2739519da7faedc68b4c4ba6d51d5dabbec",
+          "sha256": "c0d4521715ccad7a4f2d6f4b1f1d098b34c97572d6cdf66555f219e3a3fefbd1",
+          "sha1": "50a87da70f60562a46dc10398924c927a2379f56",
+          "md5": "1fc1bd4fa7aa7e769bdfbec2bf4f5a0a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-bridge-2.4-sources.jar",
+          "url": "echosvg-bridge-2.4-sources.jar",
+          "size": 492819,
+          "sha512": "b0f0eb71ff0575d344c780cecb5e03ad3d81f3a27d07d082811ff0690dbad8bf92b730dd52b273010183225f5c9f2db9b1443644bff5a9c15391177cc17128b7",
+          "sha256": "6557a6c52864f92b9bbb6a2029951b30dbd7925e7260a0706803bb31e0fd5f00",
+          "sha1": "8b00a7774b92f0a3c630d8ee9f2770ffd4265f10",
+          "md5": "cd30f5c7df0fe2a236b4466711d90027"
+        }
+      ]
+    }
+  ]
+}

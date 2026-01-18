@@ -1,0 +1,133 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-transcoder-svg",
+    "version": "2.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.4.jar",
+          "url": "echosvg-transcoder-svg-2.4.jar",
+          "size": 71797,
+          "sha512": "c5357a22ba77c370b163fef80915d14ca5bfafeddc96e13bbfa8affba17cafce898c7d204f68c89d952aba63118403a25cfd0278fa6af732845fff86af67547d",
+          "sha256": "0e5f2315a5e86f06c63e362b15eed844a13d17a77f257f474392787912d0f12b",
+          "sha1": "af71ef4000071345ebf4f74c59f19d8ad4b75f23",
+          "md5": "96866510c3de78610277a6ff775648d0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-codec",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j-awt",
+          "version": {
+            "requires": "6.0"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-transcoder-api",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-bridge",
+          "version": {
+            "requires": "2.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.4.jar",
+          "url": "echosvg-transcoder-svg-2.4.jar",
+          "size": 71797,
+          "sha512": "c5357a22ba77c370b163fef80915d14ca5bfafeddc96e13bbfa8affba17cafce898c7d204f68c89d952aba63118403a25cfd0278fa6af732845fff86af67547d",
+          "sha256": "0e5f2315a5e86f06c63e362b15eed844a13d17a77f257f474392787912d0f12b",
+          "sha1": "af71ef4000071345ebf4f74c59f19d8ad4b75f23",
+          "md5": "96866510c3de78610277a6ff775648d0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-transcoder-svg-2.4-sources.jar",
+          "url": "echosvg-transcoder-svg-2.4-sources.jar",
+          "size": 55990,
+          "sha512": "392a3f7ce8261e8aff8f9f373be8d451affda6334397febefdb720fd31d7892d10c2e015e5bd9bfe532a9688b1c595041edb5a42f2f67d2531bfae4ac333788a",
+          "sha256": "e3d9ba78ec66a7b715dbd481f4d3e81ae868210bf15a7227243ae6c20669d308",
+          "sha1": "7a26d2e0a697b3363df48a07d2addcc3d2ff67a5",
+          "md5": "8c7eb8aee0c70eb3e8c33d2f3e877708"
+        }
+      ]
+    }
+  ]
+}
