@@ -1243,7 +1243,7 @@ properties by default. For example, the following declarations:</p>
 
  /* Verbose longhand properties */
   color: rgba(255,255,0,255);
-  background-color: rgb(from lime r calc(g - 127) b);
+  border-color: rgb(from lime r calc(g - 127) b);
 
  /* Shorthands with inefficient values */
   border-radius: initial; /* Some compressors would remove this but that's wrong */
@@ -1253,7 +1253,7 @@ properties by default. For example, the following declarations:</p>
 }
 </code></pre>
 <p>are converted to</p>
-<pre class="code"><code class="language-css">div,.cls{color:#ff0;background-color:green;border-radius:0;margin:2px;background:url(bkg.png) round space local}
+<pre class="code"><code class="language-css">div,.cls{color:#ff0;border-color:green;border-radius:0;margin:2px;background:url(bkg.png) round space local}
 </code></pre>
 <p>The optimisations on shorthands can be disabled via the <code class="codeitem">Minify.Config</code>
 parameter, or using the <code>--disable-shorthand</code> command line option:</p>
@@ -1345,7 +1345,7 @@ all comments found while parsing the sheet will be ignored.</p>
 <code><a href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/om/AbstractStyleSheet.html#toStyleString()">toStyleString()</a></code> methods,
 while other comments (located at places that cannot be easily related to a rule) are lost.</p>
 <p>In css4j version 1.0, comments that were intended to apply to the previous rule may be assigned to the next one,
-but this is addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
+but this was addressed in version 2.0 where NSAC 2.0 allows a more accurate approach.</p>
 <p>Comments in the default HTML UA style sheet are not available, as the parser is instructed to ignore them when parsing.</p>
 </div>
 <div class="tema" id="renderinterfaces">
@@ -1371,7 +1371,7 @@ as per the CSS specifications.</li></ul>
 one or the other. The basic idea is that style databases should be relatively easy to implement for a given medium, while canvases are
 probably only going to exist if there is an actual rendering engine implemented.</p>
 <p>For an example implementation of a <code>DeviceFactory</code> and related classes, please check out
-<code>MyDeviceFactory</code>, <code>MyStyleDatabase</code> and <code>MyCanvas</code> in EchoSVG's <a class="codeitem" href="https://github.com/css4j/echosvg/blob/master/echosvg-transcoder/src/main/java/io/sf/carte/echosvg/transcoder/util/CSSTranscodingHelper.java">CSSTranscodingHelper</a>,
+<code>MyDeviceFactory</code>, <code>MyStyleDatabase</code> and <code>MyCanvas</code> in EchoSVG's <a class="codeitem" href="https://github.com/css4j/echosvg/blob/master/echosvg-transcoder-svg/src/main/java/io/sf/carte/echosvg/transcoder/util/CSSTranscodingHelper.java">CSSTranscodingHelper</a>,
 or <a class="codeitem" href="https://github.com/css4j/css4j-awt/blob/master/src/io/sf/carte/doc/style/css/awt/AWTStyleDatabase.java">AWTStyleDatabase</a> in the <a href="https://github.com/css4j/css4j-awt"><code>css4j-awt</code> project</a>.</p>
 </div>
 <div class="tema" id="awt">
@@ -1405,8 +1405,8 @@ shorthand.</td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-backgrounds-3/">Background / Border 3</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
 <tr class="evenrow"><td><a href="https://www.w3.org/TR/css-color-4/">Color 4</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-color-5/">Color 5</a></td><td class="yesno">Partial</td>
-<td class="obsrv">Supports full level 4 but only <code>color-mix()</code> from level 5 (this is aligned with web browser
-support at the time of writing).</td></tr>
+<td class="obsrv">Supports full level 4 but only relative colors and <code>color-mix()</code>
+from level 5 (this is aligned with web browser support baseline at the time of writing).</td></tr>
 <tr class="evenrow"><td><a href="https://www.w3.org/TR/css-conditional-4/">Conditional Rules 4</a></td><td class="yesno">Yes</td><td class="obsrv"></td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-fonts-4/">Fonts 4</a></td><td class="yesno"
 >Partial</td><td class="obsrv">Has the <code>@font-face</code> and <code>@font-feature-values</code> rules,
@@ -1422,7 +1422,7 @@ Relies on <code>CSSCanvas</code> implementations to match/unmatch media features
 </em></td></tr>
 <tr class="evenrow"><td><a href="https://www.w3.org/TR/css-masking-1/">Masking</a></td><td class="yesno">Partial</td><td class="obsrv">Decomposes the <code>mask</code> shorthand. <em>Not supported by the simple box model.</em></td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-transitions-1/">Transitions</a></td><td class="yesno">Yes</td><td class="obsrv">Decomposes the <code>transition</code> shorthand.</td></tr>
-<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values 4</a></td><td class="yesno">Yes</td><td class="obsrv">Advanced <code>attr()</code> from level 5 also has early support.</td></tr>
+<tr class="evenrow"><td><a href="https://www.w3.org/TR/css-values-4/">Values 4</a></td><td class="yesno">Yes</td><td class="obsrv">Advanced <code>attr()</code> from level 5 is also supported.</td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-variables-1/">Variables</a></td><td class="yesno">Yes</td><td class="obsrv"><code>var()</code> is supported in computed styles.</td></tr>
 <tr class="evenrow"><td><a href="https://www.w3.org/TR/css-properties-values-api-1/">CSS Properties and Values API</a></td><td class="yesno">Yes</td><td class="obsrv">Full support (also in computed styles).</td></tr>
 <tr class="oddrow"><td><a href="https://www.w3.org/TR/css-grid-1/">Grid / Template / Alignment</a></td>
@@ -1431,12 +1431,13 @@ Relies on <code>CSSCanvas</code> implementations to match/unmatch media features
 can be used if declared explicitly). <em>Not supported by the simple box model.</em></td></tr>
 </table>
 <h3 class="subtema" id="pseudoclasses">Pseudo-classes</h3>
-<p>The following pseudo-classes are supported by the library:
+<p>A number of pseudo-classes are supported by the library, including:
 <code>first-child</code>, <code>last-child</code>, <code>only-child</code>, <code>nth-child()</code>, <code>nth-last-child()</code>, <code>first-of-type</code>,
 <code>last-of-type</code>, <code>only-of-type</code>, <code>nth-of-type()</code>, <code>nth-last-of-type()</code>, <code>dir</code>, <code>lang</code>,
 <code>any-link</code>, <code>link</code>, <code>visited</code>, <code>target</code>, <code>root</code>, <code>empty</code>, <code>blank</code>,
-<code>disabled</code>, <code>enabled</code>, <code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>,
-<code>not</code>, <code>placeholder-shown</code>, <code>default</code>, <code>checked</code> and <code>indeterminate</code>.</p>
+<code>disabled</code>, <code>enabled</code>, <code>read-write</code>, <code>read-only</code>, <code>is</code>, <code>where</code>, <code>has</code>, <code>not</code>,
+<code>placeholder-shown</code>, <code>default</code>, <code>checked</code>, <code>indeterminate</code>,
+<code>host</code>, <code>host-context</code> and <code>state</code>.</p>
 <p>State pseudo-classes like <code>hover</code> are supported through the
 <a class="codeitem" href="api/latest/io.sf.carte.css4j/io/sf/carte/doc/style/css/CSSCanvas.html#isActivePseudoClass(io.sf.carte.doc.style.css.CSSElement,java.lang.String)">CSSCanvas.isActivePseudoClass(CSSElement, String)</a> method.</p>
 </div>
