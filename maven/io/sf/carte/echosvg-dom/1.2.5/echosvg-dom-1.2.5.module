@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-dom",
+    "version": "1.2.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-1.2.5.jar",
+          "url": "echosvg-dom-1.2.5.jar",
+          "size": 201003,
+          "sha512": "7341c05c25b1ec9579f8e484e53ef91fb0c109721c392cfef06f6af13946e37e7e7f6f5b53a3a18a2177ff7a9e5bdef1a5222c576f284f424303bd5cbb758344",
+          "sha256": "475f00e19b91dc035d1671b29834b8bca29d73da9f3c731a062f31bc0a1bfb68",
+          "sha1": "935ebe4a1d590dcfb8df36d53685d66a0288f47e",
+          "md5": "33c5d89ca63971623f2b172a61366b58"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-css",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-ext",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-xml",
+          "version": {
+            "requires": "1.2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "xml-dtd",
+          "version": {
+            "requires": "4.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-dom-1.2.5.jar",
+          "url": "echosvg-dom-1.2.5.jar",
+          "size": 201003,
+          "sha512": "7341c05c25b1ec9579f8e484e53ef91fb0c109721c392cfef06f6af13946e37e7e7f6f5b53a3a18a2177ff7a9e5bdef1a5222c576f284f424303bd5cbb758344",
+          "sha256": "475f00e19b91dc035d1671b29834b8bca29d73da9f3c731a062f31bc0a1bfb68",
+          "sha1": "935ebe4a1d590dcfb8df36d53685d66a0288f47e",
+          "md5": "33c5d89ca63971623f2b172a61366b58"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-dom-1.2.5-sources.jar",
+          "url": "echosvg-dom-1.2.5-sources.jar",
+          "size": 171607,
+          "sha512": "647a9efc4e28a6c23f11f59a14b832ef478891f7074b9384c962fc371c905108a74861a6bdd1fe9c45b1a4af4097ffe57f4ff744437a9e7b628b03403ef5059d",
+          "sha256": "f6257654672defa30140c5a860dc927dae642ab1b29687607d4a6602e0668cf4",
+          "sha1": "670b96b1d64797f0c2f610b093336f767d8f6a97",
+          "md5": "b22b02a08126fee82046916974e0971f"
+        }
+      ]
+    }
+  ]
+}
