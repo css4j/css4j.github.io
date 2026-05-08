@@ -14,7 +14,7 @@
 # Google Closure compiler location
 CLOSURE_COMP=${HOME}/java/lib/closure-compiler.jar
 # CSS4J minifier location
-CSS4J=${HOME}/java/lib/css4j-6.1.1-alldeps.jar
+CSS4J=${HOME}/java/lib/css4j-6.2-alldeps.jar
 # Root of website
 SITEDIR=${HOME}/www/css4j.github.io
 # Source directories for JS and CSS
@@ -43,7 +43,7 @@ if [ ! -r ${CLOSURE_COMP} ]
 then wget -q -O ${CLOSURE_COMP} https://repo1.maven.org/maven2/com/google/javascript/closure-compiler/v20250820/closure-compiler-v20250820.jar
 fi
 if [ ! -r ${CSS4J} ]
-then wget -q -O ${CSS4J} https://github.com/css4j/css4j/releases/download/v6.1.1/css4j-6.1.1-alldeps.jar
+then wget -q -O ${CSS4J} https://github.com/css4j/css4j/releases/download/v6.2/css4j-6.2-alldeps.jar
 fi
 if [ ! -r ${CLOSURE_COMP} ] || [ ! -r ${CSS4J} ]
 then echo "Either closure compiler or css4j weren't found. Exiting."
