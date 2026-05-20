@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-transcoder-api",
+    "version": "2.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "echosvg-transcoder-api-2.5.jar",
+          "url": "echosvg-transcoder-api-2.5.jar",
+          "size": 23971,
+          "sha512": "032b51fd4cafa577259ee91b6af9bcd9d15f7a8fc486f7255303ee060fdaea92973ba4da0f1724563a5ba3caf6cf891b50f97a52371938ba0b13dbefe8173c44",
+          "sha256": "98c44621b70ff6a14c22d7252b5b04c5c671420ea02cefd890fc10f229199edf",
+          "sha1": "3dc66c489469eba17e31a1d094488469fac55e09",
+          "md5": "084352f5128ecc34a64d2dd819d37f1c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-dom",
+          "version": {
+            "requires": "2.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-transcoder-api-2.5.jar",
+          "url": "echosvg-transcoder-api-2.5.jar",
+          "size": 23971,
+          "sha512": "032b51fd4cafa577259ee91b6af9bcd9d15f7a8fc486f7255303ee060fdaea92973ba4da0f1724563a5ba3caf6cf891b50f97a52371938ba0b13dbefe8173c44",
+          "sha256": "98c44621b70ff6a14c22d7252b5b04c5c671420ea02cefd890fc10f229199edf",
+          "sha1": "3dc66c489469eba17e31a1d094488469fac55e09",
+          "md5": "084352f5128ecc34a64d2dd819d37f1c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-transcoder-api-2.5-sources.jar",
+          "url": "echosvg-transcoder-api-2.5-sources.jar",
+          "size": 32878,
+          "sha512": "e93173ed4d391b603c7b7471dc4d784cb8ecc5a5d0f0b0ef995c086cdadb19af9ee30a8cb14573a1f20cec7dcf7eba9d81822a94d22a9934877d8e12c90aeb67",
+          "sha256": "b217dd496216ce75fe5eb8ecfa098cd087a4534408006d0079ce7dded4c4546f",
+          "sha1": "cc13e6300b20ecf409c1f686530880fe146afa47",
+          "md5": "d65c843793fbe06fc36e2aeab045dcfc"
+        }
+      ]
+    }
+  ]
+}

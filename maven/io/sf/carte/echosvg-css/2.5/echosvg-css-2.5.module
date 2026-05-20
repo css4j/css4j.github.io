@@ -1,0 +1,161 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.sf.carte",
+    "module": "echosvg-css",
+    "version": "2.5",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.5"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "domview-api",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "cssom-api",
+          "version": {
+            "requires": "0.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.1.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "6.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-css-2.5.jar",
+          "url": "echosvg-css-2.5.jar",
+          "size": 374788,
+          "sha512": "27331f395cb1d3e94e5cf00352f9d348549b2cc1329b2dcf79c2a8f2ba1acc6b0882cf7bf23f593d66e6200ce44e111d88486101ff32b02f86a310dd8b0982fb",
+          "sha256": "b44d5cfa3b8f5dc1b29a9b1de2ffd37cbe86b2bd5785bd6d2e1d959a8e97521f",
+          "sha1": "61d71fbb1311689d8e2ad995b83cb7d0af06e1df",
+          "md5": "c636eed17c21ea31162328e68032e62c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-i18n",
+          "version": {
+            "requires": "2.5"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "echosvg-util",
+          "version": {
+            "requires": "2.5"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "domview-api",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "io.sf.w3",
+          "module": "cssom-api",
+          "version": {
+            "requires": "0.3"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "svgom-api",
+          "version": {
+            "requires": "1.1.4"
+          }
+        },
+        {
+          "group": "io.sf.carte",
+          "module": "css4j",
+          "version": {
+            "requires": "6.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "echosvg-css-2.5.jar",
+          "url": "echosvg-css-2.5.jar",
+          "size": 374788,
+          "sha512": "27331f395cb1d3e94e5cf00352f9d348549b2cc1329b2dcf79c2a8f2ba1acc6b0882cf7bf23f593d66e6200ce44e111d88486101ff32b02f86a310dd8b0982fb",
+          "sha256": "b44d5cfa3b8f5dc1b29a9b1de2ffd37cbe86b2bd5785bd6d2e1d959a8e97521f",
+          "sha1": "61d71fbb1311689d8e2ad995b83cb7d0af06e1df",
+          "md5": "c636eed17c21ea31162328e68032e62c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "echosvg-css-2.5-sources.jar",
+          "url": "echosvg-css-2.5-sources.jar",
+          "size": 267697,
+          "sha512": "769c942b24d35eef4dcce494e4b8aa6350eb54f9cff70421bacde60570e85d2f30d811d569ed1f3d54f1bd1cc1f06e9d32837b632225d49646ca24395f3b0dd7",
+          "sha256": "269085381161923230fc7724aec4240eb84ffb1b5b2a1291ffd940eba1334aed",
+          "sha1": "377eb9a04d4249882b828300002d754320ae76e4",
+          "md5": "94791beb839d48c0ec5d4a9cf0d41c5f"
+        }
+      ]
+    }
+  ]
+}
