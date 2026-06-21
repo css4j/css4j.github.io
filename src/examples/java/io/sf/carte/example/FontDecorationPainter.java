@@ -1,6 +1,6 @@
 /*
 
- Copyright (c) 2024, contributors to EchoSVG project.
+ Copyright (c) 2024-2026, contributors to EchoSVG project.
 
  Licensed under a BSD-style License. You can find the license here:
  https://css4j.github.io/LICENSE.txt
