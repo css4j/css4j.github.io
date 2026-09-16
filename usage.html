@@ -122,20 +122,18 @@ that have the same major version number and the same or larger minor version. Fo
 <code>css4j-awt</code> 6.0 is compatible with <code>css4j</code> 6.0 and also with 6.2.</p>
 <h3 class="subtema" id="gradle">Usage from a Gradle project</h3>
 <p>
-If your Gradle project depends on css4j, you can use this project's own Maven repository in a <code>repositories</code> section of
-your build file:
+If your Gradle project depends on css4j, you can use this project's own Maven repository in the
+<code>repositories</code> section of your build file (either <code>build.gradle</code> or a
+conventions plugin):
 </p>
 <pre class="code"><code class="language-gradle">repositories {
     maven {
-        url "https://css4j.github.io/maven/"
+        url = 'https://css4j.github.io/maven/'
         mavenContent {
             releasesOnly()
         }
         content {
-            includeGroup 'io.sf.carte'
-            includeGroup 'io.sf.jclf'
-            // Alternatively you could uncomment the line below
-            //includeGroupByRegex 'io\\.sf\\..*'
+            includeGroupByRegex 'io\\.sf\\..*'
             includeGroup 'xmlpull'
             includeGroup 'xpp3'
         }
@@ -143,10 +141,11 @@ your build file:
 }
 </code></pre>
 <p>
-please use this repository <b>only</b> for the artifact groups listed in the <code>includeGroup</code> statements.
+The <code>content</code> section makes sure that you will only use the css4j repository for the
+css4j-related artifacts, which is important for security reasons.
 </p>
 <p>
-Then, in your <code>build.gradle</code> file:
+Then add the dependency to the <code>dependencies</code> section:
 </p>
 <pre class="code"><code class="language-gradle">dependencies {
     implementation "io.sf.carte:css4j:${css4jVersion}"
@@ -157,8 +156,8 @@ where <code>css4jVersion</code> could be defined in a <code>gradle.properties</c
 </p>
 <h3 class="subtema" id="maven">Usage from a Maven build</h3>
 <p>
-If you build your project (that depends on css4j) with Apache Maven, please note that neither css4j nor some of its
-dependencies are in Maven Central:
+If you build your project (that depends on css4j) with Apache Maven, please note that neither
+css4j nor some of its dependencies are in Maven Central:
 </p>
 <ul>
 <li><a href="https://sourceforge.net/projects/jclf/">JCLF</a>.</li>
@@ -175,18 +174,8 @@ So you may want to add css4j's Maven repository to your POM file:
     &lt;/repository&gt;
 &lt;/repositories&gt;
 </code></pre>
-<p>
-Alternatively, you can also install the artifacts manually into your local Maven repository,
-which can be done easily with the:
-</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-css4j.sh"><code>install-css4j.sh</code></a></li>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-jclf.sh"><code>install-jclf.sh</code></a></li>
-<li><a href="https://raw.githubusercontent.com/css4j/css4j-dist/master/maven/install-xpp3.sh"><code>install-xpp3.sh</code></a></li>
-</ul>
-<p>
-scripts. And then, add the following to the <code>&lt;dependencies&gt;</code> section of your <code>pom.xml</code>:
-</p>
+<p>Then add the following to the <code>&lt;dependencies&gt;</code> section of your
+<code>pom.xml</code>:</p>
 <pre class="code"><code class="language-xml">&lt;!-- This artifact is not in Maven Central --&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;io.sf.carte&lt;/groupId&gt;
@@ -304,13 +293,12 @@ build file:</p>
 <p>But please remember that you have to set up css4j's repository, if you haven't already:</p>
 <pre class="code"><code class="language-gradle">repositories {
     maven {
-        url "https://css4j.github.io/maven/"
+        url = 'https://css4j.github.io/maven/'
         mavenContent {
             releasesOnly()
         }
         content {
-            includeGroup 'io.sf.carte'
-            includeGroup 'io.sf.jclf'
+            includeGroupByRegex 'io\\.sf\\..*'
             includeGroup 'xmlpull'
             includeGroup 'xpp3'
         }
