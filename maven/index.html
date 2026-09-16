@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="../basic-c.css" rel="stylesheet" type="text/css" />
+<link href="../code-c.css" rel="stylesheet" type="text/css" />
+<script src="../js/code-a.js" charset="utf-8"></script>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="Carlos Amengual">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,6 +31,40 @@
 <div class="cos">
 <h1>Maven Repository</h1>
 <p>This is the main repository for css4j and other related artifacts.</p>
+<br/>
+<div class="tema" id="repo">
+<h2>Configuring this repository</h2>
+<h3 class="subtema" id="gradle">Gradle</h3>
+<p>Add the repository to the <code>repositories</code> section of your build file (either
+<code>build.gradle</code> or a conventions plugin):</p>
+<pre class="code"><code class="language-gradle">repositories {
+    maven {
+        url = 'https://css4j.github.io/maven/'
+        mavenContent {
+            releasesOnly()
+        }
+        content {
+            includeGroupByRegex 'io\\.sf\\..*'
+        }
+    }
+}
+</code></pre>
+<p>The <code>content</code> section makes sure that you will only use the css4j repository for the
+css4j-related artifacts, which is important for security reasons.</p>
+<br/>
+<h3 class="subtema" id="maven">Maven</h3>
+<p>Declare the repository in your <code>pom.xml</code>:</p>
+<pre class="code"><code class="language-xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;css4j&lt;/id&gt;
+        &lt;name&gt;CSS4J repository&lt;/name&gt;
+        &lt;url&gt;https://css4j.github.io/maven/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+</code></pre>
+</div>
+<div class="tema" id="groups">
+<h2>Available artifact groups</h2>
 <ul><li><a href="com/github/css4j/">com.github.css4j</a></li>
 <li><a href="io/">io</a></li>
 <li><a href="xmlpull/">xmlpull</a></li>
