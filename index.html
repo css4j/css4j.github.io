@@ -28,7 +28,7 @@
 <div class="main">
 <div id="presentacion_top" class="textheader"><span>CSS4J</span></div>
 <!-- content -->
-<div class="cos">
+<main class="cos">
 <div class="tema"><img src="imag/css4j.png" alt="css4j logo" /></div>
 <div class="tema">
 <h1>CSS4J</h1>
@@ -56,9 +56,9 @@ a different one (see <code>NOTICE.txt</code> in the distribution).</p>
 <div class="subtema">
 <h3>Core module</h3>
 <ul>
-<li><a href="https://github.com/css4j/css4j/releases/download/v6.2/css4j-6.2.zip">Release 6.2 download</a>. <a href="https://sourceforge.net/projects/carte/files/css4j/6.x/css4j-6.2.zip/download">[mirror]</a> <a href="digest/css4j-6.2.sha256"><code>[SHA256]</code></a> <a href="digest/css4j-6.2.sha1"><code>[SHA1]</code></a> <a href="digest/css4j-6.2.b2"><code>[B2]</code></a> <a href="digest/css4j-6.2.md5"><code>[MD5]</code></a></li>
+<li><a href="https://github.com/css4j/css4j/releases/download/v6.2.1/css4j-6.2.1.zip">Release 6.2.1 download</a>. <a href="https://sourceforge.net/projects/carte/files/css4j/6.x/css4j-6.2.1.zip/download">[mirror]</a> <a href="digest/css4j-6.2.1.sha256"><code>[SHA256]</code></a> <a href="digest/css4j-6.2.1.sha1"><code>[SHA1]</code></a> <a href="digest/css4j-6.2.1.b2"><code>[B2]</code></a> <a href="digest/css4j-6.2.1.md5"><code>[MD5]</code></a></li>
 <li><a href="https://sourceforge.net/projects/carte/files/css4j/digest/">Digest mirror</a>.</li>
-<li><a href="https://github.com/css4j/css4j/blob/v6.2/RELEASE_NOTES.md">Release Notes for 6.2</a>.</li>
+<li><a href="https://github.com/css4j/css4j/blob/master/RELEASE_NOTES.md">Release Notes for 6.2.1</a>.</li>
 </ul>
 </div>
 <div class="subtema">
@@ -88,11 +88,18 @@ from your usual package manager, for example on Windows you may use <a href="htt
 <pre class="code"><code class="language-shell">scoop install cosign
 </code></pre>
 <p>Once you have <code>cosign</code>, obtain the <a href=
-"https://github.com/css4j/css4j/releases/download/v6.2/css4j-6.2-zip-cosign.bundle"><code>cosign</code>
+"https://github.com/css4j/css4j/releases/download/v6.2.1/css4j-6.2.1-zip-cosign.bundle"><code>cosign</code>
 bundle file corresponding to the Zip distribution</a> and then execute:
 </p>
-<pre class="code"><code class="language-shell">cosign verify-blob css4j-6.2.zip --bundle css4j-6.2-zip-cosign.bundle --certificate-identity-regexp=ca.+@gmail.com --certificate-oidc-issuer=https://github.com/login/oauth
+<pre class="code"><code class="language-shell">cosign verify-blob css4j-6.2.1.zip --bundle css4j-6.2.1-zip-cosign.bundle --certificate-identity-regexp=ca.+@gmail.com --certificate-oidc-issuer=https://github.com/login/oauth
 </code></pre>
+</div>
+<div class="subtema" id="gpgsign">
+<h3>Verify your download via PGP/GPG signatures</h3>
+<p>You can check the digital signatures of the artifacts located at the <a
+href="maven/io/sf/carte/css4j/">Maven repository</a> via this <a
+href="https://keys.openpgp.org/vks/v1/by-fingerprint/D4C65EE68709BB2A3DB76C9736413FEC3F9E2484">public
+key</a>.
 </div>
 </div>
 <div class="tema">
@@ -116,7 +123,7 @@ CSS capabilities.</p>
 </div>
 </div>
 <!-- end content -->
-</div>
+</main>
 </div>
 </body>
 </html>
