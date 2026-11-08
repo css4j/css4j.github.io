@@ -16,16 +16,6 @@ on:
 
 jobs:
 
-  # Validate wrapper to prevent potential supply chain attack
-  gradle-wrapper-validation:
-    runs-on: ubuntu-latest
-
-    name: Validate Gradle wrapper
-
-    steps:
-      - uses: actions/checkout@v7
-      - uses: gradle/actions/wrapper-validation@v6
-
   check:
     runs-on: ubuntu-latest
 
@@ -40,6 +30,11 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
+      # setup-gradle validates the wrapper
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.14.5'
 
       # Check the build
       - name: Test the build
