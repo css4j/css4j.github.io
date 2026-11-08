@@ -56,9 +56,9 @@ a different one (see <code>NOTICE.txt</code> in the distribution).</p>
 <div class="subtema">
 <h3>Core module</h3>
 <ul>
-<li><a href="https://github.com/css4j/css4j/releases/download/v6.2.1/css4j-6.2.1.zip">Release 6.2.1 download</a>. <a href="https://sourceforge.net/projects/carte/files/css4j/6.x/css4j-6.2.1.zip/download">[mirror]</a> <a href="digest/css4j-6.2.1.sha256"><code>[SHA256]</code></a> <a href="digest/css4j-6.2.1.sha1"><code>[SHA1]</code></a> <a href="digest/css4j-6.2.1.b2"><code>[B2]</code></a> <a href="digest/css4j-6.2.1.md5"><code>[MD5]</code></a></li>
+<li><a href="https://github.com/css4j/css4j/releases/download/v6.2.2/css4j-6.2.2.zip">Release 6.2.2 download</a>. <a href="https://sourceforge.net/projects/carte/files/css4j/6.x/css4j-6.2.2.zip/download">[mirror]</a> <a href="digest/css4j-6.2.2.sha256"><code>[SHA256]</code></a> <a href="digest/css4j-6.2.2.sha1"><code>[SHA1]</code></a> <a href="digest/css4j-6.2.2.b2"><code>[B2]</code></a> <a href="digest/css4j-6.2.2.md5"><code>[MD5]</code></a></li>
 <li><a href="https://sourceforge.net/projects/carte/files/css4j/digest/">Digest mirror</a>.</li>
-<li><a href="https://github.com/css4j/css4j/blob/master/RELEASE_NOTES.md">Release Notes for 6.2.1</a>.</li>
+<li><a href="https://github.com/css4j/css4j/blob/v6.2.2/RELEASE_NOTES.md">Release Notes for 6.2.2</a>.</li>
 </ul>
 </div>
 <div class="subtema">
@@ -81,18 +81,26 @@ a different one (see <code>NOTICE.txt</code> in the distribution).</p>
 </div>
 <div class="subtema" id="cosign">
 <h3>Verify your download with <code>cosign</code></h3>
-<p>In addition to the given digest files, you can use <a href="https://docs.sigstore.dev/cosign/"><code
->cosign</code></a> to verify the Zip distribution that you downloaded. This utility should be available
-from your usual package manager, for example on Windows you may use <a href="https://scoop.sh/"><code
->scoop</code></a> to install it:</p>
+<p>In addition to the given PGP signatures and digest files, you can use <a
+href="https://docs.sigstore.dev/cosign/"><code>cosign</code></a> to verify the Zip distribution
+that you downloaded. This utility should be available from your usual package manager,
+for example on Windows you may use <a href="https://scoop.sh/"><code>scoop</code></a>
+to install it:</p>
 <pre class="code"><code class="language-shell">scoop install cosign
 </code></pre>
 <p>Once you have <code>cosign</code>, obtain the <a href=
-"https://github.com/css4j/css4j/releases/download/v6.2.1/css4j-6.2.1-zip-cosign.bundle"><code>cosign</code>
+"https://github.com/css4j/css4j/releases/download/v6.2.2/css4j-6.2.2-zip-cosign.bundle"><code>cosign</code>
 bundle file corresponding to the Zip distribution</a> and then execute:
 </p>
-<pre class="code"><code class="language-shell">cosign verify-blob css4j-6.2.1.zip --bundle css4j-6.2.1-zip-cosign.bundle --certificate-identity-regexp=ca.+@gmail.com --certificate-oidc-issuer=https://github.com/login/oauth
+<pre class="code"><code class="language-shell">cosign verify-blob css4j-6.2.2.zip --bundle css4j-6.2.2-zip-cosign.bundle --certificate-identity-regexp=carlosame.+@gmail.com --certificate-oidc-issuer=https://github.com/login/oauth
 </code></pre>
+<p>There are advantages of using <code>cosign</code> over PGP signatures:</p>
+<ul>
+<li>It can be used with containers and CI.</li>
+<li>Sigstore has verified that the signer controls the given email address.</li>
+<li>Avoids attack surfaces related to key management.</li>
+<li>Public logs (Rekor) guarantee transparency.</li>
+</ul>
 </div>
 <div class="subtema" id="gpgsign">
 <h3>Verify your download via PGP/GPG signatures</h3>
@@ -113,10 +121,9 @@ CSS capabilities.</p>
 </div>
 <div class="tema">
 <h2>Community - Support</h2>
-<p>There is a general forum that can be used for css4j support. The development forum was intended for discussions about patches and APIs before Github but isn't used anymore.</p>
+<p>There is a general forum that can be used for css4j support.</p>
 <ul>
 <li><a href="https://groups.google.com/forum/#!forum/css4j">Css4j general forum (Google Groups)</a>.</li>
-<li><a href="https://groups.google.com/forum/#!forum/css4j-devel">Css4j development forum (Google Groups)</a>.</li>
 </ul>
 </div>
 <div class="footnote">
